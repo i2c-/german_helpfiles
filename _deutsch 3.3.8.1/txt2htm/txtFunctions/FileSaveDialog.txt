@@ -1,0 +1,54 @@
+###Function###
+FileSaveDialog
+
+###Description###
+Zeigt den "Datei speichern"-Dialog an.
+
+###Syntax###
+FileSaveDialog ( "title", "init dir", "filter" [, options [, "default name" [, hwnd]]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Titel des Dialoges.
+init dir
+	Startverzeichnis, welches im Verzeichnisbaum markiert wird.
+filter
+	Dateifilter wie z. B. "Alle (*.*)" oder "Textdateien (*.txt)" oder Multifiltergruppen wie z. B."Alle (*.*)|Textdateien (*.txt)" (Siehe Bemerkungen).
+options
+	[optional] 2 = Pfad muss existieren (nur wenn der Benutzer einen Pfad eintippt; endet mit einem Backslash)
+	 16 = Frage beim &Uuml;berschreiben einer Datei
+default name
+	[optional] Dateinamensvorschlag, unter dem die Datei gespeichert werden soll. Standard ist ein leerer String ("").
+hwnd
+	[optional] Das Fenster Handle welches als Parent f&uuml;r diesen Dialog verwendet werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den kompletten Pfad der ausgew&auml;hlten Datei zur&uuml;ck. R&uuml;ckgabe mehrerer Dateien wie folgt: "Verzeichnis|Datei1|Datei2|..."
+Fehler:	Setzt @error
+@error:	1 - Dateiauswahl fehlgeschlagen.
+	2 - Ung&uuml;ltiger Dateifilter
+@@End@@
+
+
+###Remarks###
+Die Filter wie im Beispiel zu sehen mit Semikolon abtrennen.
+Multifiltergruppen werden durch einen Strich "|" getrennt.
+
+Wenn der Dateinamensvorschlag angegeben wird, m&uuml;ssen auch die "options" angegeben werden. 
+Wenn keine der "options"-Funktionen ben&ouml;tigt wird, muss "options" den Wert "0" erhalten.
+
+Besondere Windows-Ordner (wie z.B "Eigene Dateien") k&ouml;nnen manchmal auch als Startverzeichnis gesetzt werden; siehe <a href="../appendix/clsid.htm">Anhang CLSIDs besonderer Ordner</a>.
+
+@WorkingDir wird bei erfolgreichem R&uuml;ckgabewert ge&auml;ndert.
+
+
+###Related###
+FileOpenDialog, FileSelectFolder
+
+
+###Example###
+@@IncludeExample@@

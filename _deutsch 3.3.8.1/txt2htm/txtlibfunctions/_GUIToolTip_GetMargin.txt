@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUIToolTip_GetMargin
+
+###Description###
+Ermittelt den oberen, linken, unteren und rechten Rand
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetMargin($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Entfernung zwischen oberer Kante und oberem Beginn des Textes in Pixel
+	[1] - Entfernung zwischen linker Kante und linkem Beginn des Textes in Pixel
+	[2] - Entfernung zwischen unterer Kante und unterem Beginn des Textes in Pixel
+	[3] - Entfernung zwischen rechter Kante und rechtem Beginn des Textes in Pixel
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetMarginEx, _GUIToolTip_SetMargin

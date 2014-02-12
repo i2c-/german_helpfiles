@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlToolbar_GetBitmapFlags
+
+###Description###
+Ermittelt die Flags, die den Typ der verwendeten Bitmap beschreiben.
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetBitmapFlags ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt einen Wert zur&uuml;ck, der den Typ der zu verwendenden Bitmap beschreibt:
+	0 - Benutzt kleine (16 x 16) Bitmaps
+	1 - Benutzt gro&szlig;e (24 x 24) Bitmaps
+
+
+###Remarks###
+Der zur&uuml;ckgegebene Wert ist nur ein Ratschlag. Das Control unterst&uuml;tzt gro&szlig;e und kleine Bitmaps, abh&auml;ngig davon, ob der Benutzer gro&szlig;e oder kleine Schriften gew&auml;hlt hat.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

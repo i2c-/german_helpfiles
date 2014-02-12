@@ -1,0 +1,44 @@
+###Function###
+GUICtrlSetOnEvent
+
+###Description###
+Definiert eine nutzerdefinierte Funktion, die aufgerufen wird, wenn ein Control angeklickt wird.
+
+###Syntax###
+GUICtrlSetOnEvent ( controlID, "function" )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+function
+	Der Name der vom Benutzer geschriebenen Funktion, die aufgerufen werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+OnEvent-Funktionen werden nur aufgerufen, wenn die Option <a href="AutoItSetOption.htm#GUIOnEventMode">GUIOnEventMode</a> auf 1 gesetzt ist - wenn in diesem Modus <a href="GUIGetMsg.htm">GUIGetMsg()</a> &uuml;berhaupt NICHT verwendet wird.
+
+Es kann keine Funktion aufgerufen werden die Parameter enth&auml;lt.
+
+Innerhalb der aufgerufenen Funktion kann man die Control-ID mit @GUI_CtrlId erhalten.
+Fall ben&ouml;tigt, erh&auml;lt man den Fenster-Handle und den Control-Handle mit @GUI_WinHandle oder @GUI_CtrlHandle.
+
+Falls die Funktion mit einem leeren String ("") aufgerufen wird, wird die vorherige deaktiviert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlCreate..., GUIGetMsg, GUIOnEventMode (Option), GUISetOnEvent, GUICtrlCreateDummy, GUICtrlSendToDummy
+
+
+###Example###
+@@IncludeExample@@

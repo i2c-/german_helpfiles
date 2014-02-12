@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlEdit_GetLimitText
+
+###Description###
+Ermittelt das aktuelle Textlimit f&uuml;r ein Edit-Control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetLimitText($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Textlimit
+
+###Remarks###
+Das Textlimit ist die maximale Menge an Text in TCHARs, welche das Control enthalten kann.
+F&uuml;r ANSI Text ist die Zahl in Bytes; f&uuml;r Unicode Text ist sie die Anzahl von Zeichen.
+Zwei Dokumente mit dem selben Zeichenlimit haben das selbe Textlimit, au&szlig;er, dass eines in ANSI und das andere in Unicode ist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_SetLimitText
+
+###Example###
+@@IncludeExample@@

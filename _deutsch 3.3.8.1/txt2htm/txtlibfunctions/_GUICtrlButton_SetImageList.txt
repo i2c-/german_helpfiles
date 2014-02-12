@@ -1,0 +1,61 @@
+###User Defined Function###
+_GUICtrlButton_SetImageList
+
+###Description###
+Verkn&uuml;pft eine Imagelist zu einem Button-Control
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetImageList($hWnd, $hImage [, $nAlign = 0 [, $iLeft = 1 [, $iTop = 1 [, $iRight = 1 [, $iBottom = 1]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hImage
+	Handle der Imagelist.
+		  Sollte entweder ein einzelnes Bild, welches f&uuml;r alle Status verwendet wird oder ein individuelles Bild f&uuml;r jeden Status enthalten:
+		    1 - Normal
+		    2 - Hot
+		    3 - Gedr&uuml;ckt
+		    4 - deaktiviert
+		    5 - Standard
+		    6 - Stylus Hot (nur tablet Computer)
+$nAlign
+	[optional] Legt die zu verwendende Ausrichtung fest. Dieser Parameter kann einer der folgenden Werte sein:
+		  0 - Ausrichtung des Bildes am linken Rand.
+		  1 - Ausrichtung des Bildes am rechten Rand.
+		  2 - Ausrichtung des Bildes am oberen Rand.
+		  3 - Ausrichtung des Bildes am unteren Rand.
+		  4 - Bild zentriert.
+$iLeft
+	[optional] Linker Rand des Icons
+$iTop
+	[optional] Oberer Rand des Icons
+$iRight
+	[optional] Rechter Rand des Icons
+$iBottom
+	[optional] Unterer Rand des Icons
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP.
+Standardm&auml;&szlig;ig wird bei einer Imagelist die mehr als ein Bild enth&auml;lt nur das erste Bild dargestellt.
+Alle weiteren Bilder werden den unterschiedlichen Statusen zugeordnet (siehe $hImage).
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlButton_GetImageList
+
+###See Also###
+@@MsdnLink@@ BCM_SETIMAGELIST
+
+###Example###
+@@IncludeExample@@

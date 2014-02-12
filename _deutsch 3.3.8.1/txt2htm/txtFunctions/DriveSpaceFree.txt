@@ -1,0 +1,33 @@
+###Function###
+DriveSpaceFree
+
+###Description###
+Gibt den freien Speicher auf einem Laufwerk in Megabyte zur&uuml;ck.
+
+###Syntax###
+DriveSpaceFree ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Pfad des zu untersuchenden Laufwerkes.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den freien Speicher in Megabyte als Flie&szlig;kommazahl zur&uuml;ck.
+Fehler:	Gibt die Zahl 0 zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+DriveSpaceFree funktioniert m&ouml;glicherweise sogar, wenn ein kompletter (existierender) Verzeichnispfad angegeben wird. Ein Dateipfad wird aber nicht funktionieren. 
+Verwende die Funktion Round, wenn der zur&uuml;ckgegebene Wert zu pr&auml;zise ist.
+
+###Related###
+DriveGetDrive, DriveGetFileSystem, DriveGetLabel, DriveGetSerial, DriveGetType, DriveSetLabel, DriveSpaceTotal, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

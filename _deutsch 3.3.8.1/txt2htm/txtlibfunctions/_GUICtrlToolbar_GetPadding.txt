@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_GetPadding
+
+###Description###
+Ermittelt die horizontale und vertikale Einr&uuml;ckung
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetPadding($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Horizontale Einr&uuml;ckung
+	[1] - Vertikale Einr&uuml;ckung
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetPadding
+
+###Example###
+@@IncludeExample@@

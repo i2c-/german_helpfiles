@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_GetItemRectEx
+
+###Description###
+Ermittelt das begrenzende Rechteck f&uuml;r das gesamte oder einen Teil des Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemRectEx ( $hWnd, $iIndex [, $iPart = 3] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iPart
+	[optional] Der gew&uuml;nschte Abschnitt des Items:
+		$LVIR_BOUNDS - Gibt das begrenzende Rechteck des gesamten Items, inklusive den Icons und Labels, zur&uuml;ck.
+		$LVIR_ICON - Gibt das begrenzende Rechteck des Icons, oder kleinen Icons, zur&uuml;ck.
+		$LVIR_LABEL - Gibt das begrenzende Rechteck des Itemtextes zur&uuml;ck 
+		$LVIR_SELECTBOUNDS - Gibt die Einheit von $LVIR_ICON und $LVIR_LABEL zur&uuml;ck, aber ohne die Spalten in der Reportansicht.
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagRECT Struktur zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemRect, $tagRECT
+
+
+###Example###
+@@IncludeExample@@

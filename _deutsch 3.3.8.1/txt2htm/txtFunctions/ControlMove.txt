@@ -1,0 +1,45 @@
+###Function###
+ControlMove
+
+###Description###
+Verschiebt ein Control in einem Fenster.
+
+###Syntax###
+ControlMove ( "title", "text", controlID, x, y [, width [, height]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, in dem sich das Control befindet.
+text
+	Der Text des Fensters, in dem sich das Control befindet.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+x
+	X-Koordinate f&uuml;r das Versetzen, relativ zum entsprechenden Fenster.
+y
+	Y-Koordinate f&uuml;r das Versetzen, relativ zum entsprechenden Fenster.
+width
+	[optional] Neue Breite des Controls.
+height
+	[optional] Neue H&ouml;he des Controls.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn das Fenster nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Wenn x und y gleich den (<a href="../keywords/Default.htm">Default keywords</a>) sind, findet keine Verschiebung statt, nur die Gr&ouml;&szlig;en&auml;nderung.
+
+
+###Related###
+ControlCommand, ControlGetPos
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,5 @@
+Send("#r")
+WinWaitActive("Ausf&uuml;hren")
+Send("notepad.exe{Enter}")
+WinWaitActive("[CLASS:Notepad]")
+Send("Die heutige Zeit/Datum ist {F5}")

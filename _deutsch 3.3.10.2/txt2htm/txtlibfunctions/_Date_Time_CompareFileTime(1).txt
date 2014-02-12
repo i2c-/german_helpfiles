@@ -1,0 +1,36 @@
+###User Defined Function###
+_Date_Time_CompareFileTime
+
+###Description###
+Vergleicht zwei Dateien anhand der Zeit
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_CompareFileTime ( $pFileTime1, $pFileTime2 )
+
+
+###Parameters###
+@@ParamTable@@
+$pFileTime1
+	Pointer zu der ersten $tagFILETIME Struktur
+$pFileTime2
+	Pointer zu der zweiten $tagFILETIME Struktur
+@@End@@
+
+###ReturnValue###
+Gibt einen der folgenden Werte zur&uuml;ck:
+	-1 - Die erste Datei ist neuer als die zweite Datei
+	 0 - Beide Dateien haben die gleiche Zeit
+	 1 - Die erste Datei ist &auml;lter als die zweite Datei
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagFILETIME
+
+
+###Example###
+@@IncludeExample@@

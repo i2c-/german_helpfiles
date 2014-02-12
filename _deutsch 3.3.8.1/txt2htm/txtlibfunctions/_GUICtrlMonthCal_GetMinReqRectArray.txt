@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMinReqRectArray
+
+###Description###
+Ermittelt die minimale Gr&ouml;&szlig;e, um einen kompletten Monat in einem MonthCal-Control darzustellen
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMinReqRectArray($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+
+###Remarks###
+Die minimal ben&ouml;tigte Fenstergr&ouml;&szlig;e f&uuml;r ein MonthCal-Control ist von der aktuell verwendeten Schriftart, den Stilen des Controls, Systemeigenschaften und regionalen Einstellungen abh&auml;ngig.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

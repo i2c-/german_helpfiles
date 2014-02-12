@@ -1,0 +1,63 @@
+###User Defined Function###
+_WinNet_UseConnection
+
+###Description###
+Verbindet ein lokales Ger&auml;t mit einer Netzwerkressource
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_UseConnection($hWnd, $sLocalName, $sRemoteName [, $sUserName = 0 [, $sPassword = 0 [, $iType = 1 [, $iOptions = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster, das der Anbieter der Netzwerkressource eigenst&auml;ndig f&uuml;r Dialoge verwenden kann.
+		Dieser Parameter wird verwendet, wenn Bit 2 (Interaktiv) bei $iOptions gew&auml;hlt wird. Dieser Parameter kann den Wert 0 haben.
+$sLocalName
+	Name eines lokalen Ger&auml;tes wie z.B. "F:" oder "LPT1". Bei diesem String ist auf Gro&szlig;-/Kleinschreibung zu achten.
+		Wenn dieser Parameter 0 ist, wird eine Verbindung zu der Netzwerkressource ohne Umleitung auf das lokale Ger&auml;t hergestellt.
+$sRemoteName
+	Name der Netzwerkressource, zu der verbunden werden soll.
+$sUsername
+	[optional] Username zum Herstellen der Verbindung. Wenn dieser Parameter 0 ist verwendet die Funktion den Standard Usernamen.
+$sPassword
+	[optional] Passwort zum Herstellen der Verbindung. Wenn dieser Parameter 0 ist verwendet die Funktion das Standard Passwort.
+		Wenn der String leer ist, wird kein Passwort verwendet.
+$iType
+	[optional] Gibt den Typ der Netzwerkressource an, zu der verbunden werden soll:
+		0 - Jede (nur wenn $sLocalName leer ist)
+		1 - Laufwerk
+		2 - Drucker
+$iOptions
+	[optional] Verbindungsoptionen. Kann einer der folgenden Werte sein:
+		 1 - Die Verbindung zur Netzwerkressource soll gespeichert werden
+		 2 - Das Betriebssystem kann Abfragen zur User-Authentifizierung machen (Abfragefenster)
+		 4 - Das System verwendet Standard Usernamen oder Passw&ouml;rter nicht ohne dem Benutzer die M&ouml;glichkeit zu geben,
+		 diese alternativ manuell einzugeben. Dieses Flag wird ignoriert, wenn nicht auch Bit 2 (Interaktiv) gesetzt ist.
+		 8 - Erzwingt das Umleiten eines lokalen Ger&auml;tes, wenn die Verbindung hergestellt wird
+		16 - Das Betriebssystem verwendet die Kommandozeile zur Eingabe der Authentifizierung verwendet anstatt einer GUI.
+		Dieses Flag wird ignoriert, wenn nicht auch Bit 2 (Interaktiv) gesetzt ist.
+		32 - Wenn dieses Bit gesetzt ist und das Betriebssystem meldet mit einer Eingabeaufforderung, dass eine Authentifizierung 
+		notwendig ist, werden die Eingabedaten vom Credential Manager gespeichert. Wenn der Credential Manager deaktiviert ist f&uuml;r diese Session,
+		oder das speichern nicht vom Netzwerk Provider unterst&uuml;tzt ist, wird dieses Flag ignoriert. Dieses Flag wird ignoriert, 
+		wenn nicht auch Bit 5 (Eingabeaufforderung anstatt GUI) gesetzt ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aInfo[0] - Wenn True, die Verbindung wurde hergestellt mit der Umleitung eines lokalen Ger&auml;tes
+	$aInfo[1] - Wenn sLocalName ein lokales Ger&auml;t angibt, ist dies der lokale Ger&auml;tename. Wenn mit sLocalName kein Ger&auml;t angegeben wurde
+	und das Netzwerk eine Umleitung auf ein lokales Ger&auml;t ben&ouml;tigt, oder wenn Bit 4 (erzwungene Umleitung) gesetzt ist, gibt dieser Wert
+	den Namen des umgeleiteten lokalen Ger&auml;tes zur&uuml;ck. Ansonsten gibt dieser Wert den Namen der Remote Ressource zur&uuml;ck.
+Fehler:	Setzt @error
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetUseConnection

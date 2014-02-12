@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlMenu_FindItem
+
+###Description###
+Ermittelt ein Menu-Item anhand seines Textes
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_FindItem ( $hMenu, $sText [, $fInStr = False [, $iStart = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Men&uuml;-Handle
+$sText
+	Zu suchender Text
+$fInStr
+	[optional] Wenn True, kann der Text irgendwo im Item-Text stehen.
+$iStart
+	[optional] Item bei dem gestartet wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index des ersten Items enth&auml;lt den Text
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Bei der Suche wird keine Gro&szlig;- und Kleinschreibung beachtet.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

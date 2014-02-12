@@ -1,0 +1,42 @@
+###Function###
+ProcessWaitClose
+
+###Description###
+Pausiert das Skript, bis der genannte Prozess nicht mehr existiert.
+
+###Syntax###
+ProcessWaitClose ( "process" [, timeout = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+process
+	Der Name oder die PID des Prozesses, der beobachtet werden soll.
+timeout
+	[optional] Gibt an (in Sekunden), wie lange gewartet werden soll. Standard ist unbegrenztes Warten.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1 und setzt @extended auf den Exitcode des Prozesses.
+Fehler:	0 wenn die angegebene maximale Wartezeit &uuml;berschritten wurde. Bei einer ung&uuml;ltigen PID wird @error auf ungleich 0 und @extended auf 0xCCCCCCCC gesetzt.
+@@End@@
+
+
+###Remarks###
+Die Prozessnamen sind die ausf&uuml;hrbaren Dateien ohne den kompletten Pfad, also z.B. "notepad.exe" oder "winword.exe".
+
+PID ist eine eindeutige Zahl, die einen Prozess identifiziert.
+Die PID kann &uuml;ber die R&uuml;ckgabewerte der Funktionen <a href="ProcessExists.htm">ProcessExists()</a>() oder <a href="Run.htm">Run()</a> ermittelt werden.
+
+Der Prozess wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+Der R&uuml;ckgabewert ist 1, falls der Prozess nicht existiert.
+
+
+###Related###
+ProcessClose, ProcessExists, ProcessWait, RunWait, WinWaitClose, ProcessList, RunAsWait, WinGetProcess
+
+
+###Example###
+@@IncludeExample@@

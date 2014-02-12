@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlListView_SetToolTips
+
+###Description###
+Setzt das ToolTip-Control welches das Control benutzen wird um ToolTips anzuzeigen
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetToolTips($hWnd, $hToolTip)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hToolTip
+	Handle zu dem ToolTip-Control das einzustellen ist.
+@@End@@
+
+###ReturnValue###
+Gibt das Handle zu dem letzten ToolTip-Control zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetToolTips
+
+###Example###
+@@IncludeExample@@

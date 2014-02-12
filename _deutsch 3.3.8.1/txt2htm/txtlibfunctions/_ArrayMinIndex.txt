@@ -1,0 +1,41 @@
+###User Defined Function###
+_ArrayMinIndex
+
+###Description###
+Gibt den Index des kleinsten Wertes in einem Array zur&uuml;ck.
+
+###Syntax###
+#include <Array.au3>
+_ArrayMinIndex(Const ByRef $avArray [, $iCompNumeric = 0 [, $iStart = 0 [, $iEnd = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array, welches durchsucht werden soll.
+$iCompNumeric
+	[optional] Vergleichsmethode:
+		0 = Alphanumerischer Vergleich
+		1 = Numerischer Vergleich
+$iStart
+	[Optional] Start Array-Index; gew&ouml;hnlich auf 0 oder 1 gesetzt (Standard = 0)
+$iEnd
+	[Optional] Stopp Array-Index (Standard = 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Index des niedrigsten Wertes aus einem Array zur&uuml;ck.
+Fehler:	Gibt einen leeren String ("") zur&uuml;ck und setzt @error
+@error:	1 - $avArray ist kein Array
+	2 - $iStart ist gr&ouml;&szlig;er als $iEnd
+	3 - $avArray ist kein 1-dimensionales Array
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_ArrayMax, _ArrayMaxIndex, _ArrayMin
+
+###Example###
+@@IncludeExample@@

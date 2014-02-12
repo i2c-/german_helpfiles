@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListBox_SetTopIndex
+
+###Description###
+Garantiert das ein bestimmtes Item in einer List-Box sichtbar ist.
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SetTopIndex ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	Legt den 0-basierenden Index des Item fest.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_GetTopIndex
+
+
+###Example###
+@@IncludeExample@@

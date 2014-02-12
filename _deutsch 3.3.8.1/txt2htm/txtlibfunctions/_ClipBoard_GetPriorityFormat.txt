@@ -1,0 +1,39 @@
+###User Defined Function###
+_ClipBoard_GetPriorityFormat
+
+###Description###
+Gibt das erste verf&uuml;gbare Zwischenablagenformat in der angegebenen Liste zur&uuml;ck. 
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_GetPriorityFormat($aFormats)
+
+###Parameters###
+@@ParamTable@@
+$aFormats
+	Array mit dem folgenden Format:
+		[0] - Anzahl der Formate (n)
+		[1] - Format 1
+		[2] - Format 2
+		[n] - Format n
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das erste Zwischenablagenformat in der Liste, f&uuml;r das Daten vorliegen.
+Fehler:	Format nicht gefunden aufgrund:
+	-1 - Zwischenablage hat Daten, aber in keinem der angeforderten Formate
+	 0 - Zwischenablage ist leer
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_ClipBoard_CountFormats, _ClipBoard_EnumFormats
+
+###See Also###
+@@MsdnLink@@ GetPriorityClipboardFormat
+
+###Example###
+@@IncludeExample@@

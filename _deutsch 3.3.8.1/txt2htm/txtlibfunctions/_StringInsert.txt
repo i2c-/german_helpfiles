@@ -1,0 +1,36 @@
+###User Defined Function###
+_StringInsert
+
+###Description###
+F&uuml;gt einen String in einen anderen ein.
+
+###Syntax###
+#include <String.au3>
+_StringInsert($s_String, $s_InsertString, $i_Position)
+
+###Parameters###
+@@ParamTable@@
+$s_String
+	originaler String
+$s_InsertString
+	String, der eingef&uuml;gt werden soll
+$i_Position
+	Position, an der der String eingesetzt werden soll (bei negativen Werten wird von der rechten Seite des Strings abgez&auml;hlt)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen neuen ver&auml;nderten String zur&uuml;ck
+Fehler:	Gibt den originalen String zur&uuml;ck und setzt @error
+@Error:	1 - $s_String ist leer
+	2 - $s_InsertString ist leer
+	3 - ung&uuml;ltige Position
+@@End@@
+
+###Remarks###
+Es sind negative Positionswerte zu verwenden, um den String von der rechten Seite einzuf&uuml;gen.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

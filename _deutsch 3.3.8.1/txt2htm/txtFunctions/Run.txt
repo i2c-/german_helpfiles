@@ -1,0 +1,58 @@
+###Function###
+Run
+
+###Description###
+Startet ein externes Programm.
+
+###Syntax###
+Run ( "program" [, "workingdir" [, show_flag [, opt_flag]]] )
+
+###Parameters###
+@@ParamTable@@
+program
+	Der komplette Pfad des Programms (.EXE, .BAT, .COM oder .PIF), die ausgef&uuml;hrt werden soll. (siehe Bemerkungen)
+workingdir
+	[optional] Der Pfad, in dem das Programm ausgef&uuml;hrt werden soll (Arbeitsverzeichnis). Dies ist nicht der Pfad des Programms.
+show_flag
+	[optional] Das "show"- (Sichtbarkeits-) Flag des auszuf&uuml;hrenden Programms:
+	  @SW_HIDE = verstecktes Fenster (alternative Eingabe: default).
+	  @SW_MINIMIZE = minimiertes Fenster.
+	  @SW_MAXIMIZE = maximiertes Fenster.
+opt_flag
+	[optional] Steuert verschiedene Optionen, die die Interaktion zwischen Parent- und Child-Prozess betreffen (STDIO).
+	  0x1 ($STDIN_CHILD)  = Stellt ein Handle zum STDIN-Stream des Child-Fensters bereit
+	  0x2 ($STDOUT_CHILD) = Stellt ein Handle zum STDOUT-Stream des Child-Fensters bereit.
+	  0x4 ($STDERR_CHILD) = Stellt ein Handle zum STDERR-Stream des Child-Fensters bereit.
+	  0x8 ($STDERR_MERGED) = Stellt das selbe Handle f&uuml;r den STDOUT- und STDERR-Stream bereit (Setzt $STDOUT_CHILD und $STDERR_CHILD).
+	  0x10 ($STDIO_INHERIT_PARENT) = Stellt dem Child-Fenster das Handle zum STDIO-Stream des Parent-Fensters bereit. Kann nicht mit einem anderen STDIO-Flag kombiniert werden. Dieses Flag ist nur dann sinnvoll, wenn die Parent-Anwendung als Kommandozeilenapplikation kompiliert wurde.
+	  0x10000 ($RUN_CREATE_NEW_CONSOLE) = Der Child-Kommandozeilenprozess wird in einem eigenen Kommandozeilenfenster ausgef&uuml;hrt. Dieses Flag ist nur dann sinnvoll, wenn die Parent-Anwendung als Kommandozeilenapplikation kompiliert wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die PID des Prozesses, der gestartet wurde.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf ungleich Null.
+@@End@@
+
+###Remarks###
+Pfade mit Leerzeichen m&uuml;ssen in Anf&uuml;hrungszeichen gesetzt werden.
+
+Um DOS- (Konsolen-) Kommandos auszuf&uuml;hren, sollte man folgendes ausprobieren: 
+<i>Run(@ComSpec & " /c " & 'commandName', "", @SW_HIDE)	;Nicht die Leerzeichen vor und nach "/c" vergessen!</i>
+
+Das Bereitstellen der Standard-I/O-Parameter mit den geeigneten Werten ist Voraussetzung f&uuml;r die Interaktion des Child-Prozesses mit den Funktionen StderrRead, StdinWrite und StdoutRead.
+Um mehrere I/O-Streams zu verwalten, kombiniert man die „Flag“-Werte (oder man benutzt $STDERR_CHILD, $STDIN_CHILD & $STDOUT_CHILD, die in Constants.au3 definiert sind).
+
+Nach dem Start des angeforderten Programms wird das Skript weiter ausgef&uuml;hrt. Soll die Ausf&uuml;hrung des Skripts angehalten werden, bis das gestartete Programm beendet ist, so ist statt der Run-Funktion die RunWait-Funktion zu verwenden.
+
+Um die I/O-Streams zu schlie&szlig;en, m&uuml;ssen folgende Bedingungen erf&uuml;llt sein: 
+1) Der Child-Prozess hat seine Seite des Streams geschlossen (das ist der Fall, wenn der Child-Prozess geschlossen wird). 
+2) AutoIt muss gekaperte Streams auslesen, bis keine Daten mehr enthalten sind.  
+3) Wenn STDIN dem Child-Prozess zugewiesen ist, muss StdinWrite() aufgerufen werden, um den Stream zu schlie&szlig;en. Sobald alle Streams als nicht mehr ben&ouml;tigt erkannt werden, werden alle intern verwendeten Ressourcen automatisch freigegeben.
+StdioClose kann verwendet werden, um das Schlie&szlig;en der STDIO-Streams zu erzwingen.
+
+###Related###
+RunWait, RunAs, RunAsWait, ShellExecute, ShellExecuteWait, StderrRead, StdinWrite, StdoutRead, StdioClose, ProcessClose, ConsoleRead
+
+###Example###
+@@IncludeExample@@

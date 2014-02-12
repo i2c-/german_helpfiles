@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenu
+
+###Description###
+Ermittelt das Handle des Men&uuml;s, welches zu dem festgelegten Fenster geh&ouml;rt.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenu($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Identifiziert das Fenster dessen Men&uuml; Handle ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Men&uuml;s
+Fehler:	0
+@@End@@
+
+###Remarks###
+_GUICtrlMenu_GetMenu funktioniert nicht auf variierenden Men&uuml;leisten. Variierende Men&uuml;leisten sind besondere Controls die Standardmen&uuml;s nachahmen aber keine Men&uuml;s sind.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetMenu, _GUICtrlMenu_FindParent
+
+###See Also###
+@@MsdnLink@@ GetMenu
+
+###Example###
+@@IncludeExample@@

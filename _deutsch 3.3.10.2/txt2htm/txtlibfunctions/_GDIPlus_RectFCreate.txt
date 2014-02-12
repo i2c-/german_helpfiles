@@ -1,0 +1,37 @@
+###User Defined Function###
+_GDIPlus_RectFCreate
+
+###Description###
+Erstellt eine $tagGDIPRECTF Struktur
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_RectFCreate ( [$nX = 0 [, $nY = 0 [, $nWidth = 0 [, $nHeight = 0]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$nX
+	[optional] X-Koordinate der oberen, linken Ecke des Rechtecks
+$nY
+	[optional] Y-Koordinate der oberen, linken Ecke des Rechtecks
+$nWidth
+	[optional] Breite des Rechtecks
+$nHeight
+	[optional] H&ouml;he des Rechtecks
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagGDIPRECTF Struktur zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagGDIPRECTF
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlRebar_MaximizeBand
+
+###Description###
+Ver&auml;ndert die Gr&ouml;&szlig;e einer Gruppe in einem Rebar-Control so, dass entweder dessen idealste oder maximale Gr&ouml;&szlig;e erreicht wird
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_MaximizeBand ( $hWnd, $iIndex [, $fIdeal = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+$fIdeal
+	[optional] Zeigt an, ob die idealste Breite der Gruppe verwendet werden soll, wenn die Gruppe maximiert ist
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_GetBandIdealSize
+
+
+###Example###
+@@IncludeExample@@

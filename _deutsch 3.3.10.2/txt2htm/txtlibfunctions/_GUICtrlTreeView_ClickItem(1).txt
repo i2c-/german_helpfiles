@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlTreeView_ClickItem
+
+###Description###
+Klickt auf ein Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_ClickItem ( $hWnd, $hItem [, $sButton = "left" [, $fMove = False [, $iClicks = 1 [, $iSpeed = 0]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$sButton
+	[optional] Zu klickender Button
+$fMove
+	[optional] Falls True bewegt sich die Maus. Falls False bewegt sich die Maus nicht.
+$iClicks
+	[optional] Anzahl der Klicks
+$iSpeed
+	[optional] Bewegungsgeschwindigkeit der Maus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

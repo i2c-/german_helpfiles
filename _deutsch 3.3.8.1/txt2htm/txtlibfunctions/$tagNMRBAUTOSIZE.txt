@@ -1,0 +1,37 @@
+###Structure Name###
+$tagNMRBAUTOSIZE
+
+###Description###
+Enth&auml;lt Informationen, die in der Behandlung von $RBN_AUTOSIZE Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMRBAUTOSIZE = $tagNMHDR & ";bool fChanged;" & _
+		"struct; long TargetLeft;long TargetTop;long TargetRight;long TargetBottom; endstruct;" & _
+		"struct; long ActualLeft;long ActualTop;long ActualRight;long ActualBottom; endstruct"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+fChanged
+	Mitglied, das darauf hinweist, ob sich die Gr&ouml;&szlig;e oder das Layout des Rebar-Controls ge&auml;ndert hat (ungleich Null, wenn eine Ver&auml;nderung aufgetreten ist oder andernfalls Null)
+TargetLeft
+	Bestimmt die x-Koordinate der oberen-linken Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control versuchte zu setzen
+TargetTop
+	Bestimmt die y-Koordinate der oberen-linken Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control versuchte zu setzen
+TargetRight
+	Bestimmt die x-Koordinate der unteren-rechten Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control versuchte zu setzen
+TargetBottom
+	Bestimmt die y-Koordinate der unteren-rechten Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control versuchte zu setzen
+ActualLeft
+	Bestimmt die x-Koordinate der oberen-linken Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control aktuell gesetzt hat
+ActualTop
+	Bestimmt die y-Koordinate der oberen-linken Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control aktuell gesetzt hat
+ActualRight
+	Bestimmt die x-Koordinate der unteren-rechten Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control aktuell gesetzt hat
+ActualBottom
+	Bestimmt die y-Koordinate der unteren-rechten Ecke des Rechtecks, zu dessen Gr&ouml;&szlig;e sich das Rebar-Control aktuell gesetzt hat
+@@End@@
+
+###Remarks###
+Keine.

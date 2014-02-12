@@ -1,0 +1,46 @@
+###User Defined Function###
+_IEDocInsertHTML
+
+###Description###
+F&uuml;gt HTML in oder um ein Element herum ein.
+
+###Syntax###
+#include <IE.au3> 
+_IEDocInsertHTML(ByRef $o_object, $s_string [, $s_where = "beforeend"])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable, die auf ein Dokument verweist
+$s_string
+	Die Variable enth&auml;lt das einzuf&uuml;gende HTML.
+$s_where
+	[optional] Gibt an, wo HTML eingef&uuml;gt werden soll
+	beforebegin = F&uuml;gt HTML unmittelbar vor dem Objekt ein.
+	afterbegin = F&uuml;gt HTML nach dem Anfang des Objekts, jedoch vor dem anderen Inhalt des Objekts ein.
+	beforeend = (Standard) F&uuml;gt HTML unmittelbar vor dem Ende des Objekts, jedoch nach dem anderen Inhalt des Objekts ein.
+	afterend = F&uuml;gt HTML unmittelbar nach dem Objekt ein.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Mit den _IEPropertySet-Eigenschaften innerHTML, outerHTML, innerText und outerText kann der einzuf&uuml;gende Inhalt dynamisch ge&auml;ndert werden.
+
+
+###Related###
+_IEDocInsertText, _IEPropertyGet, _IEPropertySet, _IEBodyReadHTML, _IEBodyWriteHTML, _IEDocReadHTML, _IEHeadInsertEventScript
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlRebar_EndDrag
+
+###Description###
+Beendet eine drag-and-drop Aktion im Rebar-Control
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_EndDrag ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+@@End@@
+
+###ReturnValue###
+Diese Nachricht f&uuml;hrt nicht dazu, dass eine $RBN_ENDDRAG gesendet wird.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_BeginDrag
+
+
+###Example###
+@@IncludeExample@@

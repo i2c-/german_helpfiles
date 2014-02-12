@@ -1,0 +1,33 @@
+###Function###
+FileExists
+
+###Description###
+Pr&uuml;ft, ob eine Datei oder ein Verzeichnis besteht.
+
+###Syntax###
+FileExists ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+Path
+	Die zu pr&uuml;fende Datei bzw. der zu pr&uuml;fende Ordner.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0, wenn das Verzeichnis/die Datei nicht bestehen.
+@@End@@
+
+
+###Remarks###
+<a href="FileExists.htm">FileExists()</a> gibt 0 zur&uuml;ck, wenn man ein Floppy-Laufwerk angibt, welches keine Diskette enth&auml;lt.
+
+
+###Related###
+FileGetAttrib, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

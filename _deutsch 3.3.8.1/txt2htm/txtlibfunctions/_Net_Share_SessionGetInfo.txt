@@ -1,0 +1,46 @@
+###User Defined Function###
+_Net_Share_SessionGetInfo
+
+###Description###
+Liefert Informationen &uuml;ber eine zwischen einem Server und Workstation aufgebaute Verbindung (Session)
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_SessionGetInfo($sServer, $sClientName, $sUserName)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	String, der den DNS- oder NetBIOS-Namen des Remote Servers angibt, auf dem die Funktion ausgef&uuml;hrt werden soll. Wenn dieser Parameter leer bleibt, wird der lokale Computer verwendet.
+$sClientName
+	Gibt den Namen der Computer-Session an, f&uuml;r die Informationen erhalten werden soll. Dieser Parameter darf nicht weggelassen werden .
+$sUserName
+	String, der den Namen des Benutzers angibt, von dem Session-Informationen erhalten werden soll. Dieser Parameter darf nicht weggelassen werden .
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Name des Computers, der die Session aufgebaut hat
+	[1] - Name des Users, der die Session aufgebaut hat
+	[2] - Anzahl der Dateien, Ger&auml;te und Pipes, die w&auml;hrend der Session ge&ouml;ffnet wurden
+	[3] - Anzahl der Sekunden, die die Session aktiv war
+	[4] - Anzahl der Sekunden, die die Session im Leerlauf war
+	[5] - Bestimmt, wie der Benutzer die Session aufgebaut hat:
+	 1 - Benutzer baute die Session &uuml;ber einen Gast-Account auf
+	 2 - Benutzer baute die Session auf, ohne Passwort-Verschl&uuml;sselung zu benutzen
+	[6] - Bestimmt den Client-Typ, der die Session aufgebaut hat
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Nur Mitglieder der lokalen Gruppen Administratoren oder Server Operatoren k&ouml;nnen diese Funktion ausf&uuml;hren.
+
+###Related###
+_Net_Share_FileGetInfo, _Net_Share_ShareGetInfo
+
+###See Also###
+@@MsdnLink@@ NetSessionGetInfo
+
+###Example###
+@@IncludeExample@@

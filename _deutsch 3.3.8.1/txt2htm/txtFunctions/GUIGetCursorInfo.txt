@@ -1,0 +1,44 @@
+###Function###
+GUIGetCursorInfo
+
+###Description###
+Erfragt die Position des Mauszeigers relativ zum GUI-Fenster.
+
+###Syntax###
+GUIGetCursorInfo ( [winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+winhandle
+	[optional] Der Handle des Fensters, auf das sich die Funktion bezieht.  Wenn nicht angegeben, wird das "aktuelle" Fenster genommen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array mit 5 Eintr&auml;gen zur&uuml;ck, das die Cursor-Informationen enth&auml;lt:
+	$array[0] = X-Koordinate (horizontal)
+	$array[1] = Y-Koordinate (vertikal)
+	$array[2] = Klick auf die erste Maustaste (&uuml;blicherweise links) (1 wenn Maustaste gedr&uuml;ckt, 0 wenn nicht gedr&uuml;ckt)
+	$array[3] = Klick auf die zweite Maustaste (&uuml;blicherweise rechts) (1 wenn Maustaste gedr&uuml;ckt, 0 wenn nicht gedr&uuml;ckt)
+	$array[4] = ID des Controls, &uuml;ber dem sich der Mauszeiger gerade befindet (0 wenn nicht &uuml;ber einem Item)
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf 1
+@@End@@
+
+###Remarks###
+Die Koordinaten sind relativ zum GUI-Fenster angegeben (auch als "client"-Koordinaten bekannt).
+
+Wenn der "winhandle" Parameter verwendet wird, wird das damit angegebene Fenster zum neuen "aktuellen" Fenster.
+
+Das Abfragen der Mauskoordinaten ist nur erfolgreich wenn das Fenster mit GUICreate erstellt wurde. Falls kein winhandle angegeben wird, ist die Funktion erfolgreich, wenn das GUI Fenster <b>aktiv</b> ist.
+
+Control-IDs von ListViewItem oder TreeViewItem Controls werden nie zur&uuml;ckgegeben. Stattdessen wird die ID des Hauptcontrol Listview oder TreeView zur&uuml;ckgegeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate, GUIGetMsg
+
+
+###Example###
+@@IncludeExample@@

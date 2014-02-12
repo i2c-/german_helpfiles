@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUIToolTip_DelTool
+
+###Description###
+L&ouml;scht ein Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_DelTool($hWnd, $hTool [, $iID = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zu dem Fenster, welches das Tool enth&auml;lt
+$iID
+	[optional] Identifizierer des Tools
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_AddTool

@@ -1,0 +1,74 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaShading
+
+###Description###
+Ermittelt die Schattierungseinstellungen des (ersten) markierten Absatzes oder, wenn keiner markiert ist, die des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaShading($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, der die durch Semikola (;) getrennten Einstellungen des Absatzes enth&auml;lt:
+	Wert 1 - Gewichtung - Anteil (in %) der Vordergrundfarbe, der Rest ist Hintergrundfarbe
+	Wert 2 - Stil - String, der einen der folgenden Werte enth&auml;lt:
+	   non - keiner
+	   dhz - dunkel, horizontal
+	   dvt - dunkel, vertikal
+	   ddd - dunkel, diagonal abw&auml;rts
+	   dud - dunkel, diagonal aufw&auml;rts
+	   dgr - dunkel, netzf&ouml;rmig
+	   dtr - dunkel, gitterf&ouml;rmig
+	   lhz - hell, horizontal
+	   lvt - hell, vertikal
+	   ldd - hell, diagonal abw&auml;rts
+	   lud - hell, diagonal aufw&auml;rts
+	   lgr - hell, netzf&ouml;rmig
+	   ltr - hell, gitterf&ouml;rmig
+	Wert 3 - Vordergrundfarbe - eine der folgenden:
+	   "blk" - schwarz
+	   "blu" - blau
+	   "cyn" - zyan
+	   "grn" - gr&uuml;n
+	   "mag" - magenta
+	   "red" - rot
+	   "yel" - gelb
+	   "whi" - wei&szlig;
+	   "dbl" - dunkles blau
+	   "dgn" - dunkles gr&uuml;n
+	   "dmg" - dunkles magenta
+	   "drd" - dunkles rot
+	   "dyl" - dunkles gelb
+	   "dgy" - dunkles grau
+	   "lgy" - helles grau
+	Wert 4 - Hintergrundfarbe - gleiche Werte wie bei Vordergrundfarbe (Wert 3)
+	Wert 5 - Geltungsbereich:
+	   a - Alle (oder nur die) ausgew&auml;hlten Abs&auml;tze haben diese Einstellungen
+	   f - Ausschlie&szlig;lich der erste ausgew&auml;hlte Absatz hat diese Einstellungen
+	   c - Der aktuelle Absatz hat diese Einstellungen
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Unter Word 2007 f&uuml;hren die Codes f&uuml;r den Schattierungsstil nicht zu den erwarteten Ergebnissen, also ggf. vorher ausprobieren!
+
+Ein RichEdit-Control zeigt keine Schattierungen an, aber hier erstellte Schattierungen werden in Word angezeigt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaShading
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

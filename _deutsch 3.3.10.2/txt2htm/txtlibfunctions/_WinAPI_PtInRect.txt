@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_PtInRect
+
+###Description###
+Ermittelt, ob der festgelegte Punkt innerhalb des festgelegten Rechtecks liegt
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_PtInRect ( ByRef $tRect, ByRef $tPoint )
+
+
+###Parameters###
+@@ParamTable@@
+$tRect
+	$tagRECT Struktur die das festgelegte Rechteck enth&auml;lt
+$tPoint
+	$tagPOINT Struktur die den festgelegten Punkt enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Punkt liegt innerhalb des Rechtecks
+False:	Punkt liegt nicht innerhalb des Rechtecks
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagRECT, $tagPOINT
+
+
+###See Also###
+@@MsdnLink@@ PtInRect

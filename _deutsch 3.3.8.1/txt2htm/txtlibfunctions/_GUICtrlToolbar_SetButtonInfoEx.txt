@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlToolbar_SetButtonInfoEx
+
+###Description###
+Setzt erweiterte Informationen f&uuml;r einen Button
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetButtonInfoEx($hWnd, $iCommandID, $tButton)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$tButton
+	$tagBUTTONINFO Struktur
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetButtonInfoEx, $tagTBBUTTONINFO
+
+###Example###
+@@IncludeExample@@

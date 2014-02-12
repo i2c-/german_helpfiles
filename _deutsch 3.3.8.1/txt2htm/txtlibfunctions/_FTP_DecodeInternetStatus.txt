@@ -1,0 +1,27 @@
+###User Defined Function###
+_FTP_DecodeInternetStatus
+
+###Description###
+Decodiert einen empfangenen Internet Status.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_DecodeInternetStatus($dwInternetStatus)
+
+###Parameters###
+@@ParamTable@@
+$dwInternetStatus
+	Internet Status
+@@End@@
+
+###ReturnValue###
+Gibt einen String zur&uuml;ck.
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_SetStatusCallback
+
+###Example###
+@@IncludeExample@@

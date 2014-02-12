@@ -1,0 +1,36 @@
+###User Defined Function###
+_SQLite_Close
+
+###Description###
+Schlie&szlig;t eine offene Datenbank.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Close([$hDB])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Datenbank-Handle.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck.
+Fehler:	Der R&uuml;ckgabewert ist einer der $SQLITE_* Konstanten.
+@error:	-1 - SQLite hat einen Fehler festgestellt (R&uuml;ckgabewert &uuml;berpr&uuml;fen!)
+	1 - Fehler beim Aufruf der SQLite-API
+	2 - Aufruf wegen Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Wartet auf SQLite &lt;&gt; $SQLITE_BUSY bis das 'globale Timeout' abgelaufen ist.
+Wenn kein Datenbankhandle &uuml;bergeben wird, wird die  zuletzt ge&ouml;ffnete Datenbank geschlossen.
+Vor dem Aufruf von _SQLite_Close muss _SQLite_QueryFinalize f&uuml;r jede Abfrage, die ausdr&uuml;cklich entfinalisiert gelassen wird, aufgerufen werden.
+
+###Related###
+_SQLite_Open
+
+###Example###
+@@IncludeExample@@

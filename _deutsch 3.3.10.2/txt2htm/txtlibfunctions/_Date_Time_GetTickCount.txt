@@ -1,0 +1,27 @@
+###User Defined Function###
+_Date_Time_GetTickCount
+
+###Description###
+Gibt die Zeit in Millisekunden zur&uuml;ck, die vergangen ist, seit Windows gestartet wurde.
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_GetTickCount (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt die Zeit in Millisekunden zur&uuml;ck, die vergangen ist, seit Windows gestartet wurde.
+
+
+###Remarks###
+Die vergangene Zeit ist als DWORD Wert gespeichert. Die Zeit wird wieder auf Null gesetzt, wenn Windows seit 49,7 Tagen durchgehend l&auml;uft.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

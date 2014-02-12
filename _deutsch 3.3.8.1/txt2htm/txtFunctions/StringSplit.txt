@@ -1,0 +1,46 @@
+###Function###
+StringSplit
+
+###Description###
+Teilt einen String, abh&auml;ngig von den/dem gew&auml;hlten Trennzeichen (delimiters), in Stringfolgen auf und gibt diese in einem Array zur&uuml;ck.
+
+###Syntax###
+StringSplit ( "string", "delimiters" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu bearbeitende String.
+delimiters
+	Ein oder mehrere Trennzeichen. Die Gro&szlig;- und Kleinschreibung wird ber&uuml;cksichtigt.
+flag
+	[optional] &auml;ndert wie das Teilen des Strings funktionieren soll. Es k&ouml;nnen mehrere Flags zusammen verwendet werden:
+	  flag = 0 (Standard), es fungiert jedes in den Trennzeichen enthaltene Zeichen als Trennmarkierung
+	  flag = 1, es wird der gesamte Trennzeichenstring als Trennmarkierung genutzt
+	  flag = 2, deaktiviert die R&uuml;ckgabe der Anzahl im ersten Element. Dadurch wird das Array 0-basierend. Man muss nun mit UBound() die Gr&ouml;&szlig;e des Arrays feststellen.
+@@End@@
+
+
+###ReturnValue###
+Gibt ein Array zur&uuml;ck. Standardm&auml;&szlig;ig enth&auml;lt das erste Element ($array[0]) die Anzahl der zur&uuml;ckgegebenen Teilstrings. Die weiteren Elemente ($array[1], $array[2], etc.) enthalten die Teilstrings des aufgeteilten Strings.
+Falls das Flag = 2 ist, wird die Anzahl nicht in dem ersten Element enthalten sein.
+
+Wird kein Trennzeichen gefunden, wird @error auf 1 gesetzt, die Anzahl ist 1 ($array[0]), und der gesamte String wird zur&uuml;ckgegeben ($array[1]).
+
+
+###Remarks###
+Wird als Tennzeichen ein Leerstring "" angegeben, so wird jedes Zeichen des Strings im Array als Element zur&uuml;ckgegeben.
+
+Ist das Trennzeichen ein Teilstring anstatt eines einzelnen Zeichens (siehe Beispiel unten).
+
+StringSplit ist sehr brauchbar als Alternative zu StringInStr und zum Bef&uuml;llen eines Arrays.
+
+Achtung: Wenn man das Makro @CRLF nutzt, gilt dies als 2-Zeichen-String, deshalb werden zus&auml;tzliche Leerzeilen erzeugt.
+
+###Related###
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper
+
+
+###Example###
+@@IncludeExample@@

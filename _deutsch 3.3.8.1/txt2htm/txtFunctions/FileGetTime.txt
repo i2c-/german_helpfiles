@@ -1,0 +1,52 @@
+###Function###
+FileGetTime
+
+###Description###
+Gibt die Zeit- und Datumsinformationen einer Datei zur&uuml;ck.
+
+###Syntax###
+FileGetTime ( "filename" [, option [, format]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname der zu &uuml;berpr&uuml;fenden Datei.
+option
+	[optional] Flag, das angibt, welche Zeit ausgelesen werden soll:
+	0 = Ver&auml;ndert (Standard)
+	1 = Erstellt
+	2 = Letzter Zugriff
+format
+	[optional] Bestimmt die R&uuml;ckgabeart:
+	0 = Gibt ein Array zur&uuml;ck (Standard)
+	1 = Gibt einen String im Format JJJJMMTTHHMMSS zur&uuml;ck.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array oder einen String zur&uuml;ck, der die Zeit- und Datumsinformationen enth&auml;lt. Siehe Bemerkungen.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+
+###Remarks###
+Das Array ist ein 1-dimensionales Array, das sechs Elemente enth&auml;lt:
+$array[0] = Jahr (vierstellig)
+$array[1] = Monat (Bereich: 01 - 12)
+$array[2] = Tag   (Bereich: 01 - 31)
+$array[3] = Stunden   (Bereich: 00 - 23)
+$array[4] = Minuten  (Bereich: 00 - 59)
+$array[5] = Sekunden  (Bereich: 00 - 59)
+Es ist zu beachten, dass die R&uuml;ckgabewerte bei Bedarf mit Nullen aufgef&uuml;llt sind.
+
+
+
+###Related###
+FileGetSize, FileGetAttrib, FileGetVersion, FileSetTime, FileSetAttrib
+
+
+###Example###
+@@IncludeExample@@

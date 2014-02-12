@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlTreeView_GetParentHandle
+
+###Description###
+Ermittelt das Parent-Handle des Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetParentHandle($hWnd [, $hItem = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	[optional] Item ID/Handle
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Parent-Items
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

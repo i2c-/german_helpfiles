@@ -1,0 +1,42 @@
+###User Defined Function###
+_WinNet_GetConnectionPerformance
+
+###Description###
+Liefert Informationen &uuml;ber den Durchsatz einer Netzwerkverbindung.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetConnectionPerformance($sLocalName, $sRemoteName)
+
+###Parameters###
+@@ParamTable@@
+$sLocalName
+	Name des lokalen Ger&auml;ts (z.B. "F:" oder "LPT1"), das als Netzwerkressource freigegeben ist und abgefragt werden soll.
+		Wenn nicht angegeben, wird die Netzwerkressource in sRemoteName verwendet. Wenn ein lokales Ger&auml;t angegeben ist,
+		wird sRemoteName ignoriert.
+$sRemoteName
+	Name der Netzwerkressource, die abgefragt werden soll. Die Verbindung zur Ressource muss bestehen.
+		Zum Beispiel, wenn die Ressource eine Datei auf einem Fileserver ist, dann stellt das Ge&ouml;ffnethalten der Datei die Verbindung sicher.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aInfo[0] - Beschreibung der Verbindung. Kann eine Kombination der folgenden Werte sein:
+	 1 - Die gelieferte Information gilt f&uuml;r den Durchsatz der Netzwerkkarte.
+	 2 - Die Verbindung ist nicht geroutet.
+	 4 - Die Verbindung l&auml;uft &uuml;ber ein normalerweise langsames Medium.
+	 8 - Einige der gelieferten Daten werden dynamisch ermittelt.
+	$aInfo[1] - Durchsatz des Mediums zur Netzwerkressource in 100 bps (Bits pro Sekunde).
+	$aInfo[2] - Zeitverz&ouml;gerung vor dem Senden von Informationen (in einer Richtung).
+	$aInfo[3] - Gr&ouml;&szlig;e der Daten, die ein Programm f&uuml;r eine Einzelanfrage an die Ressource verwenden sollte.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ MultinetGetConnectionPerformanceA

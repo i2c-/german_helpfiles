@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaNumbering
+
+###Description###
+Ermittelt die Art der Absatznummerierung des (ersten) markierten Absatzes oder, wenn keiner markiert ist, die des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaNumbering($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Durch Semikola (;) getrennte Werte :
+	Wert 1 - Ein String, der den Nummerierungstyp und die Startnummer angibt, z.B. "." (nur Punkte), "1)","(b)", "C.", "iv", "V)"
+	   Nachfolgende Leerzeichen geben die minimale Anzahl Leerzeichen zwischen der Nummerierung und dem Absatz an
+	   Spezialf&auml;lle:
+	      "=" - Dies ist ein nicht nummerierter Absatz innerhalb des vorangegangenen Listenelements
+	       "" - Nummerierung der ausgew&auml;hlten Abs&auml;tze wurde entfernt
+	Wert 2 - Wenn r&ouml;mische Zahlen eingestellt wurden, dann "Roman", sonst ""
+	Wert 3 - Abstand zwischen der Zahl/Punkt und dem Absatz (in Leerzeichen-Einheiten)
+	Wert 4 - Geltungsbereich:
+	   a - Alle (oder nur die) ausgew&auml;hlten Abs&auml;tze haben diese Einstellungen
+	   f - Ausschlie&szlig;lich der erste ausgew&auml;hlte Absatz hat diese Einstellungen
+	   c - Der aktuelle Absatz hat diese Einstellungen
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaNumbering
+
+###See Also###
+@@MsdnLink@@ EM_GETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

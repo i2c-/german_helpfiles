@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SetItemCount
+
+###Description###
+Bringt das ListView-Control dazu, Speicher f&uuml;r eine festgelegte Anzahl von Items freizuhalten
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemCount($hWnd, $iItems)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iItems
+	Anzahl von Items die das ListView-Control insgesamt enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Bringt das Control dazu die interne Datenstruktur f&uuml;r die festgelegte Anzahl von Items freizuhalten. Dies verhindert, dass das Control jederzeit die Datenstruktur freihalten muss, wenn ein Item hinzugef&uuml;gt wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemCount
+
+###Example###
+@@IncludeExample@@

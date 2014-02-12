@@ -1,0 +1,28 @@
+###User Defined Function###
+_SQLite_LibVersion
+
+###Description###
+Gibt die Versionsnummer der SQLite-DLL zur&uuml;ck.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_LibVersion()
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den SQLite-Versionsstring zur&uuml;ck
+Fehler:	@error = 1
+@@End@@
+
+###Remarks###
+Ben&ouml;tigt die SQLite3.dll im aktuellen oder Systemverzeichnis.
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

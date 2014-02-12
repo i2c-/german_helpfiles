@@ -1,0 +1,32 @@
+###Function###
+DriveMapGet
+
+###Description###
+Ruft Details eines gemappten Laufwerks ab.
+
+###Syntax###
+DriveMapGet ( "device" )
+
+
+###Parameters###
+@@ParamTable@@
+device
+	Die Kennzeichnung des abzufragenden Ger&auml;tes (Laufwerk oder Drucker), z.B. "O:" oder "LPT1:"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt Details der Verbindung zur&uuml;ck, z.B. \\Server\Freigabe
+Fehler:	Gibt einen Leerstring "" zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+DriveMapAdd, DriveMapDel
+
+
+###Example###
+@@IncludeExample@@

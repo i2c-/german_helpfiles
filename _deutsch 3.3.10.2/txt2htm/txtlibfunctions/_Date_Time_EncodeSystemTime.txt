@@ -1,0 +1,43 @@
+###User Defined Function###
+_Date_Time_EncodeSystemTime
+
+###Description###
+Dekodiert und liefert eine $tagSYSTEMTIME Struktur zur&uuml;ck
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_EncodeSystemTime ( $iMonth, $iDay, $iYear [, $iHour = 0 [, $iMinute = 0 [, $iSecond = 0 [, $iMSeconds = 0]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$iMonth
+	Monat
+$iDay
+	Tag
+$iYear
+	Jahr
+$iHour
+	[optional] Stunde
+$iMinute
+	[optional] Minute
+$iSecond
+	[optional] Sekunde
+$iMSeconds
+	[optional] Millisekunde
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Date_Time_EncodeFileTime, $tagSYSTEMTIME
+
+
+###Example###
+@@IncludeExample@@

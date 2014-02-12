@@ -1,0 +1,52 @@
+###Function###
+FileOpen
+
+###Description###
+&Ouml;ffnet eine Textdatei zum Lesen oder Schreiben.
+
+###Syntax###
+FileOpen ( "filename" [, mode] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname der zu &ouml;ffnenden Textdatei.
+mode
+	[optional] Modus in dem die Datei ge&ouml;ffnet werden soll.
+	Kann auch eine Kombination aus folgenden sein: 
+	  0 = Lesemodus (Standard)
+	  1 = Schreibmodus (anh&auml;ngend an das Dateiende)
+	  2 = Schreibmodus (l&ouml;schen des vorherigen Inhaltes)
+	  8 = Anlegen der Verzeichnisstruktur, wenn sie nicht existiert (siehe Bemerkungen).
+	  16 = Erzwinge den Bin&auml;rmodus (Siehe Bemerkungen)
+	  32 = Verwende Unicode-UTF16 mit Little-Endian-Kodierung im Lese- und Schreibmodus. Lesen &uuml;berschreibt ein existierendes BOM nicht.
+	  64 = Verwende Unicode-UTF16 mit Big-Endian-Kodierung im Lese- und Schreibmodus. Lesen &uuml;berschreibt ein existierendes BOM nicht.
+	  128 = Verwende Unicode-UTF8 Kodierung im Lese- und Schreibmodus. Lesen &uuml;berschreibt ein existierendes BOM nicht.
+	  256 = Verwende Unicode-UTF8 (ohne BOM) im Lese- und Schreibmodus.
+	  16384 = Wenn zum Lesen ge&ouml;ffnet wird und kein BOM verf&uuml;gbar ist, so wird auf die komplette Datei UTF8 Erkennung angewendet. Falls dies nicht verwendet wird, so wird nur der Anfang der Datei nach UTF8 untersucht.
+	Der Verzeichnispfad muss bereits vorhanden sein (au&szlig;er Modus "8" - siehe Bemerkungen).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Handle auf die Datei zur&uuml;ck, das f&uuml;r die folgenden Funktionen ben&ouml;tigt wird.
+Fehler:	Gibt -1 zur&uuml;ck, wenn ein Fehler aufgetaucht ist.
+@@End@@
+
+
+###Remarks###
+Das Dateihandle muss mit der <a href="FileClose.htm">FileClose()</a> Funktion wieder geschlossen werden.
+Das &Ouml;ffnen einer Datei kann m&ouml;glicherweise fehlschlagen, durch fehlende Zugriffsrechte oder Attribute.
+Standardmodus beim Schreiben von Text ist ANSI. Um dies zu &auml;ndern ist das Unicode-Flag zu verwenden. Wenn Unicode-Dateien geschrieben werden, so ist der Windows Standardmodus (und der schnellste in AutoIt durch die k&uuml;rzliche Umstellung) UTF16 Little Endian (mode 32).
+Wird eine Datei im Schreibmodus (write mode) ge&ouml;ffnet, so wird die Datei erstellt, falls sie noch nicht existiert. Verzeichnisse werden nicht erstellt, au&szlig;er das entsprechende Flag wird verwendet.
+Falls mit dem gleichen Dateihandle gelesen und geschrieben wird, so muss die <a href="FileSetPos.htm">FileSetPos()</a> Funktion verwendet werden um die aktuelle Dateiposition zu aktualisieren.
+Eine Datei kann bin&auml;r (byteweise) ausgelesen werden wenn FileOpen mit dem Bin&auml;rflag aufgerufen wird. In diesem Fall gibt count die Anzahl der Bytes an, nicht die der Zeichen.
+Ein zu gro&szlig;er Wert f&uuml;r Anzahl kann dazu f&uuml;hren, dass AutoIt mit einem Speicherzugriffsfehler beendet wird.
+
+###Related###
+FileClose, FileFlush, FileRead, FileReadLine, FileWrite, FileWriteLine, FileGetPos, FileSetPos
+
+
+###Example###
+@@IncludeExample@@

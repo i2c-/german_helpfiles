@@ -1,0 +1,44 @@
+###User Defined Function###
+_WinAPI_GetLayeredWindowAttributes
+
+###Description###
+Holt die Attribute mehrschichtiger Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetLayeredWindowAttributes ( $hWnd, ByRef $i_transcolor, ByRef $Transparency [, $asColorRef = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hwnd
+	Handle zu dem mehrschichtigen Fenster
+$i_transcolor
+	Gibt die transparente Farbe zur&uuml;ck (DWORD als 0x00bbggrr oder String "0xRRGGBB")
+$Transparency
+	Gibt die Transparenz der GUI zur&uuml;ck (0-255)
+$asColorRef
+	[optional] Falls True, ist $i_transcolor ein COLORREF (0x00bbggrr) Farbwert, andernfalls ein RGB-Farbwert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Gebrauch von LWA_ALPHA und LWA_COLORKEY (BitAnd wird verwendet)
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_SetLayeredWindowAttributes, _WinAPI_GetLastError
+
+
+###See Also###
+@@MsdnLink@@ GetLayeredWindowAttributes
+
+
+###Example###
+@@IncludeExample@@

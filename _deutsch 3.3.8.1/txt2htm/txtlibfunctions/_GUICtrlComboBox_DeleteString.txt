@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlComboBox_DeleteString
+
+###Description###
+L&ouml;scht einen String
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_DeleteString($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Strings
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl von verbleibenden Strings
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_AddString, _GUICtrlComboBox_ResetContent
+
+###Example###
+@@IncludeExample@@

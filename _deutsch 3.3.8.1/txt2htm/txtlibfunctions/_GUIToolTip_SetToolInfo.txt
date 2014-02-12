@@ -1,0 +1,54 @@
+###User Defined Function###
+_GUIToolTip_SetToolInfo
+
+###Description###
+Setzt die Informationen f&uuml;r ein Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetToolInfo($hWnd, $sText [, $iID = 0 [, $iLeft = 0 [, $iTop = 0 [, $iRight = 0 [, $iBottom = 0 [, $iFlags = 8 [, $iParam = 0]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Fenster welches das Tool enth&auml;lt
+$sText
+	Text f&uuml;r das ToolTip-Control
+$iID
+	[optional] ID oder Fenster Handle des Tools
+$iLeft
+	[optional] X Koordinate der oberen linken Ecke des Rechtecks
+$iTop
+	[optional] Y Koordinate der oberen linken Ecke des Rechtecks
+$iRight
+	[optional] X Koordinate der unteren rechten Ecke des Rechtecks
+$iBottom
+	[optional] Y Koordinate der unteren rechten Ecke des Rechtecks
+$iFlags
+	[optional] Flags welche die ToolTip Anzeige steuern:
+		  1 - Zeigt an, dass $iID das Fenster Handle des Tools ist, anstatt der ID
+		  2 - Zentriert das Tooltip-Fenster unterhalb des in $iID festgelegten Tools
+		  4 - Zeigt an, dass Text in entgegengesetzter Richtung dargestellt wird
+		  8 - Zeigt an, dass das Control das Fenster des Tool unterklassifizieren soll um Nachrichten abzufangen
+		 16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+		 32 - Positioniert das Fenster in den gleichen Koordinaten wie TTM_TRACKPOSITION
+		 64 - Veranlasst das Control Mausnachrichten an das Parent-Fenster weiterzuleiten
+		128 - Zeigt an, dass Links im Text des Controls geparst werden sollen
+$iParam
+	[optional] anwendungsspezifischer Wert der mit dem Tool verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Manche interne Eigenschaften sind bereits enthalten, wenn das Tool erstellt wird und werden nicht ge&auml;ndert, wenn eine
+$TTM_SETTOOLINFO Nachricht gesendet wird. Wenn man einfach Werte einer TOOLINFO Struktur zuordnet und es an ein ToolTip-Control mit der Nachricht $TTM_SETTOOLINFO &uuml;bergibt, k&ouml;nnten diese Eigenschaften verloren gehen. Anstelle der Anwendung sollte
+man zuerst die aktuelle TOOLINFO Struktur durch Senden einer $TTM_GETTOOLINFO Nachricht anfordern. Dann kann der Inhalt dieser
+Struktur ver&auml;ndert, und mit $TTM_SETTOOLINFO zur&uuml;ck an das ToolTip-Control gegeben werden. Wenn man
+$TTM_SETTOOLINFO aufruft, darf die Stringl&auml;nge, im Textmember der TOOLINFO Struktur, 80 Zeichen nicht &uuml;berschreiten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetToolInfo

@@ -1,0 +1,87 @@
+###User Defined Function###
+_WordDocPrint
+
+###Description###
+Druckt ein festgelegtes Dokument komplett oder nur Teile davon.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocPrint(ByRef $o_object [, $b_Background = 0 [, $i_Copies = 1 [, $i_Orientation = -1 [, $b_Collate = 1 [, $s_Printer = "" [, $i_Range = 0 [, $i_From = "" [, $i_To = "" [, $s_Pages = "" [, $i_PageType = 0 [, $i_Item = 0]]]]]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable mit dem Verweis auf das Word.Application Objekt
+$b_Background
+	[optional] legt fest, ob das Skript weiterlaufen soll, w&auml;hrend Microsoft Word das Dokument druckt. (Siehe Bemerkungen)
+	0 = (Standard) wartet bis das Dokument gedruckt wurde
+	1 = das Skript l&auml;uft ohne zu warten weiter
+$i_Copies
+	[optional] Die Anzahl der zu druckenden Kopien.
+$i_Orientation
+	[optional] Legt die Ausrichtung der Seite fest.
+	-1 = (Standard) aktuelle Seitenausrichtung
+	0 = Hochformat
+	1 = Querformat
+$b_Collate
+	[optional] legt fest, ob zuerst alle Seiten des Dokuments gedruckt werden sollen bevor mit der n&auml;chsten Kopie begonnen wird.
+	0 = mischt nicht
+	1 = (Standard) mischt 
+$s_Printer
+	[optional] legt den Namen des Druckers fest. (Siehe Bemerkungen)
+$i_Range
+	[optional] legt den Seitenbereich fest.
+	0 = (Standard) das komplette Dokument
+	1 = die aktuelle Markierung
+	2 = die aktuelle Seite
+	3 = ein festgelegter Bereich (es muss $i_From und $i_To festgelegt werden)
+	4 = ein festgelegter Bereich von Seiten (es muss $s_Pages festgelegt werden)
+$i_From
+	[optional] Die erste Seitenzahl wenn $i_Range auf 3 gesetzt wurde.
+$i_To
+	[optional] die letzte Seitenzahl wenn $i_Range auf 3 gesetzt wurde.
+$s_Pages
+	[optional] Die zu druckende Seitenanzahl und Seitenbereich, getrennt durch Kommas wenn $i_Range auf 4 gesetzt wurde. Zum Beispiel, "2, 6-10" druckt Seite 2 und Seite 6 bis 10.
+$i_PageType
+	[optional] Der zu druckende Seitentyp.
+	0 = (Standard) Alle Seiten
+	1 = nur ungerade Seiten
+	2 = nur gerade Seiten
+$i_Item
+	[optional] das zu druckende Item.
+	0 = (Standard) aktueller Dokumentinhalt
+	1 = Eigenschaften in dem aktuellen Dokument
+	2 = Kommentare Comments und Markups in dem aktuellen Dokument
+	3 = Stile in dem aktuellen Dokument
+	4 = Autotext Eintr&auml;ge in dem aktuellen Dokument
+	5 = "Key assignments" in dem aktuellen Dokument
+	6 = ein Briefumschlag
+	7 = aktueller Dokumentinhalt inklusive Markups
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt auf @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_ComError = Com Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+	$_WordStatus_InvalidValue = ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wird $b_Background = 0 festgelegt, so pausiert das Skript NICHT bis das Dokument fertig gedruckt wurde, es pausiert nur solange, bis Microsoft Word das Dokument zum Drucker gesendet hat. Falls ein Hintergrunddruck ausgef&uuml;hrt wird und danach sofort _WordQuit() ausgef&uuml;hrt wird, hat das Dokument keine Zeit um zu drucken.
+
+Um einen Netzwerkdrucker festzulegen, so muss dies in diesem Format erfolgen "\Server\Printer".
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

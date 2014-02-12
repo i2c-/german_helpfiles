@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_GetItemText
+
+###Description###
+Ermittelt den Text des Item oder Subitem
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemText($hWnd, $iIndex [, $iSubItem = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iSubItem
+	[optional] 1-basierender Index des Subitems
+@@End@@
+
+###ReturnValue###
+Gibt den Text des Items oder Subitems zur&uuml;ck
+
+###Remarks###
+Um den Text des Items zu ermitteln, ist iSubItem  auf 0 zu setzen. Um den Text des Subitems zu ermitteln, ist iSubItem auf den 1-basierenden Index zu setzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemText, _GUICtrlListView_GetItemTextArray, _GUICtrlListView_GetItemTextString
+
+###Example###
+@@IncludeExample@@

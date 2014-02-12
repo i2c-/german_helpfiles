@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Tutorial - Notepad</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="../../css/default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Tutorial - Notepad </h1>
+<p>Dieses Tutorial erkl&auml;rt, wie man den Start von Notepad automatisieren kann, wie man automatisch Text eingeben (lassen) und Notepad dann wieder schlie&szlig;en kann. Es wird angenommen, dass du bereits die Vorgehensweise bei der Erstellung und Ausf&uuml;hrung von AutoIt-Skripten kennst, die im Tutorial <a ref="../helloworld/helloworld.htm">HalloWelt</a> aufgezeigt wurde.</p>
+<p> </p>
+<p>Zuerst legst du ein leeres Sktript namens <strong>npad.au3</strong> an und bearbeitest die Datei dann mit Notepad oder <a href="../../intro/editors.htm">SciTE</a> - je nachdem, wen du bevorzugst.</p>
+<p> </p>
+<p>Was wir als erstes ben&ouml;tigen ist der Dateiname von Notepad. Dieser ist <strong>notepad.exe</strong> - das erf&auml;hrst du, indem du die Eigenschaften der Notepad-Verkn&uuml;pfung im Startmen&uuml; aufrufst. Um Notepad aufzurufen benutzen wir in AutoIt die
+<a href="../../functions/Run.htm">Run</a>-Funktion. Diese Funktion ruft das angegebene Programm einfach auf und f&auml;hrt dann fort.</p>
+<p>Schreibe als erste Zeile im Skript folgendes:</p>
+<p class="codebox">Run("notepad.exe")</p>
+<p> </p>
+<p>Starte das Skript - wenn alles glatt l&auml;uft, sollte sich eine neue Instanz von Notepad &ouml;ffnen.</p>
+<p>Wenn man Aufgaben automatisiert, kann AutoIt das Fenster, das gemeint ist, &uuml;ber dessen Fenstertitel identifizieren. Bei Notepad ist der Fenstertitel offensichtlich <strong>Untitled - Notepad</strong> (Deutsch: <strong>Unbenannt - Editor</strong>) AutoIt unterscheidet Gro&szlig;- und Kleinschreibung, so dass du darauf achten musst, den Titel exakt richtig zu &uuml;bernehmen. Der beste Weg daf&uuml;r ist das "AutoIt Window Information Tool". Starte es &uuml;ber <strong>Start \ (Alle) Programme \ AutoIt v3 \ AutoIt Window Info</strong>.</p>
+<p>Klicke in das Notepadfenster w&auml;hrend das Tool ge&ouml;ffnet ist, um es zu aktivieren - das Tool wird dir nun Informationen &uuml;ber dieses (aktive) Fenster zusammenstellen. Was uns davon jetzt interessiert ist der Fentertitel ("window <strong>title</strong>").</p>
+<p><img src="au3spy_notepad.png" width="494" height="272" border="1" alt=""></p>
+<p> </p>
+<p>Markiere den Titel im Tool und dr&uuml;cke <strong>STRG + C</strong>, um ihn in die Zwischenablage zu kopieren - dann k&ouml;nnen wir ihn nachher einfach in unser Skript einf&uuml;gen, ohne Angst haben zu m&uuml;ssen, ihn falsch zu schreiben.</p>
+<p>Nachdem wir eine Instanz von Notepad gestartet haben, m&uuml;ssen wir warten, bis das Programmfenster erscheint und aktiviert wird, bevor wir Tastendr&uuml;cke and das Fenster schicken k&ouml;nnen. Das k&ouml;nnen wir mit Hilfe der <a href="../../functions/WinWaitActive.htm">WinWaitActive</a>-Funktion tun. Die meisten Funktionen, die mit Fenstern arbeiten ben&ouml;tigen diesen Fenster<strong>titel</strong> als Parameter.
+</p><p>Schreibe also folgendes als zweite Zeile in dein Skript (benutze <strong>STRG  + V</strong> oder <strong>Bearbeiten \ Einf&uuml;gen</strong>, um den Fenstertitel aus der Zwischenablage einzuf&uuml;gen):</p>
+<p class="codebox">WinWaitActive("Unbenannt - Editor")</p>
+<p> </p>
+<p>Da wir nun sicher sein k&ouml;nnen, dass das Notepadfenster aktiv ist, k&ouml;nnen wir ein bisschen Text an das Fenster schicken. Das bewerkstelligen wir mit der <a href="../../functions/Send.htm">Send</a>-Funktion.</p>
+<p>F&uuml;ge diese Zeile am Ende deines Skriptes hinzu.</p>
+<p class="codebox">Send("Das ist ein Beispieltext.")</p>
+<p> </p>
+<p>Das gesamte Skript wird nun in etwa so aussehen:</p>
+<p class="codebox">Run("notepad.exe")<br>
+WinWaitActive("Unbenannt - Editor")<br>
+Send("Das ist ein Beispieltext.")</p>
+<p> </p>
+<p>Schlie&szlig;e die Instanz von Notepad, die wir ge&ouml;ffnet hatten und starte das Skript.</p>
+<p>Du solltest sehen, dass Notepad startet und wie von Zauberhand unser Text darin erscheint.</p>
+<p><img src="notepad1.png" width="344" height="198" border="1" alt=""></p>
+<p> <br>
+  Nat&uuml;rlich wollen wir Notepad am Ende auch schlie&szlig;en. Dazu verwenden wir die <a href="../../functions/WinClose.htm">WinClose</a>-Funktion.</p>
+<p class="codebox">WinClose("Unbenannt - Editor")</p>
+<p> </p>
+<p>Wenn Notepad geschlossen wird, fragt es, ob die &Auml;nderungen gespeichert werden sollen. benutze wieder das Window Information Tool, um Informationen &uuml;ber den Dialog zu bekommen, der zu diesem Zweck ge&ouml;ffnet wurde, damit wir darauf automatisch antworten k&ouml;nnen :-)</p>
+<p><img src="savechanges.png" width="560" height="338" border="1" alt=""> </p>
+<p> </p>
+<p>Also f&uuml;gen wir eine Zeile hinzu, die wartet, bis dieser Dialog aktiv wird (wir benutzen den Fenstertext, um die Funktion pr&auml;ziser zu machen und Verwechslungen mit dem anderen Notepadfenster auszuschlie&szlig;en):</p>
+<p class="codebox">WinWaitActive("Editor", "Der Text in der Datei Unbenannt wurde ver&auml;ndert")</p>
+<p> </p>
+<p>Als n&auml;chstes wollen wir automatisch <strong>ALT-N</strong> dr&uuml;cken, um die Schaltfl&auml;che <strong>Nein</strong> auszuw&auml;hlen. Unterstrichene Buchstaben bedeuten normalerweise, dass du stattdessen den Shortcut ALT + [unterstrichener Buchstabe] benutzen kannst. Um mittels der Funktion <a href="../../functions/Send.htm">Send</a> eine Kombination mit der ALT-Taste zu senden, verwenden wir <strong>!</strong></p><strong style="font-weight: 400"> .</strong></p>
+<p class="code">Send("!n")</p>
+<p> </p>
+<p>Damit wir unser Skript auch beobachten k&ouml;nnen, f&uuml;gen wir nach einigen Skriptzeilen eine kurze Pause ein, dazu benutzen wir die Funktion <a href="../../functions/Sleep.htm">Sleep</a>. Die Zahl in Klammern ist die Zeit in Millisekunden, die wir warten wollen:</p>
+<p class="code">Sleep(2000)</p>
+<p> </p>
+<p>Unser vollst&auml;ndiges Skript:</p>
+<p class="codebox">
+Run("notepad.exe")<br>
+WinWaitActive("Unbenannt - Editor")<br>
+Sleep(1000)<br>
+Send("Das ist ein Beispieltext.")<br>
+Sleep(2500)<br>
+WinClose("Unbenannt - Editor")<br>
+WinWaitActive("Editor", "Der Text in der Datei Unbenannt wurde ver&auml;ndert")<br>
+;WinWaitActive(&quot;Editor&quot;, &quot;Wollen Sie speichern&quot;)&nbsp;; Falls es unter Windows XP l&auml;uft.<br>
+Sleep(2000)<br>
+Send("!n")<br>
+</p><p> </p>
+<p>Starte das Skript und du wirst sehen, dass Notepad gestartet wird, dass dein Text geschrieben wird und dass Notepad ohne Speichern wieder geschlossen wird! Du solltest mit diesen Programmiertechniken auch viele andere Programm automatisieren k&ouml;nnen.</p>
+<p> </p>
+</body>
+</html>

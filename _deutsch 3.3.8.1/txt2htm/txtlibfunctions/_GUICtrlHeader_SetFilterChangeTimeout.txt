@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlHeader_SetFilterChangeTimeout
+
+###Description###
+Setzt das Timeoutintervall f&uuml;r das &auml;ndern des Filters
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetFilterChangeTimeout($hWnd, $iTimeOut)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iTimeOut
+	Timeoutwert in Millisekunden
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der Index des zu &auml;ndernden Filter Controls
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

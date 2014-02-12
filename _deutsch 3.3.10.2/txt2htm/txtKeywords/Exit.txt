@@ -1,0 +1,29 @@
+###Keyword###
+Exit
+
+###Description###
+Beendet das Skript.
+
+###Syntax###
+<b>Exit</b> [return code]
+
+
+###Parameters###
+@@ParamTable@@
+return code
+	[optional] Integer, der den R&uuml;ckgabewert des Skriptes setzt. Dieser Wert kann von Windows oder &uuml;ber die DOS-Variable %ERRORLEVEL abgefragt werden. Standard ist 0. Skripte setzen das Errorlevel normalerweise auf 0, wenn das Skript ordnungsgem&auml;&szlig; ausgef&uuml;hrt wurde. Werte 1 und gr&ouml;&szlig;er signalisieren im allgemeinen Fehler in der Skriptausf&uuml;hrung.
+@@End@@
+
+
+###Remarks###
+Der Parameter kann, wenn er angegeben wird, auch in Klammern eingeschlossen werden. Folgendes ist also &auml;quivalent:  <b>Exit</b>, <b>Exit 0</b> und<b> Exit(0)</b>.  Aber: <b>Exit()</b> ist ung&uuml;ltig.
+
+Der Code kann in der Funktion OnAutoItExitRegister durch @exitCode ermittelt werden.
+
+
+###Related###
+ExitLoop, OnAutoItExitRegister
+
+
+###Example###
+@@IncludeExample@@

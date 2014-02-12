@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlComboBox_ReplaceEditSel
+
+###Description###
+Ersetzt den markierten Text des Input-Controls
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_ReplaceEditSel ( $hWnd, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	String der den neuen Text enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls diese Nachricht an eine ComboBox mit dem Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST gesendet wird, so wird diese Funktion fehlschlagen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_SetEditText, _GUICtrlComboBox_SetEditSel
+
+
+###Example###
+@@IncludeExample@@

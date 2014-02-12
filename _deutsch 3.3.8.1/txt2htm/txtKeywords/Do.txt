@@ -1,0 +1,31 @@
+###Keyword###
+Do...Until
+
+###Description###
+Schleife, die auf einem Ausdruck basiert.
+
+###Syntax###
+<b>Do</b>
+	<i>statements</i>
+	...
+<b>Until</b> <expression>
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Die Anweisungen zwischen Do und Until werden ausgef&uuml;hrt, bis der Ausdruck wahr ist.
+@@End@@
+
+
+###Remarks###
+Do...Until-Strukturen k&ouml;nnen verschachtelt werden.
+Der Ausdruck wird getestet, nachdem die Schleife durchlaufen wurde. Die Schleife wird also mindestens einmal abgearbeitet.
+
+
+###Related###
+ContinueLoop, ExitLoop
+
+
+###Example###
+@@IncludeExample@@

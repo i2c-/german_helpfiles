@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetBordersHorz
+
+###Description###
+Ermittelt die aktuelle Breite des horizontalen Randes
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetBordersHorz($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Breite des horizontalen Randes
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersRect, _GUICtrlStatusBar_GetBordersVert
+
+###Example###
+@@IncludeExample@@

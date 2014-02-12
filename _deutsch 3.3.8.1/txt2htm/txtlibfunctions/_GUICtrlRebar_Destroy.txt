@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlRebar_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+@@End@@
+
+###Remarks###
+Funktioniert nur mit Rebar-Controls, welche mit _GUICtrlRebar_Create erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_Create
+
+###Example###
+@@IncludeExample@@

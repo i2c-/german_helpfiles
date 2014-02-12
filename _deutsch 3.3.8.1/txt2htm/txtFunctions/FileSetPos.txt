@@ -1,0 +1,41 @@
+###Function###
+FileSetPos
+
+###Description###
+Setzt die aktuelle Datei-Position.
+
+###Syntax###
+FileSetPos ( "filehandle", offset, origin )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle
+	Das Handle der Datei, wie es von einem fr&uuml;heren Aufruf von  FileOpen zur&uuml;ckgegeben wurde. Alternativ kann ein String mit dem Dateinamen als erster Parameter verwendet werden.
+offset
+	Der zu bewegende Abstand von der Ursprungsposition.  Dieser Wert kann sowohl positiv als auch negativ sein.  Negative Werte bewegen r&uuml;ckw&auml;rts vom Ursprung.
+origin
+	Muss einer der folgenden sein:
+	 0 - Anfang der Datei ($FILE_BEGIN aus Constants.au3).
+	 1 - Aktuelle Position ($FILE_CURRENT aus Constants.au3).
+	 2 - Ende der Datei ($FILE_END aus Constants.au3).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True wenn die Operation erfolgreich verlief.
+Fehler:	False.
+@@End@@
+
+
+###Remarks###
+Inkludiere Constants.au3 in das Skript um die symbolischen Namen dazu zu nutzen, den Ursprung anzugeben.
+Bei Nutzung von FileSetPos() ist beides m&ouml;glich, Schreiben und Lesen in derselben Datei.  Wenn angestrebt wird in die selbe Date zu schreiben und zu lesen, dann ist immer FileFlush() zwischen jedem Schreib- und Lesevorgang aufzurufen.
+Den Zeiger in die Mitte der Daten zu bewegen kann dazu benutzt werden um Daten zu &uuml;berschreiben.
+
+###Related###
+FileGetPos, FileFlush, FileRead, FileReadLine, FileWrite, FileWriteLine, FileOpen
+
+
+###Example###
+@@IncludeExample@@

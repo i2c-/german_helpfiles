@@ -1,0 +1,66 @@
+###User Defined Function###
+_GDIPlus_BitmapLockBits
+
+###Description###
+Sperrt einen Teil einer Bitmap f&uuml;r Lese- und Schreiboperationen.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapLockBits ( $hBitmap, $iLeft, $iTop, $iWidth, $iHeight [, $iFlags = $GDIP_ILMREAD [, $iFormat = $GDIP_PXF32RGB]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hBitmap
+	Handle zu einem Bitmap-Objekt
+$iLeft
+	X-Koordinate der oberen linken Ecke des zu sperrenden Rechtecks
+$iTop
+	Y-Koordinate der oberen linken Ecke des zu sperrenden Rechtecks
+$iWidth
+	Die Breite des zu sperrenden Rechtecks
+$iHeight
+	Die H&ouml;he des zu sperrenden Rechtecks
+$iFlags
+	[optional] Satz von Flags, die festlegen, ob die gesperrte Region gelesen oder beschrieben werden kann 
+	und ob der Aufrufende schon einen Pufferspeicher zugewiesen hat. 
+	Kann eine Kombination der Folgenden sein:
+		$GDIP_ILMREAD - Ein Teil des Bildes ist f&uuml;r Leseoperationen gesperrt.
+		$GDIP_ILMWRITE - Ein Teil des Bildes ist f&uuml;r Schreiboperationen gesperrt.
+		$GDIP_ILMUSERINPUTBUF - Der Pufferspeicher wurde vom Benutzer reserviert.
+$iFormat
+	[optional] Gibt das Pixelformat im Pufferspeicher an:
+		$GDIP_PXF01INDEXED - 1 Bit pro Pixel, indiziert.
+		$GDIP_PXF04INDEXED - 4 Bit pro Pixel, indiziert.
+		$GDIP_PXF08INDEXED - 8 Bit pro Pixel, indiziert.
+		$GDIP_PXF16GRAYSCALE - 16 Bit pro Pixel, Graustufen.
+		$GDIP_PXF16RGB555 - 16 Bit pro Pixel; je 5 Bits pro Grundfarbe RGB.
+		$GDIP_PXF16RGB565 - 16 Bit pro Pixel; 5 Bits Rot, 6 Bits Gr&uuml;n und 5 Bits Blau.
+		$GDIP_PXF16ARGB1555 - 16 Bit pro Pixel; 1 Bit Alphakanal und 5 Bits f&uuml;r jede RGB-Komponente.
+		$GDIP_PXF24RGB - 24 Bit pro Pixel; 8 Bits pro Grundfarbe RGB.
+		$GDIP_PXF32RGB - 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB. Ohne Alphakanal.
+		$GDIP_PXF32ARGB - 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB und Alphakanal.
+		$GDIP_PXF32PARGB - 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB und Alphakanal, pre-multiplied
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine $tagGDIPBITMAPDATA-Struktur
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Wenn keine Notwendigkeit der Sperrung des Bitmap-Bereichs mehr besteht, sollte durch Aufruf von <a href="_GDIPlus_BitmapUnlockBits.htm">_GDIPlus_BitmapUnlockBits()</a> der Bereich freigegeben werden.
+
+
+###Related###
+_WinAPI_DeleteObject, _GDIPlus_ImageGetPixelFormat
+
+
+###See Also###
+@@MsdnLink@@ GdipBitmapLockBits
+
+
+###Example###
+@@IncludeExample@@

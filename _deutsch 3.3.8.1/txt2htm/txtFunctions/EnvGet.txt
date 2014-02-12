@@ -1,0 +1,30 @@
+###Function###
+EnvGet
+
+###Description###
+Ermittelt den Wert einer Umgebungsvariablen.
+
+###Syntax###
+EnvGet ( "envvariable" )
+
+
+
+###Parameters###
+@@ParamTable@@
+envvariable
+	Name der Umgebungsvariable, die ausgelesen werden soll, z.B. "TEMP" oder "PATH".
+@@End@@
+
+###ReturnValue###
+Gibt die angefragte Variable zur&uuml;ck (oder einen leeren String, wenn die Variable nicht existiert).
+
+
+###Remarks###
+Keine.
+
+###Related###
+EnvSet, EnvUpdate
+
+
+###Example###
+@@IncludeExample@@

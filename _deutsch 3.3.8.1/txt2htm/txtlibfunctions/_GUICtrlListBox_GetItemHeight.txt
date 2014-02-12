@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlListBox_GetItemHeight
+
+###Description###
+Ermittelt die H&ouml;he eines Items
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetItemHeight($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die H&ouml;he jedes Items in der Listbox in Pixel
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_SetItemHeight
+
+###Example###
+@@IncludeExample@@

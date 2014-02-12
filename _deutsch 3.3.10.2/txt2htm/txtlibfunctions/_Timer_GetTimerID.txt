@@ -1,0 +1,34 @@
+###User Defined Function###
+_Timer_GetTimerID
+
+###Description###
+Gibt die Timer ID von $iwParam zur&uuml;ck
+
+###Syntax###
+#include <Timers.au3>
+_Timer_GetTimerID ( $iwParam )
+
+
+###Parameters###
+@@ParamTable@@
+$iwParam
+	Legt den Timer Identifikationsevent fest.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Timer ID
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Timer_SetTimer
+
+
+###Example###
+@@IncludeExample@@

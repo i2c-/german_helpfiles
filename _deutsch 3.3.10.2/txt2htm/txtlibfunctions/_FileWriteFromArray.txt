@@ -1,0 +1,49 @@
+###User Defined Function###
+_FileWriteFromArray
+
+###Description###
+Schreibt ein Array in die angegebene Datei.
+
+###Syntax###
+#include <File.au3>
+_FileWriteFromArray ( $sFilePath, ByRef Const $aArray [, $iBase = Default [, $iUBound = Default [, $sDelimeter = "|"]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Pfad der Datei, in die geschrieben werden soll, oder ein Handle einer Datei, das von <a href="../functions/FileOpen.htm">FileOpen()</a> zur&uuml;ckgegeben wurde.
+$aArray
+	Das Array, das in die angegebene Datei geschrieben werden soll.
+$iBase
+	[optional] Startindex des Arrays; normalerweise auf 0 oder 1 setzen. Standard ist das Schl&uuml;sselwort Default
+$iUbound
+	[optional] Letzter Index, der in die Datei geschrieben werden soll. Standard ist das Schl&uuml;sselwort Default (entspricht dem ganzen Array).
+$sDelimeter
+	[optional] Trennzeichen f&uuml;r 2-dimensionale Arrays. Standard ist "|"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@Error:	1 - Fehler beim &Ouml;ffnen der angegebenen Datei
+	2 - Eingabe ist kein Array
+	3 - Fehler beim Schreiben der Datei
+	4 - Arraydimension > 2
+	5 - der Startindex ist gr&ouml;&szlig;er als der $iUbound Parameter
+@@End@@
+
+
+###Remarks###
+Falls die Datei bereits existiert, wird die Datei &uuml;berschrieben und geschlossen.
+Um einen anderen Schreibmodus, wie z. B. Append oder Unicode Format zu verwenden, ist die Datei zuerst mit <a href="../functions/FileOpen.htm">FileOpen()</a> zu &ouml;ffnen und anstatt des Dateinamens das Handle zu verwenden.
+Falls ein Handle &uuml;bergeben wird, bleibt die Datei nach dem Schreiben ge&ouml;ffnet.
+
+
+###Related###
+_FileReadToArray
+
+
+###Example###
+@@IncludeExample@@

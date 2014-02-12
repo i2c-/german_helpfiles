@@ -1,0 +1,46 @@
+###User Defined Function###
+_Security__AdjustTokenPrivileges
+
+###Description###
+Aktiviert oder deaktiviert Rechte in einem Access Token
+
+###Syntax###
+#include <Security.au3>
+_Security__AdjustTokenPrivileges($hToken, $fDisableAll, $pNewState, $iBufferLen [, $pPrevState = 0 [, $pRequired = 0]])
+
+###Parameters###
+@@ParamTable@@
+$hToken
+	Handle zu einem Access Token dass die Rechte beinhaltet, die ge&auml;ndert werden sollen
+$fDisableAll
+	Bei True deaktiviert die Funktion alle Rechte und ignoriert den NewState Parameter. 
+		Bei False modifiziert die Funktion die Rechte anhand des Parameters $pNewState.
+$pNewState
+	Zeiger auf eine $tagTOKEN_PRIVILEGES Struktur die das Recht und seine Attribute enth&auml;lt
+$iBufferLen
+	Gr&ouml;&szlig;e des Puffers in Bytes auf den $pNewState verweist
+$pPrevState
+	[optional] Zeiger auf eine $tagTOKEN_PRIVILEGES Struktur den vorherigen Status eines Rechts angibt,
+		das die Funktion ver&auml;ndert. Dieser Wert kann 0 sein
+$pRequired
+	[optional] Zeiger auf eine Variable, die die ben&ouml;tigte Gr&ouml;&szlig;e des Puffers in Bytes erh&auml;lt,
+		auf den $pPrevState verweist. Dieser Wert kann 0 sein, wenn $pPrevState 0 ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion kann keine neuen Rechte zu einem Access Token hinzuf&uuml;gen. Es werden nur vorhandene Rechte aktiviert oder deaktiviert.
+
+###Related###
+$tagTOKEN_PRIVILEGES
+
+###See Also###
+@@MsdnLink@@ AdjustTokenPrivileges
+
+###Example###
+@@IncludeExample@@

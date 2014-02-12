@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_SystemParametersInfo
+
+###Description###
+Ermittelt oder setzt den Wert von einem der Systemweiten Parameter
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SystemParametersInfo($iAction [, $iParam = 0 [, $vParam = 0 [, $iWinIni = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$iAction
+	Der Systemweite Parameter der ermittelt oder gesetzt werden soll
+$iParam
+	[optional] Ein Parameter dessen Gebrauch und Format auf dem abgefragten oder gesetzten Parameter beruhen
+$vParam
+	[optional] Ein Parameter dessen Gebrauch und Format auf dem abgefragten oder gesetzten Parameter beruhen
+$iWinIni
+	[optional] Wenn ein Systemparameter gesetzt wird, legt dieses Argument fest, ob das Benutzerprofil aktualisiert wird, und
+		falls ja, ob die $WM_SETTINGCHANGE Nachricht an alle Benutzer gesendet werden soll. Dieses Argument kann Null sein, wenn
+		das Benutzerprofil nicht aktualisiert werden soll, oder es kann einer der folgenden Werte sein:
+		$SPIF_UPDATEINIFILE - Schreibt die neuen Einstellungen ins Benutzerprofil
+		$SPIF_SENDCHANGE - Sendet die $WM_SETTINGCHANGE Nachricht an alle Benutzer, nachdem das Benutzerprofil aktualisiert wurde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion ruft immer die Unicode Version auf. Somit muss $vParam keine &Uuml;bereinstimmung liefern wenn Strings verwendet werden.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ SystemParametersInfo

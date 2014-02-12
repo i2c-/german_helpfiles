@@ -1,0 +1,38 @@
+###User Defined Function###
+_FTP_Close
+
+###Description###
+Beendet die _FTP_Open oder _FTP_Connect() Sitzung
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_Close ( $hSession )
+
+
+###Parameters###
+@@ParamTable@@
+$l_InternetSession
+	Der R&uuml;ckgabewert von _FTP_Open() oder _FTP_Connect()
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_FTP_Open, _FTP_Connect
+
+
+###See Also###
+@@MsdnLink@@ InternetCloseHandle
+
+
+###Example###
+@@IncludeExample@@

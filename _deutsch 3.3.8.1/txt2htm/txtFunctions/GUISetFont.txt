@@ -1,0 +1,49 @@
+###Function###
+GUISetFont
+
+###Description###
+Legt die Standardschriftart eines GUI-Fensters fest.
+
+###Syntax###
+GUISetFont ( size [, weight [, attribute [, fontname [, winhandle [, quality]]]]] )
+
+###Parameters###
+@@ParamTable@@
+size
+	Schriftgr&ouml;&szlig;e (voreingestellt ist 8.5).
+weight
+	[optional] Schriftbreite (Standard 400 = normal).
+attribute
+	[optional] Definiert den Stil: 2-kursiv, 4-unterstrichen, 8-durchgestrichen (durch Addieren der Werte k&ouml;nnen mehrere Stile verwendet werden, 2+4 = kursiv und unterstrichen).
+fontname
+	[optional] Der Name der gew&uuml;nschten Schriftart. (Die Standard-GUI-Schriftart des Betriebssystems wird verwendet, wenn "" angegeben wird oder die Schriftart nicht gefunden wird).
+winhandle
+	[optional] Fenster-Handle wie von GUICreate zur&uuml;ckgegeben (voreingestellt ist der des vorher verwendeten Fensters).
+quality
+	[optional] auszuw&auml;hlende Qualit&auml;t der Schrift (Standard ist PROOF_QUALITY=2).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Im Anhang ist eine komplette Liste der Schriftarten und der Betriebssysteme, die sie unterst&uuml;tzen zu finden.
+
+Die Schriftgr&ouml;&szlig;e kann als Dezimalwert angegeben werden, wie z.B. 8.5.
+
+F&uuml;r manche Labels kann die Standardgr&ouml;&szlig;e 8.5 anstatt 9 sein, je nach dem aktuell verwendeten Windows-Stil.
+
+F&uuml;r mehr Hilfe zum Parameter "Quality" siehe MSDN, manche Windows XP Installationen ben&ouml;tigen CLEARTYPE_QUALITY=5
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlSetFont
+
+
+###Example###
+@@IncludeExample@@

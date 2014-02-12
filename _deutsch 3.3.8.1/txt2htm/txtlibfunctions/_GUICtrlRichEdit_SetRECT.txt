@@ -1,0 +1,58 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetRECT
+
+###Description###
+&Auml;ndert das formatierte Rechteck eines Controls
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetRECT($hWnd [,$iLeft = Default [, $iTop = Default [, $iRight = Default [, $iBottom = Default [, $bRedraw = True]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iLeft
+	[optional] Linke Position (in Diaglogeinheiten [ = Pixel])
+$iTop
+	[optional] Obere Position (in Diaglogeinheiten [ = Pixel])
+$iRight
+	[optional] Rechte Position (in Diaglogeinheiten [ = Pixel])
+$iBottom
+	[optional] Untere Position (in Diaglogeinheiten [ = Pixel])
+$bRedraw
+	[optional] True: Erzwingt ein Neuzeichnen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $iLeft < 1
+	1022 - $iTop < 1
+	1023 - $iRight < 1
+	1024 - $iBottom < 1
+	1025 - $iLeft >= $iRight
+	1026 - $iTop >= $iBottom
+@@End@@
+
+###Remarks###
+Das formatierte Rechteck ist der Bereich, in dem Text gezeichnet wird. Teile davon k&ouml;nnen auch nicht sichtbar sein.
+
+Alle Werte in Diaglogeinheiten (Pixel) beziehen sich auf das Control.
+Bei Standardeinstellung sind die R&auml;nder unten und rechts um 4 Pixel kleiner als das Control.
+
+Der Parameter Default bewirkt keine &Auml;nderungen gegen&uuml;ber den vorherigen Werten.
+Wenn nur $hWnd angegeben ist, wird die Formatierung auf den Zustand bei Erstellung des Controls zur&uuml;ckgesetzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetRECT
+
+###See Also###
+@@MsdnLink@@ EM_SETMODIFY
+
+###Example###
+@@IncludeExample@@

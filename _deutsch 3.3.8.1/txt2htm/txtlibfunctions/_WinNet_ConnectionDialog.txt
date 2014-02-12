@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinNet_ConnectionDialog
+
+###Description###
+Startet eine allgemeine Browsing-Dialog-Box, zum verbinden zu Netzwerk Ressourcen.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_ConnectionDialog($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Eigent&uuml;merfenster f&uuml;r die Dialog-Box
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_ConnectionDialog1
+
+###See Also###
+@@MsdnLink@@ WNetConnectionDialog

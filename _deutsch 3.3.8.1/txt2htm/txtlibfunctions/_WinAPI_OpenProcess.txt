@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_OpenProcess
+
+###Description###
+Gibt ein Handle eines existierenden Prozessobjekts zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_OpenProcess($iAccess, $fInherit, $iProcessID [, $fDebugPriv = False])
+
+###Parameters###
+@@ParamTable@@
+$iAccess
+	Legt den Zugriff auf das Prozessobjekt fest
+$fInherit
+	Legt fest, ob das zur&uuml;ckgegebene Handle geerbt werden kann 
+$iProcessID
+	Legt den Identifizierer des zu &ouml;ffnenden Prozesses fest
+$fDebugPriv
+	[optional] Bestimmte Systemprozesse k&ouml;nnen nicht ge&ouml;ffnet werden es sei denn man verf&uuml;gt &uuml;ber Debug Sicherheits-Privilegien. Falls
+		TRUE, wird die Funktion veranlasst den Prozess mit Debug-Privilegien, sollte der Prozess nicht mit Standard Zugriffs-
+		Privilegien ge&ouml;ffnet werden k&ouml;nnen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Prozesshandle zu dem Objekt
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ OpenProcess

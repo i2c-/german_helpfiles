@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlRichEdit_HideSelection
+
+###Description###
+Versteckt (oder zeigt) eine Markierung
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_HideSelection($hWnd [, $fHide = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fHide
+	[optional] True - verstecken
+	False - zeigen
+	Standard: verstecken
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fHide muss True oder False sein
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+###See Also###
+@@MsdnLink@@ EM_HIDESELECTION
+
+###Example###
+@@IncludeExample@@

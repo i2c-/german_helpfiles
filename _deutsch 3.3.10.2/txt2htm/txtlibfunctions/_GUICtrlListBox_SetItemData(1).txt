@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListBox_SetItemData
+
+###Description###
+Setzt den Wert, welcher mit dem festgelegten Item verbunden ist
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SetItemData ( $hWnd, $iIndex, $iValue )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	legt den 0-basierenden Index des Items fest
+$iValue
+	legt den Wert, welcher mit dem festgelegten Item verbunden ist, fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_GetItemData
+
+
+###Example###
+@@IncludeExample@@

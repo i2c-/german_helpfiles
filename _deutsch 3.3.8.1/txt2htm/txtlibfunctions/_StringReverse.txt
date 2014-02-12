@@ -1,0 +1,32 @@
+###User Defined Function###
+_StringReverse
+
+###Description###
+Dreht den Inhalt eines bestimmten Strings um.
+
+###Syntax###
+#include <string.au3>
+_StringReverse($s_String)
+
+###Parameters###
+@@ParamTable@@
+$s_String
+	String, dessen Inhalt umgedreht werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den umgedrehten String zur&uuml;ck
+Fehler:	Gibt einen leeren String ("") zur&uuml;ck und setzt @error
+@Error:	0 = Kein Fehler.
+	1 = Einer der Parameter ist ung&uuml;ltig
+	2 = Dll Fehler
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

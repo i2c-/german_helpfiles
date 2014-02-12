@@ -1,0 +1,62 @@
+###User Defined Function###
+_IEAttach
+
+###Description###
+Verkn&uuml;pft sich mit der angegebenen Instanz des Internet Explorers, die der gesuchte String - abh&auml;ngig vom Suchmodus - enth&auml;lt.
+
+###Syntax###
+#include <IE.au3> 
+_IEAttach($s_string [, $s_mode = "Title" [, $i_instance = 1]])
+
+###Parameters###
+@@ParamTable@@
+$s_string
+	Gesuchter String (f&uuml;r "embedded" oder "dialogbox": Teil des Titels oder HWND des Fensters verwenden)
+$s_mode
+	[optional] legt den Suchmodus fest:
+		Title = (Standard) Teil des Titels des Hauptdokuments
+		WindowTitle = Teil des gesamten Fenstertitels (anstelle des Dokumenttitels)
+		URL = Teilstring oder URL der aktuellen Internetadresse
+		Text = Teilstring im Text des Bodys der aktuellen Seite
+		HTML = Teilstring im HTML des Bodys der aktuellen Seite
+		HWND = Handle des Browser-Fensters
+		Embedded = Teil des Titels oder Handle des Fensters, das das IE-Browserobjekt enth&auml;lt
+		DialogBox = Teil des Titels oder Handle der modalen/nichtmodalen Dialogbox
+		Instance = $s_string wird ignoriert, es wird ein Verweis auf eine existierende Browserinstanz zur&uuml;ckgegeben, deren Instanznummer mit der gesuchten $i_instance &uuml;bereinstimmt
+$i_instance
+	[optional] 1-basierender Index in eine Gruppe von Browsern oder eingebetteter Browserobjekte, die $s_string und $s_mode entsprechen. Siehe Bemerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable als Referenz auf ein IE-Browserobjekt zur&uuml;ck, die Modi Embedded und DialogBox geben jedoch ein Fensterobjekt zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung
+@Extended:	Enth&auml;lt die Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+_IEAttach bietet den "DialogBox"-Parameter zur Verkn&uuml;pfung mit modalen und nichtmodalen Dialogen an, welche vom Browser erstellt werden. Es ist wichtig festzustellen, dass nicht alle Dialoge, die durch Browser-Interaktion erstellt werden, auf diesem Wege verkn&uuml;pft und kontrolliert werden k&ouml;nnen. Viele dieser Dialoge sind sogar Standardfenster und k&ouml;nnen mit den &uuml;blichen AutoIt-Fensterfunktionen kontrolliert werden. Ein zuverl&auml;ssiger Weg, die Unterschiede dieser Fenstertypen herauszufinden, ist die Benutzung des "AutoIt Window Info"-Tools:  Enth&auml;lt das Fenster ein Control mit dem Namen "Internet Explorer_Server1", dann kann diese Funktion darauf angewendet werden, anderenfalls ist es ein Standardfenster und die &uuml;blichen AutoIt-Fensterfunktionen m&uuml;ssen zu dessen Kontrolle verwendet werden.
+
+Die "embedded"-Option kann zur Verkn&uuml;pfung mit HyperTextApplication-Fenstern (.hta) verwendet werden.
+
+Die erweiterte Fenstertitel-Syntax der Standard-Fensterfunktionen kann anstelle des Titel-Teilstrings f&uuml;r die Modi "dialogbox" und "embedded" verwendet werden.
+
+
+Benutzung von "$i_instance" im "embedded"-Modus: gibt eine Referenz auf eine bestimmte Instanz des Browserobjekts zur&uuml;ck und kann n&uuml;tzlich sein, wenn mehr als ein Browserobjekt in einem Fenster existieren. Wenn ein Fenstertitel in $s_string im embedded-Modus &uuml;bergeben wird, wird nur das erste zutreffende Fenster benutzt. Sollte sich das ben&ouml;tigte WebBrowser-Control in einem anderen Fenster befinden, muss statt des Titels das Fenster-Handle &uuml;bergeben werden, oder es kann die erweiterte Fenstertitel-Syntax der Standard-Fensterfunktionen verwendet werden.
+
+Benutzung von "$i_instance" in allen anderen Modi (au&szlig;er "embedded"): gibt eine Referenz auf ein Browserobjekt aus der Gruppe aller Fenster zur&uuml;ck, auf die die Suchkriterien laut $s_string und $s_mode zutreffen. Die Instanzenreihenfolge im DialogBox-Modus stimmt mit der von WinList() gelieferten Trefferliste &uuml;berein. In allen anderen Modi entspricht die Reihenfolge der von Shell.Windows (siehe ObjCreate).
+
+"$i_instance" wird auf 1 gesetzt und eine Warnung wird ausgegeben, wenn "$i_instace" >1 ist und die Modi "hwnd" oder "DialogBox" mit einem Fensterhandle (HWnd) in $s_string benutzt werden.
+
+Die Modi DialogBox und Embedded k&ouml;nnen zur Verkn&uuml;pfung mit Standard-Browserfenstern benutzt werden, allerdings ist das zur&uuml;ckgegebene Objekt das Top-Level-Fenster im Browser und nicht das InternetExplorer-Objekt selbst. Fensterobjekte bieten nicht auf alle Attribute des IE-Objekts Zugriff (z.B. Statustext, Adressleiste etc.). Wenn also versucht wird, Funktionen wie _IENavigate auf solch ein Objekt anzuwenden, k&ouml;nnen COM-Fehler auftreten, da im IE7 Tabs implementiert sind. Es mag zweckdienlich sein, Browserinstanzen auf diese Weise zu ermitteln, es wird aber empfohlen, _IEAttach immer mit einem der anderen Modi und den Informationen, die &uuml;ber das Fensterobjekt bekannt sind, zu benutzen, um die Referenz auf das dazugeh&ouml;rige InternetExplorer-Objekt zu erhalten.
+
+###Related###
+_IECreate, _IECreateEmbedded, _IEQuit
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlTab_GetItemRectEx
+
+###Description###
+Ermittelt das begrenzende Rechteck f&uuml;r einen Tab
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetItemRectEx ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagRECT Struktur zur&uuml;ck, welche das Rechteck eines Tabs ermittelt (in Viewport-Koordinaten x,y)
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_GetItemRect, $tagRECT
+
+
+###Example###
+@@IncludeExample@@

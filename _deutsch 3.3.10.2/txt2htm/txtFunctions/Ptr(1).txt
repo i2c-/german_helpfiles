@@ -1,0 +1,30 @@
+###Function###
+Ptr
+
+###Description###
+Wandelt einen Ausdruck in in eine Zeigervariante um.
+
+###Syntax###
+Ptr ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Der in eine Zeigervariante umzuwandelnde Ausdruck.
+@@End@@
+
+###ReturnValue###
+Gibt eine Zeiger-Entsprechung des Ausdrucks zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+HWnd, Int, IsPtr, String, Number
+
+
+###Example###
+@@IncludeExample@@

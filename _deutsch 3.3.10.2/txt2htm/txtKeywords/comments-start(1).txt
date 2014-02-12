@@ -1,0 +1,28 @@
+###Keyword###
+#comments-start
+
+###Description###
+Gibt an, dass ein ganzer Teil eines Skriptes auskommentiert werden soll.
+
+###Syntax###
+<b>#comments-start</b>
+...
+...
+<b>#comments-end</b>
+
+
+###Parameters###
+Keine.
+
+
+###Remarks###
+Die Direktiven #comments-start und #comments-end k&ouml;nnen verschachtelt sein.
+Man kann auch die verk&uuml;rzten Schl&uuml;sselw&ouml;rter <b>#cs</b> und <b>#ce</b> verwenden.
+Zus&auml;tzlich k&ouml;nnen die Direktiven selbst auch auskommentiert werden!
+
+
+###Related###
+
+
+###Example###
+@@IncludeExample@@

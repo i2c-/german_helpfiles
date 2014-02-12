@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_GetModuleHandle
+
+###Description###
+Gibt ein Handle zu dem angegebenen Modul zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetModuleHandle($sModuleName)
+
+###Parameters###
+@@ParamTable@@
+$sModuleName
+	Benennt ein Win32 Modul (entweder eine .DLL oder .EXE Datei). Wird die Dateiendung weggelassen, wird
+		die standardm&auml;&szlig;ige Bibliotheken-Endung .DLL angeh&auml;ngt. Dem Dateinamen kann am Ende ein Punkt (.) angeh&auml;ngt werden, um
+		anzudeuten, dass der Modulname keine Dateiendung hat. Der String muss keinen Pfad angeben. Der Name wird
+		(unbeachtet der Gro&szlig;/Kleinschreibung) mit den Modulnamen verglichen, die aktuell im Adressraum des aufrufenden
+		Prozesses formuliert sind. Falls dieser Parameter 0 ist, gibt die Funktion ein Handle der Datei zur&uuml;ck, die verwendet wurde um den aufgerufenen Prozess zu erstellen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem angegebenen Modul
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetModuleHandle
+
+###Example###
+@@IncludeExample@@

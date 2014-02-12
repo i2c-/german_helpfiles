@@ -1,0 +1,34 @@
+###User Defined Function###
+_RunDOS
+
+###Description###
+F&uuml;hrt einen DOS-Befehl in einem  nicht sichtbaren Fenster aus.
+
+###Syntax###
+#include <Process.au3>
+_RunDos($sCommand)
+
+
+###Parameters###
+@@ParamTable@@
+$sCommand
+	Befehl der ausgef&uuml;hrt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Exitcode des Befehles zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf nicht-null
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

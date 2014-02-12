@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_GetItemIndent
+
+###Description###
+Ermittelt um wie viele Bildbreiten das Item einger&uuml;ckt ist.
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemIndent ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl der Bildbreiten zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItemIndent
+
+
+###Example###
+@@IncludeExample@@

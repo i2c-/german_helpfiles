@@ -1,0 +1,52 @@
+###User Defined Function###
+_FTP_FilePut
+
+###Description###
+Sendet eine Datei an einen FTP Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FilePut($l_FTPSession, $s_LocalFile, $s_RemoteFile [, $l_Flags = 0 [, $l_Context = 0]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabewert von _FTP_Connect()
+$s_LocalFile
+	Der lokale Dateiname.
+$s_RemoteFile
+	Der Pfadname auf dem Server.
+$l_Flags
+	[optional] Bestimmen die Umst&auml;nde, unter denen die &Uuml;bertragung stattfinden soll. Die Anwendung sollte einen &Uuml;bermittlungstyp und irgend einen der Flags enthalten, die anzeigen, wie das Puffern kontrolliert wird.
+		<br/>Der &Uuml;bermittlungstyp kann einer der folgenden Werte sein:
+			<b>$FTP_TRANSFER_TYPE_ASCII</b> - &Uuml;bermittelt die Datei per FTP-ASCII-&Uuml;bertragungsmethode (Typ A). Steuerungs- und Formatierungsinformationen werden entsprechend ge&auml;ndert.
+			<b>$FTP_TRANSFER_TYPE_BINARY</b> - &Uuml;bermittelt die Datei per FTP-Abbild-&Uuml;bertragungsmethode (Typ I). Die Datei wird exakt so, wie sie ist, ohne &Auml;nderungen &uuml;bermittelt. (Standard)
+			<b>$FTP_TRANSFER_TYPE_UNKNOWN</b> - Setzt $FTP_TRANSFER_TYPE_BINARY als Standard
+			<b>$INTERNET_FLAG_TRANSFER_ASCII</b> - &Uuml;bermittelt die Datei als ASCII
+			<b>$INTERNET_FLAG_TRANSFER_BINARY</b> - &Uuml;bermittelt die Datei bin&auml;r
+		<br/>Die folgenden Werte werden f&uuml;r die Kontrolle des Pufferns der Datei benutzt. Die Anwendung kann einen oder mehrere dieser Werte benutzen:
+			<b>$INTERNET_FLAG_HYPERLINK</b> - Erzwingt die Datei neuzuladen, wenn keine Fristablaufzeit oder Modifikationszeit vom Server zur&uuml;ckgegeben wird, w&auml;hrend festgestellt wird, ob das Objekt vom Netzwerk neuzuladen ist.
+			<b>$INTERNET_FLAG_NEED_FILE</b> - Eine tempor&auml;re Datei wird erstellt, wenn die Datei nicht gepuffert werden kann.
+			<b>$INTERNET_FLAG_RELOAD</b> - Erzwingt das Herunterladen der angefragten Datei, des Objekts oder des Verzeichnisses vom originalen Server und nicht vom Cache.
+			<b>$INTERNET_FLAG_RESYNCHRONIZE</b> - L&auml;dt HTTP-Quellen neu, wenn die Quelle nach dem letzten Download ge&auml;ndert wurde. Alle FTP und Gopher Quellen werden neu geladen.
+$l_Context
+	[optional] Eine Variable, die den anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit Anwendungsdaten verbindet.
+	Dies wird nur benutzt, wenn die Anwendung bereits _FTP_SetStatusCallback() aufgerufen hat, um eine Status-Callbackfunktion zu setzen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @ERROR
+@@End@@
+
+###Remarks###
+$s_LocalFile und $s_RemoteFile k&ouml;nnen partiell oder der ganze Name sein, relativ zum aktuellen Verzeichnis.
+
+###Related###
+_FTP_Connect, _FTP_FileOpen, _FTP_SetStatusCallback
+
+###See Also###
+@@MsdnLink@@ FtpPutFile
+
+###Example###

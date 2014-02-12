@@ -1,0 +1,37 @@
+###Function###
+ControlDisable
+
+###Description###
+Sperrt/deaktivert ein Control.
+
+###Syntax###
+ControlDisable ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/hWnd/Klasse des Fensters, auf das zugegriffen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Titel spezial Definitionen</a>.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll. Siehe <a href="../intro/windowsadvanced.htm#specialtext">Text spezial Definitionen</a>.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+ControlEnable, ControlHide, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

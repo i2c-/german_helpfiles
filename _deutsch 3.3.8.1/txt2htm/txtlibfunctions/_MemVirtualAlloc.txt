@@ -1,0 +1,48 @@
+###User Defined Function###
+_MemVirtualAlloc
+
+###Description###
+Reserviert oder bindet einen Seitenbereich innerhalb des virtuellen Adressraumes des aufrufenden Prozesses.
+
+###Syntax###
+#include <Memory.au3>
+_MemVirtualAlloc($pAddress, $iSize, $iAllocation, $iProtect)
+
+###Parameters###
+@@ParamTable@@
+$pAddress
+	Zeiger auf die gew&uuml;nschte Basisadresse des Seitenbereiches, der zugeordnet werden soll.
+$iSize
+	Legt die Gr&ouml;&szlig;e des zuzuordnenden Bereichs in Bytes fest.
+$iAllocation
+	Legt die Art der Speicherzuordnung fest:
+		$MEM_COMMIT - Stellt physischen Speicher im RAM oder in der Auslagerungsdatei f&uuml;r den angegebenen Seitenbereich zur Verf&uuml;gung.
+		$MEM_RESERVE - Reserviert einen Bereich im virtuellen Adressraum des Prozesses, ohne jeglichen realen (physischen) Speicher zur Verf&uuml;gung zu stellen.
+		$MEM_TOP_DOWN - Speicher wird an der h&ouml;chstm&ouml;glichen Adresse zugeordnet.
+$iProtect
+	Art des Zugriffsschutzes:
+		$PAGE_READONLY - Erlaubt nur Lesezugriffe auf den eingebundenen Seitenbereich.
+		$PAGE_READWRITE - Erlaubt Lese- und Schreibzugriffe auf den eingebundenen Bereich.
+		$PAGE_EXECUTE - Erlaubt Codeausf&uuml;hrung im eingebundenen Bereich.
+		$PAGE_EXECUTE_READ - Erlaubt Codeausf&uuml;hrung und Lesezugriffe im eingebundenen Bereich.
+		$PAGE_EXECUTE_READWRITE - Erlaubt Codeausf&uuml;hrung, Lese- und Schreibzugriffe im eingebundenen Bereich.
+		$PAGE_GUARD - Gesch&uuml;tzte Seiten; sie sind zwar eingebunden, l&ouml;sen aber beim ersten Zugriff eine Ausnahme (Exception) aus, die vom VMM aufgefangen wird.
+		$PAGE_NOACCESS - Verbietet jeglichen Zugriff auf den Seitenbereich, Versuch f&uuml;hrt zum Prozessabbruch.
+		$PAGE_NOCACHE - Seitenbereich darf nicht im Systemcache gespeichert werden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zeiger auf die Basisadresse des Speicherbereichs
+Fehler:	0
+@@End@@
+
+###Remarks###
+_MemVirtualAlloc kann nur Speicher im Adressraum des aufrufenden Prozesses bereitstellen,
+_MemVirtualAllocEx kann auch auf den Adressraum anderer Prozesse zugreifen.
+
+###Related###
+_MemVirtualFree, _MemGlobalAlloc
+
+###See Also###
+@@MsdnLink@@ VirtualAlloc

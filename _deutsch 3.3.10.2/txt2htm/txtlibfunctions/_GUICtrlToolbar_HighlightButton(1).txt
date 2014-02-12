@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlToolbar_HighlightButton
+
+###Description###
+Setzt den "hervorheben"-Status eines festgelegten Button Controls
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_HighlightButton ( $hWnd, $iCommandID [, $fHighlight = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$fHighlight
+	[optional] "hervorheben"-Status:
+		True - Button wird hervorgehoben
+		False - Button wird nicht hervorgehoben
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

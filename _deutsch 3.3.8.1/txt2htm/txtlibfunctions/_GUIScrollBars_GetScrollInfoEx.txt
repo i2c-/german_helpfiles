@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUIScrollBars_GetScrollInfoEx
+
+###Description###
+Ermittelt die Parameter der Scrollbar
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_GetScrollInfoEx($hWnd, $fnBar)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$fnBar
+	Legt den Typ der Scrollbar fest. Dieser Parameter kann einer der folgenden Werte sein:
+		  $SB_CTL - Ermittelt die Position der Scrollbox im ScrollBar-Control. Der $hWnd-Parameter muss dabei das Handle des ScrollBar-Controls sein
+		  $SB_HORZ - Ermittelt die Position der Scrollbox einer standardm&auml;&szlig;igen horizontalen Scrollbar
+		  $SB_VERT - Ermittelt die Position der Scrollbox einer standardm&auml;&szlig;igen vertikalen Scrollbar
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagSCROLLINFO-Struktur
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Obige Konstanten ben&ouml;tigen die ScrollBarConstants.au3
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIScrollBars_GetScrollInfo, $tagSCROLLINFO, _GUIScrollBars_GetScrollInfoMax, _GUIScrollBars_GetScrollInfoMin, _GUIScrollBars_GetScrollInfoPage, _GUIScrollBars_GetScrollInfoPos, _GUIScrollBars_GetScrollInfoTrackPos
+
+###See Also###
+@@MsdnLink@@ GetScrollInfo
+
+###Example###
+@@IncludeExample@@

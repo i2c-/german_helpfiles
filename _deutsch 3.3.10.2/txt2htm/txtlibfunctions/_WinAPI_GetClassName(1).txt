@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_GetClassName
+
+###Description###
+Ermittelt den Namen der Klasse (Class) zu der das angegebene Fenster geh&ouml;rt
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetClassName ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Klassenname des Fensters
+Fehler:	Leerer String. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetClassName
+
+
+###Example###
+@@IncludeExample@@

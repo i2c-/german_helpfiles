@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUIToolTip_EnumTools
+
+###Description###
+Ermittelt Informationen &uuml;ber das aktuelle Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_EnumTools($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Index des Tools f&uuml;r welches Informationen ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Flags welche die ToolTip Anzeige steuern:
+	  1 - Zeigt an, dass $iID ist das Fenster Handle des Tools anstatt der ID
+	  2 - Zentriert das Fenster, zugeh&ouml;rig zu dem durch $iID festgelegten Tool
+	  4 - Zeigt an, dass der Text in umgekehrter Richtung angezeigt werden soll
+	  8 - Zeigt an, dass das Control das Fenster des Tool unterklassifizieren soll
+	  16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+	  32 - Positioniert das Fenster bei den gleichen Koordinaten wie TTM_TRACKPOSITION
+	  64 - Sorgt daf&uuml;r, dass das Control die Nachrichten an das Hauptfenster weiterleitet
+	  128 - Zeigt an, dass links im Control Text ausgegliedert sein sollte
+	[1] - Handle zum Fenster welches das Tool enth&auml;lt
+	[2] - ID des Tools
+	[3] - X Koordinate der oberen linken Ecke des Rechtecks
+	[4] - Y Koordinate der oberen linken Ecke des Rechtecks
+	[5] - X Koordinate der unteren rechten Ecke des Rechtecks
+	[6] - Y Koordinate der unteren rechten Ecke des Rechtecks
+	[7] - Handle zu der Instanz welche die Stringressource f&uuml;r das Tool enth&auml;lt
+	[8] - Text f&uuml;r das Tool
+	[9] - anwendungsspezifischer Wert der mit dem Tool verkn&uuml;pft ist
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

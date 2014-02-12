@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemOrder
+
+###Description###
+Setzt die Reihenfolge in der das Item erscheint
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemOrder ( $hWnd, $iIndex, $iOrder )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iOrder
+	0-basierende Itemreihenfolge
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemOrder
+
+
+###Example###
+@@IncludeExample@@

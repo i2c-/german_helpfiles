@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_CopyIcon
+
+###Description###
+Kopiert das angegebene Icon von einem anderen Modul
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CopyIcon($hIcon)
+
+###Parameters###
+@@ParamTable@@
+$hIcon
+	Handle zu dem Icon das kopiert wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem duplizierten Icon
+Fehler:	0
+@@End@@
+
+###Remarks###
+Die CopyIcon-Funktion erm&ouml;glicht einer Anwendung oder DLL, sein eigenes Handle zu einem Icon eines anderen Moduls zu bekommen. Wenn das andere Modul freigegeben wird, wird das Anwendungsicon noch im Stande sein, das Icon zu verwenden. Bevor die Anwendung geschlossen wird, ist die _WinAPI_DestroyIcon Funktion aufzurufen, um Systemressourcen die durch das Icon belegt wurden, wieder freizugeben.
+
+###Related###
+_WinAPI_DestroyIcon
+
+###See Also###
+@@MsdnLink@@ CopyIcon

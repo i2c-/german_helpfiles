@@ -1,0 +1,57 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaIndents
+
+###Description###
+&Auml;ndert die Zeileneinz&uuml;ge der markierten Abs&auml;tze oder, wenn keiner markiert ist, der Abs&auml;tze, die am Einf&uuml;gungspunkt (Cursor) eingef&uuml;gt werden
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaIndents($hWnd [, $vLeft = Default [, $iRight = Default [, $iFirstLine = Default]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$vLeft
+	[optional] Einr&uuml;ckung der linken Seite des Absatzes (der Zeilen nach der ersten)
+		 Absolut - Eine Zahl
+		 Relativ zum vorherigen - Ein String: "+<Zahl>" oder "-<Zahl>"
+$iRight
+	[optional] Einr&uuml;ckung der rechten Seite des Absatzes
+$iFirstLine
+	[optional] Einr&uuml;ckung der ersten Zeile (links) relativ zu der der Anderen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $vLeft ist weder eine Zahl, noch ein String der aus einer Zahl besteht
+	1022 - $vLeft w&uuml;rde die Einr&uuml;ckung zu weit nach links setzten
+	103 - $iRight ist keine Zahl
+	105 - $iFirstLine ist keine Zahl
+	200 - $iFirstLine w&uuml;rde die Einr&uuml;ckung zu weit nach links setzten
+	700 - Ausf&uuml;hrung fehlgeschlagen
+@@End@@
+
+###Remarks###
+Positive Werte von $iLeft, $iRight und $iFirstLine r&uuml;cken in Richtung der Mitte des Absatzes.
+
+Alle drei Werte sind zu Beginn 0.
+
+Um die Ma&szlig;einheit des Controls (Standard: Inch) zu &auml;ndern, benutze _GUICtrlRichEdit_SetSpaceUnit.
+
+Wenn Text markiert ist, sind die Standardwerte die des ersten, markierten Absatzes.
+Wenn kein Text markiert ist, sind die Standardwerte die des markierten Absatzes.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaIndents, _GUICtrlRichEdit_SetSpaceUnit
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

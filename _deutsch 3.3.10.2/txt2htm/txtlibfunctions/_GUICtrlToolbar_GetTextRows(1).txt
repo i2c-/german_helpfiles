@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlToolbar_GetTextRows
+
+###Description###
+Ermittelt die maximale Anzahl von Textzeilen, welche auf einem Button dargestellt werden k&ouml;nnen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetTextRows ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die maximale Anzahl von Textzeilen, welche auf einem Button dargestellt werden k&ouml;nnen, zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

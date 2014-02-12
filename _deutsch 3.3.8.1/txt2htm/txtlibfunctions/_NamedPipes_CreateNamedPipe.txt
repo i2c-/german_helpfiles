@@ -1,0 +1,71 @@
+###User Defined Function###
+_NamedPipes_CreateNamedPipe
+
+###Description###
+Erzeugt die Instanz einer Named Pipe (FIFO).
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_CreateNamedPipe($sName [, $iAccess = 2 [, $iFlags = 2 [, $iACL = 0 [, $iType = 1 [, $iRead = 1 [, $iWait = 0 [, $iMaxInst = 25 [, $iOutBufSize = 4096 [, $iInpBufSize = 4096 [, $iDefTimeout = 5000 [, $pSecurity = 0]]]]]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$sName
+	Pipe-Name mit folgendem Format: \.\pipe\pipename. Der Namensteil der Pipe kann
+		im Namen alle Zeichen beinhalten au&szlig;er dem Backslash (\), gefolgt von Zahlen und Sonderzeichen. Der Pipe-Name
+		kann bis zu 256 Zeichen lang sein. Bei Pipe-Namen wird die Gro&szlig;- Kleinschreibung nicht ber&uuml;cksichtigt.
+$iAccess
+	[optional] Die Pipe Zugriffsart. Eine der folgenden ist Pflicht:
+		0 - Die Daten der Pipe gehen nur vom Client zum Server (inbound)
+		1 - Die Daten der Pipe gehen nur vom Server zum Client (outbound)
+		2 - Die Pipe ist bio-direktional (duplex)
+$iFlags
+	[optional] Die Pipe Flags. Kann eine der folgenden Kombinationen sein:
+		1 - Beim Versuch, mehrere Instanzen einer Pipe zu erstellen, wenn diese Option gesetzt ist, ist das Erzeugen der ersten Instanz erfolgreich, aber jeder weitere Versuch schl&auml;gt fehl.
+		2 - Asynchroner (&uuml;berlappender) Modus ist aktiv. In diesem Modus k&ouml;nnen Funktionen, die l&auml;nger dauernde Lese-, Schreib- und Verbindungsoperationen ausf&uuml;hren, sofort zur&uuml;ckkehren.
+		4 - Write-Through-Modus ist aktiv. Betrifft nur Schreiboperationen von Byte-Pipes und nur, wenn Client und Server auf unterschiedlichen Rechnern laufen.
+$iACL
+	[optional] Sicherheits-ACL Flags. Kann eine der folgenden Kombinationen sein:
+		1 - Der Aufrufer hat Schreibzugriff auf die Benutzerzugriffssteuerung (DACL) der Pipe.
+		2 - Der Aufrufer hat Schreibzugriff auf die Besitzer der Pipe.
+		4 - Der Aufrufer hat Schreibzugriff auf die Systemzugriffssteuerung (SACL) der Pipe.
+$iType
+	[optional] Pipe-Typ. Muss einer der Folgenden sein:
+		0 - Daten werden als Byte-Stream in die Pipe geschrieben.
+		1 - Daten werden als Nachrichten-Stream in die Pipe geschrieben.
+$iRead
+	[optional] Pipe Lesemodus. Muss einer der Folgenden sein:
+		0 - Daten werden als Byte-Stream aus der Pipe gelesen.
+		1 - Daten werden als Nachrichten-Stream aus der Pipe gelesen.
+$iWait
+	[optional] Pipe Wartemodus. Muss einer der Folgenden sein:
+		0 - Blockierender Modus. ReadFile, WriteFile oder ConnectNamedPipe kehren erst zur&uuml;ck, wenn die angesto&szlig;ene Operation abgeschlossen ist.
+		1 - Nichtblockierender Modus. ReadFile, WriteFile und ConnectNamedPipe kehren immer sofort zur&uuml;ck.
+$iMaxInst
+	[optional] F&uuml;r diese Pipe kann die maximale Anzahl von Instanzen erstellt werden.
+$iOutBufSize
+	[optional] Anzahl der Bytes, die f&uuml;r den Ausgabepuffer reserviert werden.
+$iInpBufSize
+	[optional] Anzahl der Bytes, die f&uuml;r den Eingabepuffer reserviert werden.
+$iDefTimeOut
+	[optional] Der &uuml;bliche Timeout-Wert in Millisekunden.
+$pSecurity
+	[optional] Zeiger auf eine $tagSECURITY_ATTRIBUTES-Struktur, die Sicherheitsrichtlinien der neuen benannten Pipe festlegt und die Vererbung des Handles regelt. 
+	Wenn pSecurity 0 ist, erh&auml;lt die benannte Pipe die Standard-Sicherheitsrichtlinie und das Handle kann nicht vererbt werden. Die Zugriffssteuerung (ACL) 
+	gew&auml;hrt den Administratoren des lokalen Systems und dem Prozesseigner vollen Zugriff. Au&szlig;erdem erh&auml;lt jeder andere Benutzer Lesezugriff.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zur Serverseite der Pipe-Instanz.
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_NamedPipes_ConnectNamedPipe, _NamedPipes_CreatePipe
+
+###See Also###
+@@MsdnLink@@ CreateNamedPipe

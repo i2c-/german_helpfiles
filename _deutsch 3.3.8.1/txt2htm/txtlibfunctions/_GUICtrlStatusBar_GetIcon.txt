@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetIcon
+
+###Description###
+Ermittelt das Icon f&uuml;r einen Abschnitt
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetIcon($hWnd [, $iIndex = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	[optional] 0-basierender Index des Abschnitts welcher das zu ermittelnde Icon enth&auml;lt. Falls dieser Parameter -1 ist,
+		wird die Statusbar wie eine einzige Statusbar angesehen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem icon
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_SetIcon
+###Example###
+@@IncludeExample@@

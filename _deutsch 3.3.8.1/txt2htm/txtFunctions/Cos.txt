@@ -1,0 +1,29 @@
+###Function###
+Cos
+
+###Description###
+Berechnet den Cosinus einer Zahl.
+
+###Syntax###
+Cos ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Wert in Radiant.
+@@End@@
+
+###ReturnValue###
+Gibt den trigonometrischen Cosinus einer Zahl zur&uuml;ck.
+
+
+###Remarks###
+1° = pi / 180 Radiant.
+
+###Related###
+Sin, Tan, ASin, ACos, ATan
+
+
+###Example###
+@@IncludeExample@@

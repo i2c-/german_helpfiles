@@ -1,0 +1,50 @@
+###User Defined Function###
+_WinAPI_LoadLibraryEx
+
+###Description###
+Mapped ein bestimmtes ausf&uuml;hrbares Modul in den Adressraum des aufrufenden Prozesses
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadLibraryEx ( $sFileName [, $iFlags = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Benennt ein ausf&uuml;hrbares Win32 Modul (entweder eine .DLL oder eine .EXE Datei). Der angegebene Name ist
+	der Dateiname des ausf&uuml;hrbaren Moduls.
+$iFlags
+	[optional] Legt den Ablauf fest, wenn das Modul geladen wird. Dieser Parameter kann einer der 
+	folgenden Werte sein:
+	$DONT_RESOLVE_DLL_REFERENCES - Wird dieser Wert genutzt und das Modul ist eine DLL, dann wird, f&uuml;r die Prozess- 
+	und Threadinitialisierung, bzw. Beendigung, nicht die DllMain Funktion vom System aufgerufen. Ebenso werden
+	keine zus&auml;tzlichen ausf&uuml;hrbare Dateien geladen, die sich auf das angegebene Modul beziehen.
+	$LOAD_LIBRARY_AS_DATAFILE - Wird dieser Wert genutzt, mapped das System die Datei in den Adressraum des
+	aufrufenden Prozesses, als w&auml;re sie eine Datendatei. Nichts wird unternommen um die Datei auszuf&uuml;hren, oder 
+	dieses vorzubereiten.
+	$LOAD_WITH_ALTERED_SEARCH_PATH - Wird dieser Wert genutzt und $FileName gibt einen Pfad an, wendet das System
+	die wechselnde Suchstrategie an, um das angegebene Modul zu laden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Handle zu dem ausf&uuml;hrbaren Modul
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten
+@@End@@
+
+
+###Remarks###
+Oben stehende Konstanten ben&ouml;tigen #include <WinAPIConstants.au3>
+
+
+###Related###
+_WinAPI_LoadLibrary, _WinAPI_FreeLibrary, _WinAPI_LoadString
+
+
+###See Also###
+@@MsdnLink@@ LoadLibraryEx
+
+
+###Example###
+@@IncludeExample@@

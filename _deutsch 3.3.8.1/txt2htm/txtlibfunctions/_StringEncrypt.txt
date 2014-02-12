@@ -1,0 +1,35 @@
+###User Defined Function###
+_StringEncrypt
+
+###Description###
+Eine auf RC4 basierende Verschl&uuml;sselungsfunktion f&uuml;r Strings.
+
+###Syntax###
+#include <String.au3>
+_StringEncrypt($i_Encrypt, $s_EncryptText, $s_EncryptPassword [, $i_EncryptLevel = 1])
+
+###Parameters###
+@@ParamTable@@
+$i_Encrypt
+	1 zum Verschl&uuml;sseln, 0 zum Entschl&uuml;sseln.
+$s_EncryptText
+	Text zum Verschl&uuml;sseln/Entschl&uuml;sseln.
+$s_EncryptPassword
+	Passwort, mit dem verschl&uuml;sselt/entschl&uuml;sselt wird
+$i_EncryptLevel
+	[optional] Level zum Verschl&uuml;sseln/Entschl&uuml;sseln. Standard = 1
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der verschl&uuml;sselte/entschl&uuml;sselte String.
+Fehler:	Leerer String und setzt @error = 1
+@@End@@
+
+###Remarks###
+WARNUNG: Diese Funktion ben&ouml;tigt extrem viel Bearbeitungszeit, wenn das Verschl&uuml;sselungslevel oder der verschl&uuml;sselte String zu gro&szlig; ist!
+
+###Related###
+
+###Example###
+@@IncludeExample@@

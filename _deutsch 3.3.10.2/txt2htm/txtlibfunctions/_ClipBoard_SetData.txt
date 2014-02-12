@@ -1,0 +1,67 @@
+###User Defined Function###
+_ClipBoard_SetData
+
+###Description###
+Platziert Daten eines bestimmten Formats in die Zwischenablage
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_SetData ( $vData [, $iFormat = 1] )
+
+
+###Parameters###
+@@ParamTable@@
+$vData
+	Daten im Bin&auml;r- oder Stringformat oder optional NULL (0)  (Fenster muss die Daten zur Verf&uuml;gung stellen (rendern, siehe unten).
+	WICHTIG: Falls ein String &uuml;bergeben wird und dieser nicht vom Typ $CF_TEXT, $CF_OEMTEXT oder $CF_UNICODETEXT ist, so wird dieser als ein ANSI String behandelt.
+	Um f&uuml;r all die anderen Typen Unicode Strings zu erzwingen, muss man die Daten im Bin&auml;rformat &uuml;bergeben. Deshalb soll man $CF_UNICODETEXT nicht im Bin&auml;rformat &uuml;bergeben (verursacht unlesbare Daten).
+	Wenn $vData NULL ist, deutet sich an, dass das Fenster in dem angefoderten festgelegten Clipboard Format zur Verf&uuml;gung stellt.
+	Wenn ein Fenster das Rendering verz&ouml;gert, muss es die $WM_RENDERFORMAT und $WM_RENDERALLFORMATS Nachrichten verarbeiten. 
+	Bei erfolgreichem Durchlauf der Funktion, besitzt das System das Objekt, identifizierend &uuml;ber den $hMemory Parameter. 		
+	Das Programm kann nicht in die Daten schreiben oder sie freigeben, aber es kann sie sperren und von ihnen lesen, bis _ClipBoard_Close aufgerufen wird.
+	Der Speicher muss entsperrt sein, bevor die Zwischenablage geschlossen wird. Falls der $hMemory Parameter ein Speicherobjekt identifiziert, muss dem Objekt Speicher mit dem $GMEM_MOVEABLE-Flag zugewiesen werden.		
+$iFormat
+	[optional] Legt ein Format f&uuml;r die Zwischenablage fest:
+	$CF_TEXT - Textformat ($iFormat = 1)
+	$CF_BITMAP - Handle zu einer Bitmap (HBITMAP) ($iFormat = 2)
+	$CF_METAFILEPICT - Handle zu einem Bild im Format der Zwischendateien (Win16) (METAFILEPICT) ($iFormat = 3)
+	$CF_SYLK - Microsoft Symbolic Link (SYLK) Format ($iFormat = 4)
+	$CF_DIF - Software Arts' Data Interchange Format ($iFormat = 5)
+	$CF_TIFF - Tagged Image File Format ($iFormat = 6)
+	$CF_OEMTEXT - Textformat mit Zeichen im OEM Zeichensatz ($iFormat = 7)
+	$CF_DIB - BITMAPINFO-Struktur gefolgt von den Bitmap Bits ($iFormat = 8)
+	$CF_PALETTE - Ein (direkter) Handle zu einer Farbpalette, die sich &uuml;blicherweise auf ein ger&auml;teabh&auml;ngiges Bitmap (CF_BITMAP) bezieht, d.h. dessen "echte" Farbe festlegen ($iFormat = 9)
+	$CF_PENDATA - f&uuml;r die Erweiterungen der (mittlerweile durch CE ersetzten) Pen-Variante von Windows ($iFormat = 10)
+	$CF_RIFF - Audiodateien im RIFF Format ($iFormat = 11)
+	$CF_WAVE - Audiodateien im WAVE Format ($iFormat = 12)
+	$CF_UNICODETEXT - Unicode Textformat ($iFormat = 13)
+	$CF_ENHMETAFILE - Handle zu einer Zwischendatei im neuen "erweiterten" Format (Win32) (HENHMETAFILE) ($iFormat = 14)
+	$CF_HDROP - Handle zu einer Liste von Dateinamen f&uuml;r Drag & Drop-Operationen ($iFormat = 15)
+	$CF_LOCALE - ist eine zus&auml;tzliche Information f&uuml;r ANSI-Texte (CF_TEXT) und gibt an, auf welche landessprachliche Variante sich die Zeichencodes beziehen ($iFormat = 16)
+	$CF_DIBV5 - ein Speicherobjekt, das eine BITMAPV5HEADER-Struktur gefolgt von der Bitmap-Farbe und den Bitmap-Bits  enth&auml;lt ($iFormat = 17)
+	$CF_OWNERDISPLAY - Owner Display Format ($iFormat = 0x0080)
+	$CF_DSPTEXT - Text, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0081)
+	$CF_DSPBITMAP - Bitmap, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0082)
+	$CF_DSPMETAFILEPICT - Zwischendatei, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0083)
+	$CF_DSPENHMETAFILE - Erweiterte Zwischendatei, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x008E)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu den Daten
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Die Funktion vollzieht alle n&ouml;tigen Schritte, um Daten in die Zwischenablage zu platzieren.
+Es stellt Speicher f&uuml;r das globale Speicherobjekt zur Verf&uuml;gung, &ouml;ffnet die Zwischenablage, platziert die Daten in die Zwischenablage und schlie&szlig;t sie wieder.
+Um diese Schritte selbst zu &uuml;bernehmen, sollte Gebrauch von <a href="_ClipBoard_SetDataEx.htm">_ClipBoard_SetDataEx()</a> Funktion gemacht werden.
+
+
+###Related###
+_ClipBoard_GetData, _ClipBoard_SetDataEx, _ClipBoard_Empty, _ClipBoard_GetDataEx
+
+
+###Example###
+@@IncludeExample@@

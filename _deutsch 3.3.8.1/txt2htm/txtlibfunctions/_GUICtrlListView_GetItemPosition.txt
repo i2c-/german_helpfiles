@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_GetItemPosition
+
+###Description###
+Ermittelt die Position eines Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemPosition($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+		[0] - X-Koordinate des Items
+		[1] - Y-Koordinate des Items
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemPosition, _GUICtrlListView_GetItemPositionX, _GUICtrlListView_GetItemPositionY
+
+###Example###
+@@IncludeExample@@

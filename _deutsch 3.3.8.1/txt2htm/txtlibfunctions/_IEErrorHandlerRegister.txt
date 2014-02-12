@@ -1,0 +1,47 @@
+###User Defined Function###
+_IEErrorHandlerRegister
+
+###Description###
+Registriert und aktiviert einen benutzerdefinierten COM-Fehlerhandler.
+
+###Syntax###
+#include <IE.au3> 
+_IEErrorHandlerRegister([$s_functionName = "__IEInternalErrorHandler"])
+
+###Parameters###
+@@ParamTable@@
+$s_functionName
+	[optional] String-Variable mit den Namen eines benutzerdefinierten COM-Fehlerhandlers, Standard f&uuml;r den internen COM-Fehlerhandler in dieser UDF
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wichtig: Bei der Verwendung eines eigenen Fehlerhandlers, muss die Fehler-Objektvariable "$oIEErrorHandler" benannt werden (siehe Beispiel).
+
+AutoIt hat durch die ObjEvent-Funktion die F&auml;higkeit, COM-Fehler abzufangen und an einen eigenen Fehlerhandler weiterzureichen. Dies ist f&uuml;r UDF-Autoren problematisch, weil nur ein einziger COM-Fehlerhandler zur gleichen Zeit verwendet werden kann. Um mit einer UDF einen COM-Fehlerhandler verwenden zu k&ouml;nnen, muss erst der User-Fehlerhandler abgemeldet werden. Nun kann der UDF-Fehlerhandler installiert werden und danach kann der User-Fehler-Handler wieder an seinen Platz gesetzt werden. Leider ist der Standard so, dass eine UDF keine M&ouml;glichkeit hat, mit dem User-Fehlerhandler umzugehen.
+
+Mit dieser Routine k&ouml;nnen COM-Fehlerhandler so registriert werden, dass IE.au3 diese elegant entfernen und hinzuf&uuml;gen kann, wie es gerade gebraucht wird. Man hat die Wahl auf eigene Fehlerhandler oder auf den Standard der IE.au3 zu verweisen. Bei der Verwendung des Standard-IE.au3-Fehlerhandlers werden zus&auml;tzliche Diagnoseinformationen in die Console geschrieben und man erh&auml;lt einige globale Variablen mit Informationen zu den aufgetretenen Fehlern.
+
+Wenn Instanzen f&uuml;r eigene COM-Fehlerhandler erstellt werden, ohne die IE.au3 Routine zu verwenden, ist es nicht m&ouml;glich mehrere COM-Fehler abzufangen und es kann zu pl&ouml;tzlichen Skript-Abbr&uuml;chen kommen.
+
+
+Wird der Standardfehlerhandler verwendet (__IEInternalErrorHandler), sind die folgenden globalen Variablen als Referenz gesetzt: $IEComErrorNumber, $IEComErrorNumberHex, $IEComErrorDescription, $IEComErrorScriptline, $IEComErrorWinDescription, $IEComErrorSource, $IEComErrorHelpFile, $IEComErrorHelpContext, $IEComErrorLastDllError, $IEComErrorComObj und $IEComErrorOutput
+
+Die Bildschirmausgabe der COM-Fehler-Meldungen kann mit _IEErrorNotify kontrolliert werden.
+
+
+###Related###
+_IEErrorHandlerDeRegister, _IEErrorNotify
+
+
+###Example###
+@@IncludeExample@@

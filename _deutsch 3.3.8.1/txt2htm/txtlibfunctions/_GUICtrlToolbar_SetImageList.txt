@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlToolbar_SetImageList
+
+###Description###
+Setzt die Standard Button Imagelist.
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetImageList($hWnd, $hImageList)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hImageList
+	Handle zu der zu setzenden Imagelist. Falls dieser Parameter 0 ist, werden keine Bilder in Buttons dargestellt.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der Handle zu der vorher verwendeten Imagelist um Buttons in dessen Standardstatus anzuzeigen.
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetImageList
+
+###Example###
+@@IncludeExample@@

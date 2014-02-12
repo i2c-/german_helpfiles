@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlComboBox_InsertString
+
+###Description###
+F&uuml;gt einen String ein
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_InsertString ( $hWnd, $sText [, $iIndex = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	einzuf&uuml;gender String
+$iIndex
+	[optional] legt den 0-basierenden Index fest, vor welchen der String eingef&uuml;gt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein 0-basierender Index, vor welchen der String eingef&uuml;gt werden soll.
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Falls der $iIndex Parameter –1 ist, wird der String an das Ende der Liste eingef&uuml;gt.
+
+Falls die ComboBox den Stil $WS_HSCROLL aufweist und ein String eingef&uuml;gt wird der gr&ouml;&szlig;er ist als die ComboBox, so sollte _GUICtrlComboBox_SetHorizontalExtent() verwendet werden um sicherzustellen, dass die horizontale Scrollbar erscheint.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_AddString, _GUICtrlComboBox_InitStorage, _GUICtrlComboBox_SetHorizontalExtent
+
+
+###Example###
+@@IncludeExample@@

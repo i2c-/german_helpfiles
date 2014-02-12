@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaSpacing
+
+###Description###
+Ermittelt die Zeilen- und Absatzabst&auml;nde des (ersten) markierten Absatzes oder, wenn keiner markiert ist, die des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaSpacing($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, der die durch Semikola (;) getrennten Einstellungen enth&auml;lt:
+	Wert 1 - Abstand zwischen den Zeilen:
+	   entweder eine Zahl - in Leerzeichen-Einheiten
+	   oder "<Zahl> lines" - in Zeilen
+	Wert 2 - Geltungsbereich von Wert 1:
+	   a - Alle (oder nur die) ausgew&auml;hlten Abs&auml;tze haben diese Einstellungen
+	   f - Ausschlie&szlig;lich der erste ausgew&auml;hlte Absatz hat diese Einstellungen
+	   c - Der aktuelle Absatz hat diese Einstellungen
+	Wert 3 - Abstand vor dem Absatz (in Leerzeichen-Einheiten)
+	Wert 4 - Geltungsbereich von Wert 3 - siehe oben (Wert 2)
+	Wert 5 - Abstand hinter Abs&auml;tzen (in Leerzeichen-Einheiten)
+	Wert 6 - Geltungsbereich von Wert 5 - siehe oben (Wert 2)
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaSpacing
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

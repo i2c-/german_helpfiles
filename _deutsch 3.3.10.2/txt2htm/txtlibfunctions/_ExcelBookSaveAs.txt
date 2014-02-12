@@ -1,0 +1,64 @@
+###User Defined Function###
+_ExcelBookSaveAs
+
+###Description###
+Speichert die aktive Excel-Datei des festgelegten Excel Objekts mit einem neuen Dateinamen und /oder Typ.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelBookSaveAs ( $oExcel, $sFilePath [, $sType = "xls" [, $fAlerts = 0 [, $fOverWrite = 0 [, $sPassword = "" [, $sWritePassword = "" [, $iAccessMode = 1 [, $iConflictResolution = 2]]]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel Objekt welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$sFilePath
+	Pfad und Dateiname der zu schreibenden Datei
+$sType
+	[optional] Excel schreibbare Dateitypen als String = "xls|csv|txt|template|html", Standard "xls"
+$fAlerts
+	[optional] Flag f&uuml;r das deaktivieren/aktivieren von Hinweisfenstern (0=deaktiviert, 1=aktiviert) (Standard = 0)
+$fOverWrite
+	[optional] Flag f&uuml;r das &uuml;berschreiben der Datei falls diese bereits existiert (0=nein, 1=ja)
+$sPassword
+	[optional] Das String-Passwort mit dem die Excel-Datei gesch&uuml;tzt werden soll; falls leer, wird kein Passwort verwendet (Standard = leer)
+$sWritePassword
+	[optional] Das String-Passwort mit dem man auf die Excel-Datei einen Schreibzugriff erh&auml;lt; falls leer, wird kein Passwort verwendet (Standard = leer)
+$iAccessMode
+	[optional] Der Dokument-Freigabemodus welcher der Excel-Datei zugewiesen werden soll:
+$xlNoChange
+	[optional] L&auml;sst den Freigabemodus so wie er ist (Standard) (numerischer Wert = 1)
+$xlExclusive
+	[optional] Deaktiviert die gemeinsame Nutzung der Excel-Datei (numerischer Wert = 3)
+$xlShared
+	[optional] Aktiviert die gemeinsame Nutzung der Excel-Datei (numerischer Wert = 2)
+$iConflictResolution
+	[optional] F&uuml;r gemeinsam genutzte Dokumente, wie Freigabekonflikte gel&ouml;st werden sollen:
+$xlUserResolution
+	[optional] Es erscheint eine Dialogbox die den Benutzer fr&auml;gt wie das Problem gel&ouml;st werden soll (numerischer Wert = 1)
+$xlLocalSessionChanges
+	[optional] Die lokalen &Auml;nderungen des Benutzers werden immer angenommen (Standard) (numerischer Wert = 2)
+$xlOtherSessionChanges
+	[optional] Die lokalen &Auml;nderungen des Benutzers werden immer abgelehnt (numerischer Wert = 3)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - ung&uuml;ltiger Dateityp String
+	3 - Datei existiert bereits, jedoch wurde das &Uuml;berschreibeflag nicht gesetzt
+@@End@@
+
+
+###Remarks###
+Man kann mit <b>_ExcelBookSaveAs</b> eine Excel-Datei nur unter dem gleichen Pfad abspeichern, unter dem die Excel-Datei urspr&uuml;nglich ge&ouml;ffnet wurde ( gilt nicht f&uuml;r neue, ungespeicherte Excel-Dateien).
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

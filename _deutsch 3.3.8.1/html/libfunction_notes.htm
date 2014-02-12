@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Hinweise zu den benutzerdefinierten Funktionen</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="css/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<H1>Hinweise zu den benutzerdefinierten Funktionen</H1>
+
+
+<p>Wir haben einige Dateien aufgenommen, die jeweils ma&szlig;gebende Funktionen enthalten, sogenannte <span class="style1">U</span>ser <span class="style1">D</span>efined <span class="style1">F</span>unctions.<br>
+UDF's sind Funktionen/Scriptlets, die in AutoIt3 geschrieben sind und mit #include in eigene Skripte eingebunden und benutzt werden k&ouml;nnen, ohne dass sie selbst geschrieben oder jedes mal kopiert und eingef&uuml;gt werden m&uuml;ssen, wenn sie gebraucht werden.<br>
+
+User Defined Functions ist englisch und bedeutet benutzerdefinierte Funktionen</p>
+<p>Beispiel:<br>
+</p>
+    <p class="codebox">#include <date.au3><br>
+      MsgBox(0,"Heute","Das heutige Datum lautet " &
+      _Now())</p>
+<p>Dieses Skript zeigt das aktuelle Datum im Datumsformat ihres PC an, z.B. "03.05.2007 17:23:45" </p>
+<p> </p>
+<p>Viele UDF's besitzen optionale Parameter, die weggelassen werden k&ouml;nnen. 
+  Falls sie einen optionalen Parameter angeben wollen, m&uuml;ssen jedoch alle vorhergehenden Parameter mit angegeben werden.<br>
+  Schauen sie sich als Beipiel dazu folgende Funktion an: <i><a href="libfunctions/_ArraySort.htm">_ArraySort</a> </i>
+( ByRef $a_Array [, $i_Descending [, $i_Base=0 [, $i_Ubound=0 [, $i_Dim=1 [,
+$i_SortIndex=0 ]]]]] )<BR>
+  Wenn einem Parameter ByRef vorausgeht, bedeutet dies, dass die Funktion die &uuml;bergebene Variable mit einem neuen Wert aktualisieren wird. Diese Parameter m&uuml;ssen eine Variable ($xyz) sein und d&uuml;rfen also keine Konstante sein! <br>
+</p>
+<p>Die meisten UDF's geben Erfolg/Fehler als <b>R&uuml;ckgabewert</b> an; andere Funktionen setzen daf&uuml;r
+  das <b>@error Flag</b>. Manche tun auch beides....<br>
+  @error = 0 ;bedeutet immer Erfolg<br>
+  Return = variiert, ist aber normalerweise nicht-Null f&uuml;r Erfolg, um einfach zu lesenden Code zu erm&ouml;glichen...<br>
+  <br>
+  <b>Falls eine Funktion das @error-Flag setzt, sollte es immer vor dem R&uuml;ckgabewert gepr&uuml;ft werden!
+  Falls @error einen Fehler anzeigt, ist der R&uuml;ckgabewert im allgemeinen undefiniert...</b><br>
+</p>
+<p><br>
+</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</body>
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+</html>

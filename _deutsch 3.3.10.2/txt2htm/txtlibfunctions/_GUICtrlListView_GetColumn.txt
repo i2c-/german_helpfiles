@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlListView_GetColumn
+
+###Description###
+Ermittelt die Attribute einer Spalte
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetColumn ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index einer Spalte
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Untersuchung der Spalten&uuml;berschrift und dem Text des Subitems in der Spalte:
+		0 - Text ist linksb&uuml;ndig
+		1 - Text ist rechtsb&uuml;ndig
+		2 - Text ist zentriert
+	[1] - True falls das Item ein Bild von einer Imagelist darstellt
+	[2] - True falls das Bitmap rechts neben dem Text erscheint
+	[3] - True falls die &Uuml;berschrift ein Bild enth&auml;lt
+	[4] - Breite der Spalte in Pixel
+	[5] - Spalten&uuml;berschrift
+	[6] - Index des Subitems passend zur Spalte
+	[7] - 0-basierender Index eines Bildes innerhalb der Imagelist
+	[8] - 0-basierende Reihenfolge der Spalten
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetColumn, _GUICtrlListView_JustifyColumn
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandChildSize
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;eneinstellungen des Child-Fensters
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandChildSize($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Minimale Breite des Child-Fensters in Pixel.
+	[1] - Minimale H&ouml;he des Child-Fensters in Pixel.
+	[2] - Ausgangsh&ouml;he der Gruppe in Pixel.
+	[3] - Maximale H&ouml;he der Gruppe in Pixel.
+	[4] - Schrittwert in Pixel, durch den die Gruppe wachsen oder schrumpfen kann.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

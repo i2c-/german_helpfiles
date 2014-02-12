@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_GetItemFocused
+
+###Description###
+Ermittelt, ob das Item wie ein drag-and-drop Ziel hervorgehoben ist
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemFocused ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItemFocused
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTreeView_SetHeight
+
+###Description###
+Setzt die H&ouml;he f&uuml;r jedes Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetHeight($hWnd, $iHeight)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iHeight
+	Neue H&ouml;he in Pixel f&uuml;r jedes Item. H&ouml;hen weniger als 1 werden auf 1 gesetzt. Falls es ein ungerader Wert ist und falls das Control den Stil $TVS_NONEVENHEIGHT nicht besitzt, werden die Werte auf den n&auml;chstkleineren Wert abgerundet.
+		Falls -1, wird der Standardwert verwendet.
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige H&ouml;he der Items in Pixel zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetHeight
+
+###Example###
+@@IncludeExample@@

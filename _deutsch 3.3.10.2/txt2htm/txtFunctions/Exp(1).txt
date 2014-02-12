@@ -1,0 +1,30 @@
+###Function###
+Exp
+
+###Description###
+Berechnet die Potenz zur Basis <i><b>e</b></i>.
+
+###Syntax###
+Exp ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Jeder g&uuml;ltige numerische Ausdruck.
+@@End@@
+
+###ReturnValue###
+Gibt <i><b>e</b></i> hoch <i>expression</i> zur&uuml;ck.
+
+
+###Remarks###
+<i><b>e</b></i> ist die Basis zum nat&uuml;rlichen Logarithmus und betr&auml;gt ungef&auml;hr 2,71828182845905.
+
+
+###Related###
+Log
+
+
+###Example###
+@@IncludeExample@@

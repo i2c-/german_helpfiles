@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemData
+
+###Description###
+Ermittelt den anwendungsspezifischen Wert, welcher mit dem Men&uuml;item verbunden ist
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemData ( $hMenu, $iItem [, $fByPos = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml; ID Flag:
+		True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+Gibt einen anwendungsspezifischen Wert, welcher mit dem Men&uuml;item verbunden ist, zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetItemData
+
+
+###Example###
+@@IncludeExample@@

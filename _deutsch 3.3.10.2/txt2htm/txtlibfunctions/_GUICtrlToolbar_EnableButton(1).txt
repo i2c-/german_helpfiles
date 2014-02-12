@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlToolbar_EnableButton
+
+###Description###
+Aktiviert oder deaktiviert einen festgelegten Button
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_EnableButton ( $hWnd, $iCommandID [, $fEnable = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$fEnable
+	[optional] Aktivierungsflag:
+		True - Button wird aktiviert
+		False - Button wird deaktiviert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_HideButton
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,43 @@
+###User Defined Function###
+_ScreenCapture_CaptureWnd
+
+###Description###
+Erstellt von einem bestimmten Fenster oder einer Control-ID einen Screenshot
+
+###Syntax###
+#include <ScreenCapture.au3>
+_ScreenCapture_CaptureWnd($sFileName, $hWnd [, $iLeft = 0 [, $iTop = 0 [, $iRight = -1 [, $iBottom = -1 [, $fCursor = True]]]]])
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Kompletter Pfad, Dateiname und Erweiterung der Bilddatei
+$hWnd
+	Handle des Fensters
+$iLeft
+	[optional] X Koordinate des linken oberen Ecks des Rechtecks des Fensters
+$iTop
+	[optional] Y Koordinate des linken oberen Ecks des Rechtecks des Fensters
+$iRight
+	[optional] X Koordinate des rechten unteren Ecks des Rechtecks
+$iBottom
+	[optional] Y Koordinate des rechten unteren Ecks des Rechtecks
+$fCursor
+	[optional] Falls "True", erscheint der Cursor auch auf dem erstellten Bild
+@@End@@
+
+###ReturnValue###
+Falls $sFileName leer ist, so gibt die Funktion ein Handle zu einem HBITMAP zur&uuml;ck.
+Dieses Handle muss durch _WinAPI_DeleteObject wieder gel&ouml;scht werden.
+Falls $sFileName angegeben wird, so wird das Bild in der Datei gespeichert und es wird nichts zur&uuml;ckgegeben.
+
+###Remarks###
+Alle Koordinaten beziehen sich auf den Anwendungsbereich des Fensters.
+
+Ben&ouml;tigt GDI+: GDI+ ben&ouml;tigt eine korrekte Installation der entsprechenden Bibliotheken f&uuml;r das Betriebssystem Windows 2000.
+
+###Related###
+_WinAPI_DeleteObject
+
+###Example###
+@@IncludeExample@@

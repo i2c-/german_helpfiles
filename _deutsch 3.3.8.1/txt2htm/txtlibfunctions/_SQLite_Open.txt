@@ -1,0 +1,56 @@
+###User Defined Function###
+_SQLite_Open
+
+###Description###
+&Ouml;ffnet/Erstellt eine SQLite-Datenbank.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Open([$sDatabase_Filename = ":memory:" [,$iAccessMode [,$iEncoding]]])
+
+
+###Parameters###
+@@ParamTable@@
+$sDatabase_Filename
+	[optional] Dateiname der Datenbank. Bei Standard wird eine In-Memory Datenbank ge&ouml;ffnet.
+$iAccessMode
+	[optional] Zugriffsmodusflags. Standard sind: $SQLITE_OPEN_READWRITE + $SQLITE_OPEN_CREATE  
+$iEncoding
+	[optional] encoding Modusflag, wird nur am Anfang verwendet. Standard sind: $SQLITE_ENCODING_UTF8
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Datenbank-Handle zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@error	-1 - SQLite hat einen Fehler festgestellt (&uuml;berpr&uuml;fe @extended-Wert)
+     1 - Fehler beim Aufrufen von SQLite API 'sqlite3_open_v2'
+     2 - Fehler beim konvertieren das Dateinamens in UTF-8
+     3 - _SQLite_Startup wurde zuvor nicht aufgerufen
+@extended	Der Wert kann mit den $SQLITE_* Konstanten verglichen werden
+@@End@@
+
+###Remarks###
+Es ist nicht notwendig das Datenbanken-Handle zu speichern, au&szlig;er wenn mehr als eine Datenbank in derselben Session benutzt werden. Funktionen, die das Handle benutzen, rufen bei Standard die zuletzt ge&ouml;ffnete Datenbank auf.
+
+Um eine in UFT16 kodierte Datenbank zu erstellen, muss beim Erstellen nur $iEncoding=$SQLITE_ENCODING_UTF16 verwendet werden.
+
+In-Memory, tempor&auml;re und permanente Datenbanken k&ouml;nnen wie folgt ge&ouml;ffnet werden:
+     $hDb = _SQLite_Open()                      ; &ouml;ffnet eine tempor&auml;re private In-Memory-Datenbank.
+     $hDb = _SQLite_Open(Default, ...)          ; dito
+     $hDb = _SQLite_Open(':memory:', ...)       ; dito
+
+     $hDb = _SQLite_Open('', ...)               ; &ouml;ffnet eine tempor&auml;re private On-Disk-Datenbank.
+
+     $hDb = _SQLite_Open('abc.db', ...)         ; &ouml;ffnet oder erstellt eine permanente gemeinsam nutzbare On-Disk-Datenbank namens 'abc.db'
+
+   F&uuml;r Selbstverwirrung:
+     $hDb = _SQLite_Open('./:memory:', ...)     ; &ouml;ffnet oder errstellt eine permanente gemeinsam nutzbare On-Disk-Datenbank namens ':memory:'
+
+Im Gegensatz zu permanenten disk-basierten Datenbanken k&ouml;nnen In-Memory und tempor&auml;re Datenbanken weder gemeinsam, noch f&uuml;r IPC (Interprozesskommunikation) benutzt werden. Sie werden nach Verbindungsende gel&ouml;scht.
+
+###Related###
+_SQLite_Close
+
+###Example###
+@@IncludeExample@@

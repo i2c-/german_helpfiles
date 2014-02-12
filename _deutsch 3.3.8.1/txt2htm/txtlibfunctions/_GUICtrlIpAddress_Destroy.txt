@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlIpAddress_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiIPAddress.au3>
+_GUICtrlIpAddress_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+
+###Remarks###
+Funktioniert nur mit IPAddress-Controls, welche mit _GUICtrlIpAddress_Create erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlIpAddress_Create
+
+###Example###
+@@IncludeExample@@

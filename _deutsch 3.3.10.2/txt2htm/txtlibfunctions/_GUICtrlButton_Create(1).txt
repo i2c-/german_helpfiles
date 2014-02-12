@@ -1,0 +1,78 @@
+###User Defined Function###
+_GUICtrlButton_Create
+
+###Description###
+Erstellt ein Button-Control
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_Create ( $hWnd, $sText, $iX, $iY, $iWidth, $iHeight [, $iStyle = -1 [, $iExStyle = -1]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Hauptfenster, in dem der Button erstellt werden soll
+$sText
+	Text des Buttons
+$iX
+	Horizontale Position des Controls
+$iY
+	Vertikale Position des Controls
+$iWidth
+	Breite des Controls
+$iHeight
+	H&ouml;he des Controls
+$iStyle
+	[optional] Stile des Controls:
+		  $BS_AUTO3STATE - Erstellt eine 3-Status-Checkbox, in welcher sich der Status mit jedem Klick auf die Checkbox zwischen markiert, nicht verf&uuml;gbar und nicht markiert &auml;ndert.
+		  $BS_AUTOCHECKBOX - Erstellt eine Checkbox, in welcher sich der Status mit jedem Klick auf die Checkbox zwischen markiert und nicht markiert &auml;ndert.
+		  $BS_AUTORADIOBUTTON - Entspricht dem Radiobutton mit dem Unterschied, dass wenn der Benutzer den Button ausw&auml;hlt, er automatisch hervorgehoben wird und alle anderen Radiobuttons in der selben Gruppe mit dem selben Stil die Markierung verlieren.
+		  $BS_FLAT - Legt fest, dass der Button 2-dimensional ist. Es wird nicht der Standardschatten benutzt, um ein 3D-Bild zu erstellen.
+		  $BS_GROUPBOX - Erstellt ein Rechteck, in welchem andere Buttons gruppiert werden k&ouml;nnen. Der mit diesem Stil verbundene Text wird in der oberen linken Ecke des Rechtecks dargestellt.
+		  $BS_PUSHLIKE - Erstellt einen Button (wie z. B. eine Checkbox, 3-Status-Checkbox oder Radiobutton), welcher so aussieht und so agiert wie ein "Push"-Button. Der Button sieht erhaben aus, wenn er nicht gedr&uuml;ckt oder markiert ist und versenkt, wenn er gedr&uuml;ckt oder markiert ist.
+		  $BS_DEFPUSHBUTTON - Erstellt einen "Push"-Button mit einem dicken schwarzen Rand. Falls sich der Button in einer Dialogbox befindet, kann der Benutzer den Button durch Dr&uuml;cken der ENTER-Taste ausw&auml;hlen, auch wenn der Button nicht den Eingabefokus besitzt. Dieser Stil ist hilfreich f&uuml;r das Aktivieren des Standards oder der meist verwendeten Option.
+		  $BS_BOTTOM - Platziert den Text unten im Rechteck des Buttons.
+		  $BS_CENTER - Zentriert den Text horizontal im Rechteck des Buttons.
+		  $BS_LEFT - Richtet den Text linksb&uuml;ndig im Rechteck des Buttons auf der rechten Seite der Checkbox aus.
+		  $BS_MULTILINE - Umh&uuml;llt den Text des Buttons, um mehrere Zeilen zu erzeugen, falls der Textstring zu lang ist, um ihn in einer einzelnen Zeile in dem Rechteck des Buttons einzupassen.
+		  $BS_RIGHT - Richtet den Text rechtsb&uuml;ndig im Rechteck des Buttons auf der rechten Seite der Checkbox aus.
+		  $BS_RIGHTBUTTON - Positioniert ein Checkbox-Viereck auf der rechten Seite des Rechtecks des Buttons.
+		  $BS_TOP - Platziert den Text oben im Rechteck des Buttons.
+		  $BS_VCENTER - Zentriert den Text vertikal im Rechteck des Buttons.
+		  $BS_ICON - Legt fest, dass der Button ein Icon anzeigen soll.
+		  $BS_BITMAP - Legt fest, dass der Button eine Bitmap anzeigen soll.
+		  $BS_NOTIFY - Aktiviert einen Button, um eine BN_KILLFOCUS- und BN_SETFOCUS-Benachrichtigung an dessen parent-Fenster zu senden. Es ist zu beachten, dass Buttons die BN_CLICKED-Benachrichtigung senden, egal ob sie diesen Stil besitzen oder nicht. Um die BN_CLICKED-Benachrichtigung zu erhalten, muss der Button den BS_RADIOBUTTON- oder BS_OWNERDRAW-Stil besitzen.
+
+		  Stile von Vista:
+		    $BS_SPLITBUTTON - Erstellt einen "Split"-Button. Ein "Split"-Button hat einen Dropdown-Pfeil
+		    $BS_DEFSPLITBUTTON - Erstellt einen "Split"-Button, welcher sich wie ein Button mit dem Stil $BS_PUSHBUTTON verh&auml;lt, aber auch eine auff&auml;llige Erscheinung besitzt.
+		    $BS_COMMANDLINK - Erstellt einen Befehlszeilenbutton
+		    $BS_DEFCOMMANDLINK - Erstellt einen Befehlszeilenbutton, welcher sich wie ein Button mit dem Stil $BS_PUSHBUTTON verh&auml;lt.
+		Standard: ( -1) : nichts
+		Erzwungen : $WS_CHILD, $WS_TABSTOP, $WS_VISIBLE, $BS_NOTIFY
+$iExStyle
+	[optional] Erweiterte Stile des Controls. Diese entsprechen den Standard-$WS_EX_*>-Konstanten. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle Erweiterte Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu dem Button-Control
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Die obigen Konstanten ben&ouml;tigen #include <ButtonConstants.au3>.
+
+Diese Funktion ist f&uuml;r fortgeschrittene Benutzer und zum Lernen, wie Controls arbeiten, gedacht.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_Destroy
+
+
+###Example###
+@@IncludeExample@@

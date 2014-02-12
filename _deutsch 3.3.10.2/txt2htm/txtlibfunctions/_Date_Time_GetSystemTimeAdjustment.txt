@@ -1,0 +1,31 @@
+###User Defined Function###
+_Date_Time_GetSystemTimeAdjustment
+
+###Description###
+Gibt an, ob das System periodisch eine Anpassung der Uhrzeit vornimmt
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_GetSystemTimeAdjustment (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[1] - Die Anzahl an 100 Nanosekunden Einheiten, die bei jeder periodischen Anpassung der Uhrzeit addiert wurden
+	[2] - Die Anzahl an 100 Nanosekunden Einheiten zwischen den periodischen Zeitanpassungen. Dieses Intervall ist die Zeitdauer zwischen einem Systemzeit Interrupt.
+	[3] - True gibt an, dass periodische Zeitanpassung deaktiviert ist. Bei jedem Zeit Interrupt wird lediglich die Zeitdifferenz des Interrupt's addiert. False gibt an, dass die periodische Zeitanpassung aktiviert ist.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Date_Time_SetSystemTimeAdjustment
+
+
+###Example###
+@@IncludeExample@@

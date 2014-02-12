@@ -1,0 +1,48 @@
+###User Defined Function###
+_GUICtrlListView_SetCallBackMask
+
+###Description###
+&Auml;ndert die "Callback Mask" f&uuml;r das Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetCallBackMask ( $hWnd, $iMask )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMask
+	Wert der "Callback Mask".
+	Die Bits der Maske geben den Status des Items oder Bildes an, in welchem die Anwendung die aktuellen Statusdaten enth&auml;lt.
+	Der Wert kann eine Kombination der folgenden sein:
+		1 - Das Item ist markiert f&uuml;r eine "ausschneiden Operation" (cut-and-paste)
+		2 - Das Item ist hervorgehoeben f&uuml;r ein "verschieben Ziel" (drag-and-drop)
+		4 - Das Item hat den Fokus
+		8 - Das Item ist ausgew&auml;hlt
+		16 - Die Anwendung enth&auml;lt den Imagelistenindex des aktuell &uuml;berdeckten Bildes
+		32 - Die Anwendung enth&auml;lt den Imagelistenindex des aktuell dargestellten Bildes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Die "Callback Mask" ist ein Satz mit bit Flags, in welchem die Anwendung die aktuellen Statusdaten enth&auml;lt. 
+
+Die "Callback Mask" wird auf alle Items in dem Control angewendet, au&szlig;er das "Callback" Item ist markiert und bezieht sich auf ein bestimmtes Item. Die "Callback Mask" ist standardm&auml;&szlig;ig 0, was bedeutet, dass das Control alle Statuse der Items speichert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetCallbackMask
+
+
+###Example###
+@@IncludeExample@@

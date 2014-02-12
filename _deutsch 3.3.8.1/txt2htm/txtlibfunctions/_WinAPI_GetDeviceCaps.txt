@@ -1,0 +1,28 @@
+###User Defined Function###
+_WinAPI_GetDeviceCaps
+
+###Description###
+Ermittelt ger&auml;tespezifische Informationen &uuml;ber ein bestimmtes Ger&auml;t
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetDeviceCaps($hDC, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifiziert den Ger&auml;tekontext
+$iIndex
+	Legt das zur&uuml;ckzugebende Item fest
+@@End@@
+
+###ReturnValue###
+Gibt den Wert des gew&uuml;nschten Items zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetDeviceCaps

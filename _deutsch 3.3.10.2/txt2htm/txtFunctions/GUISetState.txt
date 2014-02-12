@@ -1,0 +1,54 @@
+###Function###
+GUISetState
+
+###Description###
+Ver&auml;ndert den Status eines GUI-Fensters.
+
+###Syntax###
+GUISetState ( [flag [, winhandle]] )
+
+
+###Parameters###
+@@ParamTable@@
+flag
+	[optional] @SW_SHOW = Zeige ein vorher verstecktes Fenster an (Standard)
+		@SW_HIDE = Verstecke das Fenster
+		@SW_MINIMIZE = Minimiere das Fenster
+		@SW_MAXIMIZE = Maximiere das Fenster
+		@SW_RESTORE = Stelle das Fenster wieder her
+		@SW_DISABLE = Deaktiviere das Fenster
+		@SW_ENABLE = Aktiviere das Fenster
+		@SW_LOCK = Sperre das Fenster, um  Ver&auml;nderungen zu verhindern.
+		@SW_UNLOCK = Gib das Fenster wieder frei, damit es wieder ver&auml;ndert werden kann.
+		@SW_SHOWDEFAULT - Setzt den Zeigen-Status abh&auml;ngig vom SW_ Flag festgelegt in der STARTUPINFO Struktur
+		@SW_SHOWMAXIMIZED - Aktiviert das Fenster und zeigt es als maximiertes Fenster an
+		@SW_SHOWMINIMIZED - Aktiviert das Fenster und zeigt es als minimiertes Fenster an
+		@SW_SHOWMINNOACTIVE - Zeigt das Fenster als minimiertes Fenster an (ohne Fokus)
+		@SW_SHOWNA - Zeigt das Fenster in dessen aktuellen Status
+		@SW_SHOWNOACTIVATE - Zeigt ein Fenster in seiner aktuellen Gr&ouml;&szlig;e und Position (ohne Fokus)
+		@SW_SHOWNORMAL - Aktiviert und stellt ein Fenster dar 
+winhandle
+	[optional] Fenster-Handle, wie von <a href="GUICreate.htm">GUICreate()</a> zur&uuml;ckgegeben (Standard ist das zuvor verwendete Fenster).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Wenn Fenster erzeugt werden, sind sie zun&auml;chst "versteckt" (hidden), deshalb muss man sie mit Hilfe dieser Funktion sichtbar machen (@SW_SHOW).
+
+Nur ein Fenster kann mit @SW_LOCK gesperrt werden. Ein erneutes @SW_LOCK wird das dann angegebene Fenster sperren. @SW_UNLOCK ignoriert "winhandle", d.h. ein gesperrtes Fenster wird unabh&auml;ngig vom &uuml;bergebenen Handle entsperrt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICreate
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,41 @@
+###Function###
+ControlSetText
+
+###Description###
+Schreibt einen neuen Text in ein Control.
+
+
+###Syntax###
+ControlSetText ( "title", "text", controlID, "new text" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+new text
+	Der neue Text, der in das Control geschrieben werden soll.
+flag
+	[optional] ist dieser Wert nicht 0, dann wird veranlasst, dass das Zielfenster neu erstellt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn das Fenster nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlGetText, ControlCommand, ControlSend, SplashTextOn
+
+
+###Example###
+@@IncludeExample@@

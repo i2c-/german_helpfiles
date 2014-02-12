@@ -1,0 +1,31 @@
+###Structure Name###
+$tagIMAGEINFO
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Bild in einer Imagelist
+
+###Syntax###
+Global Const $tagIMAGEINFO = "hwnd hBitmap;hwnd hMask;int Unused1;int Unused2;int Left;int Top;int Right;int Bottom"
+
+###Fields###
+@@ParamTable@@
+hBitmap
+	Handle zu dem Bitmap welche die Bilder enth&auml;lt
+hMask
+	Handle zu einem monochromen Bitmap welches die Masken f&uuml;r die Bilder enth&auml;lt
+Unused1
+	Nicht verwendet
+Unused2
+	Nicht verwendet
+Left
+	Linke Seite des Rechtecks des Bildes
+Top
+	Obere Seite des Rechtecks des Bildes
+Right
+	Rechte Seite des Rechtecks des Bildes
+Bottom
+	Untere Seite des Rechtecks des Bildes
+@@End@@
+
+###Remarks###
+Keine.

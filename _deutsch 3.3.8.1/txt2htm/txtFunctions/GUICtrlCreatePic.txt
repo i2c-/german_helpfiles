@@ -1,0 +1,70 @@
+###Function###
+GUICtrlCreatePic
+
+###Description###
+Erzeugt ein Bild-Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreatePic ( filename, left, top [, width [, height [, style [, exStyle]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname des zu ladenden Bildes. Es werden die Typen BMP, JPG, nicht animierte GIF unterst&uuml;tzt.
+left
+	Die linke Seite des Bildes. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+top
+	Die Oberkante des Bildes. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+width
+	[optional] Die Breite des Bildes (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Bildes (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Bild-Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Label">Anhang GUI-Stile f&uuml;r Controls</a>.
+	
+	Standard ( -1) : $SS_NOTIFY
+	Erzwungene Stile : $BS_BITMAP
+exStyle
+	[optional] Legt den erweiterten Stil des Bild-Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, falls das Bild nicht erzeugt werden kann.
+@@End@@
+
+
+###Remarks###
+Um Informationen im Control zu setzen oder zu ver&auml;ndern, siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a>.
+
+Nachdem die Dialogbox angezeigt wurde, kann das Bild mit <a href="GUICtrlSetImage.htm">GUICtrlSetImage</a> aktualisiert werden.
+
+Soll das Bild die Gr&ouml;&szlig;e der Originaldatei haben, setzt man width=height=0.
+
+Um ein transparentes Bild zu erzeugen, ist es erforderlich, dass das GUI-Fenster mit dem erweiterten Stil WS_EX_LAYERED erzeugt wird. Das oberste linke Pixel wird hierbei als "transparente Farbe" benutzt. Werden mehrere Bilder erzeugt, bestimmt das letzte Bild die "transparente Farbe". Siehe Beispiel 2.
+
+Um weitere Stile zus&auml;tzlich zum Standardstil zu verwenden, benutzt man <b>BitOr</b>($GUI_SS_DEFAULT_PIC, newstyle,...).
+
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <StaticConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKSIZE. (Gr&ouml;&szlig;e wird nicht ge&auml;ndert.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+Wird ein Bild als Hintergrundbild genutzt, w&auml;hrend die anderen Controls dieses quasi &uuml;berlappen, so ist es wichtig, das Bild-Control zu deaktivieren und es nach den anderen Controls zu erstellen: GuiCtrlSetState(-1,$GUI_DISABLE). Dies funktioniert aber nicht mit Tab-Controls, die anders arbeiten. In dem Fall muss man das Bild mit dem Stil $WS_CLIPSIBLINGS erstellen.  GuiCtrlSetState(-1,$GUI_ONTOP) ist f&uuml;r die Tab, TreeView oder ListView-Controls notwendig.
+
+Der erweiterte Stil $GUI_WS_EX_PARENTDRAG kann f&uuml;r das Ziehen von Fenstern benutzt werden, die keine Titelleiste besitzen (kein $WS_CAPTION Stil in GUICreate).
+
+Der Hintergrund ist immer auf transparent gesetzt. GUICtrlSetBkColor() hat auf Bild-Controls keinen Effekt.
+
+PNG kann mit GDI+ verwendet werden. Siehe Beispiel 3.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICoordMode (Option), GUICtrlSetImage, GUICtrlUpdate..., GUIGetMsg
+
+
+###Example###
+@@IncludeExample@@

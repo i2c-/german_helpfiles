@@ -1,0 +1,37 @@
+###Function###
+WinWaitActive
+
+###Description###
+Unterbricht die Ausf&uuml;hrung eines Skripts bis das angegebene Fenster aktiv ist.
+
+
+###Syntax###
+WinWaitActive ( "title" [, "text" [, timeout]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das gewartet werden soll.. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, auf das gewartet werden soll
+timeout
+	[optional] Maximale Unterbrechungsdauer nach der fortgefahren wird, auch wenn das Fenster noch nicht aktiv ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Handle des gew&uuml;nschten Fensters zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die maximale Unterbrechungszeit &uuml;berschritten wurde.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+WinActive, WinExists, WinWait, WinWaitClose, WinWaitNotActive, WinWaitDelay (Option), ProcessWait
+
+
+###Example###
+@@IncludeExample@@

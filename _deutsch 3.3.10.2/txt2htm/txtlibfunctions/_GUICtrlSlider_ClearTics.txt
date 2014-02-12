@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlSlider_ClearTics
+
+###Description###
+L&ouml;scht die aktuellen Skalenstriche von dem Slider
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_ClearTics ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Dies entfernt nicht den ersten und letzten Skalenstrich, welche automatisch erstellt werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_SetTic, _GUICtrlSlider_SetTicFreq
+
+
+###Example###
+@@IncludeExample@@

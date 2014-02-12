@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetZoom
+
+###Description###
+Ermittelt den Zoomlevel des Controls
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetZoom($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zoomlevel, in Prozent
+Fehler:	0 und setzt @error
+@error:	700 - interner Fehler
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetZoom
+
+###See Also###
+@@MsdnLink@@ EM_GETZOOM
+
+###Example###
+@@IncludeExample@@

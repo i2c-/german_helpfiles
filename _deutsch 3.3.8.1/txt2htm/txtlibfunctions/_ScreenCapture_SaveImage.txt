@@ -1,0 +1,37 @@
+###User Defined Function###
+_ScreenCapture_SaveImage
+
+###Description###
+Speichert ein Bild in eine Datei
+
+###Syntax###
+#include <ScreenCapture.au3>
+_ScreenCapture_SaveImage($sFileName, $hBitmap [, $fFreeBmp = True])
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Kompletter Pfad, Dateiname und Erweiterung der Bitmap, welche gespeichert werden soll
+$hBitmap
+	HBITMAP Handle
+$fFreeBmp
+	[optional] Falls "True", wird hBitmap bei einem erfolgreichen Speichern wieder freigegeben
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion speichert ein Bitmap in eine Datei und wandelt es gem&auml;&szlig; der Dateierweiterung in ein bestimmtes Bildformat um.
+F&uuml;r Windows XP sind die g&uuml;ltigen Erweiterungen BMP, GIF, JPEG, PNG und TIF.
+
+Ben&ouml;tigt GDI+: GDI+ ben&ouml;tigt eine korrekte Installation der entsprechenden Bibliotheken f&uuml;r Windows 2000.
+
+###Related###
+_ScreenCapture_Capture
+
+###Example###
+@@IncludeExample@@

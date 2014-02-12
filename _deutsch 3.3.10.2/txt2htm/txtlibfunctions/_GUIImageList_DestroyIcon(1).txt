@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUIImageList_DestroyIcon
+
+###Description###
+L&ouml;scht ein Icon und gibt den durch das Icon verwendeten Speicher wieder frei
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_DestroyIcon ( $hIcon )
+
+
+###Parameters###
+@@ParamTable@@
+$hIcon
+	Handle des Icons
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###Function###
+GUIStartGroup
+
+###Description###
+Legt fest, dass alle Controls, die anschlie&szlig;end erzeugt werden, zu einer Gruppe zusammengefasst werden.
+
+###Syntax###
+GUIStartGroup ( [winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+winhandle
+	[optional] Fenster-Handle wie von GUICreate zur&uuml;ckgegeben (voreingestellt ist der vorher verwendete).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Diese Funktion wird im allgemeinen benutzt wenn man mit Radiobuttons arbeitet. Klickt man auf einen der Radiobuttons, werden alle anderen Radiobuttons innerhalb einer Gruppe zur&uuml;ckgesetzt (also die Markierung entfernt). Mit der GUIStartGroup-Funktion kann man diese Gruppen einfach definieren.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateGroup
+
+
+###Example###
+@@IncludeExample@@

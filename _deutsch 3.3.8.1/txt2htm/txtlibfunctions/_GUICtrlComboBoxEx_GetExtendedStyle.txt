@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetExtendedStyle
+
+###Description###
+Ermittelt die erweiterten Stile die in einem ComboBoxEx-Control verwendet werden.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetExtendedStyle($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	DWORD Wert der die verwendeten erweiterten Stile des ComboBoxEx Controls enth&auml;lt.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_SetExtendedStyle
+
+###Example###
+@@IncludeExample@@

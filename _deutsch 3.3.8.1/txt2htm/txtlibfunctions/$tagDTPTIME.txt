@@ -1,0 +1,31 @@
+###Structure Name###
+$tagDTPTIME
+
+###Description###
+Legt ein Datum und eine Zeit, basierend auf der UTC-Zeit, fest
+
+###Syntax###
+Global Const $tagDTPTIME = "short Year;short Month;short DOW;short Day;short Hour;short Minute;short Second;short MSecond"
+
+###Fields###
+@@ParamTable@@
+Year
+	Jahr
+Month
+	Monat
+DOW
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSecond
+	Millisekunde
+@@End@@
+
+###Remarks###
+Keine.

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListBox_GetCurSel
+
+###Description###
+Ermittelt den Index des aktuell markierten Items
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetCurSel($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierender Index des aktuell markierten Items
+Fehler:	-1 falls keines markiert ist
+
+###Remarks###
+Dies sollte nicht verwendet werden falls mehrere Items ausgew&auml;hlt werden k&ouml;nnen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_SetCurSel
+
+###Example###
+@@IncludeExample@@

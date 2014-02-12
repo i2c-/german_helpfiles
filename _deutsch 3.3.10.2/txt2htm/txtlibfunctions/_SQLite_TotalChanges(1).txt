@@ -1,0 +1,36 @@
+###User Defined Function###
+_SQLite_TotalChanges
+
+###Description###
+Gibt die Anzahl aller Ver&auml;nderungen (Trigger und Fremdschl&uuml;ssel eingeschlossen) seit Verbindungsstart zur&uuml;ck.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_TotalChanges ( [$hDB = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Eine ge&ouml;ffnete Datenbank, Standard ist die zuletzt ge&ouml;ffnete
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Anzahl der Ver&auml;nderungen
+Fehler:	0
+@error:	1 - Fehler beim Aufruf von SQLite API 'sqlite3_total_changes'
+	2 - Aufruf wurde von dem Sicherheitsmodus verhindert
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SQLite_Changes
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,45 @@
+###Structure Name###
+$tagLVHITTESTINFO
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber einen Lagetest bzw. Treffertest (hit test)
+
+###Syntax###
+Global Const $tagLVHITTESTINFO = $tagPOINT & ";uint Flags;int Item;int SubItem;int iGroup"
+
+
+###Fields###
+@@ParamTable@@
+$tagPOINT
+	X- und Y-Position des vzu testenden Punktes
+Flags
+	Ergebnis des Lagetests. Kann einen oder mehrere der folgenden Werte enthalten:
+		$LVHT_ABOVE - Die Position liegt oberhalb der Client-Fl&auml;che des Controls
+		$LVHT_BELOW - Die Position liegt unterhalb der Client-Fl&auml;che des Controls
+		$LVHT_NOWHERE - Die Position liegt innerhalb der Client-Fl&auml;che, aber es befindet sich nicht &uuml;ber einem Listeneintrag
+		$LVHT_ONITEMICON - Die Position ist &uuml;ber einem Icon eines Eintrags
+		$LVHT_ONITEMLABEL - Die Position ist &uuml;ber einem Text eines Eintrags
+		$LVHT_ONITEMSTATEICON - Die Position ist &uuml;ber dem Statusbild eines Eintrags
+		$LVHT_TOLEFT - Die Position ist links neben der Client-Fl&auml;che
+		$LVHT_TORIGHT - Die Position ist rechts neben der Client-Fl&auml;che
+	F&uuml;r Windows Vista und neuer:
+		$LVHT_EX_GROUP_HEADER - The point is within the group header.
+		$LVHT_EX_GROUP_FOOTER - The point is within the group footer.
+		$LVHT_EX_GROUP_COLLAPSE - The point is within the collapse/expand button of the group.
+		$LVHT_EX_GROUP_BACKGROUND - The point is within the area of the group where items are displayed.
+		$LVHT_EX_GROUP_STATEICON - The point is within the state icon of the group.
+		$LVHT_EX_GROUP_SUBSETLINK - The point is within the subset link of the group.
+		$LVHT_EX_GROUP - $LVHT_EX_GROUP_BACKGROUND | $LVHT_EX_GROUP_COLLAPSE | $LVHT_EX_GROUP_FOOTER | $LVHT_EX_GROUP_HEADER | $LVHT_EX_GROUP_STATEICON | $LVHT_EX_GROUP_SUBSETLINK.
+		$LVHT_EX_ONCONTENTS - The point is within the icon or text content of the item and not on the background.
+		$LVHT_EX_FOOTER - The point is within the footer of the list-view control.
+Item
+	Enth&auml;lt den Index des ermittelten Eintrags. Wenn der Test einen Untereintrag trifft, so wird dieser Wert den Index des &uuml;bergeordneten Eintrags enthalten.
+SubItem
+	Enth&auml;lt den Index des ermittelten Untereintrags. Wenn der Test einen Obereintrag trifft, so ist dieser Wert null.
+iGroup
+	Group index of the item hit (read only). Valid only for owner data. If the point is within an item that is displayed in multiple groups then iGroup will specify the group index of the item. (Windows Vista and Later)
+@@End@@
+
+
+###Remarks###
+Keine.

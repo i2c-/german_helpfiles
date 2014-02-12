@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_InvalidateRect
+
+###Description###
+F&uuml;gt ein Rechteck der zu aktualisierenden Region eines Fensters hinzu
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_InvalidateRect($hWnd [, $tRect = 0 [, $fErase = True]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster
+$tRect
+	[optional] $tagRECT Struktur welche die Koordinaten des Anwendungsbereichs des Rechtecks enth&auml;lt das der zu aktualisierenden
+		Region des Fensters hinzugef&uuml;gt werden soll. Ist dieser Parameter 0, wird der gesamte Anwendungsbereich der zu
+		aktualisierenden Region hinzugef&uuml;gt.
+$fErase
+	[optional] Legt fest, ob der Hintergrund der zu aktualisierenden Region gel&ouml;scht wird, wenn die zu aktualisierenden Region
+		bearbeitet wird. Ist dieser Parameter TRUE wird der Hintergrund gel&ouml;scht sobald die BeginPaint Funktion
+		aufgerufen wird. Ist dieser Parameter FALSE, bleibt der Hintergrund unver&auml;ndert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ InvalidateRect

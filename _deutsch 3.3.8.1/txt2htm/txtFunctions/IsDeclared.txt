@@ -1,0 +1,34 @@
+###Function###
+IsDeclared
+
+###Description###
+&Uuml;berpr&uuml;ft, ob eine Variable deklariert wurde.
+
+###Syntax###
+IsDeclared ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Name der zu &uuml;berpr&uuml;fenden Variable. (OHNE $!).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck, f&uuml;r globale Variablen oder Variablen die au&szlig;erhalb der Funktion deklariert wurden.
+Speziell: Gibt -1 zur&uuml;ck, f&uuml;r lokale Variablen.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Variable nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Wenn es n&ouml;tig ist IsDeclared() zu benutzen, um herauszufinden ob eine Variable existiert, sollte in den meisten F&auml;llen Assign() benutzt werden um die Variable zu erstellen bzw. in sie zu schreiben. Eval() sollte benutzt werden um aus dieser Variable zu lesen.
+
+###Related###
+Assign, Eval
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlTab_DeselectAll
+
+###Description###
+Setzt alle Tabs zur&uuml;ck, die den Status "gedr&uuml;ckt" besitzen.
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_DeselectAll ( $hWnd [, $fExclude = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fExclude
+	[optional] Exklusives flag:
+		True - Alle Tabs au&szlig;er dem aktuell markierten werden zur&uuml;ckgesetzt
+		False - Alle Tabs werden zur&uuml;ckgesetzt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Dies funktioniert nur, wenn der Stil $TCS_BUTTONS gesetzt wurde
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_SetCurSel
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,55 @@
+###Function###
+GUICtrlCreateGroup
+
+###Description###
+Erstellt ein Gruppen-Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateGroup ( "text", left, top [, width [, height [, style = -1 [, exStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Die Beschriftung der Gruppe.
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm">Anhang GUI-Stile f&uuml;r Controls</a>.
+		Standard ( -1) : keine.
+		Erzwungene Stile : $WS_GROUP, $BS_GROUPBOX.
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Ein Gruppen-Item ist die d&uuml;nne Linie um Controls herum (&uuml;blicherweise nur bei Radiobuttons), die diese Items visuell zu Gruppen zusammenfasst. Innerhalb einer Gruppe kann immer nur einer der Radiobuttons ausgew&auml;hlt sein.
+Wenn mehrere Gruppen ohne eine sichtbare Linie erzeugt werden sollen, ist <a href="GUIStartGroup.htm">GUIStartGroup()</a> zum Gruppieren der Radiobuttons zu benutzen.
+
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <ButtonConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKAUTO. (Gr&ouml;&szlig;e und Position werden entsprechend dem neuen Fenster angepasst.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICoordMode (Option), GUIStartGroup
+
+
+###Example###
+@@IncludeExample@@

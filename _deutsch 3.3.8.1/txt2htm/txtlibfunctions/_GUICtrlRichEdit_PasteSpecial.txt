@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlRichEdit_PasteSpecial
+
+###Description###
+F&uuml;gt RTF oder RTF mit Objekten von der Zwischenablage ein
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_PasteSpecial($hWnd, $fAndObjects = True)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fAndObjects
+	F&uuml;gt Objekte auch als RTF ein - True (Standard) oder False
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fAndObjects ist weder True noch False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_CanPasteSpecial, _GUICtrlRichEdit_Paste, _GUICtrlRichEdit_Cut, _GUICtrlRichEdit_Copy
+
+###See Also###
+@@MsdnLink@@ WM_PASTESPECIAL
+
+###Example###
+@@IncludeExample@@

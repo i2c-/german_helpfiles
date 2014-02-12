@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlToolbar_HitTest
+
+###Description###
+Ermittelt, wo ein Punkt innerhalb des Controls liegt
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_HitTest ( $hWnd, $iX, $iY )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iX
+	zu setzende X Position
+$iY
+	zu setzende Y Position
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Falls der Wert 0 oder ein positiver Wert ist, ist es der 0-basierende Index des Item (au&szlig;er Trennzeichen) in welchem der Punkt liegt.
+Fehler:	Falls der Wert negativ ist, liegt der Punkt nicht innerhalb eines Buttons
+@@End@@
+
+
+###Remarks###
+Der absolute Wert des R&uuml;ckgabewertes ist der Index eines Trennitems oder dem n&auml;chsten Item, welches kein Trennitem ist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,52 @@
+###User Defined Function###
+_DateAdd
+
+###Description###
+Berechnet ein neues Datum, basierend auf einem gegebenen Datum und einem zu addierenden Intervall.
+
+###Syntax###
+#include <Date.au3>
+_DateAdd ( $sType, $iValToAdd, $sDate )
+
+
+###Parameters###
+@@ParamTable@@
+$sType
+	eines der folgenden:
+	D - Addiere Anzahl von Tagen zu dem angegebenen Datum
+	M - Addiere Anzahl von Monaten zu dem angegebenen Datum
+	Y - Addiere Anzahl von Jahren zu dem angegebenen Datum
+	w - Addiere Anzahl von Wochen zu dem angegebenen Datum
+	h - Addiere Anzahl von Stunden zu dem angegebenen Datum
+	n - Addiere Anzahl von Minuten zu dem angegebenen Datum
+	s - Addiere Anzahl von Sekunden zu dem angegebenen Datum
+$iValToAdd
+	die zu addierende Zahl 
+$sDate
+	Eingabedatum im Format YYYY/MM/DD[ hh:mm:ss]
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Neu berechnetes Datum.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - $sType ung&uuml;ltig
+	2 - $iValToAdd ung&uuml;ltig
+	3 - $sDate ung&uuml;ltig
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt kein ung&uuml;ltiges Datum zur&uuml;ck. 2004-01-31 + 3 Monate ergibt 2004-04-30.
+Das Datum muss in der Form YYYY-MM-DD hh:mm:ss angegeben werden. Statt "-" kann auch "/" oder "." als Trennzeichen verwendet werden.
+Die Angabe von "hh:mm:ss" ist optional.
+
+Siehe <a href="_DateTimeSplit.htm">_DateTimeSplit()</a> f&uuml;r andere m&ouml;gliche Datumsformate.
+
+
+###Related###
+_DateDiff, _DateTimeSplit, _DateToDayOfWeek, _DateToDayOfWeekISO, _DateToDayValue, _DayValueToDate
+
+
+###Example###
+@@IncludeExample@@

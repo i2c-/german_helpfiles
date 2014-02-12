@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlEdit_ReplaceSel
+
+###Description###
+Ersetzt die aktuelle Auswahl
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_ReplaceSel ( $hWnd, $sText [, $fUndo = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	String der den neuen Text enth&auml;lt.
+$fUndo
+	[optional] legt fest, ob die Ersetzoperation r&uuml;ckg&auml;ngig gemacht werden kann:
+		True - Die Operation kann r&uuml;ckg&auml;ngig gemacht werden.
+		False - Die Operation kann nicht r&uuml;ckg&auml;ngig gemacht werden.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Es ist _GUICtrlEdit_ReplaceSel() zu verwenden um nur einen Teil des Textes in dem Edit-Control zu ersetzen.
+Falls es dort keine aktuelle Markierung gibt, wird der neue Text an der aktuellen Stelle im Fenster eingef&uuml;gt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_GetSel, _GUICtrlEdit_SetSel
+
+
+###Example###
+@@IncludeExample@@

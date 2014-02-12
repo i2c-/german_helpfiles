@@ -1,0 +1,24 @@
+###User Defined Function###
+_GUIToolTip_TTFToBits
+
+###Description###
+Dekodiert $TTF_ Flags in User Bit Flags
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_TTFToBits($iFlags)
+
+###Parameters###
+@@ParamTable@@
+$iFlags
+	$TTF_ Flags
+@@End@@
+
+###ReturnValue###
+Erfolg:	User Bit Flags
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_BitsToTTF

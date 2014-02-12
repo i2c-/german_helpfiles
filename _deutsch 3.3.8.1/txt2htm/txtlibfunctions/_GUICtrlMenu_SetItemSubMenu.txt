@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlMenu_SetItemSubMenu
+
+###Description###
+Verbindet das Drop-Down-Men&uuml; oder das Untermen&uuml;  mit dem Men&uuml;-Item.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetItemSubMenu($hMenu, $iItem, $hSubMenu [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;-Item
+$hSubMenu
+	Handle zum Drop-Down-Men&uuml; oder Untermen&uuml;
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;-Item Identifikation
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetItemSubMenu
+
+###Example###
+@@IncludeExample@@

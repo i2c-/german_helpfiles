@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetLocaleSubLang
+
+###Description###
+Extrahiert die Sub-Sprachen-ID von einer Sprachen-ID
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetLocaleSubLang ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Sub-Sprachen-ID zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_GetLocale
+
+
+###Example###
+@@IncludeExample@@

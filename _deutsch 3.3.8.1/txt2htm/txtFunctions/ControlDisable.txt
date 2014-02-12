@@ -1,0 +1,36 @@
+###Function###
+ControlDisable
+
+###Description###
+Sperrt/deaktivert ein Control.
+
+###Syntax###
+ControlDisable ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlEnable, ControlHide, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

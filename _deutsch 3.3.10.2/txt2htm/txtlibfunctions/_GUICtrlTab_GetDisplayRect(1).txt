@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTab_GetDisplayRect
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;e und Position des begrenzenden Rechtecks f&uuml;r das Tab-Control
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetDisplayRect ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Ein Array mit dem folgenden Format:
+	[0] = X Koordinate der oberen linken Ecke des Rechtecks
+	[1] = Y Koordinate der oberen linken Ecke des Rechtecks
+	[2] = X Koordinate der unteren rechten Ecke des Rechtecks
+	[3] = Y Koordinate der unteren rechten Ecke des Rechtecks
+
+
+###Remarks###
+Diese Funktion ist zu verwenden, um die Koordinaten des Abschnitts des Tab-Controls, welcher den Inhalt der Tab-Seite enth&auml;lt, in Pixel zu erhalten.
+Das Auftreten diesen Abschnitts des Tab-Controls &auml;ndert sich nicht, wenn verschiedene Tabs markiert sind.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_GetDisplayRectEx
+
+
+###Example###
+@@IncludeExample@@

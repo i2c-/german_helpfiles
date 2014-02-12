@@ -1,0 +1,34 @@
+###User Defined Function###
+_IELoadWaitTimeout
+
+###Description###
+Abfrage oder Setzen des _IELoadWait-Timeouts in Millisekunden.
+
+###Syntax###
+#include <IE.au3> 
+_IELoadWaitTimeout([$i_timeout = -1])
+
+###Parameters###
+@@ParamTable@@
+$i_timeout
+	[optional] Abruf oder Setzen der Zahl in Millisekunden
+	0 oder positive Ganzzahl setzt Timeout auf diesen Wert
+	-1 = (Standard) Gibt den momentanen Timeout zur&uuml;ck (gespeichert in der globalen Variable $__IELoadWaitTimeout)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wenn $i_timeout = -1, gibt die Funktion den momentanen Timeout zur&uuml;ck, ansonsten ist R&uuml;ckgabe = 1
+Fehler:	Nichts
+@@End@@
+
+
+###Remarks###
+Es gibt keine M&ouml;glichkeit, den Timeout v&ouml;llig abzustellen. Funktionell kann man dies erreichen, indem man eine sehr hohe positive Ganzzahl angibt. Der interne Anfangs-Timeout ist 300.000 ms (5 Minuten).
+
+###Related###
+_IELoadWait
+
+
+###Example###
+@@IncludeExample@@

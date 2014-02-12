@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_IsWindowVisible
+
+###Description###
+Ermittelt den Sichtbarkeitsstatus des angegebenen Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_IsWindowVisible ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Fenster ist sichtbar
+Fehler:	Fenster ist nicht sichtbar
+@@End@@
+
+
+###Remarks###
+Der Sichtbarkeitsstatus eines Fensters wird durch das $WS_VISIBLE-Bit des Fensterstils bestimmt. Wenn $WS_VISIBLE
+gesetzt ist, wird das Fenster angezeigt. Solange dieses Bit gesetzt ist, wird das anschlie&szlig;ende Zeichnen 
+in dieses Fenster sichtbar bleiben.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ IsWindowVisible

@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlButton_SetTextMargin
+
+###Description###
+Setzt den Rand, welcher verwendet wird, um den Text in einem Button-Control zu zeichnen
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetTextMargin($hWnd [, $iLeft = 1 [, $iTop = 1 [, $iRight = 1 [, $iBottom = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLeft
+	[optional] Linker Rand um den Text zu zeichnen
+$iTop
+	[optional] Oberer Rand um den Text zu zeichnen
+$iRight
+	[optional] Rechter Rand um den Text zu zeichnen
+$iBottom
+	[optional] Unterer Rand um den Text zu zeichnen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlButton_GetTextMargin
+
+###See Also###
+@@MsdnLink@@ BCM_SETTEXTMARGIN
+
+###Example###
+@@IncludeExample@@

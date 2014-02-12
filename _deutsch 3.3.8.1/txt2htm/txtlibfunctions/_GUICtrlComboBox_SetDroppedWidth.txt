@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlComboBox_SetDroppedWidth
+
+###Description###
+Setzt die maximale erlaubte Breite der ListBox der ComboBox in Pixel
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SetDroppedWidth($hWnd, $iWidth)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iWidth
+	Die Breite der ListBox in Pixel
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die neue Breite der ListBox
+Fehler:	-1
+
+###Remarks###
+Standardm&auml;&szlig;ig ist die minimal erlaubte Breite der drop-down ListBox 0.
+Die Breite der ListBox ist entweder die minimal erlaubte Breite oder die Breite der ComboBox, je nachdem welche gr&ouml;&szlig;er ist.
+
+Es ist der Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetDroppedWidth, _GUICtrlComboBoxEx_GetDroppedState
+
+###Example###
+@@IncludeExample@@

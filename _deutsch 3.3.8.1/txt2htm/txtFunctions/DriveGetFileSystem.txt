@@ -1,0 +1,50 @@
+###Function###
+DriveGetFileSystem
+
+###Description###
+Gibt den Typ des Dateisystems eines Laufwerks (bzw. Partition) zur&uuml;ck.
+
+###Syntax###
+DriveGetFileSystem ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Laufwerkspfad, dessen Information abgefragt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Dateisystemtyp des Laufwerks als String zur&uuml;ck; siehe Tabelle unten.
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+@@ParamTable@@
+<b>Return Value</b>
+	<b>Interpretation</b>
+1 <i>(numerisch)</i>
+	Laufwerk enth&auml;lt kein Medium(CD, Floppy, Zip) oder das Medium ist unformatiert (RAW).
+"FAT"
+	Typisches Dateisystem f&uuml;r Laufwerke unter ~500 MB, wie z.B. Floppy, RAM-Disks, USB-Sticks, etc.
+"FAT32"
+	Typisches Dateisystem f&uuml;r Windows 9x/Me Festplatten.
+"NTFS"
+	Typisches Dateisystem f&uuml;r Windows 2000/XP Festplatten.
+"NWFS"
+	Typisches Dateisystem f&uuml;r Novell Netware Fileserver.
+"CDFS"
+	Kennzeichnet typischerweise eine CD (oder ein als ISO-Image gemountetes, virtuelles CD-Laufwerk).
+"UDF"
+	Kennzeichnet typischerweise eine DVD.
+@@End@@
+
+###Remarks###
+Die Liste der m&ouml;glichen R&uuml;ckgabewerte kann unvollst&auml;ndig sein.
+
+###Related###
+DriveGetDrive, DriveGetLabel, DriveGetSerial, DriveGetType, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

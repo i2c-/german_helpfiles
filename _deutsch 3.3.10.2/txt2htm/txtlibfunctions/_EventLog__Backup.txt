@@ -1,0 +1,36 @@
+###User Defined Function###
+_EventLog__Backup
+
+###Description###
+Speichert das Event-Log in eine Backup Datei
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Backup ( $hEventLog, $sFileName )
+
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle des Event Log
+$sFileName
+	Der Name der Backup Datei
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Die Funktion l&ouml;scht nicht das Event Log. Diese Funktion kann nicht ausgef&uuml;hrt werden, wenn der Benutzer nicht die Rechte SE_BACKUP_NAME hat.
+
+
+###Related###
+_EventLog__OpenBackup
+
+
+###Example###
+@@IncludeExample@@

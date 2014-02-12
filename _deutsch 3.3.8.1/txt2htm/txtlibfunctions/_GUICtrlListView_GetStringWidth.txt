@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_GetStringWidth
+
+###Description###
+Ermittelt die Breite eines bestimmten Strings
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetStringWidth($hWnd, $sString)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sString
+	String f&uuml;r den die Breite ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Stringbreite
+Fehler:	0
+@@End@@
+
+###Remarks###
+Diese Funktion gibt f&uuml;r den bestimmten String die exakte Breite in Pixel zur&uuml;ck. Falls die zur&uuml;ckgegebene Stringbreite als Spaltenbreite in der Funktion SetColumnWidth verwendet wird, wird der String abgeschnitten. Um die Spaltenbreite zu ermitteln, bei der der String nicht abgeschnitten wird, muss die zur&uuml;ckgegebene Stringbreite aufgef&uuml;llt werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

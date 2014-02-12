@@ -1,0 +1,45 @@
+###Function###
+FileRead
+
+###Description###
+Liest eine bestimmte Anzahl von Zeichen aus einer zuvor ge&ouml;ffneten Datei.
+
+###Syntax###
+FileRead ( "filehandle/filename" [, count] )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle/filename
+	Das Handle der Datei, wie es von einem fr&uuml;heren Aufruf von  <a href="FileOpen.htm">FileOpen()</a> zur&uuml;ckgegeben wurde. Alternativ kann ein String mit dem Dateinamen als erster Parameter verwendet werden.
+count
+	[optional] Die Anzahl der einzulesenden Zeichen - siehe Bemerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die eingelesenen Zeichen. @extended wird auf die zur&uuml;ckgegebenen Bytes/Zeichen gesetzt.
+Fehler:	Setzt @error.
+@error:	1 = Die Datei wurde nicht im Lesemodus ge&ouml;ffnet.
+		-1 = Das Dateiende wurde erreicht
+@@End@@
+
+
+###Remarks###
+Eine negative oder nicht definierte Anzahl der einzulesenen Zeichen liest die ganze Datei von der aktuellen Position ab.
+
+Wenn ein Dateiname statt eines Dateihandles angegeben wird, wird die Datei w&auml;hrend des Funktionsaufrufes ge&ouml;ffnet und geschlossen. F&uuml;r die Bearbeitung gro&szlig;er Dateien ist das viel langsamer als die Arbeit mit Handles.
+Hinweis: Nicht die Verwendung von Dateihandles und -namen vermischen. So soll man zum Beispiel nicht eine Datei mit <a href="FileOpen.htm">FileOpen()</a> &ouml;ffnen und dann in dieser Funktion einen Dateinamen verwenden. Entweder Handles oder Dateinamen benutzen - nicht beides!
+
+Sowohl ANSI als auch UTF16/UTF8 Formate k&ouml;nnen gelesen werden - AutoIt erkennt den Typ automatisch.
+
+Eine Datei kann bin&auml;r (byteweise) ausgelesen werden wenn <a href="FileOpen.htm">FileOpen()</a> mit dem Bin&auml;rflag aufgerufen wird. In diesem Fall gibt count die Anzahl der Bytes an, nicht die der Zeichen.
+Ein zu gro&szlig;er Wert f&uuml;r Anzahl kann dazu f&uuml;hren, dass AutoIt mit einem Speicherzugriffsfehler beendet wird.
+
+
+###Related###
+FileOpen, FileReadLine, FileWrite, FileWriteLine, String, FileSetPos, FileGetPos
+
+
+###Example###
+@@IncludeExample@@

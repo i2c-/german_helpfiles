@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber ein Men&uuml;item
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemInfo($hMenu, $iItem [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagMENUITEMINFO Struktur
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetItemInfo, $tagMENUITEMINFO
+
+###See Also###
+@@MsdnLink@@ GetMenuItemInfo
+
+###Example###
+@@IncludeExample@@

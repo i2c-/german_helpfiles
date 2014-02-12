@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetList
+
+###Description###
+Ermittelt alle Items von einem Listenabschnitt eines ComboBox Controls
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetList($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Getrennter String aller ComboBox Items
+
+###Remarks###
+Das Standard Trennzeichen ist "|". Dies kann durch die Option Opt("GUIDataSeparatorChar", "neues Trennzeichen") ge&auml;ndert werden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_GetListArray
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlMonthCal_SetToday
+
+###Description###
+Setzt die Datumsinformationen f&uuml;r den "heutigen" Tag
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_SetToday($hWnd, $iYear, $iMonth, $iDay)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iYear
+	Jahr
+$iMonth
+	Monat
+$iDay
+	Tag
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_GetToday
+
+###Example###
+@@IncludeExample@@

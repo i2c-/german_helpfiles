@@ -1,0 +1,34 @@
+###Function###
+FileFlush
+
+###Description###
+Leert den Puffer einer Datei in den Speicher.
+
+###Syntax###
+FileFlush ( "filehandle" )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle
+	Das Handle einer Datei, welches durch vorherigen Aufruf von FileOpen zur&uuml;ckgegen wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt "true" zur&uuml;ck,  wenn der Puffer geleert wurde oder nicht geleert werden musste.
+Fehler:	Gibt "false" zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Eine Datei wurde geleert, wenn dessen Handle geschlossen wurde [FileClose()] oder Windows interner Puffer voll ist.
+Diese Funktion erzwingt eine sofortige Leerung des Puffers.
+Diese Funktion kann nur mit Handles genutzt werden, welche von FileOpen() zur&uuml;ckgegeben werden.
+
+###Related###
+FileClose, FileOpen, FileWrite, FileWriteLine, FileSetPos
+
+
+###Example###
+@@IncludeExample@@

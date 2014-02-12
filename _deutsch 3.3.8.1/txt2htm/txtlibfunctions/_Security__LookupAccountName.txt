@@ -1,0 +1,41 @@
+###User Defined Function###
+_Security__LookupAccountName
+
+###Description###
+Ermittelt einen Sicherheits-Identifizierer (SID) f&uuml;r das Konto und den Namen der Dom&auml;ne
+
+###Syntax###
+#include <Security.au3>
+_Security__LookupAccountName($sAccount [, $sSystem = ""])
+
+###Parameters###
+@@ParamTable@@
+$sAccount
+	Gibt den Namen des Kontos an. Es ist ein voll qualifizierter String im domain_name\user_name Format zu benutzen, um 
+		sicherzustellen, dass die Funktion das Konto in der gew&uuml;nschten Dom&auml;ne findet.
+$sSystem
+	[optional] Name des Systems. Dieser String kann der Name eines Remote-Computers sein. Ist Dieser String leer,
+		beginnt die &Uuml;bersetzung des Kontonamens auf dem lokalen System. Kann der Name nicht im lokalen System aufgel&ouml;st werden,
+		wird diese Funktion versuchen den Namen aufzul&ouml;sen, indem Domain Controller genutzt werden, die im lokalen System vertrauensw&uuml;rdig sind.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aAcct[0] - SID Strings
+	$aAcct[1] - Dom&auml;nenname
+	$aAcct[2] - SID Typ
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__LookupAccountSid
+
+###See Also###
+@@MsdnLink@@ LookupAccountName
+
+###Example###
+@@IncludeExample@@

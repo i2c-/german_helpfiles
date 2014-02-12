@@ -1,0 +1,40 @@
+###Keyword###
+Func...Return...EndFunc
+
+###Description###
+Definiert eine Benutzerfunktion, die Null oder mehr Argumente aufnimmt und optional ein Ergebnis zur&uuml;ckgibt.
+
+###Syntax###
+<b>Func</b> functioname ( [<b>Const</b>] [<b>ByRef</b>] $param1, ..., [<b>Const</b>] [<b>ByRef</b>] $paramN, $optionalpar1 = value, ...)
+	...
+	[<b>Return</b> [<i>value</i>]]
+<b>EndFunc</b>
+
+
+###Parameters###
+Die Parameter werden vom Benutzer selbst gew&auml;hlt. Sp&auml;ter werden sie genau wie die eingebauten Funktionen aufgerufen.
+
+
+###Remarks###
+Das Schl&uuml;sselwort <b>Const</b> ist optional und zeigt an, dass sich der Wert des Parameters w&auml;hrend der Ausf&uuml;hrung der Funktion nicht &auml;ndert.  Eine als <b>Const</b> deklarierte Variable kann eine Funktion nur durchlaufen, wenn der <b>Const</b> Parameter verwendet wird.
+
+Das Schl&uuml;sselwort <b>ByRef</b> zeigt an, dass der Parameter als Referenz zu dem Originalobjekt behandelt werden soll. Standardm&auml;&szlig;ig wird der Parameter in eine neue Variable kopiert. Jedoch verkn&uuml;pft ByRef die neue Variable auf den Originalparameter. ByRef ist zu bevorzugen wenn eine Funktion gro&szlig;e Mengen an Daten beinhaltet wie zum Beispiel ein gro&szlig;en Array. Wird dies nicht getan, so erweist das kopieren aller Daten als Bremsklotz. Es ist zu beachten, dass nicht nur eine benannte Variable als ByRef Parameter &uuml;bergeben werden kann; unbenannte tempor&auml;re Variablen, wie zum Beispiel R&uuml;ckgabewerte von Funktionen, k&ouml;nnen genauso als ByRef Parameter &uuml;bergeben werden. Ein Buchstabe kann jedoch nicht als ByRef Parameter &uuml;bergeben werden. 
+
+Falls beide Schl&uuml;sselw&ouml;rter (ByRef und Const) mit einem Funktionsparameter verwendet werden, so ist die Reihenfolge der Schl&uuml;sselw&ouml;rter <b>ByRef</b> und <b>Const</b> nicht wichtig, solange sie vor der zu ver&auml;ndernden Variable stehen.
+
+Komplette Arrays k&ouml;nnen an Funktionen &uuml;ber- und von ihnen zur&uuml;ckgegeben werden, indem einfach der Arrayname ohne Klammern angegeben wird.  Arrays sollten an eine benutzerdefinierte Funktion nur mit dem Schl&uuml;sselwort <b>ByRef</b> &uuml;bergeben werden, da somit das unn&ouml;tige und langwierige Kopieren der kompletten Daten des Arrays vermieden wird.
+
+Optionale Parameter werden definiert, indem man ihnen einen Standardwert zuweist. Das kann eine globale Variable, ein Makro oder Literal sein.
+Optionale Parameter erscheinen immer am Ende der Funktionsdeklaration. Wurde ein Parameter als optional deklariert, m&uuml;ssen alle folgenden Parameter ebenfalls optional sein und Standardwerte erhalten.
+Innerhalb der Funktion kann die Anzahl der beim Aufruf angegebenen Parameter &uuml;ber das Makro <b>@NUMPARAMS</b> in Erfahrung gebracht werden. (siehe Beispiel 2)
+
+Mit dem Schl&uuml;sselwort <b>Return</b> wird die Funktion verlassen. Im Gegensatz zu den eingebauten Funktionen geben benutzerdefinierte Funktionen immer 0 zur&uuml;ck, sofern kein anderer Returnwert gesetzt wurde.
+
+Es ist zu beachten, dass Funktionsdeklarationen nicht innerhalb anderer Funktionsdeklarationen stattfinden d&uuml;rfen.  
+
+###Related###
+<a href="Dim.htm">Dim/Global/Local</a>, <a href="include.htm">#include</a>, <a href="Dim.htm">Const</a>
+
+
+###Example###
+@@IncludeExample@@

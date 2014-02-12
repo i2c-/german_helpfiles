@@ -1,0 +1,62 @@
+###Structure Name###
+$tagNMTVCUSTOMDRAW
+
+###Description###
+Enth&auml;lt Informationen spezifisch zu einer NM_CUSTOMDRAW Benachrichtigung, gesendet von einem Treeview-Control
+
+###Syntax###
+Global Const $tagNMTVCUSTOMDRAW = "struct;" & $tagNMHDR & ";dword DrawStage;handle HDC;" & $tagRECT & _
+		";dword_ptr ItemSpec;uint ItemState;lparam ItemParam; endstruct" & _
+		";dword ClrText;dword ClrTextBk;int Level"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+DrawStage
+	Augenblickliche Zeichenphase. Dies ist einer der folgenden Werte:
+		Globale Werte:
+		  $CDDS_POSTERASE     - Nachdem der L&ouml;schzyklus vollendet ist
+		  $CDDS_POSTPAINT     - Nachdem der Zeichenzyklus vollendet ist
+		  $CDDS_PREERASE      - Bevor der L&ouml;schzyklus beginnt
+		  $CDDS_PREPAINT      - Bevor der Zeichenzyklus beginnt
+		Element-spezifische Werte:
+		  $CDDS_ITEM          - Besagt, dass die <b>ItemSpec</b>, <b>ItemState</b>, und <b>ItemParam</b> Mitglieder g&uuml;ltig sind
+		  $CDDS_ITEMPOSTERASE - Nachdem ein Element gel&ouml;scht wurde
+		  $CDDS_ITEMPOSTPAINT - Nachdem ein Element gezeichnet wurde
+		  $CDDS_ITEMPREERASE  - Bevor ein Element gel&ouml;scht wurde
+		  $CDDS_ITEMPREPAINT  - Bevor ein Element gezeichnet wurde
+		  $CDDS_SUBITEM       - Flag, kombiniert mit CDDS_ITEMPREPAINT oder CDDS_ITEMPOSTPAINT, falls ein Subelement gezeichnet wurde
+HDC
+	Handle zu dem Ger&auml;tekontext des Controls
+$tagRECT
+	Left    - X-Koordinate der oberen-linken Ecke des zu zeichnenden Rechtecks
+	Top     - Y-Koordinate der oberen-linken Ecke des zu zeichnenden Rechtecks
+	Right   - X-Koordinate der unteren-rechten Ecke des zu zeichnenden Rechtecks
+	Bottom  - Y-Koordinate der unteren-rechten Ecke des zu zeichnenden Rechtecks
+ItemSpec
+	Elementnummer
+ItemState
+	Augenblicklicher Zustand des Elements. Dies kann eine Kombination der folgenden Werte sein:
+		$CDIS_CHECKED          - Das Element ist "abgehakt"
+		$CDIS_DEFAULT          - Das Element ist in seinem Standard-Zustand
+		$CDIS_DISABLED         - Das Element ist deaktiviert
+		$CDIS_FOCUS            - Das Element hat den Fokus
+		$CDIS_GRAYED           - Das Element ist "ausgegraut"
+		$CDIS_HOT              - Das Element ist derzeitig unter dem Mauszeiger
+		$CDIS_INDETERMINATE    - Das Element ist in einem unbestimmten Zustand
+		$CDIS_MARKED           - Das Element ist markiert
+		$CDIS_SELECTED         - Das Element ist ausgew&auml;hlt
+		$CDIS_SHOWKEYBOARDCUES - Das Element wurde von der Tastatur aufgerufen
+ItemParam
+	Anwendungsdefinierter Elementwert
+ClrText
+	Die Farbe, die genutzt wird um den Vordergrund des Textes darzustellen
+ClrTextBk
+	Die Farbe, die genutzt wird um den Hintergrund des Textes darzustellen
+Level
+	0-basierte Ebene des zu zeichnenden Elements. Das Root-Element ist in Ebene 0, ein Child des Root-Elements ist in Ebene 1 usw.
+@@End@@
+
+###Remarks###
+$CDxx_ Konstanten ben&ouml;tigen WindowsConstants.au3

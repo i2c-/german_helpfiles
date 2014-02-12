@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_GetStdHandle
+
+###Description###
+Ermittelt ein Handle f&uuml;r das Standard Eingabe-, Ausgabe- oder Fehlerausgabeger&auml;t
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetStdHandle($iStdHandle)
+
+###Parameters###
+@@ParamTable@@
+$iStdHandle
+	Standardger&auml;t f&uuml;r welches ein Handle zur&uuml;ckgegeben werden soll. Dies kann einer der folgenden Werte sein:
+		0 - Handle zu dem Standard Eingabeger&auml;t
+		1 - Handle zu dem Standard Ausgabeger&auml;t
+		2 - Handle zu dem Standard Fehlerausgabeger&auml;t
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zum festgelegten Ger&auml;t
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Das Handle hat GENERIC_READ und GENERIC_WRITE Zugriffsrechte, sofern die Anwendung nicht mit SetStdHandle ein
+Standard Handle mit weniger Zugriffsrechten festgelegt hat. Falls eine Anwendung keine zugeh&ouml;rigen Standard Handles besitzt, ist
+der R&uuml;ckgabewert 0.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetStdHandle

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlTreeView_SetBkColor
+
+###Description###
+Setzt die Hintergrundfarbe
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetBkColor($hWnd, $vRGBColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$vRGBColor
+	Neue hex RGB Farbe
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Hex RGB Farbe zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetBkColor
+
+###Example###
+@@IncludeExample@@

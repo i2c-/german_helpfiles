@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetChildCount
+
+###Description###
+Ermittelt die Anzahl von Children eines Parent-Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetChildCount ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Anzahl von Children
+Fehler:	-1 wenn keine Children gefunden wurden
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetCount, _GUICtrlTreeView_GetSiblingCount
+
+
+###Example###
+@@IncludeExample@@

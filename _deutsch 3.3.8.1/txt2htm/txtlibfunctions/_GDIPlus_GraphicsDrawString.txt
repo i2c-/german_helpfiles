@@ -1,0 +1,52 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawString
+
+###Description###
+Zeichnet einen String
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawString($hGraphics, $sString, $nX, $nY [, $sFont = "Arial" [, $fSize = 10 [, $iFormat = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$sString
+	zu zeichnende Strings
+$nX
+	X-Koordinate wo der String gezeichnet werden soll
+$nY
+	Y-Koordinate wo der String gezeichnet werden soll
+$sFont
+	[optional] Name der zu verwendenden Schrift
+$fSize
+	[optional] verwendete Schriftgr&ouml;&szlig;e
+$iFormat
+	[optional] Formatflags. Kann eines oder mehrere der folgenden sein:
+		0x0001 - legt fest, dass die Leserichtung von rechts nach links geht
+		0x0002 - legt fest, dass individuelle Textzeilen vertikal auf dem Anzeigeger&auml;t gezeichnet werden
+		0x0004 - legt fest, dass Teile der Zeichen das Rechteck des Strings &uuml;berragen d&uuml;rfen
+		0x0020 - legt fest, dass Unicode -Zeichen mit einem Ersatzzeichen dargestellt werden d&uuml;rfen
+		0x0400 - legt fest, dass eine alternative Schrift f&uuml;r Zeichen verwendet wird, die nicht in der festgelegten Schrift vorhanden sind
+		0x0800 - legt fest, dass ein Leerzeichen am Ende jeder Zeile in den Abmessungen eines Strings mit einbezogen wird
+		0x1000 - legt fest, dass der Zeilenumbruch in die n&auml;chste Zeile deaktiviert ist
+		0x2000 - legt fest, dass nur komplette Zeilen au&szlig;erhalb des Rechtecks liegen d&uuml;rfen
+		0x4000 - legt fest, dass Zeichen das Rechteck &uuml;berragen d&uuml;rfen und Text au&szlig;erhalb des
+		Rechtecks dargestellt werden darf
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_GraphicsDrawStringEx
+
+###Example###
+@@IncludeExample@@

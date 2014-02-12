@@ -1,0 +1,31 @@
+###Structure Name###
+$tagNMCBEENDEDIT
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber das Ergebnis einer Bearbeitung innerhalb eines ComboBoxEx Controls
+
+###Syntax###
+Global Const $tagNMCBEENDEDIT = $tagNMHDR & ";bool fChanged;int NewSelection;wchar szText[260];int Why"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+fChanged
+	Weist darauf hin ob der Inhalt der Edit Box des Controls sich ge&auml;ndert hat
+NewSelection
+	Der 0-basierte Index des Elements das nach der Beendigung der Bearbeitung ausgew&auml;hlt ist.
+	Dieser Wert kann $CB_ERR sein wenn kein Element ausgew&auml;hlt werden soll
+szText
+	einen null-terminierten String die den Text enth&auml;lt innerhalb der Edit Box des Controls
+Why
+	Der Vorgang der die $CBEN_ENDEDIT Benachrichtigung erzeugt hat
+	Dieser Wert kann einer der folgenden sein:
+		$CBENF_DROPDOWN - Der Benutzer hat die Ausklapp-Liste aktiviert
+		$CBENF_ESCAPE - Der Benutzer hat die ESC Taste gedr&uuml;ckt
+		$CBENF_KILLFOCUS - Die Edit-Box hat den Tastaturfokus verloren
+		$CBENF_RETURN - Der Benutzer hat die Bearbeitung durch dr&uuml;cken der ENTER Taste beendet
+@@End@@
+
+###Remarks###
+Keine.

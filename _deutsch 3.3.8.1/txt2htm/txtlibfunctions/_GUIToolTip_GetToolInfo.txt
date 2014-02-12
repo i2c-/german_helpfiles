@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUIToolTip_GetToolInfo
+
+###Description###
+Ermittelt die Informationen &uuml;ber ein festgelegtes Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetToolInfo($hWnd, $hTool, $iID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster welches das Tool enth&auml;lt
+$iID
+	ID des Tools
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+		[1] - Flags welche die ToolTip Anzeige steuern:
+		   1 - Zeigt an, dass $iID ist das Fenster Handle des Tools anstatt der ID
+		   2 - Zentriert das Fenster, zugeh&ouml;rig zu dem durch $iID festgelegten Tool
+		   4 - Zeigt an, dass der Text in umgekehrter Richtung angezeigt werden soll
+		   8 - Zeigt an, dass das Control das Fenster des Tool unterklassifizieren soll
+		   16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+		   32 - Positioniert das Fenster bei den gleichen Koordinaten wie TTM_TRACKPOSITION
+		   64 - Veranlasst das Control Mausnachrichten an das Parent-Fenster weiterzuleiten
+		   128 - Zeigt an, dass links im Control Text ausgegliedert sein sollte
+		[2] - Handle zu dem Fenster welches das Tool enth&auml;lt
+		[3] - ID des Tools
+		[4] - X Koordinate der oberen linken Ecke des Rechtecks
+		[5] - Y Koordinate der oberen linken Ecke des Rechtecks
+		[6] - X Koordinate der unteren rechten Ecke des Rechtecks
+		[7] - Y Koordinate der unteren rechten Ecke des Rechtecks
+		[8] - Handle zu der Instanz welche die Stringressource f&uuml;r das Tool enth&auml;lt
+		[9] - anwendungsspezifischer Wert der mit dem Tool verkn&uuml;pft ist
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_SetToolInfo

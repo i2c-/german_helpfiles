@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlComboBox_InitStorage
+
+###Description###
+Weist den ListBox Items Speicher zu
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_InitStorage($hWnd, $iNum, $iBytes)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iNum
+	Anzahl von hinzuzuf&uuml;genden Items
+$iBytes
+	Die Menge von Speicher, welche f&uuml;r die Itemstring zugewiesen werden soll in Bytes
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die gesamte Anzahl von Items f&uuml;r die Speicher zugewiesen wurde
+Fehler:	$CB_ERRSPACE
+
+###Remarks###
+Hilft die Initialisierung von gro&szlig;en ComboBoxen (&uuml;ber 100) zu beschleunigen.
+
+Es k&ouml;nnen Sch&auml;tzungen f&uuml;r die Parameter $iNum und $iBytes verwendet werden.
+Falls man sich &uuml;bersch&auml;tzt, wird der zus&auml;tzliche Speicher trotzdem zugewiesen.
+Falls man sich untersch&auml;tzt, wird die normale Zuweisung f&uuml;r Items verwendet, welche die angeforderte Menge &uuml;berschreiten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_AddDir, _GUICtrlComboBox_AddString, _GUICtrlComboBox_InsertString
+
+###Example###
+@@IncludeExample@@

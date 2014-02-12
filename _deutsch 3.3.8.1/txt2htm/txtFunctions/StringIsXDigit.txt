@@ -1,0 +1,32 @@
+###Function###
+StringIsXDigit
+
+###Description###
+Pr&uuml;ft, ob ein String nur hexadezimale Zeichen (0-9, A-F) enh&auml;lt.
+
+###Syntax###
+StringIsXDigit ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn auch andere Zeichen enthalten sind.
+@@End@@
+
+
+###Remarks###
+G&uuml;ltige Zeichen sind <b>0123456789abcdefABCDEF</b>. Es ist zu beachten, dass Strings die Leerstellen enthalten, zum Fehler f&uuml;hren und 0 zur&uuml;ckgeben.
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringUpper, StringLower
+
+
+###Example###
+@@IncludeExample@@

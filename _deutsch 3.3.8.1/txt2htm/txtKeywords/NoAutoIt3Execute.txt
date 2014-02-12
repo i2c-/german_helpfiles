@@ -1,0 +1,22 @@
+###Keyword###
+#NoAutoIt3Execute
+
+###Description###
+Legt fest, dass das aktuell kompilierte Script nicht mit /AutoIt3ExecuteLine oder /AutoIt3ExecuteScript ausgef&uuml;hrt werden kann.
+
+###Syntax###
+<b>#NoAutoIt3Execute</b>
+
+
+###Parameters###
+Keine.
+
+
+###Remarks###
+Wird ein Skript mit /AutoIt3ExecuteLine oder /AutoIt3ExecuteScript gestartet, wird es mit dem exit- code = -1 beendet.
+
+###Related###
+Keine.
+
+
+###Example###

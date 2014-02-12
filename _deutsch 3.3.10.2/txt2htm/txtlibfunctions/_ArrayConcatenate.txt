@@ -1,0 +1,43 @@
+###User Defined Function###
+_ArrayConcatenate
+
+###Description###
+Verbindet zwei Arrays.
+
+###Syntax###
+#include <Array.au3>
+_ArrayConcatenate ( ByRef $avArrayTarget, Const ByRef $avArraySource [, $iStart = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$avArrayTarget
+	Das zu verbindende Array (Ziel)
+$avArraySource
+	Das zu verbindende Array (Quelle)
+$iStart
+	[optional] Index des ersten Eintrags des Quellarrays (Standard = 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die neue Gr&ouml;&szlig;e von $avArrayTarget
+Fehler:	-1 und setzt das @error-Falg auf ungleich 0
+@error:	1 - $avArrayTarget ist kein Array
+	2 - $avArraySource ist kein Array
+	3 - $avArrayTarget ist kein 1-dimensionales Array
+	4 - $avArraySource ist kein 1-dimensionales Array
+	5 - $avArrayTarget und $avArraySource ist kein 1-dimensionales Array
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_ArrayAdd, _ArrayPush
+
+
+###Example###
+@@IncludeExample@@

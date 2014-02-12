@@ -1,0 +1,32 @@
+###User Defined Function###
+_WinAPI_GetGuiResources
+
+###Description###
+Ermittelt die Anzahl der Handles zu grafischen Benutzerschnittstellen-Objekten in Gebrauch vom angegebenen Prozess
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetGuiResources([$iflag = 1 [, $hProcess = -1]])
+
+###Parameters###
+@@ParamTable@@
+$iflag
+	[optional] 0 (Standard) Gibt die Anzahl der GDI-Objekte zur&uuml;ck.
+		1 Gibt die Anzahl der USER-Objekte zur&uuml;ck.
+$hProcess
+	[optional] Ein Handle zum Prozess. Standardm&auml;&szlig;ig der aktuelle Prozess.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt  die Anzahl der Handles zu GUI-Objekten in Gebrauch vom Prozess, gem&auml;&szlig; zu $iFlag
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetGuiResources

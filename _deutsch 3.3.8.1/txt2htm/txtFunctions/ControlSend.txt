@@ -1,0 +1,52 @@
+###Function###
+ControlSend
+
+###Description###
+Sendet eine Folge von Zeichen (Tastendr&uuml;cken) an ein Control
+
+###Syntax###
+ControlSend ( "title", "text", controlID, "string" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Das zu beeinflussende Control.  Siehe <a href="../intro/controls.htm">Controls</a>.
+string
+	Folge von Zeichen, die zu dem Control gesendet werden soll.
+flag
+	[optional] &Auml;ndert die Bedeutung der "Tastendr&uuml;cke":
+	  flag = 0 (Standard); Der Text enth&auml;lt spezielle Zeichen wie "+" f&uuml;r SHIFT sowie {LEFT}, um den linken Pfeil zu kennzeichnen.
+	  flag = 1; Tasten werden als RAW-Format (unbearbeitet) gesendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, falls das Fenster bzw. Control nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+ControlSend arbeitet &auml;hnlich wie <a href="Send.htm">Send</a>, aber es kann Tastendr&uuml;cke direkt an ein beliebiges Fenster bzw. Control senden und nicht nur an das gerade aktive Fenster.
+
+Nur bei Kommandozeilen-Fenstern (DOS-Boxen) arbeitet ControlSend unzuverl&auml;ssig, weil diese anders funktionieren als normale Fenster (scheint physische Zust&auml;nde zu &uuml;berpr&uuml;fen, anstatt den String entgegen zu nehmen).
+Bei normalen Fenstern sollte ControlSend wesentlich zuverl&auml;ssiger als ein normaler "Send" arbeiten. - Und ja, es kann wirklich Shift, Ctrl, Alt usw. senden.
+
+Wie bereits in der Hilfe zum "Send"-Befehl erw&auml;hnt, k&ouml;nnen keine Tastaturen simuliert werden, die unterschiedliche Zeichen senden, je nachdem, ob sie im CAPS-LOCK oder SHIFT-Modus sind (z.B. die tschechische Tastatur). Zur Problemumgehung sollte die Funktion ControlSetText verwendet werden.
+
+Auf das Control muss m&ouml;glicherweise zuerst mit dem ControlFocus-Befehl ein Fokus gesetzt werden, besonders wenn es mit einer Control-ID angesprochen wird, die von dem Skript selbst erzeugt wurde.
+
+Opt("SendKeyDelay",...) &auml;ndert die L&auml;nge der kurzen Pause zwischen den gesendeten Tastenzeichen.
+Opt("SendKeyDownDelay",...) &auml;ndert die Zeitdauer, wie lange eine Taste gedr&uuml;ckt bleibt, bevor sie wieder gel&ouml;st wird.
+
+###Related###
+ControlCommand, Send, ControlSetText, ControlFocus, SendKeyDelay (Option), SendKeyDownDelay (Option)
+
+
+###Example###
+@@IncludeExample@@

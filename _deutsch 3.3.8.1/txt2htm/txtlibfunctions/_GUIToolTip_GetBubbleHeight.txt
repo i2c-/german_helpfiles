@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUIToolTip_GetBubbleHeight
+
+###Description###
+Gibt die H&ouml;he des Controls zur&uuml;ck
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetBubbleHeight($hWnd, $hTool, $iID [, $iFlags = 48])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster welches das Tool enth&auml;lt
+$iID
+	ID des Tools
+$iFlags
+	[optional] Flags welche die ToolTip Anzeige steuern:
+		  1 - Zeigt an, dass $iID das Fensterhandle des Tools ist, anstatt der ID
+		  2 - Zentriert das Fenster, zugeh&ouml;rig zu dem durch $iID festgelegten Tool
+		  4 - Zeigt an, dass der Text in umgekehrter Richtung angezeigt werden soll
+		  8 - Zeigt an, dass das Control das Fenster des Tool unterklassifizieren soll
+		 16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+		 32 - Positioniert das Fenster bei den gleichen Koordinaten wie TTM_TRACKPOSITION
+		 64 - Sorgt daf&uuml;r, dass das Control die Nachrichten an das Hauptfenster weiterleitet
+		128 - Zeigt an, dass links im Control Text ausgegliedert sein sollte
+@@End@@
+
+###ReturnValue###
+Erfolg:	die H&ouml;he des ToolTips
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetBubbleSize, _GUIToolTip_GetBubbleWidth

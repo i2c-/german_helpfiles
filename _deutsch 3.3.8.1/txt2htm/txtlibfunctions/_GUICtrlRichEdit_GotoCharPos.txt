@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlRichEdit_GotoCharPos
+
+###Description###
+Verschiebt den Einf&uuml;gepunkt (Caret) zu einer bestimmte Zeichenposition
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GotoCharPos($hWnd, $iCharPos)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCharPos
+	Die Zeichenposition, zu welcher der Einf&uuml;gungspunkt verschoben werden soll
+		-1 - Ende des Textes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iCharPos ist < -1
+@@End@@
+
+###Remarks###
+Das erste Zeichen des Textes im Control ist bei Zeichenposition 1.
+
+Bricht die aktuelle Textauswahl ab, falls eine existiert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetSel
+
+###See Also###
+@@MsdnLink@@ EM_EXSETSEL
+
+###Example###
+@@IncludeExample@@

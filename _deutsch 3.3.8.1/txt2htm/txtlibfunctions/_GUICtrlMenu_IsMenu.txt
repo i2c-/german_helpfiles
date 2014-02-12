@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlMenu_IsMenu
+
+###Description###
+Pr&uuml;ft, ob ein Handle ein Men&uuml;-Handle ist
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_IsMenu($hMenu)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	zu testendes Handle
+@@End@@
+
+###ReturnValue###
+True:	Handle ist ein Men&uuml;-Handle
+False:	Handle ist kein Men&uuml;-Handle
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ IsMenu
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,48 @@
+###Function###
+ObjEvent
+
+###Description###
+Verarbeitet eingehende Ereignisse von dem angegebenen Objekt.
+
+###Syntax###
+ObjEvent ( $ObjectVar, "functionprefix" [, "interface name"] )
+ObjEvent ( "AutoIt.Error" [, "function name"] )
+
+###Parameters###
+@@ParamTable@@
+$ObjectVar
+	Eine Variable die das Objekt enth&auml;lt von dem man die Ereignisse empfangen m&ouml;chte
+"functionprefix"
+	Der Pr&auml;fix der Funktionen die man festlegt um die eingehenden Ereignisse zu verarbeiten. 
+	Der Pr&auml;fix ist dem Objekt-Methodenamen angeh&auml;ngt.
+"interface name"
+	[optional] Name einer Ereignis-Schnittstelle die benutzt werden soll. 
+	Merke: Es muss f&uuml;r das Objekt Unterst&uuml;tzung als ausgehend finden UND
+	es muss vom Typ DISPATCH sein.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Objekt oder einen Funktionsnamen zur&uuml;ck.
+Fehler:	Gibt "" zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Das erste Format wird genutzt um die Ereignisse von dem gegebenen Objekt abzurufen. 
+Um ein bestimmtes Element abzurufen, erstellt eine AutoIt-Funktion benannt dem
+gegebenen Pr&auml;fix mit dem Ereignisnamen anheftend.
+
+Das zweite Format wird f&uuml;r das COM Error Handling genutzt. Sollte irgendein COM-Fehler
+auftreten, wird die angegebene Funktion aufgerufen. Der erste Parameter f&uuml;r die Funktion ist das Fehler-Objekt. Es kann benutzt werden, um auf verschiedene Eigenschaften dieses Objektes zuzugreifen.
+Wird der zweite Parameter ausgelassen, wird der Name der
+aktuellen Errorhandler-Function zur&uuml;ckgegeben, wenn vorhanden.
+
+Siehe die <a href="../intro/ComRef.htm">Obj/COM Referenz</a> f&uuml;r detaillierte Erk&auml;rungen.
+
+###Related###
+ObjGet, IsObj, ObjCreate, GUICtrlCreateObj
+
+
+###Example###
+@@IncludeExample@@

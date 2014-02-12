@@ -1,0 +1,80 @@
+###Function###
+HotKeySet
+
+###Description###
+Setzt einen HotKey, um eine selbsterstellte Funktion aufzurufen.
+
+###Syntax###
+HotKeySet ( "key" [, "function"] )
+
+
+###Parameters###
+@@ParamTable@@
+key
+	Die Tastenkombination f&uuml;r den HotKey im <b>gleichen Format wie <a href="Send.htm">Send()</a>.</b>
+function
+	[optional] Der Name der aufzurufenden Funktion. Wird der Parameter nicht angegeben, wird der vorher gesetzte HotKey gel&ouml;scht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Es ist besser die Kleinschreibtaste zu verwenden, als russische. Die nicht mit Shift bet&auml;tigte Taste ist nicht der untere Wert. Zum Beispiel: "D" ist nicht die Gro&szlig;schrift von "B". Der Hotkey wird nicht gesetzt werden und ein Fehler wird auftreten.
+
+Wenn zwei Skripte den gleichen HotKey (Tastenkombination) setzen, sollte man vermeiden, beide Skripte parallel auszuf&uuml;hren.
+(Das zweite Skript kann den HotKey nicht abfangen, solange das erste Skript nicht beendet wurde oder den Hotkey freigegeben hat, bevor das zweite Skript diesen setzt.)
+
+Ein HotKey unterbricht "typischerweise" das aktive Autoit Skript und f&uuml;hrt die angegebene Funktion bis zu deren Schluss aus, es sei denn, deren Ausf&uuml;hrung wird ebenfalls unterbrochen.
+
+Folgende Ausnahmen existieren:
+1) Wenn die aktuelle Funktion eine "blockierende" Funktion ist (Tastenbet&auml;tigungen werden unterdr&uuml;ckt), dann werden die Tastendr&uuml;cke gepuffert und sofort nach der blockierenden Funktion ausgef&uuml;hrt. MsgBox und FileSelectFolder sind Beispiele f&uuml;r blockierende Funktionen. Teste das Verhalten anhand des SHIFT+ALT+D Beispiels.
+2) Wenn das Autoit Skript durch einen Klick auf das TrayIcon (Pause) pausiert wurde, werden alle HotKeys ignoriert.
+
+<b>Folgende HotKeys k&ouml;nnen nicht genutzt werden:</b>
+
+@@ParamTable@@
+Strg+Alt+Entf
+	Reserviert von Windows selbst
+F12
+	Ebenfalls durch Windows reserviert (API)
+Ziffernblock Enter Taste
+	Man sollte stattdessen {Enter} verwenden, da hierbei beide Enter-Tasten abgefangen werden.
+Win+B,D,E,F,L,M,R,U; und Win+Shift+M
+	Reserviert durch Windows 
+	Anmerkung: Win+B und Win+L k&ouml;nnten nur bei Windows XP und h&ouml;her reserviert sein.
+Alt, Strg, Shift, Win
+	Dies sind Modifizierungstasten
+Weitere
+	Jede globale Tastenkombination, die mit einer anderen Software definiert wurde, und jede Kombination aus Basistasten, wie '{F1}{F2}', sowie jede Form von '{LALT}' oder '{ALTDOWN}'.
+@@End@@
+	
+Wenn ein Hotkey gesetzt ist, wird dieser Tastendruck abgefangen. Autoit wird ihn nicht an die aktive Anwendung weitergeben. Ausnahmen sind: (NumLock, CapsLock, und ScrollLock). Diese &auml;ndern ihren Status.
+
+Um eine Tastenkombination zu senden, welche ein HotKeySet Ereignis ausl&ouml;sen w&uuml;rde, ist ControlSend() zu verwenden oder der Hotkey ist vorher freizugeben, da ansonsten eine Endlosschleife entstehen k&ouml;nnte.
+
+; Abfangen und Weitergeben von Tastendr&uuml;cken
+<i>HotKeySet("{Esc}","captureEsc")
+Func captureEsc()
+	HotKeySet("{Esc}")
+	; ... mach irgendwas
+	Send("{Esc}")
+	HotKeySet("{Esc}","captureEsc")
+EndFunc
+</i>
+
+Der aufzurufenden Funktion k&ouml;nnen <b>keine</b> Parameter &uuml;bergeben werden. Diese werden ignoriert.
+
+Das @HotKeyPressed Makro kann innerhalb von Funktionen genutzt werden, um z.B. mehrere Tasten gleichzeitig zu verwalten.
+
+
+###Related###
+Send, GUISetAccelerators
+
+
+###Example###
+@@IncludeExample@@

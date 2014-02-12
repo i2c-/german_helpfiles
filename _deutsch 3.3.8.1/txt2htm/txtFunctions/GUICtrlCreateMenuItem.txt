@@ -1,0 +1,43 @@
+###Function###
+GUICtrlCreateMenuitem
+
+###Description###
+Erstellt einen Men&uuml;eintrag f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateMenuitem ( "text", menuID [, menuentry [, menuradioitem]] )
+
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Der Text des Eintrags.
+menuID
+	Erm&ouml;glicht das Erzeugen eines Untermen&uuml;s im entsprechenden Men&uuml;. Wenn die ID auf -1 gesetzt ist, bezieht es sich auf die oberste Men&uuml;-Ebene.
+menuentry
+	[optional] Legt die Nummer des zu erzeugenden Eintrages fest. Die Nummerierung der Eintr&auml;ge beginnt bei 0.
+menuradioitem
+	[optional] 0 (Standard) = erstellt einen normalen Men&uuml;eintrag, 1 = erstellt einen Eintrag in "Radiobutton"-Form
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um Informationen im Control zu setzen oder zu ver&auml;ndern siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a>.
+
+Ist der Parameter "text" ein Leerstring (""), wird eine Trennlinie erstellt. GUICtrlSetState kann wie bei anderen Controls verwendet werden. Siehe Beispiel.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlUpdate..., GUIGetMsg, GUICtrlCreateMenu, GUICtrlCreateContextMenu
+
+
+###Example###
+@@IncludeExample@@

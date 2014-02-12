@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_Shutdown
+
+###Description###
+Gibt die durch Microsoft Windows GDI+ verwendeten Ressourcen wieder frei
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_Shutdown()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Es m&uuml;ssen alle GDI+ Objekte aufgel&ouml;st werden, bevor _GDIPlus_Shutdown aufgerufen wird
+
+###Related###
+_GDIPlus_Startup
+
+###See Also###
+@@MsdnLink@@ GdiplusShutdown
+
+###Example###
+@@IncludeExample@@

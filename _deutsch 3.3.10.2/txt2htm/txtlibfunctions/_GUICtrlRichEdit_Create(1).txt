@@ -1,0 +1,67 @@
+###User Defined Function###
+_GUICtrlRichEdit_Create
+
+###Description###
+Erzeugt ein Edit Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_Create ( $hWnd, $sText, $iLeft, $iTop [, $iWidth = 150 [, $iHeight = 150 [, $iStyle = -1 [, $iExStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Hauptfenster
+$sText
+	Text der im Control angezeigt wird
+$iLeft
+	Horizontale Position des Controls
+$iTop
+	Vertikale Position des Controls
+$iWidth
+	[optional] Breite des Controls
+$iHeight
+	[optional] H&ouml;he des Controls
+$iStyle
+	[optional] Control Stile:
+		$ES_AUTOHSCROLL - Scrollt den Text automatisch um 10 Zeichen nach rechts wenn der Benutzer ein Zeichen am Ende der Linie setzt.
+		$ES_AUTOVSCROLL - Scrollt den Text automatisch eine Seite nach oben wenn der Benutzer die ENTER Taste in der letzten Linie bet&auml;tigt.
+		$WS_HSCROLL - Control hat eine horizontale Scroll Leiste
+		$WS_VSCROLL - Control hat eine vertikale Scroll Leiste
+		$ES_CENTER - Zentriert den Text in einem Edit Control.
+		$ES_LEFT - Gleicht den Text dem linken Seitenrand an.
+		$ES_MULTILINE - Erzeugt ein mehrzeiliges Control (Standard)
+		$ES_NOHIDESEL - Der markierte Text ist invertiert auch wenn das Control nicht im Fokus liegt.
+		$ES_NUMBER - Erlaubt ausschlie&szlig;lich die Eingabe von Zahlen in das Control.
+		$ES_READONLY - Hindert den Benutzer daran Text in das Control zu schreiben oder welchen darin zu editieren.
+		$ES_RIGHT - Gleicht den Text dem rechten Seitenrand an.
+		$ES_WANTRETURN - Legt fest, dass eine Zeilenumschaltung ausgel&ouml;st wird, wenn der Benutzer die ENTER Taste bet&auml;tigt. (Standard)
+		$ES_PASSWORD - Zensiert jeden Buchstaben der in das Control eingegeben wird mit einem Asterisk (*)
+		Standard: 0
+		Erzwungen : WS_CHILD, $WS_VISIBLE, $WS_TABSTOP es sei denn $ES_READONLY
+$iExStyle
+	[Optional] Erweiterte Stile des Controls. Diese beziehen sich auf die standard $WS_EX_ Konstanten. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle Erweiterte Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu dem RichEdit Control
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	105 - $iWidth ist weder eine positive Zahl noch -1
+	106 - $iHeight ist weder eine positive Zahl noch -1
+	107 - $iStyle ist weder eine positive Zahl noch Null oder -1
+	108 - $iExStyle ist weder eine positive Zahl noch Null oder -1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_Destroy
+
+
+###Example###
+@@IncludeExample@@

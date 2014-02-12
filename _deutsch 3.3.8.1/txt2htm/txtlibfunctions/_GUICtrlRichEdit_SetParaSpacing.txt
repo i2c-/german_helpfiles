@@ -1,0 +1,50 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaSpacing
+
+###Description###
+&Auml;ndert den Zeilenabstand und Absatzabstand von markierten Abs&auml;tzen oder, wenn keine markiert sind, f&uuml;r den Text, der nach dem Einf&uuml;gungspunkt (Cursor) eingef&uuml;gt wird
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaSpacing($hWnd, [$vInter=Default [, $iBefore=Default [, $iAfter=Default]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$vInter
+	[optional] Abstand zwischen den Zeilen:
+		Entweder: Eine Zahl - in Leerzeichen-Einheiten
+		oder: "<Zahl> lines" - in Zeilen
+$iBefore
+	[optional] Abstand &uuml;ber den Abs&auml;tzen (in Leerzeichen-Einheiten)
+$iAfter
+	[optional] Abstand unter den Abs&auml;tzen (in Leerzeichen-Einheiten)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101  - $hWnd ist kein Handle
+	1021 - $vInter ist ung&uuml;ltig
+	1022 - Nur 1, 1.5 oder 2 " lines" k&ouml;nnen als Zeilenabstand gesetzt werden  - "<x> lines"
+	103  - $iBefore < 0
+	104  - $iAfter < 0
+@@End@@
+
+###Remarks###
+Es werden nur Werte ge&auml;ndert, die nicht mit 'Default' gesetzt sind.
+
+Um die Leerzeichen-Einheit zu &auml;ndern (Standard: Inch), benutze _GUICtrlRichEdit_SetSpaceUnit.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaSpacing, _GUICtrlRichEdit_SetSpaceUnit
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

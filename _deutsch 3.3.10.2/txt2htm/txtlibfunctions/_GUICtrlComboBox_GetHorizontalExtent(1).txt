@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlComboBox_GetHorizontalExtent
+
+###Description###
+Ermittelt die Breite in Pixel, wie lange die ComboBox horizontal gescrollt werden kann
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetHorizontalExtent ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die scrollbare Breite in Pixel zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_SetHorizontalExtent
+
+
+###Example###
+@@IncludeExample@@

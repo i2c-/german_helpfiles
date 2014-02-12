@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaAlignment
+
+###Description###
+Ermittelt die Ausrichtung markierter Abs&auml;tze oder, falls keine markiert sind, des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaAlignment($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, bestehend aus einem Wert, einem Semikolon (;) und einem Zeichen f&uuml;r den G&uuml;ltigkeitsbereich:
+	Ausrichtung:
+	   l - B&uuml;ndig mit dem linken Seitenrand.
+	   r - B&uuml;ndig mit dem rechten Seitenrand.
+	   c - Zentriert zwischen den Seitenr&auml;ndern
+	   j - Blocksatz zwischen den Seitenr&auml;ndern
+	   f - Blocksatz zwischen den Seitenr&auml;ndern
+	   w - Blocksatz zwischen den Seitenr&auml;ndern nur durch Ausdehnung der Leerzeichen
+	Geltungsbereich:
+	   a - Alle (oder nur) markierte Abs&auml;tze haben diese Ausrichtung
+	   f - Der erste markierte Absatz hat diese Ausrichtung, die anderen nicht
+	   c - Der aktuelle Absatz hat diese Ausrichtung
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+In Richedit 2.0 wird Blocksatz nicht dargestellt
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaAlignment
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

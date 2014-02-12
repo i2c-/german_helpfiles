@@ -1,0 +1,32 @@
+###Function###
+SetExtended
+
+###Description###
+Manuelles Setzen des Wertes des @extended Makros.
+
+###Syntax###
+SetExtended ( code [, return value] )
+
+
+###Parameters###
+@@ParamTable@@
+code
+	Der gew&uuml;nschte Wert (als Ganzzahl), auf den @extended gesetzt werden soll. 
+return value
+	[optional] &Uuml;berschreibt den Standard-R&uuml;ckgabewert und gibt diesen Parameter zur&uuml;ck.
+@@End@@
+
+
+###ReturnValue###
+Standardm&auml;&szlig;ig gibt es keinen R&uuml;ckgabewert. Aber, wenn der optionale "return value" Parameter angegeben wird, gibt die Funktion diesen R&uuml;ckgabewert zur&uuml;ck.
+
+
+###Remarks###
+Wenn eine Funktion gestartet wird, wird @extended auf 0 gesetzt.  Sofern SetExtended() nicht aufgerufen wird, beh&auml;lt @extended den Wert 0, wenn die Funktion beendet wurde. Das bedeutet: Falls @extended nach Ausf&uuml;hrung der Funktion gesetzt sein muss, so muss dieses expliziet geschehen.  Des weiteren muss der Wert f&uuml;r @extended eventuell in einer Variablen zwischengespeichert werden, falls dieser Wert zur Abfrage einer While-Wend Schleife genutzt wird.
+
+###Related###
+SetError
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlTreeView_SetItemHeight
+
+###Description###
+Setzt die H&ouml;he eines individuellen Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetItemHeight($hWnd, $hItem, $iIntegral)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iIntegral
+	H&ouml;he des Items. Diese H&ouml;he ist eine Abstufung der Standarditemh&ouml;he. Standardm&auml;&szlig;ig erh&auml;lt jedes Item eine Abstufung der Itemh&ouml;he.
+		Wird dieses Feld auf 2 gesetzt, so erh&auml;lt dieses die doppelte Standardh&ouml;he;
+		Wird dieses Feld auf 3 gesetzt, so erh&auml;lt es die dreifache Standardh&ouml;he und so weiter. Dieses Control zeichnet nicht in dieses Extrafeld.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

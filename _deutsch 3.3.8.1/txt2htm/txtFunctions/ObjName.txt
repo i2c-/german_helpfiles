@@ -1,0 +1,39 @@
+###Function###
+ObjName
+
+###Description###
+Gibt den Namen oder die Schnittstelleninformation eines Objekts zurück
+
+###Syntax###
+ObjName ( $Objectvariable [,Flag] )
+
+###Parameters###
+@@ParamTable@@
+$Objectvariable
+	Eine Variable die das Objekt enthält dessen Namen man abrufen möchte
+Flag
+	[optional] 1 = Name des Objekts
+	2 = Beschreibung des (Dokument) Objekts
+	3 = Die ProgID des Objekts
+	4 = Die Datei, mit welcher das Objekt in der Registry verknüpft ist.
+	5 = Name des Moduls, in welchem das Objekt läuft (Windows XP und höher). Marshaller für Objekte, welche nicht aus einem Modul aufgerufen werden.
+	6 = CLSID der Objekt-Co-Klasse
+	7 = IID der Objektschnittstelle 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen den Namen repräsentierenden String zurück
+Fehler:	Setzt @error und gibt "" zurück
+@@End@@
+
+
+###Remarks###
+Nicht alle Objekte unterstützen die Flags (Bitschalter) 2 bis 7. Stets in diesen Fällen @error abfragen.
+
+###Related###
+IsObj, ObjGet, ObjCreate
+
+
+###Example###
+@@IncludeExample@@

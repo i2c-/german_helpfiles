@@ -1,0 +1,46 @@
+###User Defined Function###
+_IEFormSubmit
+
+###Description###
+Ein angegebenes Formular absenden.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormSubmit(ByRef $o_object [, $f_wait = 1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable von einem InternetExplorer.Application, Form Objekt
+$f_wait
+	[optional] Gibt an, ob gewartet werden soll, bis die Seite geladen ist, bevor zur Abarbeitung des Skripts zur&uuml;ckgekehrt werden soll.
+	0 = Sofort zur&uuml;ckkehren, nicht auf das Laden der Seite warten.
+	1 = (Standard) Vor dem Zur&uuml;ckkehren auf komplettes Laden der Seite warten.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Ladezeit &uuml;berschritten
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung abgebrochen
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+F&uuml;r viele HTML-Formulare reicht es nicht aus, _IEFormSubmit() zu benutzen, da dort oft ein benutzerdefiniertes JavaScript-Ereignis an den Submit-Button des Formulars gebunden ist. In diesem Fall muss man einen Klick auf den Submit-Button simulieren, anstatt _IEFormSubmit() zu benutzen. Siehe im Beispiel f&uuml;r die "click"-Aktion von _IEAction().
+Ebenfalls beruht manchmal die Formularverarbeitung auf dem Wert ("value") des Submit-Buttons, der zusammen mit dem Formularinhalt &uuml;bergeben wird (oft dann, wenn es mehr als einen Submit-Button in dem Formular gibt und diese als Ausl&ouml;ser f&uuml;r verschiedene Ergebnisse bestimmt sind).  Diese Funktion wird keinen Wert eines Submit-Buttons &uuml;bermitteln. Die L&ouml;sung ist, wie oben das "click"-Ereignis von _IEAction zu verwenden.
+Wenn man Fehler mit dem automatisch von der Funktion aufgerufenen _IELoadWait hat, setzt man $f_wait auf 0 und ruft _IELoadWait selbst im Skript auf, wobei man das InternetExplorer-Objekt &uuml;bergibt.
+
+###Related###
+_IEFormReset, _IEFormGetObjByName, _IEFormGetCollection, _IEFormElementGetObjByName, _IEFormElementGetCollection, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,41 @@
+###Function###
+Dec
+
+###Description###
+Gibt eine numerische Entsprechung eines hexadezimalen Strings wieder.
+
+###Syntax###
+Dec ( "hex" [, flag ] )
+
+
+###Parameters###
+@@ParamTable@@
+hex
+	Der zu konvertierende hexadezimale String.
+flag
+	[optional] Definiert das Verhalten.
+	Kann einer der folgenden Werte sein:
+	 Default = String wird als Integer interpretiert. Siehe Bemerkungen.
+	 1 = String wird als 32bit-Integer interpretiert
+	 2 = String wird als 64bit-Integer interpretiert
+	 3 = String wird als double interpretiert
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die angeforderten Daten zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf 1 wenn ein ung&uuml;ltiger Hex-String verwendet wurde oder wenn ein &Uuml;berlauf (overflow) auftritt.
+@@End@@
+
+
+###Remarks###
+Bei dem Standardverhalten wird der String als Integer behandelt. In diesem Fall wird, sofern sich das Ergebnis in dem Bereich eines 32bit-Integers befindet, ein 32bit-Integer zur&uuml;ckgegeben. Andernfalls wird ein 64bit-Integer als Ergebnis zur&uuml;ckgegeben. Beide sind vorzeichenbehaftet (signed).
+
+
+###Related###
+Hex
+
+
+###Example###
+@@IncludeExample@@

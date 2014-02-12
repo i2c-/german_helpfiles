@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>Sprachreferenz - Datentypen</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link href="../css/default.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<h1>Sprachreferenz - Datentypen</h1>
+		<p>In AutoIt gibt es nur einen Datentyp, namens <strong>Variant</strong>.  Ein Variant kann numerische oder Zeichendaten enthalten und entscheidet &uuml;ber deren Nutzung, abh&auml;ngig von der Situation, in der diese Daten genutzt werden.  Zum Beispiel, wenn versucht wird zwei Variants zu multiplizieren, werden sie als Zahlen behandelt, wenn versucht wird zwei Variants zu verketten (verbinden), werden sie als Zeichenketten behandelt.</p>
+		<p>Einige Beispiele:</p>
+		<p>    10 * 20 entspricht der <strong>Zahl </strong>200 (<strong>*</strong>
+			wird genutzt um zwei Zahlen zu multiplizieren)</p>
+		<p>    10 * "20" entspricht der <strong>Zahl</strong> 200</p>
+		<p>    "10" * "20" entspricht der <strong>Zahl</strong> 200</p>
+		<p>    10 & 20 entspricht der <strong>Zeichenkette</strong> "1020" (<strong>&</strong>
+			wird genutzt um Zeichenketten zu verbinden)</p>
+		<p> </p>
+		<p>Wenn eine Zeichenkette als Zahl benutzt wird, wird ein impliziter Aufruf von <b><a href="../functions/Number.htm">Number()</a></b>         vollzogen. Sollte die Zeichenkette nun keine g&uuml;ltige Zahl enthalten, wird angenommen, dass der Wert 0 entspricht.  Zum Beispiel,
+		</p>
+		<p>    10 * "fgh" entspricht der Zahl <strong>0</strong>.</p>
+		<p>Wenn eine Zeichenkette als Wahrheitswert (boolean) benutzt wird und es ist eine leere Zeichenkette "" , wird angenommen, dass der Wert "nicht wahr" (false) entspricht (siehe unten).  Zum Beispiel,
+		</p>
+		<p>    NOT "" entspricht dem Wahrheitswert <b>true</b>.</p>
+		<p> </p>
+		<h2>Zahlen</h2>
+		<p>Zahlen k&ouml;nnen standardm&auml;&szlig;ige Zahlen sein, wie <strong>2</strong>, <strong>4.566</strong>, 
+			und <strong>-7</strong>. 
+		</p>
+		<p>Wissenschaftliche Schreibweise wird ebenso unterst&uuml;tzt; deshalb kann <strong>1.5e3</strong>
+			anstatt <strong>1500</strong> geschrieben werden. 
+		</p>
+		<p>Integer (ganze Zahlen) k&ouml;nnen gleichwohl in hexadezimaler Schreibweise repr&auml;sentiert werden, dem Integer voranstellend <strong>0x</strong> wie in <strong>0x409</strong> oder <strong>0x4fff</strong> (wenn Hex-Notation genutzt wird sind nur 32-bit Zahlen g&uuml;ltig). 
+		</p>
+		<p> </p>
+		<h2>Zeichenketten</h2>
+		<p>Zeichenketten sind in doppelten Anf&uuml;hrungszeichen eingeschlossen, wie <strong>"diese"</strong>.  Wenn 
+			eine Zeichenkette doppelte Anf&uuml;hrungszeichen enthalten soll schreibt man es zweifach wie:</p>
+		<p>    <strong>"Hier ist ein ""doppeltes Anf&uuml;hrungszeichen"" - OK ?"</strong></p>
+		<p>Einfache Anf&uuml;hrungszeichen k&ouml;nnen ebenso genutzt werden wie <strong>'diese'</strong> und <strong>'Hier ist ein ' 
+				'einfaches Anf&uuml;hrungszeichen' ' - OK ?'</strong></p>
+		<p> </p>
+		<p>Anf&uuml;hrungszeichen k&ouml;nnen f&uuml;r einfacheren Umgang gemischt werden, z. Bsp. um Verdoppelung zu vermeiden, 
+			damit das gew&uuml;nschte Ergebnis erreicht wird.  Zum Beispiel, wenn mehrere 
+			doppelte Anf&uuml;hrungszeichen in einer Zeichenkette enthalten sind, dann sollte man einfache Anf&uuml;hrungszeichen 
+			f&uuml;r die Deklaration nutzen:</p>
+		<p>    <strong>'Dieser "Satz" enth&auml;lt "viele" "doppelte Anf&uuml;hrungszeichen", nicht wahr?'</strong></p>
+		<p>ist wesentlich einfacher als:</p>
+		<p>    <strong>"Dieser ""Satz"" enth&auml;lt ""viele"" "doppelte Anf&uuml;hrungszeichen", nicht wahr?"</strong></p>
+		<p>Bei Auswertung von Zeichenketten, k&ouml;nnen diese Env oder Var Variablen repr&auml;sentieren, gem&auml;&szlig; der <a href="../functions/AutoItSetOption.htm#ExpandEnvStrings">Opt()</a>
+			Funktionsdefinition.</p>
+		<p> </p>
+		<h2>Wahrheitswerte</h2>
+		<p>Wahrheitswerte (Booleans) sind <b>logische</b> Werte. Es existieren nur zwei Zust&auml;nde: <b>wahr</b>(true) und
+			<b>nicht wahr</b>(false).<br>
+			<br>
+			Sie k&ouml;nnen in Zuweisungen von Variablen genutzt werden, zusammen mit den Boolean Operatoren<b> and</b>,
+			<b>or</b> und <b>not</b>.<br>
+			<br>
+			Beispiel:<br>
+			$Boolean1 = True<br>
+			$Boolean2 = False<br>
+			$Boolean3 = $Boolean1 AND $Boolean2<br>
+			<br>
+			Das Ergebnis in $Boolean3 ist demnach <b>false</b><br>
+			<br>
+			$Boolean1 = false<br>
+			$Boolean2 = not $boolean1<br>
+			<br>
+			Das Ergebnis in $Boolean2 ist demnach <b>true</b><br>
+			<br>
+			<br>
+			Falls ein Boolean zusammen mit Zahlen verwendet werden, gelten folgende Regeln:<br>
+			<br>
+			Ein Wert 0 entspricht dem Boolean von <b>false</b><br>
+			Jede andere Zahl entspricht dem Boolean von <b>true</b><br>
+			<br>
+			Beispiel:<br>
+			$Zahl1 = 0<br>
+			$Boolean1 = true<br>
+			$Boolean2 = $Zahl1 und $Boolean1<br>
+			<br>
+			Das Ergebnis in $Boolean2 ist demnach <b>false</b><br>
+			<br>
+			<br>
+			Wenn arithmetische zusammen mit Wahrheitswerten genutzt werden (<b>was nicht ratsam ist!</b>), 
+			gelten folgende Regeln:<br>
+			<br>
+			Ein Boolean true wird konvertiert, in den numerischen Wert <b>1</b><br>
+			Ein Boolean false wird konvertiert, in den numerischen Wert <b>0</b><br>
+			<br>
+			Beispiel:<br>
+			$Boolean1 = true<br>
+			$Zahl1 = 100<br>
+			$Zahl2 = $Boolean1 + $Zahl1<br>
+			<br>
+			Das Ergebnis in $Zahl2 ist der numerischen Wert 101<br>
+			<br>
+			<br>
+			Wenn Zeichenketten zusammen mit Wahrheitswerten genutzt werden, werden diese wie folgt 
+			konvertiert:<br>
+			<br>
+			Ein Boolean true enth&auml;lt die Zeichen <b>"True"</b><br>
+			Ein Boolean false enth&auml;lt die Zeichen <b>"False"</b><br>
+			<br>
+			Beispiel:<br>
+			$Boolean1=true<br>
+			$String1="Test ist: "<br>
+			$String2=$String1 & $Boolean1<br>
+			<br>
+			Das Ergebnis in $String2 ist die Zeichenkette "Test ist: True"<br>
+			<br>
+			Umgekehrt ist es anders. Wenn Zeichenketten mit 
+			Wahrheitswerten verglichen werden, gelten folgende Regeln:<br>
+			Nur eine leere Zeichenkette ("") ist ein Boolean <b>false</b><br>
+			Jede andere Zeichenkette mit Werten (einschlie&szlig;lich einer Zeichenkette wie "0") ist ein 
+			Boolean <b>true</b><br>
+			<br>
+			 </p>
+		<h2>Bin&auml;rdaten</h2>
+		<p>Bin&auml;rdaten k&ouml;nnen jegliche Bitwerte aufnehmen. Sie werden in ihre
+        hexadezimale Repr&auml;sentation konvertiert, wenn sie in einer Zeichenkette gespeichert werden.
+		Beispiel:<br>
+		$bin = Binary ("abc")<br>$str = String ($bin)    
+        ; "0x616263"</p>
+<br>
+		<h2>Zeiger</h2>
+		<p>Zeigertypen enthalten eine 32bittige oder 64bittige Speicheradresse,  
+		je nach dem davon abh&auml;ngig, ob die 32bit oder 64bit Version von AutoIt genutzt wird. Sie werden in ihre
+        hexadezimale Repr&auml;sentation konvertiert, wenn sie in einer Zeichenkette gespeichert werden. Fensterhandles (HWnd) wie von <a href="../functions/WinGetHandle.htm">WinGetHandle</a> zur&uuml;ckgegeben, sind Zeigertypen.</p>
+<p> </p>
+		<h2>Datentypen und Einstufungen</h2>
+		<p>Die folgende Tabelle zeigt die internen Variant Datentypen und deren 
+		Einstufung.</p>
+		<table width="100%" border="1" cellspacing="0" cellpadding="3">
+			<tr bgcolor="#000066">
+				<td width="12%" nowrap><font color="#ffffff"><strong>Sub-Datentyp</strong></font></td>
+				<td width="88%"><font color="#ffffff"><strong>Einstufung und Bemerkungen</strong></font></td>
+			</tr>
+			<tr>
+				<td nowrap>Int32</td>
+				<td>Ein 32bit vorzeichenbehafteter Integer (Ganzzahl).</td>
+			</tr>
+			<tr>
+				<td nowrap>Int64</td>
+				<td>Ein 64bit vorzeichenbehafteter Integer (Ganzzahl)</td>
+			</tr>
+			<tr>
+				<td nowrap>Double</td>
+				<td>Eine doppelt-pr&auml;zise Flie&szlig;komma Zahl (double).</td>
+			</tr>
+			<tr>
+				<td nowrap>Zeichenkette</td>
+				<td>Kann bis zu 2147483647 Zeichen aufnehmen.</td>
+			</tr>
+			<tr>
+				<td nowrap>Bin&auml;rdaten</td>
+				<td>Bin&auml;rdaten k&ouml;nnen bis zu 2147483647 Bytes aufnehmen.</td>
+			</tr>
+			<tr>
+				<td nowrap>Zeiger</td>
+				<td>Ein Zeiger auf eine Speicheradresse.  32 Bit oder 64 Bit abh&auml;ngig 
+				von der genutzten AutoIt Version.</td>
+			</tr>
+		</table>
+		<p> </p>
+		<p>Manche Funktionen in AutoIt arbeiten ausschlie&szlig;lich mit 32bittigen Zahlen (z. B. <a href="../functions/BitAND.htm">
+				BitAND</a>) und konvertieren diese automatisch - Diese Funktionen sind 
+			dokumentiert, wenn erforderlich.</p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+###User Defined Function###
+_WinAPI_GetLastError
+
+###Description###
+Gibt den letzten Fehlercode des aufrufenden Threads zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetLastError()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt den letzten Fehlercode zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetLastErrorMessage
+
+###See Also###
+@@MsdnLink@@ GetLastError

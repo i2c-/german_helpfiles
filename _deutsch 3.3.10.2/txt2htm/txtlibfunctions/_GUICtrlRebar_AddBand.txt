@@ -1,0 +1,60 @@
+###User Defined Function###
+_GUICtrlRebar_AddBand
+
+###Description###
+F&uuml;gt eine neue Gruppe in einem Rebar-Control ein.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_AddBand ( $hwndRebar, $hwndChild [, $iMinWidth = 100 [, $iDefaultWidth = 100 [, $sText = "" [, $iIndex = -1 [, $fStyle = -1]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hwndRebar
+	Handle des Rebar-Controls
+$hwndChild
+	Handle des hinzuzuf&uuml;genden Controls
+$iMinWidth
+	[optional] Minimale Breite f&uuml;r die Gruppe
+$iDefaultWidth
+	[optional] L&auml;nge der Gruppe in Pixel
+$sText
+	[optional] Anzuzeigender Text f&uuml;r die Gruppe
+$iIndex
+	[optional] 0-basierender Index des Ortes, wo die Gruppe eingef&uuml;gt werden soll.
+	Falls dieser Parameter auf -1 gesetzt wird, wird das Control die Gruppe an das Ende einf&uuml;gen
+$fStyle
+	[optional] Flags die den Stil des Bereiches festlegen. Dieser Wert kann eine Kombination der folgenden sein:
+		$RBBS_BREAK - Die Gruppe beginnt in einer neuen Zeile.
+		$RBBS_CHILDEDGE - Die Gruppe hat oben und unten des Unterfensters eine Kante.
+		$RBBS_FIXEDBMP - Das Hintergrundbitmap ver&auml;ndert sich nicht, wenn die Gruppe in der Gr&ouml;&szlig;e ver&auml;ndert wird.
+		$RBBS_FIXEDSIZE - Die Gruppe kann in der Gr&ouml;&szlig;e nicht ver&auml;ndert werden. Mit diesem Stil wird der Verschiebebalken nicht dargestellt.
+		$RBBS_GRIPPERALWAYS - Version 4.71. Die Gruppe hat immer einen Verschiebebalken, auch wenn es nur einen Bereich in der Rebar gibt.
+		$RBBS_HIDDEN - Die Gruppe wird nicht sichtbar sein.
+		$RBBS_NOGRIPPER - Version 4.71. Die Gruppe wird nie einen Verschiebebalken haben, auch nicht wenn es mehr als einen Bereich in der Rebar gibt.
+		$RBBS_USECHEVRON - Version 5.80. Zeigt einen "Chevron-Button" [>>] wenn die Gruppe kleiner als cxIdeal ist.
+		$RBBS_VARIABLEHEIGHT - Version 4.71. Die Gruppe kann durch das Rebar-Control in der Gr&ouml;&szlig;e ver&auml;ndert werden; cyIntegral und cyMaxChild sind f&uuml;r die Art wie die Rebar die Gruppe ver&auml;ndert verantwortlich.
+		$RBBS_NOVERT - nicht anzeigen wenn vertikal.
+		$RBBS_USECHEVRON - Zeigt Dropdown Button.
+		$RBBS_HIDETITLE - H&auml;lt den Titel versteckt.
+		$RBBS_TOPALIGN - H&auml;lt die Gruppe in der obersten Zeile.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_AddToolBarBand, _GUICtrlRebar_DeleteBand
+
+
+###Example###
+@@IncludeExample@@

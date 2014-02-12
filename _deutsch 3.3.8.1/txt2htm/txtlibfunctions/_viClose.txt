@@ -1,0 +1,33 @@
+###User Defined Function###
+_viClose
+
+###Description###
+Schlie&szlig;t eine VISA-Verbindung zu einem Ger&auml;t.
+
+###Syntax###
+#include <Visa.au3>
+_viClose($h_session)
+
+
+###Parameters###
+@@ParamTable@@
+$h_session
+	Ein VISA-Sessionhandle (genauso wie bei _viOpen).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 0 zur&uuml;ck.
+Fehler:	Der R&uuml;ckgabewert ist -1, wenn die VISA DLL nicht ge&ouml;ffnet werden konnte oder der VISA-Fehlercode nicht null ist (siehe VISA-Programmierguide).
+@@End@@
+Diese Funktion setzt im Falle eines Fehlers @error immer auf 1.
+
+###Remarks###
+F&uuml;r alle VISA-Funktionen m&uuml;ssen die VISA-Bibliotheken installiert sein (visa32.dll muss in {WINDOWS}\system32 liegen) und eine GPIB-Karte (eine National Instruments NI PCI-GPIB-Karte oder eine Agilent 82350B PCI High-Performance GPIB-Karte) muss installiert sein.
+
+###Related###
+_viExecCommand, _viFindGpib, _viGpibBusReset, _viGTL, _viOpen, _viSetAttribute, _viSetTimeout
+
+
+###Example###
+@@IncludeExample@@

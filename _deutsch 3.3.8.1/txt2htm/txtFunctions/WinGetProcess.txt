@@ -1,0 +1,35 @@
+###Function###
+WinGetProcess
+
+###Description###
+Ermittelt die Prozess ID (PID), die ein bestimmtes Fenster besitzt.
+
+###Syntax###
+WinGetProcess ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine numerische Prozess ID (PID) zur&uuml;ck.
+Fehler:	Gibt -1 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ProcessWait, ProcessWaitClose, ProcessList
+
+
+###Example###
+@@IncludeExample@@

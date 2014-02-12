@@ -1,0 +1,30 @@
+###Function###
+Asc
+
+###Description###
+Gibt den ASCII-Code eines Zeichens zur&uuml;ck.
+
+###Syntax###
+Asc ( "char" )
+
+
+###Parameters###
+@@ParamTable@@
+char
+	Das Zeichen, f&uuml;r das der Code zur&uuml;ckgegeben werden soll. Wird ein String angegeben, wird der Code f&uuml;r das erste Zeichen zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+Gibt den ASCII-Code des angegebenen Zeichens zur&uuml;ck.
+
+
+###Remarks###
+Siehe <a href="../appendix/ascii.htm">Anhang ASCII-Zeichensatz</a> f&uuml;r eine komplette ASCII-Tabelle.
+Asc("0") == 48, Asc("9") == 57, Asc("A") == 65, Asc("Z") == 90, Asc("a") == 97, Asc("z") == 122, etc.
+
+###Related###
+AscW, Chr, ChrW
+
+
+###Example###
+@@IncludeExample@@

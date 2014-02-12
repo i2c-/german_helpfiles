@@ -1,0 +1,65 @@
+###User Defined Function###
+_FTP_ProgressDownload
+
+###Description###
+L&auml;dt eine Datei im Bin&auml;rmodus herunter und zeigt entweder ein Fortschrittsfenster an oder ruft dazu eine Benutzerfunktion auf
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_ProgressDownload($l_FTPSession, $s_LocalFile, $s_RemoteFile [, $FunctionToCall = ""])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	FTP-Handle, wie von _FTP_Connect().
+$s_LocalFile
+	Die lokale Zieldatei.
+$s_RemoteFile
+	Die Quelldatei auf dem FTP-Server.
+$FunctionToCall
+	[optional] Eine Funktion, die einen Fortschrittsbalken aktualisieren und auf Benutzereingaben wie Klicks auf Abbrechen oder Beenden reagieren kann. (Mehr Informationen in den Bemerkungen)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error:
+@error:	-1 - Lokale Datei konnte nicht erstellt werden
+	-2 - Ermitteln der REmotedateigr&ouml;&szlig;e nicht m&ouml;glich
+	-3 - Quelldatei konnte nicht ge&ouml;ffnet werden
+	-4 - Fehler beim Lesen der Quelldatei
+	-5 - Schlie&szlig;en der Quelldatei fehlgeschlagen
+	-6 - Download durch Benutzerfunktion abgebrochen, deren R&uuml;ckgabewert wurde zur&uuml;ckgegeben
+	-7 - Das Schreiben der lokalen Datei fehlgeschlagen
+@@End@@
+
+###Remarks###
+Informationen zu $FunctionToCall:
+   Parameter: $Percentage - Der Fortschritt in Prozent
+   R&uuml;ckgabewerte: Download fortsetzen - 1
+                  Download abbrechen  - 0 oder negativ
+                       Diese R&uuml;ckgabewerte werden dann von _FTP_ProgressDownload() zur&uuml;ckgegeben,
+                       sodass auf verschiedene Ereignisse wie Abbruch durch Benutzer oder Beenden reagiert werden kann
+   Beispiele:
+                   Func _UpdateProgress($Prozent)
+                      ProgressSet($Prozentt,$Prozent &"%")
+                      If _IsPressed("77") Then Return 0 ; Abbruch bei F8
+                      Return 1 ; bei 1 Fortsetzten
+                   Endfunc
+
+                   Func _UpdateProgress($Prozent)
+                      GUICtrlSetData($ProgressBarCtrl,$Prozent)
+                      Switch GUIGetMsg()
+                         Case $GUI_EVENT_CLOSE
+                            Return -1 ; _FTP_DownloadProgress bricht mit -1 ab, so dass das Skript danach beendet werden kann
+                        Case $Btn_Cancel
+                           Return 0 ; Nur abbrechen, ohne spezielle R&uuml;ckgabe
+                      EndSwitch
+                      Return 1 ; andernfalls Download fortsetzen
+                   Endfunc
+
+
+###Related###
+
+
+###Example###

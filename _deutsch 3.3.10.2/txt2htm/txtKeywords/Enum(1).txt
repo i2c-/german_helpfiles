@@ -1,0 +1,32 @@
+###Keyword###
+Enum
+
+###Description###
+Z&auml;hlt Konstanten auf
+
+###Syntax###
+[<i>scope</i>] <b>Enum</b> [<b>Step</b> &lt;stepval&gt;] &lt;constantlist&gt;
+
+
+###Parameters###
+@@ParamTable@@
+scope
+	[optional] Der Bereich in dem die Aufz&auml;hlung platziert werden soll. Entweder Local, Global, Dim oder nichts.  Falls nichts, wird Dim verwendet.
+stepval
+	[optional] Der Standardschritt ist 1 zu addieren.  Andere m&ouml;gliche Schrittmethoden sind: *n, +n, -n wobei n eine ganze Zahl ist.
+constantlist
+	Die Konstantenliste, die hochgez&auml;hlt werden soll.
+@@End@@
+
+
+###Remarks###
+Standardm&auml;&szlig;ig ist die erste Konstante 0 und der Rest wird um 1 erh&ouml;ht.
+Wenn der Multiplikationsoperator als Schritt verwendet wird, wird der ersten Konstante 1 zugewiesen und der Rest wird mit dem vorherigen Konstantenwert multipliziert.
+Konstanten k&ouml;nnen explizit aus einer g&uuml;ltigen Anweisung bestimmt werden.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

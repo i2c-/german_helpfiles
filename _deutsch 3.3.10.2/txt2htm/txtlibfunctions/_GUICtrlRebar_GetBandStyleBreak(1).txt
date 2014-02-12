@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyleBreak
+
+###Description###
+Ermittelt, ob die Gruppe in einer neuen Zeile beginnt.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyleBreak ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	das Flag ist gesetzt (die Gruppe beginnt in einer neuen Zeile)
+False:	das Flag ist nicht gesetzt
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBandStyleBreak, _GUICtrlRebar_GetBandStyle
+
+
+###Example###
+@@IncludeExample@@

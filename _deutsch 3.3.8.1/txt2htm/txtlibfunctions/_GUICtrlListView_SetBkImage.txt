@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlListView_SetBkImage
+
+###Description###
+Setzt das Hintergrundbild in dem Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetBkImage($hWnd [, $sURL = "" [, $iStyle = 0 [, $iXOffset = 0 [, $iYOffset = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sURL
+	[optional] URL des Hintergrundbildes. Falls leer ("") besitzt das Control keinen Hintergrund
+$iStyle
+	[optional] Ermittelt den Stil des Hintergrundbildes:
+		0 - Normal
+		1 - gekachelt
+$iXOffset
+	[optional] Prozent der Fl&auml;che des Controls um die das Bild horizontal (X) verschoben sein soll. Nur g&uuml;ltig, wenn $iStyle = 0 ist.
+$iYOffset
+	[optional] Prozent der Fl&auml;che des Controls um die das Bild vertikal (Y) verschoben sein soll. Nur g&uuml;ltig, wenn $iStyle = 0 ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Es ist CoUninitialize aufzurufen, wenn die Anwendung beendet wird.
+Diese Funktion funktioniert nur mit _GUICtrlListView_Create oder externen ListViews.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_Create, _GUICtrlListView_GetBkImage
+
+###Example###
+@@IncludeExample@@

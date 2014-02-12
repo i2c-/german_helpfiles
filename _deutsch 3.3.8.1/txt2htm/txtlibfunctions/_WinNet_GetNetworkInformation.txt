@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinNet_GetNetworkInformation
+
+###Description###
+Gibt erweiterte Informationen zu einem bestimmten Netzwerk-Provider
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetNetworkInformation($sName)
+
+###Parameters###
+@@ParamTable@@
+$sName
+	Der Netzwerk-Provider zu welchem Informationen ben&ouml;tigt werden
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aInfo[0] - Versionsnummer der Netzwerk-Providersoftware
+	$aInfo[1] - Aktueller Status der Netzwerk-Providersoftware:
+	 0 - Das Netzwerk l&auml;uft
+	 1 - Das Netzwerk ist unerreichbar
+	 2 - Das Netzwerk ist momentan nicht f&auml;hig Anfragen zu bearbeiten
+	$aInfo[2] - Instanz-Handle f&uuml;r den Netzwerk-Provider
+	$aInfo[3] - H&ouml;herwertiges WORD des Netzwerktyps, einzigartig zu dem laufenden Netzwerk
+	$aInfo[4] - Eine Reihe von Bit-Flags aus denen sich die g&uuml;ltigen Drucknummern f&uuml;r das Weiterleiten der lokalen Drucker ergeben, mit dem niederwertigen Bit entsprechend zu LPT1.
+	$aInfo[5] - Satz von Bit-Flags hinweisend auf die g&uuml;ltigen lokalen Disketten-Laufwerke, die f&uuml;r umleitenden Disketten-Laufwerke genutzt werde k&ouml;nnen, mit dem niederwertigen Bit entsprechend zu A:.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetGetNetworkInformationA

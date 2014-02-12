@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_SetItemPosition32
+
+###Description###
+Bewegt ein Item zu der festgelegten Position im Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemPosition32($hWnd, $iIndex, $iCX, $iCY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iCX
+	Neue X-Koordinate der oberen linken Ecke des Items (in "ListView"-Koordinaten)
+$iCY
+	Neue Y-Koordinate der oberen linken Ecke des Items (in "ListView"-Koordinaten)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls das Control den Stil $LVS_AUTOARRANGE aufweist, rasten die Items in dem Control nach dem verschieben im Gitter ein. das Control muss sich in der "Icon" oder "kleine Icons" Ansicht befinden.
+
+Diese Funktion unterscheidet sich von der _GUICtrlListView_SetItemPosition Funktion in der Form, dass diese 32-bit Koordinaten benutzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemPosition
+
+###Example###
+@@IncludeExample@@

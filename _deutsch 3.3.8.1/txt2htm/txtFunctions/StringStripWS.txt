@@ -1,0 +1,41 @@
+###Function###
+StringStripWS
+
+###Description###
+Entfernt Leerstellen aus einem String.
+
+###Syntax###
+StringStripWS ( "string", flag )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu bearbeitende String.
+flag
+	Flag zum Kennzeichnen der Art des Entfernens (f&uuml;r mehrere Arten werden die Flags addiert):
+	1 = entferne f&uuml;hrende Leerstellen
+	2 = entferne nachfolgende Leerstellen
+	4 = entferne doppelte (oder mehr) Leerstellen zwischen den Zeichen
+	8 = entferne alle Leerstellen (&uuml;berschreibt alle anderen Flags)
+@@End@@
+
+
+###ReturnValue###
+Gibt den neuen String entsprechend den gesetzten Flags zur&uuml;ck.
+
+
+###Remarks###
+Leerstellen schlie&szlig;en die ASCII Zeichen Chr(9) bis Chr(13) mit ein, die f&uuml;r Horizontal-Tabulator, Zeilenvorschub, Vertikal-Tabulator, Seitenvorschub und Eingabe (Enter) stehen.
+Als Leerstellen gelten ebenfalls das Null-Zeichen ( Chr(0) ) sowie das Standard Leerzeichen ( Chr(32) ), das durch Dr&uuml;cken der Leertaste entsteht.
+
+Um einzelne Leerstellen zwischen W&ouml;rtern zu entfernen, ist die Funktion StringReplace zu benutzen.
+
+
+
+###Related###
+StringStripCR, StringIsSpace, StringReplace
+
+
+###Example###
+@@IncludeExample@@

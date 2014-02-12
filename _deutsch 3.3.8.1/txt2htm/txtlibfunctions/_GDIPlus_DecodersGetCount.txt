@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_DecodersGetCount
+
+###Description###
+Ermittelt die Anzahl von verf&uuml;gbaren Bilddecodern
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_DecodersGetCount()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Anzahl der ermittelten Bilddecoder
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_DecodersGetSize
+
+###See Also###
+@@MsdnLink@@ GdipGetImageDecodersSize
+
+###Example###
+@@IncludeExample@@

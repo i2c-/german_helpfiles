@@ -1,0 +1,44 @@
+###User Defined Function###
+_WordDocGetCollection
+
+###Description###
+Gibt ein Sammlungs-Objekt zur&uuml;ck, das alle Dokumente enth&auml;lt.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocGetCollection(ByRef $o_object [, $v_index = -1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt-Variable einer Word.Application, Objekt
+$v_index
+	[optional] Gibt an, ob eine Sammlung oder eine indizierte Instanz zur&uuml;ckgegeben werden soll.
+	-1 = (Standard) Gibt eine Sammlung zur&uuml;ck
+	0 = Gibt das aktive Dokument zur&uuml;ck
+	Der Name oder die Index-Nummer des Dokumentes, das zur&uuml;ckgegeben werden soll (1-basierend)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Liefert eine Objekt-Sammlung aller Dokumente, @EXTENDED = Dokumenten-Zahl
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Daten-Typ
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt-Typ
+	$_WordStatus_InvalidValue = Ung&uuml;ltiger Wert
+	$_WordStatus_NoMatch = Keine &Uuml;bereinstimmung 
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

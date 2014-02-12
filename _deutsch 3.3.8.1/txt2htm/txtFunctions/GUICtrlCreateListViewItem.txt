@@ -1,0 +1,45 @@
+###Function###
+GUICtrlCreateListViewItem
+
+###Description###
+Erstellt einen Eintrag in einer mehrspaltigen Liste (ListView)
+
+###Syntax###
+GUICtrlCreateListViewItem ( "text", listviewID )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Die Texte der einzelnen Spalten welche durch ein Trennzeichen getrennt. Das Trennzeichen kann mit <a href="AutoItSetOption.htm#GUIDataSeparatorChar">Opt("GUIDataSeparatorChar")</a> bestimmt werden.
+listviewID
+	Die Control-ID des ListView-Controls, zu dem der Eintrag hinzugef&uuml;gt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Diese Funktion erzeugt die einzelnen ListView-Eintr&auml;ge, die der Benutzer ausw&auml;hlen kann. 
+
+Die einzelnen Eintr&auml;ge funktionieren wie normale Controls und k&ouml;nnen mit <a href="GUICtrlSetData.htm">GUICtrlSetData</a> belegt werden.
+Eintr&auml;ge k&ouml;nnen wie jedes andere Control durch <a href="GUICtrlDelete.htm">GUICtrlDelete</a> gel&ouml;scht werden.
+Die ListView-Eintr&auml;ge k&ouml;nnen per Drag & Drop in jedes Edit- oderInput-Control gezogen werden, das den Status $GUI_ACCEPTFILES hat.
+Siehe GUICtrlCreateListView zur Ver&auml;nderung der Gr&ouml;&szlig;e der Spalten.
+
+Das spezielle Flag $GUI_BKCOLOR_LV_ALTERNATE kann zusammen mit dem ListView-Control dazu genutzt werden, den ListviewItems-Zeilen abwechselnd andere Hintergrundfarben zu geben.
+Die ungeraden Zeilen bekommen die Farbe, welche durch GUICtrlSetBkColor des ListView-Controls zugewiesen wird.
+Die geraden Zeilen bekommen die Farbe, welche durch GUICtrlSetBkColor des ListViewItem Controls zugewiesen wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateListView, GUICtrlSetData, GUICtrlSetState, GUICtrlDelete, GUIGetMsg, GUICtrlRead, GUIDataSeparatorChar (Option)
+
+
+###Example###
+@@IncludeExample@@

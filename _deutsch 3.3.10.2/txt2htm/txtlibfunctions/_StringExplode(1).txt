@@ -1,0 +1,37 @@
+###User Defined Function###
+_StringExplode
+
+###Description###
+Teilt einen String abh&auml;ngig von den gegebenen Trennzeichen wie PHP Explode v5 in Teilstrings auf.
+
+###Syntax###
+#include <String.au3>
+_StringExplode ( $sString, $sDelimiter [, $iLimit = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$sString
+	zu teilender String
+$sDelimiter
+	Trennzeichen (das Teilen erstreckt sich &uuml;ber den kompletten String, nicht nur individuelle Zeichen.
+$iLimit
+	[optional] Maximale Anzahl an zur&uuml;ckzugebende Elemente
+		=0 : (Standard) Teilt jedes Auftreten des Trennzeichens
+		>0 : Teilt bis zum Limit auf, das letzte Element wird den restlichen Teil des verbleibenden Strings enthalten
+		<0 : Teilt bei jedem Auftreten, jedoch enth&auml;lt das letzte Element nicht den restlichen Teil des verbleibenden Strings
+@@End@@
+
+###ReturnValue###
+Gibt ein Array welches den aufgeteilten String enth&auml;lt zur&uuml;ck.
+
+
+###Remarks###
+Es sind negative Begrenzungswerte zu verwenden, um die ersten m&ouml;glichen Elemente zu entfernen.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUIToolTip_SetMaxTipWidth
+
+###Description###
+Setzt die maximale Breite eines ToolTip Fensters
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetMaxTipWidth($hWnd, $iWidth)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iWidth
+	Maximale zu setzende ToolTip Fensterbreite
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die vorherige maximale ToolTip Breite
+
+###Remarks###
+Der maximale ToolTip Wert zeigt nicht die aktuelle ToolTip Breite an. Vielmehr bricht das Control den Text mit Leerzeichen in mehrere Zeilen um wenn der ToolTip String die maximale Breite erreicht hat.
+Falls der Text nicht in mehrere Zeilen unterteilt werden kann, wird er in einer einzelnen Zeile dargestellt. Diese L&auml;nge dieser Zeile k&ouml;nnte die maximale ToolTip Breite &uuml;berschreiten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetMaxTipWidth

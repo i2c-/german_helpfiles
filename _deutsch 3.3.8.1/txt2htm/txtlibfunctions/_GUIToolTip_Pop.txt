@@ -1,0 +1,23 @@
+###User Defined Function###
+_GUIToolTip_Pop
+
+###Description###
+Entfernt einen angezeigten ToolTip von der Anzeige
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_Pop($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

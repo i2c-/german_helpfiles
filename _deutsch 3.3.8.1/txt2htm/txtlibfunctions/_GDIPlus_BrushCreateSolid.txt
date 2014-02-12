@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_BrushCreateSolid
+
+###Description###
+Erstellt ein vollfarbiges F&uuml;llmuster-Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BrushCreateSolid([$iARGB = 0xFF000000])
+
+###Parameters###
+@@ParamTable@@
+$iARGB
+	[optional] Alpha, Rot, Gr&uuml;n und Blau Komponenten des F&uuml;llmusters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem vollfarbigen F&uuml;llmuster-Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit dem F&uuml;llmuster-Objekt fertig ist, ist _GDIPlus_BrushDispose aufzurufen, um die Ressourcen wieder freizugeben
+
+###Related###
+_GDIPlus_BrushDispose
+
+###See Also###
+@@MsdnLink@@ GdipCreateSolidFill
+
+###Example###
+@@IncludeExample@@

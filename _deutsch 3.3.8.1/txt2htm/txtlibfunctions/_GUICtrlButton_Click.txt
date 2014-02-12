@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlButton_Click
+
+###Description###
+Simuliert einen Klick auf einen Button
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_Click($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Falls der Button sich in einem Diagogfenster befindet und dieses nicht aktiv ist, k&ouml;nnte _GUICtrlButton_Click fehlschlagen.
+Um in diesem Fall sicher Erfolg zu haben, ist WinActivate aufzurufen, um das Dialogfenster zu aktivieren, bevor _GUICtrlButton_Click verwendet wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ BM_CLICK
+
+###Example###
+@@IncludeExample@@

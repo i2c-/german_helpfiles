@@ -1,0 +1,36 @@
+###Function###
+StringToBinary
+
+###Description###
+Konvertiert einen String zu Bin&auml;rdaten.
+
+###Syntax###
+StringToBinary ( expression [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ausdruck der zu Bin&auml;rdaten konvertiert werden soll.
+flag
+	[optional] Setzt das Format wie der String als bin&auml;r gespeichert werden soll:
+	  flag = 1 (Standard), Bin&auml;rdaten sind ANSI
+	  flag = 2, Bin&auml;rdaten sind UTF16 Little Endian
+	  flag = 3, Bin&auml;rdaten sind UTF16 Big Endian
+	  flag = 4, Bin&auml;rdaten sind UTF8
+@@End@@
+
+
+###ReturnValue###
+Gibt eine bin&auml;re Variante zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+###Related###
+Binary, BinaryToString, IsBinary, String
+
+
+###Example###
+@@IncludeExample@@

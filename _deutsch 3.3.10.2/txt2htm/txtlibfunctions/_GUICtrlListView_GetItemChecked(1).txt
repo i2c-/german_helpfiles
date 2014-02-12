@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_GetItemChecked
+
+###Description###
+Ermittelt den Status, ob das Listviewitem angehakt ist oder nicht
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemChecked ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index, von welchem der Status des Eintrags ermittelt wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItemChecked
+
+
+###Example###
+@@IncludeExample@@

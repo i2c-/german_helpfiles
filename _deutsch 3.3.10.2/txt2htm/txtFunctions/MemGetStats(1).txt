@@ -1,0 +1,35 @@
+###Function###
+MemGetStats
+
+###Description###
+Ermittelt Hauptspeicher-bezogene Informationen.
+
+###Syntax###
+MemGetStats (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt ein Array mit sieben Elementen und den Daten zur&uuml;ck:
+	$aArray[0] = Verwendeter Speicher (Prozentsatz des genutzten Speichers)
+	$aArray[1] = Gesamter physikalischer RAM
+	$aArray[2] = Verf&uuml;gbarer physikalischer RAM
+	$aArray[3] = Gr&ouml;&szlig;e des Pagefile
+	$aArray[4] = Verf&uuml;gbares Pagefile
+	$aArray[5] = Gesamter virtueller Speicher
+	$aArray[6] = Verf&uuml;gbarer virtueller Speicher
+Alle Gr&ouml;&szlig;en sind in <b>Kilobytes</b> angegeben.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

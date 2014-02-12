@@ -1,0 +1,37 @@
+###User Defined Function###
+_ProcessGetName
+
+###Description###
+Gibt einen String zur&uuml;ck, der den Prozessnamen der angegebenen PID beinhaltet.
+
+###Syntax###
+#include <Process.au3>
+_ProcessGetName ( $iPID )
+
+
+###Parameters###
+@@ParamTable@@
+$iPID
+	Die PID des laufenden Prozesses.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Name des Prozesses
+Fehler:	ein leerer String und setzt das @error-Flag ungleich 0
+@error:	1 - Prozess existiert nicht
+	2 - Fehler beim Einlesen der Prozessliste
+	3 - keinen Prozess gefunden
+@@End@@
+
+
+###Remarks###
+Erg&auml;nzend zu ProcessExists().
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

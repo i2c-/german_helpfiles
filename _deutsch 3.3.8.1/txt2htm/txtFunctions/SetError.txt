@@ -1,0 +1,34 @@
+###Function###
+SetError
+
+###Description###
+Manuelles Setzen des Wertes des @error-Makros. 
+
+###Syntax###
+SetError ( code [, extended [, return value]] )
+
+
+###Parameters###
+@@ParamTable@@
+code
+	Der gew&uuml;nschte Wert (als Ganzzahl), auf den @error gesetzt werden soll. 
+extended
+	[optional] Der optionale Wert (als Ganzzahl), auf den @extended gesetzt werden soll. Dies setzt das selbe Makro wie die SetExtended() Funktion.
+return value
+	[optional] &Uuml;berschreibt den Standard-R&uuml;ckgabewert und setzt ihn auf diesen Wert.
+@@End@@
+
+
+###ReturnValue###
+Normalerweise keiner, jedoch, wenn der optionale "return value" (R&uuml;ckgabewert) gesetzt ist, wird die Funktion diesen Wert zur&uuml;ckgeben.
+
+###Remarks###
+Wenn eine Funktion gestartet wird, wird @error auf 0 gesetzt. Au&szlig;er wenn SetError() aufgerufen wird. Dann wird @error mit dem Wert 0 erhalten bleiben, nachdem die Funktion beendet wurde. Dies bedeutet, dass @error explizit gesetzt werden muss, sollte es nach einer Funktion ausgewertet werden m&uuml;ssen. Folglich k&ouml;nnte es erforderlich sein, den Status von @error in einer Variablen zu speichern, wenn sie zum Testen einer While-Wend Schleife verwendet wird.
+Der "extended"-Parameter ist optional.  Er ist nur zur Verf&uuml;gung gestellt, um @error und @extended zur gleichen Zeit &auml;ndern zu k&ouml;nnen.  Wenn nur @extended gesetzt werden muss, wird empfohlen, die SetExtended()-Funktion zu verwenden.
+
+###Related###
+SetExtended
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,49 @@
+###Function###
+FileMove
+
+###Description###
+Verschiebt eine oder mehrere Dateien.
+
+###Syntax###
+FileMove ( "source", "dest" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+source
+	Der Quellpfad und Dateiname der Datei(en), die verschoben werden soll(en) (* Wildcards werden unterst&uuml;tzt).
+dest
+	Der Zielpfad und Dateiname der verschobenen Datei(en) (* Wildcards werden unterst&uuml;tzt).
+flag
+	[optional] Dieses Flag definiert, ob Dateien &uuml;berschrieben werden sollen, falls sie bereits existieren:
+	Die folgenden Werte k&ouml;nnen auch kombiniert werden:
+	 0 = (Standard) &Uuml;berschreibt bestehende Dateien nicht
+	 1 = &Uuml;berschreibt bestehende Dateien
+	 8 = Erstellt die Verzeichnisstruktur, falls diese nicht existiert (siehe Bemerkungen).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Quelldatei <i>source</i> nicht verschoben werden kann oder die Zieldatei <i>dest</i> bereits existiert und der Standardwert flag = 0 gesetzt ist.
+@@End@@
+
+
+###Remarks###
+Wenn Quelle und Ziel auf verschiedenen Laufwerken liegen, wird statt des direkten Verschiebens ein Kopier- und anschlie&szlig;ender L&ouml;schvorgang durchgef&uuml;hrt.
+
+Weil AutoIt keine Funktion "FileRename" besitzt, um Dateien umzubenennen, kann alternativ FileMove verwendet werden!
+
+Das Zielverzeichnis muss bereits bestehen, au&szlig;er der Parameter "flag" ist auf den Wert "8" gesetzt.
+Ist also der kombinierte "flag" auf den Wert "9" (1+8) eingestellt, wird vorab die Zielverzeichnisstruktur auf Vorhandensein &uuml;berpr&uuml;ft und im negativen Fall automatisch erstellt, danach wird die Zieldatei &uuml;berschrieben.
+
+Manche Dateiattribute verhindern das &Uuml;berschreiben einer Datei.
+
+
+###Related###
+FileCopy, FileDelete, FileRecycle, DirMove
+
+
+###Example###
+@@IncludeExample@@

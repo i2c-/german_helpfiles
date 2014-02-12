@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlSlider_SetTicFreq
+
+###Description###
+Setzt die Intervallfrequenz f&uuml;r Skalenstriche in einem Slider
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetTicFreq ( $hWnd, $iFreg )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iFreg
+	Frequenz f&uuml;r Skalenstriche.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Der Slider muss den Stil $TBS_AUTOTICKS besitzen, um diese Funktion nutzen zu k&ouml;nnen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_GetNumTics, _GUICtrlSlider_ClearTics
+
+
+###Example###
+@@IncludeExample@@

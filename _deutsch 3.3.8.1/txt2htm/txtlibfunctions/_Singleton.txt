@@ -1,0 +1,34 @@
+###User Defined Function###
+_Singleton
+
+###Description###
+Erzwingt ein Entwicklungsmodell bei dem nur eine Instanz des Skripts ausgef&uuml;hrt werden darf.
+
+###Syntax###
+#include <Misc.au3>
+_Singleton($sOccurenceName [, $iFlag = 0])
+
+###Parameters###
+@@ParamTable@@
+$sOccurenceName
+	frei w&auml;hlbarer String um die Instanz des Skripts zu identifizieren. Dieser String darf \ nicht enthalten, au&szlig;er man platziert ein Objekt in einem Namensraum (Siehe Bemerkungen).
+$iFlag
+	[optional] Optionen
+		0 - Beendet das Skript mit dem Exitcode -1 falls bereits eine Instanz existiert.
+		1 - Kehrt von der Funktion wieder zur&uuml;ck ohne das Skript zu beenden.
+		2 - Erlaubt jedem im System, auf das Objekt zuzugreifen. Dies ist n&uuml;tzlich, wenn ein "Global\" Objekt in einer Mehrbenutzerumgebung festgelegt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem Objekt welches f&uuml;r die Synchronisation verwendet wurde. (ein Mutex)
+Fehler:	0
+@@End@@
+
+###Remarks###
+Man kann das Objekt in einem Namensraum durch voranstellen von "Global\" oder "Local\" vor den Objektnamen platzieren. "Global\" Objekte kombiniert mit dem Flag 2 sind f&uuml;r eine Mehrbenutzerumgebung n&uuml;tzlich.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

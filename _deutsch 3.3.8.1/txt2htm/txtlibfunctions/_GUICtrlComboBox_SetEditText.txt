@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlComboBox_SetEditText
+
+###Description###
+Schreibt einen Text in das Input-Control der ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SetEditText($hWnd, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	zu schreibender Text
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+Falls diese Nachricht an eine ComboBox mit dem Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST gesendet wird, so wird diese Funktion fehlschlagen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetEditText, _GUICtrlComboBox_ReplaceEditSel
+
+###Example###
+@@IncludeExample@@

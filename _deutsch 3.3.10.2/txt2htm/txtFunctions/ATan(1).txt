@@ -1,0 +1,30 @@
+###Function###
+ATan
+
+###Description###
+Errechnet den Arcus-Tangens einer Zahl.
+
+###Syntax###
+ATan ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Irgendein erlaubter numerischer Audruck.
+@@End@@
+
+###ReturnValue###
+Gibt den trigonometrische Arcus-Tangens von einer Zahl zur&uuml;ck. Das Ergebnis wird als Bogenma&szlig; (Radiant) zur&uuml;ckgegeben (lat.arcus=Bogen).
+
+
+###Remarks###
+Das Resultat <b>4 * <a href="ATan.htm">ATan</a>(1)</b> ist PI.
+
+
+###Related###
+Sin, Cos, Tan, ASin, ACos
+
+
+###Example###
+@@IncludeExample@@

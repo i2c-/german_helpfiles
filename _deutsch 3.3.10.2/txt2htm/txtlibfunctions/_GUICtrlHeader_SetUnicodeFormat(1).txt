@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlHeader_SetUnicodeFormat
+
+###Description###
+Setzt das Unicode Zeichenformatflag f&uuml;r das Control
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetUnicodeFormat ( $hWnd, $fUnicode )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fUnicode
+	Unicodeflag:
+		True - Control verwendet Unicode Zeichen
+		False - Control verwendet ANSI Zeichen
+@@End@@
+
+###ReturnValue###
+Gibt das vorherige Unicode Formatflag zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetUnicodeFormat
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemText
+
+###Description###
+Setzt den Text des Items
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemText ( $hWnd, $iIndex, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$sText
+	Neuer Text des Items. Siehe Bemerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls ein Benachrichtigungs-Callback ben&ouml;tigt wird, so ist $sText = -1 (LPSTR_TEXTCALLBACK) festzulegen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemText
+
+
+###Example###
+@@IncludeExample@@

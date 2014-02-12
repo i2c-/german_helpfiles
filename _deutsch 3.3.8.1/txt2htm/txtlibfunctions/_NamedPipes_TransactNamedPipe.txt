@@ -1,0 +1,47 @@
+###User Defined Function###
+_NamedPipes_TransactNamedPipe
+
+###Description###
+Liest und beschreibt eine benannte Pipe in einer Netzwerkoperation.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_TransactNamedPipe($hNamedPipe, $pInpBuf, $iInpSize, $pOutBuf, $iOutSize [, $pOverlapped = 0])
+
+###Parameters###
+@@ParamTable@@
+$hNamedPipe
+	Das Handle zu einer benannten Pipe.
+$pInpBuf
+	Zeiger auf den Schreibpuffer, der die in die Pipe zu schreibenden Daten enth&auml;lt.
+$iInpSize
+	Gr&ouml;&szlig;e des Schreibpuffers in Byte.
+$pOutBuf
+	Zeiger auf den Lesepuffer, der mit den aus der Pipe gelesenen Daten gef&uuml;llt wird.
+$iOutSize
+	Gr&ouml;&szlig;e des Lesepuffers in Byte.
+$pOverlapped
+	[optional] Zeiger auf eine $tagOVERLAPPED-Struktur. Sie wird ben&ouml;tigt, wenn hNamedPipe mit $FILE_FLAG_OVERLAPPED ge&ouml;ffnet wurde, 
+		pOverlapped darf dann nicht 0 sein. 
+		Wenn hNamedPipe mit $FILE_FLAG_OVERLAPPED ge&ouml;ffnet wurde und pOverlapped nicht 0 ist,
+		wird TransactNamedPipe als &uuml;berlappende (asynchrone) Operation ausgef&uuml;hrt. 
+		Die $tagOVERLAPPED-Struktur sollte ein Abbruchereignis-Handle enthalten. 
+		Wenn die Operation nicht umgehend abgeschlossen werden kann, gibt TransactNamedPipe False zur&uuml;ck
+		und GetLastError liefert ERROR_IO_PENDING.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Anzahl der aus der Pipe gelesenen Bytes.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+TransactNamedPipe schl&auml;gt fehl, wenn der Server die Pipe nicht als Nachrichten-Pipe erzeugt hat oder
+das Pipe-Handle sich nicht im Nachrichten-Lese-Modus befindet.
+
+###Related###
+$tagOVERLAPPED, _NamedPipes_CallNamedPipe
+
+###See Also###
+@@MsdnLink@@ TransactNamedPipe

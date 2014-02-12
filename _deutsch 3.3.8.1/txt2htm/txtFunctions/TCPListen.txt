@@ -1,0 +1,40 @@
+###Function###
+TCPListen
+
+###Description###
+Erzeugt einen Abh&ouml;r-Anschluss ("Socket") f&uuml;r eine eingehende Verbindung.
+
+
+###Syntax###
+TCPListen ( IPAddr, port [, MaxPendingConnection] )
+
+
+###Parameters###
+@@ParamTable@@
+IPAddr
+	Internet Protokoll "Punkt-"Adresse(IpV4) wie z.B. "192.162.1.1".
+port
+	Port mit dem der erzeugte "Socket" verbunden werden soll.
+MaxPendingConnection
+	[optional] Maximale L&auml;nge der Warteschlange f&uuml;r ausstehende Verbindungen. Standardm&auml;&szlig;ig wird der maximal sinnvolle Wert gesetzt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die ID des Haupt-Anschlusses zur&uuml;ck
+Fehler:	Gibt -1 oder 0 zur&uuml;ck und setzt @error.
+@error:	1 IP-Adresse falsch.
+	2 Port falsch.
+	Windows API WSAGetError R&uuml;ckgabewerte (siehe <a href="http://msdn.microsoft.com/en-us/library/ms740668.aspx">MSDN</a>).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+TCPStartup, TCPConnect, TCPAccept, TCPTimeout (Option), TCPCloseSocket, TCPSend, TCPShutdown
+
+
+###Example###
+@@IncludeExample@@

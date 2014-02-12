@@ -1,0 +1,40 @@
+###Function###
+UDPOpen
+
+###Description###
+&Ouml;ffnet einen Anschluss (Socket), der mit einem existierenden Server verbunden ist.
+
+
+###Syntax###
+UDPOpen ( IPAddr, port [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+IPAddr
+	Internet Protokoll "Punkt-" Adresse(IpV4), z.B. "192.162.1.1".
+port
+	Port, auf dem der erzeugte Anschluss verbunden wird.
+flag
+	[optional] 0 (Standard) - Keine zus&auml;tzlichen Optionen werden gesetzt.
+	1 - Erlaubt das verwenden der Adresse "255.255.255.255".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array zur&uuml;ck: $array[1] enth&auml;lt den realen Anschluss (Socket), $array[2] enth&auml;lt die angegebene IP-Adresse und $array[3] enth&auml;lt den Port. Man ben&ouml;tigt diese Information in nachfolgenden Aufrufen f&uuml;r UDPSend(), f&uuml;r die man diese Socket Struktur/Array &uuml;bergeben muss.	  
+Fehler:	Gibt $array[0]=0 zur&uuml;ck und setzt @error.
+@error:	Windows API WSAGetError R&uuml;ckgabewerte (siehe <a href="http://msdn.microsoft.com/en-us/library/ms740668.aspx">MSDN</a>).
+@@End@@
+
+
+###Remarks###
+Diese Funktion wird von einem Client benutzt, um mit einem Server zu kommunizieren.
+
+
+###Related###
+UDPBind, UDPSend, UDPCloseSocket, UDPRecv
+
+
+###Example###
+@@IncludeExample@@

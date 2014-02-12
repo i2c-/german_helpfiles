@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetScrollPos
+
+###Description###
+Ermittelt die Scrollposition in dem Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetScrollPos($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array welches [x, y] enth&auml;lt
+Fehler:	setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Die Scrollposition ist die obere linke Ecke des Controls
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetScrollPos, _GUICtrlRichEdit_GetSelAA
+
+###See Also###
+@@MsdnLink@@ EM_GETSCROLLPOS
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonHighlighted
+
+###Description###
+Pr&uuml;ft, ob der festgelegte Button hervorgehoben ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonHighlighted($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+True:	Button ist hervorgehoben
+False:	Button ist nicht hervorgehoben
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

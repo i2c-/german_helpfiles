@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_SetItemImage
+
+###Description###
+Setzt den Index des Itemicons in der Imagelist des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemImage($hWnd, $iIndex, $iImage [, $iSubItem = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iImage
+	0-basierender Index innerhalb der Imagelist des Controls
+$iSubItem
+	[optional] 1-basierender Index des Subitems
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemImage
+
+###Example###
+@@IncludeExample@@

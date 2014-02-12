@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_SetWorkAreas
+
+###Description###
+Erstellt eine Arbeitsfl&auml;che innerhalb des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetWorkAreas ( $hWnd, $iLeft, $iTop, $iRight, $iBottom )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLeft
+	X-Koordinate der oberen linken Ecke des Rechtecks
+$iTop
+	Y-Koordinate der oberen linken Ecke des Rechtecks
+$iRight
+	X-Koordinate der unteren rechten Ecke des Rechtecks
+$iBottom
+	Y-Koordinate der unteren rechten Ecke des Rechtecks
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetNumberOfWorkAreas
+
+
+###Example###
+@@IncludeExample@@

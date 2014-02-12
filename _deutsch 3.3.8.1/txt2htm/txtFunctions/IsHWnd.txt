@@ -1,0 +1,33 @@
+###Function###
+IsHWnd
+
+###Description###
+&Uuml;berpr&uuml;ft, ob die Variable vom Typ Zeiger und Fenster-Handle ist.
+
+###Syntax###
+IsHWnd ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Die zu pr&uuml;fende Variable.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck, falls der Ausdruck vom Typ Zeiger ist UND ein g&uuml;ltiges Fenster-Handle ist.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Variable kein Zeiger ist ODER kein g&uuml;ltiges Fenster-Handle ist.
+@@End@@
+
+
+###Remarks###
+
+
+###Related###
+IsArray, IsFloat, IsInt, IsPtr, IsString, IsNumber, IsBool, GUICtrlGetHandle, IsBinary, VarGetType
+
+
+###Example###
+@@IncludeExample@@

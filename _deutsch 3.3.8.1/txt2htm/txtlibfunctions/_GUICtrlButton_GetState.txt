@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlButton_GetState
+
+###Description###
+Ermittelt den Status eines Buttons oder einer Checkbox
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetState($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der aktuelle Status des Buttons. Es k&ouml;nnen die folgenden Werte verwendet werden, um Informationen &uuml;ber den Status zu ermitteln:
+	  $BST_CHECKED - gibt an, ob der Button markiert ist.
+	  $BST_FOCUS - legt den Fokusstatus fest. Ein nonzero Wert gibt an, dass der Button den Tastatur-Fokus besitzt.
+	  $BST_INDETERMINATE - gibt an, dass der Button ausgegraut ist, weil dessen Status nicht ermittelbar ist.
+	    Dieser Wert findet nur Anwendung, falls der Button den Stil $BS_3STATE oder $BS_AUTO3STATE aufweist.
+	  $BST_PUSHED - legt den Status "highlight" fest. Ein nonzero Wert gibt an, das der Button hervorgehoben ist.
+	    Ein Button ist automatisch hervorgehoben, wenn sich der Cursor &uuml;ber dem Objekt befindet und die linke Maustaste gedr&uuml;ckt h&auml;lt.
+	    Das hervorgehobene verschwindet wieder, wenn die Maustaste wieder losgelassen wird.
+	  $BST_UNCHECKED - gibt an, dass der Button nicht markiert ist. Ebenso bei einem R&uuml;ckgabewert von 0.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlButton_SetState, _GUICtrlButton_GetCheck, _GUICtrlButton_SetCheck
+
+###See Also###
+@@MsdnLink@@ BM_GETSTATE
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyleGripperAlways
+
+###Description###
+Ermittelt, ob die Gruppe immer einen Verschiebebalken hat, auch wenn es die einzige Gruppe in der Rebar ist
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyleGripperAlways($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+True:	Flag ist gesetzt (Die Gruppe hat immer einen Verschiebebalken hat, auch wenn es die einzige Gruppe in der Rebar ist)
+False:	Flag ist nicht gesetzt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_SetBandStyleGripperAlways, _GUICtrlRebar_GetBandStyle
+
+###Example###
+@@IncludeExample@@

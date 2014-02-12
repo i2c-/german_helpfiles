@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetProcessAffinityMask
+
+###Description###
+Bezieht die "Affinity Mask" f&uuml;r den Prozess und das System
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetProcessAffinityMask($hProcess)
+
+###Parameters###
+@@ParamTable@@
+$hProcess
+	Ein offenes Handle zu dem Prozess dessen Affinity Mask gew&uuml;nscht ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aMask[0] - TRUE bei Erfolg, andernfalls FALSE
+	$aMask[1] - Prozess Affinity Mask
+	$aMask[2] - System Affinity Mask
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Eine Affinity Mask ist eine Bitmaske in der jedes Bit einen Prozessor repr&auml;sentiert auf dem den Threads des Prozesses
+zu laufen erlaubt wird. Zum Beispiel, wenn eine Maske mit 0x05 &uuml;bergeben wird, ist den Prozessoren 1 und 3 erlaubt zu laufen.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetProcessAffinityMask

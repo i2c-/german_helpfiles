@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_Scroll
+
+###Description###
+Scrollt den Inhalt eines Listviews
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_Scroll($hWnd, $iDX, $iDY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iDX
+	Wert des Typs int, welcher festlegt, wie viele Pixel in horizontaler Richtung gescrollt werden soll.
+		Falls das ListView-Control sich in der Ansicht "listview" befindet, legt dieser Wert die Anzahl von zu scrollenden Spalten fest
+$iDY
+	Wert des Typs int, welcher festlegt, wie viele Pixel in vertikaler Richtung gescrollt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn sich das ListView-Control in der Reportansicht befindet, kann das Control nur vertikal in ganzen Zeilenabst&auml;nden gescrollt werden. 
+Deshalb wird der $iDY Parameter auf die n&auml;chste Pixelzahl gerundet, welche auf einen komplette Zeile passt.
+Beispiel: Falls die H&ouml;he einer Zeile 16 Pixel hoch ist und f&uuml;r iDY 8 eingegeben wurde, so wird die Liste um 16 Pixel (1 Zeile) gescrollt. Falls 7 f&uuml;r $iDY eingegeben wurde, wird die Liste um 0 Pixel (0 Zeilen) gescrollt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

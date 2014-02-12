@@ -1,0 +1,26 @@
+###User Defined Function###
+_SQLite_Shutdown
+
+###Description###
+L&ouml;scht SQLite.dll
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Shutdown()
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Wenn _SQLite_Startup() fehlgeschlagen ist oder nicht gestartet wurde, wird ein AutoIt-Laufzeit-Fehler entstehen und das Skript wird beendet werden!
+AutoIt schlie&szlig;t automatisch alle dll-Dateien, die ge&ouml;ffnet sind. Es ist dennoch eine gute Idee _SQLite_Shutdown aufzurufen.
+
+###Related###
+_SQLite_Startup
+
+###Example###
+@@IncludeExample@@

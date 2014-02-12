@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlEdit_LineFromChar
+
+###Description###
+Ermittelt den Index der Zeile, welche den festgelegten Zeichenindex enth&auml;lt
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_LineFromChar($hWnd [, $iIndex = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	[optional] Der Zeichenindex des Zeichens, welches in der Zeile enthalten ist, dessen Zahl ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierende Zeilennummer der Zeile, welche den Zeichenindex festgelegt durch $iIndex enth&auml;lt
+
+###Remarks###
+Falls $iIndex –1 ist ermittelt _GUICtrlEdit_LineFromChar entweder die Zeilennummer der aktuellen Zeilen (Die Zeile enth&auml;lt das blinkende Zeichen) oder falls es dort eine Markierung gibt, die Zeilennummer der Zeile, wo die Markierung beginnt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

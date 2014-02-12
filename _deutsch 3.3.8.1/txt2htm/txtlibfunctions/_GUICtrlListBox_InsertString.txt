@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlListBox_InsertString
+
+###Description###
+F&uuml;gt einen String in die Liste ein
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_InsertString($hWnd, $sText [, $iIndex = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	einzuf&uuml;gender Textstring
+$iIndex
+	[optional] legt den 0-basierenden Index der Position fest, wo der String eingef&uuml;gt werden soll. Falls dieser Parameter
+		-1 ist, wird der String ans Ende der Liste angeh&auml;ngt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0-basierender Index der Itemposition
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Falls $iIndex -1, wird der String ans Ende der Liste angeh&auml;ngt. Im Gegensatz zu _GUICtrlListBox_AddString, veranlasst diese Funktion nicht, dass die Liste mit dem Stil $LBS_SORT sortiert wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_AddString, _GUICtrlListBox_DeleteString, _GUICtrlListBox_InitStorage
+
+###Example###
+@@IncludeExample@@

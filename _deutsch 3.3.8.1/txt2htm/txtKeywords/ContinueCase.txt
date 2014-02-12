@@ -1,0 +1,26 @@
+###Keyword###
+ContinueCase
+
+###Description###
+Bricht den aktuellen Case-Tree ab und setzt den n&auml;chsten Case-Tree in einem Select oder Switch Block fort.
+
+###Syntax###
+<b>ContinueCase</b>
+
+
+###Parameters###
+Keine.
+
+
+###Remarks###
+Normalweise wird in einem Select oder Switch Block ein Case beendet, wenn der n&auml;chste Case Befehl angesto&szlig;en wird.  Durch Ausf&uuml;hren von ContinueCase wird AutoIt vermittelt, dass der aktuelle Case beendet wird und der n&auml;chste Case fortgesetzt werden soll.  
+
+Beim Versuch ContinueCase au&szlig;erhalb einer Select oder Switch Block zu starten, wird einen fatalen Fehler verursachen.
+
+
+###Related###
+<a href="Select.htm">Select...EndSelect</a>, <a href="Switch.htm">Switch...EndSwitch</a>
+
+
+###Example###
+@@IncludeExample@@

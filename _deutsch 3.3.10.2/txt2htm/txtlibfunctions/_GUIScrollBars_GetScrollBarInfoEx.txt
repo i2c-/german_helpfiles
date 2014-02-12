@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUIScrollBars_GetScrollBarInfoEx
+
+###Description###
+Ermittelt Informationen &uuml;ber die festgelegten Scrollbar
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_GetScrollBarInfoEx ( $hWnd, $idObject )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$idObject
+	Legt das Scrollbar-Objekt fest. Dieser Parameter kann einer der folgenden Werte sein:
+		  $OBJID_CLIENT - Der $hWnd Parameter ist ein Handle des ScrollBar-Controls.
+		  $OBJID_HSCROLL - Die horizontale Scrollbar des $hWnd Fensters.
+		  $OBJID_VSCROLL - Die vertikale Scrollbar des $hWnd Fensters.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine $tagSCROLLBARINFO Struktur
+Fehler:	und setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+$tagSCROLLBARINFO, _GUIScrollBars_GetScrollBarRect, _GUIScrollBars_GetScrollBarRGState, _GUIScrollBars_GetScrollBarXYLineButton, _GUIScrollBars_GetScrollBarXYThumbBottom, _GUIScrollBars_GetScrollBarXYThumbTop
+
+
+###See Also###
+@@MsdnLink@@ GetScrollBarInfo
+
+
+###Example###
+@@IncludeExample@@

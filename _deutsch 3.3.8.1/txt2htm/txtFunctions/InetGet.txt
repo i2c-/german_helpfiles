@@ -1,0 +1,65 @@
+###Function###
+InetGet
+
+###Description###
+L&auml;dt eine Datei aus dem Internet unter Verwendung des HTTP-, HTTPS- oder FTP-Protokolls.
+
+###Syntax###
+InetGet ( "URL" [,"filename" [, options [, background]]] )
+
+
+###Parameters###
+@@ParamTable@@
+URL
+	URL der herunterzuladenden Datei. Siehe Bemerkungen unten.
+filename
+	[optional] Neuer, lokaler Dateiname nach dem Download.
+options
+	[optional] 0 = (Standard) Holt die Datei aus dem lokalen Cache, wenn vorhanden.
+	1 = Erzwingt ein erneutes Laden von der Remote-Seite
+	2 = Ignoriert alle SSL-Fehler (bei HTTPS-Verbindungen).
+	4 = Verwendet ASCII, wenn Dateien mit dem FTP-Protokol transferiert werden (Kann mit Flag 8 kombiniert werden).
+	8 = Verwendet BINARY, wenn Dateien mit dem FTP-Protokol transferiert werden (Kann mit Flag 4 kombiniert werden). Dies ist der Standardtransfermodus, falls kein anderer angegeben wird.
+	16 = Umgeht das Erzwingen einer Onlineverbindung (Siehe Bemerkungen).
+background
+	[optional] 0 = (Standard) Wartet mit der Fortsetzung des Skripts, bis der Download abgeschlossen ist.
+	1 = Sofortige Fortsetzung des Skripts, w&auml;hrend der Download im Hintergrund ausgef&uuml;hrt wird (siehe Bemerkungen).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der R&uuml;ckgabewert &auml;ndert sich abh&auml;ngig davon, ob der Download im Hintergrund l&auml;uft:
+	Hintergrund: Ein Handle wird zur&uuml;ckgegeben. Das Handle kann mit InetGetInfo() verwendet werden. Das Handle muss mit InetClose() freigegeben werden.
+	Warten: Die Anzahl der heruntergeladenen Bytes.
+Fehler:	Hintergrund: Ein Handle wird zur&uuml;ckgegeben. Um festzustellen, ob es beim Download einen Fehler gab, ist InetGetInfo() zu verwenden. Das Handle muss mit InetClose() freigegeben werden.
+	Warten: Setzt @error auf nicht-Null und gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+F&uuml;r diese Funktion muss Internet Explorer 3 oder h&ouml;her installiert sein.
+
+Der URL-Parameter sollte die folgende Form haben: "http://www.somesite.com/path/file.html" - wie eine Adresse, die man in den Webbrowser tippt.
+
+Um einen Benutzernamen und Passwort zum Verbinden zu benutzen, schreibt man einfach "Username:Passwort@" vor den Servernamen, z.B. "http://myuser:mypassword@www.somesite.com"
+
+<b>Anmerkungen zum "filename"-Parameter</b>
+Wenn nichts angegeben wird, wird die Datei nach "C:\Users\{NAME}AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.IE5\{CODE}\update[{ZAHL}].dat" gespeichert (Pfadangabe gilt f&uuml;r Windows 7). Den genauen Pfad kann man bei InetGet aber nicht herausfinden, da der CODE und die ZAHL nicht bekannt sind
+
+
+<b>Anmerkungen zum "background"-Parameter</b>
+Standardm&auml;&szlig;ig wartet die Funktion mit der Fortsetzung des Skripts, bis der Download abgeschlossen ist. Wenn der Parameter <b>background</b> auf 1 gesetzt wird, so wird das Skript sofort fortgesetzt und der Download l&auml;uft im Hintergrund weiter. Die Funktion InetGetInfo() kann verwendet werden, um den Status des Downloads festzustellen. Sie ben&ouml;tigt das Handle, welches von InetGet() zur&uuml;ckgegeben wurde.
+
+Mehrere parallele Downloads werden unterst&uuml;tzt, falls diese im Hintergrundmodus gestartet wurden.
+
+Um einen Download abzubrechen, ist InetClose() aufzurufen und das von InetGet() zur&uuml;ckgegebene Handle zu &uuml;bergeben.
+
+Standardm&auml;&szlig;ig erzwingt AutoIt eine Verbindung, bevor der Download beginnt. Bei Benutzern mit einer DF&Uuml;-Verbindung erscheint eine Nachricht, dass man Online gehen oder sich mit dem Modem einw&auml;hlen soll (abh&auml;ngig davon, wie das System konfiguriert ist). Der Wert 16 des <b>options</b>-Parameters deaktiviert dieses Verhalten. Das Deaktivieren dieses Verhaltens kann z.B. f&uuml;r st&auml;ndige Verbindungen (Breitband, LAN) sinnvoll sein. Es ist jedoch auch geeignet, um fehlerfrei unter Windows Vista und Windows 7 arbeiten zu k&ouml;nnen.
+
+###Related###
+InetGetSize, InetRead, InetGetInfo, InetClose, HttpSetProxy, FtpSetProxy, HttpSetUserAgent
+
+
+###Example###
+@@IncludeExample@@

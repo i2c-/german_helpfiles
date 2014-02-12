@@ -1,0 +1,47 @@
+###User Defined Function###
+_SQLite_Startup
+
+###Description###
+L&auml;dt die SQLite3.dll
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Startup([$sDll_Filename = "sqlite3.dll" [, $bUTF8ErrorMsg = False [, $bForceLocal = 0 [, $sPrintCallback = __SQLite_ConsoleWrite()]]]])
+
+
+###Parameters###
+@@ParamTable@@
+$sDll_Filename
+	[optional] Dll Dateiname
+$bUTF8ErrorMsg
+	[optional] Erzwingt, dass ConsoleWrite UTF8 Zeichen darstellt
+$bForceLocal
+     [optional] Zwingt SQLite eine lokale DLL-Datei zu benutzen, ansonsten wird die Datei heruntergeladen.
+$sPrintCallback
+	[optional] Der Name einer benutzerdefinierten Callback-Funktion, die aufgerufen wird, wenn SQLite eine Diagnosemeldung ausgeben m&ouml;chte. Siehe Bemerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Pfad zu SQLite3.dll zur&uuml;ck
+Fehler:	@error wird gesetzt
+@@End@@
+
+###Remarks###
+SQLite3.dll muss sich in @ScriptDir oder @SystemDir befinden.
+
+Wenn SQLite3.dll.au3 inkludiert ist, wird die DLL-Datei in @SystemDir erstellt.
+Wenn die Funktion nicht erfolgreich war, wird eine tempor&auml;re Datei erstellt, die bei _SQLite_Shutdown() gel&ouml;scht wird.
+
+Wenn $bUTF8ErrorMsg nicht 0 ist, so werden UTF8 formatierte Strings in die Konsole gedruckt.
+Dies erlaubt es Anwendungen wie SciTE diese Zeichen darzustellen, falls es mit output.code.page=65001 konfiguriert ist.
+Dies ist der Fall wenn SciTE unter einer nichtenglischen Version von Vista(fr) l&auml;uft.
+
+Der $sPrintCallback-Parameter gibt den Namen einer benutzerdefinierten Callback-Funktion an. An diese Funktion wird ein einzelner Parameter &uuml;bergeben, der die auszugebende Nachricht enth&auml;lt. Die Standard-Callback-Funktion ist 
+__SQLite_ConsoleWrite(). Diese Funktion kann gut als Beispiel f&uuml;r eine eigene Callback-Funktion dienen.
+
+###Related###
+_SQLite_Shutdown
+
+###Example###
+@@IncludeExample@@

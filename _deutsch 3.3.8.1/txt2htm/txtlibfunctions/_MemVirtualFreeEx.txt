@@ -1,0 +1,38 @@
+###User Defined Function###
+_MemVirtualFreeEx
+
+###Description###
+Entbindet und/oder gibt einen Seitenbereich innerhalb des virtuellen Adressspeichers eines bestimmten Prozesses frei
+
+###Syntax###
+#include <Memory.au3>
+_MemVirtualFreeEx($hProcess, $pAddress, $iSize, $iFreeType)
+
+###Parameters###
+@@ParamTable@@
+$hProcess
+	Handle zu einem Prozess
+$pAddress
+	Ein Zeiger zu der Basisadresse des Speicherbereiches der freigegeben/entbunden werden soll
+$iSize
+	Die Gr&ouml;&szlig;e des freizugebenden Bereiches in Bytes
+$iFreeType
+	Legt den Typ der Freigabeoperation fest:
+		$MEM_DECOMMIT - Entbindet den festgelegten Bereich der &uuml;berlassenen Speicherseiten. Nach der Operation befinden sich die Seiten in reserviertem Zustand.
+		$MEM_RELEASE - Gibt den festgelegten Bereich von reservierten Speicherseiten frei. Nach der Operation befinden sich die Seiten in freigegebenem Zustand.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_MemVirtualAllocEx
+
+###See Also###
+@@MsdnLink@@ VirtualFreeEx

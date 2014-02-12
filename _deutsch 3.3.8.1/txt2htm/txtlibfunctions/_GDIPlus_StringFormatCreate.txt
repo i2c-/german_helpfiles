@@ -1,0 +1,44 @@
+###User Defined Function###
+_GDIPlus_StringFormatCreate
+
+###Description###
+Erstellt ein String-Format-Objekt 
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_StringFormatCreate([$iFormat = 0 [, $iLangID = 0]])
+
+###Parameters###
+@@ParamTable@@
+$iFormat
+	[optional] Format Flags. K&ouml;nnen ein oder mehrere der folgenden sein: 
+		0x0001 - Gibt an, dass die Reihenfolge des Lesens von rechts nach links ist.
+		0x0002 - Legt fest, dass einzelne Textzeilen vertikal auf das Display gezeichnet werden.
+		0x0004 - Gibt an, dass Teile von Zeichen erlaubt sind um das Rechteck-Layout des strings zu &uuml;berragen
+		0x0020 - Gibt an, dass das Unicode-Layout Kontrollelement mit einem vertretenden Zeichen angezeigt wird.
+		0x0400 - Gibt an, dass f&uuml;r Zeichen, die in der gew&uuml;nschten Schriftart nicht unterst&uuml;tzt werden eine alternative Schriftart benutzt wird.
+		0x0800 - Gibt an, dass die Leerzeichen am Ende jeder Zeile in einen String-Messwert eingebunden werden.
+		0x1000 - Gibt an, dass der Umbruch des Textes auf die n&auml;chste Zeile deaktiviert ist.
+		0x2000 - Gibt an, dass nur ganze Zeilen in das Layout-Rechteck gelegt werden
+		0x4000 - Gibt an, dass Zeichen die das Layout-Rechteck &uuml;berragen und Text der &uuml;ber das Ende des Layout-Rechtecks hinausschaut angezeigt werden darf.
+$iLangID
+	[optional] Die Sprache die benutzt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle auf ein String-Format-Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man fertig ist mit dem String-Format, sollte man zur Freigabe der Ressourcen _GDIPlus_StringFormatDispose aufrufen.
+
+###Related###
+_GDIPlus_StringFormatDispose, _GDIPlus_StringFormatSetAlign
+
+###See Also###
+@@MsdnLink@@ GdipCreateStringFormat
+
+###Example###
+@@IncludeExample@@

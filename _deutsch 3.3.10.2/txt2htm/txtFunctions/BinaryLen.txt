@@ -1,0 +1,31 @@
+###Function###
+BinaryLen
+
+###Description###
+Gibt die Anzahl von Bytes einer Bin&auml;rvariablen zur&uuml;ck.
+
+###Syntax###
+BinaryLen ( binary ) 
+
+
+###Parameters###
+@@ParamTable@@
+binary
+	Die zu &uuml;berpr&uuml;fenden Bin&auml;rdaten. 
+@@End@@
+
+###ReturnValue###
+Gibt die L&auml;nge der Bin&auml;rdaten in Bytes zur&uuml;ck.
+ 
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Binary, BinaryMid
+
+
+###Example###
+@@IncludeExample@@

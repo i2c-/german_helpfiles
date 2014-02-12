@@ -1,0 +1,32 @@
+###User Defined Function###
+_WinNet_GetUniversalName
+
+###Description###
+Konvertiert laufwerksbasierte Pfade in die universelle Form
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetUniversalName($sLocalPath)
+
+###Parameters###
+@@ParamTable@@
+$sLocalPath
+	Laufwerksbasierter Name einer Netzwerkressource.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aPath[0] - UNC-Name (String) der Netzwerkressource
+	$aPath[1] - Name der Netzwerkverbindung
+	$aPath[2] - verbleibender Pfad-String
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetGetUniversalNameA

@@ -1,0 +1,29 @@
+###User Defined Function###
+_SQLite_SafeMode
+
+###Description###
+Deaktiviert oder aktiviert den Sicherheitsmodus
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_SafeMode($fSafeModeState)
+
+
+###Parameters###
+@@ParamTable@@
+$fSafeModeState
+	'True' oder 'False' zum Aktivieren oder Deaktivieren des Sicherheitsmodus
+@@End@@
+
+###ReturnValue###
+Gibt $SQLITE_OK zur&uuml;ck
+
+###Remarks###
+Der Sicherheitsmodus verhindert, dass SQLite abst&uuml;rzt, was durch die &Uuml;bergabe von ung&uuml;ltigen Abfragen oder ung&uuml;ltigen Datenbanken-Handles verursacht werden kann.
+Es ist als Standard aktiviert.
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

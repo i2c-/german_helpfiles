@@ -1,0 +1,54 @@
+###User Defined Function###
+_IENavigate
+
+###Description###
+Weist eine existierende Internet-Explorer-Instanz an, zu der angegebenen URL zu navigieren.
+
+###Syntax###
+#include <IE.au3> 
+_IENavigate(ByRef $o_object, $s_url [, $f_wait = 1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Fensters oder eines Frames.
+$s_url
+	URL, zu der navigiert werden soll (z.B. "http://www.Autoit.de").
+$f_wait
+	[optional] Legt fest, ob gewartet werden soll bis die Seite geladen ist.
+	0 = Nicht warten.
+	1 = (Standard) Warten bis die Seite geladen ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiges Objekt
+	6 ($_IEStatus_LoadWaitTimeout) = Zeit&uuml;berschreitung beim Laden
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung getrennt
+@Extended:	Nummer des ung&uuml;ltigen Parameters.
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt immer -1 zur&uuml;ck, weil die navigate-Methode keinen sinnvollen R&uuml;ckgabewert hat und deswegen nichts von ihr &uuml;bernommen werden kann. Man muss andere Methoden verwenden, um zu &uuml;berpr&uuml;fen, ob es funktioniert hat.
+
+Wenn der Browser eine URL laden soll, die in einer anderen Sicherheitszone liegt, wird in Windows Vista ein neues Browser Fenster erstellt. Dies erh&ouml;ht die Sicherheit. Dies geschieht auch bei dem ersten erstellen und wenn die Seite durch _IECreate erstellt wurde. Das neue Fenster ist eine neue Browser Instanz und vorherige Browser Instanzen haben keinen Bezug mehr darauf.
+Es gibt verschiedene M&ouml;glichkeiten dies zu umgehen:
+1) Es kann #RequireAdmin in dem Code hinzugef&uuml;gt werden (dies ist notwendig, wenn der Account ein Teil der Administratorgruppe ist und zeigt an, dass notwendige Referenzen verf&uuml;gbar sind).
+2) Es kann _IEAttach verwendet werden um es an ein neues Browser Fenster anzuh&auml;ngen.
+3) Es kann die Zielwebseite zu der vertrauten Sicherheitszone im Internet Explorer hinzugef&uuml;gt werden.
+4) Es kann der "gesch&uuml;tzte Modus" im Internet Explorer abgeschaltet werden.
+5) Es kann die Benutzerkontensteuerung (UAC) abgeschaltet werden. Jedoch muss man sich im Klaren sein, was es bedeutet, wenn man die Sicherheitsfeatures des Internet Explorers abschaltet, wenn man ungesch&uuml;tzte Seiten besucht.
+
+###Related###
+_IECreate, _IECreateEmbedded, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_GetColumnWidth
+
+###Description###
+Ermittelt die Breite einer Spalte in einem Bericht oder Listview
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetColumnWidth($hWnd, $iCol)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCol
+	Der Index der Spalte. Dieser Parameter wird in der Listview ignoriert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Spaltenbreite
+Fehler:	0
+@@End@@
+
+###Remarks###
+Falls die bestimmte Spalte nicht existiert und der $LVS_REPORT Stil verwendet wird, ist der R&uuml;ckgabewert undefiniert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetColumnWidth
+
+###Example###
+@@IncludeExample@@

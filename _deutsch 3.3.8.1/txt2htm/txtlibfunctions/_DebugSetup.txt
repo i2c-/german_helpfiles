@@ -1,0 +1,51 @@
+###User Defined Function###
+_DebugSetup
+
+###Description###
+Startet eine Debug-Sitzung durch Verwendung einer festgelegten Reportart
+
+###Syntax###
+#include <Debug.au3>
+_DebugSetup($sTitle = Default, $bBugReportInfos = False, $vReportType = 1, $sLogFile = "")
+
+###Parameters###
+@@ParamTable@@
+$sTitle
+	Titel, der dem Berichts-Fenster zugewiesen wird. Der Standardwert lautet "AutoIt Debug Report".
+$bBugReportInfos
+	Zeigt BugReport Infos.  Standard ist False.
+$vReportType
+	1 - Report-Logfenster (Standard).
+	2 - ConsoleWrite.
+	3 - MsgBox.
+	4 - FileWrite (in $sLogFile wird der Dateiname definiert).
+	5 - Report-Notepadfenster.
+	string - Name der zu verwendenden Reportfunktion.
+$sLogFile
+	Name der Datei falls $vReportType = 4
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Reporttyp.
+Fehler:	Setzt @Error
+@error: 1 falls bereits aufgerufen.
+	2 ung&uuml;ltiger Reporttyp.
+	3 ung&uuml;ltige CallBack-Funktion
+@@End@@
+
+###Remarks###
+Falls eine festgelegte Reportfunktion registriert ist, dann wird diese beim Beenden von AutoIt ohne Parameter aufgerufen.
+
+Man kann jeweils nur eine Debug-Sitzung im laufenden Skript ge&ouml;ffnet haben. 
+Man kann mehrere Skripte in der selben Debug-Sitzung verwenden, man muss dann nur denselben $sTitle verwenden, wenn _DebugSetup() aufgerufen wird. Alle Ausgaben von _DebugOut() erfolgen dann in dieselbe Debug-Sitzung.
+
+Wenn der Aufruf zu _DebugSetup() auskommentiert wird, werden die Aufrufe der Funktion _Debug...() ignoriert. Es wird aber empfohlen, im endg&uuml;ltigen Skript alle Aufrufe von _Debug-Funktionen zu entfernen.
+
+
+###Related###
+_DebugOut, _DebugReport, _DebugReportEx, _DebugReportVar
+
+
+###Example###
+@@IncludeExample@@

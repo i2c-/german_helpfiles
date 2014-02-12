@@ -1,0 +1,33 @@
+###Function###
+Eval
+
+###Description###
+Gibt den Inhalt einer Variable, welche durch einen String benannt wird, zur&uuml;ck.
+
+###Syntax###
+Eval ( string )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der Name der Variable als String.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Inhalt der Variable zur&uuml;ck.
+Fehler:	Gibt einen Leerstring ("") zur&uuml;ck, wobei @error auf einen Wert ungleich 0 gesetzt wird.
+@@End@@
+
+
+###Remarks###
+Falls man mit Eval() auf eine Variable zugreifen muss, ist es meistens sinnvoll, Assign()zu verwenden, um die Variable zu erstellen und zu beschreiben und IsDeclared(), um zu &uuml;berpr&uuml;fen, ob die Variable existiert (deklariert wurde).
+
+###Related###
+IsDeclared, Assign, Execute
+
+
+###Example###
+@@IncludeExample@@

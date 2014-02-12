@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlTreeView_SetUnicodeFormat
+
+###Description###
+Setzt dast Unicode Zeichen-Format-Flag
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetUnicodeFormat ( $hWnd [, $iFormat = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iFormat
+	[optional] entscheidet, welche Zeichen durch das Control verwendet werden.
+		True - Das Control verwendet Unicode Zeichen
+		False - Das Control verwendet ANSI Zeichen
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Zeichen-Format-Flag Einstellung zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetUnicodeFormat
+
+
+###Example###
+@@IncludeExample@@

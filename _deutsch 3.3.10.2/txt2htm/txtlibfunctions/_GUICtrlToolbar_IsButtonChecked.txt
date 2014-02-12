@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonChecked
+
+###Description###
+Zeigt an, ob der festgelegte Button markiert ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonChecked ( $hWnd, $iCommandID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	der Button ist markiert
+False:	der Button ist nicht markiert
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

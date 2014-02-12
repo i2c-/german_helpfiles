@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlToolbar_LoadImages
+
+###Description###
+L&auml;dt systemdefinierte Buttonbilder in eine Imagelist eines Toolbar Controls
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_LoadImages($hWnd, $iBitMapID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iBitMapID
+	ID von einer systemdefinierten Button Imagelist. Kann einer der folgenden Werte sein:
+		$IDB_HIST_LARGE_COLOR
+		$IDB_HIST_SMALL_COLOR
+		$IDB_STD_LARGE_COLOR
+		$IDB_STD_SMALL_COLOR
+		$IDB_VIEW_LARGE_COLOR
+		$IDB_VIEW_SMALL_COLOR
+		$IDB_HIST_NORMAL
+		$IDB_HIST_HOT
+		$IDB_HIST_DISABLED
+		$IDB_HIST_PRESSED
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die Anzahl von Bildern in der Imagelist, ohne das eben hinzugef&uuml;gte
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

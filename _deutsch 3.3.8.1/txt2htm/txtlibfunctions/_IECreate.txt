@@ -1,0 +1,67 @@
+###User Defined Function###
+_IECreate
+
+###Description###
+Erstellt ein Internet-Explorer-Fenster.
+
+###Syntax###
+#include <IE.au3> 
+_IECreate([$s_Url = "about:blank" [, $f_tryAttach = 0 [, $f_visible = 1 [, $f_wait = 1 [, $f_takeFocus = 1]]]]])
+
+###Parameters###
+@@ParamTable@@
+$s_Url
+	[optional] Gibt an, welche Url beim Erstellen aufgerufen werden soll
+$f_tryAttach
+	[optional] Gibt an, ob versucht werden soll, ein vorhandenes IE-Fenster (weiter) zu nutzen
+	0 = (Standard) Nicht versuchen, ein vorhandenes Fenster zu nutzen
+	1 = Versuchen, ein vorhandenes Fenster zu nutzen
+$f_visible
+	[optional] Gibt an, ob das Browserfenster sichtbar sein soll
+	0 = Browserfenster ist versteckt
+	1 = (Standard) Browserfenster ist sichtbar
+$f_wait
+	[optional] Legt fest, ob die erste Seite geladen werden soll, bevor der n&auml;chste Befehl im Skript ausgef&uuml;hrt wird
+	0 = Sofort n&auml;chsten Befehl ausf&uuml;hren, nicht warten bis die Seite geladen ist
+	1 = (Standard) Warten bis die Seite geladen ist
+$f_takeFocus
+	[optional] Legt fest, ob ein weitergenutztes Fenster den Fokus erhalten soll
+	0 = Fenster nicht fokussieren
+	1 = (Standard) Fenster fokussieren
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die auf ein InternetExplorer.Application-Objekt verweist
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Zeit&uuml;berschreitung beim Laden
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung getrennt
+@Extended:	Wird auf true (1) oder false (0) gesetzt, je nachdem, ob $f_tryAttach erfolgreich war.
+@@End@@
+
+
+###Remarks###
+Wenn man tryAttach verwendet, gibt es einen No-Match-Fehler in der Konsole von _IEAttach.  Das kann mit der Funktion _IEErrorNotify beeinflusst werden.
+
+Wenn man eine lokale HyperTextApplication (.hta) &ouml;ffnet, wird der Internet Explorer einen neuen Browserprozess starten, der nicht mit dem Objekt von _IECreate gesteuert werden kann. Um das neue Browserfenster anzusteuern, muss man _IEAttach mit der "embedded"-Option benutzen.
+
+Wenn der Browser eine URL laden soll, die in einer anderen Sicherheitszone liegt, wird in Windows Vista wird ein neues Browser Fenster erstellt. Dies erh&ouml;ht die Sicherheit. Dies geschieht auch bei dem ersten erstellen und wenn die Seite durch _IECreate erstellt wurde. Das neue Fenster ist eine neue Browser Instanz und vorherige Browser Instanzen haben keinen Bezug mehr darauf.
+Es gibt verschiedene M&ouml;glichkeiten dies zu umgehen:
+1) Es kann #RequireAdmin in dem Code hinzugef&uuml;gt werden (dies ist notwendig, wenn der Account ein Teil der Administratorgruppe ist und zeigt an, dass notwendige Referenzen verf&uuml;gbar sind).
+2) Es kann _IEAttach verwendet werden um es an ein neues Browser Fenster anzuh&auml;ngen.
+3) Es kann die Zielwebseite zu der vertrauten Sicherheitszone im Internet Explorer hinzugef&uuml;gt werden.
+4) Es kann der "gesch&uuml;tzte Modus" im Internet Explorer abgeschaltet werden.
+5) Es kann die Benutzerkontensteuerung (UAC) abgeschaltet werden. Jedoch muss man sich im Klaren sein, was es bedeutet, wenn man die Sicherheitsfeatures des Internet Explorers abschaltet, wenn man ungesch&uuml;tzte Seiten besucht.
+
+
+###Related###
+_IEAttach, _IECreateEmbedded, _IEQuit, _IENavigate, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

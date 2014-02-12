@@ -1,0 +1,75 @@
+###User Defined Function###
+_WordDocPropertySet
+
+###Description###
+Legt eine ausgew&auml;hlte Eigenschaft einer Word-Datei fest.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocPropertySet(ByRef $o_object, $v_property, $v_newvalue)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines Word.Application Dokumentobjekts.
+$v_property
+	gew&auml;hlte Eigenschaft (siehe Bemerkungen)
+$v_newvalue
+	Der neue Wert, der in der Eigenschaft des Word-Dokuments gesetzt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = Allgemeiner Fehler
+	$_WordStatus_ComError = Com Fehler
+	$_WordStatus_InvalidDataType = Unzul&auml;ssiger Datentyp
+	$_WordStatus_InvalidObjectType = Unzul&auml;ssiger Objekttyp
+	$_WordStatus_InvalidValue = Unzul&auml;ssiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Man kann entweder den Index oder Namen f&uuml;r die Auswahl der Eigenschaft verwenden.
+
+Die folgenden Tabellen zeigen eine Beschreibung f&uuml;r jede verf&uuml;gbare Eigenschaft.
+
+<b><u>Word Dokument Eigenschaften</u></b>
+
+@@ParamTable@@
+<b>Index der Eigenschaft/Name</b>
+	<b>Beschreibung</b>
+(1) "title"
+	Titel.
+(2) "subject"
+	Thema.
+(3) "author"
+	Autor.
+(4) "keywords"
+	Stichw&ouml;rter.
+(5) "comments"
+	Kommentare.
+(6) "template"
+	Name der Vorlage.
+(9) "application name"
+	Name der Anwendung.
+(18) "category"
+	Kategorie.
+(20) "manager"
+	Manager.
+(21) "company"
+	Firma.
+(29) "hyperlink base"
+	Wenn ein relativer Link auf einem festgelegten Pfad basiert (der erste Teil des Pfades der Datei, der den Hyperlink und die Zieldatei enth&auml;lt), ist der Pfad die Basis des Hyperlinks.
+@@END@@
+
+
+###Related###
+_WordDocPropertyGet
+
+
+###Example###
+@@IncludeExample@@

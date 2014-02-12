@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetExtendedUI
+
+###Description###
+W&auml;hlt entweder die Standardbenutzeroberfl&auml;che oder die erweiterte Benutzeroberfl&auml;che aus
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetExtendedUI($hWnd [, $fExtended = False])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fExtended
+	[optional] legt fest, ob die Combobox erweitert angezeigt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Standardm&auml;&szlig;ig &ouml;ffnet oder schlie&szlig;t die F4-Taste die Liste und die "Pfeil-runter"-Taste &auml;ndert die aktuelle Auswahl.
+
+In einer ComboBox mit der erweiterten Benutzeroberfl&auml;che ist die F4-Taste deaktiviert und das dr&uuml;cken der "Pfeil-runter"-Taste &ouml;ffnet die Dropdown Liste
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_GetExtendedUI
+
+###Example###
+@@IncludeExample@@

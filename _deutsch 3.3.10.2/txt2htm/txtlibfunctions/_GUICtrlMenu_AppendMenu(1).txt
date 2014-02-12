@@ -1,0 +1,72 @@
+###User Defined Function###
+_GUICtrlMenu_AppendMenu
+
+###Description###
+H&auml;ngt ein neues Item an das Ende der festgelegten Men&uuml;leiste, Untermen&uuml; oder Shortcut Men&uuml; an
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_AppendMenu ( $hMenu, $iFlags, $iNewItem, $pNewItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iFlags
+	legt die Flags um das Erscheinungsbild und das Verhalten des neuen Men&uuml;items:
+		$MF_BITMAP - Verwendet ein Bitmap f&uuml;r das Men&uuml;item
+		$MF_CHECKED - Platziert ein anzuhakendes Feld neben dem Men&uuml;item. Falls die Anwendung anzuhakende Bitmaps akzeptiert,
+			zeigt dieses Flag ein anzuhakende Bitmap neben dem Item.
+		$MF_DISABLED - Deaktiviert das Men&uuml;item so dass es nicht ausgew&auml;hlt werden kann, aber das Flag graut es nicht aus.
+		$MF_ENABLED - Aktiviert das Men&uuml;item so dass es ausgew&auml;hlt werden kann und setzt es von dessen ausgegrauten Status zur&uuml;ck.
+		$MF_GRAYED - Deaktiviert das Men&uuml;item und graut es aus, so dass es nicht ausgew&auml;hlt werden kann.
+		$MF_MENUBARBREAK - Funktioniert wie $MF_MENUBREAK f&uuml;r eine Men&uuml;lieste. F&uuml;r ein Dropdown Men&uuml;, Untermen&uuml; oder
+					Shortcut Men&uuml; wird die neue Spalte durch eine vertikale Linie von der alten getrennt.
+		$MF_MENUBREAK - Platziert das Item in eine neue Zeile (f&uuml;r eine Men&uuml;leiste) oder in eine neue Spalte (f&uuml;r ein Dropdown Men&uuml;,
+					Untermen&uuml;, oder Shortcut Men&uuml;) ohne eine trennende Spalte.
+		$MF_OWNERDRAW - Legt fest, dass das Item ein selbst gezeichnetes Item ist. Bevor das Men&uuml; zum ersten Mal dargestellt wird
+					empf&auml;ngt das Men&uuml; eine $WM_MEASUREITEM Nachricht um die Breite und H&ouml;he des Men&uuml;items
+					zu empfangen. Die $WM_DRAWITEM Nachricht wird zu der Fensterprozedur des eigenen Fensters gesendet, immer wenn das Men&uuml;item aktualisiert werden muss.
+		$MF_POPUP - Legt fest, dass Men&uuml;item ein Dropdown Men&uuml; oder Untermen&uuml; &ouml;ffnet. Der iNewItem Parameter
+					legt ein Handle zu dem Dropdown Men&uuml; oder Untermen&uuml; fest. Dieses Flag wird verwendet um einen Men&uuml;namen zu einer Men&uuml;leiste hinzuzuf&uuml;gen oder ein
+					Men&uuml;item welches ein Untermen&uuml; in einem Dropdown Men&uuml;, Untermen&uuml; oder Shortcut Men&uuml; &ouml;ffnet.
+		$MF_SEPARATOR -  Zeichnet eine horizontal teilende Linie. Dieses Flag wird nur in einem Dropdown Men&uuml;, Untermen&uuml; oder
+					Shortcut Men&uuml; verwendet. Die Linie kann nicht ausgegraut, deaktivert oder hervorgehoben werden. Der pNewItem und iNewItem Parameter werden ignoriert.
+		$MF_STRING - Legt fest, dass das Men&uuml;item ein Textstring ist. Der pNewItem Parameter ist ein String.
+		$MF_UNCHECKED - Platziert kein anzuhakendes Feld neben dem Itemm. Falls die Anwendung anzuhakende Bitmaps akzeptiert,
+					zeigt dieses Flag ein leeres Bitmap neben dem Item.
+$iNewItem
+	Legt fest, ob entweder die ID des neuen Men&uuml;items oder falls der $iFlags Parameter auf Popup
+		gesetzt ist, ein Handle zu dem Dropdown Men&uuml; oder Untermen&uuml;.
+$pNewItem
+	Legt den Inhalt des neuen Men&uuml;items fest. Die Deutung von pNewItem ist abh&auml;ngig, ob
+		der iFlags Parameter die Flags $MF_BITMAP, $MF_OWNERDRAW oder $MF_STRING einschlie&szlig;t:
+		$MF_BITMAP - Enth&auml;lt ein Bitmap Handle
+		$MF_OWNERDRAW - Enth&auml;lt einen anwendungsspezifischen Wert der verwendet werden kann, um zus&auml;tzliche Daten,
+		von dem Men&uuml;item zu erhalten. Dieser Wert ist in dem ItemData Member der Struktur, welche verwiesen ist durch den lParam Parameter von
+		der $WM_MEASUREITEM oder $WM_DRAWITEM Nachricht, welche gesendet wird, wenn das Men&uuml; erstellt wurde oder dessen Erscheinungsbild aktualisiert wurde.
+		$MF_STRING - Enth&auml;lt einen String
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_InsertMenuItem
+
+
+###See Also###
+@@MsdnLink@@ AppendMenu
+
+
+###Example###
+@@IncludeExample@@

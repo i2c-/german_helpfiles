@@ -1,0 +1,42 @@
+###Structure Name###
+$tagNMDATETIMEFORMAT
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber einen Teilbereich des Strings, die das R&uuml;ckruffeld innerhalb eines DTP-Controls definiert
+
+###Syntax###
+Global Const $tagNMDATETIMEFORMAT = $tagNMHDR & ";ptr Format;short Year;short Month;short DOW;short Day;" & _
+		"short Hour;short Minute;short Second;short MSecond;ptr pDisplay;char Display[64]"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Format
+	Zeiger auf einen null-terminierten String, welche das R&uuml;ckruffeld des Controls definiert. Der String umfasst
+	ein oder mehrere "X" Zeichen.
+Year
+	Jahr
+Month
+	Monat
+DOW
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSecond
+	Millisekunden
+pDisplay
+	Zeiger auf einen null-terminierten String, die den Anzeigetext des Controls enth&auml;lt. Standardm&auml;&szlig;ig ist dies die Adresse des <b>pDisplay</b>-Mitglieds dieser Struktur. Ein existierender String in <b>pDisplay</b> als Verweis wird akzeptiert. In diesem Fall muss kein Wert mit <b>pDisplay</b> verkn&uuml;pft werden. Jedoch muss der String der <b>pDisplay</b> verweist, solange g&uuml;ltig bleiben, bis eine andere $DTN_FORMAT-Benachrichtigung gesendet wird oder bis das Control zerst&ouml;rt wird.
+Display
+	64 Zeichen Puffer, dazu dienlich, um den Null-terminierten String zu ermitteln, welche den Text des Controls
+	anzeigen soll. Es ist nicht n&ouml;tig, den gesamten Puffer zu f&uuml;llen.
+@@End@@
+
+###Remarks###
+Sie &uuml;bertr&auml;gt den String, welcher das R&uuml;ckruffeld definiert und enth&auml;lt einen Puffer, um den String zu ermitteln, der in dem R&uuml;ckruffeld angezeigt wird. Diese Struktur wird bei der $DTN_FORMAT-Benachrichtigung verwendet.

@@ -1,0 +1,47 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawImageRect
+
+###Description###
+Zeichnet ein Bild an einer festgelegten Stelle
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawImageRect ( $hGraphics, $hImage, $nX, $nY, $nW, $nH )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$hImage
+	Handle zu einem Bild-Objekt
+$nX
+	Die X Koordinate der oberen linken Ecke des gerenderten Bildes
+$nY
+	Die Y Koordinate der oberen linken Ecke des gerenderten Bildes
+$nW
+	legt die Breite des Zielrechtecks fest, an dem das Bild gezeichnet werden soll
+$nH
+	legt die H&ouml;he des Zielrechtecks fest, an dem das Bild gezeichnet werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipDrawImageRect
+
+
+###Example###
+@@IncludeExample@@

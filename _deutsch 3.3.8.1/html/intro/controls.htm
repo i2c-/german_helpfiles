@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Controls</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css"></head>
+<body>
+<h1>Controls</h1>
+
+<p>Eines der besten Features von AutoIt v3 ist die M&ouml;glichkeit,
+direkt mit verschiedenen Arten von <em>Controls (Bedienelementen)</em> zu
+arbeiten. Fast alles, was man in einem Fenster sieht, ist in irgendeiner Form
+ein Control: Ein Button, eine Listbox, ein Eingabefeld (Edit), ein
+statischer Text..., all das sind Controls.
+Notepad ist &uuml;brigens einfach ein gro&szlig;es Eingabefeld (Edit)! 
+Weil AutoIt direkt mit dem Control zusammen arbeitet, ist die Verwendung von
+Funktionen zuverl&auml;ssiger als das Senden von Tastendr&uuml;cken.</p>
+
+<p> </p>
+
+<p><strong><em>Hinweis</em></strong><em>:
+AutoIt kann nur mit standard-konformen Windows-Controls zusammenarbeiten
+- manche Anwendungen haben ihre eigenen Spezial-Controls, die
+vielleicht so &auml;hnlich wie die Microsoft-Controls aussehen, aber
+oft nicht automatisierbar sind. Ausprobieren! </em></p>
+
+<p> </p>
+<p><strong>Hilfswerkzeug zur Identifikation von Controls</strong>
+<p>Mit dem <a href="au3spy.htm">AutoIt Window Info Tool </a> kann die Maus &uuml;ber Controls gehalten werden, um alle relevanten Informationen dar&uuml;ber zu erhalten. Die Controls enthalten folgende <em>Eigenschafts-</em>Informationen:</p>
+
+<ul>
+<li>Control-ID </li>
+<li>ClassNameNN</li>
+<li>Text</li>
+<li>Control-Handle (HWND) (Nicht verf&uuml;gbar im AutoIt-Window-Info-Tool -
+siehe unten)</li>
+</ul>
+
+
+<p>Immer wenn eine <a href="../functions/ControlClick.htm">Control...(</a>)-Funktion eine <strong>ControlID</strong> als Parameter erwartet (das sind die meisten), kann <strong>eine</strong>
+der folgenden Methoden angewendet werden. Die Methode, die gew&auml;hlt wird, h&auml;ngt von den pers&ouml;nlichen Vorlieben und den
+Ergebnissen der Anwendung des AutoIt-Window-Info-Tools ab. Im Allgemeinen ist die beste Methode die Verwendung der <strong>Control-ID</strong>,
+w&auml;hrend die anderen Methoden verwendet werden, falls die
+ControlID nicht verf&uuml;gbar oder nicht nur einmal vorhanden  ist. Oft hat bei statischen Textcontrols jeder Teil die gleiche ControlID,
+sodass andere Verfahren n&ouml;tig werden.</p>
+
+<p> </p>
+
+<ul>
+  <li><strong>Control-ID - </strong>Die Control-ID ist die interne Identifizierungsnummer, die das Fenster jedem Control zuweist. Es ist im Allgemeinen die beste Methode, Controls sicher zu identifizieren. Zus&auml;tzlich zum AutoIt-Window-Info-Tool k&ouml;nnen z.B. auch Screenreader f&uuml;r die blinden und von Microsoft stammenden
+    Tools/APIs die ControlIDs auslesen. </li>
+
+  <li><strong>TEXT - </strong>AU3Info zeigt den Text an, den es aus einem Control liest. F&uuml;r einen Button mit der Beschriftung <strong><u>W</u>eiter</strong>, hei&szlig;t es <strong>&Weiter</strong> - das & bedeutet dabei, dass der darauf folgende Buchstabe unterstrichen wird (Shortcut Alt + Buchstabe zum Ausw&auml;hlen). Dieser Text kann anstelle des "ClassNameNN" verwendet werden, um das Control zu identifizieren, wenn das erw&uuml;nscht ist - aber mehrere Controls mit gleichem Text f&uuml;hren dann zu Problemen.
+  <li><strong>CLASS - </strong>Interner Control-Klassenname (Classname), z.B. "Edit" oder "Button" </li>
+  <li><strong>CLASSNN -</strong> Der ClassNameNN-Wert, wie er in fr&uuml;heren AutoIt-Versionen Verwendung fand, z.B. "Edit1".  </li>
+	<li><b>NAME</b> - Der interne .NET Framework WinForms Name (falls verf&uuml;gbar)</li>
+	<li><strong>REGEXPCLASS -</strong> Der Control-Klassenname verwendet einen <a href="../functions/StringRegExp.htm">regul&auml;ren Ausdruck</a> </li>
+	<li><strong>X</strong> \ <strong>Y</strong> \ <strong>W</strong> \ <strong>H</strong> 
+	- Die Position und Gr&ouml;&szlig;e eines Controls.</li>
+	<li><strong>INSTANCE - </strong>Die 1-basierende Instanz, wenn alle angegebenen Eigenschaften &uuml;bereinstimmen</li>
+</ul>
+<p>Eine oder mehrere Eigenschaften werden im<em> ControlID</em>-Parameter des Control-Befehls in diesem Format verwendet:</p>
+<p class="codebox"> [PROPERTY1:Value1; PROPERTY2:Value2]</p>
+<p><strong>Zu beachten: </strong>Wird dieses spezielle Format <strong>nicht</strong> verwendet, wird der Parameter als ControlID (falls numerisch) oder als
+ClassnameNN/Text des Controls (falls ein String) betrachtet. Obwohl das spezielle Format langatmiger ist als diese Methoden, ist es weniger mehrdeutig. </p>
+<p>Falls ein String ein Semikolon (";") enthalten muss, so muss es doppelt angegeben werden (";;").</p>
+<p> </p>
+<p><b>Beispiel 1:</b> Sendet Text an das erste Edit-Control im Notepad-Fenster </p>
+<p class="codebox"> ControlSend("Unbenannt - Editor", "", "[CLASS:Edit; INSTANCE:1]", "Dies ist ein bisschen Text")</p>
+<p>oder</p>
+<p class="codebox"> ControlSend("Unbenannt - Editor", "", "[CLASSNN:Edit1]", "Dies ist ein bisschen Text")</p>
+<p>oder</p>
+<p class="codebox"> ControlSend("Unbenannt - Editor", "", "Edit1", "Dies ist ein bisschen Text")</p>
+<p> </p>
+<p><b>Beispiel 2:</b> Ein Klick auf die Control-ID 254 in "Mein Fenster" </p>
+<p class="codebox"> ControlClick("Mein Fenster", "", "[ID:254]")</p>
+<p>oder </p>
+<p class="codebox">ControlClick("Mein Fenster", "", 254)</p>
+<p>&nbsp;</p>
+<p>Um zum Beispiel den Text des .NET Winforms &quot;textBoxFolder&quot; Steuerelements auf &quot;C:\Some\Folder&quot; zu setzen</p>
+<p class="codebox">ControlSetText(&quot;Mein Fenster&quot;, &quot;&quot;, &quot;[NAME:textBoxFolder]&quot;, 
+&quot;C:\Some\Folder&quot;)</p>
+<p> </p>
+<p><b>Beispiel 3:</b> Ein Klick auf die zweite Instanz eines "Button"-Controls, welcher den Text "Fertig" enth&auml;lt </p>
+<p class="codebox">ControlClick("Mein Fenster", "", "[CLASS:Button; TEXT:Fertig; INSTANCE:2]")</p>
+<p> </p>
+<p> </p>
+
+<h2>Control-Handle (HWND) </h2>
+
+<p>Mit der <a href="../functions/ControlGetHandle.htm">ControlGetHandle</a>-Funktion kann das <em>Handle</em> oder <em>HWND</em> eines Controls bestimmt werden. Ein Handle ist ein eindeutiger Wert, den Windows
+f&uuml;r Controls vergibt. Das Handle ver&auml;ndert sich <em>jedesmal, wenn das Control erstellt wird.</em>
+Diese Methode ist eigentlich nur f&uuml;r Nutzer gedacht, die im Umgang mit Handles ge&uuml;bt sind.</p>
+
+<p> </p>
+
+<p> </p>
+
+<p>Siehe auch im Inhalt unter <strong><a href="../functions/ControlCommand.htm">Funktionsreferenz \ Fenstermanagement \ Controls</a></strong> eine Liste der Funktionen, die mit Controls zusammenarbeiten.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+</body>
+</html>

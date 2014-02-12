@@ -1,0 +1,44 @@
+###Function###
+MouseGetCursor
+
+###Description###
+Gibt die ID des aktuellen Mauscursors zur&uuml;ck.
+
+###Syntax###
+MouseGetCursor (  )
+
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+Gibt die ID des Mauscursors zur&uuml;ck:
+    0 = UNKNOWN  (beinhaltet die zeigenden und greifenden Handsymbole)
+    1 = APPSTARTING  (Sanduhr mit dem Pfeil)
+    2 = ARROW        (normaler Cursor)
+    3 = CROSS        (Kreuz)
+    4 = HELP         (Fragezeichen)
+    5 = IBEAM        (Editier-Cursor - &auml;hnlich "I")
+    6 = ICON         (Icon)
+    7 = NO           (Verbotsschild)
+    8 = SIZE         (?)
+    9 = SIZEALL      (Pfeile in alle 4 Richtungen)
+  10 = SIZENESW      (Pfeile diagonal nach oben rechts und unten links )
+  11 = SIZENS        (Pfeile nach oben und unten)
+  12 = SIZENWSE      (Pfeile diagonal nach oben links und unten rechts) 
+  13 = SIZEWE        (Pfeile nach links und rechts)
+  14 = UPARROW       (Aufw&auml;rtspfeil)
+  15 = WAIT          (Sanduhr)
+  16 = HAND          (Kein sichtbarer Cursor)
+
+
+###Remarks###
+Keine.
+
+###Related###
+MouseGetPos
+
+
+###Example###
+@@IncludeExample@@

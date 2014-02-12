@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemSubMenu
+
+###Description###
+Ermittelt ein Untermen&uuml;, welches durch ein festgelegten Item aktiviert wird
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemSubMenu ( $hMenu, $iItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	0-basierende Position des Men&uuml;items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Handle zu dem Dropdown Men&uuml; oder Untermen&uuml;, welches durch ein festgelegten Item aktiviert wird
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetItemSubMenu, _GUICtrlMenu_RemoveMenu
+
+
+###See Also###
+@@MsdnLink@@ GetSubMenu
+
+
+###Example###
+@@IncludeExample@@

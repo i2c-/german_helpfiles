@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUIScrollBars_GetScrollPos
+
+###Description###
+Ermittelt die aktuelle Position der Scrollbox in der festgelegten Scrollbar
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_GetScrollPos ( $hWnd, $nBar )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$nBar
+	Legt den Typ der Scrollbar fest. Dieser Parameter kann einer der folgenden Werte sein:
+		$SB_CTL - Ermittelt die Position der Scrollbox in dem ScrollBar-Control. Der $hWnd Parameter muss dabei das Handle des ScrollBar-Control sein.
+		$SB_HORZ - Ermittelt die Position der Scrollbox einer standardm&auml;&szlig;igen horizontalen Scrollbar.
+		$SB_VERT - Ermittelt die Position der Scrollbox einer standardm&auml;&szlig;igen vertikalen Scrollbar.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die aktuelle Position der Scrollbox
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIScrollBars_SetScrollInfoPos
+
+
+###See Also###
+@@MsdnLink@@ GetScrollPos
+
+
+###Example###
+@@IncludeExample@@

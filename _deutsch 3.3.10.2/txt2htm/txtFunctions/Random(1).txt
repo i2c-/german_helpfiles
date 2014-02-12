@@ -1,0 +1,63 @@
+###Function###
+Random
+
+###Description###
+Erzeugt eine pseudozuf&auml;llige Flie&szlig;kommazahl.
+
+###Syntax###
+Random ( [Min = 0 [, Max = 1 [, Flag = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+Min
+	[optional] Die kleinste zu erzeugende Zahl. Standard ist 0.
+Max
+	[optional] Die gr&ouml;&szlig;te zu erzeugende Zahl. Standard ist 1.
+Flag
+	[optional] Wenn auf 1 gesetzt, wird eine Integerzahl zur&uuml;ckgegeben. Standard ist eine Flie&szlig;kommazahl.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Eine Pseudozufallszahl zwischen Min und Max.
+Fehler:	Setzt @error ungleich null.
+@@End@@
+
+
+###Remarks###
+Standardm&auml;&szlig;ig arbeitet <a href="Random.htm">Random()</a> mit Dezimal-/Flie&szlig;kommazahlen. Werden nur Integer/Ganzzahlen gew&uuml;nscht, ist der Parameter Flag auf 1 zu setzen.
+
+Wird nur ein Argument angegeben, so wird dieses als Max interpretiert.
+
+Das Ergebnis liegt im Bereich von Min bis INKLUSIVE Max bei Verwendung von Integer (aber kleiner Max bei Verwendung von Flie&szlig;kommazahlen).
+
+Wenn Min und Max gleich gro&szlig;, dann liefert <a href="Random.htm">Random()</a> 0 zur&uuml;ck und setzt @error ungleich null.
+
+Wenn Integer verwendet werden, so muss Max-Min kleiner als 2^31 sein.
+
+<b>&Uuml;bersetzte Kommentare basierend auf der Originalquelle </b>
+
+Diese Funktion nutzt den"Mersenne Twister " Zufallszahlengenerator, MT19937, geschrieben von Takuji Nishimura, Makoto Matsumoto, Shawn Cokus, Matthe Bellew und Isaku Wada.
+
+Der "Mersenne Twister" ist ein Algorithmus f&uuml;r das Generieren von Zufallszahlen. Er wurde in Anbetracht der M&auml;ngel verschiedener anderer Generatoren entwickelt. Der Zyklus, 2<sup>19937</sup>-1, und der Verlauf der Gleichverteilung, 623 Dimensionen, sind hier weitaus gr&ouml;&szlig;er. Ausserdem ist der Generator schnell. Er vermeidet Multiplikation und Division, und er profitiert von Cachespeichern und Pipelines. Weitere Informationen auf der Webseite der Entwickler unter <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html</a>
+
+Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura, All rights reserved.
+
+Weitergabe und Gebrauch in Quell- und Bin&auml;rform, mit oder ohne Modifikationen, sind unter Einhaltung der folgenden Bedingungen erlaubt:
+
+1.  Bei Weitergabe von Quellcode muss die obige Copyright Notiz, diese Liste der Bedingungen und der folgende Haftungsausschluss enthalten sein.
+
+2.  Bei Weitergabe in Bin&auml;rform muss die obige Copyright Notiz, diese Liste der Bedingungen und der folgende Haftungsausschluss in der Dokumentation und/oder anderem Material, das bei der Weitergabe mitgeliefert wird, enthalten sein.
+
+3.  Die Namen der Mitwirkenden d&uuml;rfen nicht genutzt werden, um Produkte zu empfehlen oder zu bewerben, die aus dieser Software abgeleitet wurden, ohne explizite, vorherige, schriftliche  Erlaubnis.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS"AS IS " AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+###Related###
+Round, SRandom
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_SetFont
+
+###Description###
+Setzt einen Schrift-Typ f&uuml;r ein Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetFont($hWnd, $hFont [, $fRedraw = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$hFont
+	Handle des Schrift-Typs
+$fRedraw
+	[optional] True um das Control neu zu zeichnen
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Keine.
+
+###Related###

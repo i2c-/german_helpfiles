@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetColorArray
+
+###Description###
+Ermittelt die Farbe f&uuml;r einen festgelegten Abschnitt eines Monatskalender Controls
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetColorArray($hWnd, $iColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iColor
+	Wert des Typs Integer, der festlegt, welche Farbe des Monatskalenders ermittelt werden soll
+		Dieser Wert kann einer der folgenden sein:
+		$MCSC_BACKGROUND - Hintergrundfarbe, die zwischen den Monaten dargestellt wird
+		$MCSC_MONTHBK - Hintergrundfarbe, die innerhalb des Monats dargestellt wird
+		$MCSC_TEXT - Farbe, die verwendet wird, um Text innerhalb eines Monats darzustellen
+		$MCSC_TITLEBK - Hintergrundfarbe, die in dem Titel des Kalenders dargestellt wird
+		$MCSC_TITLETEXT - Farbe, die verwendet wird, um Text innerhalb des Kalendertitels darzustellen
+		$MCSC_TRAILINGTEXT - Farbe f&uuml;r den Text der Vor- und Nachspanntage
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+
+	[0] - enth&auml;lt die zur&uuml;ckgegebene Zahl
+	[1] - enth&auml;lt COLORREF rgb Farbe
+	[2] - enth&auml;lt Hex BGR Farbe
+	[3] - enth&auml;lt Hex RGB Farbe
+Fehler: False
+
+###Remarks###
+Vor- und Nachspanntage sind die Tage des vorherigen und nachfolgenden Monats, die im aktuellen Monatskalender eingeblendet werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_Create
+
+###Example###
+@@IncludeExample@@

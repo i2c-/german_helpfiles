@@ -1,0 +1,58 @@
+###Keyword###
+Static
+
+###Description###
+Deklariert eine statische Variable oder erzeugt ein statisches Array
+
+###Syntax###
+<b>Static</b> [Scope] $variable [ = initializer ]
+<b>Static</b> [Scope] $avArray<b>[</b>subscript 1<b>]</b>...<b>[</b>subscript n<b>]</b> [ = initializer ]
+
+
+###Parameters###
+@@ParamTable@@
+Scope
+	Ein optionaler Modifizierer, <b>Local</b> oder <b>Global</b>, der die Sichtbarkeit der Variablen angibt.
+$variable
+	Der Name der zu deklarierenden statischen Variable.
+initializer
+	Der Wert, der bei Initialisierung der Variablen zugewiesen wird. Der Initialisierer kann ein Funktionsaufruf sein der mathematische oder String-Operationen umfassen kann. Dieser Initialisierer wird nur ausgewertet, wenn die Variable das erste Mal deklariert wird.
+subscript
+	Die Anzahl der zu erstellenden Elemente f&uuml;r die Array-Dimension, indexiert von 0 bis n-1.
+@@End@@
+
+
+###Remarks###
+Das Schl&uuml;sselwort Static kann vor dem optionalen G&uuml;ltigkeitsbereich, oder nach diesem in der Zeile auftreten. <b>Local Static</b> oder <b>Static Local</b> sind beide akzeptabel.
+
+Falls der G&uuml;ltigkeitsbereich <b>Local</b> genutzt wird, dann ist die statische Variable nur sichtbar und benutzbar in der Funktion in der diese deklariert ist. Falls der G&uuml;ltigkeitsbereich <b>Global</b> genutzt wird, dann ist die statische Variable sichtbar und benutzbar in allen Teilen des Skriptes; in diesem Zusammenhang, ein <i>Global Static</i> hat kaum einen Unterschied zu einer <i>Global</i> Variable. Falls der G&uuml;ltigkeitsbereich nicht angegeben wird, dann wird die statische Variable im lokalen G&uuml;ltigkeitsbereich erzeugt; in dieser Art ist Static &auml;hnlich zu Dim.
+
+Der Unterschied zwischen Local und Static ist die Lebensdauer der Variablen. Local Variablen werden nur gespeichert w&auml;hrend die Funktion aufgerufen wird und sind nur innerhalb der Funktion sichtbar in der diese deklariert sind; wenn die Funktion zur&uuml;ckkehrt, werden alle Variablen freigegeben. Static Variablen sind ebenso nur innerhalb der funktion sichtbar in der diese deklariert sind, aber sie existieren weiter und behalten ihren letzten Wert, nachdem die Ausf&uuml;hrung der Funktion beendet ist. Wenn nach Variablen gesucht wird, wird der lokale G&uuml;ltigkeitsbereich zuerst gepr&uuml;ft und dann der globale als zweites.
+
+Das Schl&uuml;sselwort Static f&uuml;hrt &auml;hnliche Funktionen aus wie die Schl&uuml;sselworte <a href="Dim.htm">Global/Local/Dim</a>.
+<ol><li>Sie alle deklarieren eine Variable bevor sie genutzt wird.</li>
+<li>Sie alle k&ouml;nnen ein Array erzeugen.</li></ol>
+
+<b>Achtung:</b> Statische Variablen <i>m&uuml;ssen</i> mit dem Schl&uuml;sselwort <b>Static</b> deklariert werden, bevor sie benutzt werden, ganz gleich wie AutoItSetOption("<a href="../functions/AutoItSetOption.htm#MustDeclareVars">MustDeclareVars</a>") gesetzt ist. Statische Variablen k&ouml;nnen nicht <b><a href="Dim.htm">Const</a></b> sein.
+
+Es k&ouml;nnen ebenso mehrere statische Variablen in einer Zeile deklariert werden:
+<p class="code">Static $a, $b, $c</p>
+Und initialisiere die Variablen:
+<p class="code">Static $a = 2, $b = 10, $c = 20</p>
+
+Wenn eine statische Variable initialisiert wird, dann wird der Anfangswert nur das erste Mal ausgewertet und zugewiesen, wenn die Variable erzeugt wird. Bei allen nachfolgenden Durchl&auml;ufen wird der Initialisierer ignoriert.
+
+Siehe <a href="Dim.htm">Local</a> f&uuml;r mehr Informationen dar&uuml;ber, wie man Arrays nutzt, was hat dieselbe Funktionalit&auml;t wie in Local, ausgenommen f&uuml;r:
+<ol><li>Reinitialisierung einer Static Variable hat keinen Effekt.</li>
+
+<li>Eine statische Variable kann nicht von einer lokalen zu einer globalen Variablen ge&auml;ndert, oder umgekehrt.</li></ol>
+
+Wenn die Arraygr&ouml;&szlig;e ge&auml;ndert werden soll, dann ist <a href="ReDim.htm">ReDim</a> zu verwenden.
+
+
+###Related###
+<a href="Dim.htm">Local</a>, UBound, ReDim, <a href="../functions/AutoItSetOption.htm#MustDeclareVars">AutoItSetOption</a></b>
+
+
+###Example###
+@@IncludeExample@@

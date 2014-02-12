@@ -1,0 +1,72 @@
+###Function###
+SplashTextOn
+
+###Description###
+Erzeugt ein einstellbares Text-Anzeigefenster (PopUp).
+
+###Syntax###
+SplashTextOn ( "title", "text" [, w [, h [, x pos [, y pos [, opt [, "fontname" [, fontsz [, fontwt]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+title
+	Titel des Splash Fensters.
+text
+	Text des Splash Fensters.
+w
+	[optional] Breite des Fensters in Pixel (Standard 500).
+h
+	[optional] H&ouml;he des Fensters in Pixel (Standard 400).
+x pos
+	[optional] Position von Links (in Pixel - Standard ist zentriert).
+y pos
+	[optional] Position von Oben (in Pixel - Standard ist zentriert).
+opt
+	[optional]  Addierbare Optionen - Standard ist 0: Zentriert ausgerichtet / immer im Vordergrund / mit Titel
+	 0 = Zentriert ausgerichtet / immer im Vordergrund / mit Titel (Standard)
+	 1 = D&uuml;nne Aussenlinien, titelloses Fenster.
+	 2 = Ohne "immer im Vordergrund" Attribut.
+	 4 = Linksb&uuml;ndiger Text
+	 8 = Rechtsb&uuml;ndiger Text
+	16 = Fenster kann bewegt werden
+	32 = Text wird vertikal zentriert
+fontname
+	[optional] Schriftname. (Wenn f&uuml;r  fontname "" gew&auml;hlt wird oder der Schrifttyp nicht gefunden wurde, wird die im OS definierte GUI Standard-Schrift genommen.)
+fontsz
+	[optional] Schriftgr&ouml;&szlig;e. (Standard ist 12; Standard Gr&ouml;&szlig;en sind 6 8 9 10 11 12 14 16 18 20 22 24 26 28 36 48 72)
+fontwt
+	[optional] Schriftbreite (0 - 1000, Standard = 400 = normal). Ein Wert > 1000 wird als 0 behandelt.
+@@End@@
+
+
+###ReturnValue###
+Gibt das Handle des Splash-Fensters zur&uuml;ck, welches f&uuml;r ControlSetText verwendet werden kann.
+
+
+###Remarks###
+Um einen optionalen Parameter zu &uuml;berspringen, (also den Standardwert beizubehalten), benutzt man:
+    "" f&uuml;r Text-Parameter.
+    -1 f&uuml;r Zahl-Parameter.
+
+Nur ein SplashImage/Text Fenster ist zur selben Zeit erlaubt. Sollen verschiedene Image/Text Fenster durchgegangen werden, ist SplashImageOn/SplashTextOn wiederholt mit den neuen Informationen aufzurufen.
+
+Besser ist es, die Funktion ControlSetText zu benutzen, um Text ohne Flackern zu aktualisieren...
+Wenn der Text zentriert ist und sich in mehreren Zeilen befindet, dann wird ControlSetText die Anzahl der Zeilen, welche durch SplashTextOn erstellt wurden, nicht &uuml;berschreiben.
+
+Fenster mit opt=1 k&ouml;nnen nicht bewegt bzw. durch Anklicken aktiviert werden.
+
+Enthaltene Standard-Schriftarten:
+    Arial, Comic Sans MS, Courier New, Lucida Console, Microsoft Sans Serif, System, Tahoma, Times New Roman und WingDings
+Siehe Anlage f&uuml;r eine komplette Schritartenliste.
+
+Um mehrere Zeilen darzustellen, ist @LF zu benutzen.
+
+Damit innerhalb des Textes ein &-Zeichen zu erzeugen wird, muss man an dieser Stelle zwei &-Zeichen hintereinander schreiben.
+Beispiel: Um Text&Text anzuzeigen, muss man Text&&Text schreiben.
+
+###Related###
+SplashOff, SplashImageOn, ControlSetText, ToolTip, MsgBox
+
+
+###Example###
+@@IncludeExample@@

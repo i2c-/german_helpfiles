@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetToolTips
+
+###Description###
+Ermittelt das Handle des ToolTip Controls
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetToolTips($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	ToolTip Handle
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetToolTips
+
+###Example###
+@@IncludeExample@@

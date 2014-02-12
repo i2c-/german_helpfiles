@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlMenu_CheckRadioItem
+
+###Description###
+Markiert ein festgelegtes Men&uuml;item und stellt es als Radioitem dar
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_CheckRadioItem($hMenu, $iFirst, $iLast, $iCheck [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iFirst
+	ID oder Position des ersten Men&uuml;items in der Gruppe
+$iLast
+	ID oder Position des letzten Men&uuml;items in der Gruppe
+$iCheck
+	zu markierende ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iFirst, $iLast und $iCheck sind 0-basierenden Itempositionen
+		False - $iFirst, $iLast und $iCheck sind Men&uuml;item IDs
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion setzt das $MFT_RADIOCHECK Typ Flag und den Status $MFS_CHECKED f&uuml;r das durch $iCheck festgelegte Item
+und leert beide Flags zur gleichen Zeit f&uuml;r alle anderen Items in der Gruppe. Das markierte Item wird als bullet Bitmap anstelle eines check-mark Bitmap dargestellt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_CheckMenuItem
+
+###See Also###
+@@MsdnLink@@ CheckMenuRadioItem
+
+###Example###
+@@IncludeExample@@

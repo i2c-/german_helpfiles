@@ -1,0 +1,36 @@
+###Function###
+StringTrimLeft
+
+###Description###
+K&uuml;rzt eine Zeichenkette um eine vorgegebene Anzahl Zeichen am Anfang (von links).
+
+
+
+
+###Syntax###
+StringTrimLeft ( "string", count )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der anzupassende String.
+count
+	Die Anzahl der Zeichen die abgeschnitten werden sollen.
+@@End@@
+
+
+###ReturnValue###
+Gibt den neuen, um <i>count</i> Zeichen von links gek&uuml;rzten String zur&uuml;ck.
+
+
+###Remarks###
+Liegt <i>count</i> au&szlig;erhalb des g&uuml;ltigen Bereichs, wird einen leeren String zur&uuml;ckgegeben.
+StringTrimLeft($str, $n) ist funktional gleichwertig mit StringRight($str, StringLen($str) - $n)
+
+###Related###
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

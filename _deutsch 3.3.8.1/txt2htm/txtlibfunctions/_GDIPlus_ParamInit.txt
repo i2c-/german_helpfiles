@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_ParamInit
+
+###Description###
+Initialisiert eine Encoder Parameter Liste
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ParamInit($iCount)
+
+###Parameters###
+@@ParamTable@@
+$iCount
+	Die gesamte Anzahl von Parametern die die Liste enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagGDIPPENCODERPARAMS Struktur
+Fehler:	0
+@@End@@
+
+###Remarks###
+Zwecks Parameter&uuml;bergabe an eine Encoderfunktion, muss eine Encoder-Parameterliste verwendet werden. Diese Funktion wird verwendet um eine Encoder-Parameterliste zu initialisieren, die an _GDIPlus_ParamAdd() &uuml;bergeben werden kann, um die aktuellen Parameter hinzuzuf&uuml;gen.
+
+###Related###
+_GDIPlus_ParamAdd, $tagGDIPPENCODERPARAMS
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,61 @@
+###Function###
+GUICtrlCreateInput
+
+###Description###
+Erstellt eine Eingabe-Dialogbox f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateInput ( "text", left, top [, width [, height [, style = -1 [, exStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	(Vorgeblendeter) Text in dem Input-Control.
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Edit">Anhang GUI-Stile f&uuml;r Controls</a>.
+		Standard ( -1) : $ES_LEFT, $ES_AUTOHSCROLL
+		Erzwungene Stile : $WS_TABSTOP, nur wenn nicht $ES_READONLY gesetzt wurde. $ES_MULTILINE wird immer zur&uuml;ckgesetzt.  
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+		Standard ( -1) : $WS_EX_CLIENTEDGE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Wert des Controls zu erhalten, siehe <a href="GUICtrlRead.htm">GUICtrlRead()</a>.
+Um Informationen im Control zu setzen oder zu ver&auml;ndern, siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...()</a> Funktionen.
+
+Um ein Input-Control zur Eingabe von Passw&ouml;rtern zu erzeugen (die Eingabe wird unsichtbar durch einen Stern dargestellt), benutzt man den Stil $ES_PASSWORD.
+
+Will man per drag & drop einen Dateinamen auf ein solches Control ziehen, muss man nur den erweiterten Stil <a href="../appendix/GUIStyles.htm#Extended">WS_EX_ACCEPTFILES</a> auf den Befehl <a href="GUICreate.htm">GUICreate()</a> anwenden und den Status auf $GUI_DROPACCEPTED setzen.
+Hat man mehrere Drag and Drop-Dateien in diesem Control, kann man die durch "|" getrennte Filenamen, mit <a href="GUICtrlRead.htm">GUICtrlRead()</a> auslesen.
+
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <EditConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKHEIGHT. (Die H&ouml;he wird nicht ge&auml;ndert.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICoordMode (Option), GUICtrlUpdate..., GUIGetMsg, GUICtrlRead, GUICtrlCreateUpdown, GUICtrlSetLimit
+
+
+###Example###
+@@IncludeExample@@

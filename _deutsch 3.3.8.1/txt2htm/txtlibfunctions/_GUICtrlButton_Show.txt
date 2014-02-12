@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlButton_Show
+
+###Description###
+Zeigt bzw. versteckt einen Button
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_Show($hWnd [, $fShow = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fShow
+	[optional] Eines der folgenden:
+		 True - zeigt den Button
+		False - versteckt den Button
+@@End@@
+
+###ReturnValue###
+Erfolg:	eines der folgenden:
+	1 - falls der Button vorher sichtbar war
+	0 - falls der Button vorher versteckt war
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

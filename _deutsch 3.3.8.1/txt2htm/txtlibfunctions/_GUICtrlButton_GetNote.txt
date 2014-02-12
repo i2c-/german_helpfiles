@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlButton_GetNote
+
+###Description###
+Ermittelt den Text der Notiz, der mit einem Befehlszeilen-Button verbunden ist
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetNote($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	der Text, der mit einem Befehlszeilen-Button verbunden ist
+Fehler:	""
+
+###Remarks###
+Diese Funktion funktioniert nur mit den Buttonstilen $BS_COMMANDLINK und $BS_DEFCOMMANDLINK
+
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlButton_SetNote, _GUICtrlButton_GetNoteLength
+
+###See Also###
+@@MsdnLink@@ BCM_GETNOTE
+
+###Example###
+@@IncludeExample@@

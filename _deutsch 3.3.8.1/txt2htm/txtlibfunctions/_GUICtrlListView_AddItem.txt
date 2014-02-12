@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_AddItem
+
+###Description###
+F&uuml;gt ein neues Item an das Ende der Liste hinzu
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_AddItem($hWnd, $sText [, $iImage = -1 [, $iParam = 0]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	Text des Items. Falls -1 wird das Item anhand $LVN_GETDISPINFO gesetzt.
+$iImage
+	[optional] 0-basierender Index des Icons des Items in der Imagelist des Control
+$iParam
+	[optional] Anwendungsspezifische Daten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index der neuen Spalte
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Diese Funktion kann nicht verwendet werden, um Subitems einzuf&uuml;gen. Zum Einf&uuml;gen von Subitems ist _GUICtrlListView_AddSubItem zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_AddSubItem
+
+###Example###
+@@IncludeExample@@

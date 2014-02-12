@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlToolbar_GetStyleWrapable
+
+###Description###
+Zeigt an, ob das Control "umbruchf&auml;hig" ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetStyleWrapable ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Stil wird verwendet
+False:	Stil wird nicht verwendet
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_SetStyleWrapable
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+Chr
+
+###Description###
+Gibt ein Zeichen entsprechend eines ASCII-Codes wieder.
+
+###Syntax###
+Chr ( ASCIIcode )
+
+
+###Parameters###
+@@ParamTable@@
+ASCIIcode
+	Ein ASCII-Code aus dem Bereich 0-255 (z.B.: 65 gibt den Gro&szlig;buchstaben "A" wieder).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Einen String mit entsprechendem ASCII-Zeichen.
+Fehler:	Einen leeren String und setzt @error auf 1, wenn der ASCII-Code gr&ouml;&szlig;er als 255 ist.
+@@End@@
+
+
+###Remarks###
+Siehe die <a href="../appendix/ascii.htm">ASCII Character Code</a> Tabelle f&uuml;r eine komplette Liste der verf&uuml;gbaren Werte.
+
+<a href="Chr.htm">Chr</a>(48) == "0", <a href="Chr.htm">Chr</a>(57) == "9", <a href="Chr.htm">Chr</a>(65) == "A", <a href="Chr.htm">Chr</a>(90) == "Z", <a href="Chr.htm">Chr</a>(97) == "a", <a href="Chr.htm">Chr</a>(122) = "z", etc.
+
+###Related###
+Asc, AscW, ChrW, String
+
+
+###Example###
+@@IncludeExample@@

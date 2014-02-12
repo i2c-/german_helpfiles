@@ -1,0 +1,35 @@
+###Function###
+WinFlash
+
+###Description###
+L&auml;sst ein Fenster in der Taskleiste blinken.
+
+###Syntax###
+WinFlash ( "title" [,"text" [,flashes [,delay]]] )
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters.
+flashes
+	[optional] Die Anzahl, wie oft das Fenster blinken soll. Standard ist 4.
+delay
+	[optional] Die Zeit in Millisekunden, die zwischen dem Blinken gewartet werden soll. Standard ist 500 ms.
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Das Blinken ist sehr n&uuml;tzlich, damit es dem Benutzer auff&auml;llt!
+
+
+###Related###
+WinSetState
+
+###Example###
+@@IncludeExample@@

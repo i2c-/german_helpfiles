@@ -1,0 +1,83 @@
+###User Defined Function###
+_WordPropertyGet
+
+###Description###
+Gibt eine ausgew&auml;hlte Eigenschaft der Word Anwendung zur&uuml;ck.
+
+###Syntax###
+#include <Word.au3> 
+_WordPropertyGet(ByRef $o_object, $s_property)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer Word Anwendung
+$s_property
+	Auswahl der Eigenschaft (siehe Bemerkungen)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wert der ausgew&auml;hlten Eigenschaft
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+	$_WordStatus_InvalidValue = ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Weitere Informationen k&ouml;nnen auf <a href="http://msdn2.microsoft.com/en-us/library/kw65a0we.aspx" target="_blank">MSDN</a> eingesehen werden.
+
+Die folgende Tabelle stellt eine Beschreibung jeder verf&uuml;gbaren Eigenschaft zur Verf&uuml;gung.
+
+<b><u>Eigenschaften der Word Anwendung</u></b>
+
+@@ParamTable@@
+<b>Eigenschaft</b>
+	<b>Beschreibung</b>
+"activeprinter"
+	gibt den Namen des aktiven Druckers zur&uuml;ck.
+"capslock"
+	Gibt einen booleschen Wert zur&uuml;ck, der anzeigt, ob die CAPS LOCK Taste aktiviert ist.
+"screentips"
+	Gibt einen booleschen Wert zur&uuml;ck, der anzeigt, ob Kommentare, Fu&szlig;noten, Endnoten und Hyperlinks als Tipps dargestellt werden.
+"scrollbars"
+	Gibt einen booleschen Wert zur&uuml;ck, der anzeigt, ob Word mindestens eine Scrollbar auf einem Dokumentfenster anzeigt.
+"statusbar"
+	Gibt einen booleschen Wert zur&uuml;ck, der anzeigt, ob die Statusbar angezeigt wird.
+"height"
+	Gibt die H&ouml;he des aktiven Dokumentfensters zur&uuml;ck.
+"language"
+	Gibt eine <a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/vbaof11/html/ofhowConstants_HV01049865.asp" target="_blank">MsoLanguageID Konstante</a> zur&uuml;ck, die die ausgew&auml;hlte Sprache f&uuml;r die Microsoft Word Benutzeroberfl&auml;che wiedergibt.
+"left"
+	Gibt einen Integer zur&uuml;ck, der die horizontale Position des aktiven Dokuments darstellt.
+"numlock"
+	Gibt den Status der NUM LOCK Taste zur&uuml;ck. Gibt True zur&uuml;ck, falls die Tasten auf dem Nummernblock aktiv sind und False falls die Pfeiltasten aktiv sind.
+"path"
+	Gibt den Festplattenpfad oder Webpfad zu dem festgelegten Objekt zur&uuml;ck.
+"screenupdating"
+	Gibt einen a booleschen Wert zur&uuml;ck, der anzeigt, ob das aktualisieren der Oberfl&auml;che eingeschaltet ist.
+"startuppath"
+	Gibt den kompletten Pfad des Startordners ohne den abschlie&szlig;enden Backslash zur&uuml;ck.
+"top"
+	Gibt die vertikale Position des aktiven Dokuments in Punkte zur&uuml;ck.
+"version"
+	Gibt die Microsoft Word Versionsnummer zur&uuml;ck.
+"visible"
+	Gibt einen booleschen Wert zur&uuml;ck, der anzeigt, ob das festgelegte Objekt sichtbar ist.
+"width"
+	Gibt die Breite des festgelegten Objekts in Punkte zur&uuml;ck.
+"windowstate"
+	Gibt den Status des festgelegten Dokumentfensters oder Taskfensters zur&uuml;ck..
+@@END@@
+
+
+###Related###
+_WordPropertySet
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_GDIPlus_BitmapCreateHBITMAPFromBitmap
+
+###Description###
+Erstellt ein Handle zu einer Bitmap von einem Bitmap-Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCreateHBITMAPFromBitmap ( $hBitmap [, $iARGB = 0xFF000000] )
+
+
+###Parameters###
+@@ParamTable@@
+$hBitmap
+	Handle zu einem Bitmap-Objekt
+$iARGB
+	[optional] Farbobjekt, welches die Hintergrundfarbe festlegt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Handle zu einem HBITMAP
+Fehler:	0 und setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Wenn das Bitmap-Objekt nicht mehr ben&ouml;tigt wird, muss <a href="_WinAPI_DeleteObject.htm">_WinAPI_DeleteObject()</a> aufgerufen werden, um die Ressourcen wieder freizugeben.
+
+
+###Related###
+_WinAPI_DeleteObject
+
+
+###See Also###
+@@MsdnLink@@ GdipCreateHBITMAPFromBitmap
+
+
+###Example###
+@@IncludeExample@@

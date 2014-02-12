@@ -1,0 +1,42 @@
+###User Defined Function###
+_DateTimeFormat
+
+###Description###
+Gibt das Datum abh&auml;ngig von der in der Systemeinstellung gew&auml;hlten L&auml;ndereinstellung zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_DateTimeFormat($sDate, $sType)
+
+###Parameters###
+@@ParamTable@@
+$sDate
+	Format der Datumseingabe "YYYY/MM/DD[HH:MM:SS]"
+$sType
+	einer der folgenden Werte:
+		0 - Zeigt Datum und/oder Zeit. Zeigt das Datum, wenn angegeben, als Kurzanzeige.
+		Zeigt die Zeit, wenn angegeben, im Langformat. Zeigt beides an, wenn beides angegeben ist.
+		1 - Zeigt das Datum in dem in den L&auml;ndereinstellungen eingestellten Langformat.
+		2 - Zeigt das Datum in dem in den L&auml;ndereinstellungen eingestellten Kurzformat.
+		3 - Zeigt die Zeit in dem in den L&auml;ndereinstellungen eingestellten Zeitformat.
+		4 - Zeigt die Zeit im 24-Stunden Format (HH:MM).
+		5 - Zeigt die Zeit mit Sekunden im 24-Stunden Format (HH:MM:SS).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Datum im geeigneten Format zur&uuml;ck.
+Fehler:	0 und setzt @ERROR
+@error:	0 - Kein Fehler.
+	1 - $sDate ung&uuml;ltig
+	2 - $sType ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_NowDate, _NowTime
+
+###Example###
+@@IncludeExample@@

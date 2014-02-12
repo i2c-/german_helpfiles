@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetSelText
+
+###Description###
+Ermittelt den aktuell markierten Text
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetSelText($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der markierte Text
+Fehler:	False und setzt @error
+@error:	-1 - kein Text markiert
+	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetSel
+
+###See Also###
+@@MsdnLink@@ EM_EXGETSELTEXT
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlToolbar_ClickAccel
+
+###Description###
+Klickt auf einen festgelegten Button durch Verwendung des Abk&uuml;rzungsbefehls
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_ClickAccel ( $hWnd, $cAccel [, $sButton = "left" [, $fMove = False [, $iClicks = 1 [, $iSpeed = 1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$cAccel
+	Buchstabe des Abk&uuml;rzungsbefehls f&uuml;r den Button
+$sButton
+	[optional] Anzuklickender Button
+$fMove
+	[optional] Mausbewegungsflag:
+		True - Maus bewegt sich
+		False - Maus bewegt sich nicht
+$iClicks
+	[optional] Anzahl von Klicks
+$iSpeed
+	[optional] Mausbewegungsgeschwindigkeit
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_ClickButton, _GUICtrlToolbar_ClickIndex
+
+
+###Example###
+@@IncludeExample@@

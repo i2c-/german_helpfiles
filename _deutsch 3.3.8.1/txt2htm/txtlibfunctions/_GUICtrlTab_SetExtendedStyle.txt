@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTab_SetExtendedStyle
+
+###Description###
+Setzt die erweiterten Stile, welche momentan genutzt werden
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetExtendedStyle($hWnd, $iStyle)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iStyle
+	momentan genutzte erweiterte Stile:
+		$TCS_EX_FLATSEPARATORS - Das Control stellt Trennzeichen zwischen den Tabitems dar
+		$TCS_EX_REGISTERDROP - Das Control generiert eine $TCN_GETOBJECT Nachricht um ein Fallziel abzufragen
+		wenn ein Objekt &uuml;ber ein Tabitem gezogen wird.
+@@End@@
+
+###ReturnValue###
+Erfolg:	vorherige erweiterte Stile
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_GetExtendedStyle
+
+###Example###
+@@IncludeExample@@

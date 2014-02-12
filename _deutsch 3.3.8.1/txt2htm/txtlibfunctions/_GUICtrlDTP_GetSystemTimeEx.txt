@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlDTP_GetSystemTimeEx
+
+###Description###
+Ermittelt das aktuell ausgew&auml;hlte Datum und die Zeit
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_GetSystemTimeEx($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagSYSTEMTIME Struktur
+
+###Remarks###
+@Error wird auf $GDT_VALID gesetzt, wenn die Zeitinformationen erfolgreich zur&uuml;ckgegeben wurden, $GDT_NONE falls das Control auf den Stil $DTS_SHOWNONE gesetzt wurde und die Checkbox des Controls nicht ausgew&auml;hlt wurde oder $GDT_ERROR einen Fehler verursachte.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlDTP_GetSystemTime, _GUICtrlDTP_SetSystemTimeEx, $tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

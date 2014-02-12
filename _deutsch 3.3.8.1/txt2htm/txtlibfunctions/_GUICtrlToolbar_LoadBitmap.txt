@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlToolbar_LoadBitmap
+
+###Description###
+F&uuml;gt von einer Datei einen Button zu der Imagelist hinzu
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_LoadBitmap($hWnd, $sFileName)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Toolbar
+$sFileName
+	kompletter Pfad zu der Bitmapdatei
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der 0-basierende Index des neuen Items
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_AddBitmap
+
+###Example###
+@@IncludeExample@@

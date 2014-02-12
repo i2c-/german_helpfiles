@@ -1,0 +1,32 @@
+###Function###
+WinKill
+
+###Description###
+Erzwingt die Schlie&szlig;ung eines Fensters.
+
+###Syntax###
+WinKill ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des zu schlie&szlig;enden Fensters. Hier: <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des zu schlie&szlig;enden Fensters.
+@@End@@
+
+
+###ReturnValue###
+Gibt ohne R&uuml;cksicht auf Erfolg immer 1 zur&uuml;ck.
+
+
+###Remarks###
+Der Unterschied zwischen dieser und der "WinClose" Funktion ist, das WinKill das Fenster gewaltsam schlie&szlig;t, wenn es nicht schnell genug reagiert. Dies kann dazu f&uuml;hren, dass der Benutzer eventuell nicht genug Zeit haben wird auf Speichern-Dialoge und &auml;hnliches zu reagieren. Au&szlig;erdem ist es WinKill m&ouml;glich minimierte und versteckte Fenster zu schlie&szlig;en, manche Fenster aber k&ouml;nnen nur mit "WinClose" geschlossen werden (z.B. Windows Explorer - Fenster)
+
+###Related###
+WinActivate, WinClose, WinSetState, ProcessClose
+
+
+###Example###
+@@IncludeExample@@

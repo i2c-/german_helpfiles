@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlMenu_RemoveMenu
+
+###Description###
+L&ouml;scht ein Men&uuml;item oder sondert ein Untermen&uuml; von dem festgelegten Men&uuml; ab
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_RemoveMenu ( $hMenu, $iItem [, $fByPos = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle zu dem zu &auml;ndernden Men&uuml;
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls dass Men&uuml;item ein Dropdown Men&uuml; oder ein Untermen&uuml; &ouml;ffnet, l&ouml;scht _GUICtrlMenu_RemoveMenu() das Men&uuml; oder dessen Handle nicht
+und erm&ouml;glicht es das Men&uuml; wieder zu verwenden. Bevor diese Funktion aufgerufen wird, sollte _GUICtrlMenu_GetItemSubMenu() aufgerufen werden um ein Handle von dem Dropdown Men&uuml; oder Untermen&uuml; zu erhalten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_GetItemSubMenu
+
+
+###See Also###
+@@MsdnLink@@ RemoveMenu
+
+
+###Example###
+@@IncludeExample@@

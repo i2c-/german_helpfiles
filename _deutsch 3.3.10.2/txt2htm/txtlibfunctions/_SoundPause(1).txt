@@ -1,0 +1,36 @@
+###User Defined Function###
+_SoundPause
+
+###Description###
+Pausiert einen Sound.
+
+###Syntax###
+#include <Sound.au3>
+_SoundPause ( $aSnd_id )
+
+
+###Parameters###
+@@ParamTable@@
+$aSnd_id
+	Sound ID welches durch _SoundOpen oder einem Dateinamen zur&uuml;ckgegeben wurde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@Error:	1 = Pause Fehler
+	3 = Ung&uuml;ltige Sound ID. Es ist ein R&uuml;ckgabearray von _SoundOpen() oder ein g&uuml;ltiger Dateiname zu verwenden.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SoundResume, _SoundOpen, _SoundPlay
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GDIPlus_EncodersGetCLSID
+
+###Description###
+Gibt die Encoder CLSID f&uuml;r einen festgelegten Bild-Dateityp zur&uuml;ck
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_EncodersGetCLSID($sFileExt)
+
+###Parameters###
+@@ParamTable@@
+$sFileExt
+	Dateierweiterung nach der gesucht werden soll (BMP, JPG, TIF, etc.)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	CLSID des Encoders im Stringformat
+Fehler:	Leerer String
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipGetImageEncoders
+
+###Example###
+@@IncludeExample@@

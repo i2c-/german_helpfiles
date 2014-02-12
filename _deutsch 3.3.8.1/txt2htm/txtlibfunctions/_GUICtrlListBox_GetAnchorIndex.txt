@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlListBox_GetAnchorIndex
+
+###Description###
+Ermittelt den Index des Anker-Item.
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetAnchorIndex($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierender Index des Items
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_SetAnchorIndex
+
+###Example###
+@@IncludeExample@@

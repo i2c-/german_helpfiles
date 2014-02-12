@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlListView_FindItem
+
+###Description###
+Sucht ein Item mit den bestimmten Eigenschaften
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_FindItem ( $hWnd, $iStart, ByRef $tFindInfo [, $sText = ""] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iStart
+	0-basierender Index des Items, von wo die Suche beginnen soll oder -1 um vom Anfang zu beginnen. Das
+	bestimmte Item wird bei der Suche ausgeschlossen.
+$tFindInfo
+	$tagLVFINDINFO Struktur, welche sie Suchinformationen enth&auml;lt
+$sText
+	[optional] String, der mit dem Itemtext verglichen werden soll.
+	Es ist g&uuml;ltig, falls $LVFI_STRING oder $LVFI_PARTIAL als Flags members gesetzt werden
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index des Items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_FindParam, _GUICtrlListView_FindNearest, $tagLVFINDINFO
+
+
+###Example###
+@@IncludeExample@@

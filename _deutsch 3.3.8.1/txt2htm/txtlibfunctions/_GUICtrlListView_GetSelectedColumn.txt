@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlListView_GetSelectedColumn
+
+###Description###
+Ermittelt den Index der markierten Spalte
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetSelectedColumn($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index der markierten Spalte
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Mindestanforderung: Windows XP.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetSelectedColumn
+
+###Example###
+@@IncludeExample@@

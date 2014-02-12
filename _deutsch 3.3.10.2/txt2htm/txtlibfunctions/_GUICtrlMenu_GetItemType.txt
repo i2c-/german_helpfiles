@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemType
+
+###Description###
+Ermittelt den Men&uuml;itemtyp
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemType ( $hMenu, $iItem [, $fByPos = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+Gibt den Men&uuml;itemtyp zur&uuml;ck. Dies kann einer oder mehrere der folgenden Wert sein:
+	$MFT_BITMAP - Item wird als Bitmap dargestellt
+	$MFT_MENUBARBREAK - Item wird in einer neuen Zeile platziert. Eine vertikaler Trennstrich trennt die neue Spalte von der alten.
+	$MFT_MENUBREAK - Item wird in einer neuen Zeile platziert. Eine vertikaler Trennstrich existiert nicht.
+	$MFT_OWNERDRAW - Item ist eigenes Zeichnen
+	$MFT_RADIOCHECK - Item wird als Radiobutton dargestellt
+	$MFT_RIGHTJUSTIFY - Item ist rechtsb&uuml;ndig
+	$MFT_RIGHTORDER - Item l&auml;uft von rechts nach links
+	$MFT_SEPARATOR - Item ist ein Trennstrich
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetItemType
+
+
+###Example###
+@@IncludeExample@@

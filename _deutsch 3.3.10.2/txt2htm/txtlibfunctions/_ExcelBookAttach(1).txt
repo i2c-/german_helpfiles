@@ -1,0 +1,39 @@
+###User Defined Function###
+_ExcelBookAttach
+
+###Description###
+H&auml;ngt eine Excel-Datei an die erste Instanz von Microsoft Excel an, dessen Suchstring passt, je nach ausgew&auml;hltem Modus.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelBookAttach ( $s_string [, $s_mode = "FilePath"] )
+
+
+###Parameters###
+@@ParamTable@@
+$s_string
+	zu suchender String
+$s_mode
+	[optional] festgelegter Suchmodus:
+		"FileName" - Name der offenen Excel-Datei
+		"FilePath" - (Standard) Kompletter Pfad zu der offenen Excel-Datei
+		"Title" - Titel des Excel Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine Objektvariable mit dem Verweis zu dem Excel.Application Workbook-Objekt
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_ExcelBookNew, _ExcelBookOpen
+
+
+###Example###
+@@IncludeExample@@

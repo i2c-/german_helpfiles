@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetItemParam
+
+###Description###
+Setzt den speziellen Wert f&uuml;r das Item
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetItemParam($hWnd, $iIndex, $iParam)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iParam
+	spezieller Itemwert
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_GetItemParam
+
+###Example###
+@@IncludeExample@@

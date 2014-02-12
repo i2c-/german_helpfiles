@@ -1,0 +1,29 @@
+###Structure Name###
+$tagGDIPBITMAPDATA
+
+###Description###
+Bitmap Daten
+
+###Syntax###
+Global Const $tagGDIPBITMAPDATA = "uint Width;uint Height;int Stride;uint Format;ptr Scan0;ptr Reserved"
+
+###Fields###
+@@ParamTable@@
+Width
+	Anzahl der Pixel in einer Abtastzeile der Bitmap
+Height
+	Anzahl der Abtastzeilen der Bitmap
+Stride
+	Abstand, in Bytes, zwischen aufeinanderfolgenden Abtastzeilen der Bitmap. Ist der Schritt positiv, dann
+	ist die Ausrichtung der Bitmap von oben nach unten. Ist der Schritt negativ, dann ist die Ausrichtung der Bitmap von unten nach oben
+Format
+	Bestimmt das Pixelformat der Bitmap
+Scan0
+	Zeiger auf die erste (Index 0) Abtastzeile der Bitmap
+Reserved
+	Reserviert f&uuml;r zuk&uuml;nftige Benutzung
+@@End@@
+
+###Remarks###
+Keine.
+

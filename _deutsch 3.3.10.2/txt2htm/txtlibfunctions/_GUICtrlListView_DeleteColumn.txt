@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_DeleteColumn
+
+###Description###
+L&ouml;scht eine Spalte eines ListView-Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_DeleteColumn ( $hWnd, $iCol )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCol
+	Index der zu l&ouml;schenden Spalte
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_InsertColumn
+
+
+###Example###
+@@IncludeExample@@

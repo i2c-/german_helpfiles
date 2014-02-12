@@ -1,0 +1,60 @@
+###User Defined Function###
+_WinAPI_Mouse_Event
+
+###Description###
+Synthetisiert Mausklicks und -bewegungen
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_Mouse_Event($iFlags [, $iX = 0 [, $iY = 0 [, $iData = 0 [, $iExtraInfo = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$iFlags
+	Eine Gruppe von Bit-Flags, die verschiedene Aspekte der Mausklicks und -bewegungen festlegen. Die Bits
+		in diesem Parameter k&ouml;nnen eine sinnvolle Kombination der folgenden Werte sein:
+		$MOUSEEVENTF_ABSOLUTE - Legt fest, dass die $iX und $iY Parameter normale, absolute Koordinaten enthalten. Falls
+		nicht gesetzt, enthalten diese Parameter relative Koordinaten: Die Positions&auml;nderung seit der zuletzt gemeldeten Position.
+		Dieses Flag kann gesetzt werden, oder auch nicht, ungeachtet welche Art von Maus- oder maus&auml;hnlichem Ger&auml;t, sofern vorhanden, mit
+		dem System verbunden ist.
+		$MOUSEEVENTF_ABSOLUTE - Legt fest, dass die dx und dy Parameter normalisierte absolute Koordinaten enth&auml;lt.
+		Falls nicht gesetzt, enthalten solche Parameter relative Daten: Die &Auml;nderung in der Position seit der letzten zur&uuml;ckgemeldeten Position.
+		Dieses Flag kann gesetzt werden oder auch nicht. Dabei ist es egal um was f&uuml;r eine Art von Maus oder maus&auml;hnlichem Ger&auml;t es sich handelt, falls &uuml;berhaupt eines an das System angeschlossen ist.
+		$MOUSEEVENTF_MOVE - Legt fest, dass Bewegung aufgetreten ist
+		$MOUSEEVENTF_LEFTDOWN - Legt fest, dass die linke Maustaste nach unten bewegt wurde
+		$MOUSEEVENTF_LEFTUP - Legt fest, dass die linke Maustaste nach oben bewegt wurde
+		$MOUSEEVENTF_RIGHTDOWN - Legt fest, dass die rechte Maustaste nach unten bewegt wurde
+		$MOUSEEVENTF_RIGHTUP - Legt fest, dass die rechte Maustaste nach oben bewegt wurde
+		$MOUSEEVENTF_MIDDLEDOWN - Legt fest, dass die mittlere Maustaste nach unten bewegt wurde
+		$MOUSEEVENTF_MIDDLEUP - Legt fest, dass die mittlere Maustaste nach oben bewegt wurde
+		$MOUSEEVENTF_WHEEL - Legt fest, dass das Mausrad bewegt wurde, falls die Maus ein Mausrad hat
+		$MOUSEEVENTF_XDOWN - Legt fest, dass ein X Button gedr&uuml;ckt wurde
+		$MOUSEEVENTF_XUP - Legt fest, dass ein X Button losgelassen wurde
+$iX
+	[optional] Legt die absolute Position der Maus fest, entlang der X-Achse oder ihrer Summe der Bewegung seit dem
+		zuletzt erzeugten Mausereignis, je nach den Einstellungen in $MOUSEEVENTF_ABSOLUTE. Absolute Daten sind festgelegt als
+		die aktuelle X-Koordinate der Maus, relative Daten sind festgelegt als die Anzahl der bewegten Mickeys.
+		Ein <i>Mickey</i> ist die Summe der Strecke, welche die Maus zur&uuml;cklegen muss, um zu melden, dass sie sich bewegt hat.
+$iY
+	[optional] Legt die absolute Position der Maus fest, entlang der Y-Achse oder ihrer Summe der Bewegung seit dem
+		zuletzt erzeugtem Mausereignis, je nach den Einstellungen in $MOUSEEVENTF_ABSOLUTE. Absolute Daten sind festgelegt als
+		die aktuelle X-Koordinate der Maus, relative Daten sind festgelegt als die Anzahl der bewegten Mickeys.
+$iData
+	[optional] Falls $iFlags $MOUSEEVENTF_WHEEL ist, dann legt iData die Summe der Mausradbewegungen fest. Ein positiver
+		Wert deutet an, dass das Mausrad vorw&auml;rts, weg vom Benutzer bewegt wurde. Ein negativer Wert deutet an, dass das
+		Mausrad r&uuml;ckw&auml;rts, hin zum Benutzer bewegt wurde. Ein Mausrad-Klick ist als $WHEEL_DELTA definiert, was dem Wert 120 entspricht. Falls
+		$iFlags nicht $MOUSEEVENTF_WHEEL ist, dann sollte $iData Null sein.
+$iExtraInfo
+	[optional] Legt einen 32-Bit Wert fest, der mit dem Mausereignis verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+Ben&ouml;tigt Constants.au3 f&uuml;r vordefinierte Konstanten.
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ mouse_event

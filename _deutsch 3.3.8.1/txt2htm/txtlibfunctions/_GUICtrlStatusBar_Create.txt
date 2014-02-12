@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlStatusBar_Create
+
+###Description###
+Erstellt eine Statusbar
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_Create($hWnd [, $vPartEdge = -1 [, $vPartText = "" [, $iStyles = -1 [, $iExStyles = 0x00000000]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Hauptfenster
+$vPartEdge
+	[optional] Breite eines oder mehrerer Abschnitte. F&uuml;r mehr als einen Abschnitt ist ein 0-basierendes Array in folgendem Format anzugeben:
+		$vPartEdge[0] - Rechte Kante des Abschnitts #1
+		$vPartEdge[1] - Rechte Kante des Abschnitts #2
+		$vPartEdge[n] - Rechte Kante des Abschnitts n
+$vPartText
+	[optional] Text eines oder mehrerer Abschnitte. F&uuml;r mehr als einen Abschnitt ist ein 0-basierendes Array in folgendem Format anzugeben:
+		$vPartText[0] - Erster Abschnitt
+		$vPartText[1] - Zweiter Abschnitt
+		$vPartText[n] - Letzter Abschnitt
+$iStyles
+	[optional] Stile des Controls:
+		$SBARS_SIZEGRIP - Das Statusbar-Control beinhaltet einen "Griff" am rechten Ende der Statusbar mit der die Gr&ouml;&szlig;e des Hauptfensters ver&auml;ndert werden kann
+		$SBARS_TOOLTIPS - Die Statusbar  besitzt Tooltips
+		Erzwungen: $WS_CHILD, $WS_VISIBLE
+$iExStyles
+	[optional] erweiterte Stile des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Controls
+Fehler:	0
+@@End@@
+
+###Remarks###
+Falls GUICtrlCreateMenu verwendet wird, dann ist _GUICtrlStatusBar_Create nach GUICtrlCreateMenu zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_Destroy
+
+###Example###
+@@IncludeExample@@

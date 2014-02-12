@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetLineNumberFromCharPos
+
+###Description###
+Ermittelt die Zeilennummer einer bestimmten Zeichenposition
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetLineNumberFromCharPos($hWnd, $iCharPos)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCharPos
+	Zeichenposition
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zeilennummer (ganze Zahl)
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iCharPos ist nicht positiv
+@@End@@
+
+###Remarks###
+Ein Control, das keinen Text enth&auml;lt, hat keine Zeile.
+Die erste Zeichenposition im Control ist 0.
+
+Die erste Zeile ist 1.
+
+Wenn $iCharPos negativ oder die Anzahl der Zeichen im Control &uuml;berschreitet,
+gibt die Funktion die Anzahl der Zeilen im Control zur&uuml;ck.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EM_EXLINEFROMCHAR
+
+###Example###
+@@IncludeExample@@

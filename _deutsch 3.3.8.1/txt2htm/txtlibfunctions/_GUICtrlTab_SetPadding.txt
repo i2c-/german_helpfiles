@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTab_SetPadding
+
+###Description###
+Setzt den freien Platz der sich um jedes Tabicon und Label befinden soll
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetPadding($hWnd, $iHorz, $iVert)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iHorz
+	Horizontaler Platz in Pixel
+$iVert
+	Vertikaler Platz in Pixel
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

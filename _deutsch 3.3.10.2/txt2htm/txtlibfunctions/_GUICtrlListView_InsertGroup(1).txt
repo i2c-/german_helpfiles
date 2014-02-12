@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlListView_InsertGroup
+
+###Description###
+F&uuml;gt eine Gruppe hinzu
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_InsertGroup ( $hWnd, $iIndex, $iGroupID, $sHeader [, $iAlign = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	Index wo die Gruppe hinzugef&uuml;gt werden soll. Falls dies -1 ist, wird die Gruppe an das Ende der Liste hinzugef&uuml;gt.
+$iGroupID
+	ID der Gruppe
+$sHeader
+	&Uuml;berschrift
+$iAlign
+	[optional] Ausrichtung der &Uuml;berschrift f&uuml;r die Gruppe:
+		0 - links
+		1 - mittig
+		2 - rechts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Index des Items, welchem die Gruppe hinzugef&uuml;gt wurde
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Eine Gruppe kann nicht in ein leeres Control eingef&uuml;gt werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItemGroupID
+
+
+###Example###
+@@IncludeExample@@

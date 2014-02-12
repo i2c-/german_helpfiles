@@ -1,0 +1,37 @@
+###User Defined Function###
+_DebugOut
+
+###Description###
+Schreibt die Ausgabe einer Debugging-Session, welche durch _DebugSetup() gestartet wurde.
+
+###Syntax###
+#include <Debug.au3>
+_DebugOut($sOutput [, $bActivate])
+
+###Parameters###
+@@ParamTable@@
+$sOutput
+	Der String (oder ein anderer druckbarer Wert), der an die Debugging-Session ausgegeben werden soll.
+$bActivate
+	[optional] Ignoriert, behalten f&uuml;r Abw&auml;rtskompatibilit&auml;t.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck, @Error und @Extended unver&auml;ndert wie vor dem Aufruf von _DebugCall().
+Fehler:	Setzt @Error und gibt 0 zur&uuml;ck.
+@Error:	0 = Kein Fehler.
+	2 = $bActivate ist ein ungeeigneter Typ.
+	3 = _DebugSetup() wurde nicht korrekt ausgef&uuml;hrt.
+@@End@@
+
+###Remarks###
+Jedes mal, wenn _DebugOut aufgerufen wird, wird die Ausgabe in eine eigene Zeile geschrieben.
+
+_DebugSetup muss vor dem ersten Aufruf von _DebugOut aufgerufen werden, ansonsten gibt die Funktion @Error = 3 zur&uuml;ck.
+
+###Related###
+_DebugSetup
+
+###Example###
+@@IncludeExample@@

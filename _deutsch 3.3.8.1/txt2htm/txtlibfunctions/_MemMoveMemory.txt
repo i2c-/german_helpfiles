@@ -1,0 +1,30 @@
+###User Defined Function###
+_MemMoveMemory
+
+###Description###
+Bewegt Speicher entweder nach vorne oder nach hinten, ausgerichtet oder unausgerichtet.
+
+###Syntax###
+#include <Memory.au3>
+_MemMoveMemory($pSource, $pDest, $iLength)
+
+###Parameters###
+@@ParamTable@@
+$pSource
+	Pointer auf die Quelle der Bewegung
+$pDest
+	Pointer auf das Ziel der Bewegung
+$iLength
+	Legt die Anzahl der zu kopierenden Bytes fest.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ RtlMoveMemory

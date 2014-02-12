@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlHeader_OrderToIndex
+
+###Description###
+Ermittelt den Index des Items an der angegebenen Position der Headerleiste
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_OrderToIndex($hWnd, $iOrder)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iOrder
+	Position innerhalb des Header-Controls (mit 0 beginnend, von links nach rechts), an der sich das gesuchte Item befindet
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt den 0-basierten Index des Items zur&uuml;ck
+Fehler:	iOrder
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+###Example###
+@@IncludeExample@@

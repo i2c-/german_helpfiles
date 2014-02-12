@@ -1,0 +1,40 @@
+###Function###
+RegEnumVal
+
+###Description###
+Liest den Namen eines Wertes aus der Registry.
+
+###Syntax###
+RegEnumVal ( "keyname", instance )
+
+
+###Parameters###
+@@ParamTable@@
+keyname
+	Der Registry-Schl&uuml;ssel, in dem gelesen werden soll.
+instance
+	Die Instanz, die ermittelt werden soll (basierend auf 1).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den angeforderten Wertnamen zur&uuml;ck. In @EXTENDED wird der Typ der Wertes geschrieben.
+Fehler:	Gibt "" zur&uuml;ck und setzt @error auf:
+	 1, wenn der Schl&uuml;ssel nicht ge&ouml;ffnet werden konnte
+	 2 wenn der ben&ouml;tigte Hauptschl&uuml;ssel nicht ge&ouml;ffnet werden konnte
+	 3 wenn &uuml;bers Netzwerk keine Verbindung zu der Registry zustande kam
+	-1, wenn der angefrage Wert nicht ermittelt werden konnte (Instanzwert au&szlig;erhalb des Bereichs)
+@@End@@
+
+###Remarks###
+Ein Registry-Schl&uuml;ssel muss mit "HKEY_LOCAL_MACHINE" ("HKLM"), "HKEY_USERS" ("HKU"), "HKEY_CURRENT_USER" ("HKCU"), "HKEY_CLASSES_ROOT" ("HKCR") oder "HKEY_CURRENT_CONFIG" ("HKCC") beginnen.
+
+Falls bei einem 64-Bit Windows auf die speziellen Eintr&auml;ge des 64-Bit Systems zugegriffen werden soll, muss dem Begriff HK... das Suffix 64 angeh&auml;ngt werden (z. B. HKLM64).
+
+###Related###
+RegEnumKey, RegDelete, RegWrite
+
+
+###Example###
+@@IncludeExample@@

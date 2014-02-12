@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlTreeView_HitTest
+
+###Description###
+Gibt Informationen &uuml;ber den Ort eines Punktes relativ zu dem Control zur&uuml;ck
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_HitTest($hWnd, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iX
+	zu testende X Position relativ zum Control
+$iY
+	zu testende Y Position relativ zum Control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wert der ein Hinweis f&uuml;r das Ergebnis des Hit-Testes ist:
+	   1 - In der Arbeitsfl&auml;che, aber unterhalb des letzten Items.
+	   2 - Auf dem Bitmap, welches mit einem Item verkn&uuml;pft ist
+	   4 - Auf dem Text, welcher mit einem Item verkn&uuml;pft ist
+	   8 - In der Einr&uuml;ckung, welche mit einem Item verkn&uuml;pft ist
+	  16 - Auf dem Button, welcher mit einem Item verkn&uuml;pft ist
+	  32 - Im Bereich rechts von einem Item
+	  64 - Auf dem Statusicon f&uuml;r ein Item, welches sich in einem benutzerdefinierten Status befindet
+	 128 - Oberhalb der Arbeitsfl&auml;che
+	 256 - Unterhalb der Arbeitsfl&auml;che
+	 512 - Links von der Arbeitsfl&auml;che
+	1024 - Rechts von der Arbeitsfl&auml;che
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_HitTestItem, _GUICtrlTreeView_HitTestEx
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_IEErrorHandlerDeRegister
+
+###Description###
+Deaktiviert einen registrierten User-COM-Fehler-Handler.
+
+###Syntax###
+#include <IE.au3> 
+_IEErrorHandlerDeRegister()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Keine
+@@End@@
+
+
+###Remarks###
+Siehe Bemerkungen zu _IEErrorHandlerRegister.
+
+
+###Related###
+_IEErrorHandlerRegister
+
+
+###Example###
+@@IncludeExample@@

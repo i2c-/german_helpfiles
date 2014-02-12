@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListBox_Destroy
+
+###Description###
+L&ouml;scht das Control (ListBox)
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+
+###Remarks###
+Funktioniert nur mit einer Listbox-Controls, die mit _GUICtrlListBox_Create erstellt wurde
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_Create
+
+###Example###
+@@IncludeExample@@

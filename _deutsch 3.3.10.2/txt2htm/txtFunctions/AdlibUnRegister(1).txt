@@ -1,0 +1,30 @@
+###Function###
+AdlibUnRegister
+
+###Description###
+Deregistriert eine Adlib-Funktion.
+
+###Syntax###
+AdlibUnRegister ( ["function"] )
+
+
+###Parameters###
+@@ParamTable@@
+function
+	[optional] Der Name, der Adlib-Funktion die deregistriert werden soll.  Siehe Anmerkungen, f&uuml;r weitere Informationen.
+@@End@@
+
+###ReturnValue###
+Die Anzahl der Adlib-Funktionen die momentan registriert sind.
+
+
+###Remarks###
+Wird der Namen der zu deregistrierenden Funktion nicht angegeben, so wird die zuletzt registrierte Adlib-Funktion deregistriert.
+
+
+###Related###
+AdlibRegister
+
+
+###Example###
+@@IncludeExample@@

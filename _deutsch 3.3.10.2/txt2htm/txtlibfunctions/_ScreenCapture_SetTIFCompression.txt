@@ -1,0 +1,30 @@
+###User Defined Function###
+_ScreenCapture_SetTIFCompression
+
+###Description###
+Setzt die Komprimierung f&uuml;r TIFF Screenshots
+
+###Syntax###
+#include <ScreenCapture.au3>
+_ScreenCapture_SetTIFCompression ( $iCompress )
+
+
+###Parameters###
+@@ParamTable@@
+$iCompress
+	Bildkomprimierungstyp:
+		0 - Standardkomprimierung
+		1 - keine Komprimierung
+		2 - LZW Komprimierung
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls nicht angegeben, werden TIFF Screenshots standardm&auml;&szlig;ig auf Basis der LZW Komprimierung erstellt
+
+
+###Related###
+_ScreenCapture_SetTIFColorDepth

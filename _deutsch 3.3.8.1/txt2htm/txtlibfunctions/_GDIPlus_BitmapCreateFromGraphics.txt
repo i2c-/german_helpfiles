@@ -1,0 +1,34 @@
+###User Defined Function###
+_GDIPlus_BitmapCreateFromGraphics
+
+###Description###
+Erstellt ein Bitmap-Objekt aus einem Grafik-Objekt, einer Breite und einer H&ouml;he
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCreateFromGraphics($iWidth, $iHeight, $hGraphics)
+
+###Parameters###
+@@ParamTable@@
+$iWidth
+	Bestimmt die Breite des Bitmaps in Pixel
+$iHeight
+	Bestimmt die H&ouml;he des Bitmaps in Pixel
+$hGraphics
+	Handle zu dem Grafik-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Bitmap-Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit dem Bitmap-Objekt fertig ist, ist _GDIPlus_BitmapDispose aufzurufen, um die Ressourcen wieder freizugeben
+
+###Related###
+_WinAPI_DeleteObject
+
+###See Also###
+@@MsdnLink@@ GdipCreateBitmapFromGraphics

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlMenu_SetMenuHeight
+
+###Description###
+Setzt die maximale H&ouml;he des Men&uuml;s fest
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetMenuHeight ( $hMenu, $iHeight )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iHeight
+	maximale H&ouml;he des Men&uuml;s
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_GetMenuHeight
+
+
+###Example###
+@@IncludeExample@@

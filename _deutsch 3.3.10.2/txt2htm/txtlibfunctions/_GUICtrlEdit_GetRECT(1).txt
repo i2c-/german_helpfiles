@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlEdit_GetRECT
+
+###Description###
+Ermittelt das formatierte Rechteck eines Edit-Controls
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetRECT ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array zur&uuml;ck, welches das RECT im folgenden Format enth&auml;lt:
+	[0] - X Koordinate der oberen linken Ecke des Rechtecks
+	[1] - Y Koordinate der oberen linken Ecke des Rechtecks
+	[2] - X Koordinate der unteren rechten Ecke des Rechtecks
+	[3] - Y Koordinate der unteren rechten Ecke des Rechtecks
+
+
+###Remarks###
+Unter bestimmten Bedingungen kann es sein, dass _GUICtrlEdit_GetRECT() nicht den exakten Wert, der durch _GUICtrlEdit_SetRECT() gesetzt wurde, zur&uuml;ckgibt.
+Der ann&auml;hernd korrekt ist, aber er kann ein paar Pixel abweichen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_GetRECTEx
+
+
+###Example###
+@@IncludeExample@@

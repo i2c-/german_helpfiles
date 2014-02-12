@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlListBox_SelectString
+
+###Description###
+Sucht nach einem Item, welches mit dem festgelegten String beginnt
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SelectString ( $hWnd, $sText [, $iIndex = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	String der den zu suchenden String enth&auml;lt.
+$iIndex
+	[optional] legt den 0-basierenden Index des Items fest bei dem die Suche beginnen soll.
+	Wenn die Suche das Ende der Listbox erreicht, wird sie oben am Anfang der Listbox bis zu dem festgelegten Item von $iIndex fortgesetzt.
+	Falls $iIndex –1 ist, wird die komplette Listbox vom Anfang an durchsucht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index des ausgew&auml;hlten Items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Die Listbox wird falls notwendig so gescrollt, dass das markierte Item sichtbar ist-
+Diese Funktion ist nicht zu verwenden, wenn die Listbox den Stil $LBS_MULTIPLESEL oder $LBS_EXTENDEDSEL besitzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_FindString, _GUICtrlListBox_FindInText
+
+
+###Example###
+@@IncludeExample@@

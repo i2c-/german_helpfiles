@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetPrevSibling
+
+###Description###
+Gibt das vorherige Item, welches auf der gleichen Ebene wie das festgelegte Item liegt, zur&uuml;ck
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetPrevSibling ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zum vorherigen Item, welches auf der gleichen Ebene wie das festgelegte Item liegt
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetNextSibling
+
+
+###Example###
+@@IncludeExample@@

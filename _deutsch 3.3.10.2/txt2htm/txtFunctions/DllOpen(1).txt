@@ -1,0 +1,34 @@
+###Function###
+DllOpen
+
+###Description###
+L&auml;dt eine DLL f&uuml;r den Gebrauch in DllCall.
+
+###Syntax###
+DllOpen ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname der zu &ouml;ffnenden DLL.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Handle zur DLL, das anschlie&szlig;end in den DLL-Funktionen genutzt werden kann.
+Fehler:	-1 wenn ein Fehler auftritt
+@@End@@
+
+
+###Remarks###
+Wenn die Arbeit mit der DLL beendet ist, dann sollte <a href="DllClose.htm">DllClose()</a> zum schlie&szlig;en der DLL aufgerufen werden.
+AutoIt schlie&szlig;t zwar normalerweise alle Filehandles nach dem Beenden, aber das explizite Aufrufen von <a href="DllClose.htm">DllClose()</a> ist trotzdem empfehlenswert. 
+
+
+###Related###
+DllCall, DllClose
+
+
+###Example###
+@@IncludeExample@@

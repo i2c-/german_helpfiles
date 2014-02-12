@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTreeView_GetEditControl
+
+###Description###
+Ermittelt das Handle zu dem Edit-Control, welches verwendet wird, um den Text eines Items zu &auml;ndern
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetEditControl ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu dem Edit-Control
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_EditText
+
+
+###Example###
+@@IncludeExample@@

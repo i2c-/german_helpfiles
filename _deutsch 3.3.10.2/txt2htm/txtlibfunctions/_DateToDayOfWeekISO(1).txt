@@ -1,0 +1,39 @@
+###User Defined Function###
+_DateToDayOfWeekISO
+
+###Description###
+Gibt den Wochentag als Zahl im ISO-Format f&uuml;r ein vorgegebenes Datum zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_DateToDayOfWeekISO ( $iYear, $iMonth, $iDay )
+
+
+###Parameters###
+@@ParamTable@@
+$iYear
+	Ein g&uuml;ltiges Jahr im Format YYYY
+$iMonth
+	Ein g&uuml;ltiger Monat im Format MM
+$iDay
+	Ein g&uuml;ltiger Tag im Format DD
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Wochentag als Zahl (Bereich zwischen 1 und 7, wobei 1=Montag ist).
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - ung&uuml;ltige Datumseingabe
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_DateToDayOfWeek, _DateDayOfWeek, _DayValueToDate, _DateAdd, _DateDiff
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,52 @@
+###User Defined Function###
+_NamedPipes_CallNamedPipe
+
+###Description###
+F&uuml;hrt ein Lese/Schreibt Operation auf eine Named Pipe durch.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_CallNamedPipe ( $sPipeName, $pInpBuf, $iInpSize, $pOutBuf, $iOutSize, ByRef $iRead [, $iTimeOut = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$sPipeName
+	Pipe Name
+$pInpBuf
+	Zeiger auf den Schreib-Puffer der die Daten enth&auml;lt die in die Pipe geschrieben wurde
+$iInpSize
+	Gr&ouml;&szlig;e des Schreib-Puffers, in Bytes
+$pOutBuf
+	Zeiger auf den Lese-Puffer der die gelesenen Daten vom Schreib-Buffer empf&auml;ngt
+$iOutSize
+	Gr&ouml;&szlig;e des Lese-Puffers, in Bytes
+$iRead
+	Bei der R&uuml;ckgabe, enth&auml;lt die Variable die Anzahl an Bytes die von der Pipe gelesen wurden
+$iTimeOut
+	[optional] Zeit in Millisekunden bis die Named Pipe benutzbar sein muss.
+	Zus&auml;tzlich zu numerischen Werten, k&ouml;nnen die folgenden Sonderwerte angegeben werden:
+		-1 - Warte unendlich lange
+		 0 - Benutzt die Standard Wartezeit definiert bei dem Aufruf von CreateNamedPipe
+		 1 - Warte nicht. Falls die Pipe nicht benutzbar ist, wird ein Fehler zur&uuml;ckgegeben 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Die Funktion CallNamedPipe ist identisch mit Create File (oder WaitNamedPipe, falls CreatFile die Pipe nicht sofort &ouml;ffnen kann), TransactNamedPipe und CloseHandle Funktionen.
+CreateFile wird mit einer Zugriffs Flag  GENERIC_READ | GENERIC_WRITE und mit einer geerbten Handle Flag von False.
+CallNamedPipe schl&auml;gt fehl falls die Pipe eine Byte-type Pipe ist.
+
+
+###Related###
+_NamedPipes_WaitNamedPipe, _NamedPipes_TransactNamedPipe
+
+
+###See Also###
+@@MsdnLink@@ CallNamedPipe

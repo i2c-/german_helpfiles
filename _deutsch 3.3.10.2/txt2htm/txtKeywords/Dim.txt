@@ -1,0 +1,78 @@
+###Keyword###
+Dim / Global / Local / Const
+
+###Description###
+Deklariert eine Variable, Konstante oder definiert ein Array.
+
+###Syntax###
+<b>Global | Local</b> [Const] $variable [ = initializer ]
+<b>Global | Local</b> [Const] $aArray<b>[</b>subscript 1<b>]</b>...<b>[</b>subscript n<b>]</b> [ = initializer ]
+
+
+###Parameters###
+@@ParamTable@@
+Const
+	[optional] Wenn angegeben, wird statt einer Variablen eine Konstante deklariert.
+$variable
+	Der Name der zu deklarierenden Variablen.
+initializer
+	Der Wert, welcher der Variablen am Anfang zugeteilt wird.  Eine Konstante muss den Initializer enthalten.  Der Initializer kann ein Funktionsaufruf sein.
+subscript
+	Die Anzahl Elemente eines Arrays (0 bis n-1).
+@@End@@
+
+
+###Remarks###
+Die Schl&uuml;sselw&ouml;rter Dim, Local und Global haben eine &auml;hnliche Funktionsweise:
+1. Deklariert eine Variable, bevor sie verwendet wird (&auml;hnlich zu VBScript)
+2. Erzeugt ein Array
+
+<b>Hinweis</b>:  In AutoIt kann man eine Variable erzeugen, indem man ihr einfach einen Wert zuweist ($myvar = 0). Viele Leute deklarieren sie aber lieber explizit.  Falls <b><a href="../functions/AutoItSetOption.htm#MustDeclareVars">AutoItSetOption("MustDeclareVars", 1)</a></b> aktiv ist, dann m&uuml;ssen Variablen vor der Benutzung explizit deklariert werden.
+
+Es k&ouml;nnen auch mehrere Variablen in einer Zeile deklariert werden:
+<p class="code">Local $vVar_1, $vVar_2, $vVar_3</p>
+Und man kann ihnen auch gleich einen Wert zuweisen, wenn die Variable kein Array ist:
+<p class="code">Local $vVar_1 = 10, $vVar_2 = "20", $vVar_3 = 30</p>
+
+Die Erzeugung von Konstanten wird &auml;hnlich durchgef&uuml;hrt:
+<p class="code">Const $CONST_1 = 1, $CONST_2 = 2, $CONST_3 = 3
+Global Const $PI = 3.14, $MEANING_OF_LIFE = 42
+Local Const $iApples = 500
+</p>
+Wenn eine Konstante einmal erzeugt wurde, kann ihr Wert danach nicht mehr ver&auml;ndert werden. Au&szlig;erdem kann man eine existierende Variable nicht in eine Konstante umwandeln.
+
+Um ein Array zu deklarieren, sind die Maximalwerte f&uuml;r jedes Element in eckigen Klammern, getrennt durch Kommas anzugeben. F&uuml;r mehrere Dimensionen sind die Initialisierer zu verschachteln. Es k&ouml;nnen weniger Elemente im Initialisierer festgelegt werden als deklariert, aber nicht mehr. Es k&ouml;nnen auch Funktionsaufrufe in dem Initializer eines Arrays platziert werden.  Falls die Funktion ein Array zur&uuml;ckgibt, dann enth&auml;lt dieses eine Arrayelement das zur&uuml;ckgegebene Array aus der Funktion.
+<p class="code">Local $aArray_1[12] = [3, 7.5, "string"], $aArray_1[5] = [8, 4, 5, 9, 1]
+Local $aGrid[2][4] = [["Paul", "Jim", "Richard", "Louis"], [485.44, 160.68, 275.16, 320.00]]
+Global $aTest[5] = [3, 1, StringSplit("Abe|Jack|Bobby|Marty", "|"), Cos(0)]
+</p>
+Der Unterschied zwischen Dim, Local und Global ist der G&uuml;ltigkeitsbereich, f&uuml;r den die Variablen deklariert werden:
+<b>Dim</b> = Wenn der Variablename nicht schon mit globalem G&uuml;ltigleitsbereich existiert, hat die definierte Variable einen lokalen G&uuml;ltigkeitsbereich (falls die Variable schon global existiert, so wird die globale Variable verwendet.)
+<b>Global</b> = Erzwingt globale G&uuml;ltigkeit der Variablen
+<b>Local</b> = Erzwingt lokale G&uuml;ltigkeit der Variablen, bzw. innerhalb der Funktion
+
+Man sollte Local oder Global anstelle von Dim verwenden, um explizit den G&uuml;ltigkeitsbereich f&uuml;r die Variable / Konstante / Array festzulegen.
+
+Wenn Variablen verwendet werden, wird zuerst gepr&uuml;ft, ob die Variable lokal existiert, und erst danach, ob sie global deklariert ist.
+
+Wenn ein Array erzeugt wird, ist es auf maximal 64 Dimensionen und/oder 16 Millionen Elemente begrenzt.
+
+Eine einzigartige Besonderheit in AutoIt ist die M&ouml;glichkeit, Arrays wie folgt zu kopieren:
+$mycopy = $myarray
+In diesem Fall ist $mycopy eine exakte Kopie von $myarray und hat dieselben Dimensionen - es ist keine vorherige Deklaration mit Dim n&ouml;tig.  Wenn <b><a href="../functions/AutoItSetOption.htm#MustDeclareVars">AutoItSetOption("MustDeclareVars", 1)</a></b> aktiv ist, dann muss die Variable $mycopy zuvor deklariert zu werden, die Angabe der Gr&ouml;&szlig;e ist dabei nicht vonn&ouml;ten.  Wenn die Variable $mycopy bereits als Array deklariert war, wird es gel&ouml;scht, bevor das Kopieren stattfindet.
+
+Um ein Array zu leeren (z.B., weil man den Speicherplatz eines gro&szlig;en, globalen Arrays freigeben m&ouml;chte), weist man ihm einfach einen einzigen Wert zu:
+$aArray = 0
+Das gibt den Speicherplatz des Arrays frei und setzt es auf den einzigen Wert 0.
+
+Deklariert man den den Variablennamen erneut, werden alle Werte des Arrays gel&ouml;scht, und auf die neu definierte Gr&ouml;&szlig;e dimensioniert.
+
+Falls man eine Variable mit demselben Namen als Funktions-Parameter deklariert, oder wenn <b>Local</b> innerhalb einer Benutzerfunktion verwendet wird, tritt ein Fehler auf.  <b>Global</b> kann verwendet werden, um es einer globalen Variablen innerhalb einer Funktion zuzuweisen. Aber wenn eine lokale Variable (oder Parameter) den selben Namen wie eine globale Variable besitzt, so wird die lokale Variable verwendet.  Es ist empfehlenswert, den lokalen und globalen Variablen verschiedene Namen zu geben.
+
+
+###Related###
+<a href="../functions/UBound.htm">UBound</a>, ReDim, Static, <a href="../functions/AutoItSetOption.htm#MustDeclareVars">AutoItSetOption</a>
+
+
+###Example###
+@@IncludeExample@@

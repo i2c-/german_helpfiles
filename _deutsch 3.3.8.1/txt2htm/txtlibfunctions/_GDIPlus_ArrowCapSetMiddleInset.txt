@@ -1,0 +1,42 @@
+###User Defined Function###
+_GDIPlus_ArrowCapSetMiddleInset
+
+###Description###
+Setzt den Wert des Grundlinienversatzes eines Pfeil-Objekts.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ArrowCapSetMiddleInset($hArrowCap, $fInset)
+
+###Parameters###
+@@ParamTable@@
+$hArrowCap
+	Handle zu einem ArrowCap-Objekt (Pfeil-Objekt)
+$fInset
+	Wert des Grundlinienversatzes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Der Grundlinienversatz ist die Anzahl der Einheiten, die der Mittelpunkt der Grundlinie des Pfeils in Richtung der Spitze verschoben werden soll.
+Ein Versatz von 0 ergibt keine Verschiebung (d.h. die Grundlinie ist eine Gerade, die Pfeilform sieht dadurch wie ein Dreieck aus).
+Ein positiver Versatz erzeugt eine Verschiebung um diese Anzahl von Einheiten in Richtung zur Pfeilspitze (wodurch der Pfeil ein V-f&ouml;rmiges Aussehen erh&auml;lt).
+Ein negativer Versatz f&uuml;hrt zu einer Verschiebung um diese Anzahl von Einheiten von der Pfeilspitze weg (der Pfeil hat die Form eines Drachenvierecks)
+Wenn der Versatz gr&ouml;&szlig;er oder gleich der Spitzenl&auml;nge (height) ist, wird kein Pfeil gezeichnet.
+Der Versatz hat nur dann Auswirkungen auf die Pfeildarstellung, wenn der Pfeil ausgef&uuml;llt ist (siehe <b>_GDIPlus_ArrowCapGetFillState</b> und <b>_GDIPlus_ArrowCapSetFillState</b>).
+
+###Related###
+_GDIPlus_ArrowCapGetMiddleInset
+_GDIPlus_ArrowCapGetFillState
+_GDIPlus_ArrowCapSetFillState
+
+###See Also###
+@@MsdnLink@@ GdipSetAdjustableArrowCapMiddleInset
+
+###Example###
+@@IncludeExample@@

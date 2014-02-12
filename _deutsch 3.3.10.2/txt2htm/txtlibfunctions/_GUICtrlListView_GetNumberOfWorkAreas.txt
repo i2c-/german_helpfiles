@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_GetNumberOfWorkAreas
+
+###Description###
+Ermittelt die Anzahl von Arbeitsfl&auml;chen in dem Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetNumberOfWorkAreas ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl von Arbeitsfl&auml;chen zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetWorkAreas
+
+
+###Example###
+@@IncludeExample@@

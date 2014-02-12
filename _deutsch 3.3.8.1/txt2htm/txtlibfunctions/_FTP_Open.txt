@@ -1,0 +1,50 @@
+###User Defined Function###
+_FTP_Open
+
+###Description###
+&Ouml;ffnet eine FTP Sitzung.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_Open($s_Agent [, $l_AccessType = 1 [, $s_ProxyName = '' [, $s_ProxyBypass = '' [, $l_Flags = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$s_Agent
+	Zuf&auml;lliger Name. ( Wie "myftp" )
+$l_AccessType
+	[optional] Setzten, wenn ein Proxy benutzt wird.
+$s_ProxyName
+	[optional] Name des Proxys.
+$s_ProxyBypass
+	[optional] Proxy Bypass Liste.
+$l_Flags
+	[optional] Siehe remarks.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen Handle zur&uuml;ck, der in _FTP_Connect() benutzt werden kann.
+Fehler:	0  und setzt @ERROR.
+@@End@@
+
+###Remarks###
+Werte f&uuml;r $l_AccessType
+	$INTERNET_OPEN_TYPE_DIRECT -> Kein Proxy
+	$INTERNET_OPEN_TYPE_PRECONFIG -> Erneuert den Proxy oder konfiguriert direkt aus der Registry.
+	$INTERNET_OPEN_TYPE_PRECONFIG_WITH_NO_AUTOPROXY -> Erneuert den Proxy oder konfiguriert direkt aus der Registry und verhindert den Start des Microsoft JSkripts oder der Internet Setup (INS) Datei.
+	$INTERNET_OPEN_TYPE_PROXY -> Leitet Anfragen zum Proxy weiter. Ausgenommen wenn eine Proxy Bypass Liste angegeben wurde und der aufzul&ouml;sende Name in dieser Liste enthalten ist. Dann wird kein Proxy verwendet.
+
+Werte f&uuml;r $l_Flags
+	$INTERNET_FLAG_ASYNC -> Macht nur Asynchrone Anfragen auf Handles die von dem Handle der Funktion zur&uuml;ckgegeben wurde.
+	$INTERNET_FLAG_FROM_CACHE -> Macht keine Netzwerk Anfragen. Alle Eintr&auml;ge werden vom Cache zur&uuml;ckgegeben. Wenn die betroffene Position nicht im Cache vorhanden ist, wird eine &auml;hnlicher Fehler, wie ERROR_FILE_NOT_FOUND zur&uuml;ckgegeben.
+
+
+###Related###
+_FTP_Connect, _FTP_Close, _FTP_SetStatusCallback
+
+###See Also###
+@@MsdnLink@@ InternetOpen
+
+###Example###
+@@IncludeExample@@

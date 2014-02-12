@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetMaxSize
+
+###Description###
+Ermittelt die Gesamtgr&ouml;&szlig;e aller sichtbaren Buttons und Trennzeichen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetMaxSize($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Maximale Breite
+	[1] - Maximale H&ouml;he
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

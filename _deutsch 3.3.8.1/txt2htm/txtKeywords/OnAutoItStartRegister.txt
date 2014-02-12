@@ -1,0 +1,24 @@
+###Keyword###
+#OnAutoItStartRegister
+
+###Description###
+Registriert eine Funktion, wenn AutoIt gestartet wird.
+
+###Syntax###
+<b>#OnAutoItStartRegister</b> "function"
+
+
+###Parameters###
+@@ParamTable@@
+function
+	Der Name der Funktion, die aufgerufen werden soll.
+@@End@@
+
+
+###Remarks###
+
+###Related###
+
+
+###Example###
+@@IncludeExample@@

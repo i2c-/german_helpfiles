@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_SelectObject
+
+###Description###
+W&auml;hlt ein Objekt in dem festgelegten Ger&auml;tekontext aus
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SelectObject($hDC, $hGDIObj)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifiziert den Ger&auml;tekontext
+$hGDIObj
+	Identifiziert das auszuw&auml;hlende Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des ersetzten Objekts
+Fehler:	<= 0
+@@End@@
+
+###Remarks###
+Setzt man ein GDI-Objekt, wie z.B. eine Bitmap, einen Zeichenstift, ein F&uuml;llmuster, eine Schrift oder eine Palette mit _WinAPI_SelectObject ein, so ist das alte, aus dieser Funktion zur&uuml;ckgegebene GDI-Objekt wieder in den Ger&auml;tekontext einzusetzen, bevor man das zuvor eingesetzte GDI-Objekt wieder freigibt.
+
+###Related###
+_WinAPI_CreatePen, _WinAPI_DrawLine, _WinAPI_GetBkMode, _WinAPI_LineTo, _WinAPI_MoveTo, _WinAPI_SetBkMode
+
+###See Also###
+@@MsdnLink@@ SelectObject
+
+###Example###
+@@IncludeExample@@

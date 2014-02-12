@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlListView_InsertColumn
+
+###Description###
+F&uuml;gt dem Control eine neue Spalte hinzu
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_InsertColumn($hWnd, $iIndex, $sText [, $iWidth = 50 [, $iAlign = -1 [, $iImage = -1 [, $fOnRight = False]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index der neuen Spalte
+$sText
+	Spalten&uuml;berschrift
+$iWidth
+	[optional] Breite der Spalte in Pixel
+$iAlign
+	[optional] Ausrichtung des Spaltenkopfes und des Textes der Subitems in der Spalte:
+		0 - Text ist linksb&uuml;ndig
+		1 - Text ist rechtsb&uuml;ndig
+		2 - Text ist zentriert
+$iImage
+	[optional] 0-basierender Index eines Bildes innerhalb der Imagelist
+$fOnRight
+	[optional] Falls True erscheint das Bild rechts neben dem Text
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index der neuen Spalte
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Die Ausrichtung der ersten Spalte (ganz links) ist immer linksb&uuml;ndig
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_DeleteColumn
+
+###Example###
+@@IncludeExample@@

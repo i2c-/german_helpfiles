@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetFirstDOWStr
+
+###Description###
+Ermittelt den ersten Tag der Woche als einen String
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetFirstDOWStr($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	einer der folgenden Werte:
+
+	Montag
+	Dienstag
+	Mittwoch
+	Donnerstag
+	Freitag
+	Samstag
+	Sonntag
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_GetFirstDOW
+
+###Example###
+@@IncludeExample@@

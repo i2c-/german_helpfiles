@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_SimpleSort
+
+###Description###
+Sortiert ein ListView-Control (begrenzt)
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SimpleSort($hWnd, ByRef $vDescending, $iCol)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$vDescending
+	kann sein:
+		 True - Sortiert absteigend (Descending)
+		 False - Sortiert aufsteigend (Ascending)
+$iCol
+	Spaltennummer
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Dies ist eine Grundlagensortierfunktion. F&uuml;r ein erweitertes Sortieren siehe GUICtrlRegisterListViewSort
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlRegisterListViewSort
+
+###Example###
+@@IncludeExample@@

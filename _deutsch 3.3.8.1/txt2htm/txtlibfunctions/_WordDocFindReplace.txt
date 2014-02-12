@@ -1,0 +1,89 @@
+###User Defined Function###
+_WordDocFindReplace
+
+###Description###
+Startet die angegebene "Suchen und Ersetzen"-Operation.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocFindReplace(ByRef $o_object [, $s_FindText = "" [, $s_ReplaceWith = "" [, $i_Replace = 2 [, $v_SearchRange = 0 [, $b_MatchCase = 0 [, $b_MatchWholeWord = 0 [, $b_MatchWildcards = 0 [, $b_MatchSoundsLike = 0 [, $b_MatchAllWordForms = 0 [, $b_Forward = 1 [, $i_Wrap = 1 [, $b_Format = 0]]]]]]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable eines Word.Application-Dokumentobjektes.
+$s_FindText
+	[optional] Der Text, nach dem gesucht werden soll. (Siehe Bemerkungen)
+	"" = (Standard) Wird nur gebraucht, um nach Formatierungen zu suchen.
+$s_ReplaceWith
+	[optional] Der Text, mit dem ersetzt werden soll. (Siehe Bemerkungen)
+	"" = (Standard) L&ouml;scht den Text, welcher durch $s_FindText festgelegt wurde
+$i_Replace
+	[optional] Gibt an, an welchen Stellen der Text ersetzt werden soll.
+	0 = Keinen Text ersetzen.
+	1 = Ersetzt den Text an der ersten Fundstelle.
+	2 = (Standard) Ersetzt den Text an jeder Fundstelle.
+$v_SearchRange
+	[optional] Gibt den Bereich an, in dem nach dem Text gesucht werden soll.
+	-1 = die aktuelle Auswahl
+	0 = (Standard) das komplette Dokument
+	Jedes Bereichsobjekt
+$b_MatchCase
+	[optional] Legt fest, ob die Gro&szlig;- und Kleinschreibung ber&uuml;cksichtigt werden soll.
+	0 = (Standard) Gro&szlig;- und Kleinschreibung nicht ber&uuml;cksichtigen
+	1 = Gro&szlig;- und Kleinschreibung ber&uuml;cksichtigen
+$b_MatchWholeWord
+	[optional] Legt fest, ob nur komplette W&ouml;rter, also keine Textteile, gefunden werden sollen.
+	0 = (Standard) findet auch Textteile
+	1 = findet nur komplette W&ouml;rter
+$b_MatchWildcards
+	[optional] Legt fest, ob $s_FindText ein besonderer Suchvorgang sein soll.
+	0 = (Standard) kein besonderer Suchvorgang
+	1 = besonderer Suchvorgang
+$b_MatchSoundsLike
+	[optional] Legt fest, ob der Suchvorgang auch &auml;hnliche W&ouml;rter finden soll. $s_FindText.
+	0 = (Standard) findet keine &auml;hnlichen W&ouml;rter
+	1 = findet &auml;hnliche W&ouml;rter
+$b_MatchAllWordForms
+	[optional] Legt fest, ob der Suchvorgang alle Formen des Textes finden soll (zum Beispiel, "sitzen" findet "sa&szlig;" und "setzte").
+	0 = (Standard) findet keine anderen Wortformen
+	1 = findet alle Wortformen
+$b_Forward
+	[optional] legt die Suchrichtung fest.
+	0 = sucht r&uuml;ckw&auml;rts (in Richtung Anfang des Dokuments)
+	1 = (Standard) sucht vorw&auml;rts (in Richtung Ende des Dokuments)
+$i_Wrap
+	[optional] Legt fest, was passiert, wenn die Suche nicht am Anfang des Dokuments beginnt und das Ende des Dokuments erreicht wird (oder vice versa, falls $b_Forward auf 0 gesetzt ist).
+	0 = Der Suchvorgang endet, wenn der Anfang oder das Ende des Suchbereichs erreicht wurde.
+	1 = (Standard) Der Suchvorgang wird fortgesetzt, wenn der Anfang oder das Ende des Suchbereichs erreicht wurde.
+$b_Format
+	[optional] Legt fest, ob der Suchvorgang die Formatierung zus&auml;tzlich zum oder anstatt des Textes suchen soll.
+	0 = (Standard) sucht nicht nach der Formatierung
+	1 = sucht nach der Formatierung
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekttyp
+	$_WordStatus_InvalidValue = Ung&uuml;ltiger Suchbereich
+	$_WordStatus_NoMatch = Keinen &uuml;bereinstimmenden Text gefunden
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Man kann durch passende Zeichencodes nach Sonderzeichen suchen. Zum Beispiel entspricht "^p" dem Paragraphenzeichen, "^t" dem Tabulatorzeichen.
+
+Sonderzeichen und erweiterte Suchkriterien kann man genauso wie bei einem angegebenen Suchtext festlegen. Um ein Grafik-Objekt oder andere 'Nicht-Text-Zeichen' als Ersetzung anzugeben, ist das entsprechende Zeichen in die Zwischenablage zu kopieren und f&uuml;r $s_ReplaceWith "^c" einzusetzen.
+
+
+###Related###
+Keine
+
+
+###Example###
+@@IncludeExample@@

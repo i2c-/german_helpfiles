@@ -1,0 +1,33 @@
+###User Defined Function###
+_Security__StringSidToSid
+
+###Description###
+Konvertiert einen String in eine bin&auml;re SID
+
+###Syntax###
+#include <Security.au3>
+_Security__StringSidToSid($sSID)
+
+###Parameters###
+@@ParamTable@@
+$sSID
+	String SID die konvertiert werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	SID in einer Byte-Struktur
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__SidToStringSid
+
+###See Also###
+@@MsdnLink@@ ConvertStringSidToSid
+
+###Example###
+@@IncludeExample@@

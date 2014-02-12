@@ -1,0 +1,38 @@
+###User Defined Function###
+_FTP_FileTimeLoHiToStr
+
+###Description###
+Konvertiert Lo-und HiDWORD einer FileTime-Struktur zu einem String
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileTimeLoHiToStr ( $iLoDWORD, $iHiDWORD [, $bFmt = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$iLoDWORD
+	FileTime Low-Wert
+$iHiDWORD
+	File Time Hi-Wert
+$bFmt
+	[optional]
+		0 Gibt das Format mm/tt/jjjj hh:mm:ss zur&uuml;ck (Standard)
+		1 gibt jjjj/mm/tt hh:mm:ss zur&uuml;ck (z.B. f&uuml;r Date.au3)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Datum und eine Zeit wie in $bFmt angegeben
+Fehler:	ein leerer String
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###Example###

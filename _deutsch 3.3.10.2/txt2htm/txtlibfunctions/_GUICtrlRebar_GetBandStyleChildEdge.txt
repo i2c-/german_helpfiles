@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyleChildEdge
+
+###Description###
+Ermittelt, ob die Gruppe oben und unten eine Kante des Child-Fensters haben soll
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyleChildEdge ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	das Flag ist gesetzt (Die Gruppe hat oben und unten eine Kante des Unterfensters)
+False:	das Flag ist nicht gesetzt
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBandStyleChildEdge, _GUICtrlRebar_GetBandStyle
+
+
+###Example###
+@@IncludeExample@@

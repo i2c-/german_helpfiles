@@ -1,0 +1,32 @@
+###User Defined Function###
+_FTP_FileClose
+
+###Description###
+Schlie&szlig;t das Handle, welches von _FTP_FileOpen() zur&uuml;ckgegeben wurde.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileClose($l_InternetSession)
+
+###Parameters###
+@@ParamTable@@
+$l_InternetSession
+	R&uuml;ckgabewert von _FTP_FileOpen()
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error auf nicht-null.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_FileOpen
+
+###See Also###
+@@MsdnLink@@ InternetCloseHandle
+
+###Example###

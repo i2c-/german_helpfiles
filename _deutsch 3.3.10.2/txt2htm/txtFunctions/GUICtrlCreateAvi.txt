@@ -1,0 +1,61 @@
+###Function###
+GUICtrlCreateAvi
+
+###Description###
+Erstellt ein AVI Video-Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateAvi ( filename, subfileid, left, top [, width [, height [, style = -1 [, exStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname des Videos. Nur .avi-Dateien werden unterst&uuml;tzt.
+subfileid
+	Die ID des Subfiles, das verwendet werden soll. Besteht die Datei nur aus einem Video, ist 0 zu verwenden.
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Avi">Anhang GUI-Stile f&uuml;r Controls</a>.
+		Standard (-1) : $ACS_TRANSPARENT
+	$ACS_TRANSPARENT wird immer verwendet, solange nicht $ACS_NONTRANSPARENT spezifiziert ist.
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Wert des Controls zu erhalten, siehe <a href="GUICtrlRead.htm">GUICtrlRead()</a>.
+Um Informationen im Control zu setzen oder zu ver&auml;ndern, siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a> Funktionen.
+
+Um das Video zu starten, sobald das Control erzeugt wurde, verwendet man den Stil $ACS_AUTOPLAY.
+Man kann die Animation starten und stoppen, indem man den Status mit <a href="GUICtrlSetState.htm">GUICtrlSetState()</a> auf 1 oder 0 setzt. Siehe Beispiel.
+
+Um weitere Stile zus&auml;tzlich zum Standardstil zu verwenden, ist <b><a href="BitOR.htm">BitOR</a></b>($GUI_SS_DEFAULT_AVI, newstyle,...) zu benutzen.
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <AVIConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKSIZE. (Gr&ouml;&szlig;e wird nicht ge&auml;ndert.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICoordMode (option), GUICtrlUpdate..., GUIGetMsg
+
+
+###Example###
+@@IncludeExample@@

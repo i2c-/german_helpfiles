@@ -1,0 +1,26 @@
+###User Defined Function###
+_ScreenCapture_SetJPGQuality
+
+###Description###
+Setzt den Qualit&auml;tslevel, der f&uuml;r JPEG Screenshots verwendet wird 
+
+###Syntax###
+#include <ScreenCapture.au3>
+_ScreenCapture_SetJPGQuality ( $iQuality )
+
+
+###Parameters###
+@@ParamTable@@
+$iQuality
+	Der Qualit&auml;tslevel des Bildes. Muss zwischen 0 und 100 liegen.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls nicht angegeben werden JPEG Screenshots standardm&auml;&szlig;ig mit einem Qualit&auml;tslevel von 100 erstellt
+
+
+###Related###

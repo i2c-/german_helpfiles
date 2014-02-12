@@ -1,0 +1,41 @@
+###User Defined Function###
+_GDIPlus_BitmapUnlockBits
+
+###Description###
+Gibt einen Teil einer Bitmap frei, die mit _GDIPlus_BitmapLockBits gesperrt wurde.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapUnlockBits ( $hBitmap, $tBitmapData )
+
+
+###Parameters###
+@@ParamTable@@
+$hBitmap
+	Handle auf ein Bitmap-Objekt
+$tBitmapData
+	$tagGDIPBITMAPDATA-Struktur, die vorher mit <a href="_GDIPlus_BitmapLockBits.htm">_GDIPlus_BitmapLockBits()</a> erzeugt wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise GPSTATUS Fehler Code ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Wenn keine Notwendigkeit der Sperrung des Bitmap-Bereichs mehr besteht, sollte
+durch Aufruf von <a href="_GDIPlus_BitmapUnlockBits.htm">_GDIPlus_BitmapUnlockBits()</a> der Bereich freigegeben werden.
+
+
+###Related###
+_WinAPI_DeleteObject
+
+
+###See Also###
+@@MsdnLink@@ GdipBitmapUnlockBits
+
+
+###Example###
+@@IncludeExample@@

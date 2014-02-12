@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinNet_ConnectionDialog1
+
+###Description###
+&Ouml;ffnet eine einfache Browser Dialogbox f&uuml;r das Verbinden zu Netzwerk-Ressourcen
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_ConnectionDialog1($hWnd [, $sRemoteName = "" [, $iFlags = 2]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem &uuml;bergeordneten Fenster der  Dialogbox
+$sRemoteName
+	[optional] Name der Netzwerk-Ressource, zu der verbunden werden soll
+$iFlags
+	[optional] Dialogbox Optionen. Kann eines oder mehreres des folgenden sein:
+		 1 - Zeigt einen vorgegebenen Pfad an, ohne dass der Benutzer selbst einen Pfad eingeben kann
+		 2 - Tr&auml;gt die letzten benutzten Pfade in die Kombi-Box ein
+		 4 - Unterdr&uuml;ckt die Anzeige der Checkbox 'Wiederherstellen der Verbindung bei der Anmeldung'
+		 8 - Wiederherstellen der Verbindung bei der Anmeldung
+		16 - Nicht Wiederherstellen der Verbindung bei der Anmeldung
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die korrespondierende Zahl des verbundenen Ger&auml;tes. Die Werte sind 1 f&uuml;r A:, 2 f&uuml;r B:, 3 f&uuml;r C: und so weiter. Macht der Benutzer eine ger&auml;telose Verbindung, lautet der Wert –1.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_ConnectionDialog
+
+###See Also###
+@@MsdnLink@@ WNetConnectionDialog1

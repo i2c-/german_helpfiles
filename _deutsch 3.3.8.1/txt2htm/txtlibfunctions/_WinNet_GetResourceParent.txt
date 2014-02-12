@@ -1,0 +1,63 @@
+###User Defined Function###
+_WinNet_GetResourceParent
+
+###Description###
+Gibt den Vorg&auml;nger einer Netzwerkressource innerhalb der Netzwerkhierarchie zur&uuml;ck.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetResourceParent($sRemoteName, $sProvider [, $iType = 0])
+
+###Parameters###
+@@ParamTable@@
+$sRemoteName
+	Der Name des Pfades f&uuml;r den Fernzugriff auf die Ressource.
+$sProvider
+	Der Name des Anbieters der Ressource.
+$iType
+	[optional] Art der Ressource. Kann 0 sein, wenn unbekannt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aResource[0] - Bereich der Auflistung:
+	 0 - Alle verbundenen Ressourcen
+	 1 - Alle Ressourcen
+	 2 - Persistente (dauerhafte) Ressourcen
+	$aResource[1] - Typ der Ressource:
+	 0 - Laufwerk
+	 1 - Drucker
+	 2 - Unbekannt
+	$aResource[2] - Anzeigeoptionen:
+	 0 - Allgemein
+	 1 - Dom&auml;ne
+	 2 - Server
+	 3 - Freigabe
+	 4 - Datei
+	 5 - Gruppe
+	 6 - Netzwerk
+	 7 - Stammverzeichnis
+	 8 - Administrative Freigabe
+	 9 - Verzeichnis
+	10 - Treeview
+	11 - NDS Container
+	$aResource[3] - Ressourcenverwendung. Kann eines oder mehreres der Folgenden sein:
+	 1 - verkn&uuml;pfbare Ressource
+	 2 - Containerressource
+	 4 - eingebundene Ressource
+	 8 - reservierte Ressource
+	$aResource[4] - Lokaler Name
+	$aResource[5] - Name im Netzwerk
+	$aResource[6] - vom Netzwerkanbieter gelieferter Kommentar
+	$aResource[7] - Name des Besitzers der Ressource
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetGetResourceParentA

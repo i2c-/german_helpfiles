@@ -1,0 +1,45 @@
+###User Defined Function###
+_FTP_FileGet
+
+###Description###
+L&auml;dt eine Datei vom FTP-Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileGet($l_FTPSession, $s_RemoteFile, $s_LocalFile [, $fFailIfExists = False, [$dwFlagsAndAttributes = 0 [, $l_Flags = 0 [, $l_Context = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabewert von _FTP_Connect()
+$s_RemoteFile
+	Der Pfadname auf dem Server.
+$s_LocalFile
+	Der lokale Dateiname.
+$fFailIfExists
+	[optional] True: vorhandene Dateien nicht &uuml;berschreiben (Standard = False).
+$dwFlagsAndAttributes 
+	[optional] Dateiattribute f&uuml;r die neue Datei.
+$l_Flags 
+	[optional] wie bei _FTP_FileOpen().
+$l_Context
+	[optional] Eine Variable, die diesen Aufruf mit anderen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits _FTP_SetStatusCallback() aufgerufen hat, um eine Callback-Funktion zu setzen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0  und setzt @ERROR
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect, _FTP_FileOpen, _FTP_SetStatusCallback
+
+###See Also###
+@@MsdnLink@@ FtpGetFile
+
+###Example###

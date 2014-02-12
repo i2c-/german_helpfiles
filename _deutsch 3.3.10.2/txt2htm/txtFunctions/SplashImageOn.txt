@@ -1,0 +1,55 @@
+###Function###
+SplashImageOn
+
+###Description###
+Erzeugt ein einstellbares Bild-Anzeigefenster.
+
+###Syntax###
+SplashImageOn ( "title", "file" [, width [, height [, x pos [, y pos [, opt]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Titel des Splash Fensters.
+file
+	Kompletter Pfad\Dateiname der Bilddatei (BMP, GIF oder JPG).
+width
+	[optional] Breite des Fensters in Pixel (Standard ist 500).
+height
+	[optional] H&ouml;he des Fensters in Pixel (Standard ist 400).
+x pos
+	[optional] Position von links (in Pixel - Standard ist zentriert).
+y pos
+	[optional] Position von oben (in Pixel - Standard ist zentriert).
+opt
+	[optional] Standard ist "immer im Vordergrund/mit Titel"
+	Addieren Sie die ben&ouml;tigten Optionen:
+		$DLG_NOTITLE (1) = Fenster ohne Titel mit schmalen Au&szlig;enlinien.
+		$DLG_NOTONTOP (2) = Ohne "immer im Vordergrund" Attribut.
+		$DLG_MOVEABLE (16) = Fenster kann bewegt werden.
+	Konstanten sind in Constants.au3 definiert.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Um einen optionalen Parameter zu &uuml;berspringen, also den Standardwert zu belassen, ist der Wert -1 einzusetzen.
+
+Das Bild ist auf die angegebene Breite und H&ouml;he skaliert und sollte eine Bitmap, GIF oder JPEG Bilddatei sein.  Icons (*.ico) werden nicht angezeigt, obwohl das Fenster trotzdem erscheint.  PNG Bilddateien geben eine Fehlermeldung mit "Fehler beim Laden" aus. Diese wird ebenfalls bei ung&uuml;ltigen, fehlerhaften Dateien, Dateiname und Pfaden ausgegeben.
+
+Bilddateien werden nicht in Exe-Dateien eingebunden, wenn nicht <a href="FileInstall.htm">FileInstall()</a> benutzt wird.
+
+Nur ein SplashImage/Text Fenster ist zur selben Zeit erlaubt. Sollen verschiedene Image/Text Fenster durchgegangen werden, ist <a href="SplashImageOn.htm">SplashImageOn()</a>/<a href="SplashTextOn.htm">SplashTextOn()</a> wiederholt mit den neuen Informationen aufzurufen.
+
+Falls opt auf 1 gesetzt wird, kann das Fenster nicht bewegt und auch nicht durch einen Klick aktiviert werden.
+
+
+###Related###
+SplashOff, SplashTextOn
+
+
+###Example###
+@@IncludeExample@@

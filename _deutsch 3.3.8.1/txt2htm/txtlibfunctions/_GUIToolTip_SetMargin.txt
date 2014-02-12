@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUIToolTip_SetMargin
+
+###Description###
+Setzt den oberen, linken, unteren und rechten Rand
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetMargin($hWnd, $iLeft, $iTop, $iRight, $iBottom)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iLeft
+	Abstand zwischen dem linken Rand und dem linken Ende des Textes in Pixel
+$iTop
+	Abstand zwischen dem oberen Rand und dem oberen Ende des Textes in Pixel
+$iRight
+	Abstand zwischen dem rechten Rand und dem rechten Ende des Textes in Pixel
+$iBottom
+	Abstand zwischen dem unteren Rand und dem unteren Ende des Textes in Pixel
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetMargin

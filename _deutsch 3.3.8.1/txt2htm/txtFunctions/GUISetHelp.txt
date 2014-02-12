@@ -1,0 +1,35 @@
+###Function###
+GUISetHelp
+
+###Description###
+Bestimmt eine ausf&uuml;hrbare Datei, die gestartet wird sobald die F1-Taste gedr&uuml;ckt wird.
+
+###Syntax###
+GUISetHelp ( helpfile [, winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+helpfile
+	Datei, die gestartet wird, wenn F1 gedr&uuml;ckt wird w&auml;hrend das GUI-Fenster aktiv ist.
+winhandle
+	[optional] Fenster-Handle wie von GUICreate zur&uuml;ckgegeben (voreingestellt ist der des vorher verwendeten Fensters).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICreate
+
+
+###Example###
+@@IncludeExample@@

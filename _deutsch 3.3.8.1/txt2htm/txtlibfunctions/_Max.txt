@@ -1,0 +1,39 @@
+###User Defined Function###
+_Max
+
+###Description###
+Berechnet welche der zwei Zahlen gr&ouml;&szlig;er ist.
+
+###Syntax###
+#include <Math.au3>
+_Max($nNum1, $nNum2)
+
+
+###Parameters###
+@@ParamTable@@
+$nNum1
+	Erste Zahl.
+$nNum2
+	Zweite Zahl.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die gr&ouml;&szlig;ere Zahl zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@Error:	0 = Kein Fehler.
+	1 = <i>$nNum1</i> ist keine Zahl.
+	2 = <i>$nNum2</i> ist keine Zahl.
+@@End@@
+
+
+###Remarks###
+Diese Funktion funktioniert mit Gleitkommazahlen wie auch mit Ganzzahlen.
+
+
+###Related###
+_Min
+
+
+###Example###
+@@IncludeExample@@

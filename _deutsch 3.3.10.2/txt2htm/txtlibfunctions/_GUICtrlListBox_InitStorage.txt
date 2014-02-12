@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListBox_InitStorage
+
+###Description###
+Diese Nachricht belegt Speicher f&uuml;r die zu speichernden Items
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_InitStorage ( $hWnd, $iItems, $iBytes )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iItems
+	Die komplette Anzahl der Items die gespeichert werden sollen
+$iBytes
+	Die komplette Anzahl an Speicher, f&uuml;r den String, der belegt wird.
+@@End@@
+
+###ReturnValue###
+Gibt die komplette Anzahl der Items die dem Speicher zugeteilt wurden zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_AddFile, _GUICtrlListBox_AddString, _GUICtrlListBox_Dir, _GUICtrlListBox_InsertString
+
+
+###Example###
+@@IncludeExample@@

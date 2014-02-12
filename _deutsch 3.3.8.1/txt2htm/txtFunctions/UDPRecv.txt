@@ -1,0 +1,42 @@
+###Function###
+UDPRecv
+
+###Description###
+Erh&auml;lt Daten von einem ge&ouml;ffneten "Socket".
+
+###Syntax###
+UDPRecv ( socketarray, maxlen [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+socketarray
+	Der Socket/das Array, wie von der Funktion <a href="UDPBind.htm">UDPBind</a> zur&uuml;ckgegeben.
+maxlen
+	Maximale Anzahl der zu erhaltenen Zeichen.
+flag
+	[optional] Erzwingt die R&uuml;ckgabe von Bin&auml;rdaten von der Funktion, wenn auf 1 gesetzt (Standard ist 0, und ermittelt automatisch bin&auml;r oder String).
+	Falls dies auf 2 gesetzt wird, erzwingt dies, dass die Funktion den ermittelten IP/Port zur&uuml;ckgibt. Ergebnisse werden in einem Array zur&uuml;ckgegeben: [0] Daten, [1] von UP, [2] vom Port.
+	Wird 3 verwendet, so erh&auml;lt man beides.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt Bin&auml;rdaten bzw. ein String zur&uuml;ck, die vom ge&ouml;ffneten "Socket" gesendet wurde oder eine Array falls "flag" = 2 oder 3.
+Fehler:	Gibt "" zur&uuml;ck und setzt @error.
+@error:	-1, -2 oder -3 ung&uuml;ltiges Socketarray.
+	Windows API WSAGetError R&uuml;ckgabewerte (siehe <a href="http://msdn.microsoft.com/en-us/library/ms740668.aspx">MSDN</a>).
+@@End@@
+
+
+###Remarks###
+Aus Gr&uuml;nden der Abw&auml;rtskompatibilit&auml;t versucht diese Funktion standardm&auml;&szlig;ig Strings zur&uuml;ckzugeben. Falls Nullzeichen (0x00) empfangen werden, ist der R&uuml;ckgabewert bin&auml;r.
+Um von der Funktion die R&uuml;ckgabe von Bin&auml;rdaten zu erzwingen (die meist sinnvolle Option), ist der "flag"-Parameter auf 1 zu setzen.
+
+
+###Related###
+BinaryLen, BinaryMid, UDPBind, UDPOpen
+
+
+###Example###
+@@IncludeExample@@

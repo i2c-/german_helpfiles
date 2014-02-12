@@ -1,0 +1,37 @@
+###User Defined Function###
+_GDIPlus_PenSetAlignment
+
+###Description###
+Setzt die Ausrichtung des Zeichenstifts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenSetAlignment($hPen [, $iAlignment = 0])
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu einem Zeichenstift-Objekt
+$iAlignment
+	[optional] Ausrichtung des Zeichenstifts. Kann eine der folgenden sein:
+	0 - legt fest, dass der Zeichenstift auf die Mitte der zu zeichnenden Linie ausgerichtet wird
+	1 - legt fest, dass der Zeichenstift auf das innere der Kante des Polygons ausgerichtet wird, wenn ein Polygon gezeichnet wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenGetAlignment
+
+###See Also###
+@@MsdnLink@@ GdipSetPenMode
+
+###Example###
+@@IncludeExample@@

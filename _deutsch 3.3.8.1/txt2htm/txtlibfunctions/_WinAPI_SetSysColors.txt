@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_SetSysColors
+
+###Description###
+Setzt Informationen &uuml;ber die angezeigten Ger&auml;te in einem System
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetSysColors($vElements, $vColors)
+
+###Parameters###
+@@ParamTable@@
+$vElements
+	einzelnes Element oder Array mit Elementen
+$vColors
+	Einzelne Farbe oder Array mit Farben
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Siehe _WinAPI_GetSysColor f&uuml;r eine List mit Elementindizes und Anforderungen.
+
+###Related###
+_WinAPI_GetSysColor
+
+###See Also###
+@@MsdnLink@@ SetSysColors
+
+###Example###
+@@IncludeExample@@

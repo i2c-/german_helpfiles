@@ -1,0 +1,30 @@
+###Function###
+AutoItWinSetTitle
+
+###Description###
+&Auml;ndert den Titel des AutoIt-Fensters.
+
+###Syntax###
+AutoItWinSetTitle ( "newtitle" )
+
+
+###Parameters###
+@@ParamTable@@
+newtitle
+	Der neue Titel, der dem Fenster zugeteilt werden soll.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Das AutoItfenster ist normalerweise versteckt. Der Zweck des &Auml;nderns des AutoItfenster liegt darin, anderen Programmen (oder anderen AutoItscripts) zu erm&ouml;glichen mit AutoIt zu "kommunizieren".
+
+
+###Related###
+AutoItWinGetTitle, WinSetTitle
+
+
+###Example###
+@@IncludeExample@@

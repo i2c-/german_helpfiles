@@ -1,0 +1,34 @@
+###User Defined Function###
+_viInteractiveControl
+
+###Description###
+Interaktives VISA Control um deine SCPI Befehle zu testen.
+
+###Syntax###
+#include <Visa.au3>
+_viInteractiveControl([$s_command_save_filename = ""])
+
+
+###Parameters###
+@@ParamTable@@
+$s_command_save_filename
+	[Optional] Der Name der "Akte" in welcher der SCPI ausgegebene Befehl w&auml;hrend der interaktiven
+	Sitzung gespeichert werden soll.
+	Wenn kein "Aktenname" genehmigt wird Fragt die Funktion den Benutzer ob und wo der Benutzer die 
+	ausgegebenen Befehle speichern m&ouml;chte.
+@@End@@
+
+###ReturnValue###
+Die Liste der AutoIt3 VISA Befehle die von dem Tool ausgef&uuml;hrt werden.
+Das ist die selbe Liste, die in der Akte gespeichert ist, wenn der Aktenname  zu der Funktion genehmigt ist
+
+###Remarks###
+Schreibe "FIND" in die Device-Descriptor-Abfrage um eine GPIB Suche auszuf&uuml;hren.
+
+Diese Funktion l&auml;sst dich mit leichtigkeit deine wechselwirkenden SCPI Befehle testen. 
+Mit Hilfe der Funktion kannst du auch diese Befehle in eine Akte speichern.
+Beantworte einfach die Fragen (Device-Descriptor, SCPI Befehle and Zeitlimit).
+ * Wenn du die erste Frage absagst(cancel), beendet sich das interaktive Control.
+ * Wenn du die anderen Frage absagst(cancel), kommst du zur&uuml;ck zu den Device-Descriptor Abfragen.
+
+###Related###

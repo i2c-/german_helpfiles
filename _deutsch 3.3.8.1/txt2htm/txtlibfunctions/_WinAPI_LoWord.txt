@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_LoWord
+
+###Description###
+Gibt das niederwertige Wort eines Longword-Wertes zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoWord($iLong)
+
+###Parameters###
+@@ParamTable@@
+$iLong
+	Longword Wert
+@@End@@
+
+###ReturnValue###
+Gibt ein niederwertiges Wort eines Longword-Wertes zur&uuml;ck
+
+###Remarks###
+Ein Wort ist normalerweise die Verarbeitungsbreite des verwendeten Prozessors in Bit. In AutoIt ist ein Wort mit 16 Bit definiert. Damit k&ouml;nnen die Zahlen von 0 bis 65535 abgebildet werden. Ein Longword (oder auch Langwort oder Doppelwort) umfasste zwei Worte, also 32 Bits (0-4294967295), wobei hier in den niederwertigen Teil (LoWord: Bits 0-15) und den h&ouml;herwertigen Teil (HiWord: Bits 16-31) unterschieden wird.
+
+###Related###
+_WinAPI_HiWord, _WinAPI_MakeLong
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,58 @@
+###User Defined Function###
+_FTP_FindFileFirst
+
+###Description###
+Sucht die erste Datei auf einem FTP-Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FindFileFirst($l_FTPSession, $s_RemotePath, ByRef $h_Handle [, $l_Flags = 0 [, $l_Context = 0]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabe von _FTP_Connect().
+$s_RemotePath
+	Pfad auf dem Server, in dem die Datei gesucht wird.
+$h_Handle
+	Gibt ein Handle zur&uuml;ck, das f&uuml;r <b>_FTP_FindFileNext()</b> oder <b>_FTP_FindFileClose()</b> ben&ouml;tigt wird.
+$l_Flags
+	[optional] Siehe Bemerkungen.
+$l_Context
+	[optional] Eine Variable, die eien anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit beliebigen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um eine Status Callbackfunktion zu installieren.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array, siehe Bemerkungen.
+Fehler:	0 und setzt @ERROR
+@@End@@
+
+###Remarks###
+Im Erfolgsfall wird ein Array mit diesen Inhalten zur&uuml;ckgegeben:
+[0]  - Anzahl der Elemente
+[1]  - Dateiattribute
+[2]  - Erstellzeit (Lo)
+[3]  - Erstellzeit (Hi)
+[4]  - Zugriffszeit (Lo)
+[5]  - Zugriffszeit (Hi)
+[6]  - Letzter Schreibzugriff (Lo)
+[7]  - Letzter Schreibzugriff (Hi)
+[8]  - Dateigr&ouml;&szlig;e (Hi)
+[9]  - Dateigr&ouml;&szlig;e (Lo)
+[10] - Dateiname
+[11] - Alternativname
+
+$l_Flags kann eine Kombination aus $INTERNET_FLAG_HYPERLINK, $INTERNET_FLAG_NEED_FILE, $INTERNET_FLAG_NO_CACHE_WRITE, $INTERNET_FLAG_RELOAD und $INTERNET_FLAG_RESYNCHRONIZE sein.
+
+
+###Related###
+_FTP_FindFileNext, _FTP_FindFileClose, _FTP_SetStatusCallback
+
+###See Also###
+@@MsdnLink@@ FtpFindFirstFile
+
+###Example###
+@@IncludeExample@@
+

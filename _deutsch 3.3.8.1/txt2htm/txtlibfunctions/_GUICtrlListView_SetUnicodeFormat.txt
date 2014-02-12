@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListView_SetUnicodeFormat
+
+###Description###
+Setzt das UNICODE Zeichenformat f&uuml;r das Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetUnicodeFormat($hWnd, $fUnicode)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fUnicode
+	Ermittelt den Zeichensatz, welcher durch das Control genutzt wird. Falls True, wird das Control Unicode verwenden
+		Falls dieser Wert=0 ist, wird das Control ANSI Zeichen verwenden.
+@@End@@
+
+###ReturnValue###
+Gibt das vorherige Unicode Format f&uuml;r das Control zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetUnicodeFormat
+
+###Example###
+@@IncludeExample@@

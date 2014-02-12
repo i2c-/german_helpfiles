@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_SetTextColor
+
+###Description###
+&Auml;ndert die aktuelle Textfarbe in den festgelegten Farbwert
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetTextColor ( $hDC, $iColor )
+
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zum (Ausgabe-)Ger&auml;tekontext
+$iColor
+	Legt die neue Textfarbe fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die vorherige Textfarbe
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ SetTextColor
+
+
+###Example###
+@@IncludeExample@@

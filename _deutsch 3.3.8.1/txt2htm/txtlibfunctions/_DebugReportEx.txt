@@ -1,0 +1,44 @@
+###User Defined Function###
+_DebugReportEx
+
+###Description###
+Schreibt zu einer Debugging-Sitzung eine formatierte Nachricht.
+
+###Syntax###
+#include <Debug.au3>
+_DebugReportEx($sData [,$bLastError = False [,$bExit = False]])
+
+
+###Parameters###
+@@ParamTable@@
+$sData
+	Daten die gemeldet werden sollen
+$bLastError
+	[Optional] True, wenn GetLastErrorMessage() zu den zu meldenden Daten hinzugef&uuml;gt werden muss.
+$bExit
+	[Optional] True, falls das Skript beendet werden muss.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+###Remarks###
+Entsprechend dem @error Wert wird die Nachricht wie folgend formatiert:
+0 - meldet "Schlechte R&uuml;ckgabe von der FUNKTION in DLL".
+1 - meldet "Nicht im Stande eine dll zu &ouml;ffnen"
+3 - meldet "Nicht im Stande FUNKTION in DLL zu finden".
+
+Wenn $sData kein "|" enth&auml;lt oder @error ist nicht wie oben festgelegt, wird die zu meldende Nachricht nicht formatiert.
+Wenn kein _DebugSetup() ausgegeben wurde kehrt die Funktion immer zur&uuml;ckgegeben.
+@error des Aufrufers bleibt erhalten.
+@extended kann festgelegt werden als Windows API GetlastError() falls  $bLastError = True. Sonst bleibt es erhalten
+
+###Related###
+_DebugSetup
+
+
+###Example###
+@@IncludeExample@@

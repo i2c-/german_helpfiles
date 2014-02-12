@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetParent
+
+###Description###
+Ermittelt das Handle vom Parentfenster des angegebenen Childfensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetParent($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Fensterhandle des Childfensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Parentfensters
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetAncestor
+
+###See Also###
+@@MsdnLink@@ GetParent

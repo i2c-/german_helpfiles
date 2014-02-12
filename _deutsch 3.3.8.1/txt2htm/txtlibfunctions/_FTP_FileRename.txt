@@ -1,0 +1,36 @@
+###User Defined Function###
+_FTP_FileRename
+
+###Description###
+Benennt eine Datei auf einem FTP Server um.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileRename($l_FTPSession, $s_Existing, $s_New)
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabewert von _FTP_Connect().
+$s_Existing
+	Alter Dateiname.
+$s_New
+	Neuer Dateiname.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und @error zu Nicht-Null.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect
+
+###See Also###
+@@MsdnLink@@ FtpRenameFile
+
+###Example###

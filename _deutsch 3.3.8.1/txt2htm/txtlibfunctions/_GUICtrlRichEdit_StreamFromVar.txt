@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlRichEdit_StreamFromVar
+
+###Description###
+Setzt den Inhalt einer Variablen als Text in ein Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_StreamFromVar($hWnd, $sVar)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sVar
+	Ein String
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	700 - Zu viele Zeichen
+@@End@@
+
+###Remarks###
+Wenn Text markiert ist, wird die Auswahl ersetzt, ansonsten der gesamte Text.
+
+Benutze _GUICtrlRichEdit_SetLimitOnText, um die Anzahl der Zeichen, die in dem Control enthalten sein k&ouml;nnen, zu &auml;ndern.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetLimitOnText, _GUICtrlRichEdit_StreamFromFile, _GUICtrlRichEdit_StreamToVar, _GUICtrlRichEdit_StreamToFile
+
+###See Also###
+@@MsdnLink@@ EM_STREAMIN
+
+###Example###
+@@IncludeExample@@

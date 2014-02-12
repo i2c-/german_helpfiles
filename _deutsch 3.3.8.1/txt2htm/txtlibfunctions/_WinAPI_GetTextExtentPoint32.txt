@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_GetTextExtentPoint32
+
+###Description###
+Errechnet die Breite und H&ouml;he des festgelegten Textstring
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetTextExtentPoint32($hDC, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifiziert einen Ger&auml;tekontext
+$sText
+	Textstring
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagSIZE Struktur in der die Dimensionen des zur&uuml;ckgegebenen Strings enthalten sind
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagSIZE
+
+###See Also###
+@@MsdnLink@@ GetTextExtentPoint32
+
+###Example###
+@@IncludeExample@@

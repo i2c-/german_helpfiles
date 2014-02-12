@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlListView_RegisterSortCallBack
+
+###Description###
+Registriert die "Simple Sort callback" Funktion
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_RegisterSortCallBack($hWnd [, $fNumbers = True [, $fArrows = True]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fNumbers
+	[optional] Behandelt numerische Strings als Zahlen
+$fArrows
+	[optional] Zeichnet einen "Pfeil-runter/Pfeil_rauf" auf die markierte Spalte (Windows XP und neuer)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+F&uuml;r jeden Aufruf von _GUICtrlListView_RegisterSortCallBack muss ein Aufruf von _GUICtrlListView_UnRegisterSortCallBack erfolgen (vor dem exit)
+
+Es liegt am Benutzer _GUICtrlListView_UnRegisterSortCallBack nach jedem
+_GUICtrlListView_RegisterSortCallBack aufzurufen.
+
+Dies ist eine Alternative zu _GUICtrlListView_SimpleSort.
+Diese Funktion sortiert Listviews mit Icons, Checkboxen und Subitem Icons
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_UnRegisterSortCallBack, _GUICtrlListView_SortItems
+
+###Example###
+@@IncludeExample@@

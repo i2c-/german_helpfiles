@@ -1,0 +1,32 @@
+###Function###
+DriveGetType
+
+###Description###
+Gibt den Laufwerkstyp zur&uuml;ck.
+
+###Syntax###
+DriveGetType ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Pfad des Laufwerkes, von dem der Typ ermittelt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Laufwerkstyp zur&uuml;ck: "Unknown", "Removable", "Fixed", "Network", "CDROM", "RAMDisk"
+Fehler:	Gibt "" zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Die Liste der m&ouml;glichen R&uuml;ckgabewerte ist m&ouml;glicherweise nicht komplett.
+
+###Related###
+DriveGetDrive, DriveGetFileSystem, DriveGetLabel, DriveGetSerial, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus, CDTray
+
+
+###Example###
+@@IncludeExample@@

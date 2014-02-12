@@ -1,0 +1,34 @@
+###User Defined Function###
+_FTP_DirDelete
+
+###Description###
+L&ouml;scht ein Verzeichnis auf einem FTP-Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_DirDelete($l_FTPSession, $s_Remote)
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	"Identifier", welcher von _FTP_Connect() zur&uuml;ckgegeben wurde.
+$s_Remote
+	Das Verzeichnis, welches gel&ouml;scht werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect
+
+###See Also###
+@@MsdnLink@@ FtpRemoveDirectory
+
+###Example###

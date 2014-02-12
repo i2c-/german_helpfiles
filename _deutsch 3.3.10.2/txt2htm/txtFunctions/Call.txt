@@ -1,0 +1,39 @@
+###Function###
+Call
+
+###Description###
+Ruft eine benutzerdefinierte oder integrierte Funktion auf, deren Name in einem String &uuml;bergeben wird.
+
+###Syntax###
+Call ( "function" [, param1 [, param2 [, param<i>N</i>]]] )
+
+
+###Parameters###
+@@ParamTable@@
+function
+	Der Name der benutzerdefinierten oeder integrierte Funktion , die aufgerufen werden soll.
+param
+	Parameter, die &uuml;bergeben werden, wenn die Funktion aufgerufen wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Wert der aufgerufenen Funktion zur&uuml;ck. @error und @extended k&ouml;nnen Werte enthalten, falls die aufgerufene Funktion diese festgelegt hat.
+Fehler:	setzt @Error auf 0xDEAD und @extended auf 0xBEEF, wenn die Funktion nicht existiert oder die Anzahl der Parameter falsch ist.
+@@End@@
+
+
+###Remarks###
+Ein spezielles Array kann anstelle von individuellen Parametern weitergegeben werden.
+Das erste Element dieses Arrays muss den Wert "CallArgArray" haben und die Elemente 1 bis n werden als separate Argumente an die Funktion &uuml;bergeben.
+Wenn dieses besondere Array genutzt wird, k&ouml;nnen keine anderen Argumente an <a href="Call.htm">Call()</a &uuml;bergeben werden. Siehe Beispiel zur Demonstration.
+<a href="Call.htm">Call()</a kann einen @error festlegen und auch die aufgerufene Funktion. Falls <a href="Call.htm">Call()</a f&uuml;r @error einen Wert setzt, ist dieser 0xDEAD und ebenfalls der Wert von @extended auf 0xBEEF gesetzt.
+Siehe das Beispiel f&uuml;r eine Demonstration, wie man testet, ob eine Funktion nicht gefunden wurde.
+
+
+###Related###
+Execute
+
+
+###Example###
+@@IncludeExample@@

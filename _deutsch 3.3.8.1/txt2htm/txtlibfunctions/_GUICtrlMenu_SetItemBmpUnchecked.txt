@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlMenu_SetItemBmpUnchecked
+
+###Description###
+Setzt das Bitmap welches dargestellt werden soll, wenn das Item nicht ausgew&auml;hlt ist
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetItemBmpUnchecked($hMenu, $iItem, $hBmp [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$hBmp
+	Handle des Bitmaps welches neben dem Item angezeigt werden soll, falls das Item nicht ausgew&auml;hlt ist
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetItemBmpUnchecked, _GUICtrlMenu_SetItemBitmaps
+
+###Example###
+@@IncludeExample@@

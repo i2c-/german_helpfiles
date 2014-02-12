@@ -1,0 +1,26 @@
+###User Defined Function###
+_WinAPI_PrimaryLangId
+
+###Description###
+Extrahiert die prim&auml;re Sprach-ID von einer Sprach-ID
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_PrimaryLangId ( $lgid )
+
+
+###Parameters###
+@@ParamTable@@
+$lgid
+	Sprach-ID
+@@End@@
+
+###ReturnValue###
+Gibt die prim&auml;re Sprach-ID zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListBox_GetSelItemsText
+
+###Description###
+Ermittelt den Text des ausgew&auml;hlten Items.
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetSelItemsText($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Anzahl der Items im Array
+	[1] - Text des ausgew&auml;hlten Items
+	[2] - Text des ausgew&auml;hlten Items
+	[n] - Text des ausgew&auml;hlten Items
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_GetSelItems
+
+###Example###
+@@IncludeExample@@

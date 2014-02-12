@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlListBox_FindString
+
+###Description###
+Sucht einen String
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_FindString ( $hWnd, $sText [, $fExact = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	zu suchender String
+$fExact
+	[optional] exakter Treffer oder Teiltreffer
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0-basierender Index des Items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Findet den ersten String in einer ListBox der mit dem gesuchten String beginnt.
+
+Wenn $fExact = True, wird nach dem ersten ListBoxString gesucht, der exakt mit dem gesuchten String &uuml;bereinstimmt, au&szlig;er die Suche ber&uuml;cksichtigt nicht die Gro&szlig;- und Kleinschreibung 
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_FindInText, _GUICtrlListBox_SelectString
+
+
+###Example###
+@@IncludeExample@@

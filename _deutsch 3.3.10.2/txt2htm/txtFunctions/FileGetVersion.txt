@@ -1,0 +1,43 @@
+###Function###
+FileGetVersion
+
+###Description###
+Gibt die Versionsinformationen einer Datei zur&uuml;ck.
+
+###Syntax###
+FileGetVersion ( "filename" [, "stringname"] ) )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname der auszuwertenden Datei.
+stringname
+	[optional] Name des Feldes, das aus dem Dateiheader ausgelesen werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String mit der Versionsinformation, z.B. "3.0.81.0".
+Fehler:	"0.0.0.0", wenn keine Versionsinformationen existieren (oder ein anderer Fehler aufgetreten ist) oder "", wenn ein Textfeld gelesen werden soll. Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der Parameter <i>stringname</i> kann einer der folgenden allgemeinen Feldnamen sein:
+Comments, InternalName, ProductName, CompanyName, LegalCopyright, ProductVersion,
+FileDescription, LegalTrademarks, PrivateBuild, FileVersion, OriginalFilename, SpecialBuild
+
+Ein weiterer, besonderer "stringname"-Parameter ist "DefaultLangCodepage", mit dem die Standardsprache und Codepage ausgelesen werden kann.
+
+Die Sprache und die Codepage k&ouml;nnen verwendet werden, um zwischen den "stringname"-Parametern zu unterscheiden, z.B. "080904b0Comments" (siehe auch MSDN StringFileInfo in der <a href="http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(VerQueryValue);k(DevLang-C);k(TargetOS-WINDOWS)&rd=true">VerQueryValue</a> Funktion).
+
+Um die Versionsinformationen eines mit AutoIt kompilierten Skrptes zu erhalten empfiehlt es sich, @AutoItVersion zu verwenden.
+
+
+###Related###
+FileGetSize, FileGetTime
+
+
+###Example###
+@@IncludeExample@@

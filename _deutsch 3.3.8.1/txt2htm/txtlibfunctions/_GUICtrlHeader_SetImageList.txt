@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlHeader_SetImageList
+
+###Description###
+Weist eine Imagelist zu
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetImageList($hWnd, $hImage)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hImage
+	Handle zu einer Imagelist
+@@End@@
+
+###ReturnValue###
+Erfolg:	Das Handle zu der Imagelist die vorher mit dem Control verkn&uuml;pft war
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlHeader_GetImageList
+
+###Example###
+@@IncludeExample@@

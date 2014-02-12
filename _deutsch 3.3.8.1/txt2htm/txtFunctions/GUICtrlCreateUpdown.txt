@@ -1,0 +1,42 @@
+###Function###
+GUICtrlCreateUpdown
+
+###Description###
+Erstellt ein Pfeiltasten-Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateUpdown ( inputcontrolID [,style] )
+
+
+###Parameters###
+@@ParamTable@@
+inputcontrolID 
+	Die Control-ID des Input-Controls, zu dem die beiden Pfeiltasten hinzugef&uuml;gt werden sollen (zum bequemen Erh&ouml;hen/Erniedrigen von (Zahlen-)werten).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#UpDown">Anhang GUI-Stile f&uuml;r Controls</a>.
+	
+	Standard (-1) : $UDS_ALIGNRIGHT.
+	Erzwungene Stile : $UDS_SETBUDDYINT und $UDS_ALIGNRIGHT wenn keine Ausrichtung definiert ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <UpDownConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Die Maximal- und Minimalwerte k&ouml;nnen mit <a href="GUICtrlSetLimit.htm">GUICtrlSetLimit</a> gesetzt werden.
+Standardm&auml;&szlig;ig wird eine H&ouml;henanpassung entsprechend des zugeh&ouml;rigen Input-Controls vorgenommen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateInput, GUICtrlSetData, GUICtrlSetLimit
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUIToolTip_Destroy
+
+###Description###
+L&ouml;scht ein ToolTip-Control
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True, das Handle wird auf 0 gesetzt
+Fehler:	False
+
+###Remarks###
+Funktioniert nur mit ToolTip-Controls, die mit _GUIToolTip_Create erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_Create

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUIImageList_AddIcon
+
+###Description###
+F&uuml;gt ein Icon der Imagelist hinzu
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_AddIcon($hWnd, $sFile [, $iIndex=0 [, $fLarge = False]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sFile
+	Pfad zu dem Icon, welches das Icon enth&auml;lt
+$iIndex
+	[optional] legt den 0-basierenden Index des zu extrahierenden Icons fest
+$fLarge
+	[optional] gro&szlig;e Icons extrahieren
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des Bildes
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Wird $fLarge auf True gesetzt, so verbessert sich die Iconqualit&auml;t.
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_Add, _GUIImageList_AddBitmap
+
+###Example###
+@@IncludeExample@@

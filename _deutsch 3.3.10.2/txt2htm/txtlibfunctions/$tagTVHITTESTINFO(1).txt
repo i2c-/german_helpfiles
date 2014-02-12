@@ -1,0 +1,37 @@
+###Structure Name###
+$tagTVHITTESTINFO
+
+###Description###
+Enth&auml;lt Informationen die verwendet werden um den Ort eines Punktes relativ zu einem Treeview-Control zu ermitteln
+
+###Syntax###
+Global Const $tagTVHITTESTINFO = "int X;int Y;int Flags;int Item"
+
+
+###Fields###
+@@ParamTable@@
+X
+	zu testende X-Position in Fensterkoordinaten (Anwendungsbereich)
+Y
+	zu testende Y-Position in Fensterkoordinaten (Anwendungsbereich)
+Flags
+	Ergebnis des Hit-Testes. Dieser Wert kann einer oder mehrere der folgenden Werte sein:
+		$TVHT_ABOVE - Oberhalb des Anwendungsbereichs
+		$TVHT_BELOW - Unterhalb des Anwendungsbereichs
+		$TVHT_NOWHERE - Innerhalb des Anwendungsbereichs, aber unter dem letzten Element
+		$TVHT_ONITEM - Auf dem Bitmap oder Label welches mit einem Item verkn&uuml;pft ist
+		$TVHT_ONITEMBUTTON - Auf dem Button welcher mit einem Element verkn&uuml;pft ist
+		$TVHT_ONITEMICON - Auf dem Bitmap welches mit einem Element verkn&uuml;pft ist
+		$TVHT_ONITEMINDENT - In der Vertiefung welche mit einem Element verkn&uuml;pft ist
+		$TVHT_ONITEMLABEL - Auf dem Label (String) welches mit einem Element verkn&uuml;pft ist
+		$TVHT_ONITEMRIGHT - In dem Bereich rechts von einem Element
+    $TVHT_ONITEMSTATEICON - Auf dem Statusicon eines TreeView-Elements, welche sich in einem benutzerdefinierten Status befindet
+		$TVHT_TOLEFT - links von des Anwendungsbereichs
+		$TVHT_TORIGHT - rechts von des Anwendungsbereichs
+Item
+	Handle zu dem Element welches sich an der Position befindet
+@@End@@
+
+
+###Remarks###
+Keine.

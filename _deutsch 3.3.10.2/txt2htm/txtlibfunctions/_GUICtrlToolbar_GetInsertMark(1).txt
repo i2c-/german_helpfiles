@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_GetInsertMark
+
+###Description###
+Ermittelt die aktuelle Eingabemarke
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetInsertMark ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Forma zur&uuml;ck:
+	[0] - 0-basierender Index der Eingabemarke oder -1 f&uuml;r keine Eingabemarke
+	[1] - Definiert, wo sich die Eingabemarke im Verh&auml;ltnis zum Button befindet:
+		0 - links davon
+		1 - rechts davon
+		2 - Im Hintergrund der Toolbar
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_SetInsertMark
+
+
+###Example###
+@@IncludeExample@@

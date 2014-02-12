@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_FindItemEx
+
+###Description###
+Ermittelt ein Item basierend auf einem Treeviewpfad
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_FindItemEx($hWnd, $sPath [, $hStart = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sPath
+	Der zu nehmende Pfad, Trennzeichen je nach Wahl, siehe Opt("GUIDataSeparatorChar")
+$hStart
+	[optional] Item bei dem die Suche beginnen soll. Falls 0, wird das Hauptitem verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des ersten Items, auf welches das Suchkriterium passt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Die Suche ber&uuml;cksichtigt die Gro&szlig;- und Kleinschreibung
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_FindItem
+
+###Example###
+@@IncludeExample@@

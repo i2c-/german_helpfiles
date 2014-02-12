@@ -1,0 +1,40 @@
+###Structure Name###
+$tagKBDLLHOOKSTRUCT
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein systemnahes Tastatureingabe-Ereignis
+
+###Syntax###
+Global Const $tagKBDLLHOOKSTRUCT = "dword vkCode;dword scanCode;dword flags;dword time;ulong_ptr dwExtraInfo"
+
+
+###Fields###
+@@ParamTable@@
+vkCode
+	Gibt einen virtuellen Tastatur-Code an. Der Code muss ein Wert im Bereich von 1 bis 254 sein.
+scanCode
+	Gibt einen Hardware-Scancode f&uuml;r die Taste an.
+flags
+	Spezifiziert das erweiterte Tasten-Flag, das ereignisinjizierte Flag, den Kontextcode und das &Uuml;bergabezustands-Flag. Dieser Parameter ist wie folgt spezifiziert
+	(Eine Anwendung kann folgende Werte nutzen, um die Tastendruck-Flags zu testen):
+		$LLKHF_EXTENDED - Testet das erweiterte Tasten-Flag
+		$LLKHF_INJECTED - Testet das ereignisinjizierte Flag
+		$LLKHF_ALTDOWN  - Testet den Kontextcode
+		$LLKHF_UP       - Testet das &Uuml;bergabezustands-Flag
+	0 - Gibt an, ob die Taste eine erweiterte Taste ist, wie z.B. Funktionstasten oder eine Taste im numerischen Tastenblock.
+	Der Wert ist 1, falls die Taste eine erweiterte Taste ist, andernfalls ist der Wert 0
+	1 bis 3 - Reserviert
+	4 - Gibt an, ob das Ereignis injiziert wurde. Der Wert ist 1, falls das Ereignis injiziert wurde, sonst ist er 0
+	5 - Legt den Kontextcode fest. Der Wert ist 1 falls die ALT-Taste gedr&uuml;ckt wurde, andernfalls ist der Wert 0
+	6 - Reserviert
+	7 - Gibt den &Uuml;bergabezustand an. Der Wert ist 0, falls die Taste gedr&uuml;ckt wurde und 1, falls die Taste losgelassen wurde.
+time
+	Gibt den Zeitstempel f&uuml;r diese Nachricht an, gleichbedeutend mit dem, was GetMessageTime f&uuml;r diese Nachricht zur&uuml;ckgeben w&uuml;rde.
+dwExtraInfo
+	Gibt Extra-Informationen an, die mit der Nachricht verkn&uuml;pft sind
+@@End@@
+
+
+###Remarks###
+Keine.
+

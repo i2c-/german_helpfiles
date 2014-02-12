@@ -1,0 +1,39 @@
+###Function###
+GUISetIcon
+
+###Description###
+Setzt das Icon, das in einem GUI-Fenster angezeigt wird.
+
+###Syntax###
+GUISetIcon ( iconfile [, iconID [, winhandle]] )
+
+
+###Parameters###
+@@ParamTable@@
+iconfile
+	Icon-Datei, das Icon wird in der Titelfl&auml;che angezeigt.
+iconID
+	[optional] Die ID des Icons in einer Datei mit mehreren Icons.  (voreingestellt ist -1).
+winhandle
+	[optional] Fenster-Handle wie von GUICreate zur&uuml;ckgegeben (voreingestellt ist der vorher verwendete).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Die Angabe einer positiven Zahl bezieht sich auf den "string-equivalenten" Icon-Namen.
+Die Angabe einer negativen Zahl f&uuml;hrt zu zahlenbasiertem "Index"-Verhalten. Einige DLLs k&ouml;nnen Icons nur mit negativen Zahlen entpacken.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate
+
+
+###Example###
+@@IncludeExample@@

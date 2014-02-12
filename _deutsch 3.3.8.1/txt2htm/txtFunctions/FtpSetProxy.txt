@@ -1,0 +1,48 @@
+###Function###
+FtpSetProxy
+
+###Description###
+Setzt den Internet-Proxyserver f&uuml;r den FTP-Zugang.
+
+###Syntax###
+FtpSetProxy ( mode [, "proxy:port" [, "username" [, "password"]]] )
+
+
+###Parameters###
+@@ParamTable@@
+mode
+	Der Proxy-Modus, der verwendet werden soll:
+	0 = (Standard) Nutze die Internet Explorer-Einstellungen f&uuml;r den Proxyserver.
+	1 = Verwende keinen Proxyserver (direkter Zugang)
+	2 = Nutze den angegebenen Proxyserver
+proxy:port
+	[optional] Die Adresse und der Port des zu nutzenden Proxyservers. Siehe Bemerkungen weiter unten.
+username
+	[optional] Wenn ben&ouml;tigt, der Benutzername f&uuml;r den Proxyserver.
+password
+	[optional] Wenn ben&ouml;tigt, das Passwort f&uuml;r den Proxyserver.
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Internet Explorer 3 oder neuer muss installiert sein, damit diese Funktion funktioniert.
+
+Es werden nur CERN-Proxy-Server unterst&uuml;tzt.
+
+Proxy-Server bestehen normalerweise aus der Webadresse und dem Port. Wenn der Proxy "www.proxy.com" hei&szlig;t und der Port "8080" genutzt wird, dann muss dieser Proxy-Server so gesetzt werden:
+HttpSetProxy(2, "www.proxy.com:8080")
+
+Die meisten Proxy-Server ben&ouml;tigen keinen Benutzernamen und Passwort.
+
+Wenn Modus 0 verwendet wird, so muss ein Benutzername und Passwort festgelegt werden. Diese werden mit dem im Internet Explorer verwendeten Proxy verwendet.
+
+###Related###
+InetGet, InetGetSize, InetRead, HttpSetProxy
+
+
+###Example###
+@@IncludeExample@@

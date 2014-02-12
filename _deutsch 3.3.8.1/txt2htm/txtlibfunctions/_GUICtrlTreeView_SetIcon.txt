@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlTreeView_SetIcon
+
+###Description###
+Setzt ein Itemicon
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetIcon($hWnd [, $hItem = 0 [, $sIconFile ="" [, $iIconID = 0 [, $iImageMode = 6]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	[optional] Item ID/Handle
+$sIconFile
+	[optional] Die Datei die das Icon enth&auml;lt
+$iIconID
+	[optional] Die IconID die aus der Datei extrahiert werden soll
+$iImageMode
+	[optional] 2=normales Bild / 4=markiertes Bild setzen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

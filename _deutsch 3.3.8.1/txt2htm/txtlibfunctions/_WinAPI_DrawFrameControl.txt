@@ -1,0 +1,75 @@
+###User Defined Function###
+_WinAPI_DrawFrameControl
+
+###Description###
+Zeichnet ein Rahmen-Control mit dem angegebenen Typus und Stil
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DrawFrameControl($hDC, $ptrRect, $nType, $nState)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zum Ger&auml;tekontext, in dem das einzurahmende Grafikobjekt gezeichnet wurde
+$ptrRect
+	Zeiger zur $tagRECT-Struktur, welche die logischen Koordinaten des Rechtecks enth&auml;lt
+$nType
+	Legt den Typ des zu zeichnenden Rahmens fest. Der Parameter kann einen der folgenden Werte annehmen:
+		$DFC_BUTTON - Standard-Button
+		$DFC_CAPTION - Titelleiste
+		$DFC_MENU - Men&uuml;leiste
+		$DFC_POPUPMENU - Windows 2000/XP: Popup-Men&uuml;eintrag
+		$DFC_SCROLL - Scroll-Leiste
+$nState
+	Legt den Anfangszustand des Rahmen-Controls fest. Wenn $nType den Wert $DFC_BUTTON enth&auml;lt, kann $nState einen der folgenden Werte annehmen:
+		$DFCS_BUTTON3STATE - Three-State-Button
+		$DFCS_BUTTONCHECK - Checkbox
+		$DFCS_BUTTONPUSH - Pushbutton
+		$DFCS_BUTTONRADIO - Radiobutton
+		$DFCS_BUTTONRADIOIMAGE - Bild f&uuml;r Radiobutton (nichtrechteckige Buttons erfordern ein Bild)
+		$DFCS_BUTTONRADIOMASK - Maske f&uuml;r Radiobutton (nichtrechteckige Buttons erfordern eine Maske)
+		Wenn $nType den Wert $DFC_CAPTION enth&auml;lt, kann $nState einen der folgenden Werte annehmen:
+		$DFCS_CAPTIONCLOSE - Schlie&szlig;en-Button
+		$DFCS_CAPTIONHELP - Hilfe-Button
+		$DFCS_CAPTIONMAX - Maximieren-Button
+		$DFCS_CAPTIONMIN - Minimieren-Button
+		$DFCS_CAPTIONRESTORE - Wiederherstellen-Button
+		Wenn $nType den Wert $DFC_MENU enth&auml;lt, kann $nState eien der folgenden Werte annehmen:
+		$DFCS_MENUARROW - Untermen&uuml;-Pfeil
+		$DFCS_MENUARROWRIGHT - Untermen&uuml;-Pfeil (nach links zeigend). Wird f&uuml;r von rechts nach links kaskadierende Men&uuml;s benutzt, wenn Sprachen verwendet werden, in denen von rechts nach links geschrieben wird (z.B. Arabisch oder Hebr&auml;isch).
+		$DFCS_MENUBULLET - Aufz&auml;hlungspunkt
+		$DFCS_MENUCHECK - Kontrollmarke
+		Wenn $nType den Wert $DFC_SCROLL enth&auml;lt, kann $nState einen der folgenden Werte annehmen:
+		$DFCS_SCROLLCOMBOBOX - Combobox-Scroll-Leiste
+		$DFCS_SCROLLDOWN - Abw&auml;rts-Pfeil der Scroll-Leiste
+		$DFCS_SCROLLLEFT - Links-Pfeil der Scroll-Leiste
+		$DFCS_SCROLLRIGHT - Rechts-Pfeil der Scroll-Leiste
+		$DFCS_SCROLLSIZEGRIP - Gr&ouml;&szlig;en&auml;nderungsgriff des Fensters in der unteren rechten Ecke
+		$DFCS_SCROLLSIZEGRIPRIGHT - Gr&ouml;&szlig;en&auml;nderungsgriff des Fensters in der unteren linken Ecke. Wird f&uuml;r von rechts nach links zu lesende Sprachen verwendet (z.B. Arabisch oder Hebr&auml;isch).
+		$DFCS_SCROLLUP - Aufw&auml;rts-Pfeil der Scroll-Leiste
+		Der folgende Stil kann verwendet werden, um das begrenzende Rechteck eines Pushbuttons festzulegen:
+		$DFCS_ADJUSTRECT - Das begrenzende Rechteck wird so angepasst, das die umgebenden Kanten des Buttons ausgeschlossen werden
+		Einer oder mehrere der folgenden Werte k&ouml;nnen verwendet werden, um den Status des zu zeichnenden Controls festzulegen:
+		$DFCS_CHECKED - Der Button ist markiert
+		$DFCS_FLAT - Der Button hat einen flachen Rand
+		$DFCS_HOT - Windows 2000/XP: Der Button ist ausgew&auml;hlt
+		$DFCS_INACTIVE - Der Button ist deaktiviert (ausgegraut)
+		$DFCS_PUSHED - Der Button ist bet&auml;tigt (gedr&uuml;ckt)
+		$DFCS_TRANSPARENT - Windows 2000/XP: Der Hintergrund bleibt unbeeinflusst. Dieses Flag kann nur mit $DFCS_MENUARROWUP oder $DFCS_MENUARROWDOWN kombiniert werden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Ben&ouml;tigt die FrameConstants.au3 f&uuml;r vordefinierte Konstanten
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ DrawFrameControl

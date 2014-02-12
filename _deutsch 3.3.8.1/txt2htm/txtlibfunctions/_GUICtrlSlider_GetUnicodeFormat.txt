@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlSlider_GetUnicodeFormat
+
+###Description###
+Ermittelt das Unicode Zeichen-Format-Flag f&uuml;r das Control
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetUnicodeFormat($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	Das Control verwendet Unicode Zeichen
+False:	Das Control verwendet ANSI Zeichen
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetUnicodeFormat
+
+###Example###
+@@IncludeExample@@

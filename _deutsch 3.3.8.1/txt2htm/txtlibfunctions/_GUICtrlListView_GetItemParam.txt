@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlListView_GetItemParam
+
+###Description###
+Ermittelt den anwendungsspezifischen Wert eines Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemParam($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+Gibt den anwendungsspezifischen Wert zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemParam
+
+###Example###
+@@IncludeExample@@

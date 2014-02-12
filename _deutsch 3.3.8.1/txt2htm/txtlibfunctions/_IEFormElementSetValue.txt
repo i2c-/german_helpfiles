@@ -1,0 +1,46 @@
+###User Defined Function###
+_IEFormElementSetValue
+
+###Description###
+Setzt den Wert eines angegebenen Formelements.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormElementSetValue(ByRef $o_object, $s_newvalue [, $f_fireEvent = 1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable einer InternetExplorer.Application, Formelement Objekt
+$s_newvalue
+	Der zu setzende Wert des Formelements
+$f_fireEvent
+	[optional] gibt an, ob nach &Auml;nderung des Wertes ein OnChange ausgef&uuml;hrt werden soll
+	0 = keine Ausf&uuml;hrung von OnChange oder OnClick nach Wert&auml;nderung
+	1 = (Standard) f&uuml;hrt OnChange und OnClick aus nach Wert&auml;nderung
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Obwohl alle Formelemente einen Wert besitzen, verwenden nur textorientierte Elemente diese Werte auch ersichtlich (type text, textarea, hidden, password und file). Der Wert der anderen Formelemente bewirkt nicht dass, was diese im User Interface anzeigen, sondern eher der Wert, der zur&uuml;ckgegeben wird, wenn das Element ausgew&auml;hlt oder aktiviert wird.
+
+Siehe _IEFormElementOptionSelect, _IEFormElementCheckboxSelect, _IEFormElementRadioSelect und _IEFormImageClick f&uuml;r weitere Informationen.
+
+Merke: Man kann _IEFormElementSetValue nicht verwenden, um Werte eines INPUT TYPE=FILE Elementes zu &auml;ndern. Die Sicherheitseinstellungen der Browser verhindern, dass dieses Element durch ein Skript ver&auml;ndert wird. Siehe das Beispiel unten als L&ouml;sungsansatz.
+
+###Related###
+_IEFormElementGetValue, _IEFormElementGetCollection, _IEFormElementGetObjByName, _IEFormElementOptionSelect, _IEFormElementCheckboxSelect, _IEFormElementRadioSelect
+
+
+###Example###
+@@IncludeExample@@

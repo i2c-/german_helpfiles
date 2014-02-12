@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinNet_GetProviderName
+
+###Description###
+Ermittelt den Providernamen f&uuml;r einen angegebenen Typ der Netzwerkverbindung
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetProviderName($iType)
+
+###Parameters###
+@@ParamTable@@
+$iType
+	Netzwerktyp, der eindeutig ist f&uuml;r das Netzwerk
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Netzwerk Providername
+Fehler:	Setzt @error
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetGetProviderNameA

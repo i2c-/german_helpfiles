@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlToolbar_ClickButton
+
+###Description###
+Klickt auf einen festgelegten Button
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_ClickButton($hWnd, $iCommandID [, $sButton = "left" [, $fMove = False [, $iClicks = 1 [, $iSpeed = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$sButton
+	[optional] zu dr&uuml;ckender Button
+$fMove
+	[optional] Mausbewegungsflag:
+		 True - Maus bewegt sich
+		False - Maus bewegt sich nicht
+$iClicks
+	[optional] Anzahl von Klicks
+$iSpeed
+	[optional] Mausbewegungsgeschwindigkeit
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_ClickAccel, _GUICtrlToolbar_ClickIndex
+
+###Example###
+@@IncludeExample@@

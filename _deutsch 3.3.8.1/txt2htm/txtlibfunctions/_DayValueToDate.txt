@@ -1,0 +1,38 @@
+###User Defined Function###
+_DayValueToDate
+
+###Description###
+Addiert die angegebene Anzahl Tage zum Startdatum des julianischen Kalenders (Mittag des 1. Januar 4713 vor Christus) und gibt das entsprechende gregorianische Datum zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_DayValueToDate($iJulianDate, ByRef $iYear, ByRef $iMonth, ByRef $iDay)
+
+###Parameters###
+@@ParamTable@@
+$iJulianDate
+	Eine zul&auml;ssige Anzahl von Tagen (seit Mittag des 1. Januar 4713 vor Christus).
+$iYear
+	gibt das gregorianische Jahr im Format YYYY zur&uuml;ck
+$iMonth
+	gibt den greg. Monat im Format MM zur&uuml;ck
+$iDay
+	gibt den greg. Tag im Format DD zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das berechnete Datum zur&uuml;ck (in $iYear, $iMonth und $iDay)
+Fehler:	0 und setzt @Error
+@error:	0 - Kein Fehler.
+	1 - Ung&uuml;ltige Anzahl der eingegebenen Tage
+@@End@@
+
+###Remarks###
+F&uuml;r die R&uuml;ckgabe des gregorianischen Datums m&uuml;ssen die Werte $iYear, $iMonth und $iDay als Variablenreferenzen &uuml;bergeben werden.
+
+###Related###
+_DateToDayValue, _DateAdd, _DateDiff, _DateTimeSplit, _DateToDayOfWeek, _DateToDayOfWeekISO
+
+###Example###
+@@IncludeExample@@

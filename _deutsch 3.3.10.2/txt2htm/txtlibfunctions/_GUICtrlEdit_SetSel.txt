@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlEdit_SetSel
+
+###Description###
+W&auml;hlt einen Bereich von Zeichen aus
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetSel ( $hWnd, $iStart, $iEnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iStart
+	legt die Position des ersten Zeichens der Auswahl fest.
+$iEnd
+	legt die Position des letzten Zeichens der Auswahl fest.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Der Startwert kann gr&ouml;&szlig;er als der Endwert sein. Der kleinere der zwei Werte legt die Position des ersten Zeichens der Auswahl fest.
+Der h&ouml;here Wert legt die Position des ersten Zeichens au&szlig;erhalb der Auswahl fest.
+
+Der Startwert ist der Ankerpunkt der Auswahl und der Endwert ist das aktive Ende.
+Wenn der Benutzer die Shift- (Umschalt-) Taste verwendet, um die Gr&ouml;&szlig;e der Auswahl zu bestimmen, kann das aktive Ende bewegt werden, aber der Ankerpunkt bleibt der Gleiche.
+
+Falls $iStart 0 ist und $iEnd -1 ist, wird der komplette Text im Edit-Control ausgew&auml;hlt.
+Falls $iStart -1 ist, wird jede Auswahl entfernt.
+
+Das Control zeigt einen blinkenden Strich an der $iEnd Position an, unabh&auml;ngig von den relativen Werten von $iStart und $iEnd.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_GetSel, _GUICtrlEdit_ReplaceSel
+
+
+###Example###
+@@IncludeExample@@

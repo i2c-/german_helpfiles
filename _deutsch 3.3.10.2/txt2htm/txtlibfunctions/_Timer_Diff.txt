@@ -1,0 +1,31 @@
+###User Defined Function###
+_Timer_Diff
+
+###Description###
+Gibt die Zeitdifferenz zum vorherigen Aufruf von _Timer_Init zur&uuml;ck
+
+###Syntax###
+#include <Timers.au3>
+_Timer_Diff ( $iTimeStamp )
+
+
+###Parameters###
+@@ParamTable@@
+$iTimeStamp
+	Zeitmarke, die von einem vorherigen Aufruf von _Timer_Init() zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+Gibt die Zeitdifferenz (in Millisekunden) zur Zeitmarke des vorherigen Aufrufs von _Timer_Init() zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Timer_Init
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlTab_SetCurFocus
+
+###Description###
+Setzt den Fokus auf den festgelegten Tab
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetCurFocus ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls ein Tab-Control den Stil $TCS_BUTTONS besitzt (Button Modus) ist der Tab mit dem Fokus vielleicht ein anderer als der ausgew&auml;hlte Tab.
+Wenn zum Beispiel ein Tab ausgew&auml;hlt wird, so kann  der Benutzer die Pfeiltasten dr&uuml;cken um den Fokus auf einen anderen Tab zu setzen, ohne das der ausgew&auml;hlte Tab ge&auml;ndert wird.
+Im Button Modus setzt $TCM_SETCURFOCUS den Eingabefokus zu dem Button, welche mit dem festgelegten Tab verbunden ist. Dabei wird aber der ausgew&auml;hlte Tab nicht ge&auml;ndert.
+
+Falls ein Tab-Control den Stil $TCS_BUTTONS nicht besitzt, wird der ausgew&auml;hlte Tab samt dem Tab mit dem Fokus ge&auml;ndert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_GetCurFocus
+
+
+###Example###
+@@IncludeExample@@

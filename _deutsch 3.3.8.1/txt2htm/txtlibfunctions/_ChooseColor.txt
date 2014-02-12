@@ -1,0 +1,41 @@
+###User Defined Function###
+_ChooseColor
+
+###Description###
+Erzeugt eine Dialogbox, die es dem Benutzer erm&ouml;glicht, eine Farbe auszuw&auml;hlen
+
+###Syntax###
+#include <Misc.au3>
+_ChooseColor([$iReturnType = 0 [, $iColorRef = 0 [, $iRefType = 0 [, $hWndOwnder = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$iReturnType
+	[optional] Bestimmt den R&uuml;ckgabetyp, g&uuml;ltige Werte sind:
+		0 - COLORREF RGB Farbe
+		1 - BGR hex
+		2 - RGB hex
+$iColorRef
+	[optional] vorausgew&auml;hlte Farbe
+$iRefType
+	[optional] von $iColorRef eingelesener Typ, g&uuml;ltige Werte sind:
+		0 - COLORREF RGB Farbe
+		1 - BGR hex
+		2 - RGB hex
+$hWndOwnder
+	[optional] Handle des Fensters, zu dem die Dialogbox geh&ouml;rt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	gew&auml;hlte Farbe
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

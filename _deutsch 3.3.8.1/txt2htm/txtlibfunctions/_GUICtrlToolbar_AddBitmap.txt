@@ -1,0 +1,65 @@
+###User Defined Function###
+_GUICtrlToolbar_AddBitmap
+
+###Description###
+F&uuml;gt ein neues Bilder der Imagelist hinzu
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_AddBitmap($hWnd, $iButtons, $hInst, $iID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iButtons
+	Anzahl von Buttonbildern in dem Bitmap
+$hInst
+	Handle zu der modularen Instanz mit der ausf&uuml;hrbaren Datei welche eine Bitmap Ressource enth&auml;lt.
+		Um das Bitmaphandle anstelle der Ressourcen-ID zu nutzen, ist dies auf 0 zu setzen. Man kann systemdefinierte Buttonbitmaps der Liste
+		durch -1 hinzuf&uuml;gen, so wie der hInst Member und einer der folgenden Werte wie der  iID Member:
+		$IDB_STD_LARGE_COLOR - F&uuml;gt gro&szlig;e, farbige Standardbitmaps hinzu
+		$IDB_STD_SMALL_COLOR - F&uuml;gt kleine, farbige Standardbitmaps hinzu
+		$IDB_VIEW_LARGE_COLOR - F&uuml;gt gro&szlig;e, farbige Ansichtsbitmaps hinzu
+		$IDB_VIEW_SMALL_COLOR - F&uuml;gt kleine, farbige Ansichtsbitmaps hinzu
+$iID
+	Falls hInst 0 ist, ist dieser Member auf das Bitmaphandle des Bitmaps mit dem Buttonbild zu setzen.
+		Sonst ist die Ressourcen-ID des Bitmaps mit dem Buttonbild zu setzen
+		Die folgenden sind Ressourcen-IDs der Standard und Ansichtsbitmaps:
+		$STD_COPY - kopieren
+		$STD_CUT - ausschneiden
+		$STD_DELETE - l&ouml;schen
+		$STD_FILENEW - neue Datei
+		$STD_FILEOPEN - Datei &ouml;ffnen
+		$STD_FILESAVE - Dateispeichern
+		$STD_FIND - suchen
+		$STD_HELP - Hilfe
+		$STD_PASTE - einf&uuml;gen
+		$STD_PRINT - drucken
+		$STD_PRINTPRE - Druckvorschau
+		$STD_PROPERTIES - Eigenschaften
+		$STD_REDOW - wiederholen
+		$STD_REPLACE - ersetzen
+		$STD_UNDO - R&uuml;ckg&auml;ngig
+		$VIEW_DETAILS - Detailansicht
+		$VIEW_LARGEICONS - Gro&szlig;e Symbole
+		$VIEW_LIST - Listenansicht
+		$VIEW_SMALLICONS - Kleine Symbole.
+		$VIEW_SORTDATE - nach Datum sortieren.
+		$VIEW_SORTNAME - nach Name sortieren.
+		$VIEW_SORTSIZE - nach Gr&ouml;&szlig;e sortieren.
+		$VIEW_SORTTYPE - nach Typ sortieren.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der 0-basierende Index des ersten neuen Bildes
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_LoadBitmap
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlAVI_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+
+###Remarks###
+Funktioniert nur mit AVI-Controls welche mit _GUICtrlAVI_Create erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlAVI_Create
+
+###Example###
+@@IncludeExample@@

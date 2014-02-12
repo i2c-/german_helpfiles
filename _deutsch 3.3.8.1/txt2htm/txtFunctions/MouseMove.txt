@@ -1,0 +1,34 @@
+###Function###
+MouseMove
+
+###Description###
+Bewegt den Mauszeiger
+
+###Syntax###
+MouseMove ( x, y [, speed] )
+
+
+###Parameters###
+@@ParamTable@@
+x
+	Die x-Koordinate des Bildschirms, zu der die Maus bewegt werden soll.
+y
+	Die y-Koordinate des Bildschirms, zu der die Maus bewegt werden soll.
+speed
+	[optional] Die Bewegungsgeschwindigkeit, mit der die Maus bewegt werden soll (von 1 (schnellste) bis 100 (langsamste)). Eine Geschwindigkeit von 0 bewegt die Maus sofort. Standardwert ist 10.
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Mausbewegungen des Benutzers werden w&auml;hrend einer nicht-sofortigen MouseMove Operation beeintr&auml;chtigt.
+Falls die Einstellung f&uuml;r MouseCoordMode relative Koordinaten ist, k&ouml;nnen Zahlen auch negativ sein.
+
+###Related###
+MouseClick, MouseClickDrag, MouseGetPos, MouseCoordMode (Option), MouseDown, MouseUp, MouseWheel
+
+
+###Example###
+@@IncludeExample@@

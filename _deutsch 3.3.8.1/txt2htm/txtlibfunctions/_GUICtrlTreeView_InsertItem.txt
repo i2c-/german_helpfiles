@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlTreeView_InsertItem
+
+###Description###
+F&uuml;gt ein Item ein
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_InsertItem($hWnd, $sItem_Text [, $hItem_Parent = 0 [, $hItem_After = 0 [, $iImage = -1 [, $iSelImage = -1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sItem_Text
+	Text des neuen Items. Siehe Bemerkungen
+$hItem_Parent
+	[optional] Hauptitem ID/Handle/Item
+$hItem_After
+	[optional] Item ID/Handle/Flag nachdem das neue Item eingef&uuml;gt werden soll
+$iImage
+	[optional] 0-basierender Index des Itemicons in der Imagelist des Controls
+$iSelImage
+	[optional] 0-basierender Index des Itemicons in der Imagelist des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das neue Item Handle
+Fehler:	0
+@@End@@
+
+###Remarks###
+Falls ein Benachrichtigungs-Callback ben&ouml;tigt wird, so ist $sText = -1 (LPSTR_TEXTCALLBACK) festzulegen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

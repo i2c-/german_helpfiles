@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_SetStyleAltDrag
+
+###Description###
+Legt fest, ob das Control es erlaubt, dass die Buttons mitgeschleppt werden k&ouml;nnen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetStyleAltDrag ( $hWnd [, $fState = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	[optional] True zum es zu setzen, False um es nicht zu setzen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetStyleAltDrag
+
+
+###Example###
+@@IncludeExample@@

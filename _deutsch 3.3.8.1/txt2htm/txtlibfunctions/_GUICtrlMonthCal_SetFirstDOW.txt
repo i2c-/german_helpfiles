@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlMonthCal_SetFirstDOW
+
+###Description###
+Setzt den ersten Tag der Woche f&uuml;r ein MonthCal-Control
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_SetFirstDOW($hWnd, $sDay)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sDay
+	Im folgenden Format:
+		0 oder "Monday"
+		1 oder "Tuesday"
+		2 oder "Wednesday"
+		3 oder "Thursday"
+		4 oder "Friday"
+		5 oder "Saturday"
+		6 oder "Sunday"
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der vorherige erste Tag der Woche
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_GetFirstDOW
+
+###Example###
+@@IncludeExample@@

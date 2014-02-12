@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetWindowRect
+
+###Description###
+Ermittelt die Abmessungen des begrenzenden Rechtecks des festgelegten Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindowRect($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagRECT Struktur, welche die Fensterkoordinaten enth&auml;lt
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ GetWindowRect

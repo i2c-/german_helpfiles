@@ -1,0 +1,42 @@
+###Function###
+ProcessWait
+
+###Description###
+Pausiert das Skript, bis der genannte Prozess existiert.
+
+###Syntax###
+ProcessWait ( "process" [, timeout = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+process
+	Der Name des Prozesses, auf den gewartet werden soll.
+timeout
+	[optional] Gibt an (in Sekunden), wie lange gewartet werden soll. Standard ist unbegrenztes Warten.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Pid des Prozesses.
+Fehler:	0 wenn die angegebene maximale Wartezeit &uuml;berschritten wurde.
+@@End@@
+
+
+###Remarks###
+Die Prozessnamen sind die ausf&uuml;hrbaren Dateien ohne den kompletten Pfad, also z.B. "notepad.exe" oder "winword.exe".
+
+Der Prozess wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+Diese Funktion akzeptiert als einzige Prozessfunktion keine PID. Weil PIDs zuf&auml;llig vergeben werden, ist es nicht sinnvoll, auf eine ganz bestimmte PID zu warten.
+
+[Anm. d. &Uuml;.]
+Diese Funktion arbeitet nicht f&uuml;r alte 16-Bit Programme die unter der Windowseigenen "Windows NT Virtual DOS Machine" (NTVDM) ausgef&uuml;hrt werden. Solche Prozesse sind an einem f&uuml;hrenden Leerzeichen im Taskmanager erkennbar.
+
+
+###Related###
+ProcessClose, ProcessExists, ProcessWaitClose, RunWait, WinWait, WinWaitActive, ProcessList, RunAsWait, WinGetProcess
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlEdit_GetFirstVisibleLine
+
+###Description###
+Ermittelt den 0-basierenden Index der obersten sichtbaren Zeile in einem mehrzeilen Edit-Control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetFirstVisibleLine ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt einen 0-basierenden Index der obersten sichtbaren Zeile in einem mehrzeilen Edit-Control zur&uuml;ck.
+
+
+###Remarks###
+Die Zeilennummer und die L&auml;nge der Zeilen in einem Edit-Control ist abh&auml;ngig von der Breite des Controls und der aktuellen Wordwrap Einstellung.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

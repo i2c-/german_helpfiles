@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_RemoveGroup
+
+###Description###
+Entfernt eine Gruppe eines Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_RemoveGroup($hWnd, $iGroupID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iGroupID
+	ID der Gruppe, welche entfernt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index der Gruppe
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_RemoveAllGroups
+
+###Example###
+@@IncludeExample@@

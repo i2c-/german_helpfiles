@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_SetIconSpacing
+
+###Description###
+Setzt den Abstand zwischen Icons (nur f&uuml;r Ansicht "gro&szlig;e Icons")
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetIconSpacing ( $hWnd, $iCX, $iCY )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCX
+	Abstand zwischen den Icons auf der X-Achse, in Pixel
+$iCY
+	Abstand zwischen den Icons auf der Y-Achse, in Pixel
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - vorheriger CX Wert
+	[1] - vorheriger CY Wert
+
+
+###Remarks###
+Die Werte f&uuml;r $iCX und $iCY sind relativ zu der oberen linken Ecke des Iconbitmaps.
+Um den Abstand den Icons so zu setzen, dass sie nicht &uuml;berlappen, m&uuml;ssen die Werte $iCX oder $iCY die Gr&ouml;&szlig;e der Icons plus die Gr&ouml;&szlig;e des freien Raumes zwischen den Icons enthalten.
+Werte die die Breite der Icons nicht enthalten, werden sich &uuml;berlappen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

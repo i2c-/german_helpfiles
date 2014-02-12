@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_MenuItemFromPoint
+
+###Description###
+Ermittelt welches Men&uuml;item sich an dem festgelegten Ort befindet.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_MenuItemFromPoint($hWnd, $hMenu [, $iX = -1 [, $iY = -1]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster welches das Men&uuml; enth&auml;lt. Falls dieser Wert 0 ist und $hMenu ein Popup Men&uuml; darstellt, wird die Funktion das Men&uuml;fenster finden.
+$hMenu
+	Handle zu dem Men&uuml; welches die Men&uuml;items enth&auml;lt um den hit Test durchzuf&uuml;hren
+$iX
+	[optional] zu testende X-Position. Falls -1 wird die aktuelle Maus X-Position verwendet.
+$iY
+	[optional] zu testende Y-Position. Falls -1 wird die aktuelle Maus Y-Position verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die 0-basierende Position des Men&uuml;items an der festgelegten Stelle
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Falls $hMenu eine Men&uuml;leiste darstellt, sind die Koordinaten Fensterkoordinaten. Sonst sind die Arbeitsfl&auml;chenkoordinaten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ MenuItemFromPoint
+
+###Example###
+@@IncludeExample@@

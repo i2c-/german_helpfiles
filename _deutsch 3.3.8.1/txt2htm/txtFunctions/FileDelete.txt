@@ -1,0 +1,36 @@
+###Function###
+FileDelete
+
+###Description###
+L&ouml;scht eine oder mehrere Dateien.
+
+###Syntax###
+FileDelete ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+Path
+	Der Pfad der zu l&ouml;schenden Datei(en).  Wildcards werden unterst&uuml;tzt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Dateien nicht gel&ouml;scht wurden oder nicht bestehen.
+@@End@@
+
+
+###Remarks###
+Achtung: Wenn der in FileDelete angegebene Pfad ("path") ein Ordner ist, werden alle im Ordner enthaltenen Dateien gel&ouml;scht, so als ob die *.*-Maske angegeben wurde.
+Siehe <a href="FileFindFirstFile.htm">FileFindFirstFile</a> f&uuml;r Erl&auml;uterungen zu Wildcards.
+
+Einige Dateiattribute k&ouml;nnen ein L&ouml;schen unm&ouml;glich machen.
+
+
+###Related###
+FileCopy, FileMove, FileRecycle, DirRemove, FileRecycleEmpty
+
+
+###Example###
+@@IncludeExample@@

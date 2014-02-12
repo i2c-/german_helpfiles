@@ -1,0 +1,33 @@
+###Function###
+StringIsASCII
+
+###Description###
+Pr&uuml;ft, ob ein String nur ASCII Zeichen im Bereich 0x00 - 0x7f (0 - 127) enth&auml;lt.
+
+###Syntax###
+StringIsASCII ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn der String erweiterte ASCII Zeichen enth&auml;lt.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlHeader_Destroy
+
+###Description###
+L&ouml;scht das Header-Control
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_Destroy ( ByRef $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True, $hWnd wird auf 0 gesetzt
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Funktioniert nur wenn das Control mit _GUICtrlHeader_Create() erstellt wurde
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_Create
+
+
+###Example###
+@@IncludeExample@@

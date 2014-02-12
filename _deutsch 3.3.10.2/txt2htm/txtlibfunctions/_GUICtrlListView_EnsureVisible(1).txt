@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_EnsureVisible
+
+###Description###
+Stellt sicher, dass ein Listview Item entweder ganz oder teilweise sichtbar ist
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_EnsureVisible ( $hWnd, $iIndex [, $fPartialOK = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	Index des Listview Items
+$fPartialOK
+	[optional] Wert, welcher bestimmt, ob das Item ganz sichtbar sein muss (TRUE=teilweise, FALSE=komplett)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls $fPartialOK = True, wird nicht gescrollt, falls das Item wenigstens teilweise sichtbar ist
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_ArrayInsert
+
+###Description###
+F&uuml;gt einen neuen String an der festgelegten Position in das Array ein.
+
+###Syntax###
+#include <Array.au3>
+_ArrayInsert(ByRef $avArray, $iElement [, $vValue = ""])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array, in dem ein Element eingef&uuml;gt werden soll.
+$iElement
+	Der Index, an dem das Element eingef&uuml;gt werden soll.
+$vValue
+	[Optional] Wert des Items der eingef&uuml;gt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Neue Gr&ouml;&szlig;e des Arrays
+Fehler:	0 und setzt @error
+@error:	1 - $avArray ist kein Array
+	2 - $avArray ist kein 1-dimensionales Array
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_ArrayAdd, _ArrayDelete, _ArrayPop, _ArrayPush
+
+###Example###
+@@IncludeExample@@

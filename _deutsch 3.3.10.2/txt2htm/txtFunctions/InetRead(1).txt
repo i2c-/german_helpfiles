@@ -1,0 +1,50 @@
+###Function###
+InetRead
+
+###Description###
+L&auml;dt eine Datei aus dem Internet herunter mit dem HTTP, HTTPS oder FTP Protokoll.
+
+###Syntax###
+InetRead ( "URL" [, options = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+URL
+	Die URL der herunterzuladenden Datei. Siehe die Anmerkungen unten.
+options
+	[optional] 
+		$INET_LOCALCACHE (0) = Holt die Datei aus dem lokalen Cache wenn verf&uuml;gbar (Standard).
+		$INET_FORCERELOAD (1) = Zwingt die Seite neu zu laden.
+		$INET_IGNORESSL (2) = Alle SSL Error ignorieren (mit HTTPS Verbindungen).
+		$INET_ASCIITRANSFER (4) = ASCII-Code benutzen wenn Daten mit dem FTP Protokoll &uuml;bertragen werden. (Kann nicht mit Option $INET_BINARYTRANSFER (8) kombiniert werden).
+		$INET_BINARYTRANSFER (8) = Bin&auml;r-Code benutzen wenn Daten mit dem FTP Protokoll &uuml;bertragen werden. (Kann nicht mit Option $INET_ASCIITRANSFER (4) kombiniert werden). Dies ist der Standard &Uuml;bertragungs-Modus wenn keiner angegeben wird.
+		$INET_FORCEBYPASS (16) = Das Zwingen der Verbindung Online zu bleiben umgehen. (Siehe Anmerkungen).
+	Konstanten sind in InetConstants.au3 definiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Bin&auml;r-String und @extended wird auf die Anzahl der heruntergeladenen Bytes gesetzt.
+Fehler:	"" (Leerstring) und setzt @error auf einen Wert ungleich Null.
+@@End@@
+
+
+###Remarks###
+Internet Explorer 3 oder h&ouml;her muss installiert sein, damit diese Funktion funktioniert.
+
+Der URL Parameter sollte in dieser Form sein "http://www.irgendeineseite.com/pfad/Datei.html" - so wie eine Adresse die in einen Browser eingegeben wird. 
+Um einen Benutzernamen und ein Passwort zu verwenden werden diese im Format "benutzername:passwort@" vor den Servernamen geschrieben. Beispiel "http://meinbenutzername:meinpasswort@www.irgendeineseite.com"
+
+Die zur&uuml;ckgegebenen Daten sind im bin&auml;ren Format.  Die Funktion 
+<a href="BinaryToString.htm">BinaryToString()</a> kann benutzt werden, um die Daten in einen String umzuwandeln.
+
+Normalerweise erzwingt AutoIt eine Verbindung bevor der Download gestartet wird. DF&Uuml;-Benutzer werden aufgefordert online zu gehen oder sich in das Modem einzuw&auml;hlen (abh&auml;ngig davon, wie das System konfiguriert ist). Die Option $INET_FORCEBYPASS (16) verhindert dieses Verhalten. Dieses Verhalten abzuschalten kann sinnvoll sein f&uuml;r dauerhafte Verbindungen (Breitband, LAN). Au&szlig;erdem ist es auch erforderlich um bestimmte Probleme in Windows Vista und Windows 7 zu umgehen.
+
+
+###Related###
+InetGet, InetGetSize, HttpSetProxy, FtpSetProxy, HttpSetUserAgent
+
+
+###Example###
+@@IncludeExample@@

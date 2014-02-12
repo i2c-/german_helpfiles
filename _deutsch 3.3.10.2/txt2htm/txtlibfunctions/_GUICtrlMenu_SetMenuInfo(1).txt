@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_SetMenuInfo
+
+###Description###
+Setzt Informationen f&uuml;r ein festgelegtes Men&uuml;
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetMenuInfo ( $hMenu, ByRef $tInfo )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Men&uuml; Handle
+$tInfo
+	$tagMENUINFO Struktur
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_GetMenuInfo, $tagMENUINFO
+
+
+###See Also###
+@@MsdnLink@@ SetMenuInfo
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###Function###
+FileGetShortcut
+
+###Description###
+Ermittelt die Details zu einer Verkn&uuml;pfung.
+
+###Syntax###
+FileGetShortcut ( "lnk" )
+
+
+###Parameters###
+@@ParamTable@@
+lnk
+	Vollst&auml;ndiger Pfad und Dateiname der Verkn&uuml;pfung.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array mit den Verkn&uuml;pfungsdetails - siehe Bemerkungen.
+Fehler:	Setzt @error auf 1, wenn die Verkn&uuml;pfung nicht ge&ouml;ffnet werden konnte.
+@@End@@
+
+
+###Remarks###
+Das von dieser Funktion zur&uuml;ckgegebene Array ist ein ein-dimensionales Array, das folgende Elemente beinhaltet:
+	$aArray[0] = Verkn&uuml;pfungsziel
+	$aArray[1] = Arbeitsverzeichnis
+	$aArray[2] = Argumente
+	$aArray[3] = Beschreibung
+	$aArray[4] = Dateiname des Icons
+	$aArray[5] = Index des Icons
+	$aArray[6] = Der Verkn&uuml;pfungsstatus (@SW_SHOWNORMAL, @SW_SHOWMINNOACTIVE, @SW_SHOWMAXIMIZED)
+
+
+###Related###
+FileCreateShortcut
+
+
+###Example###
+@@IncludeExample@@

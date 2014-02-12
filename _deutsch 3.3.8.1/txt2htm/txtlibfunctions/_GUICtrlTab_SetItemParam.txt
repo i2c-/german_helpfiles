@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTab_SetItemParam
+
+###Description###
+Setzt die Parameterdaten eines Controls
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetItemParam($hWnd, $iIndex, $iParam)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iParam
+	anwendungsspezifische Daten
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_GetItemParam
+
+###Example###
+@@IncludeExample@@

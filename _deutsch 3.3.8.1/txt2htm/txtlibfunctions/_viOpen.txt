@@ -1,0 +1,41 @@
+###User Defined Function###
+_viOpen
+
+###Description###
+&Ouml;ffnet eine VISA-Verbindung zu einem Instrument/Ger&auml;t.
+
+###Syntax###
+#include <Visa.au3>
+_viOpen($s_visa_address [, $s_visa_secondary_address = 0])
+
+
+###Parameters###
+@@ParamTable@@
+$s_visa_address
+	Ein VISA resource descriptor STRING (siehe die Bemerkungen zu _viExecCommand)
+	K&uuml;rzer kann man auch direkt eine GPIB-Adresse als Integer &uuml;bergeben. 
+$s_visa_secondary_address
+	[optional] Die "secondary GPIB address". Nur verwendbar, wenn die "primary address" als Integer &uuml;bergeben wurde.
+	Nur manche GPIB-Instrumente haben "secondary addresses". In diesen F&auml;llen kann dieser optionale Parameter verwendet werden, um diese mit anzugeben.
+	Dieser Parameter ist standardm&auml;&szlig;ig NULL, d.h. NO SECONDARY ADDRESS 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein (POSITIVES) VISA-Instrument-Handle zur&uuml;ck
+Fehler:	Gibt -1 zur&uuml;ck und setzt @error auf 1
+@@End@@
+
+
+###Remarks###
+Wie f&uuml;r alle VISA Funktionen m&uuml;ssen die VISA Bibliotheken installiert sein (es muss die visa32.dll in {WINDOWS}\system32 vorhanden ist) und eine GPIB Karte (wie z.B. National Instruments NI PCI-GPIB Karte oder die Agilent 82350B PCI High-Performance GPIB Karte) installiert sein.
+
+* Eine detaillierte Beschreibung der bekanntesten VISA DESCRIPTORS ist in den Bemerkungen zu der Funktion "_viExecCommand" zu finden.
+
+
+###Related###
+_viClose, _viExecCommand, _viFindGpib, _viGpibBusReset, _viGTL, _viSetAttribute, _viSetTimeout
+
+
+###Example###
+@@IncludeExample@@

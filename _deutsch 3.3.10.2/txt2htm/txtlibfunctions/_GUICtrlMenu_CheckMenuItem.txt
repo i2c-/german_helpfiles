@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlMenu_CheckMenuItem
+
+###Description###
+Setzt den Status des "Anhakfeldes" des festgelegten Men&uuml;items entweder auf angehakt oder leer
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_CheckMenuItem ( $hMenu, $iItem [, $fCheck = True [, $fByPos = True]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des zu pr&uuml;fenden Men&uuml;items
+$fCheck
+	[optional] True um es anzuhaken, False um die Markierung zu entfernen
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der vorherige Status des Men&uuml;items (entweder $MF_CHECKED oder $MF_UNCHECKED)
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Ein Item in einer Men&uuml;leiste kann kein Anhakfeld haben. Der $iItem Parameter erkennt ein Item welches ein Untermen&uuml; oder ein Command Item &ouml;ffnet. Bei einem Item welches ein Untermen&uuml; &ouml;ffnet, muss der $Item Parameter auf die Position des Items festgelegt werden.
+F&uuml;r ein Command Item kann der $Item Parameter entweder die Itemposition oder deren ID angeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_CheckRadioItem
+
+
+###See Also###
+@@MsdnLink@@ CheckMenuItem
+
+
+###Example###
+@@IncludeExample@@

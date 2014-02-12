@@ -1,0 +1,30 @@
+###User Defined Function###
+_Date_Time_SystemTimeToDateTimeStr
+
+###Description###
+Wandelt die Systemzeit in einen Datum/Zeitstring um.
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SystemTimeToDateTimeStr(ByRef $tSystemTime [, $bFmt = 0])
+
+###Parameters###
+@@ParamTable@@
+$tSystemTime
+	$tagSYSTEMTIME Struktur
+$bFmt
+	[optional] 0 gibt das Format mm/dd/yyyy hh:mm:ss zur&uuml;ck (Standard)
+	1 gibt das Format yyyy/mm/dd hh:mm:ss zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+Gibt den Datum/Zeitstring formatiert gem&auml;&szlig; $bFmt zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_SystemTimeToDateStr, _Date_Time_SystemTimeToTimeStr, $tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

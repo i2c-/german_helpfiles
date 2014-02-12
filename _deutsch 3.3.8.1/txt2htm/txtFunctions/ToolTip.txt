@@ -1,0 +1,48 @@
+###Function###
+ToolTip
+
+###Description###
+Erstellt einen "Tooltip" irgendwo auf dem Bildschirm.
+
+###Syntax###
+ToolTip ( "text" [, x [, y [, "title" [, icon [, options]]]]] )
+
+###Parameters###
+@@ParamTable@@
+text
+	Der Text des Tooltips.  (Ein Leerstring l&ouml;scht einen angezeigten Tooltip)
+x
+	[optional] Die x-Position des Tooltips.
+y
+	[optional] Die y-Position des Tooltips.
+title
+	[optional] Der Titel des Tooltips <b>Ben&ouml;tigt IE5+</b>
+icon
+	[optional] Vordefiniertes Icon, das in der N&auml;he des Titels angezeigt wird: Ben&ouml;tigt einen Titel.
+		0 = Kein Icon, 1 = Info Icon, 2 = Warnung Icon, 3 = Fehler Icon
+options
+	[optional] Setzt verschiedene Anzeigeoptionen (k&ouml;nnen addiert werden):
+		1 = Anzeige als Balloon-Tip <b>Ben&ouml;tigt IE5+</b>
+		2 = Zentriert den Tooltip an den x,y-Koordinaten, anstatt ihn in der oberen linken Ecke zu platzieren.
+		4 = Zwingt den Tooltip immer innerhalb der Monitorgrenzen sichtbar zu sein, wenn n&ouml;tig. Wenn mehrere Monitore benutzt werden, "schnappt" der Tooltip zum n&auml;chstgelegenen Monitor &uuml;ber.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn der Titel mehr als 99 Zeichen enth&auml;lt.
+@@End@@
+
+###Remarks###
+Um einen optionalen Parameter zu &uuml;berspringen, seinen Standardwert also zu belassen, wird das Schl&uuml;sselwort <a href="../keywords/Default.htm">Default</a> verwendet.
+Wenn die x- und y-Koordinaten ausgelassen werden, wird der Tooltip in der N&auml;he des Mauscursors gesetzt.
+Ein Tooltip bleibt sichtbar, bis das Skript schlie&szlig;t oder ToolTip("") aufgerufen wird.
+Man ben&ouml;tigt @CR oder @LF, um mehrzeilige Tooltips zu erstellen.
+Um ein Icon zu zeigen, darf der Titel nicht leer sein. Das Icon erscheint in der selben Reihe wie der Titel und dies erfordert, dass dieser existiert.  Wird die Zentrieroption verwendet, befindet sich die Mitte des Tooltipps an den festgelegten Koordinaten.  Wenn die Zentrieroption in Verbindung mit einem Balloon-Tip verwendet wird, so wird der Balloonhals zentriert und zeigt auf die festgelegten Koordinaten.
+
+###Related###
+TrayTip, MsgBox, SplashTextOn
+
+
+###Example###
+@@IncludeExample@@

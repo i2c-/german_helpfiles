@@ -1,0 +1,29 @@
+###User Defined Function###
+_WinAPI_IsWindow
+
+###Description###
+Ermittelt, ob das festgelegte Fensterhandle ein existierendes Fenster identifiziert
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_IsWindow($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	zu testendes Handle
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle ist ein Fenster
+Fehler:	Handle ist kein Fenster
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ IsWindow

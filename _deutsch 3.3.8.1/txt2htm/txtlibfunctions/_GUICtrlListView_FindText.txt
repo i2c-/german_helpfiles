@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlListView_FindText
+
+###Description###
+Sucht nach einem Item mit dem bestimmten Text
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_FindText($hWnd, $sText [, $iStart = -1 [, $fPartialOK = True [, $fWrapOK = True]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	zu suchender Text
+$iStart
+	[optional] 0-basierender Index des Items, von wo die Suche beginnen soll oder -1 um vom Anfang zu beginnen. Das
+		bestimmte Item wird bei der Suche ausgeschlossen.
+$fPartialOK
+	[optional] Falls True, gilt die Suche als erfolgreich, wenn der Itemtext mit dem Text beginnt (keine 100% &Uuml;bereinstimmung notwendig)
+$fWrapOK
+	[optional] Falls True, wird die Suche mit dem ersten Item fortgesetzt, falls nichts passendes gefunden wurde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index des Items
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Die Suche ber&uuml;cksichtigt die Gro&szlig;- und Kleinschreibung. Die Suche funktioniert nur mit dem Item. Es ist _GUICtrlListView_FindInText zu benutzen, falls die Suche im Text in Subitems gefunden werden soll.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_FindInText
+
+###Example###
+@@IncludeExample@@

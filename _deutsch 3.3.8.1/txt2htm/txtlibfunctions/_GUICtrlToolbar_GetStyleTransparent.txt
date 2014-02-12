@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetStyleTransparent
+
+###Description###
+Ermittelt, ob das Control transparent ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetStyleTransparent($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	Stil wird verwendet
+False:	Style wird nicht verwendet
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetStyleTransparent
+
+###Example###
+@@IncludeExample@@

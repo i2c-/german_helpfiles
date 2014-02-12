@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlEdit_HideBalloonTip
+
+###Description###
+Versteckt jeden Balloontip, der mit einem Edit-Control verbunden ist
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_HideBalloonTip($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_ShowBalloonTip
+
+###Example###
+@@IncludeExample@@

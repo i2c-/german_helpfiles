@@ -1,0 +1,33 @@
+###User Defined Function###
+_ClipBoard_Open
+
+###Description###
+&Ouml;ffnet die Zwischenablage und verhindert deren Ver&auml;nderung durch andere Anwendungen
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_Open($hOwner)
+
+###Parameters###
+@@ParamTable@@
+$hOwner
+	Handle zu einem Fenster, das mit der ge&ouml;ffneten Zwischenablage verbunden sein soll. Wenn der Parameter 0 ist, wird die ge&ouml;ffnete Zwischenablage mit dem aktuellen Prozess verbunden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Der Funktionsaufruf schl&auml;gt fehl, wenn ein anderes Fenster die Zwischenablage bereits ge&ouml;ffnet hat. Die _ClipBoard_Close Funktion sollte deshalb nach jedem erfolgreichen Aufruf dieser Funktion aufgerufen werden. Das durch $hOwner identifizierte Fenster wird nicht Besitzer der Zwischenablage, bis _ClipBoard_Empty aufgerufen wird. Wenn _ClipBoard_Open mit $hOwner = 0 aufgerufen wird, setzt _ClipBoard_Empty den Besitzer der Zwischenablage auf 0, so dass _ClipBoard_SetData fehlschl&auml;gt.
+
+###Related###
+_ClipBoard_Close, _ClipBoard_Empty, _ClipBoard_EnumFormats, _ClipBoard_GetOpenWindow, _ClipBoard_SetDataEx
+
+###See Also###
+@@MsdnLink@@ OpenClipboard
+
+###Example###
+@@IncludeExample@@

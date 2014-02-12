@@ -1,0 +1,34 @@
+###Function###
+FileGetShortName
+
+###Description###
+Gibt den angegebenen Dateinamen und -pfad im Format 8.3 zur&uuml;ck.
+
+###Syntax###
+FileGetShortName ( "file" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+file
+	Vollst&auml;ndiger Pfad und Dateiname, der umgewandelt werden soll.
+flag
+	[optional] auf 1 setzen, wenn die Datei ein relatives Verzeichnis haben darf, z. B. "..\file.txt"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den angegebenen Dateinamen und -pfad im Format 8.3 zur&uuml;ck.
+Fehler:	Gibt den Parameter zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Die Datei muss existieren, da es keine M&ouml;glichkeit gibt, den exakten "~n" zu kennen, wenn mehrere Dateien die gleichen 8 ersten Zeichen haben.
+
+###Related###
+FileGetLongName
+
+
+###Example###
+@@IncludeExample@@

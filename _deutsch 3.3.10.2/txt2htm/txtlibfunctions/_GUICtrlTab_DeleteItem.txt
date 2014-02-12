@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTab_DeleteItem
+
+###Description###
+L&ouml;scht einen Tab
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_DeleteItem ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Dies l&ouml;scht nicht die Controls auf dem Tabitem
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_DeleteAllItems
+
+
+###Example###
+@@IncludeExample@@

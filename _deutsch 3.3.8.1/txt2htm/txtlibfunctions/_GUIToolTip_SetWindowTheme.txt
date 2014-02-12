@@ -1,0 +1,25 @@
+###User Defined Function###
+_GUIToolTip_SetWindowTheme
+
+###Description###
+Setzt den Visual Style
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetWindowTheme($hWnd, $sStyle)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sStyle
+	String der den zu setzenden Visual Style des ToolTips enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

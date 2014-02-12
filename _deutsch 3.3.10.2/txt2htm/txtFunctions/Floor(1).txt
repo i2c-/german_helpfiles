@@ -1,0 +1,30 @@
+###Function###
+Floor
+
+###Description###
+Rundet auf die n&auml;chste Ganzzahl, die kleiner oder gleich dem angegebenen Wert ist.
+
+###Syntax###
+Floor ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein g&uuml;ltiger numerischer Ausdruck.
+@@End@@
+
+###ReturnValue###
+Gibt die abgerundete Zahl zur&uuml;ck.
+
+
+###Remarks###
+Keine
+
+
+###Related###
+Int, Number, Round, Ceiling
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###Function###
+BitXOR
+
+###Description###
+F&uuml;hrt eine Bitweise exklusive OR (XOR) Operation durch.
+
+###Syntax###
+BitXOR ( value1, value2 [, value n] )
+
+
+###Parameters###
+@@ParamTable@@
+value1
+	Die erste Zahl.
+value2
+	Die zweite Zahl.
+value n
+	[optional] Die n-te Zahl - bis zu 255 Werte k&ouml;nnen festgelegt werden.
+@@End@@
+
+###ReturnValue###
+Gibt den Wert f&uuml;r das Bitweise XOR der Parameter zusammen aus.
+Bit Operationen werden als 32-bit Integer ausgef&uuml;hrt.
+
+
+###Remarks###
+Es k&ouml;nnen auch HEX-Ausdr&uuml;cke als Parameter verwendet werden.
+Die Aussage ist dann wahr, wenn entweder die erste Aussage oder die zweite Aussage wahr ist, aber nicht beide.  
+BitXOR gibt 1 an einer Bit Position wenn dort eine ungerade Zahl Einsen an korrespondierender Position in allen Argumenten vorhanden ist, sonst 0.
+
+
+###Related###
+BitAND, BitNOT, BitOR, BitShift, Hex, BitRotate
+
+
+###Example###
+@@IncludeExample@@

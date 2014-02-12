@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetRangeMin
+
+###Description###
+Ermittelt den unten begrenzten Datumsbereich
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetRangeMin ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetRange, _GUICtrlMonthCal_GetRangeMax, _GUICtrlMonthCal_GetRangeMinStr, $tagSYSTEMTIME
+
+
+###Example###
+@@IncludeExample@@

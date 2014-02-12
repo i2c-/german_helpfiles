@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_GetOrigin
+
+###Description###
+Ermittelt den Ursprung der aktuellen Ansicht f&uuml;r das Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetOrigin ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - X-Koordinate der Ansicht
+	[1] - Y-Koordinate der Ansicht
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetOriginX, _GUICtrlListView_GetOriginY
+
+
+###Example###
+@@IncludeExample@@

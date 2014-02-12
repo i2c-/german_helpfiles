@@ -1,0 +1,36 @@
+###User Defined Function###
+_TimeToTicks
+
+###Description###
+Konvertiert die angegebenen Stunden, Minuten und Sekunden in Ticks.
+
+###Syntax###
+#include <Date.au3>
+_TimeToTicks([$iHours = @HOUR [, $iMins = @MIN [, $iSecs = @SEC]]])
+
+###Parameters###
+@@ParamTable@@
+$iHours
+	[optional] Stunden
+$iMins
+	[optional] Minuten
+$iSecs
+	[optional] Sekunden
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Anzahl der Ticks zur&uuml;ck.
+Fehler:	0
+@Error:	0 - kein Fehler.
+	1 - Die angegebenen Stunden, Minuten oder Sekunden sind ung&uuml;ltig.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_TicksToTime
+
+###Example###
+@@IncludeExample@@

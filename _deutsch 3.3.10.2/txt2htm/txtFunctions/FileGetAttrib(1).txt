@@ -1,0 +1,42 @@
+###Function###
+FileGetAttrib
+
+###Description###
+Gibt einen String zur&uuml;ck, der die Attribute einer Datei repr&auml;sentiert.
+
+###Syntax###
+FileGetAttrib ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Pfad zur zu untersuchenden Datei bzw. zum zu untersuchenden Verzeichnis
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, der die Attribute einer Datei repr&auml;sentiert.
+Fehler:	Ein leerer String. Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der zur&uuml;ckgegebene <a href="String.htm">String</a> kann eine Kombination der Buchstaben "RASHNDOCT" sein:
+	"R" = Schreibgesch&uuml;tzt (READONLY)
+	"A" = Archiv (ARCHIVE)
+	"S" = System (SYSTEM)
+	"H" = Versteckt (HIDDEN)
+	"N" = Normal (NORMAL)
+	"D" = Verzeichnis (DIRECTORY)
+	"O" = Offline (OFFLINE)
+	"C" = Komprimiert (NTFS-, <b>nicht</b> ZIP-Kompression, COMPRESSED
+	"T" = Tempor&auml;r (TEMPORARY)
+
+
+###Related###
+FileGetTime, FileSetAttrib, FileExists, FileGetSize, FileSetTime
+
+
+###Example###
+@@IncludeExample@@

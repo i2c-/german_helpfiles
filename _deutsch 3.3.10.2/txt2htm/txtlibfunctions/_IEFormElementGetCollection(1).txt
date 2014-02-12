@@ -1,0 +1,43 @@
+###User Defined Function###
+_IEFormElementGetCollection
+
+###Description###
+Gibt eine Sammlung von Objektvariablen zur&uuml;ck, welche alle Formular-Elemente eines bestimmten Formulares beinhaltet.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormElementGetCollection ( ByRef $o_object [, $i_index = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Window- oder Frameobjekts.
+$i_index
+	[optional] Bestimmt ob eine Sammlung oder indexbasierte Instanz zur&uuml;ckgegeben werden soll
+		0 oder positive Ganzzahl = gibt eine indexbasierte Instanz zur&uuml;ck
+		-1 = (Standard) gibt eine Sammlung zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine Objektvariable, welche die Sammlung der Form-Elemente beinhaltet, @extended = Anzahl der Form-Elemente
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@Error:	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+@extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_IEFormElementGetObjByName, _IEFormElementGetValue, _IEFormElementSetValue, _IEFormSubmit
+
+
+###Example###
+@@IncludeExample@@

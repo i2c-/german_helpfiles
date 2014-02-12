@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetSysColorBrush
+
+###Description###
+Ermittelt ein Handle welches einen logisches F&uuml;llmuster identifiziert, das einem festgelegten Farbindex entspricht
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetSysColorBrush ( $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$iIndex
+	Das Anzeige-Element dessen Farbe ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein logisches F&uuml;llmuster, falls $iIndex durch die aktuelle Plattform unterst&uuml;tzt wird
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetSysColorBrush

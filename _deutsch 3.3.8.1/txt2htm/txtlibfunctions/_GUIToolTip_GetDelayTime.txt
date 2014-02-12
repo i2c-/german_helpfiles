@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUIToolTip_GetDelayTime
+
+###Description###
+Ermittelt die Initial-, Popup- und reshow- Dauer
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetDelayTime($hWnd, $iDuration)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iDuration
+	Flag welches festlegt, welcher Dauerwert ermittelt werden soll:
+		0 - Setzt alle drei Verz&ouml;gerungszeiten auf die Standardeinstellung
+		1 - Zeit, wie lange die nachfolgenden ToolTip Fenster anzegeigt werden soll um einen Mauszeiger von einem Tool auf das andere zu bewegen
+		2 - Zeit die das ToolTip Fenster sichtbar bleibt falls der Mauszeiger innerhalb der begrenzenden Rechtecks steht 
+		3 - Zeit die der Mauszeiger innerhalb des Tool stehen muss bevor das Fenster erscheint
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die festgelegte Dauer in Millisekunden
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_SetDelayTime

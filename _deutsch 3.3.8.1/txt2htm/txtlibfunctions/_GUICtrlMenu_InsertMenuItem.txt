@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlMenu_InsertMenuItem
+
+###Description###
+F&uuml;gt ein neues Men&uuml;item an der festgelegten Position ein
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_InsertMenuItem($hMenu, $iIndex, $sText [, $iCmdID = 0 [, $hSubMenu = 0]])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iIndex
+	0-basierende Position des Men&uuml;items vor welches das neue Item eingef&uuml;gt wird
+$sText
+	Text des Men&uuml;items. Falls leer, wird ein Trennzeichen eingesetzt.
+$iCmdID
+	[optional] Command ID um das Item zu festzulegen
+$hSubMenu
+	[optional] Handle zu dem Submen&uuml;, welches mit dem Men&uuml;item verbunden ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_InsertMenuItemEx, _GUICtrlMenu_AddMenuItem, _GUICtrlMenu_AppendMenu
+
+###See Also###
+@@MsdnLink@@ InsertMenuItem
+
+###Example###
+@@IncludeExample@@

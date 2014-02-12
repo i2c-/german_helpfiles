@@ -1,0 +1,53 @@
+###User Defined Function###
+_Net_Share_ShareAdd
+
+###Description###
+Gibt eine Server-Ressource frei
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareAdd($sServer, $sShare, $iType, $sPath [, $sComment = "" [, $iMaxUses = -1]])
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Bestimmt die DNS oder den NetBIOS-Namen des Remote-Servers, auf welchem sich die auszuf&uuml;hrende Funktion befindet. Falls
+		dieser Parameter leer gelassen wird (""), wird der lokale Computer verwendet.
+$sShare
+	Freigabename einer Ressource
+$iType
+	Beinhaltet den Typ der freigegebenen Ressource. Kann eine Kombination der folgenden sein:
+		$STYPE_DISKTREE - Laufwerk
+		$STYPE_PRINTQ - Druckwarteschlange
+		$STYPE_DEVICE - Ger&auml;t
+		$STYPE_IPC - IPC
+		$STYPE_SPECIAL - Spezielle Freigabe, die f&uuml;r IPC$ oder Remote-Administration des Servers reserviert ist
+		$STYPE_TEMPORARY - Eine tempor&auml;re Freigabe
+$sPath
+	Lokaler Pfad f&uuml;r die freigegebene Ressource. F&uuml;r Datentr&auml;ger ist dies der Pfad, der freigegeben wird. F&uuml;r Druckwarteschlangen
+		ist das der Name der Druckwarteschlange, die freigegeben wird.
+$sComment
+	[optional] String, der ein Kommentar &uuml;ber die freigegebene Ressource ist
+$iMaxUses
+	[optional] Die h&ouml;chste Anzahl der gleichzeitigen Verbindungen, welche die freigegebene Ressource annehmen kann. Die
+		Anzahl der Verbindungen ist nicht limitiert, wenn der Wert auf -1 gesetzt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nur Administratoren, Serveroperatoren, Mitglieder der Gruppe "Power Users" oder jene mit der Gruppenmitgliedschaft "Serveroperatoren"
+k&ouml;nnen mit dieser Funktion Dateifreigaben erfolgreich hinzuf&uuml;gen. Der Druckeroperator kann Druckfreigaben hinzuf&uuml;gen.
+
+###Related###
+_Net_Share_ShareCheck, _Net_Share_ShareDel
+
+###See Also###
+@@MsdnLink@@ NetApiBufferFree
+
+###Example###
+@@IncludeExample@@

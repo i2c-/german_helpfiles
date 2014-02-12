@@ -1,0 +1,38 @@
+###Function###
+DllCallbackRegister
+
+###Description###
+Erzeugt eine benutzerdefinierte Callback- (R&uuml;ckruf-)funktion
+
+###Syntax###
+DllCallbackRegister ( "function", "return type", "params" )
+
+
+###Parameters###
+@@ParamTable@@
+function
+	Name der benutzerdefinierten Funktion, die aufgerufen werden soll.
+return type
+	R&uuml;ckgabetyp und Aufrufkonvention der Funktion (siehe DllCall).
+params
+	Durch Semikolons getrennte Liste von Parametern, die an die aufgerufene Funktion weitergereicht werden. Siehe Bemerkungen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das DLL-Handle, welches f&uuml;r <a href="DllCallbackGetPtr.htm">DllCallbackGetPtr()</a> und <a href="DllCallbackFree.htm">DllCallbackFree()</a> verwendet werden kann.
+Fehler:	0 wenn Fehler aufgetreten sind.
+@@End@@
+
+
+###Remarks###
+Verwendet alle <a href="DllCall.htm">DllCall()</a> Typen au&szlig;er "Struct".
+Wenn die Benutzung der Callback-Funktion beendet ist, sollte sie mit <a href="DllCallbackFree.htm">DllCallbackFree()</a> freigegeben werden. AutoIt schliesst zwar normalerweise alle Dateien bei Beendigung des Skripts, sicherheitshalber sollte trotzdem <a href="DllCallbackFree.htm">DllCallbackFree()</a> aufgerufen werden.
+
+
+###Related###
+DllCall, DllCallbackFree, DllCallbackGetPtr
+
+
+###Example###
+@@IncludeExample@@

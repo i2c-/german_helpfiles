@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlRebar_GetBKColor
+
+###Description###
+Ermittelt die Standard Hintergrundfarbe eines Rebar-Controls
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBKColor ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+@@End@@
+
+###ReturnValue###
+Gibt einen COLORREF Wert zur&uuml;ck, der die aktuelle Standard Hintergrundfarbe darstellt
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBKColor
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,23 @@
+###Structure Name###
+$tagNMTVKEYDOWN
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Tastaturereignis in einem Treeview-Control
+
+###Syntax###
+Global Const $tagNMTVKEYDOWN = "align 1;" & $tagNMHDR & ";word VKey;uint Flags"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+VKey
+	Virtueller Tastencode
+Flags
+	Immer null
+@@End@@
+
+
+###Remarks###
+Keine.

@@ -1,0 +1,47 @@
+###Function###
+IniWrite
+
+###Description###
+Schreibt einen Wert in eine standardkonforme .ini-Datei.
+
+###Syntax###
+IniWrite ( "filename", "section", "key", "value" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname der .ini-Datei.
+section
+	Der Sektionsname in der .ini-Datei.
+key
+	Der Name des Schl&uuml;ssels in der .ini-Datei.
+value
+	Der zu schreibende/&auml;ndernde Wert.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn die Datei schreibgesch&uuml;tzt ist.
+@@End@@
+
+
+###Remarks###
+Eine standardkonforme .ini-Datei sieht folgenderma&szlig;en aus:
+<i>[SektionsName]
+Schl&uuml;ssel=Wert</i>
+
+Wenn die Datei nicht existiert, wird sie erstellt. Verzeichnisse, die nicht existieren, werden nicht angelegt. Schl&uuml;ssel und/oder Sektionen werden am Ende angeh&auml;ngt und in keiner Weise sortiert.
+Wenn ein Wert in Anf&uuml;hrungszeichen angegeben wird, so werden die Anf&uuml;hrungszeichen entfernt. Wenn die Anf&uuml;hrungszeichen ausgegeben werden sollen, so m&uuml;ssen sie gedoppelt werden, z.B.: ""Dies ist ein Test"" ergibt in der Datei "Dies ist ein Test".
+Voranstehende und nachfolgende Leerzeichen werden entfernt. Um die Leerzeichen beizubehalten, muss der String in Anf&uuml;hrungszeichen gesetzt werden. Beispiel: "    Dies ist ein Test" wird die Leerzeichen erhalten. Jedoch werden die Anf&uuml;hrungszeichen entfernt.
+Mehrzeilige Werte sind nicht m&ouml;glich.
+
+
+###Related###
+IniDelete, IniRead, IniReadSection, IniReadSectionNames, IniWriteSection, IniRenameSection
+
+
+###Example###
+@@IncludeExample@@

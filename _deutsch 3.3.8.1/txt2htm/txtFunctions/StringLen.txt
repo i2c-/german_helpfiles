@@ -1,0 +1,29 @@
+###Function###
+StringLen
+
+###Description###
+Gibt die Anzahl der Zeichen in einem String (die L&auml;nge) zur&uuml;ck. 
+
+###Syntax###
+StringLen ( "string" ) 
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der auszuwertende String.
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl der Zeichen des Strings zur&uuml;ck (L&auml;nge).
+ 
+
+###Remarks###
+Ein numerischer Ausdruck wird automatisch in einen String umgewandelt.
+
+###Related###
+StringInStr, StringLeft, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

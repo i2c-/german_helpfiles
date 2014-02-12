@@ -1,0 +1,39 @@
+###User Defined Function###
+_Date_Time_EncodeFileTime
+
+###Description###
+Enkodiert und gibt eine $tagFILETIME Struktur zur&uuml;ck
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_EncodeFileTime($iMonth, $iDay, $iYear [, $iHour = 0 [, $iMinute = 0 [, $iSecond = 0 [, $iMSeconds = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$iMonth
+	Monat
+$iDay
+	Tag
+$iYear
+	Jahr
+$iHour
+	[optional] Stunden
+$iMinute
+	[optional] Minuten
+$iSecond
+	[optional] Sekunden
+$iMSeconds
+	[optional] Millisekunden
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagFILETIME Struktur zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_EncodeSystemTime, $tagFILETIME
+
+###Example###
+@@IncludeExample@@

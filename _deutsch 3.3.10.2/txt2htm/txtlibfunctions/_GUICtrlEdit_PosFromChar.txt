@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlEdit_PosFromChar
+
+###Description###
+Ermittelt die Fensterkoordinaten von einem festgelegten Zeichen in einem Edit-Control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_PosFromChar ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	Der 0-basierende Index des Zeichens
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - die horizontale Koordinate
+	[1] - die vertikale Koordinate
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

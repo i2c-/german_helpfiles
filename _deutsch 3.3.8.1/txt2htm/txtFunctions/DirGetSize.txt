@@ -1,0 +1,43 @@
+###Function###
+DirGetSize
+
+###Description###
+Gibt die Gr&ouml;&szlig;e eines Verzeichnisses in Bytes zur&uuml;ck.
+
+###Syntax###
+DirGetSize ( "path" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Der Pfad des zu untersuchenden Verzeichnisses, z.B. "C:\Windows".
+flag
+	[optional] Dieses Flag bestimmt das Verhalten und Ergebnis der Funktion und kann eine Kombination der folgenden Werte sein:
+	0 = (Standard)
+	1 = aktiviert den erweiterten Modus ("Extended mode") -> Es wird ein Array zur&uuml;ckgegeben, das weitere Informationen enth&auml;lt (siehe Bemerkungen).
+	2 = beziehe Dateien in Unterverzeichnissen nicht mit ein (der Rekursivmodus ist aus).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Gr&ouml;&szlig;e >= 0 zur&uuml;ck.
+Fehler:	Gibt -1 zur&uuml;ck und setzt @error auf 1, wenn der Pfad nicht existiert.
+@@End@@
+
+
+###Remarks###
+Wenn das Skript pausiert wird, wird auch diese Funktion unterbrochen und erst fortgef&uuml;hrt, wenn auch das Skript wieder l&auml;uft!
+
+Wenn man den erweiterten Modus verwendet, wird ein 1-dimensionales Array mit folgenden Elementen zur&uuml;ckgegeben:
+$array[0] = Gr&ouml;&szlig;e
+$array[1] = Anzahl der Dateien
+$array[2] = Anzahl der Verzeichnisse
+
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

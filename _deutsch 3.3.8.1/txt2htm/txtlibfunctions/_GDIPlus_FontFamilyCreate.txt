@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_FontFamilyCreate
+
+###Description###
+Erstellt ein Schriftenfamilien-Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_FontFamilyCreate($sFamily)
+
+###Parameters###
+@@ParamTable@@
+$sFamily
+	Name der Schriftfamilie
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Schriftenfamilien-Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit dem Schriftenfamilien-Objekt fertig ist, ist _GDIPlus_FontFamilyDispose aufzurufen, um die Ressourcen wieder freizugeben
+
+###Related###
+_GDIPlus_FontFamilyDispose
+
+###See Also###
+@@MsdnLink@@ GdipCreateFontFamilyFromName
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,47 @@
+###Function###
+FileCopy
+
+###Description###
+Kopiert eine oder mehrere Dateien.
+
+###Syntax###
+FileCopy ( "source", "dest" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+source
+	Das Quellverzeichnis der zu kopierenden Datei(en). Wildcards werden unterst&uuml;tzt.
+dest
+	Das Zielverzeichnis der zu kopierenden Datei(en).
+flag
+	[optional] Dieses Flag bestimmt, ob Dateien &uuml;berschrieben werden, falls sie schon bestehen.
+	Kann eine Kombination der folgenden sein:
+	 0 = (Standard) bestehende Dateien nicht &uuml;berschreiben
+	 1 = &Uuml;berschreiben bestehender Dateien
+	 8 = Erstellt die Zielverzeichnisstruktur, falls diese nicht besteht (Siehe Anmerkungen).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Das Zielverzeichnis muss bestehen, au&szlig;er der Flagwert '8' wird genutzt.
+Beispiel: Der kombinierte Flagwert '9' (1 + 8) &uuml;berschreibt das Zielverzeichnis und pr&uuml;ft vorher, ob die Zielverzeichnisstruktur besteht und erstellt sie gegebenenfalls automatisch.
+
+Siehe <a href="FileFindFirstFile.htm">FileFindFirstFile</a> f&uuml;r Erl&auml;uterungen zu Wildcards.
+
+Einige Dateiattribute k&ouml;nnen ein &Uuml;berschreiben unm&ouml;glich machen.
+
+
+###Related###
+FileMove, FileDelete, DirCopy, DirCreate
+
+
+###Example###
+@@IncludeExample@@

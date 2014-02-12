@@ -1,0 +1,30 @@
+###User Defined Function###
+_EventLog__Full
+
+###Description###
+Ermittelt, ob das Event Log voll ist
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Full($hEventLog)
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle des Event Log
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True: Event Log ist voll
+Fehler:	False: Event Log ist nicht voll
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_EventLog__Count, _EventLog__Oldest
+
+###Example###
+@@IncludeExample@@

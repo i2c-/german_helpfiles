@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUIToolTip_NewToolRect
+
+###Description###
+Setzt das neue begrenzende Rechteck f&uuml;r ein Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_NewToolRect($hWnd, $hTool, $iID, $iLeft, $iTop, $iRight, $iBottom)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster, welches das Tool enth&auml;lt
+$iID
+	Anwendungsbestimmte ID des Tools
+$iLeft
+	X-Koordinate der oberen linken Ecke des Rechtecks
+$iTop
+	Y-Koordinate der oberen linken Ecke des Rechtecks
+$iRight
+	X-Koordinate der unteren rechten Ecke des Rechtecks
+$iBottom
+	Y-Koordinate der unteren rechten Ecke des Rechtecks
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

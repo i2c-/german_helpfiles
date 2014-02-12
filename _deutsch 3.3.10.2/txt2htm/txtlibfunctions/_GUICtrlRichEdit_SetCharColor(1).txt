@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetCharColor
+
+###Description###
+Setzt die Farbe des markierten Textes. Falls keiner markiert ist, wird die Farbe des Textes beim Einf&uuml;gepunkt gesetzt.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetCharColor ( $hWnd [, $iColor] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iColor
+	[optional] eines der folgenden:
+	eine Zahl - ein COLORREF Wert
+	Default Schl&uuml;sselwort - die Systemfarbe (Standard)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	1022 - $iColor ist ung&uuml;ltig
+@@End@@
+
+
+###Remarks###
+Falls ein COLORREF-Wert von einem Farbarray erzeugt werden soll, so ist _ColorSetCOLORREF() anstatt _ColorSetRGB() zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetCharColor
+
+
+###See Also###
+@@MsdnLink@@ EM_SETCHARFORMAT
+
+
+###Example###
+@@IncludeExample@@

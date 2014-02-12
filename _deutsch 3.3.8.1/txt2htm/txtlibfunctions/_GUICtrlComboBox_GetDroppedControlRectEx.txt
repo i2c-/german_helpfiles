@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlComboBox_GetDroppedControlRectEx
+
+###Description###
+Ermittelt die Bildschirmkoordinaten einer Combobox in seinem aufgeklappten Zustand
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetDroppedControlRectEx($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagRECT Struktur welche die Bildschirmkoordinaten enth&auml;lt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetDroppedControlRect, $tagRECT
+
+###Example###
+@@IncludeExample@@

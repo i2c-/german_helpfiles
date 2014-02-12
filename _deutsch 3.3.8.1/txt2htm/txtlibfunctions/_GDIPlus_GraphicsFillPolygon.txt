@@ -1,0 +1,43 @@
+###User Defined Function###
+_GDIPlus_GraphicsFillPolygon
+
+###Description###
+Zeichnet und f&uuml;llt ein Polygon
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsFillPolygon($hGraphics, $aPoints [, $hBrush = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$aPoints
+	Array welches die Eckpunkte des Polygons festlegt:
+		[0][0] - Anzahl von Eckpunkten
+		[1][0] - Eckpunkt 1 X-Position
+		[1][1] - Eckpunkt 1 Y-Position
+		[2][0] - Eckpunkt 2 X-Position
+		[2][1] - Eckpunkt 2 Y-Position
+		[n][0] - Eckpunkt n X-Position
+		[n][1] - Eckpunkt n Y-Position
+$hBrush
+	[optional] Handle zu einem F&uuml;llmuster-Objekt der verwendet wird um das Objekt zu f&uuml;llen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipFillPolygonI
+
+###Example###
+@@IncludeExample@@

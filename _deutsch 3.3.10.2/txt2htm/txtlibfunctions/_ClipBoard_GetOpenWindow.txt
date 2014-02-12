@@ -1,0 +1,36 @@
+###User Defined Function###
+_ClipBoard_GetOpenWindow
+
+###Description###
+Gibt das Handle des Fensters zur&uuml;ck, das gerade die Zwischenablage ge&ouml;ffnet hat.
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_GetOpenWindow (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Fensters, das gerade die Zwischenablage ge&ouml;ffnet hat
+Fehler:	Null, falls kein Fenster die Zwischenablage ge&ouml;ffnet hat
+@@End@@
+
+
+###Remarks###
+Falls eine Applikation oder DLL beim Aufruf der Funktion <a href="_ClipBoard_Open.htm">_ClipBoard_Open()</a> das Handle eines "NULL-Fensters" spezifiziert, wird zwar die Zwischenablage ge&ouml;ffnet, sie ist aber mit keinem Fenster verbunden.
+In so einem Fall gibt  <a href="_ClipBoard_GetOpenWindow.htm">_ClipBoard_GetOpenWindow()</a> 0 zur&uuml;ck.
+
+
+###Related###
+_ClipBoard_GetOwner, _ClipBoard_Open
+
+
+###See Also###
+@@MsdnLink@@ GetOpenClipboardWindow
+
+
+###Example###
+@@IncludeExample@@

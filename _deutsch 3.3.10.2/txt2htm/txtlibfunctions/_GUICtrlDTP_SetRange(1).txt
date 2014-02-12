@@ -1,0 +1,50 @@
+###User Defined Function###
+_GUICtrlDTP_SetRange
+
+###Description###
+Setzt den aktuellen minimalen und maximalen zugelassenen Bereich f&uuml;r die Systemzeit
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_SetRange ( $hWnd, ByRef $aRange )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$aRange
+	Array formatiert wie folgt:
+		[ 0] - True falls die minimalen Daten gesetzt werden sollen, andernfalls False
+		[ 1] - minimales Jahr
+		[ 2] - minimaler Monat
+		[ 3] - minimaler Tag
+		[ 4] - minimale Stunde
+		[ 5] - minimale Minute
+		[ 6] - minimale Sekunde
+		[ 7] - True falls die maximalen Daten gesetzt werden sollen, andernfalls False
+		[ 8] - maximales Jahr
+		[ 9] - maximaler Monat
+		[10] - maximaler Tag
+		[11] - maximale Stunde
+		[12] - maximale Minute
+		[13] - maximale Sekunde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlDTP_GetRange
+
+
+###Example###
+@@IncludeExample@@

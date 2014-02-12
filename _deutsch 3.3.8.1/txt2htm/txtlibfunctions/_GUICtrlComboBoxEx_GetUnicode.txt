@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetUnicode
+
+###Description###
+Ermittelt, ob das Control Unicode verwendet
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetUnicode($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	es wird Unicode verwendet
+False:	es wird kein Unicode verwendet
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_SetUnicode
+
+###Example###
+@@IncludeExample@@

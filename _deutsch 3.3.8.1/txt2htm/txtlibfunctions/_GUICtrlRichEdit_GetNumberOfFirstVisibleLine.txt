@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetNumberOfFirstVisibleLine
+
+###Description###
+Ermittelt die Nummer der ersten sichtbaren Zeile in dem Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetNumberOfFirstVisibleLine($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zeilennummer (1-basierend)
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Die erste Zeile hei&szlig;t 1
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EM_GETFIRSTVISIBLELINE
+
+###Example###
+@@IncludeExample@@

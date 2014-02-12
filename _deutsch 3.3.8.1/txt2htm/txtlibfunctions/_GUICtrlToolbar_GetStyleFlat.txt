@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetStyleFlat
+
+###Description###
+Zeigt an, ob das Control flach ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetStyleFlat($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	Der flache Stil wird verwendet
+False:	Der flache Stil wird nicht verwendet
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetStyleFlat
+
+###Example###
+@@IncludeExample@@

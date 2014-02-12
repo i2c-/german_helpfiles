@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_MapIDToIndex
+
+###Description###
+Bildet die ID eines Items als Index ab
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_MapIDToIndex ( $hWnd, $iID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iID
+	ID des Items
+@@End@@
+
+###ReturnValue###
+Gibt den aktuellen Index zur&uuml;ck
+
+
+###Remarks###
+ListView-Controls erfassen Items intern durch einen Index.
+Dies kann Probleme verursachen, weil sich Indizes &auml;ndern k&ouml;nnen.
+
+Das ListView-Control kann ein Item mit einer ID kennzeichnen, wenn das Item erstellt wird.
+Diese ID kann verwendet werden, um die Eindeutigkeit w&auml;hrend der Laufzeit des Controls zu garantieren.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_MapIndexToID
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,42 @@
+###Function###
+FileFindFirstFile
+
+###Description###
+Gibt einen den angegebenen Suchkriterien entsprechenden Dateinamen zur&uuml;ck.
+
+###Syntax###
+FileFindFirstFile ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Suchkriterienstring (die Wildcards <b>*</b> und <b>?</b> werden akzeptiert)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Such-"Handle" zur&uuml;ck, das f&uuml;r folgende Funktionen FileFindNextFile benutzt werden kann.
+Fehler:	Gibt -1 zur&uuml;ck, wenn ein Fehler aufgetreten ist. Wenn der Ordner leer ist, wird @error auf 1 gesetzt.
+@@End@@
+
+
+###Remarks###
+Die Suche unterscheidet nicht zwischen Gro&szlig;- und Kleinschreibung.
+Wildcards: Im allgemeinen bezeichnet <b>*</b> null oder mehr Zeichen,  <b>?</b> null oder ein Zeichen. Falls das Suchkriterium nur Wildcards enth&auml;lt (oder "*.*" ist), ist das untere Beispiel f&uuml;r den R&uuml;ckgabewert hilfreich!
+
+Es kann nur eine Wildcard im Teil des Dateinamens oder der Endung verwendet werden, z. B. a*.b?.
+?? scheint die gleiche Funktion wie * zu haben (in der Dokumentation von Microsoft nicht beschrieben).
+Wenn eine 3 Zeichen lange Endung verwendet wird, passt jede mit diesen 3 Zeichen beginnende Endung, z.B. passt "test.log_1" bei "*.log". (in der Dokumentation von Microsoft auch nicht beschrieben).
+
+Wenn die Suche mit den FileFind...-Funktionen beendet wurde, muss FileClose() aufrufen werden, um das Suchhandle wieder freizugeben.
+
+Verzeichnisnamen werden entsprechend den eventuell verwendeten Wildcards zur&uuml;ckgegeben.
+
+###Related###
+FileClose, FileFindNextFile
+
+
+###Example###
+@@IncludeExample@@
+

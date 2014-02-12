@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlRichEdit_Redo
+
+###Description###
+Wiederholt die letzte r&uuml;ckg&auml;ngig gemachte Aktion
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_Redo($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_CanRedo, _GUICtrlRichEdit_GetNextRedo, _GUICtrlRichEdit_EmptyUndoBuffer, _GUICtrlRichEdit_SetUndoLimit
+
+###See Also###
+@@MsdnLink@@ EM_REDO
+
+###Example###
+@@IncludeExample@@

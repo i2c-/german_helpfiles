@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlRebar_SetBandStyleUseChevron
+
+###Description###
+Legt fest, ob ein Dropdown Button angezeigt werden soll.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_SetBandStyleUseChevron ( $hWnd, $iIndex [, $fEnabled = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+$fEnabled
+	[optional] Falls True wird der Itemstatus gesetzt, sonst nicht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Version 5.80. Zeigt einen "Chevron-Button" [>>] falls die Gruppe kleiner ist als cxIdeal (Ideale Breite der Gruppe, in Pixel).
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_GetBandStyleUseChevron, _GUICtrlRebar_SetBandStyle
+
+
+###Example###
+@@IncludeExample@@

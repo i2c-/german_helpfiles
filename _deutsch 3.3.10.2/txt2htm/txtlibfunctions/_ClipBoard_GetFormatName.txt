@@ -1,0 +1,37 @@
+###User Defined Function###
+_ClipBoard_GetFormatName
+
+###Description###
+Gibt den Namen des angegebenen registrierten Formats zur&uuml;ck.
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_GetFormatName ( $iFormat )
+
+
+###Parameters###
+@@ParamTable@@
+$iFormat
+	Gibt den Typ des Formats an, das ausgelesen werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Formatname
+Fehler:	Leerer String
+@@End@@
+
+
+###Remarks###
+Der Parameter $iFormat darf keines der vorgegebenen Zwischenablageformate angeben.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetClipboardFormatNameA
+
+
+###Example###
+@@IncludeExample@@

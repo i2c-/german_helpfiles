@@ -1,0 +1,35 @@
+###Function###
+FileFindNextFile
+
+###Description###
+Gibt einen Dateinamen entsprechend eines fr&uuml;heren Aufrufes von FileFindFirstFile zur&uuml;ck.
+
+###Syntax###
+FileFindNextFile ( search )
+
+
+###Parameters###
+@@ParamTable@@
+search
+	Das Suchhandle, wie es von FileFindFirstFile zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen Dateinamen entsprechend eines fr&uuml;heren Aufrufes von FileFindFirstFile zur&uuml;ck. @extended wird auf 1 gesetzt, falls der Dateiname ein Verzeichnis ist.
+Fehler:	Setzt @error auf 1, wenn keine weiteren Dateien/Verzeichnisse den Suchkriterien entsprechen.
+@@End@@
+
+
+###Remarks###
+Ein vorheriger Aufruf von FileFindFirstFile ist n&ouml;tig, um das Suchhandle zu bekommen. Jeder folgende Aufruf von FileFindNextFile gibt die jeweils n&auml;chste Datei zur&uuml;ck, die den Suchkriterien aus FileFindFirstFile entspricht. Wenn @error = 1 ist, passen keine weiteren Dateien auf die Suche.
+
+Wenn die Suche mit den FileFind...-Funktionen beendet wurden, muss FileClose() aufrufen werden, um das Suchhandle wieder freizugeben.
+
+
+###Related###
+FileClose, FileFindFirstFile
+
+
+###Example###
+@@IncludeExample@@

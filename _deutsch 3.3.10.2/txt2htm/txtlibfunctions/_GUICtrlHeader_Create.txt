@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlHeader_Create
+
+###Description###
+Erstellt ein Header-Control
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_Create ( $hWnd [, $iStyle = 0x00000046] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Parent- oder Eigner-Fenster
+$iStyle
+	[optional] Controlstile:
+		$HDS_BUTTONS - Jedes Item in dem Control sieht aus und verh&auml;lt sich wie ein Push-Button
+		$HDS_DRAGDROP - Erlaubt durch Drag-and-Drop das Neuordnen der Headereintr&auml;ge
+		$HDS_FILTERBAR - Schlie&szlig;t eine Filterleiste als einen Teil des Standard-Header-Controls ein
+		$HDS_FLAT - Bewirkt, dass das Header-Control flach gezeichnet wird
+		$HDS_FULLDRAG - Bewirkt, dass das Header-Control den Inhalt der Spalten anzeigt
+		$HDS_HIDDEN - Zeigt ein Header-Control an, das versteckt ist
+		$HDS_HORZ - Erstellt ein Header-Control mit einer horizontalen Ausrichtung
+		$HDS_HOTTRACK - Aktiviert grafische R&uuml;ckmeldungen der Headereintr&auml;ge, wenn die Maus dar&uuml;ber bewegt wird (hot tracking)
+		Standard: $HDS_BUTTONS, $HDS_HOTTRACK, $HDS_DRAGDROP
+		Erzwungen: $WS_CHILD, $WS_VISIBLE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Header-Controls
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_Destroy
+
+
+###Example###
+@@IncludeExample@@

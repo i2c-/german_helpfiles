@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_MulDiv
+
+###Description###
+Multipliziert zwei 32-bit Werte und teilt dann das 64-bit Ergebnis durch einen dritten 32-bit Wert
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MulDiv($iNumber, $iNumerator, $iDenominator)
+
+###Parameters###
+@@ParamTable@@
+$iNumber
+	Legt den Multiplikand fest
+$iNumerator
+	Legt den Multiplikator fest
+$iDenominator
+	legt die Zahl fest, durch die das Ergebnis der Multiplikation geteilt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Ergebnis der Multiplikation und Division
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ MulDiv

@@ -1,0 +1,42 @@
+###User Defined Function###
+_WordErrorHandlerRegister
+
+###Description###
+Registriert und aktiviert einen benutzereigenen COM Errorhandler
+
+###Syntax###
+#include <Word.au3> 
+_WordErrorHandlerRegister([$s_functionName = "__WordInternalErrorHandler"])
+
+###Parameters###
+@@ParamTable@@
+$s_functionName
+	[optional] Stringvariable mit dem Namen des benutzereigenen COM Errorhandlers, Standardwert ist der interne COM Errorhandler dieser UDF
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = Allgemeiner Fehler
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wichtig: Wenn ein eigener Errorhandler verwendet wird, <b>MUSS</b> die Variable f&uuml;r das Error Objekt $oWordErrorHandler hei&szlig;en (Siehe Beispiel).
+
+AutoIt erlaubt es, COM Fehler abzufangen und mit Hilfe der ObjEvent-Funktion durch einen benutzereigenen Errorhandler zu behandeln. Dabei gibt es allerdings f&uuml;r Schreiber von UDF's zu beachten, das immer nur ein einziger COM Errorhandler aktiv sein kann. Wenn eine UDF einen COM Errorhandler benutzen will, muss sie zuerst den benutzereigenen COM Errorhandler deregistrieren, dann den eigenen Errorhandler registrierten und danach den benutzereigenen COM Errorhandler wieder aktivieren. Ungl&uuml;cklicherweise gibt es standardm&auml;&szlig;ig f&uuml;r die UDF keine Methode, auf den benutzereigenen Errorhandler zuzugreifen.
+
+Mit dieser Routine k&ouml;nnen benutzereigene COM Errorhandler registriert werden. Dabei kann die Word.au3 UDF den benutzereigenen Handler - wenn n&ouml;tig - problemlos entfernen und wieder aktivieren. Man kann entweder einen eigenen oder den standardm&auml;&szlig;igen Errorhandler der Word.au3 UDF verwenden. Falls man den standardm&auml;&szlig;igen Word.au3 Errorhandler benutzt, werden einige Diagnosemeldungen und globale Variablen mit Informationen &uuml;ber die abgefangenen Fehler an die Konsole gesandt.
+ 
+Wenn man einen eigenen COM Errorhandler ohne diese Routine realisiert, kann Word.au3 einige COM-Fehler nicht abfangen. In der Folge kann es dann zu pl&ouml;tzlichen Skriptabbr&uuml;chen kommen.
+
+
+###Related###
+_WordErrorHandlerDeRegister
+
+
+###Example###
+@@IncludeExample@@

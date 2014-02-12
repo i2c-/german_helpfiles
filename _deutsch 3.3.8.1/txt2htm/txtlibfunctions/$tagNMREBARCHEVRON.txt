@@ -1,0 +1,35 @@
+###Structure Name###
+$tagNMREBARCHEVRON
+
+###Description###
+Enth&auml;lt Informationen, die in der Behandlung von RBN_CHEVRONPUSHED Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMREBARCHEVRON = $tagNMHDR & ";uint uBand;uint wID;int lParam;int Left;int Top;int Right;int Bottom;int lParamNM"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+uBand
+	0-basierter Index der Gruppe, welche die Nachricht sendet
+wID
+	Anwendungsdefinierter Identifizierer der Gruppe
+lParam
+	Anwendungsdefinierter Wert, verkn&uuml;pft mit der Gruppe
+Left
+	Bestimmt die x-Koordinate der oberen-linken Ecke des Rechtecks
+Top
+	Bestimmt die y-Koordinate der oberen-linken Ecke des Rechtecks
+Right
+	Bestimmt die x-Koordinate der unteren-rechten Ecke des Rechtecks
+Bottom
+	Bestimmt die y-Koordinate der unteren-rechten Ecke des Rechtecks
+lParamNM
+	Ein anwendungsdefinierter Wert
+		Falls die $RBN_CHEVRONPUSHED Benachrichtigung als Ergebnis einer $RB_PUSHCHEVRON Nachricht gesendet wurde, enth&auml;lt dieses Mitglied den <b>lAppValue</b>-Wert der Nachricht.
+		Andernfalls ist es auf Null gesetzt.
+@@End@@
+
+###Remarks###
+Keine.

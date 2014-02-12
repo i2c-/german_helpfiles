@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListBox_GetCount
+
+###Description###
+Ermittelt die Anzahl an Items
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetCount ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Anzahl an Items in der Listbox
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

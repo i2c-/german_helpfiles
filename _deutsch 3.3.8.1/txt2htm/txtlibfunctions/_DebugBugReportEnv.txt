@@ -1,0 +1,27 @@
+###User Defined Function###
+_DebugBugReportEnv
+
+###Description###
+Gibt einen String aus, der Informationen f&uuml;r einen Fehlerbericht enth&auml;lt.
+
+###Syntax###
+#include <Debug.au3>
+_DebugBugReportEnv()
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt einen String zur&uuml;ck, der alle Informationen enth&auml;lt, die f&uuml;r einen Fehlerbericht ben&ouml;tigt werden.
+
+###Remarks###
+Muss verwendet werden, um einen Fehlerbericht zu erstellen.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###Function###
+ControlHide
+
+###Description###
+Versteckt ein Control.
+
+###Syntax###
+ControlHide ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn das Control nicht gefunden werden kann.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlShow, ControlCommand, ControlDisable, WinSetState
+
+
+###Example###
+@@IncludeExample@@

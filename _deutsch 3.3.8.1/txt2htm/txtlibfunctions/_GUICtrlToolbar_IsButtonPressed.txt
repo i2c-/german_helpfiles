@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonPressed
+
+###Description###
+Pr&uuml;ft, ob der Button geklickt ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonPressed($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+True:	Button ist gedr&uuml;ckt
+False:	Button ist nicht gedr&uuml;ckt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

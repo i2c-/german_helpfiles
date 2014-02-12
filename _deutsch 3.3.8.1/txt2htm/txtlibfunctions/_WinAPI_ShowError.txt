@@ -1,0 +1,28 @@
+###User Defined Function###
+_WinAPI_ShowError
+
+###Description###
+Zeigt eine "Error" MessageBox an mit optionalem Programmende
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_ShowError($sText [, $fExit = True])
+
+###Parameters###
+@@ParamTable@@
+$sText
+	Text, der angezeigt werden soll
+$fExit
+	[optional] Gibt an, ob das Programm danach beendet werden soll:
+		 True - beendet das Programm
+		False - kehrt zum Programm normal zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_ShowMsg, _WinAPI_MsgBox

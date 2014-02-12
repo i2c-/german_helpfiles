@@ -1,0 +1,36 @@
+###Function###
+SendKeepActive
+
+###Description###
+Versucht ein festgelegtes Fenster w&auml;hrend dem Send() aktiv zu halten.
+
+###Syntax###
+SendKeepActive ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des zu aktivierenden Fensters. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>. Es ist ein leerer Titel zu verwenden, um die Funktion zu deaktivieren.
+text
+	[optional] Der Text des Fensters.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck. 
+Fehler:	Gibt 0 zur&uuml;ck, falls das Fenster nicht gefunden wurde. 
+@@End@@
+
+
+###Remarks###
+Versucht w&auml;hrend den simulierten Tastendr&uuml;cken von Send() das aktive Fenster zur&uuml;ckzusetzen.
+
+
+###Related###
+Send
+
+
+###Example###
+@@IncludeExample@@

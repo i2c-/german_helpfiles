@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_MessageBeep
+
+###Description###
+Spielt eine WAV-Datei ab
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MessageBeep([$iType = 1])
+
+###Parameters###
+@@ParamTable@@
+$iType
+	[optional] Der Soundtyp, der mit dem entsprechenden Eintrag in der Registry verkn&uuml;pft ist. Dies kann einer der folgenden
+		Werte sein:
+		0 - Einfacher Beep. Ist keine Soundkarte verf&uuml;gbar, wird der Geh&auml;use-Lautsprecher benutzt.
+		1 - OK
+		2 - Hand
+		3 - Frage
+		4 - Ausruf
+		5 - Stern
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nachdem der Sound eingereiht wurde, gibt die MessageBeep Funktion die Kontrolle wieder an die aufrufende Funktion zur&uuml;ck und spielt den Sound
+asynchron ab. Kann die Funktion den angegebenen Alarmsound nicht abspielen, versucht MessageBeep den Standardsound des
+Systems abzuspielen. Sollte auch der Standardsound des Systems nicht abgespielt werden k&ouml;nnen, erzeugt die Funktion einen Standard-Beep-Sound
+durch den Geh&auml;use-Lautsprecher des Computers.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ MessageBeep

@@ -1,0 +1,41 @@
+###User Defined Function###
+_WinNet_DisconnectDialog1
+
+###Description###
+&Ouml;ffnet eine einfache Browser Dialogbox f&uuml;r das Trennen von Netzwerk-Ressourcen
+
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_DisconnectDialog1($hWnd, $sLocalName [, $sRemoteName = "" [, $iFlags = 1]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem &uuml;bergeordneten Fenster der Dialogbox
+$sLocalName
+	Name eines lokalen Ger&auml;tes, wie z.B. "F:" oder "LPT1"
+$sRemoteName
+	[optional] Name der Netzwerk-Ressource, die getrennt werden soll. Dieser Wert kann 0 sein, wenn sLocalName angegeben wird.
+		Ist sLocalName angegeben, wird die Verbindung zu der Netzwerk-Ressource, die von sLocalName umgeleitet wurde, getrennt.
+$iFlags
+	[optional] Flags beschreiben die Verbindung. Kann eine Kombination der folgenden sein:
+		1 - Wird dieser Wert gesetzt, ist die angegebene Verbindung nicht l&auml;nger eine dauerhafte Verbindung. Dieses Flag ist nur g&uuml;ltig, wenn
+		sLocalName ein lokales Ger&auml;t spezifiziert.
+		2 - Wenn dieser Wert NICHT gesetzt ist, wird das System das Trennen erzwingen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck. Falls der Benutzer die Dialogbox abbricht ist der R&uuml;ckgabewert -1.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_DisconnectDialog
+
+###See Also###
+@@MsdnLink@@ WNetDisconnectDialog1

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_SetHotImageList
+
+###Description###
+Setzt die "hot" Button Imagelist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetHotImageList ( $hWnd, $hImageList )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hImageList
+	Handle der zu setzenden Imagelist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu der vorherigen Imagelist, die f&uuml;r die Darstellung von "hot" Buttons verwendet wird
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetHotImageList
+
+
+###Example###
+@@IncludeExample@@

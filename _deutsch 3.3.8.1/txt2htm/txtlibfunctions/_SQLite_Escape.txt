@@ -1,0 +1,37 @@
+###User Defined Function###
+_SQLite_Escape
+
+###Description###
+Escaped einen String oder eine Nummer, um als TEXT in SQLite-Befehlen verwendet werden zu k&ouml;nnen.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Escape($sString)
+
+
+###Parameters###
+@@ParamTable@@
+$sString
+	Der String, der escaped werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den escapten String zur&uuml;ck
+Fehler:	Gibt einen leeren String zur&uuml;ck und setzt @error
+@error:	1 - Fehler beim aufrufen von SQLite API 'sqlite3_mprintf'
+	2 - Fehler beim konvertieren des Strings in UTF-8
+	3 - Fehler beim lesen des escapten Strings
+@@End@@
+
+###Remarks###
+Der String wird dahingehend angepasst, dass er in einfachen Anf&uuml;hrungszeichen verwendet werden kann.
+Zum Beispiel w&uuml;rde "It's a fine day" so aussehen: "'It''s a fine day'"
+F&uuml;r bin&auml;re Daten ist _SQLite_Encode() zu benutzen.
+F&uuml;r numerische Werte, die als solche gespeichert werden sollen, sind einfache Verkettungen zu verwenden.
+
+###Related###
+_SQLite_Encode
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+EnvSet
+
+###Description###
+Setzt den Wert einer Umgebungsvariablen.
+
+###Syntax###
+EnvSet ( "envvariable" [, "value"] )
+
+
+###Parameters###
+@@ParamTable@@
+envvariable
+	Name der Umgebungsvariable, die gesetzt werden soll.
+value
+	[optional] Wert, auf den die Umgebungsvariable gesetzt werden soll. Wenn kein Wert angegeben wird, wird die Umgebungsvariable gel&ouml;scht. 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen Wert ungleich 0 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Eine Umgebungsvariable, die auf diese Weise gesetzt wird, ist nur von Programmen nutzbar, die aus AutoIt heraus gestartet wurden (mittels Run oder RunWait). Sobald AutoIt beendet wird, existieren die Umgebungsvariablen nicht mehr.
+
+###Related###
+EnvGet, EnvUpdate
+
+
+###Example###
+@@IncludeExample@@

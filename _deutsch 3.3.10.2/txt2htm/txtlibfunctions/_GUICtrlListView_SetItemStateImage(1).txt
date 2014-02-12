@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_SetItemStateImage
+
+###Description###
+Setzt das darzustellende Statusbild
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemStateImage ( $hWnd, $iIndex, $iImage )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iImage
+	1-basierender overlay Bilderindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemStateImage
+
+
+###Example###
+@@IncludeExample@@

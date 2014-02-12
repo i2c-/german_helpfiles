@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlSlider_SetToolTips
+
+###Description###
+Weist ein ToolTip-Control einem Slider-Control zu
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetToolTips ( $hWnd, $hWndTT )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hWndTT
+	Handle zu einem bestehenden ToolTip-Control
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Wenn ein Slider-Control mit dem Stil $TBS_TOOLTIPS erstellt wird, wird ein Standard ToolTip-Control erstellt, welches rechts neben dem Slider erscheint und die aktuelle Position des Sliders darstellt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_GetToolTips
+
+
+###Example###
+@@IncludeExample@@

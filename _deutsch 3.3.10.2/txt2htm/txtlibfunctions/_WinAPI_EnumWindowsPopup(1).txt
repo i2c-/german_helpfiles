@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_EnumWindowsPopup
+
+###Description###
+Listet alle Popup Fenster auf (Kontextmen&uuml;s)
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_EnumWindowsPopup (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck
+	[0][0] - Anzahl der Reihen im Array (n)
+	[1][0] - Fensterhandle
+	[1][1] - Fensterklassenname
+	[n][0] - Fensterhandle
+	[n][1] - Fensterklassenname
+
+
+###Remarks###
+Popups sind Kontextmen&uuml;s.
+
+
+###Related###
+_WinAPI_EnumWindows, _WinAPI_EnumWindowsTop
+
+
+###Example###
+@@IncludeExample@@

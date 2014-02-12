@@ -1,0 +1,36 @@
+###Function###
+GUICtrlSendToDummy
+
+###Description###
+Sendet eine Nachricht an ein Dummy-Control.
+
+###Syntax###
+GUICtrlSendToDummy ( controlID [, state] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer  <a href="GUICtrlCreateDummy.htm">GUICtrlCreateDummy</a> Funktion zur&uuml;ckgegeben.
+state
+	[optional] Ein Wert, der sp&auml;ter von <a href="GUICtrlRead.htm">GUICtrlRead</a> zur&uuml;ckgeholt werden kann.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Wenn diese Funktion aufgerufen wird, wird eine Benachrichtigung produziert, die von der Nachrichtenschleife (message loop) oder mit einer <a href="GUICtrlSetOnEvent.htm">OnEvent</a> Funktion behandelt werden kann (so, als ob auf das Control geklickt worden w&auml;re).
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateDummy, GUICtrlSetOnEvent, GUICtrlRead
+
+
+###Example###
+@@IncludeExample@@

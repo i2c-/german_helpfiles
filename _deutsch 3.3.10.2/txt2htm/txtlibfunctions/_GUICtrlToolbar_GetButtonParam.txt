@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlToolbar_GetButtonParam
+
+###Description###
+Ermittelt die Parameterwerte eines Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetButtonParam ( $hWnd, $iCommandID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+Gibt einen anwendungsspezifischen Wert zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_SetButtonParam
+
+
+###Example###
+@@IncludeExample@@

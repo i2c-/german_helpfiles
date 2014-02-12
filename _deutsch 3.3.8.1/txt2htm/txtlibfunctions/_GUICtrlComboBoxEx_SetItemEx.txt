@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetItemEx
+
+###Description###
+Setzt manche oder alle Attribute eines Items
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetItemEx($hWnd, ByRef $tItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$tItem
+	$tagCOMBOBOXEXITEM Struktur
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Um die Attribute eines Items zu setzen, ist das Item Member der $tagCOMBOBOXEXITEM Struktur auf den Index des Items zu setzen.
+F&uuml;r ein Item kann man das Bild, ausgew&auml;hlte Bild Overlay Bild, Ident und Parameter Members der $tagCOMBOBOXEXITEM Struktur setzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_GetItemEx, _GUICtrlComboBoxEx_SetItem, $tagCOMBOBOXEXITEM
+
+###Example###
+@@IncludeExample@@

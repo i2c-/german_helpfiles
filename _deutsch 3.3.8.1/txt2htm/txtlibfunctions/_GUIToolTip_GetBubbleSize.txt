@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUIToolTip_GetBubbleSize
+
+###Description###
+Gibt die Breite und H&ouml;he des Controls zur&uuml;ck
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetBubbleSize($hWnd, $hTool, $iID [, $iFlags = 0x000000A0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster, welches das Tool enth&auml;lt
+$iID
+	ID des Tools
+$iFlags
+	[optional] Flags welches die Darstellung des ToolTips regelt
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt die Breite des ToolTips in "High-Order-Word" und die H&ouml;he in "Low-Order-Word" zur&uuml;ck.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetBubbleHeight, _GUIToolTip_GetBubbleWidth

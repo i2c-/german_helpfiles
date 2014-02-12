@@ -1,0 +1,48 @@
+###Function###
+BitRotate
+
+###Description###
+F&uuml;hrt eine Bit-Shift Operation mit Wechsel durch.
+
+###Syntax###
+BitRotate ( value [, shift = 1 [, size = "W"]] )
+
+
+###Parameters###
+@@ParamTable@@
+value
+	Die Zahl f&uuml;r die Operation.
+shift
+	[optional] Anzahl der Bits die nach links gewechselt werden soll (negative Zahlen verschieben nach rechts).  Wird nichts angegeben ist der Standard 1.
+size
+	[optional] Ein String, die die Wechselgr&ouml;&szlig;e festlegt, Standard ist (16 Bits). Siehe unten.
+@@End@@
+
+Size parameter :
+@@ParamTable@@
+"B"
+	wechselt Bits innerhalb des niederwertigen Byte (8 bits).
+"W"
+	wechselt Bits innerhalb des niederwertigen Word (16 bits).
+"D"
+	wechselt Bits innerhalb des gesamten double-word (32 bits).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Wert gewechselt mit der erforderlichen Anzahl an Bits.
+Fehler:	Setzt @error auf nicht null wenn die Gr&ouml;&szlig;e ung&uuml;ltig ist.    
+@@End@@
+Bit Operationen werden als 32-bit Integer ausgef&uuml;hrt.
+
+
+###Remarks###
+Es k&ouml;nnen auch HEX-Ausdr&uuml;cke als Parameter verwendet werden.
+
+
+###Related###
+BitShift, BitAND, BitNOT, BitOR, BitXOR, Hex
+
+
+###Example###
+@@IncludeExample@@

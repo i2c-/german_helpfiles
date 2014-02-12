@@ -1,0 +1,36 @@
+###User Defined Function###
+_IEBodyReadHTML
+
+###Description###
+Gibt den HTML-Code innerhalb des <body>-Tags des Dokumentes zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IEBodyReadHTML(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, Window- oder Frame-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den HTML-Code innerhalb des <body>-Tags des Dokumentes zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+@Extended:	Nummer des ung&uuml;ltigen Parameters.
+@@End@@
+
+
+###Remarks###
+Diese Funktion verwendet die Eigenschaft .innerHTML des Body-Teils des Dokumentes.  .innerHTML ist f&uuml;r fast alle DOM-Elemente mittels _IEPropertyGet auslesbar.
+
+
+###Related###
+_IEBodyReadText, _IEBodyWriteHTML, _IEPropertyGet, _IEDocInsertHTML, _IEDocInsertText, _IEDocReadHTML
+
+
+###Example###
+@@IncludeExample@@

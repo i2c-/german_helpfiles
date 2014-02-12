@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlSlider_GetPos
+
+###Description###
+Ermittelt die logische Position des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetPos($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die aktuelle logische Position des Sliders
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetPos
+
+###Example###
+@@IncludeExample@@

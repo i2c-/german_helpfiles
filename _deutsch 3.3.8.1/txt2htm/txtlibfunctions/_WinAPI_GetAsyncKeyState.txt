@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetAsyncKeyState
+
+###Description###
+Ermittelt ob eine Tastaturtaste zur Zeit des Funktionsaufrufs gedr&uuml;ckt ist oder nicht
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetAsyncKeyState($iKey)
+
+###Parameters###
+@@ParamTable@@
+$iKey
+	Taste die gepr&uuml;ft werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ist das h&ouml;chste und das niedrigste Bit gesetzt (-32767=0x8001), ist die Taste nach vorigem Aufruf der 
+	Funktion gedr&uuml;ckt worden.
+Fehler:	0 wenn ein Fenster eines anderen Threads oder Prozesses den Tastaturfokus hat.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetAsyncKeyState

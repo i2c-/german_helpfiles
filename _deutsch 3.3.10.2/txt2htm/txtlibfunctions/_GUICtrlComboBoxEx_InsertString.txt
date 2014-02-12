@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_InsertString
+
+###Description###
+F&uuml;gt ein neues Item in das Control ein
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_InsertString ( $hWnd, $sText [, $iIndex = 0 [, $iImage = -1 [, $iSelectedImage = -1 [, $iOverlayImage = -1 [, $iIndent = -1 [, $iParam = -1]]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Itemtext. Falls auf -1 gesetzt, wird das Item durch die $CBEN_GETDISPINFO Nachricht gesetzt.
+$iIndex
+	[optional] 0-basierender Index wo der neue String eingef&uuml;gt werden soll.
+	Um einen String an das Ende der Liste einzuf&uuml;gen, ist $iIndex auf -1 zu setzen
+$iImage
+	[optional] 0-basierender Index des Icons des Items in der Imagelist des Controls
+$iSelectedImage
+	[optional] 0-basierender Index des Icons des Items in der Imagelist des Controls
+$iOverlayImage
+	[optional] 0-basierender Index des Icons des Items in der Imagelist des Controls
+$iIndent
+	[optional] Anzahl von Bilderbreiten um die das Item einger&uuml;ckt werden soll. Eine einfache Einr&uuml;ckung entspricht eine Breites eines Bildes.
+$iParam
+	[optional] Wert der das Item festlegt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des neuen Items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_InitStorage
+
+
+###Example###
+@@IncludeExample@@

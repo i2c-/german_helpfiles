@@ -1,0 +1,54 @@
+###User Defined Function###
+_EventLog__Report
+
+###Description###
+Schreibt einen angegebenen Eintrag an das Ende des Logfiles
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Report($hEventLog, $iType, $iCategory, $iEventID, $sUserName, $sDesc, $aData)
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Der Handle eines Event-Logs. Bis Windows XP SP2 gibt es keinen Handle zum Security Log 
+$iType
+	Event-Typen. Dies sind m&ouml;gliche R&uuml;ckgabewerte:
+		 0  - Erfolg
+		 1  - Fehler
+		 2  - Warnung
+		 4  - Information
+		 8  - Erfolgskontrolle
+		 16 - Fehlerkontrolle
+$iCategory
+	Die Event-Kategorieen. Dies sind quellenspezifische Informationen der Kategorie, die jeden Wert haben k&ouml;nnen.
+$iEventID
+	Die Event-Kennung.	Die Event-Kennung spezifiziert den Eintrag im Event-File mit dem dazugeh&ouml;rigen Event-Code
+$sUserName
+	Benutzername f&uuml;r den Event.  Dieser kann leer bleiben, um anzudeuten, dass kein Name vergeben wurde.
+$sDesc
+	Event-Beschreibung
+$aData
+	Das Array ist wie folgt formatiert:
+		[0] - Anzahl der Bytes im Array
+		[1] - Byte 1
+		[2] - Byte 2
+		[n] - Byte n
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion wird dazu genutzt, um ein Ereignis (Event) zu loggen. Ein Eintrag wird an das Ende des konfigurierten Logs anhand des
+hEventLog-Parameter geschrieben. Die Funktion merkt sich die Zeit, die Eintragsl&auml;nge und den Offset, bevor die Eintr&auml;ge
+in das Logfile geschrieben werden.
+
+###Related###
+_EventLog__Close, _EventLog__Open
+
+###Example###
+@@IncludeExample@@

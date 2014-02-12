@@ -1,0 +1,44 @@
+###Function###
+DllStructSetData
+
+###Description###
+Setzt Daten in einem Element der Struktur.
+
+###Syntax###
+DllStructSetData ( Struct, Element, value [, index] )
+
+
+###Parameters###
+@@ParamTable@@
+Struct
+	Struktur, zur&uuml;ckgegeben von DllStructCreate.
+Element
+	Das Element in der Struktur, auf das man zugreifen m&ouml;chte (beginnend bei 1) oder der Elementname, wie er mit DllStructCreate festgelegt wurde.
+value
+	Der neue Wert, der in die Struktur geschrieben werden soll.
+index
+	[optional] Befinden sich die Elemente in einem Array, so legt dies den 1-basierenden Index des zu erneuernenden Arrays fest. Falls dies nicht angegeben wird oder das Schl&uuml;sselwort Default verwendet wird, so wird bei Index 1 angefangen (n&uuml;tzlich f&uuml;r String die schnell erneuert werden sollten). <b>Nicht f&uuml;r nicht-Array Elemente.</b>
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der gesetzte Wert, der aus der Struktur zur&uuml;ckgelesen wird.
+Fehler:	0.
+@Error:	0 = Kein Fehler.
+	1 = Struct ist keine korrekte, von DllStructCreate zur&uuml;ckgegebene Struktur.
+	2 = Element-Wert nicht im zul&auml;ssigen Bereich.
+	3 = Index w&uuml;rde au&szlig;erhalb der Struktur sein.
+	4 = Element Datentyp unbekannt.
+	5 = Index <= 0.
+@@End@@
+
+
+###Remarks###
+Wenn das Element ein char[n], byte[n] oder ubyte[n] ist, kann der Datentyp ein Zeichenstring sein, andernfalls muss es eine Zahl sein.
+
+###Related###
+DllStructCreate, DllStructGetData, DllStructGetSize
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlTreeView_GetScrollTime
+
+###Description###
+Ermittelt die maximale Scrollzeit
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetScrollTime($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die maximale Scrollzeit in Millisekunden zur&uuml;ck
+
+###Remarks###
+Die maximale Scrollzeit ist die gr&ouml;&szlig;te Zeit die eine Scrolloperation ben&ouml;tigen kann.
+Das Scrollen ist so eingestellt, dass der Scroll innerhalb einer maximalen Scrollzeit durchgef&uuml;hrt wird.
+Eine Scrolloperation k&ouml;nnte auch weniger Zeit in Anspruch nehmen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_SetScrollTime
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,52 @@
+###User Defined Function###
+_WordQuit
+
+###Description###
+Schlie&szlig;t das Fenster und entfernt die Objektreferenz dazu
+
+###Syntax###
+#include <Word.au3> 
+_WordQuit(ByRef $o_object [, $i_SaveChanges = -2 [, $i_OriginalFormat = 1 [, $b_RouteDocument = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines Word.Application Objektes
+$i_SaveChanges
+	[optional] legt die Speicheraktion f&uuml;r das Dokument fest
+	0 = speichert &Auml;nderungen nicht
+	-1 = speichert &Auml;nderungen
+	-2 = (Standard) Zeigt einen Dialog zum Speichern der &Auml;nderungen an
+$i_OriginalFormat
+	[optional] legt das Speicherformat f&uuml;r das Dokument fest
+	0 = Word Dokument
+	1 = (Standard) Original Dokument Format
+	2 = Dialogfeld
+$b_RouteDocument
+	[optional] legt fest, ob das Dokument zur n&auml;chsten Adresse verfolgt werden soll
+	0 = (Standard) nicht verfolgen
+	1 = verfolgen bis zur n&auml;chsten Adresse
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekttyp
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WordCreate, _WordAttach
+
+
+###Example###
+@@IncludeExample@@

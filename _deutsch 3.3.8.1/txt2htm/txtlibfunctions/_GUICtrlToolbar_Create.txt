@@ -1,0 +1,77 @@
+###User Defined Function###
+_GUICtrlToolbar_Create
+
+###Description###
+Erstellt ein Toolbar-Control
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_Create($hWnd [, $iStyle = 0x00000800 [, $iExStyle = 0x00000000]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Parent- oder Eigner-Fenster
+$iStyle
+	[optional] Stile des Controls:
+		$TBSTYLE_ALTDRAG - Erlaubt es dem User, die Position der Toolbar Buttons durch ziehen und dr&uuml;cken der ALT Taste zu &auml;ndern.
+		Falls dieser Stil nicht festgelegt ist, muss der Benutzer die SHIFT Taste w&auml;hrend dem Ziehen dr&uuml;cken.
+		Es ist zu beachten, dass der $CCS_ADJUSTABLE Stil festgelegt sein muss, um das Ziehen der Toolbar Buttons zu aktivieren.
+
+		$TBSTYLE_CUSTOMERASE - Erstellt $NM_CUSTOMDRAW Nachrichten, wenn die Toolbar $WM_ERASEBKGND Nachrichten enth&auml;lt
+
+		$TBSTYLE_FLAT - Erstellt eine flache Toolbar (2D Optik)
+
+		$TBSTYLE_LIST - Erstellt eine flache Toolbar mit dem Buttontext rechts von der Bitmap
+
+		$TBSTYLE_REGISTERDROP - Verursacht $TBN_GETOBJECT Meldungen, um das "Drop"-Ziel-Objekt anzufordern, wenn sich der Cursor
+		&uuml;ber den Toolbar Buttons befindet.
+
+		$TBSTYLE_TOOLTIPS - Erstellt ein ToolTip-Control, so dass eine Anwendung eine Beschreibung f&uuml;r die Buttons in der
+		Toolbar darstellen kann.
+
+		$TBSTYLE_TRANSPARENT - Erstellt eine transparente Toolbar. In einer transparenten Toolbar ist zwar die Toolbar transparent,
+		aber die Buttons nicht. Der Button Text erscheint unter den Button Bitmaps. Um Probleme beim Neuzeichnen zu vermeiden, sollte dieser Stil
+		gesetzt werden, bevor das Toolbar-Control sichtbar gemacht wird.
+
+		$TBSTYLE_WRAPABLE - Erstellt eine Toolbar, welche mehrere Zeilen mit Buttons haben kann. Toolbar Buttons k&ouml;nnen in die n&auml;chste Zeile
+		"umgebrochen" werden wenn es in der Toolbar zwischen den Buttons zu eng wird. Wenn die Toolbar umgebrochen wird,
+		wird der Umbruch entweder beim Trenner, der am weitesten rechts ist, oder falls kein Trenner vorhanden ist, der Button der am weitesten rechts ist, durchgef&uuml;hrt.
+		Dieser Stil muss gesetzt werden, um eine vertikales Toolbar-Control zu setzen, wenn die Toolbar
+		Teil eines vertikalen Rebar-Controls ist.
+
+		Standard: $TBSTYLE_FLAT
+		Erzwungen: $WS_CHILD, $WS_CLIPSIBLINGS, $WS_VISIBLE
+$iExStyle
+	[optional] erweiterte Stile des Controls:
+		$TBSTYLE_EX_DRAWDDARROWS - Erlaubt es, dass Buttons einen separaten Dropdown Pfeil haben. Buttons die den
+		Stil $BTNS_DROPDOWN haben, werden mit einem Dropdown Pfeil rechts vom Button in einem separaten Abschnitt neu gezeichnet.
+		Falls der Pfeil angeklickt wird, wird nur der Button abgesenkt und das Toolbar-Control sendet
+		eine $TBN_DROPDOWN Nachricht um ein Dropdown Men&uuml; darzustellen. Falls der Hauptbereich des
+		Buttons angeklickt wird, sendet das Toolbar-Control eine $WM_COMMAND Nachricht mit den Button-IDs.
+
+		$TBSTYLE_EX_HIDECLIPPEDBUTTONS - Versteckt teilweise ausgeschnittene Buttons
+
+		$TBSTYLE_EX_DOUBLEBUFFER - Veranlasst, dass die Toolbar doppelt gepuffert wird
+
+		$TBSTYLE_EX_MIXEDBUTTONS - Erlaubt es, Text f&uuml;r alle Buttons zu setzen, aber dieser wird nur f&uuml;r Buttons mit
+		dem Stil $BTNS_SHOWTEXT dargestellt. Der $TBSTYLE_LIST Stil muss auch gesetzt sein. Normalerweise muss man, wenn ein Button den Text nicht anzeigt,
+		$TBN_GETINFOTIP aufrufen um einen ToolTip darzustellen. Mit dem erweiterten Stil $TBSTYLE_EX_MIXEDBUTTONS
+		wird der Text, der f&uuml;r den Button gesetzt ist, aber nicht auf Buttons dargestellt wird, automatisch als ToolTip Text verwendet.
+		Man braucht nur $TBN_GETINFOTIP aufzurufen, falls man flexibler in dem festgelegten ToolTip Text sein will.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Toolbar-Control
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_Destroy
+
+###Example###
+@@IncludeExample@@

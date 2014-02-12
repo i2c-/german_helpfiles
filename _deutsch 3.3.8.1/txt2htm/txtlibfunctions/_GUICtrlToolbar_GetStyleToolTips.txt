@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetStyleToolTips
+
+###Description###
+Zeigt an, dass das Control ToolTips verwendet
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetStyleToolTips($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	Stil wird verwendet
+False:	Stil wird nicht verwendet
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetStyleToolTips
+
+###Example###
+@@IncludeExample@@

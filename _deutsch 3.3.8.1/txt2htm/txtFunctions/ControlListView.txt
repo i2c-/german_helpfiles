@@ -1,0 +1,73 @@
+###Function###
+ControlListView
+
+###Description###
+Sendet einen Befehl an ein ListView32 Control.
+
+###Syntax###
+ControlListView ( "title", "text", controlID, "command" [, option1 [, option2]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+command
+	Der Befehl, der an das Control gesendet wird (siehe unten).
+option1
+	[optional] Zus&auml;tzlicher Parameter soweit der Befehl es erfordert.
+option2
+	[optional] Zus&auml;tzlicher Parameter soweit der Befehl es erfordert.
+@@End@@
+
+
+###ReturnValue###
+H&auml;ngt von den unten angef&uuml;hrten Befehlen ab. Tritt ein Fehler auf - etwa "ung&uuml;ltiger Befehl" oder "Fenster, Control wurde nicht gefunden" - dann wird @error = 1 gesetzt.
+
+@@ControlCommandTable@@
+<b>Befehl, Option1, Option2</b>
+	<b>Operation</b>
+"DeSelect", From [, To]
+	Abw&auml;hlen eines oder mehrerer Items, von [,bis].
+"FindItem", "string to find" [, SubItem]
+	Gibt den Element-Index des zu findenden Strings zur&uuml;ck. Gibt -1 zur&uuml;ck, falls der String nicht gefunden wurde.
+"GetItemCount"
+	Gibt die Anzahl der Items in der Liste zur&uuml;ck.
+"GetSelected" [, option]
+	Gibt einen String zur&uuml;ck, die die Indizes aller gew&auml;hlten Items enth&auml;lt. Ist die Option=0 (Standard), wird nur der Index des ersten gew&auml;hlten Items zur&uuml;ckgegeben. Ist die Option=1, werden die Indizes aller gew&auml;hlten Items zur&uuml;ckgegeben, getrennt durch |, z.B: "0|3|4|10". Ist kein Element der Liste ausgew&auml;hlt, wird ein leerer String "" zur&uuml;ckgegeben.
+"GetSelectedCount"
+	Gibt die Anzahl der gew&auml;hlten Items zur&uuml;ck.
+"GetSubItemCount"
+	Gibt die Anzahl der Child-Items zur&uuml;ck.
+"GetText", Item, SubItem
+	Gibt den Text eines items/Child-Items zur&uuml;ck.
+"IsSelected", Item
+	Gibt 1 zur&uuml;ck, wenn das Element ausgew&auml;hlt ist, ansonsten 0.
+"Select", From [, To]
+	Ausw&auml;hlen eines oder mehrerer Items, von [,bis].
+"SelectAll"
+	Ausw&auml;hlen aller Items.
+"SelectClear"
+	L&ouml;scht die Auswahl aller Items.
+"SelectInvert"
+	Invertiert die aktuelle Auswahl.
+"ViewChange", "view"
+	Wechselt die aktuelle Ansicht. G&uuml;ltige "views"(=Ansichtsoptionen) sind "list", "details", "smallicons", "largeicons".
+@@End@@
+
+Alle items und Child-Items basieren auf 0. Das hei&szlig;t, dass das erste item/Child-Item in einer Liste gleich 0 ist, das zweite ist 1 und so weiter.
+In einer detaillierten Ansicht des ListView32 Controls kann das "item" als "Zeile" aufgefasst werden und das "Child-Item" als "Spalte".
+
+###Remarks###
+Manche Befehle funktionieren nicht, wenn ein 32-bit AutoIt Prozess verwendet wird, um von einem 64-Bit Prozess zu lesen.  Genauso k&ouml;nnen Befehle nicht funktionieren, wenn ein 64-bit AutoIt Prozess verwendet wird, um von einem 32-bit Prozess zu lesen.
+
+###Related###
+ControlCommand
+
+
+###Example###
+@@IncludeExample@@

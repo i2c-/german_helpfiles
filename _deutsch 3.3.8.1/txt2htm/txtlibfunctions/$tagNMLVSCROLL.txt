@@ -1,0 +1,21 @@
+###Structure Name###
+$tagNMLVSCROLL
+
+###Description###
+Liefert Informationen &uuml;ber einen Scrollvorgang
+
+###Syntax###
+Global Const $tagNMLVSCROLL = $tagNMHDR & ";int DX;int DY"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+DX
+	Legt die horizontale Position in Pixel fest, an welcher der Scrollvorgang beginnen oder enden soll
+DY
+	Legt die vertikale Position in Pixel fest, an welcher der Scrollvorgang beginnen oder enden soll
+@@End@@
+
+###Remarks###
+Keine.

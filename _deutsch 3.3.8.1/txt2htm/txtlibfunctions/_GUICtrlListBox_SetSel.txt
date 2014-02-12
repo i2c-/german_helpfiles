@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListBox_SetSel
+
+###Description###
+Markiert einen oder mehrere Strings in einer Mehrfachauswahl-Listbox
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SetSel($hWnd [, $iIndex = -1 [, $fSelect = -1]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	[optional] legt den 0-basierenden Index des Items fest
+$fSelect
+	[optional] legt fest wie die Markierung erfolgen soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Ein $iIndex von -1 bedeutet, dass die Markierung aller Items umgedreht wird (ignoriert $fSelect)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_GetSel
+
+###Example###
+@@IncludeExample@@

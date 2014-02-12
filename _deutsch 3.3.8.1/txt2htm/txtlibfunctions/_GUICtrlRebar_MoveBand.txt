@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRebar_MoveBand
+
+###Description###
+Verschiebt eine Gruppe von einem Index zum anderen.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_MoveBand($hWnd, $iIndexFrom, $iIndexTo)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndexFrom
+	0-basierender Index der Gruppe die verschoben werden soll
+$iIndexTo
+	0-basierender Index des neuen Gruppenabschnitts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Nachricht ver&auml;ndert den Index einer anderen Gruppe im Rebar-Control.
+Falls eine Gruppe vom Index 6 auf den Index 0 verschoben wird, erh&ouml;ht sich bei allen Gruppen dazwischen deren Index um 1.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

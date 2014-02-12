@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetReadOnly
+
+###Description###
+Setzt oder entfernt den Status "schreibgesch&uuml;tzt"
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetReadOnly($hWnd [, $fState = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	[optional] einer der folgenden Werte:
+		True - Setzt das Control auf schreibgesch&uuml;tzt (Standard)
+		False - Setzt das Control auf read-write
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist keine Handle
+	102 - $fState ist weder true noch false
+	700 - Befehl fehlgeschlagen
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EM_SETREADONLY
+
+###Example###
+@@IncludeExample@@

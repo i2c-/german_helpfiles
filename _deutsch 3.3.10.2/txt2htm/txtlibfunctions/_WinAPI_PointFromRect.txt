@@ -1,0 +1,29 @@
+###User Defined Function###
+_WinAPI_PointFromRect
+
+###Description###
+Gibt die obere und linken Koordinate einer $tagRECT Struktur als eine $tagPOINT Struktur zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_PointFromRect ( ByRef $tRect [, $fCenter = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$tRect
+	$tagRECT Struktur 
+$fCenter
+	[optional] Falls True, wird ein Punkt in der Mitte des Rechtecks zur&uuml;ckgegeben, sonst werden die linke/obere
+	Koordinate zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagPOINT Struktur zur&uuml;ck
+
+
+###Remarks###
+Diese Funktion wird verwendet um die Klickposition f&uuml;r viele der Klickfunktionen zu ermitteln
+
+
+###Related###

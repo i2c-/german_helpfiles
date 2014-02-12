@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_ArrowCapDispose
+
+###Description###
+L&ouml;st ein Pfeil-Objekt auf
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ArrowCapDispose($hCap)
+
+###Parameters###
+@@ParamTable@@
+$hCap
+	Handle zu einem Pfeil-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ArrowCapCreate
+
+###See Also###
+@@MsdnLink@@ GdipDeleteCustomLineCap
+
+###Example###
+@@IncludeExample@@

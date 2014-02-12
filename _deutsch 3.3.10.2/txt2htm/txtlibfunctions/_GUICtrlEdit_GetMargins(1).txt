@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlEdit_GetMargins
+
+###Description###
+Ermittelt die Breite des linken und rechten Randes
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetMargins ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Die Breite des linken Randes
+	[1] - Die Breite des rechten Randes
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_SetMargins
+
+
+###Example###
+@@IncludeExample@@

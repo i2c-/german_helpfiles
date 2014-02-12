@@ -1,0 +1,32 @@
+###Function###
+DllCallbackGetPtr
+
+###Description###
+Gibt einen Zeiger auf eine Callback Funktion zur&uuml;ck die an Win32 API &uuml;bergeben werden kann.
+
+###Syntax###
+DllCallbackGetPtr ( handle )
+
+
+###Parameters###
+@@ParamTable@@
+handle
+	Ein DllCallback Handle, welches von DllCallbackRegister zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Zeiger auf die Callback Funktion.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+DllCallbackGetPtr ist zu verwenden, um die Adresse einer Callback Funktion an Win32 API zu &uuml;bergeben, wenn DllCall verwendet wird.
+
+###Related###
+DllCall, DllCallBackRegister, DllCallbackFree
+
+
+###Example###
+@@IncludeExample@@

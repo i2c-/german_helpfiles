@@ -1,0 +1,60 @@
+###User Defined Function###
+_INetSmtpMail
+
+###Description###
+Sendet eine Email, ohne ein externes Emailprogramm zu benutzen.
+
+###Syntax###
+#include <INet.au3>
+_INetSmtpMail($s_SmtpServer, $s_FromName, $s_FromAddress, $s_ToAddress [,$s_Subject [,$as_Body [,$s_helo [,$s_first [,$b_trace]]]]])
+
+###Parameters###
+@@ParamTable@@
+$s_SmtpServer
+	SMTP Server, &uuml;ber den die Email gesendet werden soll.  Kann eine alphabetische oder numerische IP Adresse sein. Um Spam zu bek&auml;mpfen, ben&ouml;tigen viele ISPs diese Angabe, um als Server zu dienen.  
+	z.B. "smtp.ispdomain.com", "mail.ispdomain.com" oder "192.168.1.1"
+$s_FromName
+	Der Name, der als Absender erscheinen soll.
+	z.B. "Bob Smith"
+$s_FromAddress
+	Die Email-Adresse, die als Absender erscheinen soll.
+	z.B. "bob.smith@mydomain.com".
+$s_ToAddress
+	Die Email-Adresse, an welche die Mail geschickt werden soll.  
+	z.B. "jane.brown@yourdomain.com"
+$s_Subject
+	[optional] Der Betreff der Email.
+$as_Body
+	[optional] Baut den Inhalt der Email als 1-dimensionales Array aus Strings auf.   Jeder Wert innerhalb des Arrays wird in der Email mit @CRLF beendet.
+$s_helo
+	[optional] Identifizierung f&uuml;r die SMTP Serververbindung (Standard @ComputerName). Wenn der SMTP Server einen "EHLO" String (Extended HELO) ben&ouml;tigt, ist der String einfach auf "EHLO " & @ComputerName zu setzen.
+$s_first
+	[optional] String, der vor "helo" f&uuml;r die SMTP Serververbindung gesendet werden soll (Standard {SPACE}). Um kein Zeichen zu senden, muss dieser Parameter -1 sein. Manche SMTP Server ben&ouml;tigen dies.
+$b_trace
+	[optional] Verfolgt eine &Uuml;bertragung in einem extra Fenster.
+	
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error
+@error:	1    - Ung&uuml;ltige Parameter
+	2    - Kann TCP nicht starten
+	3    - Kann die IP Adresse nicht aufl&ouml;sen
+	4    - Kann keinen Socket erstellen
+	5x   - Kann keine SMTP Session er&ouml;ffnen.  x zeigt die Indexnummer des letzen Befehls, der an den SMTP Server &uuml;bertragen wurde.
+	50x  - Kann "body" nicht senden.  x zeigt die Zeilennummer von $as_Body (erste Zeile ist 0).
+	5000 - Kann die SMTP Session nicht schlie&szlig;en.
+@@End@@
+
+
+###Remarks###
+Diese Funktion sendet eine Email direkt &uuml;ber einen SMTP Server, ohne auf ein externes Mailprogramm zugreifen zu m&uuml;ssen. Ben&ouml;tigt AutoIt3 v 3.1.1.97 oder neuer.
+
+
+###Related###
+_INetMail
+
+###Example###
+@@IncludeExample@@

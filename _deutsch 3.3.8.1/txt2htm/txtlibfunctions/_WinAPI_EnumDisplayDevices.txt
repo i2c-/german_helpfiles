@@ -1,0 +1,46 @@
+###User Defined Function###
+_WinAPI_EnumDisplayDevices
+
+###Description###
+Bezieht Informationen &uuml;ber die Anzeigeger&auml;te in einem System
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_EnumDisplayDevices($sDevice, $iDevNum)
+
+###Parameters###
+@@ParamTable@@
+$sDevice
+	Ger&auml;tename. Falls leer, gibt die Funktion Informationen &uuml;ber die Anzeigenanschl&uuml;sse des Computers
+		basierend auf iDevNum.
+$iDevNum
+	0-basierender Indexwert der das Anzeigeger&auml;t festlegt das von Interesse ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aDevice[0] - TRUE
+	$aDevice[1] - Entweder der Ger&auml;teanschluss oder der Monitor
+	$aDevice[2] - Entweder eine Beschreibung des Anschlusses oder Monitors
+	$aDevice[3] - Ger&auml;testatus-Flags:
+	 1 - Das Ger&auml;t ist Teil der Arbeitsoberfl&auml;che
+	 2 - Die prim&auml;re Arbeitsoberfl&auml;che ist auf dem Ger&auml;t
+	 4 - Repr&auml;sentiert ein Pseudo-Ger&auml;t, genutzt um bei Fernsteuerung (Remoting) Zeichenaktionen von Anwendungen zu vervielf&auml;ltigen
+	 8 - Das Ger&auml;t ist VGA-Kompatibel
+	16 - Das Ger&auml;t ist transportabel; es kann nicht der prim&auml;re Bildschirm sein
+	32 - Das Ger&auml;t hat mehr Anzeigemodi als seine Ausgabeger&auml;te unterst&uuml;tzen
+	$aDevice[4] - reserviert
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EnumDisplayDevices
+
+###Example###
+@@IncludeExample@@

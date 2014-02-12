@@ -1,0 +1,50 @@
+###User Defined Function###
+_WinNet_OpenEnum
+
+###Description###
+Startet eine Auflistung der Netzwerkressourcen oder existierender Verbindungen.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_OpenEnum($iScope, $iType, $iUsage, $pResource, ByRef $hEnum)
+
+###Parameters###
+@@ParamTable@@
+$iScope
+	Bereich der Auflistung:
+		0 - Listet alle aktuell verbundenen Ressourcen.
+		1 - Listet alle Ressourcen im Netzwerk.
+		2 - Listet alle gespeicherten (dauerhaften) Verbindungen.
+		3 - Listet nur Ressourcen, die sich im Netzwerkkontext des Aufrufers befinden.
+$iType
+	Art der Ressourcen:
+		0 - Alle Ressourcen
+		1 - Laufwerk-Ressourcen
+		2 - Drucker-Ressourcen
+$iUsage
+	Nutzungsart der Ressourcen:
+		0 - Alle Ressource
+		1 - Alle verkn&uuml;pfbaren Ressourcen
+		2 - Alle Container-Ressourcen
+		4 - F&uuml;hrt zum Abbruch der Funktion, wenn der Benutzer nicht authentifiziert ist.
+$pResource
+	Zeiger auf eine $tagNETRESOURCE-Struktur, die den Container f&uuml;r die Auflistung spezifiziert. Wenn iScope
+		nicht 1 ist, muss pResource 0 sein. Wenn 0, wird das Stammverzeichnis des Netzwerks verwendet.
+$hEnum
+	Handle, das f&uuml;r sp&auml;tere WNet_EnumResource-Aufrufe benutzt werden kann.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_EnumResource, _WinNet_CloseEnum, $tagNETRESOURCE
+
+###See Also###
+@@MsdnLink@@ WNetOpenEnum

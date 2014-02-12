@@ -1,0 +1,36 @@
+###User Defined Function###
+_IEIsFrameSet
+
+###Description###
+&Uuml;berpr&uuml;ft, ob das angegebene Fenster ein Frameset enth&auml;lt.
+
+###Syntax###
+#include <IE.au3> 
+_IEIsFrameSet(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer Internet.Application, eines Fenster- oder eines Frames-Objekts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck wenn die Seite ein Frameset enth&auml;lt
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+_IEFrameGetCollection &uuml;berpr&uuml;ft nicht, ob die Frames iFrames sind oder Teil eines Framsets sind. Wenn Frames auf der Seite existieren und diese Funktion False zur&uuml;ck liefert, kann man annehmen das es iframes sind.
+
+
+###Related###
+_IEFrameGetCollection
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###User Defined Function###
+_SoundStatus
+
+###Description###
+Gibt den Status eines Sounds zur&uuml;ck 
+
+###Syntax###
+#include <Sound.au3>
+_SoundStatus($aSnd_id)
+
+
+###Parameters###
+@@ParamTable@@
+$aSnd_id
+	Sound ID Array welches durch _SoundOpen() zur&uuml;ckgegeben wurde oder ein Dateiname
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Sound Status
+Fehler:	0 und setzt @error
+@Error:	3 = Ung&uuml;ltige Sound ID. Es ist das zur&uuml;ckgegebene Array von _SoundOpen() oder ein g&uuml;ltiger Dateiname zu verwenden.
+@@End@@
+
+###Remarks###
+Von MSDN:
+Alle Ger&auml;te k&ouml;nnen die Werte f&uuml;r "not ready", "paused", "playing" und "stopped" zur&uuml;ckgeben. 
+Manche Ger&auml;te k&ouml;nnen zus&auml;tzlich die Werte f&uuml;r "open", "parked", "recording" und "seeking" zur&uuml;ckgeben.
+
+###Related###
+_SoundOpen
+
+###Example###
+@@IncludeExample@@
+

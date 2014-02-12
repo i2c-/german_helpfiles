@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlButton_SetImage
+
+###Description###
+Weist einem Button ein Bild zu
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetImage ( $hWnd, $sImageFile [, $nIconId = -1 [, $fLarge = False]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sImageFile
+	Datei, die das Bild enth&auml;lt
+$nIconId
+	[optional] Legt den 0-basierenden Index des zu extrahierenden Icons fest
+$fLarge
+	[optional] Extrahiert ein gro&szlig;es Icon
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Wird $fLarge auf True gesetzt, so verbessert sich die Iconqualit&auml;t.
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_GetImage
+
+
+###See Also###
+@@MsdnLink@@ BM_SETIMAGE
+
+
+###Example###
+@@IncludeExample@@

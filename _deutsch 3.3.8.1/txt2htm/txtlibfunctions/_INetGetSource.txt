@@ -1,0 +1,36 @@
+###User Defined Function###
+_INetGetSource
+
+###Description###
+Ermittelt den Quelltext von einer URL ohne eine tempor&auml;re Datei zu schreiben.
+
+###Syntax###
+#include <INet.au3>
+_INetGetSource($s_URL [, $bString = 'True'])
+
+
+###Parameters###
+@@ParamTable@@
+$s_URL
+	(Die URL der Seite.) z. B. 'http://www.autoit.de'
+$bString
+	[optional] Falls True werden die Daten im Stringformat zur&uuml;ckgegeben, sonst im Bin&auml;rformat.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Quelltext zur&uuml;ck.
+Fehler:	0 und setzt @ERROR = 1
+@@End@@
+
+
+###Remarks###
+Bei $s_URL mu&szlig; am Anfang unbedingt "http://" stehen, sonst ist der R&uuml;ckgabewert leer.
+
+
+###Related###
+.INetGet, InetRead, _IEDocReadHTML
+
+
+###Example###
+@@IncludeExample@@

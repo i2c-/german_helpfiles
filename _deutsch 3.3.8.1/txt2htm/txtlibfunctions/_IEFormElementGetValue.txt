@@ -1,0 +1,37 @@
+###User Defined Function###
+_IEFormElementGetValue
+
+###Description###
+Gibt den Wert eines angegebenen Formularelements zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormElementGetValue(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application oder eines Formularelementobjekts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Text eines bestimmten Formularelements zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Siehe Bemerkungen f&uuml;r _IEFormElementSetValue.
+
+
+###Related###
+_IEFormElementSetValue, _IEFormElementGetCollection, _IEFormElementGetObjByName, _IEFormElementOptionSelect, _IEFormElementCheckboxSelect, _IEFormElementRadioSelect
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###Function###
+Number
+
+###Description###
+Gibt die numerische Entsprechung eines Ausdruckes zur&uuml;ck.
+
+###Syntax###
+Number(expression [, flag =0])
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Der Ausdruck, der in eine Zahl umgewandelt werden soll. 
+flag
+	[optional] Definiert das Verhalten.
+	Kann einer der folgenden Werte sein:
+		Default = Das Ergebnis ist ein automatisch angepasster Integer. Siehe Bemerkungen.
+		1 = Das Ergebnis ist ein 32bit-Integer.
+		2 = Das Ergebnis ist ein 64bit-Integer.
+		3 = Das Ergebnis ist double.
+@@End@@
+
+###ReturnValue###
+Gibt eine Zahl zur&uuml;ck.
+ 
+
+
+###Remarks###
+Wird eine Zahl &uuml;bergeben, gibt die Funktion den Parameter aus.
+Ein String, der nur aus Buchstaben besteht, hat den numerischen Wert 0. Bei einem String, der mit Ziffern beginnt, wird der Rest abgeschnitten.
+Das Standard-Verhalten liefert gr&ouml;&szlig;entechnisch automatisch angepasste Integer. Falls der &uuml;bergebene Wert nach der Konvertierung innerhalb des Bereiches eines 32bit-Integers liegt, ist das Ergebnis ein 32bit-Integer. Andernfalls ist das Ergebnis ein 64bit-Integer. Beide sind vorzeichenbehaftet (signed).
+
+
+###Related###
+Int, String, Binary, Ceiling, Floor, HWnd, Ptr, Round
+
+
+###Example###
+@@IncludeExample@@

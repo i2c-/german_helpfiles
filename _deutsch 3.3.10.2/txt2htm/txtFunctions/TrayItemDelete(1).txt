@@ -1,0 +1,33 @@
+###Function###
+TrayItemDelete
+
+###Description###
+L&ouml;scht einen Eintrag von einem Traymen&uuml;.
+
+###Syntax###
+TrayItemDelete ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Control-Identifikationssnummer (Control-ID), wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+TrayCreateItem, TrayCreateMenu
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlListBox_GetLocaleLang
+
+###Description###
+Ermittelt die aktuelle Sprachidentifikation  
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetLocaleLang($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die Sprachidentifikation der List-Box
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_GetLocale
+
+###Example###
+@@IncludeExample@@

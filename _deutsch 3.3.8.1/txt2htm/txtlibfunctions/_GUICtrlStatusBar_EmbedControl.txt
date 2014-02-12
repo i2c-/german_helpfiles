@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlStatusBar_EmbedControl
+
+###Description###
+Bindet ein Unter-Control in das Control ein
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_EmbedControl($hWnd, $iPart, $hControl [, $iFit = 4])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPart
+	0-basierender Index des Abschnitts
+$hControl
+	Handle des einzubindenen Controls
+$iFit
+	[optional] Ermittelt wie das Control eingepasst werden soll. Kann eine Kombination der folgenden sein:
+		1 - Zentriert das Control horizontal
+		2 - Zentriert das Control vertikal
+		4 - Passt das Control dem Statusbarabschnitt an.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Es kann JEDES Control in die Statusbar eingebunden werden, au&szlig;er die normale Progressbar
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

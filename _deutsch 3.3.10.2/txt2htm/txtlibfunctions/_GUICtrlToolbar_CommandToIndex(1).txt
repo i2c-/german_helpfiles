@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_CommandToIndex
+
+###Description###
+Ermittelt den Index f&uuml;r den Button der mit der festgelegten Command-ID verkn&uuml;pft ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_CommandToIndex ( $hWnd, $iCommandID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command-ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0-basierender Buttonindex
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_IndexToCommand
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,26 @@
+###Function###
+WinMinimizeAll
+
+###Description###
+Minimiert alle Fenster.
+
+###Syntax###
+WinMinimizeAll (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Send("#m") ist auch eine M&ouml;glichkeit (Windows-Taste + M)
+
+###Related###
+WinMinimizeAllUndo, WinSetState
+
+
+###Example###
+@@IncludeExample@@

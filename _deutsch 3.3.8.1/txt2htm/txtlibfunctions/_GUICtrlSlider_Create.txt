@@ -1,0 +1,62 @@
+###User Defined Function###
+_GUICtrlSlider_Create
+
+###Description###
+Erstellt ein Slider-Control
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_Create($hWnd, $iX, $iY [, $iWidth = 100 [, $iHeight = 20 [, $iStyle = 0x0001 [, $iExStyle = 0x00000000]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Parent- oder Eigner-Fenster
+$iX
+	Horizontale Position des Controls
+$iY
+	Vertikale Position des Controls
+$iWidth
+	[optional] Breite des Controls
+$iHeight
+	[optional] H&ouml;he des Controls
+$iStyle
+	[optional] Stile des Controls:
+		$TBS_AUTOTICKS - F&uuml;gt Skalenstriche hinzu, wenn man den Wertebereich des Reglers mit der TBM_SETRANGE-Nachricht setzt.
+		$TBS_BOTH - Platziert Skalenstriche auf beiden Seiten der Reglerschiene.
+		$TBS_BOTTOM - Platziert Skalenstriche unter einer horizontalen Reglerschiene.
+		$TBS_DOWNISLEFT - Unten gleich links und oben gleich rechts
+		$TBS_ENABLESELRANGE - Die Skalenstriche in der Startposition und Endposition des markierten Bereiches werden als Dreiecke angezeigt (anstatt von vertikalen Strichen) und der markierte Bereich wird hervorgehoben
+		$TBS_FIXEDLENGTH - erlaubt es, die Gr&ouml;&szlig;e des Sliders mit einer $TBM_SETTHUMBLENGTH Nachricht zu ver&auml;ndern
+		$TBS_HORZ - Definiert einen horizontalen Slider. Das ist der Standardwert.
+		$TBS_LEFT - Platziert Skalenstriche auf der linken Seite einer vertikalen Reglerschiene.
+		$TBS_NOTHUMB - Definiert, dass die Reglerschiene keinen Schiebeknopf hat.
+		$TBS_NOTICKS - Definiert, dass die Reglerschiene keine Skalenstriche hat.
+		$TBS_REVERSED - Kleinere Zahlen zeigen "h&ouml;here" und gr&ouml;&szlig;ere Zahlen zeigen "kleinere" an
+		$TBS_RIGHT - Platziert Skalenstriche auf der rechten Seite einer vertikalen Reglerschiene.
+		$TBS_TOP - Platziert Skalenstriche &uuml;ber einer horizontalen Reglerschiene.
+		$TBS_TOOLTIPS - Erstellt ein Standard ToolTip-Control, welches die aktuelle Position des Sliders anzeigt
+		$TBS_VERT - Definiert einen vertikalen Slider.
+		Standard: $TBS_AUTOTICKS
+		Erzwungen : $WS_CHILD, $WS_TABSTOP, $WS_VISIBLE
+$iExStyle
+	[optional] Erweiterte Stile des Controls. Diese entsprechen den Standard $WS_EX_ Konstanten.
+		Standard: $WS_EX_STATICEDGE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Slider-Control
+Fehler:	0
+@@End@@
+
+###Remarks###
+Diese Funktion ist f&uuml;r erfahrene Benutzer und zum erlernen der Funktion von Controls.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_Destroy
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlListBox_ResetContent
+
+###Description###
+L&ouml;scht alle Items aus einer Listbox
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_ResetContent($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_DeleteString
+
+###Example###
+@@IncludeExample@@

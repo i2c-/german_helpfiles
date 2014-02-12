@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_GraphicsGetDC
+
+###Description###
+Erh&auml;lt ein Handle zu dem Ger&auml;tekontext des Grafik-Objekts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsGetDC($hGraphics)
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ger&auml;tekontext des Grafik-Objekts
+Fehler:	0
+@@End@@
+
+###Remarks###
+Jedem Aufruf von _GDIPlus_GraphicsGetDC sollte ein Aufruf von _GDIPlus_GraphicsReleaseDC folgen. Es sollte keine andere Methode des Grafik-Objekts zwischen den Aufrufen stattfinden.
+
+###Related###
+_GDIPlus_GraphicsReleaseDC
+
+###See Also###
+@@MsdnLink@@ GdipGetDC

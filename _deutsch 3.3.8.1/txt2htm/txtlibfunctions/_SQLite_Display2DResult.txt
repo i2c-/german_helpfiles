@@ -1,0 +1,36 @@
+###User Defined Function###
+_SQLite_Display2DResult
+
+###Description###
+Gibt ein formatiertes 2-dimensionales Array zur&uuml;ck oder gibt es in der Console aus.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Display2DResult($aResult [, $iCellWidth = 0 [, $bReturn = 0]])
+
+
+###Parameters###
+@@ParamTable@@
+$aResult
+	das darzustellende Array
+$iCellWidth
+	[optional] legt die Gr&ouml;&szlig;e des Datenfeldes fest
+$bReturn
+	[optional] falls True, wird der formatierte String zur&uuml;ckgegeben, aber nicht angezeigt
+	falls False, wird der formatierte String an StdOut gesendet
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	nichts oder formatierter String
+Fehler:	@error = 1 - $aResult ist kein Array oder hat die falsche Dimension
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_SQLite_GetTable2d
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,39 @@
+###Function###
+WinGetText
+
+###Description###
+Ermittelt den Text eines Fensters.
+
+###Syntax###
+WinGetText ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Text des Fensters als String zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der Titel des Fensters nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Bis zu 64KB Fenstertext k&ouml;nnen abgefragt werden. "WinGetText" arbeitet auch mit minimierten Fenstern. Zur einwandfreien Arbeit mit versteckten Fenster muss "AutoItSetOption("WinDetectHiddenText", 1)" gesetzt sein.
+
+Falls mehrere Fenster das Kriterium erf&uuml;llen, wird der Text des zuletzt aktiven Fensters gelesen.
+WinGetText("[active]") gibt den Text des aktiven Fensters zur&uuml;ck.
+
+
+###Related###
+WinGetTitle, ControlGetText, WinGetClassList
+
+
+###Example###
+@@IncludeExample@@

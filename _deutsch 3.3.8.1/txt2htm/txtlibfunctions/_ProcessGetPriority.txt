@@ -1,0 +1,41 @@
+###User Defined Function###
+_ProcessGetPriority
+
+###Description###
+Gibt die Priorit&auml;t eines Prozesses zur&uuml;ck
+
+###Syntax###
+#include <Process.au3>
+_ProcessGetPriority($i_PID)
+
+
+###Parameters###
+@@ParamTable@@
+$i_PID
+	Process ID (Int), die ausgelesen werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Ganzzahl entsprechend der Prozesspriorit&auml;t zur&uuml;ck:
+	0 - Idle/Niedrig
+	1 - Niedriger als normal
+	2 - Normal
+	3 - H&ouml;her als normal
+	4 - Hoch
+	5 - Echtzeit
+
+Fehler:	Gibt -1 zur&uuml;ck und setzt @Error auf 1
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+.ProcessSetPriority
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemAlign
+
+###Description###
+Setzt die Ausrichtung eines Itemtextes
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemAlign ( $hWnd, $iIndex, $iAlign )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iAlign
+	Textausrichtung:
+		0 - Text ist linksb&uuml;ndig
+		1 - Text ist rechtsb&uuml;ndig
+		2 - Text ist zentriert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemAlign
+
+
+###Example###
+@@IncludeExample@@

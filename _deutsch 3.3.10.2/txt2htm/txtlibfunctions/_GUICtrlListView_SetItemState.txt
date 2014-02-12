@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_SetItemState
+
+###Description###
+&Auml;ndert den Status eines Items in dem Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemState ( $hWnd, $iIndex, $iState, $iStateMask )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iState
+	zu ver&auml;nderder Status des Items
+$iStateMask
+	Bits, die angeben ob der Status aktiv oder inaktiv ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemState
+
+
+###Example###
+@@IncludeExample@@

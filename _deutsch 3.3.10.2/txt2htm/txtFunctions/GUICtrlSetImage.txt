@@ -1,0 +1,52 @@
+###Function###
+GUICtrlSetImage
+
+###Description###
+Bestimmt das Bitmap- oder Iconbild, das f&uuml;r ein Control verwendet wird.
+
+###Syntax###
+GUICtrlSetImage ( controlID, filename [, iconname [, icontype]] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+filename
+	Der Dateiname des Bildes, das auf dem Control angezeigt werden soll.
+iconname
+	[optional] Der Icon Name, falls die Datei mehrere Icons enth&auml;lt. Dies kann eine Ordinalzahl sein, falls es eine negative Zahl aufweist. Sonst -1.
+icontype
+	[optional] Um eine bestimmte Icongr&ouml;&szlig;e auszuw&auml;hlen: 0 = klein, 1 = normal (Standard).
+	f&uuml;r TreeViewItem bedeutet die Icongr&ouml;&szlig;e : 2 = ausgew&auml;hlt/markiert, 4 nicht markierter Eintrag.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Wert des g&uuml;ltigen Iconnamens in einer Datei zu erhalten ist ein "resource hacker" zu verwenden.
+
+Wenn die Funktion auf einen Button angewendet wird, wird das Bild auf dem Button angezeigt. Bilder k&ouml;nnen auch f&uuml;r Checkbox-Items verwendet werden, wenn der $BS_PUSHLIKE Stil benutzt wird. In beiden F&auml;llen muss der $BS_ICON- oder $BS_BITMAP-Stil angegeben werden, um den Typ des verwendeten Bildes festzulegen. Die erste Aufl&ouml;sung des Icons wird verwendet, falls es sich um ein Icon mit mehreren Aufl&ouml;sungen handelt. 
+Falls zum Beispiel das Control 64x64 gro&szlig; ist und das Icon 128x128, wird das Bild abgeschnitten.
+
+!!! Falls dieser Befehl auf einem TreeViewItem das erste Mal verwendet wird, dann werden alle anderen Eintr&auml;ge dieses Icon bzw. Bild automatisch als Standard verwenden !!!
+
+Falls <a href="GUICtrlSetImage.htm">GUICtrlSetImage()</a> auf einem TreeView oder ListView verwendet wird, dann werden alle Eintr&auml;ge auf dieses Icon bzw. Bild ge&auml;ndert.
+
+Die Angabe einer positiven Zahl bezieht sich auf den "string-equivalenten" Icon-Namen.
+Die Angabe einer negativen Zahl f&uuml;hrt zu zahlenbasiertem "Index"-Verhalten. Einige DLLs k&ouml;nnen Icons nur mit negativen Zahlen entpacken.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlCreatePic, GUICtrlCreateIcon, GUICtrlCreateButton, GUICtrlCreateCheckbox
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinAPI_WriteProcessMemory
+
+###Description###
+Schreibt Speicherinhalt in einen bestimmten Prozess
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_WriteProcessMemory($hProcess, $pBaseAddress, $pBuffer, $iSize, ByRef $iWritten [, $sBuffer = "ptr"])
+
+###Parameters###
+@@ParamTable@@
+$hProcess
+	Identifiziert ein offenes Prozesshandle, in dessen Speicher geschrieben werden soll
+$pBaseAddress
+	Zeigt auf die Basisadresse des Prozesses, in dessen Speicher geschrieben werden soll
+$pBuffer
+	Zeigt auf den Puffer, der die zu schreibenden Daten bereitstellt
+$iSize
+	Gibt die Anzahl der zu schreibenden Bytes an
+$iWritten
+	Die aktuelle Anzahl der Bytes, welche in den Prozess transferiert wurden
+$sBuffer
+	[optional] Enth&auml;lt den Datentyp, den $pBuffer repr&auml;sentiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_ReadProcessMemory
+
+###See Also###
+@@MsdnLink@@ WriteProcessMemory

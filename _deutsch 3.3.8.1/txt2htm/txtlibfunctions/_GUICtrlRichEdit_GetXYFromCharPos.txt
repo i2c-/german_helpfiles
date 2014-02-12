@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetXYFromCharPos
+
+###Description###
+Ermittelt die XY Koordinaten einer Zeichenposition
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetXYFromCharPos($hWnd, $iCharPos)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCharPos
+	Zeichenposition
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array [$iX, $iY]
+	- Koordinaten der Zeichenposition relativ zum linken oberen Ende des Controls
+Fehler:	setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $iCharPos ist < 0
+	1022 - $iCharPos &uuml;berschreitet die Anzahl der Zeichen im Control
+@@End@@
+
+###Remarks###
+Die erste Zeichenposition ist 0.
+
+Mit einem Control, das mehrere Zeilen hat, werden auch die Zeichenpositionen zur&uuml;ckgegeben, die unsichtbar sind.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetCharPosFromXY
+
+###See Also###
+@@MsdnLink@@ EM_POSFROMCHAR
+
+###Example###
+@@IncludeExample@@

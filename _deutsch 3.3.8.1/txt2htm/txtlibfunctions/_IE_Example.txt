@@ -1,0 +1,41 @@
+###User Defined Function###
+_IE_Example
+
+###Description###
+Zeigt ein Browserfenster mit vorgefertigten HTML-Seiten an, die in der IE.au3 verwendet werden und die man f&uuml;r eigene Tests nutzen kann.
+
+###Syntax###
+#include <IE.au3> 
+_IE_Example([$s_module = "basic"])
+
+###Parameters###
+@@ParamTable@@
+$s_module
+	[optional] Gibt an, welches Modul aufgerufen werden soll
+	basic = (Standard) einfache HTML-Seite mit Text, Links und Bildern
+	form = einfache HTML-Seite mit mehreren Forumularen
+	frameset = einfache HTML-Seite mit Frames
+	iframe = einfache HTML-Seite mit IFrames
+	table = einfache HTML-Seite mit Tabellen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die auf ein InternetExplorer.Application-Objekt verweist
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Diese Funktion zeigt ein Browserfenster mit vorgefertigten HTML-Seiten an, die in der IE.au3 verwendet werden und die man als Basis f&uuml;r eigene Tests mit der IE.au3 nutzen kann.
+
+
+###Related###
+_IE_Introduction
+
+
+###Example###
+@@IncludeExample@@

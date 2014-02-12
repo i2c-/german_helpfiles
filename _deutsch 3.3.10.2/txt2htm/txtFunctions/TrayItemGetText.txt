@@ -1,0 +1,33 @@
+###Function###
+TrayItemGetText
+
+###Description###
+Ermittelt den Text eines Traymen&uuml;eintrages.
+
+###Syntax###
+TrayItemGetText ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Control-Identifikationsnummer (Control-ID) wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+TrayItemSetText, TrayItemGetHandle
+
+
+###Example###
+@@IncludeExample@@

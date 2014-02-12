@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemFormat
+
+###Description###
+Setzt das Format eines Items
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemFormat ( $hWnd, $iIndex, $iFormat )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iFormat
+	Kombination der folgenden Format-IDs:
+	HDF_CENTER - Der Inhalt des Items ist zentriert.
+	HDF_LEFT - Der Inhalt des Items ist linksb&uuml;ndig ausgerichtet.
+	HDF_RIGHT - Der Inhalt des Items ist rechtsb&uuml;ndig ausgerichtet.
+	HDF_BITMAP - Das Item zeigt ein Bitmap.
+	HDF_BITMAP_ON_RIGHT - Das Bitmap erscheint rechts vom Text.
+	HDF_OWNERDRAW - Der Besitzer des Controls zeichnet das Item.
+	HDF_STRING - Das Item zeigt einen String.
+	HDF_IMAGE - Zeigt ein Bild von einer Imagelist.
+	HDF_RTLREADING - Der Text wird in der Gegenrichtung dargestellt
+	HDF_SORTDOWN - Zeichnet einen "Pfeil-runter" auf dieses Item
+	HDF_SORTUP - Zeichnet einen "Pfeil-hoch" auf dieses Item
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemFormat
+
+
+###Example###
+@@IncludeExample@@

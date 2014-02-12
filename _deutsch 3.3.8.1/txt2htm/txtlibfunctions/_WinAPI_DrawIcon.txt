@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_DrawIcon
+
+###Description###
+Zeichnet ein Icon oder Cursor in den festgelegten Ger&auml;tekontext
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DrawIcon($hDC, $iX, $iY, $hIcon)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu dem Ger&auml;tekontext in den das Icon oder Cursor gezeichnet werden soll
+$iX
+	X Koordinate der oberen linken Ecke des Icons
+$iY
+	Y Koordinate der oberen linken Ecke des Icons
+$hIcon
+	Handle zu dem zu zeichnenden Icon
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_DrawIconEx
+
+###See Also###
+@@MsdnLink@@ DrawIcon

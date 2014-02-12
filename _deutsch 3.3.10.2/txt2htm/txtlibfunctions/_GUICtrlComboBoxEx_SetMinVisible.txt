@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetMinVisible
+
+###Description###
+Setzt die minimale Anzahl von sichtbaren Items in der Dropdown Liste der ComboBox
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetMinVisible ( $hWnd, $iMinimum )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iMinimum
+	legt die minimale Anzahl von sichtbaren Items fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Wenn die Anzahl von Items in der Dropdownliste gr&ouml;&szlig;er als das Minimum ist, wird die Scrollbar verwendet.
+Standardm&auml;&szlig;ig ist 30 die minimale Anzahl von sichtbaren Items.
+
+Diese Funktion wird ignoriert, falls die ComboBox den Stil $CBS_NOINTEGRALHEIGHT aufweist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_GetMinVisible
+
+
+###Example###
+@@IncludeExample@@

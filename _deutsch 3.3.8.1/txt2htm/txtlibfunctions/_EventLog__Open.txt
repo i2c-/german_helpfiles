@@ -1,0 +1,32 @@
+###User Defined Function###
+_EventLog__Open
+
+###Description###
+&Ouml;ffnet ein Handle zum Event Log
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Open($sServerName, $sSourceName)
+
+###Parameters###
+@@ParamTable@@
+$sServerName
+	Der UNC-Name des Servers, auf dem das Event Log ge&ouml;ffnet werden soll. Ohne Angabe eines Namens wird auf dem lokalen Computer die Operation ausgef&uuml;hrt.
+$sSourceName
+	Der Name des Event Log
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Event Log
+Fehler:	0
+@@End@@
+
+###Remarks###
+Um das Handle zum Event Log zu schlie&szlig;en, ist die Funktion _EventLog__Close zu verwenden
+
+###Related###
+_EventLog__Close, _EventLog__Clear, _EventLog__Read, _EventLog__Report
+
+###Example###
+@@IncludeExample@@

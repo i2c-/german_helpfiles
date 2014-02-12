@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_ImageGetHeight
+
+###Description###
+Ermittelt die Bildh&ouml;he
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetHeight($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu dem Bild
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Bildh&ouml;he in Pixel
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ImageGetWidth
+
+###See Also###
+@@MsdnLink@@ GdipGetImageHeight
+
+###Example###
+@@IncludeExample@@

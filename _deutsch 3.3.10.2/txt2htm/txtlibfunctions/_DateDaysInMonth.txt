@@ -1,0 +1,37 @@
+###User Defined Function###
+_DateDaysInMonth
+
+###Description###
+Gibt die Anzahl der Tage eines Monats zur&uuml;ck, basierend auf den angegeben Werten f&uuml;r Monat und Jahr.
+
+###Syntax###
+#include <Date.au3>
+_DateDaysInMonth ( $iYear, $iMonthNum )
+
+
+###Parameters###
+@@ParamTable@@
+$iYear
+	vierstelliges Jahr (YYYY).
+$iMonthNum
+	Monatsnummer (1 = Januar, 12 = Dezember).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Anzahl der Tage des Monats
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - ung&uuml;ltige Monatsnummer oder Jahreszahl.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_DateDayOfWeek
+
+
+###Example###
+@@IncludeExample@@

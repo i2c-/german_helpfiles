@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_SetLastError
+
+###Description###
+Setzt den letzten Fehlercode f&uuml;r den aufgerufenen Thread
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetLastError ( $iErrorCode )
+
+
+###Parameters###
+@@ParamTable@@
+$iErrorCode
+	Der letzte Fehlercode f&uuml;r den Thread
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Der letzte Fehlercode wird im lokalen G&uuml;ltigkeitsbereich eines Threads abgelegt, sodass bei mehreren Threads die Werte nicht &uuml;berschrieben werden.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ SetLastError

@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinAPI_WaitForMultipleObjects
+
+###Description###
+Wartet bis eines oder alle angegebenen Objekte in dem signalisierten Status sind
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_WaitForMultipleObjects($iCount, $pHandles [, $fWaitAll = False [, $iTimeout = -1]])
+
+###Parameters###
+@@ParamTable@@
+$iCount
+	Die Anzahl der Objekthandles in dem Array auf das der Zeiger in $pHandles verweist
+$pHandles
+	Zeiger auf ein Array von Objekthandles
+$fWaitAll
+	[optional] Falls TRUE, kehrt die Funktion zur&uuml;ck sobald der Status von allen Objekten aus $pHandles in dem signalisierten Zustand ist.
+		Falls FALSE, sobald der Status von irgendeinem der Objekte in dem signalisierten Zustand ist. Letzteren Falles
+		gibt der R&uuml;ckgabewert das Objekt an dessen Status die Funktion veranlasst hat zur&uuml;ckzukehren.
+$iTimeout
+	[optional] Der Unterbrechungsintervall, in Millisekunden. Die Funktion kehrt zur&uuml;ck, wenn der Intervall abgelaufen ist, auch wenn
+		der Status des Objekts nicht signalisiert ist. Ist $iTimeout 0, testet die Funktion den Status des Objekts und kehrt
+		unverz&uuml;glich zur&uuml;ck. Ist $iTimeout -1, l&auml;uft der Unterbrechungsintervall unendlich.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Bezeichnet das Ereignis, das die Funktion zur R&uuml;ckkehr veranlasst hat
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_WaitForSingleObject
+
+###See Also###
+@@MsdnLink@@ WaitForMultipleObjects

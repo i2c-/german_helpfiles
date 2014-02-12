@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_GetDlgCtrlID
+
+###Description###
+Gibt den Identifizierer des angegebenen Controls zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetDlgCtrlID($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Identifizierer des Controls
+Fehler:	0
+@@End@@
+
+###Remarks###
+GetDlgCtrlID akzeptiert Handles von Child-Fenstern ebenso wie Handles eines Controls in Dialogfenstern. Eine Anwendung setzt
+den Identifizierer f&uuml;r ein Child-Fenster bei dessen Erzeugung via CreateWindowEx mit der Zuweisung des Identifiziererwertes im Parameter hMenu.
+Obgleich GetDlgCtrlID vielleicht einen Wert zur&uuml;ckgibt, sollte $hWnd ein Top-Level Fenster repr&auml;sentieren, k&ouml;nnen diese keinen Identifizierer (ID) besitzen,
+sodass ein solcher R&uuml;ckgabewert niemals g&uuml;ltig ist.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetDlgCtrlID
+
+###Example###
+@@IncludeExample@@

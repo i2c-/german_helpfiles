@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_SetDefaultPrinter
+
+###Description###
+Setzt den Standarddrucker f&uuml;r den aktuellen Benutzer auf dem lokalen Computer
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetDefaultPrinter ( $sPrinter )
+
+
+###Parameters###
+@@ParamTable@@
+$sPrinter
+	Der Name des Standarddruckers. F&uuml;r einen entfernten Drucker, ist das Namensformat \server\printername. F&uuml;r einen
+	lokalen Drucker, ist das Namensformat der Druckername. Ist dieser Parameter "", macht diese Funktion nichts, falls
+	schon ein Standard Drucker vorhanden ist. Falls jedoch kein Standarddrucker vorhanden ist, setzt diese Funktion
+	den ersten Drucker als Standard Drucker, sofern vorhanden, aus der Liste der installierten Drucker auf dem lokalen Computer.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ SetDefaultPrinter

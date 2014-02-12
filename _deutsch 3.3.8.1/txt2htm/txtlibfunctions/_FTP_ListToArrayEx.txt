@@ -1,0 +1,46 @@
+###User Defined Function###
+_FTP_ListToArrayEx
+
+###Description###
+Listet Name, Gr&ouml;&szlig;e, Attribute und Zeiten der Dateien/Verzeichnisse des aktuellen Remoteverzeichnisses.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_ListToArrayEx($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $b_Fmt = 1 [, $l_Context]]]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabe von _FTP_Connect().
+$Return_type
+	[optional] 0 = Dateien und Verzeichnisse, 1 = nur Verzeichnisse, 2 = nur Dateien.
+$l_Flags
+	[optional] siehe _FTP_FindFileFirst().
+$b_Fmt
+	[optional] Typ des Datum-Strings : 1 = yyyy/mm/dd, 0 = mm/dd/yyyy.
+$l_Context
+	[optional] Eine Variable, die einen anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit beliebigen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um eine Status Callbackfunktion zu setzen. 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	R&uuml;ckgabewert 2D Array, siehe Bemerkungen.
+Fehler:	Array[0][0] = 0.
+@@End@@
+
+###Remarks###
+Array[0][0] = Anzahl der gefundenen Eintr&auml;ge
+Array[x][0] Dateiname
+Array[x][1] Dateigr&ouml;&szlig;e
+Array[x][2] Dateiattribute
+Array[x][3] Datei Modifikationsdatum
+Array[x][4] Datei Erstellungsdatum
+Array[x][5] Datei Zugriffsdatum
+
+
+###Related###
+_FTP_Connect, _FTP_SetStatusCallback
+
+###Example###
+@@IncludeExample@@

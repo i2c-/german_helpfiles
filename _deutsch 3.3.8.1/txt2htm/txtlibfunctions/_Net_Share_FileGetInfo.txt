@@ -1,0 +1,50 @@
+###User Defined Function###
+_Net_Share_FileGetInfo
+
+###Description###
+Ermittelt einzelne Informationen &uuml;ber die ge&ouml;ffnete Ressource auf dem Server.
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_FileGetInfo($sServer, $iFileID)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Spezifiziert den DNS oder NetBIOS Namen des Remote-Servers auf dem die Funktion ausgef&uuml;hrt wird. Wenn
+	der Parameter leer ist, wird der lokale Computer benutzt.
+$iFileID
+	File-ID der Ressource, die die Informationen zur&uuml;ckgibt. Der Wert des Parameters
+		wurde in der vorangegangenen Aufz&auml;hlungsabfrage zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0][0] - Anzahl der Eintr&auml;ge im Array(n)
+	[0] - ID die der Ressource zugeteilt wird wenn sie ge&ouml;ffnet ist.
+	[1] - Zugriffsberechtigungen f&uuml;r die auszuf&uuml;hrende Ressource:
+	  1 - Berechtigung zum lesen und ausf&uuml;hren einer Ressource.
+	  2 - Berechtigung zum schreiben einer Ressource.
+	  4 - Berechtigung zum erstellen einer Ressource.
+	  8 - Berechtigung zum ausf&uuml;hren.
+	 16 - Berechtigung zum l&ouml;schen.
+	 32 - Berechtigung zum Rechte &auml;ndern.
+	 64 - &Auml;ndern der ACL Berechtigungen
+	[2] - Beinhaltet die maximale Anzahl der Dateien.
+	[3] - Spezifiziert den Pfad zu der ge&ouml;ffneten Ressource.
+	[4] - Spezifiziert welcher Benutzer an welchem Computer die Ressource ge&ouml;ffnet hat.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Nur Mitglieder der Lokalen-Gruppe Administratoren oder Server-Operater k&ouml;nnen diese Funktion ausf&uuml;hren.
+
+###Related###
+_Net_Share_SessionGetInfo, _Net_Share_ShareGetInfo
+
+###See Also###
+@@MsdnLink@@ NetFileGetInfo
+
+###Example###
+@@IncludeExample@@

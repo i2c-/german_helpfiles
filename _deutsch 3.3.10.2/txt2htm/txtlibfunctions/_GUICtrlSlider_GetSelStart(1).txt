@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_GetSelStart
+
+###Description###
+Ermittelt die Startposition des aktuell markierten Bereichs
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetSelStart ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Startposition des aktuell markierten Bereichs zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_SetSelStart
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlListView_SetBkColor
+
+###Description###
+Setzt die Hintergrundfarbe des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetBkColor($hWnd, $iColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iColor
+	zu setzende Hintergrundfarbe oder CLR_NONE Wert f&uuml;r keine Hintergrundfarbe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetBkColor
+
+###Example###
+@@IncludeExample@@

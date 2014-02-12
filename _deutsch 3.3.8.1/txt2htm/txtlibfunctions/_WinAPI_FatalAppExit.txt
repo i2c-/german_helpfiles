@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_FatalAppExit
+
+###Description###
+Zeigt ein Nachrichtenfenster und beendet die Anwendung
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_FatalAppExit($sMessage)
+
+###Parameters###
+@@ParamTable@@
+$sMessage
+	Der String wird in dem Nachrichtenfenster angezeigt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Eine Anwendung ruft FatalAppExit nur auf, wenn es keine M&ouml;glichkeit mehr sieht die Anwendung  anders zu beenden. FatalAppExit gibt den Speicher der Anwendung nicht immer frei und es k&ouml;nnte einen allgemeinen Fehler des Systems verursachen.
+Eine Anwendung die einen unerwarteten Fehler verursacht, sollte die Anwendung beenden und aller Speicher freigeben und die Nachrichtenschleife beenden.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ FatalAppExit

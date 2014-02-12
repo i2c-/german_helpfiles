@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_CancelEditLabel
+
+###Description###
+Beendet das Editieren des Itemtextes
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_CancelEditLabel ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_EditLabel, _GUICtrlListView_GetEditControl
+
+
+###Example###
+@@IncludeExample@@

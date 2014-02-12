@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetParts
+
+###Description###
+Ermittelt die Anzahl von Abschnitten und die Kanten der Abschnitte
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetParts ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	$aParts[0] - Anzahl von Abschnitten
+	$aParts[1] - Rechte Kante von Abschnitt #1
+	$aParts[2] - Rechte Kante von Abschnitt #2
+	$aParts[n] - Rechte Kante von Abschnitt n
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlStatusBar_SetParts
+
+
+###Example###
+@@IncludeExample@@

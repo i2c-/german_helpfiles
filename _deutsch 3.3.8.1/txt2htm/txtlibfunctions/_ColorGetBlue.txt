@@ -1,0 +1,27 @@
+###User Defined Function###
+_ColorGetBlue
+
+###Description###
+Gibt den Blauwert der angegebenen Farbe zur&uuml;ck.
+
+###Syntax###
+#include <Color.au3>
+_ColorGetBlue($nColor)
+
+###Parameters###
+@@ParamTable@@
+$nColor
+	Die Farbe in RGB, deren Blauwert ermittelt werden soll (0x00RRGGBB).
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt den blauen Farbanteil als Integer zur&uuml;ck (0-255).
+
+###Remarks###
+Keine.
+
+###Related###
+_ColorGetGreen, _ColorGetRed, _ColorGetRGB
+
+###Example###
+@@IncludeExample@@

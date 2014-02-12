@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlToolbar_AddString
+
+###Description###
+F&uuml;gt einen neuen String dem Stringpool der Toolbar hinzu
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_AddString($hWnd, $sString)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sString
+	hinzuzuf&uuml;gender String
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierender Index des neuen Strings
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetString
+
+###Example###
+@@IncludeExample@@

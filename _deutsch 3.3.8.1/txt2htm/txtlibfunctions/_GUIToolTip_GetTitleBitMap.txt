@@ -1,0 +1,25 @@
+###User Defined Function###
+_GUIToolTip_GetTitleBitMap
+
+###Description###
+Ermittelt das Titel Bitmap Icon
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetTitleBitMap($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt das Handle zum ToolTip Icon zur&uuml;ck
+
+###Remarks###
+Nur verf&uuml;gbar unter Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

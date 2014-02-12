@@ -1,0 +1,62 @@
+###User Defined Function###
+_FTP_ProgressUpload
+
+###Description###
+L&auml;dt eine Datei im Bin&auml;rmodus hoch und zeigt einen Fortschrittsbalken, bzw. ruft eine benutzerdefinierte Funktion auf
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_ProgressUpload($l_FTPSession, $s_LocalFile, $s_RemoteFile [, $FunctionToCall = ""])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabe von _FTP_Connect().
+$s_LocalFile
+	Die lokale Datei.
+$s_RemoteFile
+	Die auf dem Server zu erzeugende Datei.
+$FunctionToCall
+	[optional] Eine Funktion, welche einen Fortschrittsbalken aktualisiert oder auf Benutzereingaben reagiert, wie etwa einen Klick auf Abbrechen oder das Schlie&szlig;en der Anwendung. (Mehr Info am Ende des Kommentars)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@error:	-1 - Die lokale Datei konnte nicht ge&ouml;ffnet werden
+	-3 - Fehler beim Erzeugen der Datei
+	-4 - Fehler beim Schreiben in die Datei
+	-5 - Fehler beim Schlie&szlig;en der Datei
+	-6 - Upload durch die Fortschrittsfunktion abgebrochen und R&uuml;ckgabewert entspricht der aufgerufenen Funktion
+@@End@@
+
+###Remarks###
+Information &uuml;ber $FunctionToCall:
+   Parameter: $Percentage - Fortschritt in Prozent
+   R&uuml;ckgabewerte: Download fortsetzen - 1
+                  Download abbrechen    - 0 oder negativ
+                       Diese Werte werden ebenfalls von _FTP_ProgressUpload() zur&uuml;ckgegeben,
+                       so kann man auf verschiedene Ereignisse reagieren, wie z.B. einen Abbruch vom Benutzer, Schlie&szlig;en der Anwendung oder ein TimeOut von irgendwas.
+   Beispiele:
+                   Func _UpdateProgress($Percentage)
+                      ProgressSet($Percentage,$Percentage &"%")
+                      If _IsPressed("77") Then Return 0 ; Abbruch mit F8
+                      Return 1 ; Upload fortsetzen
+                   Endfunc
+
+                   Func _UpdateProgress($Percentage)
+                      GUICtrlSetData($ProgressBarCtrl,$Percentage)
+                      Switch GUIGetMsg()
+                         Case $GUI_EVENT_CLOSE
+                            Return -1 ; _FTP_UploadProgress Bricht mit -1 ab, so kann man die Anwendung hinterher schlie&szlig;en
+                        Case $Btn_Cancel
+                           Return 0 ; Einfach abbrechen, ohne speziellen R&uuml;ckgabewert
+                      EndSwitch
+                      Return 1 ; Ansonsten Upload fortsetzen
+                   Endfunc
+
+
+###Related###
+Keine.
+

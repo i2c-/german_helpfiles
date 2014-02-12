@@ -1,0 +1,32 @@
+###Function###
+StringUpper
+
+###Description###
+Wandelt einen String in Gro&szlig;schrift um.
+
+###Syntax###
+StringUpper ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der umzuwandelnde String.
+@@End@@
+
+
+###ReturnValue###
+Gibt den neuen String in Gro&szlig;schrift aus.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringIsLower, StringIsUpper, StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringCompare, StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsSpace, StringIsXDigit, StringReplace, StringSplit
+
+
+
+###Example###
+@@IncludeExample@@

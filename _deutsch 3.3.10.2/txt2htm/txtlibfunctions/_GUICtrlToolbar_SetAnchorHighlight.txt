@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlToolbar_SetAnchorHighlight
+
+###Description###
+Setzt die Einstellung von "anchor highlight"
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetAnchorHighlight ( $hWnd, $fAnchor )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fAnchor
+	"Anchor highlighting" Einstellung:
+		True - "Anchor highlighting" wird aktiviert
+		False - "Anchor highlighting" wird deaktiviert
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Einstellung von "anchor highlight" zur&uuml;ck.
+
+
+###Remarks###
+"anchor highlight" bedeutet, dass das letzte hervorgehobene Item hervorgehoben bleibt, bis ein anderes Item hervorgehoben wird.
+Dieses Vorkommnis tritt auch auf, wenn der Cursor das Toolbar-Control verl&auml;sst.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetAnchorHighlight
+
+
+###Example###
+@@IncludeExample@@

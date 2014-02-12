@@ -1,0 +1,40 @@
+###User Defined Function###
+_PathSplit
+
+###Description###
+Teilt einen Pfad in Laufwerk, Verzeichnis, Dateinamen und Dateierweiterung auf. Falls ein Teil des Pfades fehlt, wird ein leerer String gesetzt.
+
+###Syntax###
+#include <File.au3>
+_PathSplit($szPath, ByRef $szDrive, ByRef $szDir, ByRef $szFName, ByRef $szExt)
+
+###Parameters###
+@@ParamTable@@
+$szPath
+	der zu teilende Pfad (Kann einen UNC Server oder Laufwerksbuchstaben enthalten)
+$szDrive
+	String, in dem das Laufwerk gespeichert wird
+$szDir
+	String, in dem das Verzeichnis gespeichert wird
+$szFName
+	String, in dem der Dateiname gespeichert wird
+$szExt
+	String, in dem die Dateierweiterung gespeichert wird
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit 5 Elementen zur&uuml;ck:
+	0 = originaler Pfad
+	1 = Laufwerk
+	2 = Verzeichnis
+	3 = Dateiname
+	4 = Dateierweiterung
+
+###Remarks###
+Diese Funktion nimmt keinen Befehlszeilenstring an. Sie funktioniert mit Pfaden, aber nicht mit Pfaden mit Parametern.
+
+###Related###
+_PathFull, _PathMake
+
+###Example###
+@@IncludeExample@@

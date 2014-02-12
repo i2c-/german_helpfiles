@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetRect
+
+###Description###
+Ermittelt das abgrenzende Rechteck eines Abschnitts
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetRect($hWnd, $iPart)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPart
+	0-basierender Abschnittsindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aRect[0] = X Koordinate der oberen linken Ecke des Rechtecks
+	$aRect[1] = Y Koordinate der oberen linken Ecke des Rechtecks
+	$aRect[2] = X Koordinate der unteren rechten Ecke des Rechtecks
+	$aRect[3] = Y Koordinate der unteren rechten Ecke des Rechtecks
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetRectEx
+
+###Example###
+@@IncludeExample@@

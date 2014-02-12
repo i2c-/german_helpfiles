@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Au3check syntax Tool</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>AutoIt Syntax-Pr&uuml;f-Tool (Au3check)</h1>
+<p>&Uuml;berpr&uuml;ft die Syntax des kompletten Sprachumfangs.<br>
+Alle benutzten Symbole werden ebenfalls &uuml;berpr&uuml;ft:<br>
+<br>
+<li><b>Makros</b> :</li><ul>
+Die Benutzung undefinierter Makros wird als Fehler gemeldet.
+</ul>
+<br>
+<li><b>Variablen</b> :</li><ul>
+Au3Check gibt eine Warnung aus, wenn Variablen benutzt werden, bevor sie sichtbar sind. <br>
+Es ist jedoch m&ouml;glich, dass das Skript korrekt arbeitet, wie im folgenden Beispiel:
+<p class="codebox">
+For $i=1 To 2<br>
+If $i=2 Then msgbox(0, "Ok", $hello);<br>
+Local $hello = "Goodbye"<br>
+Next</p>
+Jedoch ist es schlechter Programmierstil und Au3Check wird eine Warnung erzeugen, dass hello m&ouml;glicherweise vor der<br>
+Deklaration verwendet wird.<br>
+Gleichfalls sollten globale Variablen, die in Funktionen deklariert werden, besser nicht in anderen Funktionen verwendet werden.<br>
+Wird eine Variable im Code vor der Funktion benutzt, erscheint eine Warnung.<br>
+Au&szlig;erdem meldet Au3Check einen Fehler, wenn eine Variable benutzt wird, aber nie explizit oder implizit deklariert wurde.<br>
+</ul>
+<br>
+<li><b>Funktionen</b> :</li><ul>
+Funktionen k&ouml;nnen aufgerufen werden, obwohl sie erst sp&auml;ter definiert werden. Au3Check &uuml;berpr&uuml;ft, ob
+alle Funktionen mit der korrekten Anzahl an Parametern aufgerufen werden.<br>
+Es &uuml;berpr&uuml;ft auch, ob ByRef-Parameter mit Variablen aufgerufen werden (also keine Leerwerte oder Ausdr&uuml;cke).<br>
+Schlie&szlig;lich werden undefinierte Funktionen gemeldet.<br>
+</ul>
+<br>
+Um einige Warnungen bzw. Fehler zu verhindern, m&uuml;ssen bestimmte Richtlinien in das Skript eingef&uuml;gt werden.<br>
+<br>
+<b>Richtlinien</b><br>
+--------------
+<p class="codeheader">#ignorefunc funcname [, ...]</p>
+<ul>kann f&uuml;r Plugin-Funktionen wie die folgenden verwendet werden:<br>
+<p class="codebox">
+#ignoreFunc PluginFunc1<br>
+Local $handle = PluginOpen("example.dll")<br>
+PluginFunc1(0.1, 0.2) ; ruft die Plugin-Funktion mit 2 Parametern auf<br>
+PluginClose($handle)</p></ul>
+<br>
+<p class="codeheader">#forceref $varname [, ...]</p>
+<ul>kann f&uuml;r interne Funktionen wie die folgenden verwendet werden:<br>
+<p class="codebox">
+Func Test_Numparams($v1 = 0, $v2 = 0, $v3 = 0, $v4 = 0, $v5 = 0, $v6 = 0, $v7 = 0, $v8 = 0, $v9 = 0)<br>
+	#forceref $v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9<br>
+	Local $val<br>
+	For $i = 1 To @NumParams<br>
+		$val &= Eval("v" & $i) & " "<br>
+	Next<br>
+	MsgBox(0, "@NumParams Beispiel", "@NumParams =" & @NumParams & @CRLF & @CRLF & $val)<br>
+EndFunc</p></ul>
+<br>
+<p class="codeheader">#forcedef $varname [, ...]</p>
+<ul>kann nach Assign() Funktionen wie die folgenden verwendet werden:<br>
+<p class="codebox">
+$n = Assign("y", 3)<br>
+#forcedef $y<br>
+$n = $y ;===&gt; $y = 3</p>
+</ul>
+<br>
+Dieses Kommandozeilenprogramm kann durch ein Editor Add-On aktiviert werden. Es liegt im gleichen Verzeichnis wie die AutoIt3.exe.<br>
+Der <a href="http://www.autoitscript.com/autoit3/scite/" class="ext">SciTE4AutoIt3</a> Editor stellt diese Umgebung zur Verf&uuml;gung.<br>
+<br>
+
+<b>Benutzung</b><br>
+--------<br>
+<p class="codeheader">Au3Check [-q] [-d] [-w[-] n].. [-v[-] n].. [-I Include-Verzeichnis].. file.au3</p>
+<ul>-q : Still, nur Fehler/Warnungen ausgeben<br>
+-d : Wie Opt("MustDeclareVars", 1)<br>
+-w 1: Bereits eingebundene Datei {ein)<br>
+-w 2: Fehlendes #comments-end bzw. #ce {ein)<br>
+-w 3: Bereits deklarierte Variable {aus}<br>
+-w 4: Lokale Variablen werden in einem globalen Bereich verwende (aus)<br>
+-w 5: Lokale Variablen sind deklariert, werden aber nicht verwendet (aus)<br>
+-w 6: Warnung falls Dim verwendet wird (aus)<br>
+-w 7: Warnung falls Const oder Ausdr&uuml;cke an ByRef Parameter &uuml;bergeben werden (ein)<br>
+-I Include-Verzeichnis: zus&auml;tzliches Richtlinien in denen nach Include-Dateien gesucht werden soll<br>
+<br>
+-v 1: Zeige Include-Pfade/-Dateien {aus}<br>
+-v 2: Zeige Lexer-Token {aus}<br>
+-v 3: zeige nicht dokumentierte UDFs und globale Variablen (aus)
+</ul>
+Fehlercodes:<ul>
+0: Erfolg (keine Fehler oder Warnungen)<br>
+1: nur Warnungen<br>
+2: Syntaxfehler<br>
+3: Verwendungs- oder Eingabefehler
+</ul>
+<br>  
+<b>Was wird nicht &uuml;berpr&uuml;ft?</b><br>
+--------------------------<ul>
+Im Wesentlichen Laufzeit-Informationen:<br>
+- Kein &Uuml;berpr&uuml;fung von Array-Dimensionen oder -Indizes, diese k&ouml;nnen nur zur Laufzeit &uuml;berpr&uuml;ft werden.<br>
+- Logische Fehler, ung&uuml;ltige Funktionsparameter und Division durch Null.<br>
+</ul></p>
+</body>
+</html>

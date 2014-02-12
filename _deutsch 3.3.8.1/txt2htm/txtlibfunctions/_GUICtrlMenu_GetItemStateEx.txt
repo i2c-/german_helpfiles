@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemStateEx
+
+###Description###
+Ermittelt die Men&uuml;flags die mit dem festgelegten Men&uuml;item verkn&uuml;pft sind
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemStateEx($hMenu, $iItem [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Falls das Men&uuml;item ein Untermen&uuml; &ouml;ffnet, enth&auml;lt das low-ordner byte des R&uuml;ckgabewertes die Men&uuml;flags
+	die mit dem Item verkn&uuml;pft sind und das high-order byte enth&auml;lt die Anzahl von Items in dem Untermen&uuml;, welches durch das Item ge&ouml;ffnet wurde. Sonst ist der R&uuml;ckgabewert eine Maske der Men&uuml;flags.
+Fehler:	-1
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetItemState, _GUICtrlMenu_GetItemState
+
+###Example###
+@@IncludeExample@@

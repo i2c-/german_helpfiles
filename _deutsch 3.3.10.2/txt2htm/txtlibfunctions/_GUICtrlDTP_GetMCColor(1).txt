@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlDTP_GetMCColor
+
+###Description###
+Ermittelt die festgelegte Farbe
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_GetMCColor ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	zeigt an welche Farbe des Monatskalender ermittelt werden soll:
+		0 - Hintergrundfarbe zwischen den Monaten
+		1 - Verwendete Farbe um den Text innerhalb eines Monats darzustellen
+		2 - Hintergrundfarbe im Kalendertitel
+		3 - Verwendete Farbe um den Text im Kalendertitel darzustellen
+		4 - Hintergrundfarbe innerhalb des Monats
+		5 - Verwendete Farbe um den Text des vorherigen und folgenden Tag darzustellen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Farbeinstellung f&uuml;r den festgelgten Abschnitt des Controls
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlDTP_SetMCColor
+
+
+###Example###
+@@IncludeExample@@

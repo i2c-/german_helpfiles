@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_RedrawItems
+
+###Description###
+Bewegt das Control dazu, einen Bereich mit Items neu aufzubauen
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_RedrawItems ( $hWnd, $iFirst, $iLast )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iFirst
+	0-basierender Index des ersten neu aufzubauenden Items
+$iLast
+	0-basierender Index des letzten neu aufzubauenden Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Das gew&uuml;nschte Item wird solange nicht neu aufgebaut, bis das Control eine $WM_PAINT Nachricht zum Neuaufbau erh&auml;lt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

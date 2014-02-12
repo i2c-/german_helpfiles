@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlMenu_SetItemChecked
+
+###Description###
+Markiert ein Men&uuml;item
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetItemChecked ( $hMenu, $iItem [, $fState = True [, $fByPos = True]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fState
+	[optional] True um den Status zu setzen, sonst False
+$fByPos
+	[optional] Men&uuml; ID Flag:
+		True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_GetItemChecked
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_SetView
+
+###Description###
+Setzt die Ansicht des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetView($hWnd, $iView)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iView
+	Status der Ansicht des Controls:
+		0 - Details
+		1 - Gro&szlig;e Icon
+		2 - Liste
+		3 - Kleine Icon
+		4 - Kacheln
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetView
+
+###Example###
+@@IncludeExample@@

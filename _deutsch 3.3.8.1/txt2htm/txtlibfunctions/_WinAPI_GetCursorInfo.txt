@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_GetCursorInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber den globalen Cursor
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetCursorInfo()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aCursor[0] - TRUE bei Erfolg, andernfalls FALSE
+	$aCursor[1] - TRUE wenn der Cursor sichtbar ist, andernfalls FALSE
+	$aCursor[2] - Handle zu dem Cursor
+	$aCursor[3] - X Koordinate des Cursors
+	$aCursor[4] - Y Koordinate des Cursors
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetCursorInfo
+
+###Example###
+@@IncludeExample@@

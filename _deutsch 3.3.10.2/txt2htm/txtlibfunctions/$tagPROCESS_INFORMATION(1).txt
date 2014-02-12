@@ -1,0 +1,25 @@
+###Structure Name###
+$tagPROCESS_INFORMATION
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber einen k&uuml;rzlich erstellten Prozess und dessen prim&auml;ren Thread
+
+###Syntax###
+Global Const $tagPROCESS_INFORMATION = "hwnd hProcess;hwnd hThread;int ProcessID;int ThreadID"
+
+
+###Fields###
+@@ParamTable@@
+hProcess
+	Ein Handle zu dem k&uuml;rzlich erstellten Prozess
+hThread
+	Ein Handle zu dem prim&auml;ren Thread des k&uuml;rzlich erstellen Prozesses
+ProcessID
+	Ein Wert der verwendet werden kann um einen Prozess zu identifizieren
+ThreadID
+	Ein Wert der verwendet werden kann um einen Thread zu identifizieren
+@@End@@
+
+
+###Remarks###
+Keine.

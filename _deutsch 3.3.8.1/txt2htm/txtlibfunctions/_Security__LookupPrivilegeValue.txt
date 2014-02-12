@@ -1,0 +1,36 @@
+###User Defined Function###
+_Security__LookupPrivilegeValue
+
+###Description###
+Erfragt den lokal beschr&auml;nkten Identifizierer (LUID) f&uuml;r einen privilegierten Wert in Form eines 64bit Integers
+
+###Syntax###
+#include <Security.au3>
+_Security__LookupPrivilegeValue($sSystem, $sName)
+
+###Parameters###
+@@ParamTable@@
+$sSystem
+	Gibt den Namen des Systems an, auf dem der privilegierte Name erfragt wird. Falls leer, 
+		versucht die Funktion den privilegierten Namen auf dem lokalen System zu finden.
+$sName
+	Gibt den Namen des Privilegs an
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	LUID bei der das Privileg bekannt ist
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__SetPrivilege
+
+###See Also###
+@@MsdnLink@@ LookupPrivilegeValue
+
+###Example###
+@@IncludeExample@@

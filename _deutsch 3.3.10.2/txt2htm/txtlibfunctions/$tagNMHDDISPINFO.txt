@@ -1,0 +1,42 @@
+###Structure Name###
+$tagNMHDDISPINFO
+
+###Description###
+Enth&auml;lt Informationen die bei der Verarbeitung von $HDN_GETDISPINFO Benachrichtigungen gebraucht werden
+
+###Syntax###
+Global Const $tagNMHDDISPINFO = "hwnd WndFrom;int IDFrom;int Code;int Item;int Mask;ptr Text;int TextMax;int Image;int lParam"
+
+
+###Fields###
+@@ParamTable@@
+WndFrom
+	Ein Fensterhandle zu dem Control welches die Nachricht sendet
+IDFrom
+	Ein Identifizierer des Controls welches die Nachricht sendet
+Code
+	Ein Benachrichtigungscode
+Item
+	0-basierter Index des Elements in dem Header-Control
+Mask
+	Satz von Bit-Flags, die festlegen welche Mitglieder der Struktur von dem Eigner des Controls
+	ausgef&uuml;llt werden m&uuml;ssen. Dieser Wert kann eine Kombination der folgenden Werte sein:
+		$HDI_TEXT - Das <b>Text</b> Feld muss ausgef&uuml;llt werden
+		$HDI_IMAGE - Das <b>Image</b> Feld muss ausgef&uuml;llt werden
+		$HDI_LPARAM - Das <b>lParam</b> Feld muss ausgef&uuml;llt werden
+		$HDI_DI_SETITEM - Ein R&uuml;ckgabewert. Weist darauf hin, dass das Control die Elementinformationen speichern soll und nicht wieder danach fragt.
+Text
+	Zeiger auf einen null-terminierten String, die den Text enth&auml;lt der f&uuml;r das Element angezeigt wird
+TextMax
+	Gr&ouml;&szlig;e des Puffers auf den <b>Text</b> verweist
+Image
+	0-basierter Index eines Bildes innerhalb der Imagelist. Das festgelegte Bild wird mit dem Element angezeigt,
+	aber es nimmt nicht den Platz der Bitmap des Elements ein. Wenn <b>Image</b> auf $I_IMAGECALLBACK gesetzt ist,
+	erfragt das Control die Bildinformationen f&uuml;r dieses Element indem es eine $HDN_GETDISPINFO Benachrichtigung sendet.
+lParam
+	Anwendungsspezifischer Wert des Elements
+@@End@@
+
+
+###Remarks###
+Keine.

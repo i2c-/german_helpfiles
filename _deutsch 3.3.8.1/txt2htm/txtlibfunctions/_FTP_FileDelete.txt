@@ -1,0 +1,34 @@
+###User Defined Function###
+_FTP_FileDelete
+
+###Description###
+L&ouml;scht eine Datei von einem FTP Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileDelete($l_FTPSession, $s_RemoteFile)
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabewert von _FTP_Connect()
+$s_RemoteFile
+	Der entfernte Standort der Datei.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0  und setzt @ERROR
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect
+
+###See Also###
+@@MsdnLink@@ FtpDeleteFile
+
+###Example###

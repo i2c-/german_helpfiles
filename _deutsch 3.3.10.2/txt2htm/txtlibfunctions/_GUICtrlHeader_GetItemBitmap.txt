@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlHeader_GetItemBitmap
+
+###Description###
+Ermittelt das Item Bitmap Handle
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_GetItemBitmap ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Item Bitmap Handle
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_SetItemBitmap
+
+
+###Example###
+@@IncludeExample@@

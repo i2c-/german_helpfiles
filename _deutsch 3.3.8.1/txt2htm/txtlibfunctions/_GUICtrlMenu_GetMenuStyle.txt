@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuStyle
+
+###Description###
+Ermittelt die Stilinformationen f&uuml;r ein Men&uuml;
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuStyle($hMenu)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+@@End@@
+
+###ReturnValue###
+Gibt die Stile des Men&uuml;s zur&uuml;ck. Es kann einer oder mehrere der folgenden Werte sein:
+	$MNS_AUTODISMISS - das Men&uuml; wird automatisch beendet, wenn sich die Maus f&uuml;r 10 Sekunden au&szlig;erhalb des Men&uuml;s befindet
+	$MNS_CHECKORBMP - Der gleiche Platz ist f&uuml;r das Markierfeld und das Bitmap reserviert
+	$MNS_DRAGDROP - Men&uuml;items sind OLE drop Ziele oder drag Quellen
+	$MNS_MODELESS - Men&uuml; ist formlos
+	$MNS_NOCHECK - Kein Platz ist links von einem Item f&uuml;r das Markierfeld reserviert
+	$MNS_NOTIFYBYPOS - Der Men&uuml;owner empf&auml;ngt eine WM_MENUCOMMAND Nachricht anstelle von einer WM_COMMAND Nachricht f&uuml;r die Auswahl
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetMenuStyle
+
+###Example###
+@@IncludeExample@@

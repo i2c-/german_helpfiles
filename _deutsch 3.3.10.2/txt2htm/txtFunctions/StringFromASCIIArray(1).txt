@@ -1,0 +1,46 @@
+###Function###
+StringFromASCIIArray
+
+###Description###
+Konvertiert ein Array mit ASCII-Code in einen String.
+
+###Syntax###
+StringFromASCIIArray ( array,[start = 0 [, end = -1 [, encoding = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+array
+	Das Array mit ASCII-Codes, welches in Zeichen konvertiert werden soll.
+start
+	[optional] Die 0-basierende Startposition (Standard: 0).
+end
+	[optional] Die 0-basierende Endposition  (Standard: <a href="UBound.htm">UBound</a>($aArray) - 1).
+encoding
+	[optional] Das Array enth&auml;lt Werte in dem festgelegten Zeichensatz:
+		0 = UTF-16 (Standard)
+		1 = ANSI
+		2 = UTF-8
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String mit Zeichen, die den ASCII-Codes entsprechen.
+Fehler:	Ein leerer String und setzt @error ungleich null.  
+@error:	1 = Eingabe ist kein Array.
+	2 = Ung&uuml;ltiger Startindex.
+@@End@@
+
+
+###Remarks###
+Der String k&ouml;nnte ein eingebundenes <a href="Chr.htm">Chr</a>(0) enthalten, wird aber weiterhin ein Stringtyp bleiben. Die meisten Stringfunktionen stoppen, nachdem das erste <a href="Chr.htm">Chr</a>(0) gefunden wurde. Falls jedoch Zugriff auf den kompletten Inhalt des Strings notwendig ist, kann die <a href="StringToBinary.htm">StringToBinary()</a>-Funktion verwendet werden, um ihn in einen Bin&auml;rstring umzuwandeln und dann alle Daten zur Verf&uuml;gung zu haben.
+
+Falls versucht wird, ein Array manuell zu erstellen (Im Gegensatz zu einem Array, welches von <a href="StringToASCIIArray.htm">StringToASCIIArray()</a> zur&uuml;ckgegeben wird), muss der Code im Array als UNICODE festgelegt sein.
+
+
+###Related###
+StringToASCIIArray
+
+
+###Example###
+@@IncludeExample@@

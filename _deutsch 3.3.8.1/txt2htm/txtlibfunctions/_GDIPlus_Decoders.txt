@@ -1,0 +1,44 @@
+###User Defined Function###
+_GDIPlus_Decoders
+
+###Description###
+Ein Array von Informationen &uuml;ber die verf&uuml;gbaren Bild-Decoder holen
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_Decoders()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0][ 0] - Anzahl der Decoder
+	[1][ 1] - Codec-Bezeichnung
+	[1][ 2] - Dateiformatskennung
+	[1][ 3] - Codecname
+	[1][ 4] - Dll, in welcher sich der Code befindet
+	[1][ 5] - Der Name des Dateiformates, das vom Codec genutzt wird
+	[1][ 6] - Dateinamenserweiterungen, die mit dem Codec verkn&uuml;pft sind
+	[1][ 7] - Der MIME-Typ des Codecs
+	[1][ 8] - Kombination der $GDIP_ICF-Flags
+	[1][ 9] - Die Version des Codecs
+	[1][10] - Die Anzahl der Signaturen, die vom Dateityp benutzt werden
+	[1][11] - Die Anzahl der Bytes in jeder Signatur
+	[1][12] - Zeiger auf das Muster f&uuml;r jede Signatur
+	[1][13] - Zeiger auf die Maske f&uuml;r jede Signatur
+Fehler:	@error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_Encoders
+
+###See Also###
+@@MsdnLink@@ GdipGetImageDecoders
+
+###Example###
+@@IncludeExample@@

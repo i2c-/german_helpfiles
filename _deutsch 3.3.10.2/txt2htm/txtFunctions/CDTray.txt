@@ -1,0 +1,37 @@
+###Function###
+CDTray
+
+###Description###
+&Ouml;ffnet oder schlie&szlig;t die gew&uuml;nschte Laufwerkschublade.
+
+###Syntax###
+CDTray ( "drive", "status" )
+
+
+###Parameters###
+@@ParamTable@@
+drive
+	Der Laufwerksbuchstabe des zu &ouml;ffnenden oder schlie&szlig;enden Laufwerks muss so angegeben werden: <b>D:</b>, <b>E:</b>, usw.
+status
+	Gibt an ob ein Laufwerk ge&ouml;ffnet (<b>"open"</b>) oder geschlossen (<b>"closed"</b>) werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn das Laufwerk durch eine Software gesperrt wurde oder f&uuml;r den Fall, dass das Laufwerk kein CD/DVD Laufwerk ist.
+@@End@@
+
+
+###Remarks###
+Die <a href="CDTray.htm">CDTray()</a> Funktion ist in der Lage Images aus virtuellen Laufwerken auszuwerfen (z.B. DAEMON Tools Laufwerke).
+<a href="CDTray.htm">CDTray()</a> funktioniert nur mit lokalen Laufwerken; nicht mit Netzlaufwerken oder anderen nicht-lokalen Laufwerken.
+<a href="CDTray.htm">CDTray()</a>("X:", "close") gibt bei Laufwerken die sich nur manuell schlie&szlig;en lassen (viele Laptop Laufwerke) auch 0 zur&uuml;ck.
+
+
+###Related###
+DriveGetType, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMaxTodayWidth
+
+###Description###
+Ermittelt die maximale Breite des "heute"-Strings in einem MonthCal-Control
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMaxTodayWidth($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die Breite des "heute"-Strings in Pixel
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

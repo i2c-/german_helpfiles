@@ -1,0 +1,47 @@
+###User Defined Function###
+_WinAPI_CallWindowProc
+
+###Description###
+&Uuml;bergibt die "Hook"-Information an die n&auml;chste "Hook"-Prozedur in der aktuellen "Hook"-Kette.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CallWindowProc ( $lpPrevWndFunc, $hWnd, $Msg, $wParam, $lParam )
+
+
+###Parameters###
+@@ParamTable@@
+$lpPrevWndFunc
+	Zeiger auf die vorherige Fensterprozedur.
+	Falls dieser Wert durch Aufruf der Funktion _WinAPI_GetWindowLong bestimmt wurde, wobei der $iIndex-Parameters den Wert $GWL_WNDPROC oder $DWL_DLGPROC hatte,
+	entspricht der Zeiger entweder der Adresse einer Fenster- bzw. Dialogboxprozedur oder einem speziellen internen Wert, der nur f&uuml;r _WinAPI_CallWindowProc eine Bedeutung hat.
+$hWnd
+	Handle zu der Fensterprozedur, die die Meldung empf&auml;ngt
+$Msg
+	Gibt die Meldung an
+$wParam
+	Gibt zus&auml;tzliche meldungsspezifische Informationen an. Der Inhalt dieses Parameters h&auml;ngt vom Wert des Msg-Parameters ab.
+$lParam
+	Gibt zus&auml;tzliche meldungsspezifische Informationen an. Der Inhalt dieses Parameters h&auml;ngt vom Wert des Msg-Parameters ab.
+@@End@@
+
+###ReturnValue###
+Gibt den R&uuml;ckgabewert der vom Ergebnis der Meldungsbehandlung bestimmt wird zur&uuml;ck. Dies h&auml;ngt von der versendeten Meldung ab.
+
+
+###Remarks###
+Man benutzt die _WinAPI_CallWindowProc-Funktion f&uuml;r die Fenstervererbung in Subklassen. Normalerweise teilen sich alle Fenster der selben Klasse eine Fensterprozedur. Eine Subklasse enth&auml;lt ein Fenster oder ein Satz von Fenstern derselben Klasse. Deren Meldungen werden von einer (und/oder mehreren) anderen Fensterprozeduren abgefangen und verarbeitet, bevor sie von der &uuml;bergeordneten Fensterprozedur verarbeitet werden.
+
+Die _WinAPI_SetWindowLong-Funktion erzeugt eine Subklasse durch &Auml;ndern der zu dem jeweiligen Fenster geh&ouml;renden Prozedur, wodurch das System eine neue Fensterprozedur anstelle der urspr&uuml;nglichen ausf&uuml;hrt. Eine Anwendung muss alle Meldungen, die die neue Fensterprozedur nicht selbst behandelt, an die urspr&uuml;ngliche Fensterprozedur durchreichen. Dies geschieht durch Aufruf der _WinAPI_CallWindowProc-Funktion. Dadurch kann die Anwendung eine Kette von Fensterprozeduren erzeugen.
+
+
+###Related###
+_WinAPI_SetWindowLong
+
+
+###See Also###
+@@MsdnLink@@ CallWindowProc
+
+
+###Example###
+@@IncludeExample@@

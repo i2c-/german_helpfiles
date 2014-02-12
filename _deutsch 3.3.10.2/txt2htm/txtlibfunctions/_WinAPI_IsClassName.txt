@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_IsClassName
+
+###Description###
+Wrapper um den Klassennamen eines Fensters zu pr&uuml;fen
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_IsClassName ( $hWnd, $sClassName )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster
+$sClassName
+	Klassenname der gepr&uuml;ft werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	$sClassName stimmt mit dem von $hWnd ermittelten Klassennamen &uuml;berein
+False:	$sClassName stimmt nicht mit dem von $hWnd ermittelten Klassennamen &uuml;berein
+@@End@@
+
+
+###Remarks###
+Genutzt um zu pr&uuml;fen, ob das korrekte $hWnd an die Funktion &uuml;bergeben wurde
+
+
+###Related###

@@ -1,0 +1,56 @@
+###User Defined Function###
+_WinAPI_CreateWindowEx
+
+###Description###
+Erstellt ein &uuml;berlappendes, Pop-up oder ein Child-Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateWindowEx ( $iExStyle, $sClass, $sName, $iStyle, $iX, $iY, $iWidth, $iHeight, $hParent [, $hMenu = 0 [, $hInstance = 0 [, $pParam = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$iExStyle
+	erweiterter Fensterstil
+$sClass
+	registrierter Klassenname
+$sName
+	Fenstername
+$iStyle
+	Fensterstil
+$iX
+	Horizontale Position des Fensters
+$iY
+	Vertikale Position des Fensters
+$iWidth
+	Fensterbreite
+$iHeight
+	Fensterh&ouml;he
+$hParent
+	Handle zum Parent- oder Eigner-Fenster
+$hMenu
+	[optional] Handle zum Men&uuml; oder Child-Fenster ID
+$hInstance
+	[optional] Handle zur Instanz der Anwendung
+$pParam
+	[optional] Zeiger auf die Erstellungsdaten des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem neuen Fenster
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_DestroyWindow
+
+
+###See Also###
+@@MsdnLink@@ CreateWindowEx

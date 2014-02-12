@@ -1,0 +1,37 @@
+###Function###
+GUIGetStyle
+
+###Description###
+Erfragt den Stil GUI-Fensters.
+
+###Syntax###
+GUIGetStyle ( [winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+winhandle
+	[optional] Fensterhandle der aus GUICreate zur&uuml;ckgegeben wird (Standard ist das zuvor genutzte Fenster).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Zwei-Item Array zur&uuml;ck das die Stil-Information enth&auml;lt:
+	$array[0] = Stil
+	$array[1] = Erweiterter Stil
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Es ist zu Beachten: Der Stil wechselt nach einem Aufruf von GUISetState().
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate, GUISetStyle
+
+
+###Example###
+@@IncludeExample@@

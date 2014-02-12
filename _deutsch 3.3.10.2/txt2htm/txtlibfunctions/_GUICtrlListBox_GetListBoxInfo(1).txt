@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListBox_GetListBoxInfo
+
+###Description###
+Ermittelt die Anzahl der Items pro Reihe in einer speziellen List-Box
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetListBoxInfo ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl der Items der Reihe zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

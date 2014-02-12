@@ -1,0 +1,32 @@
+###Function###
+StringLeft
+
+###Description###
+Gibt eine Anzahl von Zeichen, links ausgehend von dem String zur&uuml;ck.
+
+###Syntax###
+StringLeft ( "string", count )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der auszuwertende String.
+count
+	Die Anzahl der Zeichen, die zur&uuml;ckgegeben werden sollen.
+@@End@@
+
+
+###ReturnValue###
+Gibt einen String zur&uuml;ck, der die von <i>Links ausgehende</i> Anzahl an Zeichen enth&auml;lt.
+
+
+###Remarks###
+Wenn <i>count</i> die L&auml;nge des Strings &uuml;berschreitet, wird der gesamte String zur&uuml;ckgegeben. Ist <i>count</i> negativ, wird ein leerer String zur&uuml;ckgegeben.
+
+###Related###
+StringInStr, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

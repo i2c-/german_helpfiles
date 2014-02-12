@@ -1,0 +1,30 @@
+###User Defined Function###
+_MemGlobalFree
+
+###Description###
+Gibt das angegebene Global-Memory-Objekt frei und macht dessen Handle ung&uuml;ltig.
+
+###Syntax###
+#include <Memory.au3>
+_MemGlobalFree($hMem)
+
+###Parameters###
+@@ParamTable@@
+$hMem
+	Handle zu dem Global-Memory-Objekt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0
+Fehler:	$hMem
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_MemGlobalAlloc
+
+###See Also###
+@@MsdnLink@@ GlobalFree

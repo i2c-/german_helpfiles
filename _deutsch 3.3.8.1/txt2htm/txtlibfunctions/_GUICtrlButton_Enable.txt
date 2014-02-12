@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlButton_Enable
+
+###Description###
+Aktiviert oder deaktiviert die Eingabe per Maus oder Tastatur in dem festgelegten Button
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_Enable($hWnd [, $fEnable = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fEnable
+	[optional] legt fest, ob der Button aktiviert oder deaktiviert werden soll:
+		 True - Der Button ist aktiviert
+		False - Der Button ist deaktiviert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

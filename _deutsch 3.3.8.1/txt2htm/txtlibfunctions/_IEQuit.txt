@@ -1,0 +1,39 @@
+###User Defined Function###
+_IEQuit
+
+###Description###
+Schlie&szlig;t den Internet Explorer und entfernt alle darauf verweisenden Objekte.
+
+###Syntax###
+#include <IE.au3>
+_IEQuit(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck, setzt @ERROR:
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Dateityp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp.
+@Extended:	Beinhaltet die Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+_IEQuit ist vor allem dann wichtig, wenn man mit unsichtbaren Instanzen vom Internet Explorer arbeitet. Wenn AutoIt w&auml;hrend der Arbeit mit einer sichtbaren Instanz vom Internet Explorer beendet wird, wird der Browser nicht beendet und der Benutzer kann weiter mit dem Fenster arbeiten. Ist die Instanz des Internet Explorers unsichtbar w&auml;hrend AutoIt beendet wird, l&auml;uft der Browser im Hintergrund weiter, kann jedoch nicht weiter benutzt werden. Es empfielt sich _IEQuit immer anzuwenden, wenn der Browser nach Beendigung des Skripts, nicht mehr ben&ouml;tigt wird.
+
+_IEQuit funktioniert nicht mit eingebetteten Browserobjekten, welche mit _IeCreateEmbedded erstellt wurden. Der Browser-Prozess wird automatisch mit der GUI beendet.
+
+
+###Related###
+_IEAttach, _IECreate
+
+
+###Example###
+@@IncludeExample@@

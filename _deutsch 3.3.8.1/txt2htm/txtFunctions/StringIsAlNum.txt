@@ -1,0 +1,32 @@
+###Function###
+StringIsAlNum
+
+###Description###
+Pr&uuml;ft, ob der String nur alphanumerische Zeichen enth&auml;lt.
+
+###Syntax###
+StringIsAlNum ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der String nicht alphanumerische Zeichen enth&auml;lt.
+@@End@@
+
+
+###Remarks###
+Es ist zu beachten, dass "StringIsAlNum" beim erkennen von Leerzeichen den Wert "0" zur&uuml;ckgibt.
+
+###Related###
+StringIsAlpha, StringIsASCII, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower
+
+
+###Example###
+@@IncludeExample@@

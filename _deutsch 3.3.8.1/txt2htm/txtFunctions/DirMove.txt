@@ -1,0 +1,43 @@
+###Function###
+DirMove
+
+###Description###
+Verschiebt ein Verzeichnis samt Unterordner und Dateien.
+
+###Syntax###
+DirMove ( "source dir", "dest dir" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+source dir
+	Pfad zum Quellordner ohne abschlie&szlig;enden Backslash (z.B. "C:\Path1")
+dest dir
+	Pfad zum Zielordner ohne abschlie&szlig;enden Backslash (z.B. "C:\Path1_Copy")
+flag
+	[optional] dieser Parameter gibt an, ob eventuell schon existierende Dateien &uuml;berschrieben werden sollen oder nicht.
+	 0 = (Standard) kein &Uuml;berschreiben von bestehenden, gleichnamigen Dateien
+	 1 = &Uuml;berschreiben gleichnamiger Dateien
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn das Verschieben des Ordners fehlschlug.
+@@End@@
+
+
+###Remarks###
+Wenn die Quelle und das Ziel auf verschiedenen Laufwerken liegen oder UNC-Pfade sind, dann wird statt einer Verschiebe- eine Kopier- und L&ouml;schoperation durchgef&uuml;hrt.
+
+Wenn der Zielort schon existiert, und bei "flag" angegeben wird, dass &uuml;berschrieben werden soll, so wird das Quellverzeichnis <b>in</b> das Zielverzeichnis verschoben.
+
+Weil AutoIt eine "Ordner Umbenennen"-Funktion fehlt, ist DirMove zu benutzen, um einen Ordner umzubenennen!
+
+###Related###
+DirRemove, FileMove
+
+
+###Example###
+@@IncludeExample@@

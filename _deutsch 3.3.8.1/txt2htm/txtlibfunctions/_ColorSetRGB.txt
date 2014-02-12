@@ -1,0 +1,35 @@
+###User Defined Function###
+_ColorSetRGB
+
+###Description###
+Gibt die RGB Farbe zur&uuml;ck.
+
+###Syntax###
+#include <Color.au3>
+_ColorSetRGB($aColor)
+
+###Parameters###
+@@ParamTable@@
+$aColor
+	Ein Array mit Werten im Bereich 0-255:
+	[0] Rotanteil in der zur&uuml;ckzugebenden Farbe
+	[1] Gr&uuml;nanteil in der zur&uuml;ckzugebenden Farbe
+	[2] Blauanteil in der zur&uuml;ckzugebenden Farbe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die RGB Farbe zur&uuml;ck mit der gearbeitet werden soll (0x00RRGGBB).
+Fehler:	setzt @error
+@error:	1 Inkorrektes Array
+	2 Inkorrekter Farbwert
+@@End@@
+
+###Remarks###
+@extended bleibt erhalten.
+
+###Related###
+_ColorGetRGB
+
+###Example###
+@@IncludeExample@@

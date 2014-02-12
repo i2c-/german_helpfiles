@@ -1,0 +1,37 @@
+###Function###
+WinGetClientSize
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;e des Clientbereichs eines Fensters (Fenster ohne Titel, Status, Rahmen).
+
+###Syntax###
+WinGetClientSize ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fensters, dessen Gr&ouml;&szlig;e gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, dessen Gr&ouml;&szlig;e gelesen werden soll. Standardwert ist ein leerer String. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit zwei Elementen und folgenden Inhalt:
+		$aArray[0] = Breite des Fensters.
+		$aArray[1] = H&ouml;he des Fensters.
+Fehler:	setzt @error ungleich null, wenn das Fenster nicht gefunden wird.
+@@End@@
+
+
+###Remarks###
+Ist das Fenster minimiert, sind Breite und H&ouml;he '0'. <a href="WinGetClientSize.htm">WinGetClientSize()</a> arbeitet allerdings korrekt mit (nicht minimierten) versteckten Fenstern. Wenn der Fenstertitel "Program Manager" angegeben wird, gibt die Funktion die Gr&ouml;&szlig;e des Desktops zur&uuml;ck. Falls mehrere Fenster das angegebene Kriterium erf&uuml;llen, wird das zuletzt aktive Fenster abgefragt.
+
+
+###Related###
+WinGetPos, WinMove
+
+
+###Example###
+@@IncludeExample@@

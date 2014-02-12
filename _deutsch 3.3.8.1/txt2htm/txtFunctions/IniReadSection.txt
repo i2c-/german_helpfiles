@@ -1,0 +1,39 @@
+###Function###
+IniReadSection
+
+###Description###
+Liest alle Schl&uuml;ssel-/Wert-Paare aus einer Sektion einer standardkonformen .ini-Datei.
+
+###Syntax###
+IniReadSection ( "filename", "section" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname der .ini-Datei.
+section
+	Der Name der Sektion in der .ini-Datei.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein 2-dimensionales Array zur&uuml;ck, in dem element[n][0] der Schl&uuml;ssel und element[n][1] der Wert ist.
+Fehler:	Setzt @error auf 1, wenn die Sektion nicht gelesen werden kann (Die .ini-Datei oder die Sektion k&ouml;nnte nicht existieren)
+@@End@@
+
+
+###Remarks###
+Eine standardkonforme .ini-Datei sieht folgenderma&szlig;en aus:
+<i>[SektionsName]
+Schl&uuml;ssel=Wert</i>
+
+Die Anzahl der zur&uuml;ckgegebenen Elemente steht in $result[0][0]. Wenn ein @error auftaucht, wird kein Array erstellt.
+Nur die ersten 32767 Zeichen werden aufgrund der Kompatibilit&auml;t in einer Sektion gelesen.
+
+###Related###
+IniDelete, IniWrite, IniRead, IniReadSectionNames, IniRenameSection, IniWriteSection
+
+
+###Example###
+@@IncludeExample@@

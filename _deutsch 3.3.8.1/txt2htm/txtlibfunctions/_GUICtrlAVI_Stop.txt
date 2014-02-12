@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlAVI_Stop
+
+###Description###
+Stoppt einen spielenden AVI-Clip
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_Stop($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlAVI_Play
+
+###Example###
+@@IncludeExample@@

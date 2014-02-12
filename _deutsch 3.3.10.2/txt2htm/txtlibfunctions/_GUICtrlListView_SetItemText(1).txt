@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_SetItemText
+
+###Description###
+&Auml;ndert den Text eines Items oder Subitems
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemText ( $hWnd, $iIndex, $sText [, $iSubItem = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$sText
+	Text des Items oder Subitems
+$iSubItem
+	[optional] 1-basierender Index des Subitems oder 0 um das Item zu setzen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemText, _GUICtrlListView_GetItemTextArray, _GUICtrlListView_GetItemTextString, _GUICtrlListView_InsertItem
+
+
+###Example###
+@@IncludeExample@@

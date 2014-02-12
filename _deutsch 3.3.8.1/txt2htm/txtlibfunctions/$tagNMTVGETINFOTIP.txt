@@ -1,0 +1,26 @@
+###Structure Name###
+$tagNMTVGETINFOTIP
+
+###Description###
+Enth&auml;lt und ermittelt Treeview Elementinformationen, die f&uuml;r die Anzeige eines Tooltips n&ouml;tig sind.
+
+###Syntax###
+Global Const $tagNMTVGETINFOTIP = $tagNMHDR & ";ptr Text;int TextMax;hwnd hItem;int lParam"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Text
+	Adresse eines Zeichenpuffers, der den darzustellenden Text enth&auml;lt
+TextMax
+	Gr&ouml;&szlig;e des Puffers aus <b>Text</b>, in Zeichen. 
+	Obwohl man niemals annehmen sollte, dass dieser Puffer eine ganz bestimmte Gr&ouml;&szlig;e haben wird, kann der Wert $INFOTIPSIZE f&uuml;r Gestaltungszwecke genutzt werden.
+hItem
+	Treehandle zu dem Element, f&uuml;r welches der ToolTip angezeigt werden soll
+lParam
+	Ein anwendungsdefinierter Wert, der mit dem Element verkn&uuml;pft ist, f&uuml;r welches der ToolTip angezeigt werden soll
+@@End@@
+
+###Remarks###
+Keine.

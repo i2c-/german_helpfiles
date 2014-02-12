@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_LoadString
+
+###Description###
+L&auml;dt eine String Ressource von der ausf&uuml;hrbaren Datei die mit einem bestimmten Modul verkn&uuml;pft ist
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadString($hInstance, $iStringId)
+
+###Parameters###
+@@ParamTable@@
+$hInstance
+	Handle zu der Instanz des Moduls dessen ausf&uuml;hrbare Datei der zu ladende String enth&auml;lt
+$iStringId
+	Gibt die Integer-ID der String Ressource an
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der gew&uuml;nschte String, @extended ist die Anzahl der kopierten Zeichen in TCHAR
+Fehler:	Leerer String und @error ist gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_LoadLibraryEx, _WinAPI_FreeLibrary
+
+###See Also###
+@@MsdnLink@@ LoadString
+
+###Example###
+@@IncludeExample@@

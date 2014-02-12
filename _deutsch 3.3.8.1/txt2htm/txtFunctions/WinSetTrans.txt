@@ -1,0 +1,36 @@
+###Function###
+WinSetTrans
+
+###Description###
+Setzt die Transparenz eines Fensters. (Windows 2000/XP oder neuer)
+
+###Syntax###
+WinSetTrans ( "title", "text", transparency )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das ver&auml;ndert werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	Der Text des Fensters, das ver&auml;ndert werden soll.
+transparency
+	Eine Zahl im Bereich 0 bis 255.  Je kleiner die Zahl ist, desto h&ouml;her wird die Transparenz des Fensters.  255 = keine Transparenz, 0 = durchsichtig.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ungleich 0 zur&uuml;ck. (z.B. 1)
+Fehler:	Gibt 0 zur&uuml;ck, @error wird auf 1 gesetzt, wenn die Funktion durch das Betriebssystem nicht unterst&uuml;tzt wird.
+@@End@@
+
+
+###Remarks###
+Erfordert Windows 2000/XP oder neuer. Die Farbtiefe muss gr&ouml;&szlig;er oder gleich 16 Bit sein.
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###Function###
+TraySetClick
+
+###Description###
+Setzt den Klickmodus des Trayicons. Sprich durch welche Mausklicks das Traymen&uuml; angezeigt werden soll.
+
+###Syntax###
+TraySetClick ( flag )
+
+
+###Parameters###
+@@ParamTable@@
+flag
+	0 = Traymen&uuml; wird nie durch einen Mausklick angezeigt
+	1 = dr&uuml;cken der prim&auml;ren Maustaste
+	2 = loslassen der prim&auml;ren Maustaste
+	4 = Doppelklick der prim&auml;ren Maustaste
+	8 = dr&uuml;cken der sekund&auml;ren Maustaste
+	16 = loslassen der sekund&auml;ren Maustaste
+	32 = Doppelklick der sekund&auml;ren Maustaste
+	64 = Bewegung &uuml;ber das Trayicon
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Diese Flags sind keine Tray Event Werte!
+Standard Wert ist 9. Somit wird durch dr&uuml;cken der prim&auml;ren oder sekund&auml;ren Maustaste das Traymen&uuml; angezeigt.
+
+###Related###
+TraySetOnEvent
+
+
+###Example###
+@@IncludeExample@@

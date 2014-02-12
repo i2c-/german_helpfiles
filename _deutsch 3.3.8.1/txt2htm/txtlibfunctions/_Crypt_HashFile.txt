@@ -1,0 +1,36 @@
+###User Defined Function###
+_Crypt_HashFile
+
+###Description###
+Erstellt den Hash einer Datei mit dem festgelegten Algorithmus.
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_HashFile($sFile, $iALG_ID)
+
+###Parameters###
+@@ParamTable@@
+$sFile
+	Pfad zur Datei
+$iALG_ID
+	Hash-ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg	Gibt Wert des Hash wieder
+	Setzt @error auf 0
+Fehler  Gibt -1 wieder und setzt @error:
+	1 - &Ouml;ffnen der Datei fehlgeschlagen
+	2 - Fehler im fertigem Hashwert
+	3 - Fehler beim erhalten des Hashwert
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Crypt_HashData
+
+###Example###
+@@IncludeExample@@

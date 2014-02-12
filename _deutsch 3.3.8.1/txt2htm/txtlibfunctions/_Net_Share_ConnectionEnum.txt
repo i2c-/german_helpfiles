@@ -1,0 +1,49 @@
+###User Defined Function###
+_Net_Share_ConnectionEnum
+
+###Description###
+Listet alle zu einer freigegebenen Ressource gemachten Verbindungen auf
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ConnectionEnum($sServer, $sQualifier)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	String, der den DNS- oder NetBIOS-Namen des Remote Servers angibt, auf dem die Funktion ausgef&uuml;hrt werden soll. Wenn dieser Parameter leer bleibt, wird der lokale Computer verwendet.
+$sQualifier
+	Gibt den interessierenden Freigabe- oder Computernamen an. Ist es ein Freigabename, werden alle zu dieser Freigabe gemachten Verbindungen aufgelistet. Ist es ein Computername, listet die Funktion alle von diesem Computer zu dem angegebenen Server gemachten Verbindungen auf.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0][0] - Anzahl der Array-Eintr&auml;ge
+	[1][0] - Verbindungs-ID
+	[1][1] - Verbindungs-Typ. Kann eine Kombination sein aus:
+	 $STYPE_DISKTREE - Laufwerke
+	 $STYPE_PRINTQ - Drucker-Warteschlange
+	 $STYPE_DEVICE - Kommunikationsger&auml;t
+	 $STYPE_IPC - IPC
+	 $STYPE_SPECIAL - Spezielle, f&uuml;r IPC$ oder Remote-Administration reservierte Freigabe des Servers
+	 $STYPE_TEMPORARY - tempor&auml;re Freigabe
+	[1][2] - Anzahl der momentan in Folge einer Verbindung ge&ouml;ffneten Dateien
+	[1][3] - Anzahl der Benutzer auf der Verbindung
+	[1][4] - Anzahl der Sekunden, die die Session aufgebaut war
+	[1][5] - L&auml;uft der Server mit der freigegebenen Ressource mit User-Level-Security, so beschreibt dieser Wert, welcher Benutzer die Verbindung hergestellt hat. L&auml;uft der Server mit Share-Level-Security, beschreibt dieser Wert, welcher Computer die Verbindung hergestellt hat.
+	[1][6] - Gibt entweder den Freigabenamen der freigegebenen Server-Ressource oder den Computernamen des Clients an
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+F&uuml;r diese Funktion ist die Zugeh&ouml;rigkeit zu einer der Usergruppen Administratoren, Server- oder Druck-Operatoren oder Hauptbenutzer erforderlich.
+
+###Related###
+_Net_Share_FileEnum, _Net_Share_SessionEnum, _Net_Share_ShareEnum
+
+###See Also###
+@@MsdnLink@@ NetConnectionEnum
+
+###Example###
+@@IncludeExample@@

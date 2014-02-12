@@ -1,0 +1,39 @@
+###User Defined Function###
+_ExcelColumnDelete
+
+###Description###
+L&ouml;scht ein Anzahl von Spalten aus der aktuelle Excel-Datei.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelColumnDelete ( $oExcel, $iColumn [, $iNumCols = 1] )
+
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel Objekt welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$iColumn
+	Die festgelegte zu l&ouml;schende Spaltennummer
+$iNumCols
+	[optional] Die Anzahl der zu l&ouml;schenden Spalten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - festgelegte Spalte ist ung&uuml;ltig
+@@End@@
+
+
+###Remarks###
+Diese Funktion wird alle Spalten die sich nach der eingef&uuml;gten Spalte befinden nach links schieben
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

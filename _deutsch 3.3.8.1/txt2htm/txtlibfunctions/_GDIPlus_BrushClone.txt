@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_BrushClone
+
+###Description###
+Clont ein F&uuml;llmuster-Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BrushClone($hBrush)
+
+###Parameters###
+@@ParamTable@@
+$hBrush
+	Handle zu einem F&uuml;llmuster-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem neuen F&uuml;llmuster-Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit dem F&uuml;llmuster-Objekt fertig ist, ist _GDIPlus_BrushDispose aufzurufen, um die Ressourcen wieder freizugeben
+
+###Related###
+_GDIPlus_BrushDispose
+
+###See Also###
+@@MsdnLink@@ GdipCloneBrush
+
+###Example###
+@@IncludeExample@@

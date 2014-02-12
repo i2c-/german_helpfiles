@@ -1,0 +1,38 @@
+###User Defined Function###
+_ArrayCombinations
+
+###Description###
+Gibt ein Array mit den Kombinationen eines Elementsatzes von einem ausgew&auml;hlten Array zur&uuml;ck
+
+###Syntax###
+#include <Array.au3>
+_ArrayCombinations(ByRef $avArray, $iSet [, $sDelim = ""])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	das zu verwendende Array
+$iSet
+	Gr&ouml;&szlig;e des Kombinationssatzes
+$sDelim
+	[optional] Zeichen f&uuml;r Stringtrennung, Standard ist "" f&uuml;r keines
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array mit den Kombinationen zur&uuml;ck
+	Gibt ein Array zur&uuml;ck. Das erste Element ($array[0]) enth&auml;lt die Anzahl von zur&uuml;ckgegebenen Strings.
+	Die restlichen Elemente ($array[1], $array[2], etc.) enthalten die Kombinationen.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error:
+@error:	1 - Die Eingabe muss ein Array sein
+	2 - $avArray ist kein 1-dimensionales Array
+@@End@@
+
+###Remarks###
+Das Eingabearray muss 0-basierend sein, zum Beispiel kein Z&auml;hler in $array[0]. Basierend auf einem Algorithmus von Kenneth H. Rosen.
+
+###Related###
+_ArrayPermute
+
+###Example###
+@@IncludeExample@@

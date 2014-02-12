@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTreeView_SetSelectedImageIndex
+
+###Description###
+Setzt den Index des Bildes aus einer Imagelist, welches angezeigt werden soll, wenn das angegebene Item des TreeViews ausgew&auml;hlt wurde
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetSelectedImageIndex($hWnd, $hItem, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle zu dem Item
+$iIndex
+	Imagelistenindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetSelectedImageIndex
+
+###Example###
+@@IncludeExample@@

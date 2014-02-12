@@ -1,0 +1,53 @@
+###User Defined Function###
+_WordDocAddLink
+
+###Description###
+F&uuml;gt einem Dokument einen Hyperlink hinzu
+
+###Syntax###
+#include <Word.au3> 
+_WordDocAddLink(ByRef $o_object [, $o_Anchor = "" [, $s_Address = "" [, $s_SubAddress = "" [, $s_ScreenTip = "" [, $s_TextToDisplay = "" [, $s_Target = ""]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable mit dem Verweis auf das Word.Application Objekt
+$o_Anchor
+	[optional] Der Text oder die Grafik, die in einen Hyperlink verwandelt werden soll.
+	"" = (Standard) Verwendet gesamtes Dokument als Bereich
+$s_Address
+	[optional] Die Adresse des angegebenen Link's. Die Adresse kann eine Emailadresse eine Internetadresse oder ein Dateiname sein.
+	"" = (Standard) Link zum angegebenen Dokument wird verwendet
+$s_SubAddress
+	[optional] Der Name einer Position innerhalb des Dokuments, wie ein Bookmark ein Namensbereich oder eine Reiternummer.
+$s_ScreenTip
+	[optional] Der Text, der als Hinweis erscheinen soll, wenn die Maus &uuml;ber dem Hyperlink positioniert wird.
+	"" = (Standard) Verwendet den Wert von $s_Address
+$s_TextToDisplay
+	[optional] Der anzuzeigende Text des angegebenen Hyperlinks. Dieser Wert ersetzt den Text oder die Grafik der mit $o_Anchor angegeben wurde.
+	"" = (Standard) Verwendet den Wert von $s_Address
+$s_Target
+	[optional] Der Name des Frames oder Fensters, in welchem der Hyperlink geladen werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Daten Typ
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

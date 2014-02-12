@@ -1,0 +1,98 @@
+###Structure Name###
+$tagNMLVCUSTOMDRAW
+
+###Description###
+Enth&auml;lt Informationen, bestimmt f&uuml;r eine NM_CUSTOMDRAW Benachrichtigung, gesendet von einem ListView-Control
+
+###Syntax###
+Global Const $tagNMLVCUSTOMDRAW = "struct;" & $tagNMHDR & ";dword dwDrawStage;handle hdc;" & $tagRECT & _
+	";dword_ptr dwItemSpec;uint uItemState;lparam lItemlParam;endstruct" & _
+	";dword clrText;dword clrTextBk;int iSubItem;dword dwItemType;dword clrFace;int iIconEffect;" & _
+	"int iIconPhase;int iPartId;int iStateId;struct;long TextLeft;long TextTop;long TextRight;long TextBottom;endstruct;uint uAlign"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+dwDrawStage
+	Die aktuelle Zeichenphase. Dies ist einer der folgenden Werte:
+	Globale Werte:
+		$CDDS_POSTERASE - Nachdem der L&ouml;schzyklus vollendet ist.
+		$CDDS_POSTPAINT - Nachdem der Zeichenzyklus vollendet ist.
+		$CDDS_PREERASE - Bevor der L&ouml;schzyklus beginnt.
+		$CDDS_PREPAINT - Bevor der Zeichenzyklus beginnt.
+	Elementspezifische Werte:
+		$CDDS_ITEM - Deutet darauf hin, dass die <b>dwItemSpec</b>, <b>uItemState</b> und <b>lItemlParam</b> Mitglieder g&uuml;ltig sind.
+		$CDDS_ITEMPOSTERASE - Nachdem ein Element gel&ouml;scht wurde.
+		$CDDS_ITEMPOSTPAINT - Nachdem ein Element gezeichnet wurde.
+		$CDDS_ITEMPREERASE - Bevor ein Element gel&ouml;scht wird.
+		$CDDS_ITEMPREPAINT - Bevor ein Element gezeichnet wird.
+		$CDDS_SUBITEM - Flag, kombiniert mit $CDDS_ITEMPREPAINT oder $CDDS_ITEMPOSTPAINT, wenn ein Subelement gerade gezeichnet wurde.
+	Dies wird nur gesetzt, wenn $CDRF_NOTIFYITEMDRAW von $CDDS_PREPAINT zur&uuml;ckgegeben wurde.
+hdc
+	Ein Handle zu dem Ger&auml;tekontext des Controls.
+	Es ist dieses Handle zu einem Ger&auml;tekontext (HDC) zu benutzen, um jegliche Funktionen des Microsoft Windows Graphics Device Interface (GDI) auszuf&uuml;hren.
+$tagRECT
+	Left und Top - Koordinate der oberen linken Ecke des Rechtecks in dem zu zeichnenden Bereich.
+  Dieses Mitglied wird nur von der $CDDS_ITEMPREPAINT Benachrichtigung initialisiert Right und Bottom - Koordinate der unteren rechten Ecke des Rechtecks in dem zu zeichnenden Bereich.
+  Dieses Mitglied wird nur von der $CDDS_ITEMPREPAINT Benachrichtigung initialisiert
+dwItemSpec
+	Die Element-ID
+uItemState
+	Der aktuelle Zustand des Elements. Dieser Wert ist eine Kombination der folgenden Flags:
+		$CDIS_CHECKED - Das Element ist markiert.
+		$CDIS_DEFAULT - Das Element ist in seinem standardm&auml;&szlig;igen Zustand.
+		$CDIS_DISABLED - Das Element ist deaktiviert.
+		$CDIS_FOCUS - Das Element hat den Fokus.
+		$CDIS_GRAYED - Das Element ist ausgegraut.
+		$CDIS_HOT - Das Element ist augenblicklich unter dem Mauszeiger ("hot").
+		$CDIS_INDETERMINATE - Das Element ist in einem nicht ermittelbaren Zustand.
+		$CDIS_MARKED - Das Element ist markiert. Die Bedeutung dessen wird durch die Anwendung bestimmt.
+		$CDIS_SELECTED - Das Element ist ausgew&auml;hlt.
+		$CDIS_SHOWKEYBOARDCUES - Version 6.0 Comctl32. Das Element ist ein Tastatursignal.
+		$CDIS_NEARHOT - Das Element ist Teil eines Controls das augenblicklich unter dem Mauszeiger ist ("hot"), aber das Element selbst ist nicht "hot".
+			Die Bedeutung dessen wird durch die Anwendung bestimmt.
+		$CDIS_OTHERSIDEHOT - Das Element ist Teil eines "SplitButtons" der augenblicklich unter dem Mauszeiger ist ("hot"), aber das Element selbst ist nicht "hot".
+			Die Bedeutung dessen wird durch die Anwendung bestimmt.
+		$CDIS_DROPHILITED - Das Element ist augenblicklich ein Fallziel (Drop Target) einer Drag-And-Drop Operation.
+lItemlParam
+	Anwendungsdefinierter Elementwert.
+clrText
+	COLORREF Wert, repr&auml;sentierend f&uuml;r die Farbe die genutzt wird, um den Textvordergrund in dem ListView-Control darzustellen.
+clrTextBk
+	COLORREF Wert, repr&auml;sentierend f&uuml;r die Farbe die genutzt wird, um den Texthintergrund in dem ListView-Control darzustellen.
+iSubItem
+	Index des Subelements das gezeichnet werden soll. Wenn das Hauptelement gezeichnet werden soll, wird dieses Mitglied Null sein.
+dwItemType
+	Version 6.0. DWORD welches den Typ des zu zeichnenden Elements enth&auml;lt. Dieses Mitglied kann einer der folgenden Werte sein:
+		$LVCDI_ITEM - Ein Element ist zu zeichnen.
+		$LVCDI_GROUP - Eine Gruppe ist zu zeichnen.
+clrFace
+	Version 6.0. COLORREF Wert, repr&auml;sentierend f&uuml;r die Farbe die genutzt wird, um die Fl&auml;che eines Elements darzustellen.
+iIconEffect
+	Version 6.0. Wert vom Typ int der den Effekt bestimmt der f&uuml;r ein Symbol angewandt wird, wie z.B. Glow, Shadow oder Pulse.
+iIconPhase
+	Version 6.0. Wert vom Typ int der die Phase eines Symbols bestimmt.
+iPartId
+	Version 6.0. Wert vom Typ int der die ID des Parts eines Elements bestimmt, das zu zeichnen ist.
+iStateId
+	Version 6.0. Wert vom Typ int der die ID des Zustands eines Elements bestimmt, das zu zeichnen ist.
+TextLeft
+	X-Koordinate der oberen linken Ecke des Rechtecks in welchem der Text zu zeichnen ist
+TextTop
+	Y-Koordinate der oberen linken Ecke des Rechtecks in welchem der Text zu zeichnen ist
+TextRight
+	X-Koordinate der unteren rechten Ecke des Rechtecks in welchem der Text zu zeichnen ist
+TextBottom
+	Y-Koordinate der unteren rechten Ecke des Rechtecks in welchem der Text zu zeichnen ist
+uAlign
+	Version 6.0. UINT der bestimmt wie eine Gruppe ausgerichtet ist. Dieses Mitglied kann einer der folgenden Werte sein:
+		$LVGA_HEADER_CENTER - Die Gruppe zentrieren.
+		$LVGA_HEADER_LEFT - Die Gruppe links ausrichten.
+		$LVGA_HEADER_RIGHT - Die Gruppe rechts ausrichten.
+@@End@@
+
+
+###Remarks###
+$LVxxx_ Konstanten ben&ouml;tigen #include <ListViewConstants.au3>, $CDxx_ Konstanten ben&ouml;tigen #include <WindowsConstants.au3>

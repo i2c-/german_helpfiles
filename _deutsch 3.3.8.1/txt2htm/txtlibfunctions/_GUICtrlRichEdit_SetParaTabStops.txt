@@ -1,0 +1,60 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaTabStops
+
+###Description###
+&Auml;ndert die Tabulatoreinstellungen von markierten Abs&auml;tzen oder, wenn keine markiert sind, f&uuml;r den Text, der nach dem Eingabepunkt (Caret) eingef&uuml;gt wird
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaTabStops($hWnd, $sTabStops)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sTabStops
+	Ein String, der Gruppen von Tabulatoreigenschaften eines Absatzes enth&auml;lt, die durch Semikola (;) getrennt sind. Format einer Gruppe:
+		 Absolute Position eines Tabstopps (in Leerzeichen-Einheiten)
+		 Art des Tabulators:
+		   l - linksb&uuml;ndiger Tabulator
+		   c - zentrierter Tabulator
+		   r - Dezimaltabulator (rechtsb&uuml;ndig)
+		   b - Leistentabulator (eine vertikale Leiste, wie in Word)
+		 Art der f&uuml;hrenden Zeichen
+		   . - punktierte F&uuml;hrungszeichen
+		   - - gestrichelte F&uuml;hrungszeichen
+		   _ - Unterstreichung als F&uuml;hrungszeichen
+		   = - doppelte Unterstreichung als F&uuml;hrungszeichen
+		   t - dicke Linie als F&uuml;hrungszeichen
+		   " " (ein Leerzeichen) - kein F&uuml;hrungszeichen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - Die absolute Position eines Tabulators fehlt oder ist ung&uuml;ltig
+	1022 - Art des Tabulators fehlt oder ist ung&uuml;ltig
+	1023 - Art der F&uuml;hrungszeichen fehlt oder ist ung&uuml;ltig
+	1024 - Versuch, zu viele Tabstopps zu setzen
+	   @extended enth&auml;lt die Tabulatornummer in $sTabStops (bei 1 beginnend), bei der der Fehler auftrat
+@@End@@
+
+###Remarks###
+Um die Tabstopps zur&uuml;ckzusetzen, kann <b>_GUICtrlRichEdit_SetParaTabStops($hWnd, "")</b> aufgerufen werden.
+
+Um die Leerzeichen-Einheit zu &auml;ndern (Standard: Inch), kann <b>_GUICtrlRichEdit_SetSpaceUnit</b> benutzt werden.
+
+Um einen Tabulator im RichEdit-Control zu setzen, muss STRG-Tab gedr&uuml;ckt werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaTabStops, _GUICtrlRichEdit_SetSpaceUnit, _GUICtrlRichEdit_SetTabStops
+
+###See Also###
+@@MsdnLink@@ EM_SETCHARFORMAT
+
+###Example###
+@@IncludeExample@@

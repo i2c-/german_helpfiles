@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlEdit_FmtLines
+
+###Description###
+Entscheidet, ob ein Edit-Control "soft line-break"-Zeichen (weiche Zeilenumbr&uuml;che) enth&auml;lt.
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_FmtLines($hWnd [, $fSoftBreak = False])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fSoftBreak
+	[optional] legt fest, ob "soft line-break"-Zeichen eingef&uuml;gt werden sollen:
+		True - F&uuml;gt die Zeichen ein (0x0D0D0A)
+		False - Entfernt die Zeichen
+@@End@@
+
+###ReturnValue###
+Erfolg:	Identisch mit dem $fSoftBreak Parameter
+
+###Remarks###
+Ein weicher Zeilenumbruch ("soft line break"=0x0D0D0A) besteht aus zwei Wagenr&uuml;ckl&auml;ufen ("carriage returns" = @CR = 0x0D)
+und einem Zeilenvorschub ("line feed" = @LF = 0x0A) und wird am Ende der Zeile eingef&uuml;gt, wenn sie wegen eines Wortumbruchs
+im Editfeld zerrissen wurde ("wordwrapping").
+
+Diese Funktion hat nur Einfluss auf Text, der durch _GUICtrlEdit_GetText zur&uuml;ckgegeben wurde.
+
+Sie hat keinen Einfluss auf die Darstellung des Textes innerhalb des Edit-Controls.
+
+Die _GUICtrlEdit_FmtLines Funktion hat keinen Einfluss auf eine Zeile, die mit einem harten Zeilenumbruch ("hard line break" = @CRLF = 0x0D0A) endet.
+Ein harter Zeilenumbruch besteht aus einem Wagenr&uuml;cklauf ("carriage return" = @CR = 0x0D) und einem Zeilenvorschub ("line feed" = @LF = 0x0A)".
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

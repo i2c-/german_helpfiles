@@ -1,0 +1,68 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetFont
+
+###Description###
+Legt die Schrifteigenschaften des markierten Textes oder, wenn nichts markiert worden ist, des eingef&uuml;gten Textes ab dem Einf&uuml;gepunkt fest.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetFont ( $hWnd [, $iPoints = Default [, $sName = Default [, $iCharset = Default [, $iLcid = Default]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPoints
+	[optional] Gr&ouml;&szlig;e in Punkten (pt)
+$sName
+	[optional] Name des Schriftbildes, z.B. "Courier" aber nicht "Courier Bold"
+$iCharSet
+	[optional] Der Zeichensatz:
+		$ANSI_CHARSET - 0
+		$BALTIC_CHARSET - 186
+		$CHINESEBIG5_CHARSET - 136
+		$DEFAULT_CHARSET - 1
+		$EASTEUROPE_CHARSET - 238
+		$GB2312_CHARSET - 134
+		$GREEK_CHARSET - 161
+		$HANGEUL_CHARSET - 129
+		$MAC_CHARSET - 77
+		$OEM_CHARSET - 255
+		$RUSSIAN_CHARSET - 204
+		$SHIFTJIS_CHARSET - 128
+		$SYMBOL_CHARSET - 2
+		$TURKISH_CHARSET - 162
+		$VIETNAMESE_CHARSET - 163
+$iLcid
+	[optional] siehe http://www.microsoft.com/globaldev/reference/lcid-all.mspx
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	102 - $iPoints ist keine positive Zahl
+	103 - $sName ist nicht alphabetisch
+	104 - $iCharSet ist keine Nummer
+	105 - $iLcid ist keine Nummer
+@@End@@
+
+
+###Remarks###
+Wird ein Parameter weggelassen (oder ist Default), ist der Wert unver&auml;ndert
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetFont, _GUICtrlRichEdit_ChangeFontSize
+
+
+###See Also###
+@@MsdnLink@@ EM_SETCHARFORMAT, @@MsdnLink@@ LOGFONT, http://www.hep.wisc.edu/~pinghc/books/apirefeng/l/logfont.html
+
+
+###Example###
+@@IncludeExample@@

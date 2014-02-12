@@ -1,0 +1,75 @@
+###User Defined Function###
+_WordPropertySet
+
+###Description###
+Setzt eine ausgew&auml;hlte Eigenschaft der Word Anwendung.
+
+###Syntax###
+#include <Word.au3> 
+_WordPropertySet(ByRef $o_object, $s_property, $v_newvalue)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer Word Anwendung
+$s_property
+	Auswahl der Eigenschaft (siehe Bemerkungen)
+$v_newvalue
+	Der neue Wert der in den Eigenschaften der Wordanwendung gesetzt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+	$_WordStatus_InvalidValue = ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Weitere Informationen k&ouml;nnen auf <a href="http://msdn2.microsoft.com/en-us/library/kw65a0we.aspx" target="_blank">MSDN</a> eingesehen werden.
+
+Die folgende Tabelle stellt eine Beschreibung jeder verf&uuml;gbaren Eigenschaft zur Verf&uuml;gung.
+
+<b><u>Eigenschaften der Word Anwendung</u></b>
+
+@@ParamTable@@
+<b>Eigenschaft</b>
+	<b>Beschreibung</b>
+"activeprinter"
+	Legt den Namen des aktiven Druckers fest.
+"screentips"
+	Legt einen booleschen Wert fest, der Kommentare, Fu&szlig;noten, Endnoten und Hyperlinks als Tipps darstellt.
+"scrollbars"
+	Legt einen booleschen Wert fest, der mindestens eine Scrollbar auf einem Dokumentfenster anzeigt.
+"statusbar"
+	Legt einen booleschen Wert fest, der entscheidet, ob die Statusbar angezeigt wird.
+"height"
+	Legt die H&ouml;he des aktiven Dokumentfensters fest.
+"left"
+	Legt einen Integer fest, der die horizontale Position des aktiven Dokuments darstellt.
+"screenupdating"
+	Legt einen a booleschen Wert fest, der bestimmt, ob das aktualisieren der Oberfl&auml;che eingeschaltet werden soll.
+"startuppath"
+	Legt den kompletten Pfad des Startordners fest.
+"top"
+	Legt  die vertikale Position des aktiven Dokuments in Punkte fest.
+"visible"
+	Legt einen booleschen Wert fest, der festlegt, ob das festgelegte Objekt sichtbar ist.
+"width"
+	Legt die Breite des festgelegten Objekts in Punkte fest.
+"windowstate"
+	Legt den Status des festgelegten Dokumentfensters oder Taskfensters fest.
+@@END@@
+
+
+###Related###
+_WordPropertyGet
+
+
+###Example###
+@@IncludeExample@@

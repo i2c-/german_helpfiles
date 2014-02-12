@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlEdit_EmptyUndoBuffer
+
+###Description###
+Setzt das Undo-Flag eines Edit-Controls zur&uuml;ck
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_EmptyUndoBuffer($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Das Undo-Flag wird automatisch zur&uuml;ckgesetzt, wenn  das Control eine Nachricht von _GUICtrlEdit_SetText erreicht
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_CanUndo, _GUICtrlEdit_Undo
+
+###Example###
+@@IncludeExample@@

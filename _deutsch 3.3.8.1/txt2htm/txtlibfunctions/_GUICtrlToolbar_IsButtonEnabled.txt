@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonEnabled
+
+###Description###
+Zeigt an, ob der festgelegte Button aktiviert ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonEnabled($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+True:	Button ist aktiviert
+False:	Button ist nicht aktiviert
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

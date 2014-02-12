@@ -1,0 +1,53 @@
+###Function###
+ObjCreate
+
+###Description###
+Erzeugt eine Referenz auf ein COM-Object von dem angegebenen Klassennamen.
+
+###Syntax###
+ObjCreate ( "classname" [, "servername" [, "username" [, "password"]]] )
+
+
+###Parameters###
+@@ParamTable@@
+classname
+	Die Objekt-Klasse im folgenden Format:  "appname.objectype"
+	Auch die String-Repr&auml;sentation einer CLSID ist zul&auml;ssig.
+servername
+	[optional] Name eines Remote-Computers, von welchem das Objekt erhalten werden soll.
+username
+	[optional] Name eines UserCode auf dem Remote-Computer
+	Es muss in diesem Format eingegeben werden: "computer\usercode" oder "domain\usercode".
+password
+	[optional] Passwort f&uuml;r den UserCode auf dem Remote-Computer.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Objekt.
+Fehler:	Setzt @error ungleich null.
+@@End@@
+
+
+###Remarks###
+Es wird <a href="ObjCreate.htm">ObjCreate()</a> verwendet, um eine neue Instanz zu der verweisenden Applikation zu erhalten.
+M&ouml;chte man die Instanz mit einem bereits existierenden Prozess verbinden, ist stattdessen <a href="ObjGet.htm">ObjGet()</a> zu benutzen.
+
+Behalten Sie im Sinn, dass nicht alle Computer den gleichen Satz an Objekten haben. Es sollte nach einem Aufruf von <a href="ObjCreate.htm">ObjCreate()</a> <b>immer</b> auf Fehler gepr&uuml;ft werden. Zur Fehler&uuml;berpr&uuml;fung verwendet man <a href="ObjEvent.htm">ObjEvent()</a>.
+
+Folgende Voraussetzungen gelten, wenn man auf Objekte von <i>Remote</i>-Computern zugreifen m&ouml;chte:
+<ul>
+<li>Der ausf&uuml;hrende Benutzer des Skripts muss die entsprechenden Rechte besitzen.</li>
+<li>Das Objekt auf dem Remote-Computer muss DCOM (Distributed COM) unterst&uuml;tzen.</li>
+<li>Auf dem Remote-Computer m&uuml;ssen die Dienste f&uuml;r 'Remote Registry Service' und 'File and Printer sharing' aktiviert sein.</li>
+</ul>
+
+Siehe die <a href="../intro/ComRef.htm">Obj/COM Referenz</a> f&uuml;r mehr Informationen &uuml;ber Objekte.
+
+
+###Related###
+GUICtrlCreateObj, IsObj, ObjEvent, ObjGet, ObjName
+
+
+###Example###
+@@IncludeExample@@

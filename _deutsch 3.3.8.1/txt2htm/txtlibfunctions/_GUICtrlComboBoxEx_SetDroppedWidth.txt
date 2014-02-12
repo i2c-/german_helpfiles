@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetDroppedWidth
+
+###Description###
+Setzt die Breite der aufgeklappten ListBox der ComboBox in Pixel
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetDroppedWidth($hWnd, $iWidth)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iWidth
+	Die Breite der ListBox in Pixel
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die neue Breite der ListBox
+Fehler:	-1
+
+###Remarks###
+Wird in $iWidth ein Wert kleiner als die Breite der ComboBox &uuml;bergeben, entspricht die neue Breite der Breite der ComboBox.
+
+Es ist der Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_GetDroppedWidth
+
+###Example###
+@@IncludeExample@@

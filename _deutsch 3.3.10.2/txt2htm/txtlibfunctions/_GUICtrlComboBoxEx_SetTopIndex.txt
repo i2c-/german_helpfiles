@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetTopIndex
+
+###Description###
+Stellt sicher, dass ein bestimmtes Item sichtbar in der ListBox der ComboBox ist.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetTopIndex ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	legt den 0-basierenden Index des Listitems fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Das System scrollt den ListBox Inhalt so, dass entweder das festgelegte Item ganz oben in der ListBox erscheint, oder der maximale Scrollbereich erreicht wurde.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_GetTopIndex
+
+
+###Example###
+@@IncludeExample@@

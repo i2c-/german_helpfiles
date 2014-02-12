@@ -1,0 +1,57 @@
+###User Defined Function###
+_Net_Share_ShareEnum
+
+###Description###
+Gibt Informationen &uuml;ber alle freigegebenen Ressourcen auf einem Server zur&uuml;ck.
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareEnum([$sServer = ""])
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	[optional] String, der den DNS oder NetBIOS-Namen des Remoteservers angibt, auf dem die Funktion ausgef&uuml;hrt werden
+		soll. Falls dieser Parameter weggelassen wird, wird der lokale Computer verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0][0] - Anzahl der Eintr&auml;ge im Array
+	[1][0] - Name der Ressource
+	[1][1] - Typ der Ressource. Kann eine Kombination der folgenden sein:
+	 $STYPE_DISKTREE - Festplatte
+	 $STYPE_PRINTQ - Druckerwarteschlange
+	 $STYPE_DEVICE - Kommunikationsger&auml;t
+	 $STYPE_IPC - IPC
+	 $STYPE_SPECIAL - spezielle Freigabe f&uuml;r IPC$ oder ferngesteuerte Administration des Servers
+	 $STYPE_TEMPORARY - tempor&auml;re Freigabe
+	[1][2] - Enth&auml;lt einen optionalen Kommentar &uuml;ber die Ressource
+	[1][3] - Gibt die Berechtigungen der freigegebenen Ressource an:
+	  1 - Berechtigung zum Lesen und Ausf&uuml;hren einer Ressource.
+	  2 - Berechtigung zum Schreiben einer Ressource.
+	  4 - Berechtigung zum Erstellen einer Ressource.
+	  8 - Berechtigung zum Ausf&uuml;hren.
+	 16 - Berechtigung zum L&ouml;schen.
+	 32 - Berechtigung zum &Auml;ndern der Eigenschaften der Ressource.
+	 64 - &Auml;ndern der Berechtigungen der Ressource.
+	[1][4] - maximale Anzahl gleichzeitiger Verbindungen zur Ressource
+	[1][5] - momentane Anzahl der Verbindungen zur Ressource
+	[1][6] - lokaler Pfad zur freigegebenen Ressource
+	[1][7] - Passwort der Freigabe
+Fehler: setzt @error
+@@End@@
+
+###Remarks###
+Die Mitgliedschaft in einer der folgenden Gruppen ist notwendig, um die Funktion ausf&uuml;hren zu k&ouml;nnen:
+Administratoren, Hauptbenutzer, Druck-Operatoren oder Server-Operatoren.
+
+###Related###
+_Net_Share_FileEnum, _Net_Share_SessionEnum, _Net_Share_ConnectionEnum
+
+###See Also###
+@@MsdnLink@@ NetShareEnum
+
+###Example###
+@@IncludeExample@@

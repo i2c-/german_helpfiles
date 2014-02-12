@@ -1,0 +1,49 @@
+###User Defined Function###
+_FTP_Command
+
+###Description###
+Sendet einen Befehl zum FTP Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_Command ( $hFTPSession, $sFTPCommand [, $iFlags = 0x00000001 [, $iExpectResponse = 0 [, $iContext = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hFTPSession
+	"Identifier", welcher von _FTP_Connect() zur&uuml;ckgegeben wurde.
+$sFTPCommand
+	Befehl der zum FTP Server gesendet wird.
+$iFlags
+	[optional] $FTP_TRANSFER_TYPE_ASCII oder $FTP_TRANSFER_TYPE_BINARY
+$iExpectResponse
+	[optional] Daten Sockel f&uuml;r eine Antwort im Async Modus. Siehe Bemerkungen.
+$iContext
+	[optional] Eine Variable die einen anwendungsdefinierten Wert enth&auml;lt sucht mit einigen Anwendungsdaten.
+	Dies wird nur benutzt, wenn das Programm bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um den Status abzufragen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Identifizierer.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Kommandobeispiel: H&auml;ngt von der Serversyntax ab/
+Dieses Beispiel ist f&uuml;r den bin&auml;ren Transfer, ASCII Transfer, passiv Mode Transfer (wird mit Firewalls benutzt) 'Typ I', 'Typ A', 'pasv'
+
+Wenn $l_ExpectResponse auf True steht, wird ein Zeiger zu einem Handle in @extended zur&uuml;ckgegeben. Dieser Handle wird angelegt, wenn ein g&uuml;ltiger Datensocket ge&ouml;ffnet wurde.
+
+
+###Related###
+_FTP_Connect, _FTP_SetStatusCallback
+
+
+###See Also###
+@@MsdnLink@@ FtpCommand
+
+
+###Example###

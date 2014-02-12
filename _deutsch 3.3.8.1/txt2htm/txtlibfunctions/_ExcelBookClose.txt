@@ -1,0 +1,35 @@
+###User Defined Function###
+_ExcelBookClose
+
+###Description###
+Schlie&szlig;t die aktive Excel-Datei und entfernt das angegebene Excel-Objekt.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelBookClose($oExcel [, $fSave = 1 [, $fAlerts = 0]])
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel-Objekt, welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$fSave
+	[optional] Flag f&uuml;r das Speichern der Datei vor dem Schlie&szlig;en (0 = nicht speichern, 1 = speichern) (Standard = 1)
+$fAlerts
+	[optional] Flag f&uuml;r das Deaktivieren/Aktivieren von Hinweisfenstern (0 = deaktiviert, 1 = aktiviert) (Standard = 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error:
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - Datei existiert, &Uuml;berschreibflag nicht gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

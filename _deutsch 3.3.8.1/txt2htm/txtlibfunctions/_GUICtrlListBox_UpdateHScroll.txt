@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUICtrlListBox_UpdateHScroll
+
+###Description###
+Aktualisiert die horizontale Scrollbar basierend auf dem l&auml;ngsten String
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_UpdateHScroll($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

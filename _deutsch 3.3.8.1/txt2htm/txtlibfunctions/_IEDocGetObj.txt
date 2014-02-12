@@ -1,0 +1,36 @@
+###User Defined Function###
+_IEDocGetObj
+
+###Description###
+Wenn die Funktion ein beliebiges DOM-Objekt &uuml;bergeben bekommt, gibt sie eine Referenz auf das verkn&uuml;pfte Dokument zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IEDocGetObj(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, Window-, Frame- oder sonstiges Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die auf ein Dokument-Objekt verweist
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Wert
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wenn die Funktionen ein beliebiges DOM-Objekt &uuml;bergeben bekommt (z.B. Browser, Window, Frame, iFrame, Document oder Document Element), gibt sie eine Referenz auf das verkn&uuml;pfte Dokument zur&uuml;ck.  Das ist besonders hilfreich, wenn man  allgemein gehaltene Funktionen schreiben m&ouml;chte und den Typ eines Objektes nicht vorher kennst.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

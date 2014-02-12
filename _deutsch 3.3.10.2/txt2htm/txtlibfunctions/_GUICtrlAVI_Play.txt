@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlAVI_Play
+
+###Description###
+Spielt einen AVI-Clip in einem Animations-Control ab
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_Play ( $hWnd [, $iFrom = 0 [, $iTo = -1 [, $iRepeat = -1]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iFrom
+	[optional] 0-basierender Index des Frames wo die Datei startet. Der Wert muss kleiner als 65.536 sein.
+	Ein Wert von 0 bedeutet, dass der Clip beim ersten Frame beginnt.
+$iTo
+	[optional] 0-basierender Index des Frames wo die Datei endet. Der Wert muss kleiner als 65.536 sein.
+	Ein Wert von -1 bedeutet, dass der Clip beim letzten Frame endet.
+$iRepeat
+	[optional] Anzahl der Wiederholungen. Ein Wert von -1 bedeutet, dass der Clip unendlich wiederholt wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Das Control spielt den Clip im Hintergrund ab, w&auml;hrend das Skript weiterl&auml;uft.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlAVI_Stop, _GUICtrlAVI_Seek
+
+
+###Example###
+@@IncludeExample@@

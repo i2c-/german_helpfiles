@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SetItemFocused
+
+###Description###
+Legt fest, ob das Item den Fokus besitzt
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemFocused($hWnd, $iIndex [, $fEnabled = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$fEnabled
+	[optional] Falls True wird der Status des Items gesetzt, andernfalls nicht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemFocused
+
+###Example###
+@@IncludeExample@@

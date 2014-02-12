@@ -1,0 +1,59 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawImageRectRect
+
+###Description###
+Zeichnet ein Bild-Objekt und vergr&ouml;&szlig;ert, bzw. verkleinert dieses, falls gew&uuml;nscht
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawImageRectRect ( $hGraphics, $hImage, $nSrcX, $nSrcY, $nSrcWidth, $nSrcHeight, $nDstX, $nDstY, $nDstWidth, $nDstHeight [, $pAttributes = 0 [, $iUnit = 2] ] )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$hImage
+	Handle zu einem Bild-Objekt
+$nSrcX
+	Die X Koordinate der oberen linken Ecke des Quellbildes
+$nSrcY
+	Die Y Koordinate der oberen linken Ecke des Quellbildes
+$nSrcWidth
+	Breite des Quellbildes
+$nSrcHeight
+	H&ouml;he des Quellbildes
+$nDstX
+	Die X Koordinate der oberen linken Ecke des Zielbildes
+$DstY
+	Die Y Koordinate der oberen linken Ecke des Zielbildes
+$nDstWidth
+	Breite des Zielbildes
+$NDstHeight
+	H&ouml;he des Zielbildes
+$pAttributes
+	[optional] Pointer auf eine ImageAttributes structure welche die Farbe und gr&ouml;&szlig;en angaben des zu zeichnenden Bildes enth&auml;llt. Der Standartwert ist NULL.
+$iUnit
+	[optional] Legt die Ma&szlig;einheit des Bildes fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise GPSTATUS Fehlercode ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipDrawImageRectRect
+
+
+###Example###
+@@IncludeExample@@

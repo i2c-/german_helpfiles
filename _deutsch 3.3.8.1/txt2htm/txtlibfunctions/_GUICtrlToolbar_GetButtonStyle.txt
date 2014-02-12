@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlToolbar_GetButtonStyle
+
+###Description###
+Ermittelt die Stilflags eines Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetButtonStyle($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+Erfolg:	Buttonstil. Kann eine Kombination der folgenden sein:
+	$BTNS_AUTOSIZE - Das Toolbar-Control sollte nicht die Standardbreite des Buttons verwenden
+	$BTNS_BUTTON - Standardbutton
+	$BTNS_CHECK - Schaltet zwischen gedr&uuml;ckt und nicht-gedr&uuml;ckt hin und her
+	$BTNS_CHECKGROUP - Button, der solange gedr&uuml;ckt dargestellt wird, bis ein anderer Button in der Gruppe gedr&uuml;ckt wird.
+	$BTNS_DROPDOWN - Erstellt einen Dropdown Button welcher eine Liste darstellt
+	$BTNS_GROUP - Button, der solange gedr&uuml;ckt dargestellt wird, bis ein anderer Button in der Gruppe gedr&uuml;ckt wird.
+	$BTNS_NOPREFIX - Der Buttontext hat keinen Shortcutbuchstaben
+	$BTNS_SEP - Erstellt einen Trenner
+	$BTNS_SHOWTEXT - Legt fest, dass der Buttontext angezeigt werden soll.
+	$BTNS_WHOLEDROPDOWN - Legt fest, dass der Button einen Dropdown Pfeil hat.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetButtonStyle
+
+###Example###
+@@IncludeExample@@

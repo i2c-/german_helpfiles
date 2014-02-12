@@ -1,0 +1,47 @@
+###Function###
+Shutdown
+
+###Description###
+F&auml;hrt das System herunter.
+
+
+###Syntax###
+Shutdown ( code [, reason] )
+
+###Parameters###
+@@ParamTable@@
+code
+	Eine Kombination von Herunterfahr-Codes. Siehe Anmerkungen.
+reason
+	[optional] Shutdown-Code des Users.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und @error wird auf GetLastError() gesetzt.
+@@End@@
+
+
+###Remarks###
+Der Herunterfahr-Code ist eine Kombination der folgenden Werte:
+0 = Abmelden / Logoff
+1 = Herunterfahren / Shutdown
+2 = Neu Starten / Reboot
+4 = Herunterfahren erzwingen / Force
+8 = Strom abschalten / Power down
+16= Erzwingen, falls das System h&auml;ngt
+32= Bereitschaftsmodus / Standby
+64= Schlafmodus / Hibernate
+
+Die ben&ouml;tigten Wert sind zu addieren.  Zum Herunterfahren mit Stromabschaltung w&auml;re z.B. der Wert 9 zu setzen: (shutdown + power down = 1 + 8 = 9).
+
+Standby oder Hibernate werden ignoriert, wenn andere Werte gesetzt werden.
+
+###Related###
+ProcessClose
+
+
+###Example###
+@@IncludeExample@@

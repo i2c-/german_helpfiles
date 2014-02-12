@@ -1,0 +1,33 @@
+###Function###
+StringTrimRight
+
+###Description###
+K&uuml;rzt eine Zeichenkette um eine vorgegebene Anzahl Zeichen am Ende (von rechts).
+
+###Syntax###
+StringTrimRight ( "string", count )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der anzupassende String.
+count
+	Die Anzahl der Zeichen, die abgeschnitten werden sollen.
+@@End@@
+
+
+###ReturnValue###
+Gibt den neuen, um <i>count</i> Zeichen von rechts gek&uuml;rzten String zur&uuml;ck.
+
+
+###Remarks###
+Liegt <i>count</i> au&szlig;erhalb des g&uuml;ltigen Bereichs, wird ein leerer String zur&uuml;ckgegeben.
+StringTrimRight($str, $n) ist funktional gleichwertig mit StringLeft($str, StringLen($str) - $n).
+
+###Related###
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringUpper, StringCompare, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

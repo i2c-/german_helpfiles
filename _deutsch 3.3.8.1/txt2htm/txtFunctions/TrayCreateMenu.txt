@@ -1,0 +1,36 @@
+###Function###
+TrayCreateMenu
+
+###Description###
+Erstellt ein Men&uuml;-Control f&uuml;r das Traymen&uuml;.
+
+###Syntax###
+TrayCreateMenu ( "sub/menutext" [, menuID [, menuentry]] )
+
+
+###Parameters###
+@@ParamTable@@
+sub/menutext
+	Der Ersatztext bzw. Men&uuml;text.
+menuID
+	[optional] Falls festgelegt erlaubt es, ein Untermen&uuml; in dem gew&uuml;nschten Men&uuml; zu erstellen. Beim Wert -1 wird das erste Men&uuml; verwendet.
+menuentry
+	[optional] Erlaubt es die Eintragsnummer zu erstellen. Die Eintr&auml;ge starten bei 0.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die ID (Control-ID) des neuen Traymen&uuml;s zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+TrayItemSetState, TrayItemSetText, TrayGetMsg, TrayItemDelete
+
+
+###Example###
+@@IncludeExample@@

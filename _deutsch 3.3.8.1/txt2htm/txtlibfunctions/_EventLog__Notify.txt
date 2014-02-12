@@ -1,0 +1,41 @@
+###User Defined Function###
+_EventLog__Notify
+
+###Description###
+Erm&ouml;glicht einer Anwendung Ereignisnachrichten zu empfangen
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Notify($hEventLog, $hEvent)
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Ein Handle zum Event Log
+$hEvent
+	Ein Handle zu einem manuell erneuerten Event Object
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion arbeitet nicht mit Remote Handles. Wenn der hEventLog Parameter auf ein Event Log auf einem 
+Remote Computer verweist, gibt die Funktion "0" zur&uuml;ck und GetLastError gibt ERROR_INVALID_HANDLE zur&uuml;ck.
+Wenn ein Ereignis in das durch hEventLog referenzierte Log geschrieben wird, verwendet das System die 
+PulseEvent Funktion, um das Ereignis, dass mit dem hEvent Parameter angegeben wurde, in den angegebenen
+Status zu setzen. Wenn der Thread nicht auf das Ereignis wartet, wenn das System PulseEvent aufruft, wird der
+Thread keine Benachrichtigung erhalten. Deshalb sollte ein separater Thread erstellt werden, der auf
+Benachrichtigungen wartet. Es ist zu bedenken, dass das System PulseEvent nur einmal alle 5 Sekunden aufruft.
+Deshalb wird, auch wenn sich mehrere Ereignisse innerhalb von 5 Sekunden ereignen, nur eine Nachricht empfangen.
+Das System wird mit den Benachrichtigungen fortfahren, bis das Handle des EventLog geschlossen wird.
+Um das EventLog zu schlie&szlig;en ist die _EventLog__Close oder _EventLog__DeregisterSource Funktion zu verwenden.
+
+###Related###
+_EventLog__Close, _EventLog__DeregisterSource
+
+###Example###
+@@IncludeExample@@

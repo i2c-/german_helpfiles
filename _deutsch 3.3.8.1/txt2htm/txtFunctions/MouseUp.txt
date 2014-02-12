@@ -1,0 +1,35 @@
+###Function###
+MouseUp
+
+###Description###
+F&uuml;hrt ein "MouseUp"-Ereignis an der aktuellen Mausposition aus.
+
+
+###Syntax###
+MouseUp ( "button" )
+
+
+###Parameters###
+@@ParamTable@@
+button
+	Die zu dr&uuml;ckende Taste: "left", "right", "middle", "main", "menu", "primary" oder "secondary".
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Taste unbekannt ist.
+@@End@@
+
+
+###Remarks###
+Siehe <a href="MouseClick.htm#remarks">MouseClick</a> Bemerkungen.
+Verantwortungsvoll benutzen: F&uuml;r jedes MouseDown- sollte es schlie&szlig;lich ein entsprechendes MouseUp-Ereignis geben.
+
+###Related###
+MouseDown, MouseClick, MouseClickDrag, MouseGetPos, MouseMove, MouseCoordMode (Option)
+
+
+###Example###
+@@IncludeExample@@

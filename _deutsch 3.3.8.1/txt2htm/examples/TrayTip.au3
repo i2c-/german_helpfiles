@@ -1,0 +1,5 @@
+TrayTip("Ich bin ein Titel", "Ich bin die Nachricht", 5, 1)
+MsgBox(4096, "", "Klicke auf OK um einen weiteren Traytip zu sehen.")
+TrayTip("Leert einen Traytip", "", 0)
+TrayTip("", "Ein anderer Traytip.", 5)
+Sleep(5000)

@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTab_HighlightItem
+
+###Description###
+Setzt den "hervorgehoben" Status eines Tabitems
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_HighlightItem($hWnd, $iIndex [, $fHighlight = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$fHighlight
+	[optional] Falls True, wird der Tab hervorgehoben, andernfalls wird der Tab zur&uuml;ckgesetzt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_SetCurSel
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,46 @@
+###Function###
+Shutdown
+
+###Description###
+F&auml;hrt das System herunter.
+
+###Syntax###
+Shutdown ( code )
+
+
+###Parameters###
+@@ParamTable@@
+code
+	Eine Kombination von Herunterfahr-Codes. Siehe Anmerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 und @error wird auf Windows API GetLastError() gesetzt.
+@@End@@
+
+
+###Remarks###
+Der Herunterfahr-Code ist eine Kombination der folgenden Werte:
+	$SD_LOGOFF (0) = Abmelden / Logoff
+	$SD_SHUTDOWN (1) = Herunterfahren / <a href="Shutdown.htm">Shutdown()</a>
+	$SD_REBOOT (2) = Neu Starten / Reboot
+	$SD_FORCE (4) = Herunterfahren erzwingen / Force
+	$SD_POWERDOWN (8) = Strom abschalten / Power down
+	$SD_FORCEHUNG (16) = Erzwingen, falls das System h&auml;ngt
+	$SD_STANDBY (32) = Bereitschaftsmodus / Standby
+	$SD_HIBERNATE (64) = Ruhezustand / Hibernate
+Konstanten sind in Constants.au3 definiert.
+
+Die ben&ouml;tigten Wert sind mit <a href="BitOR.htm">BitOR()</a> "ODER" zu verkn&uuml;pfen.  Zum Herunterfahren mit Stromabschaltung w&auml;re der Wert z.B. <a href="BitOR.htm">BitOR</a>($SD_SHUTDOWN, $SD_POWERDOWN).
+
+Standby oder Hibernate werden ignoriert, wenn andere Werte gesetzt werden.
+
+
+###Related###
+ProcessClose
+
+
+###Example###
+@@IncludeExample@@

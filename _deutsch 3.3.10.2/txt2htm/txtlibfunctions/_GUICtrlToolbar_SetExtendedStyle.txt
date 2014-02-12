@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlToolbar_SetExtendedStyle
+
+###Description###
+Setzt die erweiterten Fensterstile des Controls
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetExtendedStyle ( $hWnd, $iStyle )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iStyle
+	erweiterte Fensterstile des Controls. Kann einer oder mehrere der folgenden Werte sein:
+		$TBSTYLE_EX_DRAWDDARROWS - Erlaubt es, dass Buttons einen separaten Dropdown Pfeil haben
+		$TBSTYLE_EX_MIXEDBUTTONS - Erlaubt gemixte Buttons mit Text und Bild
+		$TBSTYLE_EX_HIDECLIPPEDBUTTONS - versteckt teilweise ausgeschnittene Buttons
+		$TBSTYLE_EX_DOUBLEBUFFER - veranlasst, dass die Toolbar doppelt gepuffert wird
+@@End@@
+
+###ReturnValue###
+Gibt die vorherigen erweiterten Fensterstile zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetExtendedStyle
+
+
+###Example###
+@@IncludeExample@@

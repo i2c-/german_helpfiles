@@ -1,0 +1,46 @@
+###User Defined Function###
+_Crypt_DecryptData
+
+###Description###
+Entschl&uuml;sselt einen String mit einen bestimmten Passwort
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_DecryptData ( $vData, $vCryptKey, $iALG_ID [, $fFinal = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$vData
+	String zum entschl&uuml;sseln
+$vCryptKey
+	Passwort oder Handle zu einem Schl&uuml;ssel wenn das CALG_USERKEY Flag angegeben ist
+$iALG_ID
+	Der zu benutzende Algorithmus
+$fFinal
+	[optional] False wenn es nur ein Teil der gesamten Daten ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	einen bin&auml;ren String mit den entschl&uuml;sselten Daten.
+Fehler:	setzt das @error-Flag ungleich 0.
+@error:	100+ - Fehler beim erstellen des Schl&uuml;ssels
+	20 – Fehler beim entschl&uuml;sseln der Daten
+@@End@@
+
+
+###Remarks###
+Die entschl&uuml;sselten Daten werden immer als Bin&auml;r-String zur&uuml;ckgegeben, auch wenn die verschl&uuml;sselten Daten einen String darstellen (umwandeln mit <a href="../functions/BinaryToString.htm">BinaryToString()</a>).
+
+
+###Related###
+_Crypt_EncryptData, _Crypt_DeriveKey
+
+
+###See Also###
+@@MsdnLink@@ CryptDecrypt
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###Function###
+WinGetClassList
+
+###Description###
+Liest die Klassennamen eines Fensters aus.
+
+###Syntax###
+WinGetClassList ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fenster, dessen Klassennamen gelesen werden sollen. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, dessen Klassennamen gelesen werden sollen. Standardwert ist ein leerer String. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String mit den Klassennamen des Fensters.
+Fehler:	"" (leerer String) und setzt @error = 1, wenn kein Fenster die Kriterien erf&uuml;llt.
+@@End@@
+
+
+###Remarks###
+Klassennamen werden durch einen Zeilenvorschub (linefeed = @LF) voneinander getrennt. <a href="WinGetClassList.htm">WinGetClassList()</a> arbeitet sowohl mit minimierten, als auch versteckten Fenstern. Bis zu 64KB Text k&ouml;nnen ausgelesen werden. Falls mehrere Fenster das Kriterium erf&uuml;llen, werden die Klassennamen des zuletzt aktiven Fensters gelesen.
+
+
+###Related###
+WinGetText, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuData
+
+###Description###
+Ermittelt den anwendungsspezischen Wert
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuData($hMenu)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+@@End@@
+
+###ReturnValue###
+Gibt den anwendungsspezifischen Wert zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetMenuData
+
+###Example###
+@@IncludeExample@@

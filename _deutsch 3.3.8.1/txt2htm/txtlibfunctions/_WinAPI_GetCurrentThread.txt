@@ -1,0 +1,24 @@
+###User Defined Function###
+_WinAPI_GetCurrentThread
+
+###Description###
+Ermittelt ein Pseudo-Handle f&uuml;r den aufrufenden Prozess.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetCurrentThread()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt das Pseudo-Handle f&uuml;r den aktuellen Prozess zur&uuml;ck
+
+###Remarks###
+Ein Pseudo-Handle ist eine spezielle Konstante die als Handle des aktuellen Prozesses interpretiert wird. Der
+aufrufende Thread kann Gebrauch von diesem Handle machen um sich selbst zu benennen, wann immer ein Thread-Handle ben&ouml;tigt wird.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetCurrentThread

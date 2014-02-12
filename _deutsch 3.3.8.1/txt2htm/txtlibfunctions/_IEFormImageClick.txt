@@ -1,0 +1,56 @@
+###User Defined Function###
+_IEFormImageClick
+
+###Description###
+Simuliert einen Mausklick auf ein < input type=image >. Das Bild kann durch den Alternativtext (Attribut alt), den Namen (Attribut name) und den Quellpfad (Attribut src) identifiziert werden.
+
+###Syntax###
+#include <IE.au3>
+_IEFormImageClick(ByRef $o_object, $s_linkText [, $s_mode = "src" [, $i_index = 0 [, $f_wait = 1]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines DOM-Elements (es wird in das passende Objekt umgewandelt)
+$s_linkText
+	Wert, anhand dessen das Element identifiziert werden soll - im Bezug auf $s_mode
+$s_mode
+	[optional] Bestimmt die Suchmethode 
+	src = (Default) Bild wird nach seiner Quelle identifiziert 
+	name = Bild wird anhand seines Namens identifiziert 
+	alt = Bild wird an Hand seines Alternativtextes identifiziert
+$i_index 
+	[optional] Gibt an, welches Bild angeklickt werden soll, wenn mehrere Bilder mit den gleichen Daten auftauchen (Index beginnt bei 0).
+$f_wait 
+	[optional] Gibt an, ob gewartet werden soll bis die Seite geladen wird.
+	0 = Nicht warten. 
+	1 = (Standard) Warten bis die Seite komplett geladen ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler 
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp.
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiges Objekt 
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert 
+	6 ($_IEStatus_LoadWaitTimeout) = Ladezeit &uuml;berschritten
+	7 ($_IEStatus_NoMatch) = Nichts gefunden 
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert 
+	9 ($_IEStatus_ClientDisconnected) = Verbindung abgebrochen
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Das Formularelement < input type=image > wird anders als alle anderen Formularelemente behandelt. Es wird vom IE nicht als Teil der Formularelemente angesehen. Deshalb erm&ouml;glicht diese Funktion den Zugriff &uuml;ber die Attribute src, name oder alt. Unabh&auml;ngig davon, welches Objekt der Funktion &uuml;bergeben wird, wird das Formularelement stets im gesamten Dokument gesucht.
+
+
+###Related###
+_IEImgClick, _IEImgGetCollection, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

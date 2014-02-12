@@ -1,0 +1,62 @@
+###Function###
+ControlClick
+
+###Description###
+Sendet einen Mausklick-Befehl an das angegebene Control.
+
+###Syntax###
+ControlClick ( "title", "text", controlID [, button [, clicks [, x [, y]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+button
+	[optional] Die zu dr&uuml;ckende Taste, "left", "right", "middle", "menu", "primary", "secondary". Standard ist "left".
+clicks
+	[optional] Die Anzahl der Mausklicks. Standard ist 1.
+x
+	[optional] Die x-Position innerhalb des Controls, die geklickt werden soll. Standard ist die Mitte
+y
+	[optional] Die y-Position innerhalb des Controls, die geklickt werden soll. Standard ist die Mitte
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Einige Controls in inaktiven Fenstern widerstehen Klicks, bis das Fenster das aktive Fenster ist. Hierzu ist zuerst die WinActivate()-Funktion zu benutzen, um das Fenster in den Vordergrund zu zwingen.
+Die Benutzung von 2 Klicks f&uuml;hrt einen Doppelklick in dem Control durch. Dies kann auch verwendet werden, um ein Programm aus dem Explorer heraus zu starten!
+
+Falls der Benutzer die linke und rechte Maustaste in der Systemsteuerung vertauscht hat, dann ist das Verhalten der Button-Parameter unterschiedlich. 
+"Left" und "right" simulieren immer einen Klick auf die jeweilige Taste, egal ob die Tasten vertauscht sind oder nicht. 
+Die Button-Parameter "primary" oder "main" l&ouml;sen immer den Hauptklick aus (der normalerweise "Linksklick" genannt wird), egal ob die Tasten vertauscht wurden oder nicht.
+Die Parameter "secondary" oder "menu" lassen f&uuml;r gew&ouml;hnlich das Kontextmen&uuml; erscheinen, egal ob die Tasten vertauscht wurden oder nicht.
+
+<a name="&Uuml;bersicht"></a>
+@@StandardTable1@@
+<b>Parameter</b>	<b>Klick (normal)</b>	<b>Klick (getauscht)</b>
+""	links	links
+"left"	links	links
+"middle"	Mitte	Mitte
+"right"	rechts	rechts
+"primary"	links	rechts
+"main"	links	rechts
+"secondary"	rechts	links
+"menu"	rechts	links
+@@End@@
+
+###Related###
+ControlCommand, MouseClick, WinActivate
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+StringIsSpace
+
+###Description###
+Pr&uuml;ft ob der String nur Leerstellen enth&auml;lt.
+
+###Syntax###
+StringIsSpace ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn nicht nur Leerstellen enthalten.
+@@End@@
+
+
+###Remarks###
+Leerstellen schlie&szlig;en die ASCII Zeichen Chr(9) bis Chr(13) - die f&uuml;r Horizontal Tabulator, Zeilenvorschub, Vertikal Tabulator, Seitenvorschub und Eingabe stehen - mit ein.
+
+Leerstellen enhalten ebenfalls das Standard Leerzeichen  ( Chr(32) ), das durch Dr&uuml;cken der Leertaste entsteht.
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsDigit, StringIsLower, StringIsUpper, StringIsXDigit, StringUpper, StringLower, StringStripCR, StringStripWS
+
+
+###Example###
+@@IncludeExample@@

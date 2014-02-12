@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListBox_ClickItem
+
+###Description###
+Klick ein Item an
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_ClickItem ( $hWnd, $iIndex [, $sButton = "left" [, $fMove = False [, $iClicks = 1 [, $iSpeed = 0]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	legt den 0-basierenden Index des Items fest
+$sButton
+	[optional] mit welchem Button geklickt werden soll
+$fMove
+	[optional] Falls True wird die Maus bewegt. Falls False, wird die Maus nicht bewegt.
+$iClicks
+	[optional] Anzahl von Klicks
+$iSpeed
+	[optional] Bewegungsgeschwindigkeit der Maus
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

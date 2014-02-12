@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinNet_AddConnection
+
+###Description###
+Verbindet ein lokales Laufwerk mit einer Netzwerk Ressource.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_AddConnection($sLocalName, $sRemoteName [, $sPassword = 0])
+
+###Parameters###
+@@ParamTable@@
+$sLocalName
+	Name des lokalen Laufwerkes das umgeleitet wird, wie zum Beispiel "F:" oder "LPT1". Bei dem String wird keine Gro&szlig;-Kleinschreibung beachtet. Wenn der Parameter 0 ist, wird eine Verbindung aufgebaut, ohne das lokale Laufwerk umzuleiten.
+$sRemoteName
+	Name der Netzwerkressource, zu der verbunden werden soll.
+$sPassword
+	[optional] Passwort, das benutzt werden soll, um eine Verbindung herzustellen. Dieser Parameter ist normalerweise das Passwort, das mit dem aktuellen Benutzer verkn&uuml;pft ist. Wenn der Parameter 0 ist, wird das Standard Passwort verwendet. Ein leerer String bedeutet, dass kein Passwort verwendet wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion wird nur noch aus Gr&uuml;nden der Kompatibilit&auml;t mit 16-Bit Versionen von Windows angeboten.
+Anwendungen sollten die Funktionen _WinNet_AddConnection2 oder _WinNet_AddConnection3 aufrufen. Eine erfolgreiche Verbindung besteht dauerhaft, d.h. das System stellt die Verbindung w&auml;hrend nachfolgender Anmeldeoperationen automatisch wieder her.
+
+###Related###
+_WinNet_AddConnection2, _WinNet_AddConnection3
+
+###See Also###
+@@MsdnLink@@ WNetAddConnectionA

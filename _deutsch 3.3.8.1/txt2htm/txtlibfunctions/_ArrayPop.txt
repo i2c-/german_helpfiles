@@ -1,0 +1,33 @@
+###User Defined Function###
+_ArrayPop
+
+###Description###
+Gibt das letzte Element eines Arrays zur&uuml;ck und l&ouml;scht dieses gleichzeitig.
+
+###Syntax###
+#include <Array.au3>
+_ArrayPop(ByRef $avArray)
+
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array, das verk&uuml;rzt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das letzte Element des Arrays zur&uuml;ck.
+Fehler:	"", setzt @error
+@error:	1 - Die Eingabe muss ein Array sein
+	2 - $avArray ist kein 1-dimensionales Array
+@@End@@
+
+###Remarks###
+Falls das Array nur ein Element enth&auml;lt, so wird es auf "" gesetzt, nachdem _ArrayPop() angewendet wurde.
+
+###Related###
+_ArrayAdd, _ArrayDelete, _ArrayInsert, _ArrayPush
+
+###Example###
+@@IncludeExample@@

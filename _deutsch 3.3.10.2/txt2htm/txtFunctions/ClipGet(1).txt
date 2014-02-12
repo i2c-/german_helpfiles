@@ -1,0 +1,33 @@
+###Function###
+ClipGet
+
+###Description###
+Holt Text aus der Zwischenablage.
+
+###Syntax###
+ClipGet (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Einen String welcher den Text aus der Zwischenablage enth&auml;lt.
+Fehler:	Setzt @error auf nicht null.
+@error:	1 = wenn die Zwischenablage leer ist
+	2 = wenn sie etwas enth&auml;lt, was kein Text ist
+	3 oder 4 = wenn auf die Zwischenablage nicht zugegriffen werden kann.
+@@End@@
+
+
+###Remarks###
+Wenn mehrere Dateien/Ordner in der Zwischenablage vorhanden sind, wird der Datei- und Ordnername als Text mit @LF getrennt, zur&uuml;ckgegeben.
+
+
+###Related###
+ClipPut
+
+
+###Example###
+@@IncludeExample@@

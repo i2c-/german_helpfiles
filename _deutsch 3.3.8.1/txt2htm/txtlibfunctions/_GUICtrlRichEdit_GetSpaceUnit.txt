@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetSpaceUnit
+
+###Description###
+Ermittelt die Masseinheit des horzizontalen und vertikalen Abstandes, welcher in verschiedenen _GUICtrlRichEdit Funktionen verwendet wird
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetSpaceUnit()
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+Gibt "in", "cm", "mm", "pt" (Punkte) ode "tw" (twips, 1/1440 Inch, 1/567 Zentimeter) zur&uuml;ck
+
+###Remarks###
+Standardm&auml;&szlig;ig wird der Abstand in Inch gemessen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetSpaceUnit
+
+###Example###
+@@IncludeExample@@

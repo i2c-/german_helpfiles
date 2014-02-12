@@ -1,0 +1,41 @@
+###User Defined Function###
+_GDIPlus_PenSetDashStyle
+
+###Description###
+Setzt den Stil der Linie
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenSetDashStyle($hPen [, $iStyle = 0])
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu einem Zeichenstift-Objekt
+$iStyle
+	[optional] Stil der Linie. Kann eine der folgenden sein:
+		$GDIP_DASHSTYLESOLID - eine vollfarbige Linie
+		$GDIP_DASHSTYLEDASH - eine gestrichelte Linie
+		$GDIP_DASHSTYLEDOT - eine gepunktete Linie
+		$GDIP_DASHSTYLEDASHDOT - eine Strich-Punkt-Linie
+		$GDIP_DASHSTYLEDASHDOTDOT - eine Strich-Zwei-Punkt-Linie
+		$GDIP_DASHSTYLECUSTOM - eine benutzerdefinierte Linie
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenGetDashStyle
+
+###See Also###
+@@MsdnLink@@ GdipSetPenDashStyle
+
+###Example###
+@@IncludeExample@@

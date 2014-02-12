@@ -1,0 +1,30 @@
+###Function###
+TrayItemGetState
+
+###Description###
+Ermittelt den aktuellen Status eines Controls im traymen&uuml;.
+
+###Syntax###
+TrayItemGetState ( [controlID] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	[optional] Die Identifikationsnummer des Controls (Control-ID) wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+Gibt den Status zur&uuml;ck. Siehe <a href="TrayItemSetState.htm">TrayItemSetState Tabelle</a> f&uuml;r Werte.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+TrayItemSetState, TrayItemGetHandle
+
+
+###Example###
+@@IncludeExample@@

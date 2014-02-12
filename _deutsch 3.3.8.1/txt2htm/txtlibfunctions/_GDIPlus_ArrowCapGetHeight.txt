@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_ArrowCapGetHeight
+
+###Description###
+Ermittelt die H&ouml;he der Pfeilspitze
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ArrowCapGetHeight($hArrowCap)
+
+###Parameters###
+@@ParamTable@@
+$hArrowCap
+	Handle zu dem Pfeil-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die H&ouml;he der Pfeilspitze zur&uuml;ck
+Fehler:	0
+@@End@@
+
+###Remarks###
+Die H&ouml;he ist der Abstand von der Basis des Pfeils zu dessen Ecke
+
+###Related###
+_GDIPlus_ArrowCapSetHeight
+
+###See Also###
+@@MsdnLink@@ GdipGetAdjustableArrowCapHeight
+
+###Example###
+@@IncludeExample@@

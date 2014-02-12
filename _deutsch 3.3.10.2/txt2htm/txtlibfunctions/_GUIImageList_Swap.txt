@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUIImageList_Swap
+
+###Description###
+Tauscht das Bild zwischen dem Quell- und Zielindex aus
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_Swap ( $hWnd, $iSource, $iDestination )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Imagelist
+$iSource
+	Der 0-basierende Index des Quellbildes f&uuml;r die Tauschoperation
+$iDestination
+	Der 0-basierende Index des Zielbildes f&uuml;r die Tauschoperation
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_Copy
+
+
+###Example###
+@@IncludeExample@@

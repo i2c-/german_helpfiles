@@ -1,0 +1,34 @@
+###Function###
+IsDllStruct
+
+###Description###
+Pr&uuml;ft ob eine Variable vom Typ DllStruct ist.
+
+###Syntax###
+IsDllStruct ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Zu pr&uuml;fende(r) Variable/Ausdruck.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0, wenn der Ausdruck nicht vom Typ DllStruct, wie von DllStructCreate zur&uuml;ckgegeben, ist.
+@@End@@
+
+
+###Remarks###
+Siehe <a href="../intro/lang_datatypes.htm">Sprachreferenz - Datentypen</a> f&uuml;r eine detaillierte Beschreibung.
+
+
+###Related###
+DllStructCreate, VarGetType
+
+
+###Example###
+@@IncludeExample@@

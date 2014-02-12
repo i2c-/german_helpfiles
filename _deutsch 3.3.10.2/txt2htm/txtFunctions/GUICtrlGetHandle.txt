@@ -1,0 +1,37 @@
+###Function###
+GUICtrlGetHandle
+
+###Description###
+Gibt den Handle f&uuml;r ein Control und einige (Item-)Sonder-Handles (Menu, ContextMenu, TreeViewItem) zur&uuml;ck.
+
+###Syntax###
+GUICtrlGetHandle ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+controlID
+	Control-Identifikation wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...()</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Handle der &uuml;bergebenen Control-Identifikation zur&uuml;ck.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Diese Controls werden nicht unterst&uuml;tzt: <a href="GUICtrlCreateDummy.htm">GUICtrlCreateDummy()</a>, <a href="GUICtrlCreateGraphic.htm">GUICtrlCreateGraphic()</a>, <a href="GUICtrlCreateObj.htm">GUICtrlCreateObj()</a>, <a href="GUICtrlCreateListViewItem.htm">GUICtrlCreateListViewItem()</a> und <a href="GUICtrlCreateTabItem.htm">GUICtrlCreateTabItem()</a>.
+
+ListView-Items und Tab-Items werden durch Indizes verwaltet. Um den Index zu erhalten, ist <a href="DllCall.htm">DllCall()</a> und <a href="DllStructCreate.htm">DllStructCreate()</a> zu nutzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+IsHWnd
+
+
+###Example###
+@@IncludeExample@@

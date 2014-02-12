@@ -1,0 +1,52 @@
+###User Defined Function###
+_ArraySearch
+
+###Description###
+Findet einen Eintrag in einem 1-dimensionalen oder 2-dimensionalen Array. &Auml;hnlich wie _ArrayBinarySearch(), mit der Ausnahme, dass kein sortiertes Array erforderlich ist.
+
+###Syntax###
+#include <Array.au3>
+_ArraySearch(Const ByRef $avArray, $vValue [, $iStart = 0 [, $iEnd = 0 [, $iCase = 0 [, $iCompare= 0 [, $iForward = 1 [, $iSubItem = -1]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das zu durchsuchende Array
+$vValue
+	Der Suchbegriff
+$iStart
+	[Optional] Startindex f&uuml;r die Suche
+$iEnd
+	[Optional] Stoppindex f&uuml;r die Suche
+$iCase
+	[Optional] Wenn auf 1 gesetzt ist, wird die Gro&szlig;- und Kleinschreibung ber&uuml;cksichtigt. 
+$iCompare
+	[Optional] 0 = AutoIt Variablenvergleich (Standard), "String" = 0, "" = 0 oder "0" = 0 passt.
+		1: f&uuml;hrt eine Teilsuche aus (StringInStr)
+		2: Vergleich passt, wenn die Variablen vom gleichen Typ sind und den gleichen Wert haben
+$iForward
+	[Optional] Wenn auf 0 gesetzt wird das Array r&uuml;ckw&auml;rts (vom Ende zum Anfang) durchsucht anstatt vorw&auml;rts (vom Anfang zum Ende)
+$iSubItem
+	[Optional] Sub-index in dem bei einem 2-dimensionalem Array gesucht werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index wo $vValue gefunden wurde
+Fehler:	-1, setzt @Error:
+@error:	1 - $avArray ist kein Array
+	2 - $avArray ist kein 1-dimensionales oder 2-dimensionales Array
+	4 - $iStart ist gr&ouml;&szlig;er als $iEnd
+	6 - $vValue wurde im Array nicht gefunden
+	7 - $avArray hat zu viele Dimensionen
+	(3, 5 - missbilligte Fehlercodes)
+@@End@@
+
+###Remarks###
+Diese Funktion kann langsamer sein als _ArrayBinarySearch(), aber sie ist n&uuml;tzlich, wenn die Array-Reihenfolge nicht ge&auml;ndert werden kann.
+
+###Related###
+_ArrayBinarySearch, _ArrayFindAll
+
+###Example###
+@@IncludeExample@@

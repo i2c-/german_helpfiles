@@ -1,0 +1,36 @@
+###Function###
+WinGetHandle
+
+###Description###
+Ermittelt das Handle eines Fensters.
+
+###Syntax###
+WinGetHandle ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Fenster-ID (Handle) als String zur&uuml;ck.
+Fehler:	Gibt einen leeren String ("") zur&uuml;ck und setzt @error = 1, wenn kein Fenster die Kriterien erf&uuml;llt.
+@@End@@
+
+
+###Remarks###
+Diese Funktion ist wichtig f&uuml;r die Nutzung der erweiterten "WinTitleMatchMode" Optionen, die es erm&ouml;glichen anstelle von Fenstertiteln und / oder Fenstertexten Klassennamen (classnames) und Fenster-IDs (Handles) zur Fensterbestimmung zu nutzen.
+Wird das Fenster &uuml;ber Fenster-IDs ausgew&auml;hlt, kann es auch erreicht werden, wenn der Titel wechselt.
+
+###Related###
+WinSetTitle, GUICreate, WinList
+
+
+###Example###
+@@IncludeExample@@

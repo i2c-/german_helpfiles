@@ -1,0 +1,57 @@
+###User Defined Function###
+_WinAPI_GetWindow
+
+###Description###
+Ermittelt das Handle eines Fensters, das ein bestimmtes Verh&auml;ltnis (Z-Anordnung oder Besitzer) zu dem angegebenen Fenster hat
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindow($hWnd, $iCmd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters. Das ermittelte Fenster-Handle ist relativ zu diesem Fenster, basierend auf den Wert im uCmd Parameter.
+$iCmd
+	Gibt das Verh&auml;ltnis an, das zwischen dem angegebenen Fenster und dem Fenster, dessen Handle ermittelt werden
+		soll, besteht. Dieser Parameter kann einer der folgenden Werte sein:
+		$GW_CHILD - Das ermittelte Handle identifiziert das Child-Fenster an der Spitze der Z-Anordnung, falls das angegebene
+		Fenster ein Parent-Fenster ist; andernfalls ist das ermittelte Handle 0. Die Funktion pr&uuml;ft nur auf Child-Fenster des
+		angegebenen Fensters. Sie pr&uuml;ft dann keine abk&ouml;mmlichen Fenster.
+		$GW_HWNDFIRST - Das ermittelte Handle identifiziert das Fenster gleichen Typs, welches am h&ouml;chsten in der Z-Anordnung ist.
+		Wenn das angegebene Fenster ein Topmost-Fenster ist, identifiziert das Handle das Topmost-Fenster, welches am h&ouml;chsten in der
+		Z-Anordnung ist. Falls das angegebene Fenster ein Top-Level Fenster ist, identifiziert das Handle das Top-Level Fenster, welches am
+		h&ouml;chsten in der Z-Anordnung ist. Falls das angegebene Fenster ein Child-Fenster ist, identifiziert das Handle das Fenster auf gleicher Ebene,
+		welches am h&ouml;chsten in der Z-Anordnung ist.
+		$GW_HWNDLAST - Das ermittelte Handle identifiziert das Fenster gleichen Typs, welches am niedrigsten in der Z-Anordnung ist.
+		Wenn das angegebene Fenster ein Topmost-Fenster ist, identifiziert das Handle das Topmost-Fenster, welches am niedrigsten in der
+		Z-Anordnung ist. Falls das angegebene Fenster ein Top-Level Fenster ist, identifiziert das Handle das Top-Level Fenster, welches am
+		niedrigsten in der Z-Anordnung ist. Falls das angegebene Fenster ein Child-Fenster ist, identifiziert das Handle das Fenster auf gleicher Ebene,
+		welches am niedrigsten in der Z-Anordnung ist.
+		$GW_HWNDNEXT - Das ermittelte Handle identifiziert das Fenster direkt unter dem angegebenen Fenster, das in der Z-Anordnung ist.
+		Wenn das angegebene Fenster ein Topmost-Fenster ist, identifiziert das Handle das Topmost-Fenster, welches direkt unter dem angegebenen Fenster in der
+		Z-Anordnung ist. Falls das angegebene Fenster ein Top-Level Fenster ist, identifiziert das Handle das Top-Level Fenster, welches
+		direkt unter dem angegebenen Fenster in der Z-Anordnung ist. Falls das angegebene Fenster ein Child-Fenster ist, identifiziert das Handle das Fenster auf gleicher Ebene,
+		welches direkt unter dem angegebenen Fenster in der Z-Anordnung ist.
+		$GW_HWNDPREV - Das ermittelte Handle identifiziert das Fenster direkt &uuml;ber dem angegebenen Fenster, das in der Z-Anordnung ist.
+		Wenn das angegebene Fenster ein Topmost-Fenster ist, identifiziert das Handle das Topmost-Fenster, welches direkt &uuml;ber dem angegebenen Fenster in der
+		Z-Anordnung ist. Falls das angegebene Fenster ein Top-Level Fenster ist, identifiziert das Handle das Top-Level Fenster, welches
+		direkt &uuml;ber dem angegebenen Fenster in der Z-Anordnung ist. Falls das angegebene Fenster ein Child-Fenster ist, identifiziert das Handle das Fenster auf gleicher Ebene,
+		welches direkt &uuml;ber dem angegebenen Fenster in der Z-Anordnung ist.
+		$GW_OWNER - Das ermittelte Handle identifiziert den Besitzer des angegebenen Fensters, sofern vorhanden
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Fensterhandle
+Fehler:	0
+@@End@@
+
+###Remarks###
+Die EnumChildWindows Funktion ist zuverl&auml;ssiger als der Aufruf von GetWindow in einer Schleife. Eine Anwendung die GetWindow aufruft, um diese Aufgabe zu erledigen, riskiert in einer Endlosschleife gefangen zu werden oder referenziert wom&ouml;glich ein Fenster, das zerst&ouml;rt wurde.
+Ben&ouml;tigt Constants.au3 f&uuml;r vordefinierte Konstanten.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetWindow

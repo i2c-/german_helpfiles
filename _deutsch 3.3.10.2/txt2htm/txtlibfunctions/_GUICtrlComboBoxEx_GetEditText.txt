@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetEditText
+
+###Description###
+Ermittelt den Text von dem Edit-Control einer ComboBoxEx.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetEditText ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein String von dem Edit-Control
+Fehler:	ein leerer String
+@@End@@
+
+
+###Remarks###
+Falls die Nachricht zu einer ComboBox mit dem Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST gesendet wird, schl&auml;gt die Funktion fehl.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_SetEditText
+
+
+###Example###
+@@IncludeExample@@

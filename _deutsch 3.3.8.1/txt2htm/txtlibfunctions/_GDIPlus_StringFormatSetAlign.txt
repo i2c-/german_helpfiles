@@ -1,0 +1,38 @@
+###User Defined Function###
+_GDIPlus_StringFormatSetAlign
+
+###Description###
+Setzt die Textausrichtung eines Stringformatobjekts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_StringFormatSetAlign($hStringFormat,$iFlag)
+
+###Parameters###
+@@ParamTable@@
+$hStringFormat
+	Das Stringformatobjekt welches ausgerichtet werden soll
+$iFlag
+	Die Ausrichtung kann eine der folgenden sein:
+		0 - Der Text wird linksb&uuml;ndig ausgerichtet
+		1 - Der Text wird zentrisch ausgerichtet
+		2 - Der Text wird rechtsb&uuml;ndig ausgerichtet
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_StringFormatCreate
+
+###See Also###
+@@MsdnLink@@ GdipSetStringFormatAlign
+
+###Example###
+@@IncludeExample@@

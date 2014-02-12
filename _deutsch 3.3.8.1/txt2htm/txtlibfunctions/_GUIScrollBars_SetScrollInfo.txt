@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUIScrollBars_SetScrollInfo
+
+###Description###
+Setzt die Parameter der Scrollbar
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_SetScrollInfo($hWnd, $fnBar, $tSCROLLINFO [, $fRedraw = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$fnBar
+	Legt den Typ der Scrollbar fest. Dieser Parameter kann einer der folgenden Werte sein:
+		  $SB_CTL - Setzt die Position der Scrollbox in dem ScrollBar-Control. Der $hWnd Parameter muss dabei das Handle des ScrollBar-Control sein.
+		  $SB_HORZ - Setzt die Position der Scrollbox einer standardm&auml;&szlig;igen horizontalen Scrollbar.
+		  $SB_VERT - Setzt die Position der Scrollbox einer standardm&auml;&szlig;igen vertikalen Scrollbar.
+$tSCROLLINFO
+	Struktur des Typs $tagSCROLLINFO
+$fRedraw
+	[optional] Legt fest, ob die Scrollbar neu gezeichnet werden soll, um die &Auml;nderungen der Scrollbar darzustellen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Aktuelle Position der Scrollbox
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Obige Konstanten ben&ouml;tigen ScrollBarConstants.au3
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIScrollBars_GetScrollInfo, _GUIScrollBars_SetScrollInfoMax, _GUIScrollBars_SetScrollInfoMin, _GUIScrollBars_SetScrollInfoPage, _GUIScrollBars_SetScrollInfoPos
+
+###See Also###
+@@MsdnLink@@ SetScrollInfo
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,50 @@
+###User Defined Function###
+_SendMessage
+
+###Description###
+Wrapper f&uuml;r den sonst &uuml;blichen DLL-Aufruf
+
+###Syntax###
+#include <SendMessage.au3>
+_SendMessage($hWnd, $iMsg [, $wParam = 0 [, $lParam = 0 [, $iReturn = 0 [, $wParamType = "wparam" [, $lParamType = "lparam" [, $sReturnType = "lparam"]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$iMsg
+	Nachricht, die dem Fenster gesendet wird (Numerisch)
+$wParam
+	[optional] Zus&auml;tzliche nachrichtspezifische Informationen
+$lParam
+	[optional] Zus&auml;tzliche nachrichtspezifische Informationen
+$iReturn
+	[optional] R&uuml;ckgabewerte
+		0 - Gibt den Wert des Dll-Aufrufes zur&uuml;ck
+		1 - $ihWnd
+		2 - $iMsg
+		3 - $wParam
+		4 - $lParam
+		< 0 oder  > 4 - Array wie aus DllCall zur&uuml;ckgegeben
+$wParamType
+	[optional] siehe DllCall
+$lParamType
+	[optional] siehe DllCall
+$sReturnType
+	[optional] siehe DllCall
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der, vom Benutzer gew&auml;hlte, R&uuml;ckgabewert aus dem DllCall() Ergebnis.
+Fehler:	@error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_SendMessageA, DllCall
+
+###Example###
+@@IncludeExample@@

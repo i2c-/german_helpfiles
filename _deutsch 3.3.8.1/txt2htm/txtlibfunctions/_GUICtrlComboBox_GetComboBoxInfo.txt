@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlComboBox_GetComboBoxInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber die festgelegte ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetComboBoxInfo($hWnd, ByRef $tInfo)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$tInfo
+	Infos die durch $COMBOBOXINFO definiert sind.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

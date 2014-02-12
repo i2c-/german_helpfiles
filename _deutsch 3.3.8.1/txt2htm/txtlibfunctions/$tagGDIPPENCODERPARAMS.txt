@@ -1,0 +1,19 @@
+###Structure Name###
+$tagGDIPPENCODERPARAMS
+
+###Description###
+tagGDIPPENCODERPARAMS Struktur
+
+###Syntax###
+Global Const $tagGDIPPENCODERPARAMS = "uint Count;byte Params[1]"
+
+###Fields###
+@@ParamTable@@
+Count
+	Anzahl von tagGDIPENCODERPARAM Strukturen im Array
+Params
+	Start der tagGDIPENCODERPARAM Struktur
+@@End@@
+
+###Remarks###
+Keine.

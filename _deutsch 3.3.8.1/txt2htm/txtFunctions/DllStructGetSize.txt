@@ -1,0 +1,33 @@
+###Function###
+DllStructGetSize
+###Description###
+Gibt die Gr&ouml;sse der Struktur in Bytes zur&uuml;ck.
+
+###Syntax###
+DllStructGetSize ( Struct )
+
+
+###Parameters###
+@@ParamTable@@
+Struct
+	Struktur, zur&uuml;ckgegeben von DllStructCreate.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Gr&ouml;sse der Struktur in Bytes.
+Fehler:	0.
+@Error:	0 = Kein Fehler.
+	1 = Die von DllStructCreate zur&uuml;ckgegebene Struktur ist nicht korrekt.
+@@End@@
+
+
+###Remarks###
+Wird gebraucht, wenn ein Element in der Struktur die Gr&ouml;sse der Struktur enthalten soll.
+
+###Related###
+DllStructCreate, DllStructSetData
+
+
+###Example###
+@@IncludeExample@@

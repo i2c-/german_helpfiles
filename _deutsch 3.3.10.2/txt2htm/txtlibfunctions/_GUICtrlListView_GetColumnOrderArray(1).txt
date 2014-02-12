@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_GetColumnOrderArray
+
+###Description###
+Ermittelt die aktuelle Reihenfolge der Spalten (gelesen von links nach rechts)
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetColumnOrderArray ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Anzahl der Items im Array (n)
+	[1] - Erster Spaltenindex
+	[2] - Zweiter Spaltenindex
+	[n] - Letzter Spaltenindex
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetColumnOrderArray
+
+
+###Example###
+@@IncludeExample@@

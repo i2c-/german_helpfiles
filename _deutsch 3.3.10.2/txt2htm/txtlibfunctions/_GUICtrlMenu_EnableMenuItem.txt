@@ -1,0 +1,48 @@
+###User Defined Function###
+_GUICtrlMenu_EnableMenuItem
+
+###Description###
+Aktiviert, deaktiviert oder graut ein festgelegten Men&uuml;item aus
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_EnableMenuItem ( $hMenu, $iItem [, $iState = 0 [, $fByPos = True]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Men&uuml;handle
+$iItem
+	ID oder Position des Men&uuml;items
+$iState
+	[optional] zeigt an, ob das Men&uuml; aktiviert, deaktiviert oder ausgegraut ist:
+		0 - aktiviert
+		1 - ausgegraut
+		2 - deaktiviert
+$fByPos
+	[optional] Men&uuml; ID Flag:
+		True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ EnableMenuItem
+
+
+###Example###
+@@IncludeExample@@

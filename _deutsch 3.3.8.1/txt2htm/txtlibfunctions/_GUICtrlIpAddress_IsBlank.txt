@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlIpAddress_IsBlank
+
+###Description###
+Ermittelt, ob alle Felder im IP-Address-Control leer sind
+
+###Syntax###
+#include <GuiIPAddress.au3>
+_GUICtrlIpAddress_IsBlank($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	IP Adresse ist leer
+False:	IP Adresse ist nicht leer
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlIpAddress_ClearAddress
+
+###Example###
+@@IncludeExample@@

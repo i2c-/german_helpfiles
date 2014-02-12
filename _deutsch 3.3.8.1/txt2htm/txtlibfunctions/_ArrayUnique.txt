@@ -1,0 +1,42 @@
+###User Defined Function###
+_ArrayUnique
+
+###Description###
+Gibt ein Array zur&uuml;ck, welches alle Elemente maximal einmal enth&auml;lt. Das Ergebnis ist ein 1-dimensionales Array.
+
+###Syntax###
+#include <Array.au3>
+_ArrayUnique($aArray [, $iDimension = 1 [, $iBase = 0 [, $iCase = 0 [, $vDelim = "|"]]]])
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Das zu verwendende Array
+$iDimension
+	[optional] Die zu verwendende Dimension des Arrays
+$iBase
+	[optional] Ist das Array 0-basiert oder 1-basiert. 0-basiert ist Standard.
+$iCase
+	[optional] Flag der angibt, ob Gro&szlig;- und Kleinschreibung verwendet werden soll.
+$vDelim
+	[optional] Ein oder mehrere Zeichen, die als Trennung verwendet werden sollen. (Unklar, ob das n&uuml;tzlich ist)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein 1-dimensionales Array zur&uuml;ck, welches jedes Element je nach Dimension maximal einmal enth&auml;lt
+Fehler:	Gibt 0 zur&uuml;ck und setzt @Error:
+@error:	0: Kein Fehler.
+	1: Gibt 0 zur&uuml;ck, falls der Parameter kein Array ist.
+	2: _ArrayUnique schlug aus einem anderen Grund fehl
+	3: Die Array Dimension ist ung&uuml;ltig. Diese sollte ein Integer gr&ouml;&szlig;er 0 sein
+@@End@@
+
+###Remarks###
+Gibt ein Array zur&uuml;ck. Das erste Element ($array[0]) enth&auml;lt die Anzahl von zur&uuml;ckgegebenen Strings. Die restlichen Elemente ($array[1], $array[2], etc.) enthalten die maximal einmal enthaltenen Strings.
+
+###Related###
+_ArrayMax, _ArrayMin
+
+###Example###
+@@IncludeExample@@

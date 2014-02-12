@@ -1,0 +1,78 @@
+###Function###
+GUICtrlRead
+
+###Description###
+Liest den Status oder die Daten eines Controls.
+
+###Syntax###
+GUICtrlRead ( controlID [, advanced = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+advanced
+	[optional] gibt erweiterte Informationen eines Controls zur&uuml;ck.
+		0 = (Standard) Gibt einen Wert mit dem Status oder den Daten eines Controls zur&uuml;ck.
+		1 = gibt erweiterte Informationen eines Controls zur&uuml;ck (siehe Bemerkungen).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	abh&auml;ngig vom Control (siehe unten).
+Fehler:	0.
+@@End@@
+
+@@StandardTable1@@
+<b>Typ</b>	<b>Wert</b>
+Checkbox, Radio	Status des Buttons/K&auml;stchens. <a href="GUICtrlSetState.htm#StateTable">siehe Status-Tabelle</a>
+Combo, List	Der ausgew&auml;hlte/markierte Wert.
+Input, Edit	Der eingegebene Text.
+Button	Die Aufschrift auf dem Button.
+Date	Das ausgew&auml;hlte Datum entsprechend dem im PC eingestellten Format.
+Progress	Der aktuelle Anteil (Prozent).
+Slider	Der aktuelle Wert.
+Tab	Die Nummer des ausgew&auml;hlten Tabs (0-basierend).
+Menu, MenuItem	Status des Men&uuml;s/Eintrags. <a href="GUICtrlSetState.htm#StateTable">siehe Status-Tabelle </a>
+TreeView	Control-ID des ausgew&auml;hlten TreeView-Eintrags.
+TreeViewItem	Status des TreeView-Eintrags.
+ListView	Control-ID des ausgew&auml;hlten Listeneintrags. 0 bedeutet, dass kein Eintrag ausgew&auml;hlt ist.
+ListViewItem	Der Text des ausgew&auml;hlten Eintrags/Zeile in der Listview.
+Dummy	Der Wert, der durch <a href="GUICtrlSendToDummy.htm">GUICtrlSendToDummy</a> oder <a href="GUICtrlSetData.htm">GUICtrlSetData</a> gesetzt wurde.
+@@End@@
+
+
+###Remarks###
+Im "advanced" Modus enth&auml;lt der R&uuml;ckgabewert zus&auml;tzliche Daten des Controls (siehe unten).
+
+Merke: nicht f&uuml;r alle bekannten Controls sind zus&auml;tzliche Daten verf&uuml;gbar!
+
+@@StandardTable1@@
+<b>Typ</b>	<b>zus&auml;tzlicher Wert</b>
+Checkbox, Radio	Der Text des Controls.
+Menu, MenuItem	Der Text des Controls.
+TreeView	Der Text des aktuell markierten TreeViewItems.
+TreeViewItem	Der Text des TreeViewItems.
+ListViewItem	Der Status des ListViewItems, falls der erweiterte Stil $LVS_EX_CHECKBOXES im advanced Modus verwendet wird.  <a href="GUICtrlSetState.htm#StateTable">Siehe Status Tabelle </a>
+Tab	Die Control-ID des ausgew&auml;hlten Tabs
+@@End@@
+
+Bei Checkboxen und Radiobuttons k&ouml;nnen mehrere Statuse als $GUI_FOCUS und $GUI_CHECKED zur&uuml;ckgegeben werden.
+So ist z. B. <a href="BitAND.htm">BitAND</a>(<a href="GUICtrlRead.htm">GUICtrlRead</a>($Item),$GUI_CHECKED) zu verwenden um zu pr&uuml;fen ob ein Control markiert ist.
+
+Bei Listview items k&ouml;nnen mehrere Statuse als $GUI_FOCUS und $GUI_CHECKED zur&uuml;ckgegeben werden (nur f&uuml;r ListView-Controls bei denen der advanced Modus und der erweiterte Stil LVS_EX_CHECKBOXES verwendet wird.)
+So ist z. B. <a href="BitAND.htm">BitAND</a>(<a href="GUICtrlRead.htm">GUICtrlRead</a>($Item),$GUI_CHECKED) zu verwenden um zu sehen ob ein Control markiert ist.
+
+Bei Treeview items k&ouml;nnen mehrere Statuse als $GUI_FOCUS, $GUI_EXPAND und $GUI_CHECKED, $GUI_UNCHECKED zur&uuml;ckgegeben werden (nur f&uuml;r Treeview-Controls bei denen der erweiterte Stil TVS_CHECKBOXES verwendet wird.)
+So ist z. B. <a href="BitAND.htm">BitAND</a>(<a href="GUICtrlRead.htm">GUICtrlRead</a>($Item),$GUI_CHECKED) zu verwenden um zu sehen ob ein Control markiert ist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlUpdate..., GUIGetMsg, GUICtrlSetData, GUIEventOptions (Option), GUICtrlCreate..., GUICtrlGetState, GUICtrlSendToDummy, GUICtrlSendMsg
+
+
+###Example###
+@@IncludeExample@@

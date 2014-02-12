@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlDTP_GetMonthCal
+
+###Description###
+Ermittelt das Handle zu dem Unterpunkt des MonthCal-Control
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_GetMonthCal($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Handle des Monatskalenders
+Fehler:	0
+
+###Remarks###
+DTP Controls erstellen ein child MonthCal-Control wenn der Benutzer auf den Dropdown Pfeil klickt ($DTN_DROPDOWN
+Nachricht). Wenn der Monatskalender nicht mehr l&auml;nger ben&ouml;tigt wird, wird der zerst&ouml;rt (eine $DTN_CLOSEUP Nachricht wird zur Zerst&ouml;rung gesendet). So dass sich die Anwendung nicht auf ein statisches Handle des DTP Child Monatskalenders Control verlassen muss.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

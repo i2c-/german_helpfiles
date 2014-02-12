@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlComboBox_SelectString
+
+###Description###
+Durchsucht die ListBox der ComboBox nach einem Item, welches mit den Zeichen des festgelegten Strings beginnt
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SelectString($hWnd, $sText [, $iIndex = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	String der die zu suchenden Zeichen enth&auml;lt
+$iIndex
+	[optional] legt den 0-basierenden Index des Items fest bei dem die Suche beginnen soll
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der Index des markierten Items
+Fehler:	-1
+
+###Remarks###
+Wenn die Suche das Ende der Liste erreicht, wird sie am Anfang der Liste bis zu dem durch den wParam Parameter festgelegten Item fortgesetzt.
+
+Falls $iIndex –1 ist, wird die komplette Liste vom Anfang an durchsucht.
+Ein String wird nur markiert, wenn die Zeichen am Anfang des Ergebnisstrings stehen
+
+Falls es eine &Uuml;bereinstimmung gibt, wird es markiert und in das Edit-Control kopiert
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_FindString, _GUICtrlComboBox_FindStringExact, _GUICtrlComboBoxEx_FindStringExact
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlMenu_FindParent
+
+###Description###
+Ermittelt das Fenster zu dem ein Men&uuml; geh&ouml;rt
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_FindParent($hMenu)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Fenster Handle
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetMenu
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_AppendText
+
+###Description###
+F&uuml;gt einen Text am Ende des Anwendungsbereichs hinzu
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_AppendText($hWnd, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Text der angef&uuml;gt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False, und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_ReplaceText, _GUICtrlRichEdit_SetText, _GUICtrlRichEdit_GetText
+
+###See Also###
+@@MsdnLink@@ EM_SETTEXTEX
+
+###Example###
+@@IncludeExample@@

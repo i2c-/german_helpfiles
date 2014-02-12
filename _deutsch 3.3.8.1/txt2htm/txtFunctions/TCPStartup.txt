@@ -1,0 +1,36 @@
+###Function###
+TCPStartup, UDPStartup
+
+###Description###
+Stellt die TCP und UDP Dienste zur Verf&uuml;gung.
+
+
+###Syntax###
+TCPStartup ( )
+UDPStartup ( )
+
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error.
+@error:	Windows API WSAGetError R&uuml;ckgabewerte (siehe <a href="http://msdn.microsoft.com/en-us/library/ms742213.aspx">MSDN</a>).
+@@End@@
+
+
+###Remarks###
+Es muss TCPShutdown() aufgerufen werden, um den Speicherverbrauch zu reduzieren, wobei f&uuml;r jeden gegl&uuml;ckten TCPStartup() Aufruf ein TCPShutdown get&auml;tigt werden muss.
+
+UDPStartup() ist das gleiche wie TCPStartup().
+
+
+###Related###
+TCPShutdown, TCPListen, TCPCloseSocket, UDPCloseSocket, TCPAccept, TCPConnect, TCPNameToIP, TCPRecv, TCPSend
+
+
+###Example###
+@@IncludeExample@@

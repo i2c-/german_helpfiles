@@ -1,0 +1,39 @@
+###Function###
+DirCopy
+
+###Description###
+Kopiert einen Ordner samt Unterordner und Dateien (funktioniert wie xcopy)
+
+###Syntax###
+DirCopy ( "source dir", "dest dir" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+source dir
+	Pfad zum Quellordner ohne abschlie&szlig;enden Backslash (z.B. "C:\Path1")
+dest dir
+	Pfad zum Zielordner ohne abschlie&szlig;enden Backslash (z.B. "C:\Path_Copy")
+flag
+	[optional] dieser Parameter gibt an, ob eventuell schon existierende Dateien &uuml;berschrieben werden sollen oder nicht.
+	 0 = (Standard) kein &Uuml;berschreiben von existierenden Dateien
+	 1 = &Uuml;berschreiben existierender Dateien
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn das Kopieren des Ordners fehlschlug.
+@@End@@
+
+
+###Remarks###
+Wenn die Ordnerstruktur des Zielordners nicht besteht, wird sie nach M&ouml;glichkeit erstellt.
+
+###Related###
+DirRemove, FileCopy
+
+
+###Example###
+@@IncludeExample@@

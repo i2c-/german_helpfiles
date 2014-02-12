@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlComboBox_GetTopIndex
+
+###Description###
+Ermittelt den 0-basierenden Index des ersten sichtbaren Items in der ListBox der ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetTopIndex ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des ersten sichtbaren Items in der ListBox der ComboBox
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_SetTopIndex
+
+
+###Example###
+@@IncludeExample@@

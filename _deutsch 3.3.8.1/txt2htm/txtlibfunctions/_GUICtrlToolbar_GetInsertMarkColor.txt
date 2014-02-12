@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlToolbar_GetInsertMarkColor
+
+###Description###
+Ermittelt die Farbe die f&uuml;r das zeichnen der Einf&uuml;gemarke verwendet wird
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetInsertMarkColor($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Farbe f&uuml;r die Einf&uuml;gemarke
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetInsertMarkColor
+
+###Example###
+@@IncludeExample@@

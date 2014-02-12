@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlEdit_EndUpdate
+
+###Description###
+Aktiviert wieder die Aktualisierung des Control-Items, welches durch die _GUICtrlEdit_BeginUpdate Funktion deaktiviert wurde
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_EndUpdate ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_BeginUpdate
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetBold
+
+###Description###
+Zeigt an, ob das Item im Stil 'fett' gezeichnet wurde
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetBold ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item wurde im Stil 'fett' gezeichnet
+False:	Item wurde nicht im Stil 'fett' gezeichnet
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_SetBold
+
+
+###Example###
+@@IncludeExample@@

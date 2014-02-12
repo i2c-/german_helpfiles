@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyleFixedBMP
+
+###Description###
+Ermittelt, ob das Hintergrundbitmap sich nicht bewegt, wenn die Gruppe in der Gr&ouml;&szlig;e ver&auml;ndert wird
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyleFixedBMP($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+True:	Flag ist gesetzt (Das Hintergrundbitmap bewegt sich nicht, wenn die Gruppe in der Gr&ouml;&szlig;e ver&auml;ndert wird)
+False:	Flag ist nicht gesetzt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_SetBandStyleFixedBMP, _GUICtrlRebar_GetBandStyle
+
+###Example###
+@@IncludeExample@@

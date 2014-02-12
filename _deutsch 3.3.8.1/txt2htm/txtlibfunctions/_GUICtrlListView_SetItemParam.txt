@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SetItemParam
+
+###Description###
+Setzt den Wert passend zum Item
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemParam($hWnd, $iIndex, $iParam)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iParam
+	Ein Wert der dem Item zugeordnet wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemParam
+
+###Example###
+@@IncludeExample@@

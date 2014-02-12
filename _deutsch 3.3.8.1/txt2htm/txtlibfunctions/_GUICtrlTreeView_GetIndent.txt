@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlTreeView_GetIndent
+
+###Description###
+Ermittelt wie viele Pixel die Child-Items im Vergleich zu dessen Parent-Items einger&uuml;ckt sind
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetIndent($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Einr&uuml;ckung zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_SetIndent
+
+###Example###
+@@IncludeExample@@

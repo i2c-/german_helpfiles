@@ -1,0 +1,38 @@
+###Function###
+GUICtrlCreateMenu
+
+###Description###
+Erstellt eine Men&uuml;leiste f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateMenu ( "submenutext" [, menuID [, menuentry]] )
+
+
+###Parameters###
+@@ParamTable@@
+submenutext
+	Der Untermen&uuml;-Text.
+menuID
+	[optional] Wenn die ID angegeben wird, erlaubt sie das Erstellen eines Untermen&uuml;s im entsprechenden Men&uuml;. Wenn die ID auf -1 gesetzt ist, bezieht sie sich auf die oberste Men&uuml;-Ebene.
+menuentry
+	[optional] Erm&ouml;glicht es, die Nummer des Eintrags festzulegen, der erzeugt werden soll. Die Eintr&auml;ge sind beginnend mit 0 durchnummeriert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um Informationen im Control zu setzen oder zu ver&auml;ndern siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a>.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlSetState, GUIGetMsg, GUICtrlCreateMenuItem, GUICtrlGetHandle, GUICtrlCreateContextMenu
+
+
+###Example###
+@@IncludeExample@@

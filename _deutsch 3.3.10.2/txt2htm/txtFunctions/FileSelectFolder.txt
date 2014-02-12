@@ -1,0 +1,49 @@
+###Function###
+FileSelectFolder
+
+###Description###
+Bietet eine graphische Ordnerauswahl an.
+
+###Syntax###
+FileSelectFolder ( "dialog text", "root dir" [, flag = 0 [, "initial dir" [, hwnd]]] )
+
+
+###Parameters###
+@@ParamTable@@
+dialog text
+	Der Begr&uuml;&szlig;ungstext.
+root dir
+	Basisverzeichnis des Verzeichnisbaumes. Limitiert die Wahl im Basisverzeichnis. F&uuml;r den Desktop ist "" zu benutzen.
+flag
+	[optional]
+		1 = Zeigt den Button "Neuer Ordner" (ben&ouml;tigt IE6.0 oder neuer)
+		2 = Verwendet neuen Dialog-Stil  (ben&ouml;tigt IE5.0 oder neuer)
+		4 = Zeigt ein Edit-Control, zur manuellen Eingabe eines Pfades
+initial dir
+	[optional] Der volle Pfad des Verzeichnis, welches ausgew&auml;hlt/markiert, wenn der Dialog angezeigt wird. Standard ist ein leerer String ("").
+hwnd
+	[optional] Das Fenster Handle welches als Parent f&uuml;r diesen Dialog verwendet werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den vollst&auml;ndigen Pfad des ausgew&auml;hlten Ordners.
+Fehler:	Einen leeren String und setzt @error auf 1, wenn der Benutzer das Fenster geschlossen bzw. abgebrochen hat.
+@@End@@
+
+
+###Remarks###
+Das Hauptverzeichnis wird ausgew&auml;hlt, falls das Startverzeichnis (wenn es angegeben wurde) nicht existiert.
+Ein nicht-existierendes Basisverzeichnis macht den Desktop automatisch zum Basisverzeichnis.
+Die Option "Neuer Ordner"-Button ben&ouml;tigt evtl. Windows XP mit IE6.
+Besondere Windows-Ordner (wie z.B. "Dokumente und Einstellungen") k&ouml;nnen als Basisverzeichnis gesetzt werden, indem man ihre CLSIDs angibt. Siehe <a href="../appendix/clsid.htm">Anhang CLSIDs besonderer Ordner</a>.
+UNC Pfade werden nicht unterst&uuml;tzt. Falls man jedoch ben&ouml;tigt, dass man Dateien auf UNC-Pfaden ausw&auml;hlen kann, dann muss der Pfad zuerst als Laufwerksbuchstabe gemappt werden.
+UNC ist ein Netzwerkpfad.
+
+
+###Related###
+FileSaveDialog, FileOpenDialog
+
+
+###Example###
+@@IncludeExample@@

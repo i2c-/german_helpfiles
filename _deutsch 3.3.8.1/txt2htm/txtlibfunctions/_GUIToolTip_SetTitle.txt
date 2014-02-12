@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUIToolTip_SetTitle
+
+###Description###
+F&uuml;gt ein Standardicon und ein Titelstring hinzu
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetTitle($hWnd, $sTitle [, $iIcon = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sTitle
+	Titelstring 
+$iIcon
+	[optional] Setzt einen der unteren Werte:.
+		0 - Kein Icon
+		1 - Informationsicon
+		2 - Warnicon
+		3 - Fehlericon
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Bei Windows XP SP2 und neuer, kann $iIcon einen HICON Wert enthalten. Jeder Wert gr&ouml;&szlig;er als 3 wird als HICON angesehen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

@@ -1,0 +1,39 @@
+###User Defined Function###
+_Security__ImpersonateSelf
+
+###Description###
+Erh&auml;lt einen Access Token, der den Security-Kontext des aufgerufenen Prozesses verk&ouml;rpert
+
+###Syntax###
+#include <Security.au3>
+_Security__ImpersonateSelf([$iLevel = $SECURITYIMPERSONATION])
+
+###Parameters###
+@@ParamTable@@
+$iLevel
+	[optional] Personifikationslevel des neuen Token:
+		$SECURITYANONYMOUS. Anonym. Der Serverprozess erh&auml;lt keine Identit&auml;tsinformationen &uuml;ber den Client und es kann den Client nicht identifizieren.
+		$SECURITYIDENTIFICATION. Identifikation. Der Serverprozess erh&auml;lt Identit&auml;tsinformationen &uuml;ber den Client, wie zum Beispiel die Sicherheits-ID und
+		Sonderrechte. Jedoch kann der Client nicht personifiziert werden.
+		$SECURITYIMPERSONATION. Personifikation. Der Serverprozess kann den Security-Kontext des Clients auf dessen lokalen Systems personifizieren.
+		Der Server kann den Client auf dem Remote-System nicht personifizieren.
+		$SECURITYDELEGATION. Vollmacht. Der Serverprozess kann den Sicherheits-Kontext des Clents auf dem Remote-System personifizieren.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__OpenThreadTokenEx
+
+###See Also###
+@@MsdnLink@@ ImpersonateSelf
+
+###Example###
+@@IncludeExample@@

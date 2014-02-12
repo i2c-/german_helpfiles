@@ -1,0 +1,43 @@
+###User Defined Function###
+_WinAPI_Beep
+
+###Description###
+Generiert einfache T&ouml;ne auf dem Systemlautsprecher
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_Beep ( $iFreq = 500, $iDuration = 1000 )
+
+
+###Parameters###
+@@ParamTable@@
+$iFreq
+	Die Frequenz des Tones in Hertz. Dieser Wert muss zwischen 37 und 32767 liegen.
+$iDuration
+	Die L&auml;nge des Tones in Millisekunden. Windows Me/98/95: Dieser Parameter wird ignoriert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Windows Me/98/95:
+Stummschalten und Lautst&auml;rkekontrolle haben keinen Einflu&szlig; auf die Ausgabe des Tones. Man h&ouml;rt den Ton trotzdem.
+
+Windows Vista/7:
+Wird die Lautst&auml;rke auf 0 heruntergedreht, so ist auch kein Ton h&ouml;rbar.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ Beep
+
+
+###Example###
+@@IncludeExample@@

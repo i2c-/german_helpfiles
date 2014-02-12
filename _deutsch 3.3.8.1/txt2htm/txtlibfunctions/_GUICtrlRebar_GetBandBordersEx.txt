@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandBordersEx
+
+###Description###
+Ermittelt die R&auml;nder einer Gruppe. Das Ergebnis dieser Nachricht kann f&uuml;r das berechnen der nutzbaren Fl&auml;che in einer Gruppe verwendet werden
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandBordersEx($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe f&uuml;r den die R&auml;nder ermittelt werden sollen
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagRECT Struktur zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_GetBandBorders, _GUICtrlRebar_GetBandRect, _GUICtrlRebar_GetBandRectEx, $tagRECT
+
+###Example###
+@@IncludeExample@@

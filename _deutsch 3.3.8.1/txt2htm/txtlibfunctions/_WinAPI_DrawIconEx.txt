@@ -1,0 +1,64 @@
+###User Defined Function###
+_WinAPI_DrawIconEx
+
+###Description###
+Zeichnet ein Icon oder Cursor in den angegebenen Ger&auml;tekontext
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DrawIconEx($hDC, $iX, $iY, $hIcon [, $iWidth = 0 [, $iHeight = 0 [, $iStep = 0 [, $hBrush = 0 [, $iFlags = 3]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu dem Ger&auml;tekontext in welchen das Icon oder der Cursor gezeichnet werden soll
+$iX
+	X Koordinate der oberen linken Ecke des Icons
+$iY
+	Y Koordinate der oberen linken Ecke des Icons
+$hIcon
+	Handle des zu zeichnenden Icons/Cursors
+$iWidth
+	[optional] Legt die logische Breite des Icons/Cursors fest. Ist dieser Parameter Null und der iFlags
+		Parameter ist 5 ("default size"), benutzt die Funktion die Werte f&uuml;r $SM_CXICON oder $SM_CXCURSOR der Systemkoordinaten um
+		die Breite zu festzusetzen. 
+		Ist dieser Wert Null und "default size" ist nicht in iFlags gesetzt, wird die tats&auml;chliche Breite der Ressource angenommen.
+$iHeight
+	[optional] Legt die logische H&ouml;he des Icons/Cursors fest. Ist dieser Parameter Null und der iFlags
+		Parameter ist 5 ("default size"), benutzt die Funktion die Werte f&uuml;r $SM_CYICON oder $SM_CYCURSOR des Koordinatensystems um
+		die Breite zu festzusetzen. 
+		Ist dieser Wert Null und "default size" ist nicht in iFlags gesetzt, wird die tats&auml;chliche Breite der Ressource angenommen.
+$iStep
+	[optional] Legt den Index fest, der zu zeichnen ist, falls hIcon einen animierten Cursor identifiziert. Dieser Parameter
+		wird ignoriert, sollte hIcon keinen animierten Cursor identifizieren.
+$hBrush
+	[optional] Handle zu einem F&uuml;llmuster (Brush), welcher f&uuml;r Flickerfreies zeichnen vom System genutzt werden soll. Ist hBrush ein 
+		g&uuml;ltiges Handle zu einem F&uuml;llmuster, wird vom System eine "Offscreen" Bitmap mit dem angegebenen F&uuml;llmuster als 
+		Hintergrund erzeugt, das/der Icon/Cursor in die Bitmap gezeichnet, die dann in den von hDC identifizierten Ger&auml;tekontext
+		eingesetzt. Falls hBrush NULL (0) ist, wird das Icon, bzw. der Cursor direkt in den Ger&auml;tekontext gezeichnet.
+$iFlags
+	[optional] Legt die Flags zum Zeichnen fest. Dieser Parameter kann einer der folgenden Werte sein:
+		1 - Zeichnet das Icon oder den Cursor unter Verwendung der Maske
+		2 - Zeichnet das Icon oder den Cursor unter Verwendung des Bildes
+		3 - Zeichnet das Icon oder den Cursor unter Verwendung der Maske und des Bildes
+		4 - Zeichnet das Icon oder den Cursor unter Verwendung des Systemstandard-Bildes anstelle des benutzerdefinierten Bildes
+		5 - Zeichnet das Icon oder den Cursor unter Verwendung mit der Breite/H&ouml;he der Werte der Systemkoordinaten f&uuml;r Icons/
+		Cursor, falls die Parameter iWidth und iHeight mit Null angegeben werden. Wird dieses Flag nicht festgelegt und iWidth und
+		iHeight sind auf Null gesetzt, wird die tats&auml;chliche Gr&ouml;&szlig;e der Ressource angenommen.
+		6 - Zeichnet das Icon als ein ungespiegeltes Icon (Windows XP)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_DrawIcon
+
+###See Also###
+@@MsdnLink@@ DrawIconEx

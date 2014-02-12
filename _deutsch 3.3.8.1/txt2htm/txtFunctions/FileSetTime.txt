@@ -1,0 +1,42 @@
+###Function###
+FileSetTime
+
+###Description###
+Setzt die Zeit- und Datumsinformationen einer oder mehrerer Dateien (oder Verzeichnisse).
+
+
+###Syntax###
+FileSetTime ( "file pattern", "time" [, type [, recurse]] )
+
+
+###Parameters###
+@@ParamTable@@
+file pattern
+	Datei(en) (oder Verzeichnisse), die angepasst werden sollen, z.B. C:\*.au3, C:\Dir, Fotos*
+time
+	Die neue Zeit im Format "YYYYMMDDHHMMSS" (Jahr, Monat, Tag, Stunden [24-Stunden-Format], Minuten, Sekunden).  Wenn <b>time</b> leer ("") ist, dann wird die aktuelle Zeit verwendet.
+type
+	[optional] Die Zeitmarke, die ge&auml;ndert werden soll: 0 = Ge&auml;ndert (Vorgabe), 1 = Erstellt, 2 = Letzter Zugriff
+recurse
+	[optional] Wenn <b>recurse</b> auf 1 gesetzt ist, werden auch Unterverzeichnisse mit einbezogen. Vorgabe ist 0 (keine Unterverzeichnisse).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn beim &Auml;ndern der Zeitmarke ein Fehler aufgetreten ist.
+@@End@@
+
+
+###Remarks###
+Wenn ein Datum &auml;lter als der 01.01.1980 verwendet wird, so wird diese Funktion fehlschlagen.
+Wenn versucht wird das Zeitstempel bei schreibgesch&uuml;tzten Dateien zu &auml;ndern, so wird das Ergebnis ein Fehler sein.
+
+
+###Related###
+FileGetTime, FileGetAttrib, FileSetAttrib
+
+
+###Example###
+@@IncludeExample@@

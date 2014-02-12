@@ -1,0 +1,71 @@
+###User Defined Function###
+_WinAPI_BitBlt
+
+###Description###
+Vollzieht einen Bit-Blocktransfer von Farbdaten ("blitten") 
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_BitBlt($hDestDC, $iXDest, $iYDest, $iWidth, $iHeight, $hSrcDC, $iXSrc, $iYSrc, $iROP)
+
+###Parameters###
+@@ParamTable@@
+$hDestDC
+	Handle zum Ziel-Ger&auml;tekontext
+$iXDest
+	X Wert der linken oberen Ecke des Ziel-Rechtecks (x-Achse)
+$iYDest
+	Y Wert der linken oberen Ecke des Ziel-Rechtecks (y-Achse)
+$iWidth
+	Breite des zu kopierenden Rechtecks
+$iHeight
+	H&ouml;he des zu kopierenden Rechtecks
+$hSrcDC
+	Handle zum Quell-Ger&auml;tekontext
+$iXSrc
+	X Wert der linken oberen Ecke des Quell-Rechtecks (x-Achse)
+$iYSrc
+	Y Wert der linken oberen Ecke des Quell-Rechtecks (y-Achse)
+$iROP
+	Legt den Code der Raster-Operation fest. Diese Codes legen die Art fest wie die Farbdaten des Quell-
+		Rechtecks mit den Farbdaten des Ziel-Rechtecks verkn&uuml;pft werden um die letztendliche Darstellung der Farbdaten zu erreichen:
+		$BLACKNESS - F&uuml;llt das Ziel-Rechteck mit der Farbe, die mit dem Paletten-Index 0 verkn&uuml;pft ist
+		$CAPTUREBLT - Inkludiert jegliche Fenster, die das eigene Fenster &uuml;berlagern in das resultierende Bild
+		$DSTINVERT - Invertiert die Farben des Ziel-Rechtecks (umkehren)
+		$MERGECOPY - Mischt die Farben des Quell-Rechtecks mit dem in hDest aktuell gew&auml;hltem F&uuml;llmuster (Brush), unter
+		Verwendung des AND Operators.
+		$MERGEPAINT - Mischt die invertierten Farben des Quell-Rechtecks mit den Farben des Ziel-
+		Rechtecks unter Verwendung des OR Operators.
+		$NOMIRRORBITMAP - Verhindert das spiegeln der Bitmap
+		$NOTSRCCOPY - Kopiert das invertierte Quell-Rechteck ins Ziel-Rechteck
+		$NOTSRCERASE - Kombiniert die Farben des Quell- und Ziel-Rechtecks unter Verwendung des OR Operators und
+		invertiert dann die daraus resultierenden Farben.
+		$PATCOPY - Kopiert das in hdcDest gew&auml;hlte F&uuml;llmuster in die Ziel-Bitmap
+		$PATINVERT - Kombiniert die Farben des Quell-Rechtecks mit dem in hDest aktuell gew&auml;hltem F&uuml;llmuster, mit den Farben des
+		Ziel-Rechtecks unter Verwendung des XOR Operators.
+		$PATPAINT - Kombiniert die Farben des in hDest aktuell gew&auml;hltem F&uuml;llmusters, mit den Farben des
+		invertiertem Quell-Rechtecks unter Verwendung des OR Operators. Das Resultat dieser Operation wird wiederum mit den Farben
+		des Ziel-Rechtecks kombiniert, unter Verwendung des OR Operators.
+		$SRCAND - Kombiniert die Farben des Quell- und Ziel-Rechtecks unter Verwendung des AND Operators
+		$SRCCOPY - Kopiert das Quell-Rechteck direkt ins Ziel-Rechteck
+		$SRCERASE - Kombiniert die invertierten Farben des Ziel-Rechtecks mit den Farben des Quell-
+		Rechtecks unter Verwendung des AND Operators.
+		$SRCINVERT - Kombiniert die Farben des Quell- und Ziel-Rechtecks unter Verwendung des XOR Operators
+		$SRCPAINT - Kombiniert die Farben des Quell- und Ziel-Rechtecks unter Verwendung des OR Operators
+		$WHITENESS - F&uuml;llt das Ziel-Rechteck mit der Farbe, die mit dem Index 1 in der Physikalischen
+		Palette verkn&uuml;pft ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ BitBlt

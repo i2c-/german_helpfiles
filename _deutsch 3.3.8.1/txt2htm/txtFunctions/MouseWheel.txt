@@ -1,0 +1,36 @@
+###Function###
+MouseWheel
+
+###Description###
+Bewegt das Mausrad rauf oder runter. NUR Windows NT/2000/XP.
+
+###Syntax###
+MouseWheel ( "direction" [, clicks] )
+
+
+###Parameters###
+@@ParamTable@@
+direction
+	"up" (rauf) oder "down" (runter)
+clicks
+	[optional] Anzahl der Drehungen des Mausrades. Standard ist 1.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Richtung nicht erkannt wird.
+@@End@@
+
+
+###Remarks###
+Diese Funktion arbeitet nur mit Windows NT, 2000, XP und neueren Windows Betriebssystemen.
+
+
+###Related###
+MouseClick, MouseClickDrag, MouseGetPos, MouseMove, MouseCoordMode (Option)
+
+
+###Example###
+@@IncludeExample@@

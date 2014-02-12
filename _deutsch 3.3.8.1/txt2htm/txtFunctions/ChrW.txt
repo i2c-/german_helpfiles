@@ -1,0 +1,34 @@
+###Function###
+ChrW
+
+###Description###
+Gibt ein Zeichen entsprechend eines Unicode-Codes wieder.
+
+###Syntax###
+ChrW ( UNICODEcode )
+
+
+###Parameters###
+@@ParamTable@@
+UNICODEcode
+	Ein Unicode-Code im Bereich von 0-65535 (z.B.: 65 gibt den Gro&szlig;buchstaben "A" wieder).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen String mit entsprechendem Unicode-Code-Zeichen wieder.
+Fehler:	Gibt einen leeren String zur&uuml;ck und setzt @error auf nicht-null wenn der UNICODE-Wert gr&ouml;&szlig;er als 65535 ist.
+@@End@@
+
+
+###Remarks###
+Eine komplette ASCII-Tabelle befindet sich unter <a href="../appendix/ascii.htm">Anhang ASCII-Zeichensatz</a>.
+
+
+
+###Related###
+Asc, AscW, Chr, String
+
+
+###Example###
+@@IncludeExample@@

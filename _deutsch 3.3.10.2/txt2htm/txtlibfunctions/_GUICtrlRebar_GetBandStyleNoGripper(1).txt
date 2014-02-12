@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyleNoGripper
+
+###Description###
+Ermittelt, ob die Gruppe keinen Schiebebalken hat, auch wenn es mehr als eine Gruppe in der Rebar gibt.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyleNoGripper ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	das Flag ist gesetzt (Die Gruppe hat keinen Schiebebalken, auch nicht, falls es mehr als eine Gruppe in der Rebar gibt).
+False:	das Flag ist nicht gesetzt.
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBandStyleNoGripper, _GUICtrlRebar_GetBandStyle
+
+
+###Example###
+@@IncludeExample@@

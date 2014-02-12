@@ -1,0 +1,29 @@
+###User Defined Function###
+_NowTime
+
+###Description###
+Gibt die aktuelle Zeit im angegebenen Format zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_NowTime([$sType = 3])
+
+###Parameters###
+@@ParamTable@@
+$sType
+	[optional] 3 = Zeigt die Zeit im Format an, welches in den Regions- und Sprachoptionen auf dem PC eingestellt ist. (Standard)
+		4 - Zeigt die Zeit im 24-Stunden Format an (HH:MM).
+		5 - Zeigt die Zeit mit Sekunden im 24-Stunden Format an (HH:MM:SS).
+@@End@@
+
+###ReturnValue###
+Gibt die aktuelle Zeit im angegebenen Format zur&uuml;ck.
+
+###Remarks###
+Falls das Zeitformat auf dem Computer nicht zug&auml;nglich ist, wird die Zeit im Format "h:mm:ss tt" zur&uuml;ckgegeben.
+
+###Related###
+_DateTimeFormat, _Now, _NowCalc, _NowCalcDate, _NowDate
+
+###Example###
+@@IncludeExample@@

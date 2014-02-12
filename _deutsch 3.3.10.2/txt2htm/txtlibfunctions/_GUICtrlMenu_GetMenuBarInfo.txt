@@ -1,0 +1,53 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuBarInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber eine festgelegte Men&uuml;leiste
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuBarInfo ( $hWnd [, $iItem = 0 [, $iObject = 1]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster dessen Informationen ermittelt werden sollen
+$iItem
+	[optional] legt das Item fest f&uuml;r welches Informationen ermittelt werden soll. Falls 0 empf&auml;ngt die Funktion Informationen
+		&uuml;ber das Men&uuml; selbst. Falls 1, empf&auml;ngt die Funktion Informationen &uuml;ber das erste Item auf dem Men&uuml; und so weiter.
+$iObject
+	[optional] legt das Men&uuml;objekt fest:
+		0 - Das Popupmen&uuml; welches mit dem Fenster verbunden ist
+		1 - Die Men&uuml;leiste welche mit dem Fenster verkn&uuml;pft ist
+		2 - Das Systemmen&uuml; welches mit dem Fenster verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Array mit dem folgenden Format:
+		[0] - X Koordinate der oberen linken Ecke des Rechtecks
+		[1] - Y Koordinate der oberen linken Ecke des Rechtecks
+		[2] - X Koordinate der unteren rechten Ecke des Rechtecks
+		[3] - Y Koordinate der unteren rechten Ecke des Rechtecks
+		[4] - Handle zu der Men&uuml;leiste oder Popupmen&uuml;
+		[5] - Handle zu dem Untermen&uuml;
+		[6] - True falls die Men&uuml;leiste den Fokus hat, sonst False
+		[7] - True falls das Men&uuml;item den Fokus hat, sonst False
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetMenuBarInfo
+
+
+###Example###
+@@IncludeExample@@

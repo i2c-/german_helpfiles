@@ -1,0 +1,41 @@
+###Structure Name###
+$tagCOMBOBOXEXITEM
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Element in einem ComboBoxEx-Control
+
+###Syntax###
+Global Const $tagCOMBOBOXEXITEM = "int Mask;int Item;ptr Text;int TextMax;int Image;int SelectedImage;int OverlayImage;" & _
+		"int Indent;int Param"
+
+###Fields###
+@@ParamTable@@
+Mask
+	Ein Satz von Bit-Flags, die die Attribute festlegen. Kann eine Kombination der folgenden Werte sein.
+		CBEIF_DI_SETITEM - Dieses Flag wird gesetzt, wenn CBEN_GETDISPINFO bearbeitet wird
+		CBEIF_IMAGE - Das <b>iImage</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+		CBEIF_INDENT - Das <b>iIndent</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+		CBEIF_LPARAM - Das <b>lParam</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+		CBEIF_OVERLAY - Das <b>iOverlay</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+		CBEIF_SELECTEDIMAGE - Das <b>iSelectedImage</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+		CBEIF_TEXT - Das <b>pszText</b> Mitglied ist g&uuml;ltig oder muss ausgef&uuml;llt sein.
+Item
+	Der 0-basierte Index des Elements.
+Text
+	Ein Zeiger auf einen Zeichen-Puffer, welcher den Text des Elements enth&auml;lt oder aufnimmt.
+TextMax
+	Die L&auml;nge von <b>pszText</b>, in TCHARs. Wenn Text-Information gesetzt ist, wird dieses Mitglied ignoriert.
+Image
+	Der 0-basierte Index eines Bildes innerhalb der Imagelist.
+SelectedImage
+	Der 0-basierte Index eines Bildes innerhalb der Imagelist.
+OverlayImage
+	Der Eins-Basierte Index eines &uuml;berlagernden Bildes innerhalb der Imagelist.
+Indent
+	Die Anzahl der Einr&uuml;ckungen zur Anzeige des Elements. Jede Einr&uuml;ckung entspricht 10 Pixel.
+Param
+	Ein Wert spezifisch zu dem Element.
+@@End@@
+
+###Remarks###
+Keine.

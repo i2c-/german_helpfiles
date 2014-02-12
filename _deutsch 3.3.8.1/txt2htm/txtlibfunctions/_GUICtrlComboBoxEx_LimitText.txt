@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_LimitText
+
+###Description###
+Begrenzt die L&auml;nge des Textes, welchen der Benutzer in das Edit-Control der ComboBox eingeben kann
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_LimitText($hWnd [, $iLimit = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iLimit
+	[optional] neue L&auml;ngenbegrenzung
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Falls der $iLimit Parameter 0 ist, wird die Textl&auml;nge auf 0x7FFFFFFE Zeichen begrenzt.
+
+Falls die ComboBox den Stil $CBS_AUTOHSCROLL nicht besitzt, hat das Setzen des Textlimits auf Werte, die das Limit des Edit-Controls &uuml;berschreiten, keine Auswirkung.
+
+Die Funktion _GUICtrlComboBoxEx_LimitText begrenzt nur den Text, der vom Benutzer eingegeben werden kann.
+Sie hat weder Einfluss auf den bereits im Edit-Control bestehenden Text, noch auf den ins Edit-Control &uuml;bertragenen Text, wenn ein Eintrag im ListBox-Control markiert wird.
+
+Die Standardbegrenzung liegt bei 30.000 Zeichen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

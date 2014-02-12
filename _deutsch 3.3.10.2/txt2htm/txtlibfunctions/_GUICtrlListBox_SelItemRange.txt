@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlListBox_SelItemRange
+
+###Description###
+W&auml;hlt eines oder mehrere aufeinanderfolgende Items einer Mehrfachauswahl-Listbox aus
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SelItemRange ( $hWnd, $iFirst, $iLast [, $fSelect = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iFirst
+	0-basierender Index des ersten zu markierenden Items
+$iLast
+	0-basierender Index des letzten zu markierenden Items
+$fSelect
+	[optional] legt die Art der Markierung fest.
+	Falls dieser Parameter True ist, wird der String ausgew&auml;hlt und hervorgehoben.
+  Falls es False ist, wird das hervorgehoben entfernt und der String ist nicht mehr l&auml;nger ausgew&auml;hlt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Diese Funktion funktioniert nur in einer Mehrfachauswahl-Listbox.
+Diese Funktion kann nur einen Bereich innerhalb der ersten 65.536 Items ausw&auml;hlen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_SelItemRangeEx
+
+
+###Example###
+@@IncludeExample@@

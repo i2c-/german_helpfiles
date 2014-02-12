@@ -1,0 +1,79 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaBorder
+
+###Description###
+Ermittelt die Rahmeneinstellungen des (ersten) ausgew&auml;hlten Absatzes oder, wenn keiner ausgew&auml;hlt ist, die des aktiven Absatzes.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaBorder($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Einstellungen des ersten selektierten Absatzes - Ein String aus durch Semikola getrennten Werten (;):
+	Wert 1 - Platzierung - Einer oder mehrere aus:
+	   l - linker Rahmen
+	   r - rechter Rahmen
+	   t - oberer Rahmen
+	   b - unterer Rahmen
+	   i - innerer Rahmen
+	   o - &auml;u&szlig;erer Rahmen
+	   oder leer - kein Rahmen
+	Wert 2 - Linienstil - Einer von:
+	   nichts - keine Linie
+	   .75 - 3/4 Punkt
+	   1.5 - 1 1/2 Punkte
+	   2.25 - 2 1/4 Punkte
+	   3 - 3 Punkte
+	   4.5 - 4 1/2 Punkte
+	   6 - 6 Punkte
+	   .75d - 1/2 Punkte, doppelt
+	   1.5d - 1 1/2 Punkte, doppelt
+	   2.25d - 2 1/4 Punkte, doppelt
+	   .75g - 3/4 Punkt,  grau
+	   .75gd - 3/4 Punkt, grau gestrichelt
+	Wert 3 - Linienfarbe - Eine von:
+	   aut - automatisch
+	   blk - schwarz
+	   blu - blau
+	   cyn - zyan
+	   grn - gr&uuml;n
+	   mag - magenta
+	   red - rot
+	   yel - gelb
+	   whi - wei&szlig;
+	   dbl - dunkles blau
+	   dgn - dunkles gr&uuml;n
+	   dmg - dunkles magenta
+	   drd - dunkles rot
+	   dyl - dunkles gelb
+	   dgy - dunkles grau
+	   lgy - helles grau
+	Wert 4 - Abstand zwischen Rahmen und Text (in Leerzeichen-Einheiten)
+	Wert 5 - G&uuml;ltigkeit:
+	   a - Alle (oder nur die) ausgew&auml;hlten Abs&auml;tze haben diese Einstellungen.
+	   f - Der erste ausgew&auml;hlte Absatz hat diese Einstellungen, sonst kein anderer.
+	   c - Der aktuelle Absatz hat diese Einstellungen.
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Ein RichEdit-Control zeigt keine Rahmen an, aber hier erstellte Rahmen werden in Word angezeigt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaBorder
+
+###See Also###
+@@MsdnLink@@ EM_GETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

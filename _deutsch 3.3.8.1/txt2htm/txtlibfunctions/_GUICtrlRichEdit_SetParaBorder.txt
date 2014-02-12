@@ -1,0 +1,91 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaBorder
+
+###Description###
+Setzt die Rahmeneinstellungen der ausgew&auml;hlten Abs&auml;tze oder, wenn keine Auswahl existiert, die der am Eingabepunkt eingef&uuml;gten Abs&auml;tze.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaBorder($hWnd [, $sLocation [, $vLineStyle [, $sColor [, $iSpace]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sLocation
+	[optional] - Platzierung des Rahmens - Ein String mit einer beliebigen logischen Kombination folgender Werte:
+			l - linker Rahmen
+			r - rechter Rahmen
+			t - oberer Rahmen
+			b - unterer Rahmen
+			i - innerer Rahmen
+			o - &auml;u&szlig;erer Rahmen
+			oder leer - kein Rahmen (Voreinstellung)
+$vLineStyle
+	[optional] - Linienstil - Einer von:
+			"none" - keine Linie (Voreinstellung)
+			.75 - 3/4 Punkt
+			1.5 - 1 1/2 Punkte
+			2.25 - 2 1/4 Punkte
+			3 - 3 Punkte
+			4.5 - 4 1/2 Punkte
+			6 - 6 Punkte
+			".75d" - 1/2 Punkte, doppelt
+			"1.5d" - 1 1/2 Punkte, doppelt
+			"2.25d" - 2 1/4 Punkte, doppelt
+			".75g" - 3/4 Punkt,  grau
+			".75gd" - 3/4 Punkt, grau gestrichelt
+$sColor
+	[optional] - Linienfarbe - Eine von:
+			"aut" - automatisch
+			"blk" - schwarz (Voreinstellung)
+			"blu" - blau
+			"cyn" - zyan
+			"grn" - gr&uuml;n
+			"mag" - magenta
+			"red" - rot
+			"yel" - gelb
+			"whi" - wei&szlig;
+			"dbl" - dunkles blau
+			"dgn" - dunkles gr&uuml;n
+			"dmg" - dunkles magenta
+			"drd" - dunkles rot
+			"dyl" - dunkles gelb
+			"dgy" - dunkles grau
+			"lgy" - helles grau
+$iSpace
+	[optional] Abstand zwischen Rahmen und Text (in Leerzeichen-Einheiten) (Vorgabe: 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - Wert von $sLocation ist ung&uuml;ltig
+	103 - Wert von $ivLineStyle ist ung&uuml;ltig
+	104 - Wert von $sColor ist ung&uuml;ltig
+	106 - $iSpace ist weder positiv noch 0
+	106 - $iWidth ist weder positiv noch 0
+@@End@@
+
+###Remarks###
+Um die "Leerzeichen-Einheit" festzulegen, rufe <b>_GUICtrlRichEdit_SetSpaceUnit</b> auf. Voreinstellung ist Inch.
+
+Wenn Text ausgew&auml;hlt ist, entsprechen die Vorgabewerte den Werten des ersten Absatzes mit ausgew&auml;hltem Text.
+Ist nichts ausgew&auml;hlt, entsprechen die Vorgabewerte den Werten des aktuellen Absatzes.
+
+Um einen Rahmen zu entfernen, ist die Funktion mit den folgenden beiden Parametern aufzurufen: <b>($hWnd, "")</b>
+
+Ein RichEdit-Control zeigt keine Rahmen an, aber hier erstellte Rahmen werden in Word angezeigt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaBorder, _GUICtrlRichEdit_SetSpaceUnit
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

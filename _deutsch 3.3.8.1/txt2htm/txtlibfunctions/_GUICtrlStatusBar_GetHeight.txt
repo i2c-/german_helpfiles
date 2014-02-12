@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetHeight
+
+###Description###
+Ermittelt die H&ouml;he eines Abschnitts
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetHeight($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die H&ouml;he des Abschnitts zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetWidth, _GUICtrlStatusBar_SetMinHeight
+
+###Example###
+@@IncludeExample@@

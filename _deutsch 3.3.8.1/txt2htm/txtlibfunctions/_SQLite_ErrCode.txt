@@ -1,0 +1,34 @@
+###User Defined Function###
+_SQLite_ErrCode
+
+###Description###
+Gibt den letzten Fehlercode zur&uuml;ck (numerisch)
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_ErrCode([$hDB])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Eine offene Datenbank, Standard ist die zuletzt ge&ouml;ffnete Datenbank.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	R&uuml;ckgabewert kann mit den $SQLITE_* Konstanten verglichen werden
+Fehler:	Gibt 0 zur&uuml;ck
+@error:	1 - Fehler beim Aufruf des SQLite API 'sqlite3_errcode'
+	2 - Aufruf wegen Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SQLite_ErrMsg
+
+###Example###
+@@IncludeExample@@

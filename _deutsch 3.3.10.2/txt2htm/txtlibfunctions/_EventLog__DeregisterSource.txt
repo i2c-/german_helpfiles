@@ -1,0 +1,30 @@
+###User Defined Function###
+_EventLog__DeregisterSource
+
+###Description###
+Schlie&szlig;t ein schreibendes Handle zum Event Log
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__DeregisterSource ( $hEventLog )
+
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle zum Event Log
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_EventLog__RegisterSource, _EventLog__Notify

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUIToolTip_GetMarginEx
+
+###Description###
+Ermittelt den oberen, linken, unteren und rechten Rand
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetMarginEx($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagRECT Struktur welche die Informationen &uuml;ber den Rand enth&auml;lt:
+	Top - Entfernung zwischen oberer Kante und oberem Beginn des Textes in Pixel
+	Left - Entfernung zwischen linker Kante und linkem Ende des Textes in Pixel
+	Bottom - Entfernung zwischen unterer Kante und unterem Beginn des Textes in Pixel
+	Right - Entfernung zwischen rechter Kante und rechtem Ende des Textes in Pixel
+	Result - True bei Erfolg, sonst False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetMargin

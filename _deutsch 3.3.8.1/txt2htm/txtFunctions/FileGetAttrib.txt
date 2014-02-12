@@ -1,0 +1,44 @@
+###Function###
+FileGetAttrib
+
+###Description###
+Gibt einen String zur&uuml;ck, der die Attribute einer Datei repr&auml;sentiert.
+
+###Syntax###
+FileGetAttrib ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname (oder Verzeichnis), das untersucht werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen String zur&uuml;ck, der die Attribute einer Datei repr&auml;sentiert.
+Fehler:	Gibt einen leeren String zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der zur&uuml;ckgegebene String kann eine Kombination folgender Buchstaben enthalten:
+"RASHNDOCT":
+"R" = Schreibgesch&uuml;tzt (READONLY)
+"A" = Archiv (ARCHIVE)
+"S" = System (SYSTEM)
+"H" = Versteckt (HIDDEN)
+"N" = Normal (NORMAL)
+"D" = Verzeichnis (DIRECTORY)
+"O" = Offline (OFFLINE)
+"C" = Komprimiert (NTFS-, <b>nicht</b> ZIP-Kompression, COMPRESSED
+"T" = Tempor&auml;r (TEMPORARY)
+
+
+
+###Related###
+FileGetTime, FileSetAttrib, FileExists, FileGetSize, FileSetTime
+
+
+###Example###
+@@IncludeExample@@

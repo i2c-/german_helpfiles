@@ -1,0 +1,44 @@
+###User Defined Function###
+_SoundSeek
+
+###Description###
+Springt in einer Sounddatei zur angegebenen Position 
+
+###Syntax###
+#include <Sound.au3>
+_SoundSeek ( ByRef $aSnd_id, $iHour, $iMin, $iSec )
+
+
+###Parameters###
+@@ParamTable@@
+$aSnd_id
+	Sound ID Array welches durch _SoundOpen() zur&uuml;ckgegeben wurde
+$iHour
+	zu der zu springenden Stunde
+$iMin
+	zu der zu springenden Minute
+$iSec
+	zu der zu springenden Sekunde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@Error:	1 = Fehler
+	3 = Ung&uuml;ltige Sound ID. Es ist das zur&uuml;ckgegebene Array von _SoundOpen() zu verwenden.
+@@End@@
+
+
+###Remarks###
+Nachdem _SoundSeek angewendet wurde, ist _SoundPlay zu verwenden, um den Sound wieder abzuspielen.
+Das verwenden des von _SoundOpen zur&uuml;ckgegebenen Arrays ist zwingend notwendig, um sicherzustellen das die Datei unabh&auml;ngig vom Enkodiertyp an der richtigen Position weitergespielt wird. Das ID-Arrays sollte durch die Funktion aktualisiert werden, wenn der VBR Zeitkorrekturfaktor ge&auml;ndert wurde.
+
+
+###Related###
+_SoundPlay
+
+
+###Example###
+@@IncludeExample@@
+

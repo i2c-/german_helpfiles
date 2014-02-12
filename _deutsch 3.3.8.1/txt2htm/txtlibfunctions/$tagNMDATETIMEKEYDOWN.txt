@@ -1,0 +1,39 @@
+###Structure Name###
+$tagNMDATETIMEKEYDOWN
+
+###Description###
+Enth&auml;lt Informationen, die verwendet werden, um eine $DTN_WMKEYDOWN Nachricht zu beschreiben und zu verarbeiten
+
+###Syntax###
+Global Const $tagNMDATETIMEKEYDOWN = $tagNMHDR & ";int VirtKey;ptr Format;short Year;short Month;short DOW;" & _
+		"short Day;short Hour;short Minute;short Second;short MSecond"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+VirtKey
+	Virtueller Tastencode, der die Taste darstellt, die der Benutzer gedr&uuml;ckt hat
+Format
+	Zeiger auf eine mit "\0" abgeschlossenen Strings, die das Callback-Feld des Controls definiert. Der String umfasst
+	ein oder mehrere "X" Zeichen mit abschlie&szlig;endem NULL-Zeichen.
+Year
+	Jahr
+Month
+	Monat
+DOW
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSecond
+	Millisekunde
+@@End@@
+
+###Remarks###
+Keine.

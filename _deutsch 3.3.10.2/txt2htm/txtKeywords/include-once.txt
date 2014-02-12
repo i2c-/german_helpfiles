@@ -1,0 +1,23 @@
+###Keyword###
+#include-once
+
+###Description###
+Legt fest, dass die aktuelle Datei nur einmal inkludiert wird.
+
+###Syntax###
+<b>#include-once</b>
+
+
+###Parameters###
+Keine.
+
+###Remarks###
+Wenn man eine Datei mehrfach einbindet und damit eine Funktion mehrfach existieren w&uuml;rde, wird man folgenden Fehler erhalten: "Duplicate function". Wenn man eine Include-Datei schreibt, die das verursachen k&ouml;nnte, muss man sicherstellen, dass die erste Zeile <b>#include-once</b> beinhaltet, sodass die Datei nicht mehrfach eingebunden werden kann.
+
+
+###Related###
+<a href="include.htm">#include</a>
+
+
+###Example###
+@@IncludeExample@@

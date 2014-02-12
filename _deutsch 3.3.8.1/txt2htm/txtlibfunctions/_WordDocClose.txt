@@ -1,0 +1,51 @@
+###User Defined Function###
+_WordDocClose
+
+###Description###
+Schlie&szlig;t ein zuvor ge&ouml;ffnetes Worddokument
+
+###Syntax###
+#include <Word.au3> 
+_WordDocClose(ByRef $o_object [, $i_SaveChanges = -2 [, $i_OriginalFormat = 2 [, $b_RouteDocument = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines Word.Application Objekt
+$i_SaveChanges
+	[optional] Legt die Speicheraktion f&uuml;r das Dokument fest
+	0 = Speichert &Auml;nderungen nicht
+	-1 = Speichert &Auml;nderungen
+	-2 = (Standard) Dialog zum speichern der &Auml;nderungen
+$i_OriginalFormat
+	[optional] Legt das Speicherformat f&uuml;r das Dokument fest
+	0 = Word Dokument
+	1 = Original Dokument Format
+	2 = (Standard) Dialogfeld
+$b_RouteDocument
+	[optional] Legt fest, ob das Dokument zur n&auml;chsten Adresse verfolgt werden soll
+	0 = (Standard) Nicht verfolgen
+	1 = Verfolgen bis zur n&auml;chsten Adresse
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WordDocAdd, _WordDocOpen, _WordDocSave, _WordDocSaveAs
+
+
+###Example###
+@@IncludeExample@@

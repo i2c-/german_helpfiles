@@ -1,0 +1,35 @@
+###User Defined Function###
+_FTP_FileGetSize
+
+###Description###
+Ermittelt die Dateigr&ouml;&szlig;e einer Datei auf einem FTP Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileGetSize($l_FTPSession, $s_FileName)
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	wie von _FTP_Connect() zur&uuml;ckgegeben.
+$s_FileName
+	Der Dateiname.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Dateigr&ouml;&szlig;e als uint64 zur&uuml;ck.
+Fehler:	setzt @error auf non-zero
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect
+
+###See Also###
+@@MsdnLink@@ FtpGetFileSize
+
+###Example###
+@@IncludeExample@@

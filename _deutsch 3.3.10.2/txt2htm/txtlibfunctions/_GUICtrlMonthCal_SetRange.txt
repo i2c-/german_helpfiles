@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlMonthCal_SetRange
+
+###Description###
+Setzt die Datumsinformationen, welche das h&ouml;chste und niedrigste Limit darstellen
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_SetRange ( $hWnd, $iMinYear, $iMinMonth, $iMinDay, $iMaxYear, $iMaxMonth, $iMaxDay )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMinYear
+	Minimales Jahr
+$iMinMonth
+	Minimaler Monat
+$iMinDay
+	Minimaler Tag
+$iMaxYear
+	Maximales Jahr
+$iMaxMonth
+	Maximaler Monat
+$iMaxDay
+	Maximaler Tag
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetRange
+
+
+###Example###
+@@IncludeExample@@

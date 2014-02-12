@@ -1,0 +1,33 @@
+###User Defined Function###
+_Date_Time_DOSTimeToArray
+
+###Description###
+Dekodiert eine DOS-Zeit in ein Array
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_DOSTimeToArray($iDosTime)
+
+###Parameters###
+@@ParamTable@@
+$iDosTime
+	MS-DOS Datum, verpackt wie folgt:
+		Bits 0- 4 Sekunde geteilt durch 2
+		Bits 5-10 Minute (0–59)
+		Bits 11-15 Stunde (0–23 im 24h-Format)
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Stunde
+	[1] - Minute
+	[2] - Sekunde
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_DOSDateToArray, _Date_Time_DOSDateTimeToArray
+
+###Example###
+@@IncludeExample@@

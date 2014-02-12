@@ -1,0 +1,48 @@
+###User Defined Function###
+_GUICtrlListView_HitTest
+
+###Description###
+Ermittelt welches Item sich an der festgelegten Position befindet
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_HitTest ( $hWnd [, $iX = -1 [, $iY = -1]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iX
+	[optional] X-Koordinate (linke obere Ecke des Controls ist 0), die getestet werden soll oder -1 um die aktuelle Mausposition zu verwenden
+$iY
+	[optional] Y-Koordinate (linke obere Ecke des Controls ist 0), die getestet werden soll oder -1 um die aktuelle Mausposition zu verwenden
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+		[0] - 0-basierender Index des Items an der festgelegten Position, oder -1
+		[1] - Falls True, die Position befindet sich innerhalb des Fensters, aber nicht &uuml;ber einem Item
+		[2] - Falls True, die Position befindet sich &uuml;ber einem Itemicon
+		[3] - Falls True, die Position befindet sich &uuml;ber einem Itemtext
+		[4] - Falls True, die Position befindet sich &uuml;ber einem Itemstatusbild
+		[5] - Falls True, die Position befindet sich sonstwo &uuml;ber einem Item
+		[6] - Falls True, die Position befindet sich &uuml;ber der Arbeitsfl&auml;che des Controls
+		[7] - Falls True, die Position befindet sich unter der Arbeitsfl&auml;che des Controls
+		[8] - Falls True, die Position befindet sich links der Arbeitsfl&auml;che des Controls
+		[9] - Falls True, die Position befindet sich rechts der Arbeitsfl&auml;che des Controls
+Fehler:	 setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SubItemHitTest
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlToolbar_SetWindowTheme
+
+###Description###
+Setzt den Visual Style
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetWindowTheme($hWnd, $sTheme)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sTheme
+	String welcher den Visual Style der Toolbar enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

@@ -1,0 +1,21 @@
+###Structure Name###
+$tagFILETIME
+
+###Description###
+Beinhaltet die Nummer von 100-Nanosekunden Intervallen seit dem 1. Januar 1601.
+
+###Syntax###
+Global Const $tagFILETIME = "struct; dword Lo;dword Hi; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+Lo
+	Der low order part der Dateizeit.
+Hi
+	Der high order part der Dateizeit.
+@@End@@
+
+
+###Remarks###
+Keine.

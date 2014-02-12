@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlListView_CreateSolidBitMap
+
+###Description###
+Erstellt ein vollfarbiges Bitmap
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_CreateSolidBitMap($hWnd, $iColor, $iWidth, $iHeight)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iColor
+	Die Farbe des Bitmaps, dargestellt in RGB
+$iWidth
+	Die Breite des Bitmaps
+$iHeight
+	Die H&ouml;he des Bitmaps
+@@End@@
+
+###ReturnValue###
+Gibt ein Handle zu dem Bitmap zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

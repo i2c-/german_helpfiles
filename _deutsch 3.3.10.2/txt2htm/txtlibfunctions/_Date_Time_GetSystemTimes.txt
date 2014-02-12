@@ -1,0 +1,31 @@
+###User Defined Function###
+_Date_Time_GetSystemTimes
+
+###Description###
+Gibt Systemzeiten zur&uuml;ck
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_GetSystemTimes (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - $tagFILETIME Struktur, die die vollst&auml;ndige Zeit des Leerlaufprozesses zur&uuml;ckgibt
+	[1] - $tagFILETIME Struktur, die die vollst&auml;ndige Zeit der Kernel Mode Zeiten zur&uuml;ckgibt
+	[2] - $tagFILETIME Struktur, die die vollst&auml;ndige Zeit der Benutzer Mode Zeiten zur&uuml;ckgibt
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagFILETIME
+
+
+###Example###
+@@IncludeExample@@

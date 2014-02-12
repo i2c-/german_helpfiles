@@ -1,0 +1,34 @@
+###Function###
+GUICtrlSetDefColor
+
+###Description###
+Setzt die Standardtextfarbe f&uuml;r alle Controls in einem GUI Fenster.
+
+###Syntax###
+GUICtrlSetDefColor ( deftextcolor [, winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+deftextcolor
+	Standardhintergrundfarbe f&uuml;r alle Controls.
+winhandle
+	[optional] Fenster Handle, welches von GUICreate zur&uuml;ckgegeben wurde (Standard ist das zuvor verwendete Fenster).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate, GUICtrlSetDefBkColor, GUICtrlSetColor
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlButton_GetTextMargin
+
+###Description###
+Ermittelt die ben&ouml;tigten R&auml;nder um Text in einem Button-Control zu zeichnen
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetTextMargin($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	  [0] - linker Rand um den Text zu zeichnen
+	  [1] - oberer Rand um den Text zu zeichnen
+	  [2] - rechter Rand um den Text zu zeichnen
+	  [3] - unterer Rand um den Text zu zeichnen
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlButton_SetTextMargin
+
+###See Also###
+@@MsdnLink@@ BCM_GETTEXTMARGIN
+
+###Example###
+@@IncludeExample@@

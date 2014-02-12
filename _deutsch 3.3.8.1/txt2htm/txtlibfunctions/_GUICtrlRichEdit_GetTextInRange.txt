@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetTextInRange
+
+###Description###
+Ermittelt den Text zwischen zwei Zeichenpositionen
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetTextInRange($hWnd, $iStart, $iEnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iStart
+	Zeichenposition vor dem Text
+$iEnd
+	Zeichenposition nach dem Text
+		-1 - Ende des Textes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Text
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iStart &l; 0
+	1031 - $iEnd &l; -1
+	1032 - $iStart > $iEnd und $iEnd &l;> -1
+@@End@@
+
+###Remarks###
+Die erste Zeichenposition im Control ist 0.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetTextinLine
+
+###See Also###
+@@MsdnLink@@ EM_GETTEXTRANGE
+
+###Example###
+@@IncludeExample@@

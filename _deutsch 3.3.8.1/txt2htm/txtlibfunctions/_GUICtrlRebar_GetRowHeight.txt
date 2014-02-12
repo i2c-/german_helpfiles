@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlRebar_GetRowHeight
+
+###Description###
+Ermittelt die H&ouml;he einer festgelegten Zeile in einem Rebar-Control.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetRowHeight($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index einer Gruppe. Die H&ouml;he der Zeile die die festgelegte Gruppe enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Gibt einen Wert, der die Zeilenh&ouml;he in Pixel enth&auml;lt, zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

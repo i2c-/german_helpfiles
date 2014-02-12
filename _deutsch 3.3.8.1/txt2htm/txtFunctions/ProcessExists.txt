@@ -1,0 +1,39 @@
+###Function###
+ProcessExists
+
+###Description###
+&Uuml;berpr&uuml;ft, ob ein bestimmter Prozess existiert.
+
+###Syntax###
+ProcessExists ( "process" ) 
+
+
+###Parameters###
+@@ParamTable@@
+process
+	Der Name oder die PID des Prozesses, der &uuml;berpr&uuml;ft werden soll.  
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die PID des Prozesses zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der Prozess nicht existiert.
+@@End@@
+
+
+###Remarks###
+Die Prozessnamen sind die ausf&uuml;hrbaren Dateien ohne den kompletten Pfad, also z.B. "notepad.exe" oder "winword.exe".
+
+PID ist die eindeutige Zahl, die einen Prozess identifiziert.
+
+Der Prozess wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+[Anm. d. &Uuml;.]
+Diese Funktion arbeitet nicht f&uuml;r alte 16-Bit Programme die unter der Windowseigenen "Windows NT Virtual DOS Machine" (NTVDM) ausgef&uuml;hrt werden. Solche Prozesse sind an einem f&uuml;hrenden Leerzeichen im Taskmanager erkennbar.
+
+###Related###
+ProcessClose, ProcessWait, ProcessWaitClose, WinExists, ProcessList
+
+
+###Example###
+@@IncludeExample@@

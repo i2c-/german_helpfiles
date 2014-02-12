@@ -1,0 +1,32 @@
+###User Defined Function###
+_TempFile
+
+###Description###
+Generiert einen Namen f&uuml;r eine tempor&auml;re Datei. Diese Datei existiert garantiert noch nicht.
+
+###Syntax###
+#include <File.au3>
+_TempFile([$s_DirectoryName = @TempDir [, $s_FilePrefix = "~" [, $s_FileExtension = ".tmp" [, $i_RandomLength = 7]]]])
+
+###Parameters###
+@@ParamTable@@
+$s_DirectoryName
+	[optional] Verzeichnis f&uuml;r die Datei, standardm&auml;&szlig;ig ist es das %TEMP% Verzeichnis des Benutzers
+$s_FilePrefix
+	[optional] Vorsilbe im Dateinamen, standardm&auml;&szlig;ig "~"
+$s_FileExtension
+	[optional] Dateierweiterung, standardm&auml;&szlig;ig ".tmp"
+$i_RandomLength
+	[optional] Anzahl von Zeichen um einen eindeutigen Namen zu erzeugen, standardm&auml;&szlig;ig 7
+@@End@@
+
+###ReturnValue###
+Gibt einen Dateinamen der tempor&auml;ren Datei zur&uuml;ck, welcher noch nicht existiert
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

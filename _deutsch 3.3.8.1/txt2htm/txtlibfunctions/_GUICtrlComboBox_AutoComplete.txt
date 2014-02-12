@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUICtrlComboBox_AutoComplete
+
+###Description###
+Autovervollst&auml;ndigt das Input-Control einer ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_AutoComplete($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

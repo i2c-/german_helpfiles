@@ -1,0 +1,30 @@
+###User Defined Function###
+_ScreenCapture_SetTIFColorDepth
+
+###Description###
+Setzt die Farbtiefe f&uuml;r TIFF Screenshots
+
+###Syntax###
+#include <ScreenCapture.au3>
+_ScreenCapture_SetTIFColorDepth ( $iDepth )
+
+
+###Parameters###
+@@ParamTable@@
+$iDepth
+	Bild Farbtiefe:
+		 0 - Standardfarbtiefe
+		24 - 24 bit
+		32 - 32 bit
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls nicht angegeben, werden TIFF Screenshots standardm&auml;&szlig;ig mit 24 bits erstellt
+
+
+###Related###
+_ScreenCapture_SetTIFCompression

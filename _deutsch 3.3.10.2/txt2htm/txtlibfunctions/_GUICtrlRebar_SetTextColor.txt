@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlRebar_SetTextColor
+
+###Description###
+Setzt die Standard Textfarbe eines Rebar-Controls
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_SetTextColor ( $hWnd, $iColor )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iColor
+	COLORREF Wert der die neue Standard Textfarbe enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Gibt einen COLORREF Wert der die ehemalige Standard Textfarbe enth&auml;lt zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_GetTextColor
+
+
+###Example###
+@@IncludeExample@@

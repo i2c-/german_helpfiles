@@ -1,0 +1,39 @@
+###User Defined Function###
+_DebugReport
+
+###Description###
+Schreibt zu einer Debug-Sitzung
+
+###Syntax###
+#include <Debug.au3>
+_DebugReport($sData [,$bLastError = False [,$bExit = False]])
+
+
+###Parameters###
+@@ParamTable@@
+$sData
+	Daten, die gemeldet werden sollen
+$bLastError
+	[optional] True, wenn GetLastErrorMessage() an das Ende der Meldung angeh&auml;ngt werden soll
+$bExit
+	[optional] True, wenn das Script beendet werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn _DebugSetup() zuvor nicht aufgerufen wurde, wird die Funktion nicht ausgef&uuml;hrt.
+@error wird nicht ge&auml;ndert.
+@extended wird zum Windows API GetlastError() gesetzt, wenn $bLastError = True. Ansonsten wird es nicht ge&auml;ndert.
+
+
+###Related###
+_DebugSetup
+
+
+###Example###
+@@IncludeExample@@

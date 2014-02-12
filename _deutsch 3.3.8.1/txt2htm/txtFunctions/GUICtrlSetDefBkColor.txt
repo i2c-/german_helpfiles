@@ -1,0 +1,34 @@
+###Function###
+GUICtrlSetDefBkColor
+
+###Description###
+Setzt die Standardhintergrundfarbe f&uuml;r alle Controls in einem GUI Fenster.
+
+###Syntax###
+GUICtrlSetDefBkColor ( defbkcolor [, winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+defbkcolor
+	 Standardhintergrundfarbe f&uuml;r alle Controls.
+winhandle
+	[optional] Fenster Handle, welches von GUICreate zur&uuml;ckgegeben wurde (Standard ist das zuvor verwendete Fenster).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate, GUICtrlSetDefColor, GUICtrlSetBkColor
+
+
+###Example###
+@@IncludeExample@@

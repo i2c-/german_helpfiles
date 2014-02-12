@@ -1,0 +1,35 @@
+###User Defined Function###
+_NamedPipes_DisconnectNamedPipe
+
+###Description###
+Trennt die Serverseite einer benannten Pipe-Instanz vom Client-Prozess.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_DisconnectNamedPipe ( $hNamedPipe )
+
+
+###Parameters###
+@@ParamTable@@
+$hNamedPipe
+	Handle zur Serverseite der Pipe-Instanz.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Wenn die Clientseite der Pipe ge&ouml;ffnet ist, wird sie durch DisconnectNamedPipe gewaltsam geschlossen.
+Der Client erh&auml;lt eine Fehlermeldung beim n&auml;chsten Zugriffsversuch auf die Pipe.
+Der so von der Pipe getrennte Client muss trotzdem CloseHandle aufrufen, um sein Ende der Pipe ordnungsgem&auml;&szlig; zu schlie&szlig;en.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ DisconnectNamedPipe

@@ -1,0 +1,29 @@
+###Structure Name###
+$tagNMHEADER
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber Control-Benachrichtigungen
+
+###Syntax###
+Global Const $tagNMHEADER = $tagNMHDR & ";int Item;int Button;ptr pItem"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Item
+	Der 0-basierte Index des Controls auf das diese Struktur verweist
+Button
+	Index der Maustaste die benutzt wird um diese Nachricht zu erzeugen. Dieses Mitglied kann einer der folgenden Werte sein:
+		0 - Linke Taste
+		1 - Rechte Taste
+		2 - Mittlere Taste
+pItem
+	Optionaler Zeiger auf eine tagHDITEM Struktur welche Informationen &uuml;ber das Element in <b>Item</b> enth&auml;lt.
+	Das <b>mask</b> Mitglied der tagHDITEM Struktur weist darauf hin, welche seiner Mitglieder g&uuml;ltig sind.
+@@End@@
+
+
+###Remarks###
+Keine.

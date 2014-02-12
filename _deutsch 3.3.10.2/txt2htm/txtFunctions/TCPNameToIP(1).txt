@@ -1,0 +1,34 @@
+###Function###
+TCPNameToIP
+
+###Description###
+Konvertiert einen Internetnamen in eine IP Adresse.
+
+###Syntax###
+TCPNameToIP ( Name )
+
+
+###Parameters###
+@@ParamTable@@
+Name
+	String der die IP Adresse enth&auml;lt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String mit der IP Adesse, welche zu dem Internetnamen geh&ouml;rt.
+Fehler:	""(leerer String) und setzt @error ungleich null.
+@error:	Windows API WSAGetError R&uuml;ckgabewerte (siehe <a href="http://msdn.microsoft.com/en-us/library/ms740668.aspx">MSDN</a>).
+@@End@@
+
+
+###Remarks###
+<a href="TCPStartup.htm">TCPStartup()</a> muss aufgerufen werden bevor diese Funktion ausgef&uuml;hrt werden kann.
+
+
+###Related###
+TCPStartup
+
+
+###Example###
+@@IncludeExample@@

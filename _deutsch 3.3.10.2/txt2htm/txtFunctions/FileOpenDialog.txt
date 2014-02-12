@@ -1,0 +1,57 @@
+###Function###
+FileOpenDialog
+
+###Description###
+Zeigt den "Datei &ouml;ffnen"-Dialog an.
+
+###Syntax###
+FileOpenDialog ( "title", "init dir", "filter" [, options = 0 [, "default name" [, hwnd]]] ) 
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Titel des Dialogfensters.
+init dir
+	Startverzeichnis.
+filter
+	Dateifilter wie z.B. "Alle (*.*)" oder "Textdateien (*.txt)" oder Multifiltergruppen wie z.B. "Alle (*.*)|Textdateien (*.txt)" (Siehe Bemerkungen).
+options
+	[optional] Dialog-Optionen: Um mehr als eine Option zu verwenden, kombiniere sie mit BitOR.
+	  $FD_FILEMUSTEXIST (1) = Datei muss existieren (wenn der Benutzer einen Dateinamen eintippt)
+	  $FD_PATHMUSTEXIST (2) = Pfad muss existieren (wenn der Benutzer einen Pfad eintippt, endend mit einem Backslash)
+	  $FD_MULTISELECT (4) = Erlaube Mehrfachauswahl
+	  $FD_PROMPTCREATENEW (8) = Frage nach Erstellung einer neuen Datei, wenn diese nicht existiert.
+default name
+	[optional] Dateinamensvorschlag, der als Standard verwendet wird. Standard ist eine leerer String ("").
+hwnd
+	[optional] Das Fenster Handle welches als Parent f&uuml;r diesen Dialog verwendet wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der komplette Pfad der ausgew&auml;hlten Datei. R&uuml;ckgabe mehrerer Dateien wie folgt: "Verzeichnis|Datei1|Datei2|..."
+Fehler:	Setzt @error
+		@error:	1 - Keine Datei ausgew&auml;hlt.
+				2 - Falscher Dateifilter
+@@End@@
+
+
+###Remarks###
+Die Filter sind, wie im Beispiel zu sehen, mit Semikolon zu trennen.
+Multifiltergruppen werden durch einen Strich "|" getrennt.
+
+Wenn der Dateinamensvorschlag angegeben ist, m&uuml;ssen auch die Optionen angegeben sein. 
+Wenn keine Option ben&ouml;tigt wird, muss als Wert 0 verwendet werden.
+
+Besondere Windows-Ordner (wie z.B "Eigene Dateien") k&ouml;nnen manchmal auch als Startverzeichnis gesetzt werden; siehe <a href="../appendix/clsid.htm">Anhang CLSIDs besonderer Ordner</a>.
+
+@WorkingDir wird bei erfolgreichem R&uuml;ckgabewert ge&auml;ndert.
+
+
+###Related###
+FileSaveDialog, FileSelectFolder, StringSplit, <a href="../macros/AutoItRelated.htm">@WorkingDir</a>
+
+
+###Example###
+@@IncludeExample@@

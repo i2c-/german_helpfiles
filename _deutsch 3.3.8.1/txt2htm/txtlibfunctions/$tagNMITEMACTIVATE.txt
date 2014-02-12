@@ -1,0 +1,53 @@
+###Structure Name###
+$tagNMITEMACTIVATE
+
+###Description###
+Gesendet von einem ListView-Control wenn der Benutzer ein Element aktiviert
+
+###Syntax###
+Global Const $tagNMITEMACTIVATE = $tagNMHDR & ";int Index;int SubItem;int NewState;int OldState;" & _
+		"int Changed;int X;int Y;int lParam;int KeyFlags"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Index
+	Index des ListView Items. Wird der Elementindex nicht f&uuml;r die Benachrichtigung benutzt,
+	enth&auml;lt dieses Mitglied -1
+SubItem
+	1-basierter Index des Subelements. Wird der Subelementindex nicht f&uuml;r die Benachrichtigung benutzt oder
+	die Benachrichtigung auf ein Subelement angewandt, enth&auml;lt dieses Mitglied Null.
+NewState
+	Neuer Elementstatus. Dieses Mitglied ist Null f&uuml;r Benachrichtigungen die dieses nicht nutzen
+OldState
+	Alter Elementstatus. Dieses Mitglied ist Null f&uuml;r Benachrichtigungen die dieses nicht nutzen
+Changed
+	Satz von Flags welche die Element-Attribute angeben die sich ge&auml;ndert haben.
+	Dieses Mitglied ist Null f&uuml;r Benachrichtigungen die dieses nicht nutzen.
+	Dieses Mitglied kann einen oder mehrere der folgenden Flags gesetzt haben:
+		$LVIF_COLUMNS     - Das <b>Columns</b> Mitglied ist g&uuml;ltig
+		$LVIF_DI_SETITEM  - Das Betriebssystem soll die angeforderten Elementinformationen speichern
+		$LVIF_GROUPID     - Das <b>GroupID</b> Mitglied ist g&uuml;ltig
+		$LVIF_IMAGE       - Das <b>Image</b> Mitglied ist g&uuml;ltig
+		$LVIF_INDENT      - Das <b>Indent</b> Mitglied ist g&uuml;ltig
+		$LVIF_NORECOMPUTE - Das Control wird keine LVN_GETDISPINFO Nachricht erzeugen um Textinformationen zu ermitteln
+		$LVIF_PARAM       - Das <b>Param</b> Mitglied ist g&uuml;ltig
+		$LVIF_STATE       - Das <b>State</b> Mitglied ist g&uuml;ltig
+		$LVIF_TEXT        - Das <b>Text</b> Mitglied ist g&uuml;ltig
+X
+	Legt die x-Koordinate des Punktes fest
+Y
+	Legt die y-Koordinate des Punktes fest
+lParam
+	Anwendungsspezifischer Wert des Elements. Dieses Mitglied ist undefiniert f&uuml;r Benachrichtigungen die dieses nicht nutzen
+KeyFlags
+	Modifizierende Tasten die zur Zeit der Aktivierung gedr&uuml;ckt wurden.
+	Dieses Mitglied enth&auml;lt Null oder eine Kombination der folgenden Flags:
+		$LVKF_ALT     - Die ALT-Taste ist gedr&uuml;ckt.
+		$LVKF_CONTROL - Die CONTROL-Taste ist gedr&uuml;ckt.
+		$LVKF_SHIFT   - Die SHIFT-Taste ist gedr&uuml;ckt.
+@@End@@
+
+###Remarks###
+Keine.

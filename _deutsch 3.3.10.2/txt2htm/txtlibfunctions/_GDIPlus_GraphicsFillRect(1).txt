@@ -1,0 +1,47 @@
+###User Defined Function###
+_GDIPlus_GraphicsFillRect
+
+###Description###
+F&uuml;llt ein Rechteck
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsFillRect ( $hGraphics, $nX, $nY, $nWidth, $nHeight [, $hBrush = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+$nX
+	Die X-Koordinate der oberen linken Ecke des Rechtecks
+$nY
+	Die Y-Koordinate der oberen linken Ecke des Rechtecks
+$nWidth
+	Die Breite des Rechtecks
+$nHeight
+	Die H&ouml;he des Rechtecks
+$hBrush
+	[optional] Handle zu dem F&uuml;llmuster-Objekt, welches verwendet wird, um das Rechteck zu f&uuml;llen. Falls 0, wird ein schwarzes F&uuml;llmuster verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipFillRectangle
+
+
+###Example###
+@@IncludeExample@@

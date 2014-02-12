@@ -1,0 +1,36 @@
+###User Defined Function###
+_DebugReportVar
+
+###Description###
+Schreibt zu einer Debugging-Session den Inhalt einer Variablen
+
+###Syntax###
+#include <Debug.au3>
+_DebugReportVar ( $sVarname, $vVar [, $bErrExt = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$sVarname
+	Der String der den Namen der Variable repr&auml;sentiert oder ein Kommentar
+$vVar
+	Die Variable die berichtet werden soll
+$bErrExt
+	[Optional] True, wenn @error und @extended auch angezeigt werden m&uuml;ssen
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Wenn kein <a href="_DebugSetup.htm">_DebugSetup()</a> aufgerufen worden ist, kehrt die Funktion immer zur&uuml;ck.
+@error und @extended des Aufrufers bleiben unver&auml;ndert.
+
+
+###Related###
+_DebugSetup
+
+
+###Example###
+@@IncludeExample@@

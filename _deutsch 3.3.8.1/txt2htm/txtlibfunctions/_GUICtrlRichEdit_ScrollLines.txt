@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlRichEdit_ScrollLines
+
+###Description###
+Verschiebt das Sichtfeld um eine Anzahl an Zeilen nach oben/unten
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_ScrollLines($hWnd, $iQlines)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iQlines
+	Anzahl der Zeilen, um die verschoben werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iQlines ist nicht numerisch
+	700 - Versuch, ein einzeiliges Control zu scrollen, ist misslungen
+@@End@@
+
+###Remarks###
+Um nach unten zu verschieben, &uuml;bergebe $iQlines als positiv, um nach oben zu verschieben, &uuml;bergebe $iQlines als negativ.
+
+Wenn $iQlines gr&ouml;&szlig;er als die Anzahl der Zeilen unter der aktuell untersten Zeile ist, wird so verschoben, dass nur die letzte Zeile zu sehen ist.
+
+Ist $iQlines negativ und der Betrag gr&ouml;&szlig;er als die Anzahl der Zeilen &uuml;ber der aktuell obersten Zeile, wird nach ganz oben verschoben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_ScrollLineOrPage, _GUICtrlRichEdit_ScrollToCaret
+
+###See Also###
+@@MsdnLink@@ EM_LINESCROLL
+
+###Example###
+@@IncludeExample@@

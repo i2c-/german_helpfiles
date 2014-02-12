@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_StringLenA
+
+###Description###
+Berechnet die L&auml;nge eines ANSI-Strings
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_StringLenA($vString)
+
+###Parameters###
+@@ParamTable@@
+$vString
+	String zum berechnen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Stringl&auml;nge in Zeichen
+Fehler:	0
+@@End@@
+
+###Remarks###
+Der zur&uuml;ckgegebene String enth&auml;lt keinen abschliessenden Null-Char.
+
+###Related###
+_WinAPI_StringLenW
+
+###See Also###
+@@MsdnLink@@ lstrlenA
+
+###Example###
+@@IncludeExample@@

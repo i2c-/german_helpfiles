@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetSpaceUnit
+
+###Description###
+Setzt die Ma&szlig;einheit des horzizontalen und vertikalen Abstandes, welcher in verschiedenen _GUICtrlRichEdit Funktionen verwendet wird
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetSpaceUnit($sUnit)
+
+###Parameters###
+@@ParamTable@@
+$sUnit
+	"in", "cm", "mm", "pt" (Punkte) oder "tw" (twips, 1/1440 Inch, 1/567 Zentimeter)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf 1
+@@End@@
+
+###Remarks###
+Standardm&auml;&szlig;ig wird der Abstand in Inch gemessen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetSpaceUnit, _GUICtrlRichEdit_SetParaBorder, _GUICtrlRichEdit_SetParaIndents, _GUICtrlRichEdit_SetParaNumbering, _GUICtrlRichEdit_SetParaSpacing, _GUICtrlRichEdit_SetParaTabStops, _GUICtrlRichEdit_SetTabStops
+
+###Example###
+@@IncludeExample@@

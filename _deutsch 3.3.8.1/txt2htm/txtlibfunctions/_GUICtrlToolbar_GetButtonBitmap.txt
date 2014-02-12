@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_GetButtonBitmap
+
+###Description###
+Ermittelt den Index des Bitmaps, welcher mit einem Button verkn&uuml;pft ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetButtonBitmap($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierender Button Bitmap Index
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetButtonBitmap
+
+###Example###
+@@IncludeExample@@

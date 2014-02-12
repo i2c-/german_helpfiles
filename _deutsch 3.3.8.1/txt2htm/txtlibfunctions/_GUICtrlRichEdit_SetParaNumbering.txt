@@ -1,0 +1,53 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaNumbering
+
+###Description###
+Legt die Art der Absatznummerierung der markierten Abs&auml;tze oder, wenn keine markiert sind, die der nach dem Einf&uuml;gungspunkt eingef&uuml;gten Abs&auml;tze fest
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaNumbering($hWnd, $sStyle [, $iTextToNbrSpace = Default [, $fForceRoman=False]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sStyle
+	Ein String, der den Typ und die Startnummer definiert, z.B. "." (nur Punkte), "1)","(b)", "C.", "iv", "V)"
+			Dies ist die Nummerierung, die f&uuml;r den ersten Absatz benutzt wird.
+			Nachfolgende Leerzeichen geben die minimale Anzahl Leerzeichen zwischen der Nummerierung und dem Absatz an, es sei denn, $iTextToNbrSpace wird gesetzt.
+			Spezialf&auml;lle:
+				"=" - Dies ist ein nicht nummerierter Absatz innerhalb des vorangegangenen Listenelements
+				"" - Entfernt die Nummerierung der ausgew&auml;hlten Abs&auml;tze
+$iTextToNbrSpace
+	[optional] Der Abstand zwischen der Zahl/Punkt und dem Absatz (in Leerzeichen-Einheiten)
+		Voreinstellung: Anzahl der nachfolgenden Leerzeichen mal Punktgr&ouml;&szlig;e
+$fForceRoman
+	[optional] 
+		False: <b>i, v, x, l, c, d, m</b> in $sStyle sind Buchstaben (Voreinstellung)
+		True: <b>i, v, x, l, c, d, m</b> in $sStyle sind r&ouml;mische Zahlen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $sStyle ist ung&uuml;ltig
+	103 - $iTextToNbrSpace ist keine positive Zahl
+	104 - $fForceRoman ist nicht True oder False
+@@End@@
+
+###Remarks###
+Um die Leerzeichen-Einheit zu &auml;ndern (Standard: Inch), benutze <b>_GUICtrlRichEdit_SetSpaceUnit</b>.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaNumbering, _GUICtrlRichEdit_SetSpaceUnit
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

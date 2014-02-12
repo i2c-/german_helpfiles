@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetText
+
+###Description###
+Setzt den Text eines Controls
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetText($hWnd, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Einfacher oder RTF-Text, der in das Control geschrieben werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error:
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Setzt den gesamten Text, der einfacher oder RTF-Text sein kann.
+Beh&auml;lt den R&uuml;ckg&auml;ngig-Stapel bei.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetText, _GUICtrlRichEdit_AppendText, _GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_ReplaceText, _GUICtrlRichEdit_EmptyUndoBuffer
+
+###Example###
+@@IncludeExample@@

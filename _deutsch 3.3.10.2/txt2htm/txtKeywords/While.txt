@@ -1,0 +1,31 @@
+###Keyword###
+While...WEnd
+
+###Description###
+Schleife, die auf einem Ausdruck basiert.
+
+###Syntax###
+<b>While</b> &lt;expression&gt;
+	<i>statements</i>
+	...
+<b>WEnd</b>
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Wenn der Ausdruck wahr ist, werden die Codezeilen bis WEnd ausgef&uuml;hrt. Die Schleife wird fortgesetzt, bis der Ausdruck unwahr ist.
+@@End@@
+
+###Remarks###
+While...WEnd-Schleifen k&ouml;nnen verschachtelt werden.
+Der Ausdruck wird ausgewertet, bevor die Schleife durchlaufen wird, sodass die Schleife Null mal oder &ouml;fter durchlaufen wird.
+Um eine Endlosschleife zu erhalten, kann man eine Zahl ungleich Null als <i>expression</i> verwenden.
+
+
+###Related###
+ContinueLoop, ExitLoop
+
+
+###Example###
+@@IncludeExample@@

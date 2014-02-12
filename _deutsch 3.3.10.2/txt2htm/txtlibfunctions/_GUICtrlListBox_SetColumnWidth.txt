@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListBox_SetColumnWidth
+
+###Description###
+Setzt die Breite aller Spalten in Pixel
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SetColumnWidth ( $hWnd, $iWidth )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iWidth
+	legt die Breite aller Spalten in Pixel fest
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Nutzbar mit Controls, welche mit dem Stil $LBS_MULTICOLUMN erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

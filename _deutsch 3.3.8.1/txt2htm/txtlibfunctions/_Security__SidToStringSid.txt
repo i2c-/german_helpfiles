@@ -1,0 +1,33 @@
+###User Defined Function###
+_Security__SidToStringSid
+
+###Description###
+Konvertiert eine bin&auml;re SID in einen String
+
+###Syntax###
+#include <Security.au3>
+_Security__SidToStringSid($pSID)
+
+###Parameters###
+@@ParamTable@@
+$pSID
+	Zeiger auf eine bin&auml;re SID die konvertiert werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	SID in Stringform
+Fehler:	Leerer String
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__StringSidToSid
+
+###See Also###
+@@MsdnLink@@ ConvertSidToStringSid
+
+###Example###
+@@IncludeExample@@

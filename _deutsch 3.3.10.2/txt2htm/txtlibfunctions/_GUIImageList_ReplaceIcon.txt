@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUIImageList_ReplaceIcon
+
+###Description###
+Ersetzt ein Bild durch ein Icon oder einen Cursor
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_ReplaceIcon ( $hWnd, $iIndex, $hIcon )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Imagelist
+$iIndex
+	Index des zu ersetzenden Bildes. Falls -1, h&auml;ngt die Funktion das Bild an das Ende der Liste an.
+$hIcon
+	Handle des Icons oder Cursors, welches das Bitmap und die Maske f&uuml;r das neue Bild enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des Bildes
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Da das System $hIcon nicht speichert, kann man dies nach der Funktion und R&uuml;ckgabe des Icons oder Cursors wieder l&ouml;schen.
+Man braucht $hIcon nicht zu l&ouml;schen, wenn es durch die LoadIcon Funktion geladen wurde und das System automatisch den nicht mehr ben&ouml;tigten Speicher wieder freigibt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

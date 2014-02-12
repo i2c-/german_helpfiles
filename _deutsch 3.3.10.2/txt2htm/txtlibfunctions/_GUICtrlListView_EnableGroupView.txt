@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_EnableGroupView
+
+###Description###
+Aktiviert oder deaktiviert, ob die Items als Gruppe angezeigt werden sollen
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_EnableGroupView ( $hWnd [, $fEnable = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fEnable
+	[optional] zeigt an, ob die Gruppenansicht aktiviert werden soll
+	True - Aktiviert die Gruppenansicht
+	False - Deaktiviert die Gruppenansicht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+0:	Die aktuelle Ansicht ist bereits aktiviert oder deaktiviert
+1:	Der Status des Controls wurde erfolgreich ge&auml;ndert
+@@End@@
+
+
+###Remarks###
+Diese Funktion wird nicht unterst&uuml;tzt, falls der Stil $LVS_OWNERDATA verwendet wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetGroupViewEnabled
+
+
+###Example###
+@@IncludeExample@@

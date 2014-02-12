@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlMenu_SetMenuData
+
+###Description###
+Setzt den Anwendungsspezifischen Wert f&uuml;r das Men&uuml;.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetMenuData($hMenu, $iData)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iData
+	anwendungsspezifischer Wert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetMenuData
+
+###Example###
+@@IncludeExample@@

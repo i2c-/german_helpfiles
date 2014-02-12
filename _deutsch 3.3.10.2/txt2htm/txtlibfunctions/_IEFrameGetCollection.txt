@@ -1,0 +1,43 @@
+###User Defined Function###
+_IEFrameGetCollection
+
+###Description###
+Gibt eine Sammlung zur&uuml;ck, die alle Frames eines Framesets, die iFrames einer normalen Internetseite, einen einzelnen Frame oder einen iFrame (bestimmt durch den Index) enth&auml;lt.
+
+###Syntax###
+#include <IE.au3> 
+_IEFrameGetCollection ( ByRef $o_object [, $i_index = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Window- oder Frame-Objekts
+$i_index
+	[optional] Bestimmt, ob eine Sammlung oder eine indexbasierte Instanz zur&uuml;ckgegeben werden soll
+		 0 oder positive, ganze Zahl = gibt eine indexbasierte Instanz zur&uuml;ck
+		-1 = (Standard) gibt eine Sammlung zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine Objektvariable, welche alle Frames beinhaltet, @extended = Anzahl der Form-Elemente
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+@extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Obwohl MSDN-Dokumente angeben, der R&uuml;ckgabewert dieser Funktion sei ein Auflistungsobjekt, kann man diesen nicht mit einer For...Next-Schleife durchlaufen wie bei einem normalen Auflistungsobjekt.
+Stattdessen muss man die Sammlung unter Zuhilfenahme des Index Schritt f&uuml;r Schritt durchschreiten - siehe Beispiel.
+
+
+###Related###
+_IEIsFrameSet, _IEFrameGetObjByName
+
+
+###Example###
+@@IncludeExample@@

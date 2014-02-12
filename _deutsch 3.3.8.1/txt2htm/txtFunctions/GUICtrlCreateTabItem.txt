@@ -1,0 +1,43 @@
+###Function###
+GUICtrlCreateTabItem
+
+###Description###
+Erstellt einen Tab f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateTabItem ( "text" )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Der Text auf dem Tab.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um weitere Informationen f&uuml;r das Control zu setzen siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a>.
+
+Um einen bestimmten Tab auszuw&auml;hlen, die beim &Ouml;ffnen der Dialogbox angezeigt wird, ist f&uuml;r diese Karte der Status GUICtrlSetState(-1,$GUI_SHOW) zu setzen (siehe Beispiel).
+
+Um die Tabgruppe abzuschlie&szlig;en ist ein letztes "tabitem"-Control mit dem Text "" zu erstellen. Dieser Tab kann nicht angezeigt werden (zu viel Text ...)
+
+Wenn der erweiterte Modus verwendet wird, wird GUICtrlRead($tab,1) die Control-ID anstatt dem Index des angeklickten Tabs zur&uuml;ckgeben.
+
+Um ein neues Control auf einem bereits bestehenden Tab zu erstellen, ist GUISwitch($hWin,$tabitem) zu benutzen und es auszuw&auml;hlen und auch um das neue Control zu erstellen.
+Es sollte nicht vergessen werden, das die Erstellung des neuen Tabs mit GUICtrlCreateTabItem("") wieder beendet wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlSetState, GUISwitch, GUIGetMsg, GUICtrlRead, GUIEventOptions (Option), GUICtrlCreateTab
+
+
+###Example###
+@@IncludeExample@@

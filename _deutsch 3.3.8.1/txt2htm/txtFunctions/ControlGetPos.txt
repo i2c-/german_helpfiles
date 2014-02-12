@@ -1,0 +1,40 @@
+###Function###
+ControlGetPos
+
+###Description###
+Erfragt die Position und die Gr&ouml;&szlig;e eines Controls relativ zu seinem Fenster.
+
+###Syntax###
+ControlGetPos ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array zur&uuml;ck, das die Position und die Gr&ouml;&szlig;e des Controls relativ zu seinem Fenster enth&auml;lt:
+	$array[0] = X-Position
+	$array[1] = Y-Position
+	$array[2] = Breite
+	$array[3] = H&ouml;he
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der Titel/Text stellt den Bezug zum Fenster her. "" ist mit Vorsicht zu benutzen, da "" den Bezug zum aktiven Fenster herstellt und dieses nicht das gew&uuml;nschte Fenster sein k&ouml;nnte, welches das Control enth&auml;lt. 
+
+###Related###
+ControlCommand, ControlMove
+
+
+###Example###
+@@IncludeExample@@

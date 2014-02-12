@@ -1,0 +1,43 @@
+###User Defined Function###
+_IEBodyWriteHTML
+
+###Description###
+Ersetzt den HTML-Code innerhalb des <body>-Tags des Dokumentes.
+
+###Syntax###
+#include <IE.au3> 
+_IEBodyWriteHTML(ByRef $o_object, $s_html)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, Window- oder Frame-Objekt
+$s_html
+	HTML-Code, der in das Dokument geschrieben werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Zeit&uuml;berschreitung beim Laden
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung getrennt
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Man kann _IEBodyReadHTML verwenden, um den aktuellen HTML-Code innerhalb des <body>-Tags des Dokumentes auszulesen. Diesen String kann man manipulieren und mit _IEBodyWriteHTML zur&uuml;ckschreiben.  Auch mit _IEDocInsertHTML, _IEDocInsertText und den innerHTML-, innerText-, outerHTML- und outerText-M&ouml;glichkeiten von _IEPropertyGet und _IEPropertySet ist es m&ouml;glich, eine Seite zu ver&auml;ndern, ohne viel Text neu schreiben zu m&uuml;ssen.
+
+
+###Related###
+_IEBodyReadHTML, _IEBodyReadText, _IEDocInsertHTML, _IEDocInsertText, _IEPropertyGet, _IEPropertySet, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

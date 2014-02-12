@@ -1,0 +1,48 @@
+###Function###
+RunWait
+
+###Description###
+Startet ein externes Programm und pausiert die Ausf&uuml;hrung des Autoit-Skripts, bis das externe Programm beendet ist.
+
+###Syntax###
+RunWait ( "program" [, "workingdir" [, show_flag [, opt_flag]]] )
+
+
+###Parameters###
+@@ParamTable@@
+program
+	Der komplette Pfad des Programms (.EXE, .BAT, .COM oder .PIF), die ausgef&uuml;hrt werden soll. (siehe Bemerkungen)
+workingdir
+	[optional] Der Pfad, in dem das Programm ausgef&uuml;hrt werden soll (Arbeitsverzeichnis). Dies ist nicht der Pfad des Programms.
+show_flag
+	[optional] Das "show"-Flag f&uuml;r das ausgef&uuml;hrte Programm:
+	  @SW_HIDE = Verstecktes Fenster (alternative Eingabe: default)
+	  @SW_MINIMIZE = Minimiertes Fenster
+	  @SW_MAXIMIZE = Maximiertes Fenster
+opt_flag
+	[optional] Steuert verschiedene Optionen, die die Interaktion zwischen Parent- und Child-Prozess betreffen (STDIO).
+	  0x10000 ($RUN_CREATE_NEW_CONSOLE) = Der Child-Kommandozeilenprozess wird in einem eigenen Kommandozeilenfenster ausgef&uuml;hrt. Dieses Flag ist nur dann sinnvoll, wenn die Parent-Anwendung als Kommandozeilenapplikation kompiliert wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Liefert den ExitCode des ausgef&uuml;hrten Programms.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf ungleich Null.
+@@End@@
+
+
+###Remarks###
+Pfade mit Leerzeichen m&uuml;ssen in Anf&uuml;hrungszeichen gesetzt werden.
+
+Um DOS Befehle auszuf&uuml;hren, ist <b>RunWait(@ComSpec & " /c " & "commandName")</b> zu benutzen. <i>Nicht die Leerzeichen vor und nach "/c" vergessen!</i>
+
+Nach dem Start des externen Programms wird das Autoit Skript solange pausiert, bis das externe Programm beendet ist. Um ein externes Programm zu starten, ohne das Autoit-Skript zu pausieren, ist die Run-Funktion zu benutzen.
+
+Einige Programme scheinen direkt nach dem Start den ReturnCode zur&uuml;ckzuliefern, obwohl sie noch laufen. Diese Programme erzeugen andere Prozesse, die evtl. mit der Funktion ProcessWaitClose abgefangen werden k&ouml;nnen.
+
+###Related###
+ProcessWait, ProcessWaitClose, Run, ShellExecute, ShellExecuteWait, RunAs, RunAsWait
+
+
+###Example###
+@@IncludeExample@@

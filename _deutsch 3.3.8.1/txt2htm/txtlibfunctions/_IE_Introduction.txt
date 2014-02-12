@@ -1,0 +1,37 @@
+###User Defined Function###
+_IE_Introduction
+
+###Description###
+Zeigt grundlegende Informationen &uuml;ber die IE.au3 in einem neuen Browserfenster an.
+
+###Syntax###
+#include <IE.au3> 
+_IE_Introduction([$s_module = "basic"])
+
+###Parameters###
+@@ParamTable@@
+$s_module
+	[optional] Gibt an, welches Modul gestartet werden soll
+	basic = (Standard) grundlegende Einf&uuml;hrung
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die auf ein InternetExplorer.Application-Objekt verweist
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Die AutoIt-Hilfe erlaubt es im Moment nicht, dass UDFs die eigenen Funktionen gruppiert darstellen, sondern es werden immer nur einzelne Funktionen angezeigt. Diese Funktion soll diesen &Uuml;berblick verschaffen und mit der Zeit ausgebaut werden.
+
+
+###Related###
+_IE_Example
+
+
+###Example###
+@@IncludeExample@@

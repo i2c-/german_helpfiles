@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_DecodersGetSize
+
+###Description###
+Ermittelt die gesamt Gr&ouml;&szlig;e der Struktur, welche durch _GDIPlus_GetImageDecoders zur&uuml;ckgegeben wird
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_DecodersGetSize (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gesamte Gr&ouml;&szlig;e in Bytes
+Fehler:	-1 und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise GPSTATUS Fehlercode ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_GDIPlus_DecodersGetCount
+
+
+###See Also###
+@@MsdnLink@@ GdipGetImageDecodersSize
+
+
+###Example###
+@@IncludeExample@@

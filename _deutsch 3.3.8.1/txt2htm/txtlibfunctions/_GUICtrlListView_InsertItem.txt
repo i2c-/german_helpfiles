@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlListView_InsertItem
+
+###Description###
+F&uuml;gt ein neues Item in das Control ein
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_InsertItem($hWnd, $sText [, $iIndex = -1 [, $iImage = -1 [, $iParam = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	Text des Items. Falls -1 wird das Item gem&auml;&szlig; $LVN_GETDISPINFO gesetzt.
+$iIndex
+	[optional] 0-basierender Index, an welcher Stelle das neue Item eingef&uuml;gt werden soll. Falls dieser Wert gr&ouml;&szlig;er als
+		die Anzahl der momentan vorhandenen Items im Control ist, so wird das neue Item an das Ende der Liste angeh&auml;ngt und 
+		der Index wird korrigiert.
+$iImage
+	[optional] 0-basierender Index des Icons des Items in der Bilderlist des Controls
+$iParam
+	[optional] Anwendungsspezifische Daten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des neuen Items
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Diese Funktion kann nicht verwendet werden, um Subitems einzuf&uuml;gen. Zum einf&uuml;gen von Subitems ist _GUICtrlListView_SetItemText zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemText
+
+###Example###
+@@IncludeExample@@

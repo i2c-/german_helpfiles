@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlTab_GetItemText
+
+###Description###
+Ermittelt den Text auf einem Tab
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetItemText ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+Gibt den Tabtext zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_SetItemText
+
+
+###Example###
+@@IncludeExample@@

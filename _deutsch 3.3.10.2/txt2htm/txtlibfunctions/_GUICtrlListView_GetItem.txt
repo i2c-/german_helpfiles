@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlListView_GetItem
+
+###Description###
+Ermittelt die Attribute eines Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItem ( $hWnd, $iIndex [, $iSubItem = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iSubItem
+	[optional] 1-basierender Subitemindex
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Item Status, welcher eine Kombination der folgenden sein kann:
+		1 - Das Item ist markiert f&uuml;r Ausschneiden/Einf&uuml;gen (cut-and-paste)
+		2 - Das Item ist markiert f&uuml;r  "Ziehen und Fallenlassen" (drag-and-drop)
+		4 - Das Item hat den Fokus
+		8 - Das Item ist markiert
+	[1] - 1-basierendes Itembild overlay Index
+	[2] - 1-basierendes Itembild Status Index
+	[3] - Itemtext
+	[4] - 0-basierendes Itembild Index
+	[5] - Itemanwendung definiert Werte
+	[6] - Anzahl von Bilderbreiten um das Item einzur&uuml;cken
+	[7] - Identifiziert die Kachel-Gruppenansicht welches das Item aufnimmt
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItem, _GUICtrlListView_GetItemEx
+
+
+###Example###
+@@IncludeExample@@

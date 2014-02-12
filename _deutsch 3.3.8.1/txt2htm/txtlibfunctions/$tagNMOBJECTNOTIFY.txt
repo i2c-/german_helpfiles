@@ -1,0 +1,28 @@
+###Structure Name###
+$tagNMOBJECTNOTIFY
+
+###Description###
+Enth&auml;lt Informationen, die mit den $TBN_GETOBJECT, $TCN_GETOBJECT, $RBN_GETOBJECT und $PSN_GETOBJECT Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMOBJECTNOTIFY = $tagNMHDR & ";int Item;ptr piid;ptr pObject;long Result;dword dwFlags"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Item
+	Ein Control-spezifischer Element Identifizierer
+piid
+	Ein Zeiger auf einen Schnittstellen-Identifizierer des gew&uuml;nschten Objekts
+pObject
+	Ein Zeiger auf ein Objekt, vom Fenster zur Verf&uuml;gung gestellt, das die Benachrichtigung verarbeitet.
+	Die Anwendung, welche die Benachrichtigung verarbeitet, setzt dieses Mitglied
+Result
+	COM Erfolgs- oder Fehlschlags-Flags. Die Anwendung, welche die Benachrichtigung verarbeitet, setzt dieses Mitglied
+dwFlags
+	Control-spezifisches Flag (Hinweise wo es in iItem &uuml;bereinstimmt)
+@@End@@
+
+###Remarks###
+Keine.

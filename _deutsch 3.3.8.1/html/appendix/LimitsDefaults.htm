@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Standardbegrenzungen</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>AutoIt3 Standardbegrenzungen</h1>
+<br>
+<table border="1" style="width: 100%;" cellspacing="0" cellpadding="3" bordercolor="#c0c0c0" height="496">
+  <tr style="color: rgb(255, 255, 255);">
+    <th style="background-color: rgb(0, 0, 153); width: 20%;" height="16">AutoIt3 Begrenzungen</th>
+    <th style="background-color: rgb(0, 0, 153); width: 10%;" height="16">Wert</th>
+    <th style="background-color: rgb(0, 0, 153);" height="16"><b>Beschreibung</b></th>
+  </tr>
+  <tr>
+    <td height="16">MAX_LINESIZE</td>
+    <td align="right" height="16">4095 </td>
+    <td height="16">Maximale Gr&ouml;&szlig;e f&uuml;r eine Skriptzeile.</td>
+  </tr>
+  <tr>
+    <td height="16">MAX_ENVSIZE</td>
+    <td align="right" height="16">32767</td>
+    <td height="16">Maximale Gr&ouml;&szlig;e f&uuml;r eine ENV Variable. </td>
+  </tr>
+  <tr>
+    <td height="16">WINTEXTBUFFER</td>
+    <td align="right" height="16">32767 </td>
+    <td height="16">GetWindowText schl&auml;gt unter Windows 95 fehl, falls >65535, WM_GETTEXT schl&auml;gt manchmal fehl, falls > 
+    32767.</td>
+  </tr>
+  <tr>
+    <td height="8">MAXCALLRECURSE </td>
+    <td align="right" height="8">5100 </td>
+    <td height="8">Maximale Anzahl die sich eine Call() Funktion selbst aufrufen kann.</td>
+  </tr>
+  <tr>
+    <td height="16">MAXEXECUTERECURSE </td>
+    <td align="right" height="16">5100</td>
+    <td height="16">Maximale Anzahl die sich eine Execute() Funktion selbst aufrufen kann.</td>
+  </tr>
+  <tr>
+    <td height="16">GUI_MAXCONTROLS</td>
+    <td align="right" height="16">65532 </td>
+    <td height="16">Maximale Anzahl von Controls in einem GUI-Fenster. </td>
+  </tr>
+  <tr>
+    <td height="16">GUI_MAXPOINTS</td>
+    <td align="right" height="16">256</td>
+    <td height="16">Maximale Anzahl von Punkten durch eine grafische Infoseite.</td>
+  </tr>
+  <tr>
+    <td height="16">COM_MAXEVENT </td>
+    <td align="right" height="16">64 </td>
+    <td height="16">Maximale Anzahl von COM Ereignissen die gepuffert werden k&ouml;nnen. </td>
+  </tr>
+  <tr>
+    <td height="16">VAR_SUBSCRIPT_MAX</td>
+    <td align="right" height="16">64 </td>
+    <td height="16">Maximale Anzahl von Subskripten in einem Array. </td>
+  </tr>
+  <tr>
+    <td height="16">MAIN_TIMER_DELAY</td>
+    <td align="right" height="16">750 ms </td>
+    <td height="16">Das verstecken, blinken bzw. zeichnen des Trayicons wird alle 750ms &uuml;berpr&uuml;ft. </td>
+  </tr>
+  <tr>
+    <td height="16">CMDLINEPARAM_MAXLEN</td>
+    <td align="right" height="16">4096</td>
+    <td height="16">Jeder Parameter kann so viele Zeichen enthalten.</td>
+  </tr>
+  <tr>
+    <td height="16">TRAY_MAXITEMS</td>
+    <td align="right" height="16">505</td>
+    <td height="16">Maximale Anzahl von Items in einem Traymen&uuml;.</td>
+  </tr>
+  <tr>
+    <td height="16">TRAY_MAXEVENT </td>
+    <td align="right" height="16">32 </td>
+    <td height="16">Maximale Anzahl von Ereignisse die gepuffert werden k&ouml;nnen. </td>
+  </tr>
+  <tr>
+    <td height="16">TRAY_TOOLTIPWIDTH</td>
+    <td align="right" height="16">64</td>
+    <td height="16">Maximale Anzahl von Zeichen die in einem Tray Tooltip angezeigt werden k&ouml;nnen.</td>
+  </tr>
+</table>
+<p> </p>
+<table border="1" style="width: 100%;" cellspacing="0" cellpadding="3" bordercolor="#c0c0c0">
+<tr style="color: rgb(255, 255, 255);">
+  <th style="background-color: rgb(0, 0, 153); width: 20%;">Standard</th>
+  <th style="background-color: rgb(0, 0, 153); width: 10%;">Wert</th>
+  <th style="background-color: rgb(0, 0, 153);"><b>Beschreibung</b></th>
+</tr>
+<tr>
+  <td>ADLIB delay</td>
+  <td align="right">250 ms</td>
+  <td>Standardverz&ouml;gerung in ms zwischen ADLIB Triggern. Kann in <a href="../functions/AdlibRegister.htm">AdlibRegister()</a> definiert werden.</td>
+</tr>
+<tr>
+  <td> </td>
+  <td align="right"> </td>
+  <td>Folgende Standards k&ouml;nnen mit <a href="../functions/AutoItSetOption.htm">Opt()</a> ge&auml;ndert werden</td>
+</tr>
+<tr>
+  <td>MouseClickDelay</td>
+  <td align="right">10 ms</td>
+  <td>Zeit zwischen den Mausklicks.</td>
+</tr>
+<tr>
+  <td>MouseClickDownDelay</td>
+  <td align="right">10 ms</td>
+  <td>Zeit die der Klick gehalten wird.</td>
+</tr>
+<tr>
+  <td>MouseClickDragDelay</td>
+  <td align="right">250 ms</td>
+  <td>Die Verz&ouml;gerung am Beginn und Ende einer Ziehoperation.</td>
+</tr>
+<tr>
+  <td>TCPTimeout</td>
+  <td align="right">100 ms</td>
+  <td>Zeit nach der eine TCP Funktion abgebrochen wird.</td>
+</tr>
+</table>
+</body>
+</html>

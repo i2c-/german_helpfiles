@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlTreeView_GetSelected
+
+###Description###
+Ermittelt, ob das Item sich im "markiert"-Status befindet
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetSelected ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item befindet sich im "markiert"-Status
+False:	Item befindet sich nicht im "markiert"-Status
+@@End@@
+
+
+###Remarks###
+Durch diese Funktion kann nur der Status welcher durch _GUICtrlTreeView_SetSelected gesetzt wurde ermittelt werden.
+Es k&ouml;nnen auch mehrere Items den Status "markiert" aufweisen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_SetSelected
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,28 @@
+###User Defined Function###
+_Date_Time_GetSystemTime
+
+###Description###
+Gibt die aktuelle System Zeit und Datum im UTC Zeitformat zur&uuml;ck
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_GetSystemTime (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur mit der aktuellen Systemzeit und Datum zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Date_Time_SetSystemTime, $tagSYSTEMTIME
+
+
+###Example###
+@@IncludeExample@@

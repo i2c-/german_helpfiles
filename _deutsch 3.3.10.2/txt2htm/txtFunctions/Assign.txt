@@ -1,0 +1,41 @@
+###Function###
+Assign
+
+###Description###
+Weist einer Variable namentlich Daten zu.
+
+###Syntax###
+Assign ( "varname", "data" [, flag = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+varname
+	Der Name der Variable, der Daten zugewiesen werden sollen. Dies kann kein Array sein.
+data
+	Die Daten, die der Variable zugewiesen werden sollen.
+flag
+	[Optional] Steuert die Weise, wie Variablen zugewiesen werden (addieren Sie die gew&uuml;nschten Werte auf):
+		0 = (Standard) Erstellt die Variable, wenn es notwendig ist.
+		1 = Erzwungene Erstellung im lokalen Bereich
+		2 = Erzwungene Erstellung im globalen Bereich
+		4 = Scheitert, wenn die Variable nicht schon existiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 wenn es nicht m&ouml;glich ist die Variable zu erstellen oder ihr etwas zuzuweisen.
+@@End@@
+
+
+###Remarks###
+Wenn es n&ouml;tig ist eine Variable mit <a href="Assign.htm">Assign()</a> zu erstellen oder ihr einen Wert zuzuweisen, dann sollte in den meisten Situationen <a href="Eval.htm">Eval()</a> verwendet werden, um die Variable auszulesen und <a href="IsDeclared.htm">IsDeclared()</a>, um zu pr&uuml;fen ob die Variable existiert.
+
+
+###Related###
+Eval, IsDeclared, Execute
+
+
+###Example###
+@@IncludeExample@@

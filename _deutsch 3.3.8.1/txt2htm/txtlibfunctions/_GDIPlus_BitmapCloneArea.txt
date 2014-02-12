@@ -1,0 +1,58 @@
+###User Defined Function###
+_GDIPlus_BitmapCloneArea
+
+###Description###
+Erzeugt eine Kopie eines Bitmap-Objekts von dem angegeben Bereich und Format.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCloneArea($hBmp, $iLeft, $iTop, $iWidth, $iHeight [, $iFormat = 0x00021808])
+
+###Parameters###
+@@ParamTable@@
+$hBmp
+	Handle auf ein Bitmap-Objekt
+$iLeft
+	X-Koordinate der oberen linken Ecke des zu kopierenden Rechtecks
+$iTop
+	Y-Koordinate der oberen linken Ecke des zu kopierenden Rechtecks
+$iWidth
+	L&auml;nge des zu kopierenden Rechtecks
+$iHeight
+	Breite des zu kopierenden Rechtecks
+$iFormat
+	[optional] Pixelformat der Bitmap-Kopie:
+		$GDIP_PXF01INDEXED = 1 Bit pro Pixel, indiziert.
+		$GDIP_PXF04INDEXED = 4 Bit pro Pixel, indiziert.
+		$GDIP_PXF08INDEXED = 8 Bit pro Pixel, indiziert.
+		$GDIP_PXF16GRAYSCALE = 16 Bit pro Pixel, Graustufen.
+		$GDIP_PXF16RGB555 = 16 Bit pro Pixel; je 5 Bits pro Grundfarbe RGB.
+		$GDIP_PXF16RGB565 = 16 Bit pro Pixel; 5 Bits Rot, 6 Bits Gr&uuml;n und 5 Bits Blau.
+		$GDIP_PXF16ARGB1555 = 16 Bit pro Pixel; 1 Bit Alphakanal und 5 Bits f&uuml;r jede RGB-Komponente.
+		$GDIP_PXF24RGB = 24 Bit pro Pixel; 8 Bits pro Grundfarbe RGB.
+		$GDIP_PXF32RGB = 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB. Ohne Alphakanal.
+		$GDIP_PXF32ARGB = 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB und Alphakanal.
+		$GDIP_PXF32PARGB = 32 Bit pro Pixel; 8 Bits pro Grundfarbe RGB und Alphakanal, pre-multiplied
+		$GDIP_PXF48RGB = 48 Bit pro Pixel; 16 Bits pro Grundfarbe RGB.
+		$GDIP_PXF64ARGB = 64 Bit pro Pixel; 16 Bits pro Grundfarbe RGB und Alphakanal.
+		$GDIP_PXF64PARGB = 64 Bit pro Pixel; 16 Bits pro Grundfarbe RGB und Alphakanal, pre-multiplied
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Handle auf das neue Bitmap-Objekt zur&uuml;ck.
+Fehler:	0
+@@End@@
+
+###Remarks###
+Mit dieser Funktion kann ein bereits vorhandenes Bild kopiert und anschlie&szlig;end zugeschnitten werden.
+Wird die Bitmap nicht mehr ben&ouml;tigt, sind die Ressourcen durch Aufruf der Funktion _GDIPlus_BitmapDispose wieder freizugeben.
+
+###Related###
+_GDIPlus_BitmapDispose, _GDIPlus_ImageGetPixelFormat
+
+###See Also###
+@@MsdnLink@@ GdipCloneBitmapAreaI
+
+###Example###
+@@IncludeExample@@

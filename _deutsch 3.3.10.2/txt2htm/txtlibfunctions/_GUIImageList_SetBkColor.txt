@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUIImageList_SetBkColor
+
+###Description###
+Setzt die Hintergrundfarbe f&uuml;r eine Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_SetBkColor ( $hWnd, $iClrBk )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Imagelist
+$iClrBk
+	Die zu setzende Hintergrundfarbe.
+	Dieser Parameter kann der $CLR_NONE Wert sein; In diesem Fall werden die Bilder durch benutzen der Maske transparent gezeichnet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die vorherige Hintergrundfarbe falls erfolgreich
+Fehler:	$CLR_NONE
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_GetBkColor
+
+
+###Example###
+@@IncludeExample@@

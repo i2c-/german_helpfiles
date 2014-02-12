@@ -1,0 +1,46 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawArc
+
+###Description###
+Zeichnet einen Kreis
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawArc($hGraphics, $iX, $iY, $iWidth, $iHeight, $fStartAngle, $fSweepAngle [, $hPen = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+$iX
+	Die X-Koordinate der oberen-linken Ecke des Rechtecks, das die Ellipse begrenzt in welcher der Kreis gezeichnet wird
+$iY
+	Die Y-Koordinate der oberen-linken Ecke des Rechtecks, das die Ellipse begrenzt in welcher der Kreis gezeichnet wird
+$iWidth
+	Die Breite des Rechtecks, das die Ellipse begrenzt in welcher der Kreis gezeichnet wird
+$iHeight
+	Die H&ouml;he des Rechtecks, das die Ellipse begrenzt in welcher der Kreis gezeichnet wird
+$fStartAngle
+	Der Winkel zwischen der X-Achse und dem Startpunkt des Kreises
+$fSweepAngle
+	Der Winkel zwischen dem Startpunkt und Endpunkt des Kreises
+$hPen
+	[optional] Handle zu dem Zeichenstift-Objekt, welches verwendet wird, um den Bogen zu zeichnen. Falls 0, wird ein vollfarbig schwarz gef&uuml;llter Zeichenstift mit einer Breite von 1 verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipDrawArcI
+
+###Example###
+@@IncludeExample@@

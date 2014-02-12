@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_GraphicsDispose
+
+###Description###
+Gibt ein Grafik-Objekt wieder frei
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDispose($hGraphics)
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_GraphicsCreateFromHDC, _GDIPlus_GraphicsCreateFromHWND
+
+###See Also###
+@@MsdnLink@@ GdipDeleteGraphics
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_IEDocReadHTML
+
+###Description###
+Gibt den kompletten HTML-Quelltext eines Dokuments zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IEDocReadHTML(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Window- oder eines Frame-Objekts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den HTML-Quelltext des Dokuments, inklusive der <HTML>- und </HTML>-Tags, zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt den Quelltext des Dokuments nach Client-seitigen Ver&auml;nderungen (z.B. durch AutoIt oder Client-seitiges JavaScript) zur&uuml;ck. Daher kann es zu Abweichungen von der Quelltextanzeige im Browser oder _INetGetSource kommen.
+
+
+###Related###
+_IEDocWriteHTML, _IEBodyReadHTML, _INetGetSource, _IEDocInsertHTML, _IEDocInsertText
+
+
+###Example###
+@@IncludeExample@@

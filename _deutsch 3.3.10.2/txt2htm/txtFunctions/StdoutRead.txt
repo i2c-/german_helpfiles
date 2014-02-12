@@ -1,0 +1,40 @@
+###Function###
+StdoutRead
+
+###Description###
+Liest vom STDOUT-Stream eines zuvor gestarteten Child-Prozesses ein
+
+###Syntax###
+StdoutRead ( process_id [, peek = False [, binary = False]] )
+
+
+###Parameters###
+@@ParamTable@@
+process_id
+	Die Prozess-ID eines Child-Prozesses, wie bei einem vorigen Aufruf von Run zur&uuml;ckgegeben
+peek
+	[optional] Wenn True, entfernt die Funktion die eingelesenen Zeichen nicht aus dem Stream
+binary
+	[optional] Wenn True, liest die Funktion die Daten als bin&auml;r anstatt als Text (Standard ist Text)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die gelesenen Daten. @extended enth&auml;lt die Anzahl der gelesenen Bytes.
+Fehler:	Setzt @error ungleich Null, wenn EOF erreicht ist, STDOUT nicht an diesen Prozess weitergeleitet wurde oder ein anderer Fehler aufgetreten ist.
+@@End@@
+
+
+###Remarks###
+<a href="StdoutRead.htm">StdoutRead()</a> liest aus dem Konsolen-Standard-Ausgabe-Stream eines Child-Prozesses, der normalerweise von Konsolen-Applikationen genutzt wird, um Text auf dem Bildschirm auszugeben. Beim Aufruf von <a href="Run.htm">Run()</a> f&uuml;r den Child-Prozess, aus dem man lesen m&ouml;chte, muss der STD-I/O-Parameter den Wert $STDOUT_CHILD (2) enthalten, damit diese Funktion richtig arbeitet (siehe die <a href="Run.htm">Run</a>-Funktion).
+<a href="StdoutRead.htm">StdoutRead()</a> blockiert den Stream nicht, sondern kehrt sofort zur&uuml;ck. Sollen alle Daten ermittelt werden, muss die Funktion in einer Schleife aufgerufen werden.
+"Peeking" auf dem Stream entfernt die Daten nicht aus dem Puffer, gibt aber die verf&uuml;gbaren Daten normal zur&uuml;ck.
+Standardm&auml;&szlig;ig werden Daten im Textformat zur&uuml;ckgegeben. Wird die Binary-Option verwendet, so werden die Daten im Bin&auml;rformat zur&uuml;ckgegeben.
+
+
+###Related###
+StderrRead, StdinWrite, StdioClose, Run, RunAs
+
+
+###Example###
+@@IncludeExample@@

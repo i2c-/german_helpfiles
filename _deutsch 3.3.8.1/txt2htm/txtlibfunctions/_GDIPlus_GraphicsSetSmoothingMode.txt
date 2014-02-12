@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_GraphicsSetSmoothingMode
+
+###Description###
+Legt die Renderqualit&auml;t des Grafik-Objekts fest.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsSetSmoothingMode($hGraphics, $iSmooth)
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle auf ein Grafik-Objekt
+$iSmooth
+	Gl&auml;ttungsmodus:
+		0 - keine Gl&auml;ttung
+		1 - Gl&auml;ttung mit 8 X 4 Rechteckfilter
+		2 - Gl&auml;ttung mit 8 X 8 kubischem Filter
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_GraphicsGetSmoothingMode
+
+###See Also###
+@@MsdnLink@@ GdipSetSmoothingMode

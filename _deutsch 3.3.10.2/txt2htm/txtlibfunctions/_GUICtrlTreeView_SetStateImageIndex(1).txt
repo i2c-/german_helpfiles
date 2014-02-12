@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlTreeView_SetStateImageIndex
+
+###Description###
+Setzt den Index in die Imagelist f&uuml;r das Statusbild
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetStateImageIndex ( $hWnd, $hItem, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iIndex
+	Imagelistenindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Dies ist eine 1-basierende Indexliste.
+Der Index 0 kann verwendet werden um das Checkbox-Bild eines festgelegten TreeViewItems zu unterdr&uuml;cken, falls dessen TreeView mit dem Stil $TVS_CHECKBOXES erstellt wurde.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetStateImageIndex
+
+
+###Example###
+@@IncludeExample@@

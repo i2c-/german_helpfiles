@@ -1,0 +1,38 @@
+###User Defined Function###
+_GDIPlus_MatrixRotate
+
+###Description###
+Aktualisiert eine Matrix mit dem Produkt aus sich selbst und einer Rotationsmatrix.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_MatrixRotate($hMatrix, $fAngle [, $bAppend = False])
+
+###Parameters###
+@@ParamTable@@
+$hMatrix
+	Handle auf eine Matrix
+$fAngle
+	Rotationswinkel in Grad. Positive Werte entsprechen einer Drehung im Uhrzeigersinn.
+$bAppend
+	[optional] Legt die Reihenfolge der Multiplikation fest:
+		 True - Die Rotationsmatrix steht auf der linken Seite.
+		False - Die Rotationsmatrix steht auf der rechten Seite.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mit Hilfe dieser Funktion kann man Bilder in einer GUI drehen, ohne dass das Originalbild ver&auml;ndert wird.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipRotateMatrix
+
+###Example###
+@@IncludeExample@@

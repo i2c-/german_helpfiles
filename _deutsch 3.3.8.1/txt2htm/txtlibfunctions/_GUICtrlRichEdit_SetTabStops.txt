@@ -1,0 +1,48 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetTabStops
+
+###Description###
+Setzt die Tabulatorpositionen f&uuml;r ein Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetTabStops($hWnd, $vTabStops [, $fRedraw = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$VTabStops
+	Tabulatorpositionen, die gesetzt werden sollen. Wenn &uuml;bergeben als...
+		String: Die einzelnen TabStop-L&auml;ngen werden per Semikolon getrennt (z.B. "1;1.5;2")
+		Zahl: Setzt die Tabulatorposition alle <b>n</b> Leerzeichen-Einheiten
+$fRedraw
+	[optional] True: Das Control wird neugezeichnet (Standard)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $vTabStops ist weder String noch Zahl
+	1022 - $vTabStops ist ein String, aber eine Zahl ist nicht positiv
+	1023 - $vTabStops ist ein leerer String
+	1024 - $vTabStops ist eine Zahl aber <1
+	103 - $fRedraw muss entweder True oder False sein
+@@End@@
+
+###Remarks###
+Die Leerzeichen-Einheit ist anf&auml;nglich Inch/Zoll (1 Inch = ca. 2,54 cm).
+Um einen Tabulator im Control einzuf&uuml;gen, dr&uuml;cke 'Strg + Tab'.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaTabStops, _GUICtrlRichEdit_SetSpaceUnit
+
+###See Also###
+@@MsdnLink@@ EM_SETTABSTOPS
+
+###Example###
+@@IncludeExample@@

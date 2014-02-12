@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Sprachreferenz - Konditionelle Ausdr&uuml;cke</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Sprachreferenz - Konditionelle Ausdr&uuml;cke</h1>
+<p>Oft ist erw&uuml;nscht, dass ein Skript abh&auml;ngig vom
+Ergebnis einer oder mehrerer Bedingungen unterschiedlich
+reagiert. Ist eine Zahl gr&ouml;&szlig;er als eine andere?
+Beinhaltet ein String einen bestimmten Teil-String? </p>
+<p>Bedingungen (Konditionen) werden als <strong>true</strong> (wahr,
+non-zero, nicht-null) oder <strong>false</strong>
+(falsch, zero, Null) ausgewertet. 
+Bedingungen nutzen im Allgemeinen <a href="lang_operators.htm">Vergleichsoperatoren</a> wie z.B. <strong>==</strong>,
+<strong><></strong>,
+<strong>>=</strong>.</p>
+<p> </p>
+<p>Folgende konditionelle Ausdr&uuml;cke sind in AutoIt verf&uuml;gbar:</p>
+<ul>
+  <li> <a href="../keywords/IfElseEndIf.htm">If...Then...Else</a></li>
+  <li> <a href="../keywords/Select.htm">Select...Case</a></li>
+  <li> <a href="../keywords/Switch.htm">Switch...Case</a></li>
+</ul>
+<p>Alle diese drei Ausdr&uuml;cke sind &auml;hnlich und entscheiden welcher Code abh&auml;ngig von den Bedingungnen ausgef&uuml;hrt wird
+  .  Hier im Beispiel eine <a href="../keywords/IfElseEndIf.htm">If-Abfrage</a>, 
+  die eine <a href="../functions/MsgBox.htm">Message Box</a> abh&auml;ngig vom Wert einer Variable zeigt</p>
+<p class="codebox">$var = -20<br>
+  <br>
+  If $var > 0 Then<br>
+    MsgBox(0, "Beispiel", "$var war positiv!")<br>
+  ElseIf $var < 0 Then<br>
+    MsgBox(0, "Beispiel", "$var war negativ!")<br>
+  Else<br>
+    MsgBox(0, "Beispiel", "$var war null.")<br>
+EndIf</p>
+<p> </p>
+<p>In dem obigen Beispielwird der Ausdruck <strong>$var > 0</strong> als 
+  <strong>false</strong> bewertet, da die Variable kleiner als 0 ist.  Wenn die erste Bedingung nicht wahr ist, wird die zweite Bedingung getestet.  Der Ausdruck <strong>$var < 0</strong> wird mit <strong>true</strong> bewertet.  Dies bewirkt, dass die zweite MsgBox Zeile ausgef&uuml;hrt wird und <strong>"$var 
+  war negativ!"</strong> dargestellt wird.</p>
+<p> </p>
+<p> </p>
+<p>Eine <a href="../keywords/Select.htm">Select</a>-Abfrage ist sehr
+&auml;hnlich, aber wird normalerweise nur benutzt, wenn man eine
+gro&szlig;e Anzahl von Bedingungen testen m&ouml;chten. Diese Abfrage ist
+meist k&uuml;rzer als eine entsprechende If/Else-Konstruktion, z.B.:</p>
+<p class="codebox">$var = 30<br>
+<br>
+Select<br>
+     Case $var > 1 AND $var <= 10<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 1")<br>
+<br>
+     Case $var > 10 AND $var <= 20<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 10")<br>
+<br>
+     Case $var > 20 AND $var <= 30<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 20")<br>
+<br>
+     Case $var > 30 AND $var <= 40<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 30")<br>
+<br>
+     Case $var > 40<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 40")<br>
+EndSelect
+</p>
+<p> </p>
+<p>Eine <a href="../keywords/Switch.htm">Switch</a>-Anweisung ist einer Select-Anweisung
+recht &auml;hnlich, wird aber meist dann verwendet, wenn man den gleichen Ausdruck gegen viele 
+verschiedene Werte testen will.</p>
+<p class="codebox">$var = 30<br>
+  <br>
+  Switch Int($var)<br>
+     Case 1 To 10<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 1")<br>
+  <br>
+     Case 11 To 20<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 10")<br>
+  <br>
+     Case 21 To 30<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 20")<br>
+  <br>
+     Case 31 To 40<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 30")<br>
+  <br>
+     Case Else<br>
+         MsgBox(0, "Beispiel",
+"$var war gr&ouml;&szlig;er als 40 oder kleiner gleich 0")<br>
+  <br>
+  EndSwitch
+</p>
+<p>Bei jeder dieser Strukturen wird der erste Ausdruck der wahr ist dessen Befehle ausgef&uuml;hrt. Alle folgenden Bedingungen und deren zugeh&ouml;rigen Befehle werden ignoriert.</p>
+</body>
+</html>

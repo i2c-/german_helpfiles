@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_GetWindowHeight
+
+###Description###
+Gibt die H&ouml;he des Fensters zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindowHeight($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	H&ouml;he des Fensters
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetWindowWidth

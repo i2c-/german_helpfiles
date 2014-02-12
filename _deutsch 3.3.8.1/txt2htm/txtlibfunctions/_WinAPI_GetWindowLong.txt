@@ -1,0 +1,45 @@
+###User Defined Function###
+_WinAPI_GetWindowLong
+
+###Description###
+Ermittelt Informationen &uuml;ber das angegebene Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindowLong($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster
+$iIndex
+	Legt den bei Null beginnenden Adressenabstand fest der ermittelt werden soll. G&uuml;ltige Werte sind im Bereich von
+		Null bis zur Anzahl der Bytes des Fenster-Extraspeichers, minus vier; zum Beispiel, wenn ein Werte von 12 oder mehr
+		Bytes des Extraspeichers festgelegt wurde, w&uuml;rde der Wert 8 der Index zu dem dritten 32-Bit Integer sein. Um einen beliebig
+		anderen Wert zu ermitteln, legt man einen der folgenden Werte fest:
+		$GWL_EXSTYLE - Ermittelt die erweiterten Fensterstile
+		$GWL_STYLE - Ermittelt die Fensterstile
+		$GWL_WNDPROC - Ermittelt die Adresse zur Window DllCallBack Funktion
+		$GWL_HINSTANCE - Ermittelt das Handle zur Instanz der Anwendung
+		$GWL_HWNDPARENT - Ermittelt das Handle des Parentfensters, sofern vorhanden
+		$GWL_ID - Ermittelt den Identifizierer des Fensters
+		$GWL_USERDATA - Ermittelt den 32-Bit Wert, der mit dem Fenster verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der gew&uuml;nschte Wert
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Ein Fenster kann Extraspeicher reserviert bekommen, um Werte wie z.B. einen Zeiger auf ein Objekt o.&auml;. aufzunehmen. Die
+Gr&ouml;&szlig;e des Extraspeichers muss in der WNDCLASS, bzw. WNDCLASSEX Struktur - die zur Registrierung der Fensterklasse ben&ouml;tigt wird -
+festgelegt werden und kann mit der Funktion SetWindowLong, bzw. SetWindowLongPtr einen Wert zugewiesen bekommen.
+Ben&ouml;tigt Constants.au3 f&uuml;r vordefinierte Konstanten.
+
+###Related###
+_WinAPI_SetWindowLong
+
+###See Also###
+@@MsdnLink@@ GetWindowLong

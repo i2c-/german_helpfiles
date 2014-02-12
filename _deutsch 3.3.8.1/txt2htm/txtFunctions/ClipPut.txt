@@ -1,0 +1,33 @@
+###Function###
+ClipPut
+
+###Description###
+Schreibt einen Text in die Zwischenablage.
+
+###Syntax###
+ClipPut ( "value" )
+
+
+###Parameters###
+@@ParamTable@@
+value
+	Text, der in die Zwischenablage geschrieben werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Alles andere in der Zwischenablage wird &uuml;berschrieben.
+Einen leeren String "" l&ouml;scht den gesamten Inhalt der Zwischenablage.
+
+###Related###
+ClipGet
+
+
+###Example###
+@@IncludeExample@@

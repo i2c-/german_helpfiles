@@ -1,0 +1,35 @@
+###User Defined Function###
+_Date_Time_TzSpecificLocalTimeToSystemTime
+
+###Description###
+Konvertiert eine lokale Zeit in eine UTC-Zeit
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_TzSpecificLocalTimeToSystemTime ( $pLocalTime [, $pTimeZone = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$pLocalTime
+	Zeiger zu einer $tagSYSTEMTIME Struktur, die die lokale Zeit angibt. Die Funktion 
+	konvertiert diese Zeit in die dementsprechende UTC-Zeit.
+$pTimeZone
+	[optional] Zeiger zu einer $tagTIME_ZONE_INFORMATION Struktur, die die Zeitzone angibt, 
+	in die konvertiert werden soll. Wenn hier 0 angegebenen wird, verwendet die Funktion die aktuell aktive Zeitzone.
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur zur&uuml;ck welche die UTC-Zeit beinhaltet
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagSYSTEMTIME, $tagTIME_ZONE_INFORMATION
+
+
+###Example###
+@@IncludeExample@@

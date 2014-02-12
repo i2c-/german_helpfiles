@@ -1,0 +1,34 @@
+###User Defined Function###
+_GDIPlus_GraphicsSetTransform
+
+###Description###
+Setzt die Transformation f&uuml;r ein Grafik-Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsSetTransform($hGraphics, $hMatrix)
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$hMatrix
+	Handle zu einem Matrix-Objekt welches die Transformation festlegt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipSetWorldTransform
+
+###Example###
+@@IncludeExample@@

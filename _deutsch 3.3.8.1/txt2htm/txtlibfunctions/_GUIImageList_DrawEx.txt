@@ -1,0 +1,58 @@
+###User Defined Function###
+_GUIImageList_DrawEx
+
+###Description###
+Zeichnet ein Item aus einer Imagelist an dem festgelegten Bereich
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_DrawEx($hWnd, $iIndex, $hDC, $iX, $iY [, $iDX = 0 [, $iDY = 0 [, $iRGBBk = 0xFFFFFFFF [, $iRGBFg = 0xFFFFFFFF [, $iStyle=0]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Index des zu zeichnenden Bildes
+$hDC
+	Handle zu dem Ort
+$iX
+	X Koordinate wo das Bild gezeichnet werden soll
+$iY
+	Y Koordinate wo das Bild gezeichnet werden soll
+$iDX
+	[optional] Die Breite des Abschnitts des Bildes um relativ zu der oberen linken Ecke des Bildes zu zeichnen.
+		Falls $iDX und $iDY 0 sind, zeichnet diese Funktion das komplette Bild. Diese Funktion pr&uuml;ft nicht, ob die Parameter g&uuml;ltig sind.
+$iDY
+	[optional] Die H&ouml;he des Abschnitts des Bildes um relativ zu der oberen linken Ecke des Bildes zu zeichnen.
+		Falls $iDX und $iDY 0 sind, zeichnet diese Funktion das komplette Bild. Diese Funktion pr&uuml;ft nicht, ob die Parameter g&uuml;ltig sind.
+$iRGBBk
+	[optional] Die Hintergrundfarbe des Bildes. Dieser Parameter kann anwendungsspezifischer RGB Wert sein oder einer der folgenden Werte:
+		$CLR_NONE - Keine Hintergrundfarbe. Das Bild wird transparent gezeichnet.
+		$CLR_DEFAULT - Die Standard Hintergrundfarbe. Das Bild wird durch Benutzen der Hintergrundfarbe des Bildes gezeichnet.
+$iRGBFg
+	[optional] Die Vordergrundfarbe des Bildes. Dieser Parameter kann anwendungsspezifischer RGB Wert sein oder einer der folgenden Werte:
+		$CLR_NONE - Keine Mischfarbe. Das Bild wird mit der Farbe des Zielbildes gemischt.
+		$CLR_DEFAULT - Die Standard Vordergrundfarbe. Das Bild wird durch Benutzen der Systemfarbe f&uuml;r hervorgehobene Objekte als Vordergrundfarbe gezeichnet.
+$iStyle
+	[optional] Zeichenstil und Overlay-Bild:
+		1 - Zeichnet das Bild transparent durch Benutzung einer Maske unabh&auml;ngig von der Hintergrundfarbe
+		2 - Zeichnet das Bild, vermischt mit 25 Prozent von dem Systemfarbe f&uuml;r das Hervorheben
+		4 - Zeichnet das Bild, vermischt mit 50 Prozent von dem Systemfarbe f&uuml;r das Hervorheben
+		8 - Zeichnet die Maske
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_Draw
+
+###Example###
+@@IncludeExample@@

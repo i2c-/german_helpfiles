@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListView_GetISearchString
+
+###Description###
+Ermittelt den inkrementellen Suchstring des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetISearchString($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt den inkrementellen Suchstring oder einen leeren ("") String zur&uuml;ck, falls kein Suchstring existiert
+
+###Remarks###
+Der inkrementelle Suchstring ist den String, welche der Benutzer eingetippt hat, w&auml;hrend das Listview den Eingabefokus hatte. Jedesmal wenn der Benutzer ein Zeichen eingetippt hat, h&auml;ngt das System das Zeichen an den Suchstring und sucht nach einem passenden Item. Falls das System ein passendes Item findet, w&auml;hlt es das Item aus und scrollt, falls notwendig, so, dass man es sieht.
+
+Nach jeder Eingabe hat der Benutzer einen bestimmte Zeit Zeit, bis er das n&auml;chste Zeichen eingibt. Ist diese Zeit verstrichen, wird der inkrementellen Suchstring zur&uuml;ckgesetzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

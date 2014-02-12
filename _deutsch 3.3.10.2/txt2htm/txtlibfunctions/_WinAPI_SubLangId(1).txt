@@ -1,0 +1,26 @@
+###User Defined Function###
+_WinAPI_SubLangId
+
+###Description###
+Extrahiert die Subsprach-ID von einer Sprach-ID
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SubLangId ( $lgid )
+
+
+###Parameters###
+@@ParamTable@@
+$lgid
+	Sprach-ID
+@@End@@
+
+###ReturnValue###
+Gibt eine Subsprach-ID zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###

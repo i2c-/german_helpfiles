@@ -1,0 +1,68 @@
+###Function###
+GUICtrlCreateListView
+
+###Description###
+Erstellt eine Liste (mit ein oder mehreren Spalten) f&uuml;r die GUI (ListView-Control)
+
+###Syntax###
+GUICtrlCreateListView ( "text", left, top [, width [, height [, style [, exStyle]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Definition der Spalten&uuml;berschriften. Die Spalten werden durch ein Trennzeichen getrennt, welches mit <a href="AutoItSetOption.htm#GUIDataSeparatorChar">Opt("GUIDataSeparatorChar")</a> festgelegt werden kann.
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#ListView">Anhang GUI-Stile f&uuml;r Controls</a>.
+	
+	Standard (-1) : $LVS_SHOWSELALWAYS, $LVS_SINGLESEL
+	Erzwungener Stil : $LVS_REPORT
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a> oder <a href="../appendix/GUIStyles.htm#ListViewExtended">Tabelle der erweiterten ListView Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um dem Control Listeneintr&auml;ge hinzuzuf&uuml;gen ist <a href="GUICtrlCreateListViewItem.htm">GUICtrlCreateListViewItem</a> zu verwenden.
+
+Das ListView wird immer so aussehen wie die "Detail"-Ansicht des Explorers (LVS_REPORT Stil wird erzwungen).
+Die anf&auml;ngliche Spaltenbreite kann kontrolliert werden, indem Leerzeichen in die Spalten&uuml;berschriften eingef&uuml;gt werden. Die Spaltenbreite kann durch GUICtrlCreateListViewItem auf die Breite der Eintr&auml;ge erweitert werden. Bis zu etwa 25 Zeichen passen in eine Spalte. Werden die Eintr&auml;ge durch GUICtrlSetDate ver&auml;ndert, wird keine Gr&ouml;&szlig;enanpassung vorgenommen.
+
+Um ein ListView mit Icons, kleinen Icons oder in Listenform zu erstellen, ist nach dem Erstellen <a href="GUICtrlSetStyle.htm">GUICtrlSetStyle</a> mit den Stilen $LVS_ICON, $LVS_LIST oder $LVS_SMALLICON zu verwenden.
+
+Das Sortieren der Listeneintr&auml;ge durch Klick auf die Spalten&uuml;berschriften (wie im Explorer) ist zur Zeit noch nicht implementiert.
+
+Um eine ganze Zeile durch einen Farbbalken auszuw&auml;hlen ist der <a href="../appendix/GUIStyles.htm#Extended">erweiterte Stil</a> LVS_EX_FULLROWSELECT zu verwenden.
+
+Um weitere Stile zus&auml;tzlich zum Standardstil zu benutzen, ist <b>BitOr</b>($GUI_SS_DEFAULT_LISTVIEW, newstyle,...) zu verwenden.
+
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <ListViewConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Das spezielle Flag $GUI_BKCOLOR_LV_ALTERNATE kann zusammen mit dem ListView-Control dazu genutzt werden, den ListviewItems-Zeilen abwechselnd andere Hintergrundfarben zu geben.
+Die ungeraden Zeilen bekommen die Farbe, welche durch GUICtrlSetBkColor des ListView-Controls zugewiesen wird.
+Die geraden Zeilen bekommen die Farbe, welche durch GUICtrlSetBkColor des ListViewItem Controls zugewiesen wird.
+
+Ein ListView-Control muss immer mindestens eine Spalte beinhalten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateListViewItem, GUICtrlRegisterListViewSort, GUICoordMode (Option), GUICtrlSetData, GUIGetMsg, GUIDataSeparatorChar (Option)
+
+
+###Example###
+@@IncludeExample@@

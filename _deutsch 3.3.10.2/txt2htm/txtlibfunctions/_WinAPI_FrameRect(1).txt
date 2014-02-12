@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_FrameRect
+
+###Description###
+Zeichnet einen Rand um das festgelegte Rechteck unter Verwendung des angegebenen F&uuml;llmusters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_FrameRect ( $hDC, $ptrRect, $hBrush )
+
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu dem Ger&auml;tekontext, in dem der Rand gezeichnet werden soll
+$ptrRect
+	Zeiger auf eine $tagRECT-Struktur, welche die logischen Koordinaten der oberen linken und unteren rechten Ecke des Rechtecks enth&auml;lt
+$hBrush
+	Handle zu dem F&uuml;llmuster, das verwendet werden soll, um den Rand zu zeichnen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Das durch den $hBrush-Parameter identifizierte F&uuml;llmuster muss mit der Funktion _WinAPI_CreateSolidBrush erstellt oder durch die Funktion _WinAPI_GetStockObject abgerufen worden sein
+
+
+###Related###
+$tagRECT
+
+
+###See Also###
+@@MsdnLink@@ FrameRect

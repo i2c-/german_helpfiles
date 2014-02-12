@@ -1,0 +1,48 @@
+###User Defined Function###
+_GUICtrlRichEdit_ChangeFontSize
+
+###Description###
+Inkrementiert oder dekrementiert die Schriftgr&ouml;&szlig;e des markierten Textes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_ChangeFontSize($hWnd, $iIncrement)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIncrement
+	Positiv um zu vergr&ouml;&szlig;ern, negativ um zu verkleinern
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True - Schriftgr&ouml;&szlig;e wurde ver&auml;ndert
+Fehler:	False und setzt m&ouml;glicherweise @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iIncrement ist keine Zahl
+	-1 - Kein Text markiert
+@@End@@
+
+###Remarks###
+Wenn sich mehrere Schriftgr&ouml;&szlig;en im markierten Text befinden, werden alle inkrementiert/dekrementiert.
+
+Ist $iIncrement positiv, werden alle Schriftgr&ouml;&szlig;en aufgerunde; ist $iIncrement negativ, werden diese abgerundet.
+
+Das RichEdit-Control addiert zuerst $iIncrement zur existierenden Schriftgr&ouml;&szlig;e. Dann rundet es auf (oder ab) wie folgt:
+<= 12 Punkte: 1 ; z.B. 7 + 1 => 8 Punkte, 14 - 3 => 10 Punkte
+12.05 bis 28 Punkte: 20 + 2.25 => 24 Punkte
+28.05 bis 80 Punkte: gerundet auf die n&auml;chsten 28, 36, 48, 72 oder 80, z.B. 28 + 1 => 36 Punkte, 80 - 1 => 72 Punkte
+> 80 Punkte: 10, z.B. 80 + 1 => 90
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetFont
+
+###See Also###
+@@MsdnLink@@ EM_SETFONTSIZE
+
+###Example###
+@@IncludeExample@@

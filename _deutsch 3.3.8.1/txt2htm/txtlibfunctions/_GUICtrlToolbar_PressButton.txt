@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlToolbar_PressButton
+
+###Description###
+Dr&uuml;ckt oder l&auml;sst einen festgelegten Button los
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_PressButton($hWnd, $iCommandID [, $fPress = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$fPress
+	[optional] gedr&uuml;ckter Status:
+		 True - Button wird in den gedr&uuml;ckten Zustand versetzt
+		False - Button wird in den ungedr&uuml;ckten Zustand versetzt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion feuert nicht das Klickevent auf Dropdown Stil Buttons. Man sollte _GUICtrlToolbar_ClickButton verwenden, wenn man ungeachtet des Buttons Stils sicherstellen will, dass das Klickevent abgefeuert wurde.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,60 @@
+###Function###
+InputBox
+
+###Description###
+Zeigt eine Eingabe-Box und fordert den Benutzer auf, ein String einzugeben.
+
+###Syntax###
+InputBox ( "title", "prompt" [, "default" [, "password char" [, width [, height [, left [, top [, timeout [, hwnd]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel der Eingabe-Box.
+prompt
+	Eine Nachricht f&uuml;r den Benutzer, die beschreibt, was f&uuml;r eine Eingabe erwartet wird.
+default
+	[optional] Der in der Eingabe-Box vorgegebene Wert.
+password char
+	[optional] Das Zeichen, mit dem alle eingegebenen Zeichen ersetzt werden sollen. Wenn die gerade getippten Zeichen angezeigt werden sollen, ist ein Leerstring ("") anzugeben (Standard) oder ein Leerzeichen als erstes Zeichen.  Stellt man ein String mit mehreren Zeichen zur Verf&uuml;gung, wird nur das erste Zeichen zur Maskierung benutzt. Es existieren spezielle Bedeutungen f&uuml;r das zweite und die folgenden Zeichen.  Siehe Bemerkungen.
+width
+	[optional] Die Breite des Fensters.
+height
+	[optional] Die H&ouml;he des Fensters.
+left
+	[optional] Der linke Rand der Eingabe-Box. Standardm&auml;&szlig;ig wird die Box zentriert angezeigt.
+top
+	[optional] Der obere Rand der Eingabe-Box.  Standardm&auml;&szlig;ig wird die Box zentriert angezeigt.
+timeout
+	[optional] Gibt die Wartezeit in Sekunden an, bevor die Eingabe-Box automatisch geschlossen wird.
+hwnd
+	[optional] Das Fenster Handle welches als Parent f&uuml;r diesen Dialog verwendet werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den eingegebenen String zur&uuml;ck.
+Fehler:	Gibt einen Leerstring "" zur&uuml;ck und setzt @error wie folgt:
+
+@Error	0 = Der zur&uuml;ckgegebene String ist g&uuml;ltig.
+	1 = Der Abbrechen-Button wurde gedr&uuml;ckt.
+	2 = Die Timeout Wartezeit wurde erreicht.
+	3 = Die Eingabe-Box konnte nicht dargestellt werden. Dies passiert normalerweise durch fehlerhafte Argumente.
+	4 = Die Eingabe-Box konnte nicht auf jedem Monitor dargestellt werden.
+	5 = Ung&uuml;ltige Parameter. Breite ohne H&ouml;he oder Linke Seite ohne obere Seite.
+@@End@@
+
+###Remarks###
+Die Eingabe-Box kann vom Benutzer in der Gr&ouml;&szlig;e ver&auml;ndert werden, hat aber eine Minimalgr&ouml;&szlig;e von etwa 190 x 115 Pixel. Die Standardgr&ouml;&szlig;e betr&auml;gt etwa 250 x 190 Pixel.
+
+Der zur&uuml;ckgegebene String kann eine L&auml;nge von max. 254 Zeichen nicht &uuml;berschreiten. Wenn die Eingabe "carriage returns" oder "linefeeds" enth&auml;lt, wird das Ergebnis beim ersten Auftreten eines solchen Zeichens abgeschnitten.
+
+Das zweite und die folgenden Zeichen des Passwortfeldes k&ouml;nnen genutzt werden, um Eingaben einzuschr&auml;nken. Ein Leerzeichen als erstes Zeichen l&auml;sst die Anzeige der eingetippten Zeichen zu. Ein gesetztes <B>M</b> nach dem ersten Zeichen zeigt an, dass die Eingabe ein <u>M</u>uss ist; d.h. eine Eingabe ist zwingend erforderlich.  Wurde keine Eingabe get&auml;tigt und der <b>Ok</b> Button gedr&uuml;ckt, passiert nichts.  Die Eingabe-Box bleibt ge&ouml;ffnet.  
+
+Man kann auch die maximale L&auml;nge am Ende des Passwortfeldes angeben. Dazu gibt man einfach als letztes Zeichen die entsprechende Zahl an.
+
+###Related###
+MsgBox
+
+###Example###
+@@IncludeExample@@

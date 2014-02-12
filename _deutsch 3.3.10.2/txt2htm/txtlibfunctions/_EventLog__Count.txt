@@ -1,0 +1,35 @@
+###User Defined Function###
+_EventLog__Count
+
+###Description###
+Ermittelt die Anzahl an Eintr&auml;gen im Event Log
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Count ( $hEventLog )
+
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle des Event Log
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Anzahl der Eintr&auml;ge im Event Log
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Der &auml;lteste Eintrag im Event Log ist nicht zwingend Eintrag Nummer 1.
+Um die Nummer des &auml;ltesten Eintrages im Event Log zu ermitteln ist die Funktion _EventLog__Oldest() zu verwenden.
+
+
+###Related###
+_EventLog__Oldest, _EventLog__Full
+
+
+###Example###
+@@IncludeExample@@

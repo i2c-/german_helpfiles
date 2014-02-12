@@ -1,0 +1,38 @@
+###User Defined Function###
+_SetDate
+
+###Description###
+Setzt das aktuelle Systemdatum
+
+###Syntax###
+#include <Date.au3>
+_SetDate($iDay [, $iMonth = 0 [, $iYear = 0]])
+
+###Parameters###
+@@ParamTable@@
+$iDay
+	Tag des Monats. Werte: 1-31
+$iMonth
+	[optional] Monat. Werte: 1-12
+$iYear
+	[optional] Jahr. Werte: > 0 (Windows k&ouml;nnte dies sp&auml;ter einschr&auml;nken!!)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	0 - Kein Fehler
+	1 - Fehler
+@extended:	GetLastError()
+	Fehlercode(s): http://msdn.microsoft.com/library/default.asp?url=/library/en-us/debug/base/system_error_codes.asp
+@@End@@
+
+###Remarks###
+Falls die optionalen Parameter (iMonth,iYear) nicht definiert werden, wird die Funktion die aktuellen Werte nicht &auml;ndern!
+
+###Related###
+_SetTime
+
+###Example###
+@@IncludeExample@@

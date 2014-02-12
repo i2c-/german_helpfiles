@@ -1,0 +1,32 @@
+###Function###
+DriveGetLabel
+
+###Description###
+Gibt die Bezeichnung eines Laufwerkes zur&uuml;ck, wenn es eine besitzt.
+
+###Syntax###
+DriveGetLabel ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Pfad des Laufwerkes, von dem die Bezeichnung ermittelt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Bezeichnung des Laufwerkes als String zur&uuml;ck.
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+DriveGetDrive, DriveGetFileSystem, DriveGetSerial, DriveGetType, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

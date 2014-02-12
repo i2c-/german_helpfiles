@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTreeView_SetToolTips
+
+###Description###
+Setzt das Handle zu dem Child-ToolTip-Control
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetToolTips($hWnd, $hToolTip)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hToolTip
+	Handle zu einem ToolTip-Control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Child-ToolTip-Control
+Fehler:	0, falls das Control keine ToolTips verwendet
+@@End@@
+
+###Remarks###
+ToolTip-Control werden automatisch erstellt. Um diese zu deaktivieren, ist das Control mit DllStructGetData($TVS_NOTOOLTIPS style, "") zu erstellen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetToolTips
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetRectEx
+
+###Description###
+Ermittelt das abgrenzende Rechteck eines Abschnitts
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetRectEx ( $hWnd, $iPart )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPart
+	0-basierender Abschnittsindex.
+	Falls sich das Control im einfachen Modus befindet, wird dieses Feld ignoriert und das Rechteck der Statusbar wird zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine $tagRECT Struktur welche das abgrenzende Rechteck ermittelt
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlStatusBar_GetRect, $tagRECT
+
+
+###Example###
+@@IncludeExample@@

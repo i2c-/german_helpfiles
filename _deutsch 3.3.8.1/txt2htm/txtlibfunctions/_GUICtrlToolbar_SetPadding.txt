@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlToolbar_SetPadding
+
+###Description###
+Legt die Einr&uuml;ckung fest
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetPadding($hWnd, $iCX, $iCY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCX
+	Die horizontale Einr&uuml;ckung in Pixel
+$iCY
+	Die vertikale Einr&uuml;ckung in Pixel
+@@End@@
+
+###ReturnValue###
+Erfolg:	Vorherige Einr&uuml;ckung in low word und die vorherige vertikale Einr&uuml;ckung in high word
+
+###Remarks###
+Die Einr&uuml;ckwerte werden verwendet um eine leere Fl&auml;che zwischen der Kante des Buttons und des Buttonbildes und/oder Text herzustellen.
+Der horizontale Einr&uuml;ckwert wird auf die rechte und linke Seite des Buttons und der vertikale Einr&uuml;ckwert auf die obere und untere Seite des Buttons angewandt. Die Einr&uuml;ckung wird nur auf Buttons angewandgt, die den Stil $TBSTYLE_AUTOSIZE besitzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetPadding
+
+###Example###
+@@IncludeExample@@

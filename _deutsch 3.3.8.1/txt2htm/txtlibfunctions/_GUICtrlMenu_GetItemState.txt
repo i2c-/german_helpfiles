@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemState
+
+###Description###
+Ermittelt den Men&uuml;item Status
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemState($hMenu, $iItem [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml; ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+Gibt ein Men&uuml;itemtyp zur&uuml;ck. Kann einer oder mehrere der folgenden Werte sein:
+	 1 - Item ist markiert
+	 2 - Item ist das Standarditem
+	 4 - Item ist deaktiviert
+	 8 - Item ist ausgegraut
+	16 - Item ist hervorgehoben
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetItemStateEx, _GUICtrlMenu_SetItemState
+
+###Example###
+@@IncludeExample@@

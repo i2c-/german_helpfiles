@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlComboBox_GetLBText
+
+###Description###
+Ermittelt einen String von einer Liste einer ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetLBText($hWnd, $iIndex, ByRef $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index von dem der String ermittelt werden soll
+$sText
+	Variable welche den String empfangen soll
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die L&auml;nge des Strings
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetLBTextLen
+
+###Example###
+@@IncludeExample@@

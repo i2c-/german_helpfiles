@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetTextMetrics
+
+###Description###
+Erfasst grundlegende Informationen &uuml;ber die momentan ausgew&auml;hlte Schriftart.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetTextMetrics($hDC)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle des Ger&auml;tekontexts.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagTEXTMETRIC Struktur, welche Informationen zu der ausgew&auml;hlten Schriftart enth&auml;lt.
+Fehler:	0 und setzt @error auf einen Wert ungleich Null.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagTEXTMETRIC
+
+###See Also###
+@@MsdnLink@@ GetTextMetrics

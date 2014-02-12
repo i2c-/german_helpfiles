@@ -1,0 +1,56 @@
+###Function###
+RegWrite
+
+###Description###
+Erzeugt einen Schl&uuml;ssel oder Wert in der Registrierung.
+
+###Syntax###
+RegWrite ( "keyname" [,"valuename" [, "type" [, value]]] )
+
+
+###Parameters###
+@@ParamTable@@
+keyname
+	Der Registrierungsschl&uuml;ssel, der geschrieben wird.  Wenn keine weiteren Parameter angegeben werden, wird der Schl&uuml;ssel nur angelegt.
+valuename
+	[optional] Der Name des Werts, der geschrieben wird.
+type
+	[optional] Typ des Schl&uuml;ssels, der geschrieben wird: "REG_SZ", "REG_MULTI_SZ", "REG_EXPAND_SZ", "REG_DWORD", "REG_QWORD" oder "REG_BINARY".
+value
+	[optional] Der Wert, der geschrieben wird.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn ein Fehler beim Schreiben des Schl&uuml;ssels oder Wertes auftritt.
+	 @error kann folgende Werte annehmen:
+	 1 wenn der angegebene Schl&uuml;ssel nicht ge&ouml;ffnet werden kann
+	 2 wenn der angegebene Hauptschl&uuml;ssel nicht ge&ouml;ffnet werden kann
+	 3 wenn keine Verbindung per Netzwerk zur Registrierung hergestellt werden kann
+	-1 wenn der angegebene Wert nicht ge&ouml;ffnet werden kann
+	-2 wenn der Wertetyp nicht unterst&uuml;tzt wird
+@@End@@
+
+
+###Remarks###
+Ein Registrierungsschl&uuml;ssel muss beginnen mit: "HKEY_LOCAL_MACHINE" ("HKLM") oder "HKEY_USERS" ("HKU") oder "HKEY_CURRENT_USER" ("HKCU") oder "HKEY_CLASSES_ROOT" ("HKCR") oder "HKEY_CURRENT_CONFIG" ("HKCC").
+
+Wenn bei einer 64-bit Windows-Version ein 64-bit spezifischer Wert oder Schl&uuml;ssel geschrieben werden soll, muss dem Hauptschl&uuml;ssel HK... ein 64 angeh&auml;ngt werden, z.B. HKLM64.
+
+AutoIt unterst&uuml;tzt Registrierungsschl&uuml;ssel der Typen REG_BINARY, REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ, REG_QWORD und REG_DWORD.
+
+Um auf den <b>(Standard)</b> Wert zuzugreifen, muss der Wertname <b>""</b> (ein Leerstring) sein.
+
+Wenn ein Schl&uuml;ssel vom Typ REG_MULTI_SZ geschrieben wird, m&uuml;ssen die Werte mit @LF getrennt werden. Der Schl&uuml;sselwert darf nicht mit einem @LF enden, es sei denn, man m&ouml;chte einen leeren Teilstring (siehe das Beispiel).
+
+Es ist m&ouml;glich, auf Netzwerkregistrierungen zuzugreifen, indem man Schl&uuml;sselnamen in der Form "\\Computername\Schl&uuml;sselname" verwendet. Um diese M&ouml;glichkeit zu nutzen, muss man unter Windows NT/2000/SP/2003 die richtigen Zugriffsrechte besitzen.
+
+
+###Related###
+RegDelete, RegRead, RegEnumKey, RegEnumVal
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlRichEdit_CanPaste
+
+###Description###
+Ermittelt, ob das RichEdit-Control den Inhalt der Zwischenablage einf&uuml;gen kann. 
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_CanPaste($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True oder False
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Daten in zwei Zwischenablagen-Formaten k&ouml;nnen eingef&uuml;gt werden: RTF und RTF mit Objekten.
+Diese Funktion untersucht, ob die Daten in der Zwischenablage in einem dieser Formate sind.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_Paste
+
+###See Also###
+@@MsdnLink@@ EM_CANPASTE
+
+###Example###
+@@IncludeExample@@

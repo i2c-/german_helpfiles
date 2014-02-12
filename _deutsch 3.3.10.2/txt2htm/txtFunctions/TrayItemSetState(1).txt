@@ -1,0 +1,53 @@
+###Function###
+TrayItemSetState
+
+###Description###
+&Auml;ndert den Status eines Traymen&uuml;s/-eintrages.
+
+###Syntax###
+TrayItemSetState ( controlID, state )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikation (Control-ID) des neuen Controls, wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben wurde.
+state
+	Siehe die <a href="#StateTable">Statustabelle</a> im Folgenden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+<a id="StateTable"></a><b>State table</b>
+@@StandardTable1@@
+<b>Status</b>	<b>Wert</b>	<b>Kommentar</b>
+keine &Auml;nderung	0
+$TRAY_CHECKED	1	Men&uuml;eintrag wird markiert
+$TRAY_UNCHECKED	4	Markierung eines Men&uuml;eintrages wird entfernt
+$TRAY_ENABLE	64	Men&uuml;eintrag  wird aktiviert
+$TRAY_DISABLE	128	Men&uuml;eintrag wird ausgegraut
+$TRAY_FOCUS	256	Men&uuml;eintrag wird ausgew&auml;hlt
+$TRAY_DEFAULT	512	Men&uuml;eintrag wird als Standardeintrag gesetzt
+@@End@@
+
+Statuswerte k&ouml;nnen aufsummiert werden. So legt z. B. $TRAY_CHECKED + $TRAY_DEFAULT fest, dass der Men&uuml;eintrag markiert und Standardeintrag ist.
+
+Um den $TRAY_DEFAULT-Status f&uuml;r einen Men&uuml;eintrag zur&uuml;ckzusetzen/l&ouml;schen, ist die Funktion mit einem anderen Status zu verwenden, wie z. B. mit $TRAY_ENABLE.
+
+Wenn $TRAY_DEFAULT-Status f&uuml;r einen Men&uuml;eintrag gesetzt ist, so wird durch einen Doppelklick(mit der ersten Taste) auf das Tray-Icon dieser Men&uuml;eintrag ausgef&uuml;hrt. Um dieses Verhalten auszuschalten, ist Flag 4 als Option in TrayMenuMode zu verwenden.
+
+Die obigen Konstanten sind in #include <TrayConstants.au3> definiert
+
+
+###Related###
+TrayItemGetState, TrayCreateItem, TrayCreateMenu, TraySetState
+
+
+###Example###
+@@IncludeExample@@

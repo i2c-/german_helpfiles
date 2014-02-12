@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlEdit_SetRECTEx
+
+###Description###
+Setzt das formatierte Rechteck eines Mehrzeilen-Edit-Controls
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetRECTEx($hWnd, $tRect)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$tRect
+	$tagRECT Struktur, welches das formatierte Rechteck eines Edit-Controls enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_SetRect, $tagRECT
+
+###Example###
+@@IncludeExample@@

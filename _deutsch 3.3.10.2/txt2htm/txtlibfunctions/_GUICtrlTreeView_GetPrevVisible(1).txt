@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTreeView_GetPrevVisible
+
+###Description###
+Ermittelt das erste sichtbare Item, welches vor dem angegebenen Item steht
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetPrevVisible ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zum vorherigen sichtbaren Item
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Das angegebene Item muss sichtbar sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetNextVisible, _GUICtrlTreeView_GetPrev
+
+
+###Example###
+@@IncludeExample@@

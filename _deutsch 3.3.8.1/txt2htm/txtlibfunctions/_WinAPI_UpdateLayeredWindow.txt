@@ -1,0 +1,54 @@
+###User Defined Function###
+_WinAPI_UpdateLayeredWindow
+
+###Description###
+Aktualisiert die Position, Gr&ouml;&szlig;e, Umriss, Inhalt und Durchscheinbarkeit (Opazit&auml;t) eines mehrschichtigen Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_UpdateLayeredWindow($hWnd, $hDCDest, $pPTDest, $pSize, $hDCSrce, $pPTSrce, $iRGB, $pBlend, $iFlags)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem mehrschichtigen Fenster. Ein mehrschichtiges Fenster wird durch Angabe des $WS_EX_LAYERED
+		Fensterstils erzeugt.
+$hDCDest
+	Handle zu einem Ger&auml;tekontext des Bildschirms
+$pPTDest
+	Zeiger auf eine $tagPOINT Struktur, welche die neue Bildschirm-Position des mehrschichtigen Fensters bestimmt.
+		Wenn die aktuelle Position nicht ge&auml;ndert wird, kann dieser Wert Null sein.
+$pSize
+	Zeiger auf eine $tagSIZE Struktur, welche die neue Gr&ouml;&szlig;e des mehrschichtigen Fensters festlegt. &Auml;ndert sich die Gr&ouml;&szlig;e
+		des Fensters nicht, kann dies 0 sein.
+$hDCSrce
+	Handle zu einem Ger&auml;tekontext der Oberfl&auml;che, welche das mehrschichtige Fenster definiert. Dieses Handle kann
+		durch Aufruf der _WinAPI_CreateCompatibleDC Funktion erhalten werden.
+$pPTSrce
+	Zeiger auf eine $tagPOINT Struktur, welche die Lage des mehrschichtigen Fensters im Ger&auml;tekontext angibt
+$iRGB
+	Der Farbwert, der beim Erzeugen des mehrschichtigen Fensters benutzt wird
+$pBlend
+	Zeiger auf eine $tagBLENDFUNCTION Struktur, welche beim Erzeugen des mehrschichtigen Fensters 
+	den zu nutzenden Transparenzwert (Opazit&auml;t ) festlegt
+$iFlags
+	Dieser Parameter kann einer der folgenden Werte sein:
+		$ULW_ALPHA - Nutzt $tblend als Mischfunktion
+		$ULW_COLORKEY - Nutzt $iRGB als Transparenzfarbe
+		$ULW_OPAQUE - Zeichnet ein undurchsichtiges, mehrschichtiges Fenster
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagBLENDFUNCTION, $tagPOINT, $tagSIZE
+
+###See Also###
+@@MsdnLink@@ UpdateLayeredWindow

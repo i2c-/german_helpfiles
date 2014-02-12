@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_DeleteButton
+
+###Description###
+L&ouml;scht einen Button von einer Toolbar
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_DeleteButton ( $hWnd, $iCommandID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_AddButton
+
+
+###Example###
+@@IncludeExample@@

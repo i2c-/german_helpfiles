@@ -1,0 +1,45 @@
+###User Defined Function###
+_WinAPI_ExtractIconEx
+
+###Description###
+Erstellt ein Array von Handles zu gro&szlig;en oder kleinen Icons, die aus einer Datei extrahiert wurden
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_ExtractIconEx ( $sFile, $iIndex, $pLarge, $pSmall, $iIcons )
+
+
+###Parameters###
+@@ParamTable@@
+$sFile
+	Name der dll oder ico Datei, von welcher Icons extrahiert werden sollen
+$iIndex
+	legt den 0-basierenden Index des ersten zu extrahierenden Icons fest
+$pLarge
+	Zeiger auf ein Array mit Iconhandles mit gro&szlig;en Icons, welche von der Datei extrahiert werden sollen.
+	Falls dieser Parameter 0 ist werden keine gro&szlig;en Icons von der Datei extrahiert.
+$pSmall
+	Zeiger auf ein Array mit Iconhandles mit kleinen Icons, welche von der Datei extrahiert werden sollen.
+	Falls dieser Parameter 0 ist werden keine kleinen Icons von der Datei extrahiert.
+$iIcons
+	legt die Anzahl von zu extrahierenden Icons von der Datei fest
+@@End@@
+
+###ReturnValue###
+Falls iIndex -1 ist, $pLarge 0 ist und pSmall 0 ist, ist der R&uuml;ckgabewert die Anzahl der enthaltenen Icons in der festgelegten Datei.
+Sonst ist der R&uuml;ckgabewert die Anzahl der erfolgreich extrahierten Icons von der Datei.
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ ExtractIconEx
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_FileReadToArray
+
+###Description###
+Liest die angegebene Datei in ein Array ein.
+
+###Syntax###
+#include <File.au3>
+_FileReadToArray($sFilePath, ByRef $aArray)
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Pfad und Name der einzulesenden Datei.
+$aArray
+	Das Array zum Speichern des Inhaltes der Datei.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	1 = Fehler beim &Ouml;ffnen der angegebenen Datei
+	2 = unm&ouml;glich die Datei zu splitten
+@@End@@
+
+###Remarks###
+$aArray[0] enth&auml;lt die Anzahl der Zeilen, welche in das Array eingelesen wurden.
+
+Im Zusammenspiel mit der Funktion IniRead kann man auch die url einer mit dem Internet Explorer gespeicherten Internetseite herausfinden.
+Dies geht so:
+IniRead(C:\test.url, "InternetShortcut", "URL", "")
+Es lassen sich noch mehr Infos auslesen.
+Welche Infos die gespeicherte url enth&auml;lt kann man &uuml;ber _FileReadToArray ermitteln.
+
+###Related###
+_FileWriteFromArray
+
+###Example###
+@@IncludeExample@@

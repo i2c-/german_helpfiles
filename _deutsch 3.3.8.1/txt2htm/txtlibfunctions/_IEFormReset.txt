@@ -1,0 +1,37 @@
+###User Defined Function###
+_IEFormReset
+
+###Description###
+Setzt das angegebene Formularelement zur&uuml;ck auf die Standardwerte beim Laden der Seite.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormReset(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, Formularobjekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_IEFormSubmit, _IEFormGetObjByName, _IEFormGetCollection
+
+
+###Example###
+@@IncludeExample@@

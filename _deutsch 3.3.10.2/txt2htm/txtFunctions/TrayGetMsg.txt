@@ -1,0 +1,44 @@
+###Function###
+TrayGetMsg
+
+###Description###
+Fragt ab, ob ein Tray-Ereignis (Event) aufgetreten ist.
+
+###Syntax###
+TrayGetMsg (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt das Ereignis zur&uuml;ck.
+
+Das "Ereignis", das zur&uuml;ckgegeben wird, ist die Control-ID des Controls, das die Nachricht sendet, oder es ist ein spezielles Ereignis (wie wenn die Maus auf das Tray-Icon klickt).
+Wenn keine Nachricht vorhanden ist, wird 0 als Ereignis zur&uuml;ckgegeben.
+
+<b>Event IDs</b>
+@@ReturnTable@@
+0	kein Vorgang
+Control ID	die ID des Controls gibt eine Nachricht aus
+$TRAY_EVENT_PRIMARYDOWN	die erste (linke) Maustaste wurde gedr&uuml;ckt
+$TRAY_EVENT_PRIMARYUP	die erste (linke) Maustaste wurde losgelassen
+$TRAY_EVENT_SECONDARYDOWN	die zweite (rechte) Maustaste wurde gedr&uuml;ckt
+$TRAY_EVENT_SECONDARYUP	die zweite (rechte) Maustaste wurde losgelassen
+$TRAY_EVENT_PRIMARYDOUBLE	die erste (linke) Maustaste wurde doppelgeklickt
+$TRAY_EVENT_SECONDARYDOUBLE	die zweite (rechte) Maustaste wurde doppelgeklickt
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt die CPU automatisch wieder frei, wenn es erforderlich ist, so dass sie in Nachrichtenschleifen (message loops) sicher benutzt werden kann, ohne dass die CPU von der Schleife komplett ausgelastet wird. 
+
+Die obenstehenden Konstanten sind definiert in #include <TrayConstants.au3>
+
+
+###Related###
+TrayCreateItem, TrayCreateMenu, TrayItemSetOnEvent
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetVisible
+
+###Description###
+Zeigt an, ob das Item momentan sichtbar im Controlbild ist
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetVisible ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item ist sichtbar im Controlbild
+False:	Item ist nicht sichtbar im Controlbild
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_EnsureVisible
+
+
+###Example###
+@@IncludeExample@@

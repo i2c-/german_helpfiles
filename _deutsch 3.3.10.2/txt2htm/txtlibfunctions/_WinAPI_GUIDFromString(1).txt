@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GUIDFromString
+
+###Description###
+Konvertiert den String einer GUID in die bin&auml;re Form
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GUIDFromString ( $sGUID )
+
+
+###Parameters###
+@@ParamTable@@
+$sGUID
+	GUID in Form eines Strings
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine $tagGUID Struktur
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_StringFromGUID, $tagGUID

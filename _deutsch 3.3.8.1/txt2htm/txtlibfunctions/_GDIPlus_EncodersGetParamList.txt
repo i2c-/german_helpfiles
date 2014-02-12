@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_EncodersGetParamList
+
+###Description###
+Ermittelt die Parameterliste f&uuml;r einen festgelegten Bildencoder
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_EncodersGetParamList($hImage, $sEncoder)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle des Bildesobjektes
+$sEncoder
+	GUID String des zu verwendenden Encoders
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagGDIPPENCODERPARAMS Struktur
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_EncodersGetParamListSize, $tagGDIPENCODERPARAMS
+
+###See Also###
+@@MsdnLink@@ GdipGetEncoderParameterList
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,55 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaAttributes
+
+###Description###
+Setzt die Attribute markierter Abs&auml;tze oder, falls keine markiert sind, des am Einf&uuml;gepunkt eingef&uuml;gten Absatzes.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaAttributes($hWnd, $sStatesAndAtts)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sStatesAndAtts
+	Ein String, bestehend aus durch Semikola getrennten Werten ";".
+		Jede Gruppe besteht aus:
+		Erstes Zeichen - Zustand:
+		   + - Setze das Attribut
+		   - - Setze das Attribut nicht
+		Zeichen 2 bis 4
+	      fpg - Erzwingt die Ausgabe dieser Abs&auml;tze auf eine neue Seite (anf&auml;nglich aus)
+	      hyp - Automatische Silbentrennung (anf&auml;nglich an)
+	      kpt - Halte diese Abs&auml;tze auf einer Seite zusammen (anf&auml;nglich aus)
+	      kpn - Halte diese Abs&auml;tze und die n&auml;chsten zusammen auf einer Seite (anf&auml;nglich aus)
+	      pwo - Verhindere Verwaisungen, z.B. eine einzelne Zeile eines Absatzes auf einer Seite (anf&auml;nglich aus)
+	      r2l - Zeige Text von rechts nach links an (anf&auml;nglich aus)
+	      sbs - Zeige Abs&auml;tze seitlich nebeneinander an (anf&auml;nglich aus)
+	      sln - Unterdr&uuml;cke Zeilennummern in Dokumenten oder Sektionen mit Zeilennummern (anf&auml;nglich aus)
+	      row - Abs&auml;tze sind Tabellenzeilen (anf&auml;nglich aus)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - Ein Zustands-Zeichen in $sStatesAndAtts ist ung&uuml;ltig. Dieses ist in @extended
+	1022 - Ein Attribut-K&uuml;rzel in $sStatesAndAtts ist ung&uuml;ltig. Dieses ist in @extended
+	1023 - L&auml;nge von $sStatesAndAtts ist ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Die Resultate werden in Word angezeigt, aber nicht in RichEdit
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaAttributes
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

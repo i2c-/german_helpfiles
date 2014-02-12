@@ -1,0 +1,31 @@
+###Function###
+StringLower
+
+###Description###
+Wandelt einen String in Kleinschrift um.
+
+###Syntax###
+StringLower ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der umzuwandelnde String.
+@@End@@
+
+
+###ReturnValue###
+Gibt den String in Kleinschrift zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringIsLower, StringIsUpper, StringInStr, StringLeft, StringLen, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsSpace, StringIsXDigit, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

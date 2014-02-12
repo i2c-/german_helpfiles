@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUIToolTip_TrackPosition
+
+###Description###
+Setzt die Position des verfolgenden ToolTips
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_TrackPosition($hWnd, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iX
+	X-Position in Bildschirmkoordinaten
+$iY
+	Y-Position in Bildschirmkoordinaten
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Der ToolTip entscheidet mit dieser Nachricht wo das Fenster aufgrund der Koordinaten dargestellt werden soll.
+Dies bedeutet das ToolTip Fenster erscheint neben dem zugeh&ouml;rigen Tool.
+Um ToolTip Fenster an den festgelegten Koordinaten anzeigen zu lassen ist das $TTF_ABSOLUTE Flag in dem $iFlags Member der TOOLINFO Struktur hinzuzuf&uuml;gen wenn das Tool hinzugef&uuml;gt wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

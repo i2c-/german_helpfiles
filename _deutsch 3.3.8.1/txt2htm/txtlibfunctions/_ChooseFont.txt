@@ -1,0 +1,52 @@
+###User Defined Function###
+_ChooseFont
+
+###Description###
+Zeigt einen Schriftauswahldialog an, mit dem der Benutzer eine Schrift und deren Attribute w&auml;hlen kann.
+
+###Syntax###
+#include <Misc.au3>
+_ChooseFont([$sFontName = "Courier New" [, $iPointSize = 10 [, $iColorRef = 0 [, $iFontWeight = 0 [, $iItalic = False [, $iUnderline = False [, $iStrikethru = False [, $hWndOwner = 0]]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$sFontName
+	[optional] Standard Schriftname
+$iPointSize
+	[optional] Punktgr&ouml;&szlig;e der Schrift
+$iColorRef
+	[optional] COLORREF RGB Farbwert
+$iFontWeight
+	[optional] "Gewicht" der Schrift (Normal/Fett)
+$iItalic
+	[optional] Kursiv
+$iUnderline
+	[optional] Unterstreichung
+$iStrikethru
+	[optional] Durchstreichung
+$hWndOwner
+	[optional] Handle des Fensters, zu dem die Dialogbox geh&ouml;rt 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit folgender Struktur:
+
+	[0] - enth&auml;lt die Anzahl der Elemente
+	[1] - Attribute = BitOR von kursiv:2, Unterstreichung:4, Durchstreichung:8
+	[2] - Schriftname
+	[3] - Schriftgr&ouml;&szlig;e = Punktgr&ouml;&szlig;e
+	[4] - Schriftgewicht = 0-1000
+	[5] - COLORREF RGB Farbwert
+	[6] - Hex BGR Color
+	[7] - Hex RGB Color
+Fehler: -1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,28 @@
+###Keyword###
+Default
+
+###Description###
+Schl&uuml;sselwort Wert verwendet im Funktionsaufruf
+
+###Syntax###
+	$var = <b>Default</b>
+
+
+###Parameters###
+Keine.
+
+
+###Remarks###
+Dieses Schl&uuml;sselwort sollte nicht einem allgemeinen berechneten Ausdruck verwendet werden. AutoIt <b>wird solch eine Situation nicht feststellen</b>, da es zu viel Performance ben&ouml;tigen w&uuml;rde.
+
+Wenn es als Parameter verwendet wird, ist dessen Verhalten in der entsprechenden AutoIt Funktionshilfe angegeben.
+Bei einer UDF liegt es in der Verantwortung des Skripterstellers zu &uuml;berpr&uuml;fen, ob der Parameter dem Default Schl&uuml;sselwort gesetzt werden muss und ob dieser das gew&uuml;nschte Verhalten mit sich bringt.
+Falls verwendet, wird der &uuml;bergebene Parameter das Default Schl&uuml;sselwort setzen und nicht als optionaler Parameter &uuml;bergeben.
+
+
+###Related###
+IsKeyword, Null
+
+
+###Example###
+@@IncludeExample@@

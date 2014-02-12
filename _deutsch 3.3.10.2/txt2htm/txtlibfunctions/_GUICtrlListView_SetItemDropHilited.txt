@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_SetItemDropHilited
+
+###Description###
+Bestimmt, ob das Item f&uuml;r eine Drag-and-Drop-Aktion markiert werden soll
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemDropHilited ( $hWnd, $iIndex [, $fEnabled = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index Des Items
+$fEnabled
+	[optional] Falls True wird der Itemstatus gesetzt, andernfalls nicht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemDropHilited
+
+
+###Example###
+@@IncludeExample@@

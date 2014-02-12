@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMonthRangeSpan
+
+###Description###
+Gibt einen Wert, der die Bereich in Monaten umfasst, zur&uuml;ck
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMonthRangeSpan ( $hWnd [, $fPartial = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fPartial
+	[optional] legt den Bereich des zu ermittelnden Limits fest:
+		True - vorherige und folgende Monate werden eingeschlossen
+		False - nur Monate die komplette dargestellt werden, werden eingeschlossen
+@@End@@
+
+###ReturnValue###
+Gibt die umfassenden Monate zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

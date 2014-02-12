@@ -1,0 +1,42 @@
+###Function###
+BinaryToString
+
+###Description###
+Wandelt eine bin&auml;re Variante in einen String.
+
+###Syntax###
+BinaryToString ( expression [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein Ausdruck der in einen String konvertiert werden soll.
+flag
+	[optional] Optionen wie die Bin&auml;rdaten konvertiert werden sollen:
+	  flag = 1 (Standard), Bin&auml;rdaten werden ANSI
+	  flag = 2, Bin&auml;rdaten werden UTF16 Little Endian
+	  flag = 3, Bin&auml;rdaten werden UTF16 Big Endian
+	  flag = 4, Bin&auml;rdaten werden UTF8
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der String der die bin&auml;ren Daten enth&auml;lt.
+Fehler:	Ein leerer String (""). @error wird wie folgt gesetzt:
+	1 - Eingabestring besitzt die L&auml;nge null.
+	2 - Eingabestring hat eine ungerade Zahl von Bytes wird aber durch UTF16 unterst&uuml;tzt. Es muss eine gerade Zahl von Bytes besitzen um ein g&uuml;ltiges UTF16 zu sein.
+@@End@@
+
+
+###Remarks###
+Im Gegensatz zu String() welches einen Hexadezimal Ausdruck der Bin&auml;rdaten ausgibt, wertet diese Funktion die Bin&auml;rdaten als einen Stringwert und konvertiert ihn angemessen.
+
+
+###Related###
+Binary, IsBinary, String, StringToBinary, StringToASCIIArray
+
+
+###Example###
+@@IncludeExample@@

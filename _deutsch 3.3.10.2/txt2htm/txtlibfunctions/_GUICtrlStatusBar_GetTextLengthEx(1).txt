@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetTextLengthEx
+
+###Description###
+Ermittelt das uFlag eines Abschnitts
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetTextLengthEx ( $hwnd, $iPart )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPart
+	0-basierender Abschnittsindex
+@@End@@
+
+###ReturnValue###
+Gibt den Typ der Darstellung zur&uuml;ck. Der Typ kann einer der folgenden Werte sein:
+		0 - Der Text wird mit einem Rand dargestellt, um niedriger als die Ebene des Fensters zu erscheinen
+		$SBT_NOBORDERS - Der Text wird ohne R&auml;nder dargestellt
+		$SBT_OWNERDRAW - Der Text wird durch das Hauptfenster dargestellt
+		$SBT_POPOUT - Der Text wird mit einem Rand dargestellt, um h&ouml;her als die Ebene des Fensters zu erscheinen
+		$SBT_RTLREADING - Der Text wird in Gegenrichtung des Textes im Hauptfenster dargestellt
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlStatusBar_GetTextFlags, _GUICtrlStatusBar_GetTextLength
+
+
+###Example###
+@@IncludeExample@@

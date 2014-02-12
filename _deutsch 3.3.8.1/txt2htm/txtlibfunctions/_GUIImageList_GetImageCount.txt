@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUIImageList_GetImageCount
+
+###Description###
+Ermittelt die Anzahl von Bildern in einer Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetImageCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl von Bildern zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_SetImageCount
+
+###Example###
+@@IncludeExample@@

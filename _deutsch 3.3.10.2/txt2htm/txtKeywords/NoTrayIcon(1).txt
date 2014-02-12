@@ -1,0 +1,26 @@
+###Keyword###
+#NoTrayIcon
+
+###Description###
+Bewirkt, dass das AutoIt-Icon nicht im Systeminfo-Bereich der Taskleiste erscheint, wenn das Skript gestartet wird.
+
+###Syntax###
+<b>#NoTrayIcon</b>
+
+
+###Parameters###
+Keine.
+
+
+###Remarks###
+Es ist m&ouml;glich <a href="../functions/AutoItSetOption.htm#TrayIconHide">Opt("TrayIconHide", 1)</a> zu verwenden um das AutoIt Tray-Icon zu entfernen, allerdings wird es f&uuml;r eine Sekunde sichtbar sein, wenn das Skript startet.  Wird #NoTrayIcon direkt an den Anfang des Skripts geschrieben, wird das Icon gar nicht erst dargestellt.
+
+Man kann das Icon zu einem sp&auml;teren Zeitpunkt wieder anzeigen lassen <a href="../functions/AutoItSetOption.htm#TrayIconHide">Opt("TrayIconHide", 0)</a>
+
+
+###Related###
+<a href="../functions/AutoItSetOption.htm#TrayIconHide">TrayIconHide (Option)</a>
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlRichEdit_AutoDetectURL
+
+###Description###
+Aktiviert oder deaktiviert automatische Erkennung von URLs
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_AutoDetectURL($hWnd, $fState)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	True um URLs in dem Text zu ermitteln, False um es nicht zu tun.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False, und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fState ist weder True noch False
+	700 - Interner Fehler, z.B. zu wenig Speicher.
+@@End@@
+
+###Remarks###
+Falls aktiviert, wird bei jeder Text&auml;nderung nach Text gesucht, der dem Format einer URL entspricht. Es werden Strings als URLs erkannt, die den folgenden Zeichen beginnen: http:, file:, mailto:, ftp:, https:, gopher:, nntp:, prospero:, telnet:, news:, wais:.
+Wenn eine URL ermittelt wurde, setzt Windows das Link-Attribut f&uuml;r alle Zeichen in dem URL-String und hebt diesen optisch hervor.
+
+Ist die automatische URL-Erkennung aktiviert und eine URL wurde ermittelt, entfernt Windows die Link-Attribute von allen Zeichen die keine URLs sind.
+
+Um Benachrichtigungen zu erhalten, ist _GUICtrlRichEdit_SetEventMask mit $ENM_LINK aufzurufen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetEventMask
+
+###See Also###
+@@MsdnLink@@ EM_AUTOURLDETECT, @@MsdnLink@@ EN_LINK Notification
+
+###Example###
+@@IncludeExample@@

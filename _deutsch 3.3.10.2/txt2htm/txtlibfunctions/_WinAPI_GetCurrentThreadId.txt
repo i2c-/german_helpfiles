@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_GetCurrentThreadId
+
+###Description###
+Gibt den Thread-Identifizierer (ID) des aufrufenden Threads zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetCurrentThreadId (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt den Thread-Identifizierer des aufrufenden Threads zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetCurrentThreadId
+
+
+###Example###
+@@IncludeExample@@

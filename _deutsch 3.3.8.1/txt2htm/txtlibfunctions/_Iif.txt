@@ -1,0 +1,33 @@
+###User Defined Function###
+_Iif
+
+###Description###
+F&uuml;hrt einen Booleschen Test innerhalb des &uuml;bergebenen Ausdrucks durch.
+
+###Syntax###
+#include <Misc.au3>
+_Iif($fTest, $vTrueVal, $vFalseVal)
+
+###Parameters###
+@@ParamTable@@
+$fTest
+	Ausdruck, der auf wahr/falsch gepr&uuml;ft werden soll
+$vTrueVal
+	Wert, der zur&uuml;ckgegeben wird, wenn $fTest wahr ist.
+$vFalseVal
+	Wert, der zur&uuml;ckgegeben wird, wenn $fTest falsch ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True: $vTrueVal
+Fehler:	False: $vFalseVal
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

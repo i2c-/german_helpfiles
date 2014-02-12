@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTreeView_Sort
+
+###Description###
+Sortiert die Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_Sort ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

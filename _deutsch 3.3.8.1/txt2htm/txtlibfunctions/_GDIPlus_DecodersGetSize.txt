@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_DecodersGetSize
+
+###Description###
+Ermittelt die gesamt Gr&ouml;&szlig;e der Struktur, welche durch _GDIPlus_GetImageDecoders zur&uuml;ckgegeben wird
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_DecodersGetSize()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gesamte Gr&ouml;&szlig;e in Bytes
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_DecodersGetCount
+
+###See Also###
+@@MsdnLink@@ GdipGetImageDecodersSize
+
+###Example###
+@@IncludeExample@@

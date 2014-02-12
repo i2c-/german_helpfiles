@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlAVI_Show
+
+###Description###
+Zeigt/Versteckt das AVI-Control
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_Show($hWnd, $iState)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iState
+	Status der AVI, kann einer der folgenden Werte sein:
+		True: Das AVI-Control wird versteckt
+		False: Das AVI-Control wird gezeigt
+@@End@@
+
+###ReturnValue###
+True: Das Control war zuvor sichtbar
+False: Das Control war zuvor versteckt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

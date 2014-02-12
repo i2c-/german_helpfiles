@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlToolbar_InsertMarkHitTest
+
+###Description###
+Ermittelt die Einf&uuml;gemarken-Informationen f&uuml;r einen Punkt
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_InsertMarkHitTest($hWnd, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iX
+	X-Position relativ zum Fenster
+$iY
+	Y-Position relativ zum Fenster
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - 0-basierender Index der Einf&uuml;gemarke oder -1 falls es keine Einf&uuml;gemarke gibt
+	[1] - Definiert die Einf&uuml;gemarke. Dies kann einer der folgenden Werte sein:
+	 0 - nach links
+	 1 - nach rechts
+	 2 - auf den Hintergrund der Toolbar
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

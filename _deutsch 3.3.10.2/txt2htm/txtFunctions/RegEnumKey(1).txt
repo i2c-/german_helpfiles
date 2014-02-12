@@ -1,0 +1,41 @@
+###Function###
+RegEnumKey
+
+###Description###
+Liest den Namen eines Unterschl&uuml;ssels aus der Registry aus.
+
+###Syntax###
+RegEnumKey ( "keyname", instance )
+
+
+###Parameters###
+@@ParamTable@@
+keyname
+	Der Registry-Schl&uuml;ssel, in dem gelesen werden soll.
+instance
+	Die Instanz, die ermittelt werden soll (basierend auf 1).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den angeforderten Unterschl&uuml;sselnamen.
+Fehler:	"" (leerer string) und setzt @error ungleich null.
+@error:	 1 = der angegebene Schl&uuml;ssel kann nicht ge&ouml;ffnet werden
+	 2 = es ist nicht m&ouml;glich auf den Hauptschl&uuml;ssel zuzugreifen
+	 3 = es kann von extern (remote) nicht auf die Registry zugegriffen werden
+	-1 = der angefragte Unterschl&uuml;ssel konnte nicht ermittelt werden (Instanzwert au&szlig;erhalb des zul&auml;ssigen Bereichs)
+@@End@@
+
+
+###Remarks###
+Ein Registry-Schl&uuml;ssel muss mit "HKEY_LOCAL_MACHINE" ("HKLM"), "HKEY_USERS" ("HKU"), "HKEY_CURRENT_USER" ("HKCU"), "HKEY_CLASSES_ROOT" ("HKCR") oder "HKEY_CURRENT_CONFIG" ("HKCC") beginnen.
+
+Falls bei einem 64-Bit Windows auf die speziellen Eintr&auml;ge des 64-Bit Systems zugegriffen werden soll, muss dem Begriff HK... das Suffix 64 angeh&auml;ngt werden (z. B. HKLM64).
+
+
+###Related###
+RegEnumVal, RegDelete, RegWrite
+
+
+###Example###
+@@IncludeExample@@

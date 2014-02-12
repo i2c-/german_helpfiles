@@ -1,0 +1,37 @@
+###Function###
+UBound
+
+###Description###
+Gibt die Gr&ouml;&szlig;e der Dimension eines Arrays zur&uuml;ck.
+
+###Syntax###
+UBound ( Array [, Dimension] )
+
+
+###Parameters###
+@@ParamTable@@
+Array
+	Das Array dessen Gr&ouml;&szlig;e ermittelt werden soll.
+Dimension
+	[optional] Die Dimension des Arrays dessen Gr&ouml;&szlig;e ermittelt werden soll. Der Standard ist 1, dies ist die Erste Dimension. Falls dieser Parameter 0 ist, wird die Anzahl der Dimensionen des Arrays zur&uuml;ckgegeben.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Gr&ouml;&szlig;e der Array-Dimension zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf:
+	1 = Das angegebene Array ist kein Array.
+	2 = Die Dimension des Arrays ist ung&uuml;ltig.
+@@End@@
+
+
+###Remarks###
+Der Wert, der von UBound zur&uuml;ckgegeben wird, ist um 1 gr&ouml;&szlig;er als der Index des letzten Elements im Array, da die Untergrenze einer Dimension immer 0 ist.
+
+###Related###
+<a href="../keywords/Dim.htm">Dim</a>, <a href="../keywords/ReDim.htm">ReDim</a>
+
+
+###Example###
+@@IncludeExample@@

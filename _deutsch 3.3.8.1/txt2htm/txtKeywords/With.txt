@@ -1,0 +1,30 @@
+###Keyword###
+With...EndWith
+
+###Description###
+Wird benutzt um lange Referenzen zu Objekttypvariablen zu reduzieren
+
+
+###Syntax###
+<b>With</b> &lt;expression&gt;
+	<i>statements</i>
+	...
+<b>EndWith</b>
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Muss ein Objektyp sein
+@@End@@
+
+
+###Remarks###
+With...EndWith-Bl&ouml;cke d&uuml;rfen nicht verschachtelt werden.
+
+###Related###
+<a href="ForInNext.htm">For...In...Next</a>
+
+
+###Example###
+@@IncludeExample@@

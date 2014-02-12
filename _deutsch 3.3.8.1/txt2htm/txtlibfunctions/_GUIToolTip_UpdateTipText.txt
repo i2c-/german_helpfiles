@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUIToolTip_UpdateTipText
+
+###Description###
+Setzt den ToolTip Text f&uuml;r ein Tool
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_UpdateTipText($hWnd, $hTool, $iID, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster, welches das Tool enth&auml;lt
+$iID
+	anwendungsspezifische ID des Tools
+$sText
+	Text der im Tooltip angezeigt werden soll
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetText

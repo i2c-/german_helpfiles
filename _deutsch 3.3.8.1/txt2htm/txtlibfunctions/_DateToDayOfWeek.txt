@@ -1,0 +1,36 @@
+###User Defined Function###
+_DateToDayOfWeek
+
+###Description###
+Gibt den Wochentag als Zahl eines vorgegebenen Datums zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_DateToDayOfWeek($iYear, $iMonth, $iDay)
+
+###Parameters###
+@@ParamTable@@
+$iYear
+	Ein g&uuml;ltiges Jahr im Format YYYY
+$iMonth
+	Ein g&uuml;ltiger Monat im Format MM
+$iDay
+	Ein g&uuml;ltiger Tag im Format DD
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Wochentag als Zahl zur&uuml;ck (Bereich liegt zwischen 1 und 7, wobei 1=Sonntag ist).
+Fehler:	0 und setzt @Error
+@error:	0 - Kein Fehler.
+	1 - ung&uuml;ltige Datumseingabe
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_DateToDayOfWeekISO, _DateDayOfWeek, _DayValueToDate, _DateAdd, _DateDiff
+
+###Example###
+@@IncludeExample@@

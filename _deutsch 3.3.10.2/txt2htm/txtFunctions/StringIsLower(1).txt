@@ -1,0 +1,33 @@
+###Function###
+StringIsLower
+
+###Description###
+Pr&uuml;ft, ob ein String nur Kleinbuchstaben enth&auml;lt.
+
+###Syntax###
+StringIsLower ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn der String andere Zeichen als Kleinbuchstaben enth&auml;lt.
+@@End@@
+
+
+###Remarks###
+Es ist zu beachten, dass Ziffern, Punktuation und Leerstellen bei <a href="StringIsLower.htm">StringIsLower()</a> zum Misserfolg f&uuml;hren und 0 zur&uuml;ckgegeben wird.
+
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsDigit, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower
+
+
+###Example###
+@@IncludeExample@@

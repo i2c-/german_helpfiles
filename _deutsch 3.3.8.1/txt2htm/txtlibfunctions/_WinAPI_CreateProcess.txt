@@ -1,0 +1,50 @@
+###User Defined Function###
+_WinAPI_CreateProcess
+
+###Description###
+Erzeugt einen neuen Prozess und seinen prim&auml;ren Thread
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateProcess($sAppName, $sCommand, $pSecurity, $pThread, $fInherit, $iFlags, $pEnviron, $sDir, $pStartupInfo, $pProcess)
+
+###Parameters###
+@@ParamTable@@
+$sAppName
+	Der Name des auszuf&uuml;hrenden Moduls
+$sCommand
+	Die Befehlszeile die ausgef&uuml;hrt werden soll
+$pSecurity
+	Zeiger auf eine $tagSECURITY_ATTRIBUTES Struktur die festlegt ob das zur&uuml;ckgegebene Handle von 
+		Child Prozessen geerbt/&uuml;bernommen werden kann.
+$pThread
+	Zeiger auf eine $tagSECURITY_ATTRIBUTES Struktur die festlegt ob das zur&uuml;ckgegebene Handle von 
+		Child Prozessen geerbt/&uuml;bernommen werden kann.
+$fInherit
+	Falls TRUE, erbt der neue Prozess jedes vererbbare Handle des aufrufenden Prozesses
+$iFlags
+	Flags welche die Priority Class und Erzeugung des Prozesses regeln
+$pEnviron
+	Zeiger auf einen Umgebungsblock f&uuml;r den neuen Prozess
+$sDir
+	Der vollst&auml;ndige Pfad zu dem Verzeichnis des Prozesses
+$pStartupInfo
+	Zeiger auf eine $tagSTARTUPINFO Struktur
+$pProcess
+	Zeiger auf eine $tagPROCESS_INFORMATION Struktur
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagSECURITY_ATTRIBUTES, $tagSTARTUPINFO, $tagPROCESS_INFORMATION
+
+###See Also###
+@@MsdnLink@@ CreateProcess

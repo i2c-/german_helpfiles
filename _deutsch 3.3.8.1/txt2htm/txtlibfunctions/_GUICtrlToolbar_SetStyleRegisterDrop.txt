@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlToolbar_SetStyleRegisterDrop
+
+###Description###
+Legt fest, ob das Control TBN_GETOBJECT Nachrichten erstellt
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetStyleRegisterDrop($hWnd, $fState)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	True um es zu setzen, False um es nicht zu setzen
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetStyleRegisterDrop
+
+###Example###
+@@IncludeExample@@

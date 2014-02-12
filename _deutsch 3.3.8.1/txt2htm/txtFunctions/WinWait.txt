@@ -1,0 +1,38 @@
+###Function###
+WinWait
+
+###Description###
+Pausiert das Skript bis das angegebene Fenster existiert.
+
+###Syntax###
+WinWait ( "title" [, "text" [, timeout]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das gewartet werden soll. Hier: <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, auf das gewartet werden soll.
+timeout
+	[optional] Maximale Unterbrechungsdauer nach der fortgefahren wird, auch wenn das Fenster noch nicht existiert.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Handle des gew&uuml;nschten Fensters zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn die Wartezeit &uuml;berschritten wurde.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+WinActive, WinExists, WinWaitActive, WinWaitClose, WinWaitNotActive, WinWaitDelay (Option), ProcessWait
+
+
+###Example###
+@@IncludeExample@@

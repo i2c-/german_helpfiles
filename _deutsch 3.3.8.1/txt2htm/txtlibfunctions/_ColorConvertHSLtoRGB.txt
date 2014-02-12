@@ -1,0 +1,28 @@
+###User Defined Function###
+_ColorConvertHSLtoRGB
+
+###Description###
+Wandelt Farbwerte vom HSL-System ins RGB-Format um.
+
+###Syntax###
+#include <Color.au3>
+_ColorConvertHSLtoRGB($avArray)
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Ein Array, das die HSL-Farbwerte an der jeweiligen Position enth&auml;lt.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Das Array enth&auml;lt die RGB-Werte f&uuml;r die &uuml;bergebenen HSL-Werte.
+Fehler:	0, setzt @error auf 1
+
+###Remarks###
+Siehe: <a href="http://www.easyrgb.com/math.php?MATH=M19#text19">EasyRGB - Mathematik der Farben und Formeln zur Konvertierung (englisch).</a>
+
+###Related###
+_ColorConvertRGBtoHSL
+
+###Example###
+@@IncludeExample@@

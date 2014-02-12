@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlStatusBar_SetParts
+
+###Description###
+Setzt die Anzahl von Abschnitten und Kanten der Abschnitte
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_SetParts($hWnd [, $iaParts = -1 [, $iaPartWidth = 25]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iaParts
+	[optional] Anzahl von Abschnitten. Dies kann ein 0-basierendes Array mit Integern im folgenden Format sein:
+		$iaParts[0] - Rechte Kante des Abschnitts #1
+		$iaParts[1] - Rechte Kante des Abschnitts #2
+		$iaParts[n] - Rechte Kante des Abschnitts n
+$iaPartWidth
+	[optional] Breite der Abschnitte. Dies kann ein 0-basierendes Array mit Integern im folgenden Format sein:
+		$iaPartWidth[0] - Breites des Abschnitts #1
+		$iaPartWidth[1] - Breites des Abschnitts #2
+		$iaPartWidth[n] - Breites des Abschnitts n
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls ein Item -1 ist, entspricht die rechte Kante des entsprechenden Abschnittes dem Rand vom Fenster.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetParts
+
+###Example###
+@@IncludeExample@@

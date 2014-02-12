@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlEdit_GetLine
+
+###Description###
+Ermittelt eine Zeile mit Text von einem Edit-Control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetLine ( $hWnd, $iLine )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLine
+	0-basierender Index der zu ermittelnden Zeile
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Zeile mit Text
+Fehler:	ein leerer String
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###Structure Name###
+$tagNMLVGETINFOTIP
+
+###Description###
+Enth&auml;lt und empf&auml;ngt Informationen eines ListView Items, die gebraucht werden, um einen ToolTip f&uuml;r ein Element darzustellen
+
+###Syntax###
+Global Const $tagNMLVGETINFOTIP = $tagNMHDR & ";int Flags;ptr Text;int TextMax;int Item;int SubItem;int lParam"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Flags
+	Entweder Null oder $LVGIT_UNFOLDED
+Text
+	Adresse eines String-Puffers, der alle zus&auml;tzlichen Textinformationen aufnimmt.
+	Wenn <b>Flags</b> Null ist, wird dieses Mitglied den vorliegenden Elementtext enthalten.
+	Gesetzt diesem Falle, sollte jeglicher zus&auml;tzliche Text an das Ende dieses Strings angeh&auml;ngt werden.
+TextMax
+	Gr&ouml;&szlig;e des Puffers in Druckzeichen, auf den <b>Text</b> verweist.
+	Trotzdem sollte man niemals annehmen, dass dieser Puffer jede bestimmte Gr&ouml;&szlig;e annimmt, der Wert $INFOTIPSIZE kann
+	f&uuml;r Gestaltungszwecke genutzt werden.
+Item
+	0-basierter Index des Elements, auf das diese Struktur verweist.
+SubItem
+	1-basierter Index des Subelements, auf das diese Struktur verweist.
+	Ist dieses Mitglied Null, verweist diese Struktur auf das Element und nicht auf ein Subelement.
+	Dieses Mitglied wird zur Zeit nicht genutzt und ist immer Null
+lParam
+	Anwendungsdefinierter Wert, der mit dem Element verkn&uuml;pft ist.
+	Dieses Mitglied wird zur Zeit nicht genutzt und ist immer Null
+@@End@@
+
+###Remarks###
+Keine.

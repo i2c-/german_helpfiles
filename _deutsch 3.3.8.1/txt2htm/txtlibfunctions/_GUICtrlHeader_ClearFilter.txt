@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlHeader_ClearFilter
+
+###Description###
+Bereinigt den Filter
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_ClearFilter($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlHeader_ClearFilterAll, _GUICtrlHeader_EditFilter
+
+###Example###
+@@IncludeExample@@

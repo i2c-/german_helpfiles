@@ -1,0 +1,26 @@
+###Function###
+ProgressOff
+
+###Description###
+Schaltet das Fortschrittsfenster ab.
+
+###Syntax###
+ProgressOff (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Keine.
+
+###Related###
+ProgressSet, ProgressOn
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetItemParam
+
+###Description###
+Ermittelt den anwendungsspezifischen Wert f&uuml;r ein Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetItemParam ( $hWnd [, $hItem = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	[optional] Item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Item Parameter
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_SetItemParam
+
+
+###Example###
+@@IncludeExample@@

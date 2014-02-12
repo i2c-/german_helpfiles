@@ -1,0 +1,42 @@
+###User Defined Function###
+_FileWriteToLine
+
+###Description###
+Schreibt Text in eine bestimmte Zeile einer Datei.
+
+###Syntax###
+#include <File.au3>
+_FileWriteToLine($sFile, $iLine, $sText [, $fOverWrite = 0])
+
+###Parameters###
+@@ParamTable@@
+$sFile
+	Die zu beschreibende Datei
+$iLine
+	Die Zeile in die geschrieben werden soll
+$sText
+	Der zu schreibende Text
+$fOverWrite
+	[optional] Falls auf 1 gesetzt wird die alte Zeile &uuml;berschrieben,
+	falls auf 0 (Standard) gesetzt wird die alte Zeile nicht &uuml;berschrieben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	1 = Die Datei hat weniger Zeilen als $iLine
+	2 = Die Datei existiert nicht
+	3 = Fehler beim &ouml;ffnen der Datei
+	4 = $iLine ist ung&uuml;ltig
+	5 = $fOverWrite ist ung&uuml;ltig
+	6 = $sText ist ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Falls _FileWriteToLine mit dem Parameter $fOverWrite = 1 und $sText = "" aufgerufen wird, wird die Zeile gel&ouml;scht.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

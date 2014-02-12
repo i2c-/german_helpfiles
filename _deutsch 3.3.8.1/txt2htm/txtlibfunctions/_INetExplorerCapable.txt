@@ -1,0 +1,33 @@
+###User Defined Function###
+_INetExplorerCapable
+
+###Description###
+Konvertiert einen String in eine IE(Internet Explorer) ausf&uuml;hrbare Zeile.
+
+###Syntax###
+#include <INet.au3>
+_INetExplorerCapable($s_IEString)
+
+
+###Parameters###
+@@ParamTable@@
+$s_IEString
+	String der konvertiert werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Konvertierter String
+Fehler:	Leerer String und @error = 1
+@@End@@
+
+
+###Remarks###
+Dies konvertiert IE unausf&uuml;hrbare Buchstaben zu '%' und ihren Hex-Werten.
+
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

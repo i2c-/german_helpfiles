@@ -1,0 +1,38 @@
+###User Defined Function###
+_SetTime
+
+###Description###
+Setzt die aktuelle Systemzeit
+
+###Syntax###
+#include <Date.au3>
+_SetTime($iHour, $iMinute [, $iSecond = 0])
+
+###Parameters###
+@@ParamTable@@
+$iHour
+	Stunde. Werte: 0-23
+$iMinute
+	Minute. Werte: 0-59
+$iSecond
+	[optional] Sekunden. Werte: 0-59
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	0 - Kein Fehler
+	1 - Fehler
+@extended:	GetLastError()
+	Fehlercodes(s): http://msdn.microsoft.com/library/default.asp?url=/library/en-us/debug/base/system_error_codes.asp
+@@End@@
+
+###Remarks###
+Falls der optionale Parameter (iSecond) nicht definiert wird, wird die Funktion den aktuellen Wert nicht &auml;ndern!
+
+###Related###
+_SetDate
+
+###Example###
+@@IncludeExample@@

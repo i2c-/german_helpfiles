@@ -1,0 +1,51 @@
+###User Defined Function###
+_MemVirtualAllocEx
+
+###Description###
+Reserviert einen Seitenbereich innerhalb des virtuellen Adressraumes eines Prozesses.
+
+###Syntax###
+#include <Memory.au3>
+_MemVirtualAllocEx ( $hProcess, $pAddress, $iSize, $iAllocation, $iProtect )
+
+
+###Parameters###
+@@ParamTable@@
+$hProcess
+	Handle zu einem Prozess 
+$pAddress
+	Zeiger auf die gew&uuml;nschte Basisadresse des Seitenbereiches, der zugeordnet werden soll.
+$iSize
+	Legt die Gr&ouml;&szlig;e des zuzuordnenden Bereichs in Bytes fest.
+$iAllocation
+	Legt die Art der Speicherzuordnung fest:
+		$MEM_COMMIT - Stellt physischen Speicher im RAM oder in der Auslagerungsdatei f&uuml;r den angegebenen Seitenbereich zur Verf&uuml;gung.
+		$MEM_RESERVE - Reserviert einen Bereich im virtuellen Adressraum eines Prozesses, ohne jeglichen realen (physischen) Speicher zur Verf&uuml;gung zu stellen.
+		$MEM_TOP_DOWN - Speicher wird an der h&ouml;chstm&ouml;glichen Adresse zugeordnet.
+$iProtect
+	Art des Zugriffsschutzes:
+		$PAGE_READONLY - Erlaubt nur Lesezugriffe auf den eingebundenen Seitenbereich.
+		$PAGE_READWRITE - Erlaubt Lese- und Schreibzugriffe auf den eingebundenen Bereich.
+		$PAGE_EXECUTE - Erlaubt Codeausf&uuml;hrung im eingebundenen Bereich.
+		$PAGE_EXECUTE_READ - Erlaubt Codeausf&uuml;hrung und Lesezugriffe im eingebundenen Bereich.
+		$PAGE_EXECUTE_READWRITE - Erlaubt Codeausf&uuml;hrung, Lese- und Schreibzugriffe im eingebundenen Bereich.
+		$PAGE_GUARD - Gesch&uuml;tzte Seiten; sie sind zwar eingebunden, l&ouml;sen aber beim ersten Zugriff eine Ausnahme (Exception) aus, die vom VMM aufgefangen wird.
+		$PAGE_NOACCESS - Verbietet jeglichen Zugriff auf den Seitenbereich, Versuch f&uuml;hrt zum Prozessabbruch.
+		$PAGE_NOCACHE - Seitenbereich darf nicht im Systemcache gespeichert werden.
+@@End@@
+
+###ReturnValue###
+Gibt einen Zeiger auf die Basisadresse des Speicherbereichs zur&uuml;ck
+
+
+###Remarks###
+_MemVirtualAlloc kann nur Speicher im Adressraum des aufrufenden Prozesses bereitstellen,
+_MemVirtualAllocEx kann auch auf den Adressraum anderer Prozesse zugreifen.
+
+
+###Related###
+_MemVirtualFreeEx
+
+
+###See Also###
+@@MsdnLink@@ VirtualAllocEx

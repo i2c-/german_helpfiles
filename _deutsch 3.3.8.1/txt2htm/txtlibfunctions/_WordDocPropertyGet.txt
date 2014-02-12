@@ -1,0 +1,105 @@
+###User Defined Function###
+_WordDocPropertyGet
+
+###Description###
+Gibt eine ausgew&auml;hlte Eigenschaft der Word-Datei zur&uuml;ck.
+
+###Syntax###
+#include <Word.au3>
+_WordDocPropertyGet(ByRef $o_object, $v_property)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines Word.Application Dokumentobjekts.
+$v_property
+	gew&auml;hlte Eigenschaft (siehe Bemerkungen)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wert der ausgew&auml;hlten Eigenschaft
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_ComError = Com Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekttyp
+	$_WordStatus_InvalidValue = ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Man kann entweder den Index oder Namen f&uuml;r die Auswahl der Eigenschaft verwenden.
+
+Die folgenden Tabellen zeigen eine Beschreibung f&uuml;r jede verf&uuml;gbare Eigenschaft.
+
+<b><u>Word Dokument Eigenschaften</u></b>
+
+@@ParamTable@@
+<b>Index der Eigenschaft/Name</b>
+	<b>Beschreibung</b>
+(1) "title"
+	Titel.
+(2) "subject"
+	Thema.
+(3) "author"
+	Autor.
+(4) "keywords"
+	Stichw&ouml;rter.
+(5) "comments"
+	Kommentare.
+(6) "template"
+	Name der Vorlage.
+(7) "last author"
+	Letzter Autor.
+(8) "revision number"
+	Anzahl der &Uuml;berarbeitungen.
+(9) "application name"
+	Name der Anwendung.
+(10) "last print date"
+	letztes Druckdatum.
+(11) "creation date"
+	Erstelldatum.
+(12) "last save time"
+	zuletzt gespeichert am.
+(13) "total editing time"
+	Anzahl von &Auml;nderungen im VBA Pojekt.
+(14) "pages"
+	Anzahl Seiten.
+(15) "words"
+	Anzahl W&ouml;rter.
+(16) "characters"
+	Anzahl Zeichen.
+(17) "security"
+	Sicherheitseinstellungen.
+(18) "category"
+	Kategorie.
+(19) ""
+	nicht unterst&uuml;tzt.
+(20) "manager"
+	Manager.
+(21) "company"
+	Firma.
+(22) "bytes"
+	Anzahl Bytes.
+(23) "lines"
+	Anzahl Zeilen.
+(24) "paragraphs"
+	Anzahl Abs&auml;tze.
+(25-28) ""
+	nicht unterst&uuml;tzt.
+(29) "hyperlink base"
+	Wenn ein relativer Link auf einem festgelegten Pfad basiert (der erste Teil des Pfades der Datei, der den Hyperlink und die Zieldatei enth&auml;lt), ist der Pfad die Basis des Hyperlinks.
+(30) "characters (with spaces)"
+	Anzahl Zeichen inkl. Leerzeichen.
+@@END@@
+
+
+###Related###
+_WordDocPropertySet
+
+
+###Example###
+@@IncludeExample@@

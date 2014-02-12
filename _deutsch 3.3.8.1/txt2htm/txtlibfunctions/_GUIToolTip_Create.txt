@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUIToolTip_Create
+
+###Description###
+Erstellt ein ToolTip-Control
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_Create($hWnd [, $iStyle = 0x00000003])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls, zu dem das ToolTip-Control geh&ouml;rt
+$iStyle
+	[optional] ToolTip Stil:
+		$TTS_ALWAYSTIP - Bewirkt, dass das ToolTip-Control auch erscheint, wenn der Cursor &uuml;ber einem Tool ist, 
+		obwohl das dazugeh&ouml;rige Fenster inaktiv ist. Ohne diesen Stil erscheint der ToolTip nur, 
+		wenn das dazugeh&ouml;rige Fenster aktiviert ist.
+		$TTS_BALLOON - Bewirkt, dass das ToolTip-Control wie eine "Sprechblase" aussieht und mit einer Spitze auf 
+		das Item zeigt.
+		$TTS_NOANIMATE - Deaktiviert die animierte Darstellung des ToolTips in Windows 2000 Systemen.
+		$TTS_NOFADE - Deaktiviert das Einblenden des ToolTips in Windows 2000 Systemen.
+		$TTS_NOPREFIX - Verhindert das automatische Entfernen des "&"-Zeichens aus einem String. Ohne diesen Stil 
+		werden automatisch alle im String enthaltenen "&"-Zeichen entfernt. Damit ist es m&ouml;glich,
+		einen String gleichzeitig als Men&uuml;text und als ToolTip-Text zu verwenden.
+		$TTS_CLOSE - Zeigt ein "Schlie&szlig;en"-Icon an, damit die Anzeige des  ToolTips abgebrochen werden kann.
+		Standard: $TTS_ALWAYSTIP, $TTS_NOPREFIX
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des ToolTip-Fensters
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_Destroy

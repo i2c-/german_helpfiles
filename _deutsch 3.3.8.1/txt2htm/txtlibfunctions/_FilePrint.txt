@@ -1,0 +1,31 @@
+###User Defined Function###
+_FilePrint
+
+###Description###
+Druckt eine reine Text-Datei.
+
+###Syntax###
+#include <File.au3>
+_FilePrint($s_File [, $i_Show = @SW_HIDE])
+
+###Parameters###
+@@ParamTable@@
+$s_File
+	Die zu druckende Datei.
+$i_Show
+	[optional] Der Fensterzustand. (Standard = @SW_HIDE)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error gem&auml;&szlig; der globalen Konstanten.
+@@End@@
+
+###Remarks###
+Benutzt die ShellExecute Funktion von shell32.dll.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

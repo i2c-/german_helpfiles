@@ -1,0 +1,37 @@
+###User Defined Function###
+_INetMail
+
+###Description###
+&Ouml;ffnet das Standard-E-Mail Programm mit vorgegebener Adresse, &Uuml;berschrift und Inhalt.
+
+###Syntax###
+#include <INet.au3>
+_INetMail($s_MailTo, $s_MailSubject, $s_MailBody)
+
+
+###Parameters###
+@@ParamTable@@
+$s_MailTo
+	Adresse der E-Mail
+$s_MailSubject
+	&Uuml;berschrift der E-Mail
+$s_MailBody
+	Inhalt der E-Mail
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Prozess-ID des E-Mail Programms
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf nicht-null.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+_INetSmtpMail
+
+
+###Example###
+@@IncludeExample@@

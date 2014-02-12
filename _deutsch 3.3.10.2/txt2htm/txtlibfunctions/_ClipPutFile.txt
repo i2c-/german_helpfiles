@@ -1,0 +1,44 @@
+###User Defined Function###
+_ClipPutFile
+
+###Description###
+Kopiert eine Datei in die Zwischenablage, wie auch der Explorer es macht.
+
+###Syntax###
+#include <Misc.au3>
+_ClipPutFile ( $sFile [, $sSeparator = "|"] )
+
+
+###Parameters###
+@@ParamTable@@
+$sFile
+	Voller Pfad zu der/den Datei(en)
+$sSeparator
+	[optional] Trennzeichen f&uuml;r mehrere Dateien, Standard = '|'
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	1 - Zwischenablage konnte nicht ge&ouml;ffnet werden
+	2 - Zwischenablage konnte nicht geleert werden
+	3 - GlobalAlloc ist fehlgeschlagen
+	4 - GlobalLock ist fehlgeschlagen
+	5 - H_DROP konnte nicht erstellt werden
+	6 - Zwischenablage konnte nicht aktualisiert werden
+	7 - Zwischenablage konnte nicht geschlossen werden
+	8 - GlobalUnlock ist fehlgeschlagen
+	9 - GlobalFree ist fehlgeschlagen
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

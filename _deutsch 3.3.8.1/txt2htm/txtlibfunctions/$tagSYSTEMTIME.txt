@@ -1,0 +1,31 @@
+###Structure Name###
+$tagSYSTEMTIME
+
+###Description###
+Legt ein Datum und eine Zeit basierend auf der UTC-Zeit fest
+
+###Syntax###
+Global Const $tagSYSTEMTIME = "struct; word Year;word Month;word Dow;word Day;word Hour;word Minute;word Second;word MSeconds; endstruct"
+
+###Fields###
+@@ParamTable@@
+Year
+	Jahr
+Month
+	Monat
+Dow
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSeconds
+	Millisekunden
+@@End@@
+
+###Remarks###
+Keine.

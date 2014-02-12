@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetRangeMax
+
+###Description###
+Ermittelt den oberen begrenzten Datumsbereich.
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetRangeMax ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetRange, _GUICtrlMonthCal_GetRangeMin, _GUICtrlMonthCal_GetRangeMaxStr, $tagSYSTEMTIME
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,33 @@
+###User Defined Function###
+_FTP_FindFileClose
+
+###Description###
+Schlie&szlig;t das Handle von FindFile.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FindFileClose($h_Handle)
+
+###Parameters###
+@@ParamTable@@
+$h_Handle
+	R&uuml;ckgabewert von _FTP_FindFileFirst()
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @Error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_FindFileFirst, _FTP_FindFileNext
+
+###See Also###
+@@MsdnLink@@ InternetCloseHandle
+
+###Example###
+@@IncludeExample@@

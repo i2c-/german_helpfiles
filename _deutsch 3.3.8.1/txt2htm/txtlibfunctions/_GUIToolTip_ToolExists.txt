@@ -1,0 +1,24 @@
+###User Defined Function###
+_GUIToolTip_ToolExists
+
+###Description###
+Ermittelt, ob das aktuelle Tool existiert
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_ToolExists($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	das Tool existiert
+False:	das Tool existiert nicht
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

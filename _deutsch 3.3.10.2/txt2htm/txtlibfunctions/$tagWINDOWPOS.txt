@@ -1,0 +1,44 @@
+###Structure Name###
+$tagWINDOWPOS
+
+###Description###
+Die WINDOWPOS Struktur enth&auml;lt Informationen &uuml;ber die Gr&ouml;&szlig;e und Position eines Fensters
+
+###Syntax###
+Global Const $tagWINDOWPOS = "hwnd hWnd;int InsertAfter;int X;int Y;int CX;int CY;int Flags"
+
+
+###Fields###
+@@ParamTable@@
+hWnd
+	Handle zu dem Fenster
+InsertAfter
+	legt die Position des Fensters in Z-Reihenfolge fest
+X
+	legt die Position der linken Kante des Fensters fest
+Y
+	legt die Position der oberen Kante des Fensters fest
+CX
+	legt die Breite des Fensters in Pixel fest
+CY
+	legt die H&ouml;he des Fensters in Pixel fest
+Flags
+	legt die Position des Fensters fest. Dies kann einer oder mehrere der folgenden Werte sein:
+		$SWP_DRAWFRAME - Zeichnet einen Rahmen um das Fenster
+		$SWP_FRAMECHANGED - Sendet eine WM_NCCALCSIZE Nachricht zu dem Fensters, auch wenn sich die Gr&ouml;&szlig;e des Fensters nicht ver&auml;ndert hat
+		$SWP_HIDEWINDOW - versteckt das Fenster
+		$SWP_NOACTIVATE - aktiviert das Fenster nicht
+		$SWP_NOCOPYBITS - L&ouml;scht den kompletten Inhalt der Arbeitsfl&auml;che (client area)
+		$SWP_NOMOVE - beh&auml;lt die aktuelle Position bei (ignoriert die x und y Parameter)
+		$SWP_NOOWNERZORDER - &auml;ndert die Position des Fensters in der Z-Reihenfolge nicht
+		$SWP_NOREDRAW - zeichnet &Auml;nderungen nicht neu
+		$SWP_NOREPOSITION - gleiches wie beim SWP_NOOWNERZORDER Flag
+		$SWP_NOSENDCHANGING - verhindet, dass das Fenster eine WM_WINDOWPOSCHANGING Nachricht erh&auml;lt
+		$SWP_NOSIZE - beh&auml;lt die aktuelle Gr&ouml;&szlig;e (ignoriert die cx und cy Parameter)
+		$SWP_NOZORDER - beh&auml;lt die aktuelle Z-Reihenfolge (ignoriert den InsertAfter Parameter)
+		$SWP_SHOWWINDOW - zeigt das Fenster an
+@@End@@
+
+
+###Remarks###
+Keine.

@@ -1,0 +1,47 @@
+###Function###
+BlockInput
+
+###Description###
+Sperrt/Entsperrt Maus und Tastatur.
+
+###Syntax###
+BlockInput ( flag )
+
+###Parameters###
+@@ParamTable@@
+flag
+	1 = Sperrt Eingaben des Users
+	0 = Entsperrt Eingaben des Users
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck. Bereits aktiviert ist oder #requireAdmin wurde nicht verwendet.
+@@End@@
+
+###Remarks###
+Wenn BlockInput angewandt ist, k&ouml;nnen ALT-Tastendr&uuml;cke nicht gesendet werden!
+Die folgende Tabelle zeigt, wie das Verhalten von BlockInput von der Windowsversion abh&auml;ngt; unabh&auml;ngig davon wird unter allen Betriebssystemen durch Druck von Ctrl+Alt+Del (Strg+Alt+Entf) die Eingabe wieder erm&ouml;glicht (Windows API Feature).
+
+@@ParamTable@@
+<b><i>Betriebssystem</b></i>
+	<b><i>BlockInput-Resultate</b></i>
+Windows 2000
+	Benutzereingaben blockiert und AutoIt kann Maus- und Tastatureingaben simulieren.
+Windows XP
+	Benutzereingaben blockiert und AutoIt kann Maus- und Tastatureingaben simulieren. Siehe Bemerkungen unten. Problem mit Windows XP SP1.
+Windows Vista
+	Benutzereingaben blockiert und AutoIt kann Maus- und Tastatureingaben simulieren falls #requireAdmin verwendet wird.
+@@End@@
+
+F&uuml;r Windows XP SP1 wurde ein Windows Hotfix ver&ouml;ffentlicht, welches einen Bug enth&auml;lt, dass Alt-Eingaben beim senden verhindert (mit der send() Funktion) w&auml;hrend BlockInput() aktiv ist. Der Windows Bug wurde in Windows XP SP2 und neuer behoben.
+
+BlockInput() verhindert nur Benutzereingaben. Eingaben von den Funktionen wie Send() oder MouseMove() funktionieren weiterhin.
+
+
+###Related###
+Send
+
+###Example###
+@@IncludeExample@@

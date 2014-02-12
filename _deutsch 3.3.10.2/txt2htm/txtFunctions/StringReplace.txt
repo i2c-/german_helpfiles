@@ -1,0 +1,45 @@
+###Function###
+StringReplace
+
+###Description###
+Ersetzt ein oder mehrere Zeichen in einem String.
+
+###Syntax###
+StringReplace ( "string", "searchstring/start", "replacestring" [, occurrence = 0 [, casesense = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der auszuwertende String.
+searchstring/start
+	Der Teilstring, der gesucht werden soll oder die Position des Zeichens, an der das Ersetzen beginnt.
+replacestring
+	Den zu ersetzenden String.
+occurrence
+	[optional] Die Anzahl der Wiederholungen zum Ersetzen des "searchstrings". Wird eine negative Zahl verwendet, so wird von der rechten Seite beginnend gesucht.
+	0 = alle "searchstrings" werden ersetzt (Standard)
+casesense
+	[optional] Flag zum Kennzeichnen ob die Suchaktion Gro&szlig;-/Kleinschreibung unterscheidet.
+		$STR_NOCASESENSE (0) = Nein, Gro&szlig;-/Kleinschreibung wird nicht ber&uuml;cksichtigt (Standard).
+		$STR_CASESENSE (1) = Ja, Gro&szlig;-/Kleinschreibung wird ber&uuml;cksichtigt.
+		$STR_NOCASESENSEBASIC (2) = Gro&szlig;- und Kleinschreibung werden nicht ber&uuml;cksichtigt. Es findet ein einfacherer schnellerer Vergleich statt 
+	Konstanten sind in StringConstants.au3 definiert.
+@@End@@
+
+###ReturnValue###
+Gibt den neuen String zur&uuml;ck. Die Anzahl der durchgef&uuml;hrten Ersetzungen wird in @extended gespeichert.
+
+
+###Remarks###
+Standardm&auml;&szlig;ig oder wenn "occurrence" positiv ist wird das Suchen/Ersetzen von links nach rechts durchgef&uuml;hrt. Deshalb gibt <a href="StringReplace.htm">StringReplace</a>("aaa", "aa", "bb") "bba" zur&uuml;ck.
+
+Wird nur die Grundfunktion benutzt, werden die Parameter "occurrence" und "casesense" ignoriert. Kann der Ersatzstring nicht gespeichert werden, wird einen leeren String zur&uuml;ckgegeben und @error auf 1 gesetzt.
+
+
+###Related###
+StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper, StringStripWS, StringAddCR
+
+
+###Example###
+@@IncludeExample@@

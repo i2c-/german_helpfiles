@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlToolbar_SetIndeterminate
+
+###Description###
+Setzt oder entfernt den "deaktiviert"-Status des festgelegten Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetIndeterminate($hWnd, $iCommandID [, $fState = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$fState
+	[optional] True falls deaktiviert, sonst False
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

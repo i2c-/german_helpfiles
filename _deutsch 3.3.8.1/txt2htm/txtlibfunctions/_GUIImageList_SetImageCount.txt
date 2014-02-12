@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUIImageList_SetImageCount
+
+###Description###
+Passt die Gr&ouml;&szlig;e einer existierenden Imagelist neu an
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_SetImageCount($hWnd, $iNewCount)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iNewCount
+	Die neue Gr&ouml;&szlig;e der Imagelist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls eine Anwendung eine Imagelist mit Hilfe dieser Funktion erweitert, m&uuml;ssen neue Bilder &uuml;ber die _GUIImageList_Replace Funktion hinzugef&uuml;gt werden. Falls die Anwendung ung&uuml;ltige Bilder als neue Indizes hinzuf&uuml;gt, werden die Zeichenoperationen, die die neuen Indizes benutzen, unvorhersehbar.
+
+Falls man die Gr&ouml;&szlig;e der Imagelist mit dieser Funktion verkleinert, werden die abgeschnittenen Bilder freigegeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_GetImageCount
+
+###Example###
+@@IncludeExample@@

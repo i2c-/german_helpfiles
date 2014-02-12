@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlIpAddress_Get
+
+###Description###
+Ermittelt die Adresse des IP-Address-Control
+
+###Syntax###
+#include <GuiIPAddress.au3>
+_GUICtrlIpAddress_Get ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt einen IP-Adressenstring zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlIpAddress_Set, _GUICtrlIpAddress_GetEx
+
+
+###Example###
+@@IncludeExample@@

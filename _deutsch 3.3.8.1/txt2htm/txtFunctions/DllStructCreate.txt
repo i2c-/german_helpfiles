@@ -1,0 +1,130 @@
+###Function###
+DllStructCreate
+
+###Description###
+Erzeugt eine Struktur im C/C++-Stil die mit DllCall genutzt werden kann.
+
+###Syntax###
+DllStructCreate ( Struct [,Pointer] )
+
+
+###Parameters###
+@@ParamTable@@
+Struct
+	Ein String, der die zu erzeugende Struktur repr&auml;sentiert (Siehe Bemerkung).
+Pointer
+	[optional] Falls bereitgestellt, belegt die Struktur keinen neuen Speicher, sondern nutzt den Speicher, auf dessen Adresse der &uuml;bergebene Zeiger verweist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Eine Variable f&uuml;r den Gebrauch in DllStruct-Aufrufen.
+Failure:	0.
+@Error:	0 = Kein Fehler.
+	1 = &Uuml;bergebene Variable an DllStructCreate war kein String.
+	2 = Unbekannter Datentyp in der &uuml;bergebenen Variable.
+	3 = Belegung des ben&ouml;tigten Speichers f&uuml;r die Struktur fehlgeschlagen, oder Pointer = 0.
+	4 = Fehler bei der Belegung des Speichers f&uuml;r den &uuml;bergebenen String.
+	
+@@End@@
+
+<br>
+@@ParamTable@@
+<b>Typ</b>
+	<b>Details</b>
+BYTE
+	8bit(1byte) unsigned char
+BOOLEAN
+	8bit(1byte) unsigned char
+CHAR
+	8bit(1byte) ASCII char
+WCHAR
+	16bit(2byte) UNICODE wide char
+short
+	16bit(2bytes) signed integer
+USHORT
+	16bit(2bytes) unsigned integer
+WORD
+	16bit(2bytes) unsigned integer
+int
+	32bit(4bytes) signed integer
+long
+	32bit(4bytes) signed integer
+BOOL
+	32bit(4bytes) signed integer
+UINT
+	32bit(4bytes) unsigned integer
+ULONG
+	32bit(4bytes) unsigned integer
+DWORD
+	32bit(4bytes) unsigned integer
+INT64
+	64bit(8bytes) signed integer
+UINT64
+	64bit(8bytes) unsigned integer
+ptr
+	32 or 64bit unsigned integer (Je nach dem, ob die x86 oder die x64 Version von AutoIt benutzt wird)
+HWND
+	32bit(4bytes) integer
+HANDLE
+	32bit(4bytes) integer
+float
+	32bit(4bytes) floating point
+double
+	64bit(8bytes) floating point
+INT_PTR, LONG_PTR, LRESULT, LPARAM
+	32 or 64bit signed integer (Je nach dem, ob die x86 oder die x64 Version von AutoIt benutzt wird)
+UINT_PTR, ULONG_PTR, DWORD_PTR, WPARAM
+	32 or 64bit unsigned integer (Je nach dem, ob die x86 oder die x64 Version von AutoIt benutzt wird)
+STRUCT
+	Die folgenden Datentypen werden in &Uuml;bereinstimmung mit den Regeln der C Deklaration ausgerichtet. Siehe unten.
+ENDSTRUCT
+	Ende der Datentypen-Zusammenstellung. Einbettung ist m&ouml;glich, siehe unten.
+ALIGN
+	n bytes Grenze, an der der Datentyp ausgerichtet werden muss.
+@@End@@
+
+
+###Remarks###
+Jeder Datentyp muss mit einem Semikolon getrennt werden ';'.
+
+Array's werden durch hinzuf&uuml;gen von '[size]' nach dem Datentyp erzeugt: DllStructCreate("int;char[128]").
+
+Ein Elementname kann &auml;hnlich der C Deklaration hinzugef&uuml;gt werden (DllStructCreate("int n;char buffer[128]")). 
+Dieser Elementname kann anstelle eines Elements in anderen DllStruct... Funktionen genutzt werden. Er muss alphanumerisch und/oder mit einem Unterstrich sein (a-z,1-9,_).
+
+Wird eine Zusammenstellung von Datentypen definiert wie in "struct{}" in C Deklaration, muss "STRUCT; ...; ENDSTRUCT;" angewendet werden.
+Dies ist notwendig, um die Ausrichtung innerhalb der gesamten Struktur zu ber&uuml;cksichtigen. Dies ist nicht erforderlich, wenn alle Datentypen in der definierten Struktur, als eine implizite Struktur Ausrichtung angelegt wurden.
+
+DllStructCreate("int;STRUCT;ptr;int;ENDSTRUCT;int")    ; Struktur ist 32 byte unter einem Windows 64-Bit und 16 unter einem Windows 32-Bit
+DllStructCreate("int;ptr;int;int")    ; Struktur ist 24 byte unter einem Windows 64-Bit und 16 unter einem Windows 32-Bit
+
+F&uuml;r eine andere Ausrichtung der Struktur kann man "align" als Prefix benutzen. Standardwert f&uuml;r n ist 8.
+Erlaubte Werte sind 1, 2, 4, 8 und 16. Die Ausrichtung eines Elements wird entweder an der Grenze eines Vielfachen von n oder an der eines Vielfachen der Gr&ouml;&szlig;e eines Elements sein, <b>je nach dem welches kleiner ist</b>. Dies ist wie bei der "#pragma pack option" mit dem Microsoft Visual C++ Compiler.
+
+DllStructCreate("short;int")     ; Die Struktur ist 8 Bytes gro&szlig;, der "int" beginnt ab Offset 4
+DllStructCreate("align 2;short;int")     ; Die Struktur ist 6 Bytes gro&szlig;, der "int" beginnt ab Offset 2 
+
+DllStructCreate("byte;double")     ; Die Struktur ist 16 Bytes gro&szlig;, der "double" beginnt ab Offset 8
+DllStructCreate("align 4;byte;double")     ; Die Struktur ist 12 Bytes gro&szlig;, der "double" beginnt ab Offset 4
+
+Wenn eine &Auml;nderung der Ausrichtung ben&ouml;tigt wird, kann "align" vor dem ersten Element, welches ge&auml;ndert werden werden soll, stehen. "align" oder "align 8" f&uuml;hrt zur Standardausrichtung.
+
+Um belegten Speicher wieder freizugeben, braucht man lediglich die zur&uuml;ckgegebene Variable auf 0 setzen.
+
+<b>Die Gesamtheit der anzuwendenden Ausrichtungsregeln:</b>
+
+Die Ausrichtung eines Arrays ist die gleiche wie die Ausrichtung eines der Elemente des Arrays.
+
+Die Ausrichtung am Beginn einer Struktur ist die maximale Ausrichtung jedes einzelnen Mitglieds der Struktur.
+Jedes Element in der Struktur ist anzuordnen gem&auml;&szlig; der richtigen Ausrichtung, wie in der obigen Tabelle definiert, welche eine implizite Einbettung erfordert, in Abh&auml;ngigkeit zum vorhergehenden Element.
+
+Die Strukturgr&ouml;&szlig;e ist ein ganzzahliges Vielfaches ihrer Ausrichtung, was ein Auff&uuml;llen nach dem letzten Element erfordert.
+
+
+###Related###
+DllCall, DllStructGetData, DllStructSetData, DllStructGetPtr, DllStructGetSize, IsDllStruct
+
+
+###Example###
+@@IncludeExample@@

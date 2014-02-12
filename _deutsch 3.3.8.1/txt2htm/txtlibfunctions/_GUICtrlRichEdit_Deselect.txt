@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_Deselect
+
+###Description###
+Demarkiert den Text
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_Deselect($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+L&auml;&szlig;t den Einf&uuml;gepunkt an dem Ankerpunkt der Markierung stehen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_IsTextSelected
+
+###See Also###
+@@MsdnLink@@ EM_SETSEL
+
+###Example###
+@@IncludeExample@@

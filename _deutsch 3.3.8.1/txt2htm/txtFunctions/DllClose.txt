@@ -1,0 +1,30 @@
+###Function###
+DllClose
+
+###Description###
+Schlie&szlig;t eine zuvor ge&ouml;ffnete DLL.
+
+###Syntax###
+DllClose ( dllhandle )
+
+
+###Parameters###
+@@ParamTable@@
+dllhandle
+	Das Handle einer DLL, wie von einem fr&uuml;heren Aufruf von DllOpen zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Beim Beenden des Skriptes schlie&szlig;t AutoIt normalerweise automatisch alle offenen DLLs; der Aufruf von DllClose ist aber dennoch eine gute Idee.
+
+
+###Related###
+DllCall, DllOpen
+
+
+###Example###
+@@IncludeExample@@

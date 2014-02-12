@@ -1,0 +1,25 @@
+###User Defined Function###
+_GUIToolTip_PopUp
+
+###Description###
+L&auml;sst den ToolTip an der letzten bekannten Stelle der Maus Koordinaten erscheinen
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_PopUp($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

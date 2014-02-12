@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUIToolTip_GetText
+
+###Description###
+Ermittelt den Text
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetText($hWnd, $hTool, $iID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zum Fenster, welches das Tool enth&auml;lt
+$iID
+	Identifizierer des Tools
+@@End@@
+
+###ReturnValue###
+Erfolg:	ToolTip Text
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_UpdateTipText

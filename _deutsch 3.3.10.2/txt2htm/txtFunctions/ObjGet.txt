@@ -1,0 +1,44 @@
+###Function###
+ObjGet
+
+###Description###
+Ruft eine Referenz zu einem COM-Objekt ab, von einem vorhandenem Prozess oder Dateinamen.
+
+###Syntax###
+ObjGet ( "filename" [, "classname" [, instance]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Vollst&auml;ndiger Pfad und Name der Datei die das Objekt enth&auml;lt (Siehe Bemerkungen)
+classname
+	[optional] Klassen Bezeichnung. Kann entweder eine ProgID oder die String Darstellung der CLSID sein
+instance
+	[optional] Instanz vom Objekt f&uuml;r ROT-Objekte derselben (Co-)Klasse
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Objekt.
+Fehler:	Setzt @error ungleich null.
+@@End@@
+
+
+###Remarks###
+Der Dateiname ist optional wenn man nur den Klassennamen nutzen m&ouml;chte, aber der Parameter darf nicht ausgelassen werden.
+Verwende einen leerer String, wenn man auf Objekte aus 'running object table'(ROT) zugreifen will. In diesem Fall gibt der dritte Paramter die gew&uuml;nschte Instanz an.
+Ansonsten wird der dritte Parameter ignoriert.
+
+Wenn ein Dateiname benutzt wird, ist der Klassenname optional. Er wird nur ben&ouml;tigt wenn man ein Objekt einer bestimmten Klasse laden m&ouml;chte.
+Der Parameter classname hat <b>keinen</b> Standardwert. Wird er angegeben, so wird er verarbeitet. 
+
+Siehe die <a href="../intro/ComRef.htm">Obj/COM Referenz</a> f&uuml;r mehr Informationen &uuml;ber Objekte.
+
+
+###Related###
+GUICtrlCreateObj, IsObj, ObjCreate, ObjEvent, ObjName
+
+
+###Example###
+@@IncludeExample@@

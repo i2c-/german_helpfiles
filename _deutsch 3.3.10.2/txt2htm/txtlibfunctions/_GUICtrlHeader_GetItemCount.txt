@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlHeader_GetItemCount
+
+###Description###
+Ermittelt die Anzahl von Items
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_GetItemCount ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Anzahl von Items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

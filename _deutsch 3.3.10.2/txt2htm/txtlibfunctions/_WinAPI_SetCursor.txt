@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_SetCursor
+
+###Description###
+Setzt eine Cursorform
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetCursor ( $hCursor )
+
+
+###Parameters###
+@@ParamTable@@
+$hCursor
+	Identifiziert den Cursor
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des vorigen Cursors, sofern einer vorhanden war.
+Fehler:	0, falls vorher kein Cursor vorhanden war.
+@@End@@
+
+
+###Remarks###
+Der Cursor wird nur ge&auml;ndert wenn man sich &uuml;ber einer selbsterstellten GUI befindet.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ SetCursor

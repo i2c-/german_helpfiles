@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlEdit_SetMargins
+
+###Description###
+Setzt die Breite des linken und rechten Randes
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetMargins ( $hWnd [, $iMargin = 0x1 [, $iLeft = 0xFFFF [, $iRight = 0xFFFF]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMargin
+	[optional] Kann einer oder mehrere der folgenden Werte sein
+		$EC_LEFTMARGIN - Setzt den linken Rand
+		$EC_RIGHTMARGIN - Setzt den rechten Rand
+		Standard: $EC_LEFTMARGIN
+$iLeft
+	[optional] Die neue Breite des linken Randes
+		Standard: $EC_USEFONTINFO
+$iRight
+	[optional] Die neue Breite des rechten Randes
+		Standard: $EC_USEFONTINFO
+@@End@@
+
+###ReturnValue###
+Gibt ein Array in dem folgenden Format zur&uuml;ck:
+	[0] - Die Breite des linken Randes
+	[1] - Die Breite des rechten Randes
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlEdit_GetMargins
+
+
+###Example###
+@@IncludeExample@@

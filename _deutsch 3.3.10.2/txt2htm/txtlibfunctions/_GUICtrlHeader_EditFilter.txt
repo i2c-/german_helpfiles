@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlHeader_EditFilter
+
+###Description###
+Startet das &Auml;ndern in dem festgelegten Filter
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_EditFilter ( $hWnd, $iIndex [, $fDiscard = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$fDiscard
+	[optional] Flag welches festlegt wie die &Auml;nderungen des Benutzers vorgenommen werden sollen. Diese Flag ist zu benutzen, um festzulegen was
+	zu tun ist, wenn der Benutzer gerade &auml;ndert, wenn die Nachricht gesendet wird:
+		True - Verwirft die &Auml;nderungen die der Benutzer gemacht hat
+		False - Akzeptiert die &Auml;nderungen die der Benutzer gemacht hat
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_ClearFilter, _GUICtrlHeader_ClearFilterAll
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlSlider_GetBuddy
+
+###Description###
+Ermittelt das Handle zu einem Slider-Control Buddy Fenster an dem gegebenen Bereich
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetBuddy($hWnd, $fLocation)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fLocation
+	Welches Buddy Fenster Handle ermittelt werden soll. Dieser Wert kann einer der folgenden sein:
+		 True - Ermittelt das Handle zu dem Buddy auf der linken Seite des Sliders.
+		Falls das Slider-Control den Stil $TBS_VERT verwendet, wird dies den Buddy &uuml;ber dem Slider ermitteln.
+		False - Ermittelt das Handle zu dem Buddy auf der rechten Seite des Sliders.
+		Falls das Slider-Control den Stil $TBS_VERT verwendet, wird dies den Buddy unter dem Slider ermitteln.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt das Handle zu dem Buddy Fenster an der Position, die durch $fLocation festgelegt wurde, zur&uuml;ck
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetBuddy
+
+###Example###
+@@IncludeExample@@

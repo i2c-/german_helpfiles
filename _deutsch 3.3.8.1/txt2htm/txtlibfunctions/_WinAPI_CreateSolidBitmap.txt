@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_CreateSolidBitmap
+
+###Description###
+Erstellt ein vollfarbiges Bitmap
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateSolidBitmap($hWnd, $iColor, $iWidth, $iHeight [, $bRGB = 1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster in dem das Bitmap dargestellt werden soll
+$iColor
+	Die Farbe des Bitmaps, dargestellt in RGB
+$iWidth
+	Die Breite des Bitmaps
+$iHeight
+	Die H&ouml;he des Bitmaps
+$bRGB
+	[optional] Falls True wird in COLOREF konvertiert (0x00bbggrr)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Bitmaps
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_CreateCompatibleBitmap

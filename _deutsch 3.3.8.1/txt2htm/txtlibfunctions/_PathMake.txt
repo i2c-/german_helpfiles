@@ -1,0 +1,33 @@
+###User Defined Function###
+_PathMake
+
+###Description###
+Erstellt einen Pfad aus einem Laufwerk, Verzeichnis, Dateinamen und einer Dateierweiterung. Nicht alle Elemente m&uuml;ssen &uuml;bergeben werden.
+
+###Syntax###
+#include <File.au3>
+_PathMake($szDrive, $szDir, $szFName, $szExt)
+
+###Parameters###
+@@ParamTable@@
+$szDrive
+	Laufwerk (Kann auch UNC sein).  Falls es sich um einen Laufwerksbuchstaben handelt, wird der : automatisch angeh&auml;ngt
+$szDir
+	Verzeichnis.  Ein abschlie&szlig;ender Slash wird automatisch hinzugef&uuml;gt, falls dieser nicht existiert (Es wird kein vorhergehender Slash hinzugef&uuml;gt)
+$szFName
+	Der Dateiname
+$szExt
+	Die Dateierweiterung.  Der Punkt wird vorangestellt, falls die Erweiterung diesen nicht enth&auml;lt
+@@End@@
+
+###ReturnValue###
+Gibt den String mit dem kompletten Pfad zur&uuml;ck 
+
+###Remarks###
+Der Pfad wird mit den Elementen erstellt, so wie sie &uuml;bergeben werden. Die G&uuml;ltigkeit des resultierenden Pfades wird nicht gepr&uuml;ft, es k&ouml;nnten also ung&uuml;ltige Zeichen enthalten sein.
+
+###Related###
+_PathFull, _PathSplit, .DirCreate, .FileChangeDir
+
+###Example###
+@@IncludeExample@@

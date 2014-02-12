@@ -1,0 +1,50 @@
+###Function###
+GUICtrlCreateGraphic
+
+###Description###
+Erstellt ein graphisches Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateGraphic ( left, top [, width [, height [, style]]] )
+
+
+###Parameters###
+@@ParamTable@@
+left
+	Linke Position des Controls. Falls -1 gesetzt wird, errechnet sich left laut <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a>.
+top
+	Obere Position des Controls. Falls -1 gesetzt wird, errechnet sich top laut <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a>.
+width
+	[optional] Die Breite des Controls (Standard ist die zuvor genutzte Breite).
+height
+	[optional] Die H&ouml;he des Controls (Standard ist die zuvor genutzte H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Label">Anhang GUI-Stile f&uuml;r Controls</a>.
+		Standard ( -1): $SS_NOTIFY.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Identifier (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um in dem Control zu zeichnen siehe <a href="GUICtrlSetGraphic.htm">GUICtrlSetGraphic()</a>.
+
+Der Rand und Hintergrund kann mit <a href="GUICtrlSetBkColor.htm">GUICtrlSetBkColor()</a> und <a href="GUICtrlSetColor.htm">GUICtrlSetColor()</a> festgelegt werden.
+
+Grafik-Controls k&ouml;nnen Klicknachrichten empfangen, also sollten sie nicht andere Controls &uuml;berlappen. Falls &Uuml;berlappung dennoch gebraucht wird, ist es wichtig das Grafik-Control zu deaktivieren : <a href="GUICtrlSetState.htm">GUICtrlSetState</a>(-1,$GUI_DISABLE).
+
+Dieses Control kann nicht neu skaliert werden um die Grafik neu aufzubauen, aber es kann mit GUICtrlSetResizing() neu angelegt werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlSetGraphic, GUICtrlSetBkColor, GUICtrlSetColor, GUICtrlDelete, GUICoordMode (Option), GUICtrlSetStyle, GUICtrlSetResizing, GUIGetMsg
+
+
+###Example###
+@@IncludeExample@@

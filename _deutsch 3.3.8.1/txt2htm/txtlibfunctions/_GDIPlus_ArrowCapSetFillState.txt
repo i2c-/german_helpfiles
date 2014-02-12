@@ -1,0 +1,37 @@
+###User Defined Function###
+_GDIPlus_ArrowCapSetFillState
+
+###Description###
+Bestimmt, ob die Pfeilspitze ausgef&uuml;llt ist
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ArrowCapSetFillState($hArrowCap, $bFilled = True)
+
+###Parameters###
+@@ParamTable@@
+$hArrowCap
+	Handle zu einem Pfeil-Objekt
+$bFilled
+	F&uuml;llstatus:
+		 True - Pfeilspitze ist ausgef&uuml;llt
+		False - Pfeilspitze ist nicht ausgef&uuml;llt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ArrowCapGetFillState
+
+###See Also###
+@@MsdnLink@@ GdipSetAdjustableArrowCapFillState
+
+###Example###
+@@IncludeExample@@

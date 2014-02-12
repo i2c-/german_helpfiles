@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUIToolTip_SetTipTextColor
+
+###Description###
+Setzt die Textfarbe
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetTipTextColor($hWnd, $iColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iColor
+	Neue Textfarbe
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetTipTextColor

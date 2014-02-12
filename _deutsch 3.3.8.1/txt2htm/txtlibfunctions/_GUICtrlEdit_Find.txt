@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlEdit_Find
+
+###Description###
+L&auml;sst einen Suchdialog auftauchen
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_Find($hWnd [, $fReplace = False])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fReplace
+	[optional] Ersetzoption:
+		 True - Zeigt Optionen
+		False - Versteckt Optionen
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+Falls Text von dem Edit-Control verwendet  und dieser Text ersetzt wird, so wird diese Funktion nicht mehr l&auml;nger korrekt funktionieren
+###Related###
+
+###Example###
+@@IncludeExample@@

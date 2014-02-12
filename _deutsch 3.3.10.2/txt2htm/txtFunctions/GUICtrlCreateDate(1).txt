@@ -1,0 +1,64 @@
+###Function###
+GUICtrlCreateDate
+
+###Description###
+Erstellt ein Datumsauswahl-Item f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateDate ( "text", left, top [, width [, height [, style = -1 [, exStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Das voreingestellte Datum (immer im Format "yyyy/mm/dd").
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Date">Anhang GUI-Stile f&uuml;r Controls</a>.
+		Standard (-1) : $DTS_LONGDATEFORMAT
+		Erzwungener Stil : $WS_TABSTOP
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+		Standard (-1) : WS_EX_CLIENTEDGE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Wert des Controls zu erhalten siehe <a href="GUICtrlRead.htm">GUICtrlRead()</a>.
+Um Informationen im Control zu setzen oder zu ver&auml;ndern siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...()</a> Funktionen.
+
+Um weitere Stile zus&auml;tzlich zum Standardstil zu verwenden ist <b><b><a href="BitOR.htm">BitOR</a></b>($GUI_SS_DEFAULT_DATE, newstyle,...) zu verwenden.
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <DateTimeConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Um das Datum bzw. die Zeit zu formatieren siehe Beispiel 3. Dort wird erkl&auml;rt, wie <a href="GUICtrlSendMsg.htm">GUICtrlSendMsg()</a> mit $DTM_SETFORMAT verwendet werden muss.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKHEIGHT. (Die H&ouml;he wird nicht ge&auml;ndert.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+Es ist auch m&ouml;glich das UpDown-Control zu entfernen. Dies wird im folgenden beschrieben.
+In Windows ist jedes Control ein Fenster. Somit ist das Updown ein Child des DateTime-Controls.
+Mit der folgenden Zeile wird das Child-Handle ermittelt und dieses ausgeblendet
+WinSetState(_WinAPI_GetWindow(GUICtrlGetHandle($DTP), $GW_CHILD), '', @SW_HIDE)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICoordMode (Option), GUICtrlSetState, GUIGetMsg, GUICtrlRead
+
+
+###Example###
+@@IncludeExample@@

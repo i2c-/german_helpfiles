@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUIToolTip_SetDelayTime
+
+###Description###
+Setzt die Dauer der Initial-, Popup- und Wiederanzeigezeit eines Tooltips
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetDelayTime($hWnd, $iDuration, $iTime)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iDuration
+	Flag welches festlegt, welcher Dauerwert gesetzt werden soll:
+		0 - Setzt alle drei Verz&ouml;gerungszeiten auf die Standardeinstellung
+		1 - Verz&ouml;gerungszeit bis nachfolgende ToolTip Fenster angezeigt werden, wenn der Mauszeiger von einem Tool auf ein anderes zu bewegen
+		2 - Zeit die das ToolTip Fenster sichtbar bleibt falls der Mauszeiger innerhalb der begrenzenden Rechtecks steht 
+		3 - Zeit die der Mauszeiger innerhalb des Tool stehen muss bevor das Fenster erscheint
+$iTime
+	Verz&ouml;gerungszeit in Millisekunden
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Die standardm&auml;&szlig;ige Verz&ouml;gerungszeit basieren auf der Doppelklickzeit. F&uuml;r die standardm&auml;&szlig;ige Zeit von 500ms, betragen die Verz&ouml;gerungen der Initial-, Autopop- und Wiederanzeigezeiten 500ms, 5000ms und 100ms.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetDelayTime

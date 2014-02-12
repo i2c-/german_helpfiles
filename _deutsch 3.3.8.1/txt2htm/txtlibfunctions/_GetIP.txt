@@ -1,0 +1,31 @@
+###User Defined Function###
+_GetIP
+
+###Description###
+Die &ouml;ffentliche IP-Adresse eines Netzwerk/Computers erhalten.
+
+###Syntax###
+#include <Inet.au3>
+_GetIP()
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die &ouml;ffentliche IP Adresse zur&uuml;ck
+Fehler:	Gibt -1 zur&uuml;ck und setzt @ERROR = 1
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt die &ouml;ffentliche IP-Adresse eines Computers oder Netzwerkes (d.h. die &ouml;ffentliche IP-Adresse auf der WAN-Seite Ihres Routers, wie Sie diese z.B. von Ihrem Provider bei der Einwahl erhalten). Die Adresse wird bestimmt durch externe Webseiten wie z.B. checkip.dyndns.org oder www.whatismyip.com.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

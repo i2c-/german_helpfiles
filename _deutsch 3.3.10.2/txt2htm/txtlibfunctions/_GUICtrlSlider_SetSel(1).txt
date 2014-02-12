@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlSlider_SetSel
+
+###Description###
+Setzt die Start- und Endposition f&uuml;r den verf&uuml;gbaren Markierungsbereich
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetSel ( $hWnd, $iMinimum, $iMaximum )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMinimum
+	Startposition f&uuml;r den verf&uuml;gbaren Markierungsbereich
+$iMaximum
+	Endposition f&uuml;r den verf&uuml;gbaren Markierungsbereich
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Diese Funktion wird ignoriert, wenn der Slider den Stil $TBS_ENABLESELRANGE nicht besitzt.
+_GUICtrlSlider_SetSel() erlaubt es einen Zeiger auf einen Abschnitt des verf&uuml;gbaren Bereichs zu begrenzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_GetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_SetSelStart, _GUICtrlSlider_ClearSel
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###Function###
+StringAddCR
+
+###Description###
+Nimmt einen String und setzt allen Zeilenwechsel-Zeichen ( Chr(10) ) ein Eingabe-Zeichen ( Chr(13) ) voran.
+
+###Syntax###
+StringAddCR ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	String, der konvertiert werden soll.
+@@End@@
+
+
+###ReturnValue###
+Gibt den gleichen String zur&uuml;ck, wobei allen Zeilenwechsel Zeichen ( @LF ) ein Eingabe-Zeichen ( @CR ) vorangestellt wurde.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringStripCR, StringReplace
+
+
+###Example###
+@@IncludeExample@@

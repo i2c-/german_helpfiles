@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetVersion
+
+###Description###
+Ermittelt die Version von RichEdit
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetVersion()
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Die Version von RichEdit je nach Betriebssystem:
+3.0 - Windows 2000, XP
+3.1 - Windows Vista
+4.0 - Windows XP SP1
+4.1 - Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemBmpUnchecked
+
+###Description###
+Ermittelt das angezeigte Bild wenn das Item nicht ausgew&auml;hlt ist. 
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemBmpUnchecked ( $hMenu, $iItem [, $fByPos = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;-Item
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;-Item Identifikation
+@@End@@
+
+###ReturnValue###
+Gibt das Handle zu dem angezeigten Bild neben dem Item zur&uuml;ck, wenn es nicht ausgew&auml;hlt wurde
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetItemBmpUnchecked
+
+
+###Example###
+@@IncludeExample@@

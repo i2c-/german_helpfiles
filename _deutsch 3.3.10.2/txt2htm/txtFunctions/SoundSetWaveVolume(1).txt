@@ -1,0 +1,35 @@
+###Function###
+SoundSetWaveVolume
+
+###Description###
+Regelt die Lautst&auml;rke der System Sound Dateien (wave) in Prozent.  
+
+###Syntax###
+SoundSetWaveVolume ( percent )
+
+
+###Parameters###
+@@ParamTable@@
+percent
+	Prozentzahl zwischen 0 und 100
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error auf 1, wenn der Prozentwert ung&uuml;ltig ist.
+@@End@@
+
+
+###Remarks###
+Diese Funktion steuert nur die Wave-Lautst&auml;rke,  nicht aber die Gesamt-Lautst&auml;rke.  Ein Wert von 0 bedeutet au&szlig;erdem nicht Stummschaltung (mute).
+
+In Windows Vista gibt es keine systemweite Wave-Lautst&auml;rke. Diese Funktion &auml;ndert nur die Wave-Lautst&auml;rke f&uuml;r das Skript. Es kann nicht verwendet werden, um die Lautst&auml;rke f&uuml;r andere Programme zu &auml;ndern.
+
+
+###Related###
+SoundPlay
+
+
+###Example###
+@@IncludeExample@@

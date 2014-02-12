@@ -1,0 +1,30 @@
+###Function###
+ACos
+
+###Description###
+Errechnet den Arcus-Cosinus einer Zahl.
+
+###Syntax###
+ACos ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein Wert zwischen -1 und 1.
+@@End@@
+
+###ReturnValue###
+Gibt den Wert des trigonometrischen Arcus-Cosinus von <i>Ausdruck</i> aus. Das Ergebnis wird als Bogenma&szlig; (Radiant) zur&uuml;ckgegeben (lat. arcus = Bogen)
+
+
+###Remarks###
+ACos(x) wird mathematisch nur f&uuml;r -1 < x < 1 definiert, deshalb neigt ACos dazu, -1.#ind f&uuml;r andere Werte von x zur&uuml;ckzugeben.
+
+
+###Related###
+Sin, Cos, Tan, ASin, ATan
+
+
+###Example###
+@@IncludeExample@@

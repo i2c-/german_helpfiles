@@ -1,0 +1,50 @@
+###User Defined Function###
+_WinAPI_CreateEvent
+
+###Description###
+Erzeugt oder &ouml;ffnet ein benanntes oder unbenanntes Ereignis-Objekt
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateEvent([$pAttributes = 0 [, $fManualReset = True [, $fInitialState = True [, $sName = ""]]]])
+
+###Parameters###
+@@ParamTable@@
+$pAttributes
+	[optional] Zeiger auf eine $tagSECURITY_ATTRIBUTES Struktur. Falls NULL (0), kann das Handle nicht von Child-
+		Prozessen geerbt/&uuml;bernommen werden. Das "Descriptor"-Mitglied der Struktur legt den "Security Descriptor" des
+		neuen Ereignisses fest. Falls <b>pAttributes</b> NULL (0) ist, erh&auml;lt das Ereignis den Standard-Security Descriptor. Die 
+		ACLs im Standard-Security Descriptor eines Ereignisses gehen von den prim&auml;ren oder personifizierten Tokens des 
+		Erzeugers aus (primary, bzw. impersonate  token).
+$fManualReset
+	[optional] Falls TRUE, erzeugt die Funktion ein manuell zur&uuml;cksetzbares Ereignis-Objekt, welches die Benutzung der ResetEvent 
+		Funktion anfordert, um den Ereignisstatus auf unsignalisiert zu setzen. Falls FALSE, erzeugt die Funktion ein 
+		automatisch zur&uuml;ckgesetztes Ereignis-Objekt und das System setzt den Ereignisstatus wieder zur&uuml;ck, nachdem ein 
+		wartender Einzel-Thread freigegeben wurde.
+$fInitialState
+	[optional] Falls TRUE, ist der Anfangsstatus des Ereignis-Objekts auf signalisiert gesetzt; andernfalls auf unsignalisiert
+$sName
+	[optional] Der Name des Ereignis-Objekts (Gro&szlig;-/Kleinschreibung ist zu beachten). Falls <b>sName</b> dem Namen eines bereits 
+		existierenden Ereignis-Objekts entspricht, erfordert diese Funktion das <b>EVENT_ALL_ACCESS>/b>-Zugriffsrecht. In 
+		diesem Falle werden die Parameter <b>fManualReset</b> und <b>fInitialState</b> ignoriert, da sie schon vom erzeugenden Prozess 
+		gesetzt wurden. Falls der Parameter <b>pAttributes</b> mit NULL (0) angegeben wird, bestimmt er, ob das Handle 
+		geerbt/&uuml;bernommen werden kann, au&szlig;er sein Security Descriptor-Mitglied wird ignoriert. Falls <b>sName</b> weggelassen wird, 
+		wird das Ereignis-Objekt ohne Namen erzeugt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem Ereignis-Objekt.
+	Falls das angegebene Ereignis-Objekt bereits vor dem Funktionsaufruf existiert, 
+	wird ein Handle zu dem existierenden Objekt zur&uuml;ckgegeben und <b>GetLastError</b> gibt <b>ERROR_ALREADY_EXISTS</b> zur&uuml;ck.
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagSECURITY_ATTRIBUTES
+
+###See Also###
+@@MsdnLink@@ CreateEvent

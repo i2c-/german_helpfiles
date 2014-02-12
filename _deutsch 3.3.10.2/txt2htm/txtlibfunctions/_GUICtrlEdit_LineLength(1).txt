@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlEdit_LineLength
+
+###Description###
+Ermittelt die Zeichenl&auml;nge einer Zeile
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_LineLength ( $hWnd [, $iIndex = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	[optional] legt den 0-basierenden Index der Zeile fest, wessen L&auml;nge ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die L&auml;nge der Zeile in TCHARs, festgelegt durch den Parameter $iIndex
+Fehler:	0 falls $iIndex gr&ouml;&szlig;er als die Anzahl von Zeichen im Control ist
+@@End@@
+
+
+###Remarks###
+$iIndex = –1 verwendet die aktuelle Zeilennummer (Zeile die den Cursor enth&auml;lt)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

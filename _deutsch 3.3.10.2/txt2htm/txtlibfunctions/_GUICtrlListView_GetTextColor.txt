@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_GetTextColor
+
+###Description###
+Ermittelt die Textfarbe eines Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetTextColor ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Textfarbe zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetTextColor
+
+
+###Example###
+@@IncludeExample@@

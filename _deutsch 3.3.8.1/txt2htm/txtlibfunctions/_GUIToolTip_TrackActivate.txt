@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUIToolTip_TrackActivate
+
+###Description###
+Aktiviert oder deaktiviert ein verfolgen des ToolTip
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_TrackActivate($hWnd [, $fActivate = True [, $hTool = 0 [, $iID = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fActivate
+	[optional] True um es zu aktivieren, False um es zu deaktivieren
+$hTool
+	[optional] Handle zu dem Fenster welches das Tool enth&auml;lt
+$iID
+	[optional] anwendungsspezifische ID des Tools
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlListBox_GetTextLen
+
+###Description###
+Ermittelt die L&auml;nge eines Strings in einer Listbox
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetTextLen($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	legt den 0-basierenden Index des Items fest
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die L&auml;nge des Strings
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_GetText
+
+###Example###
+@@IncludeExample@@

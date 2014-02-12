@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlEdit_SetTabStops
+
+###Description###
+Setzt Tabstopps
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetTabStops($hWnd, $aTabStops)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$aTabStops
+	Array mit Tabstopps im folgenden Format:
+		[0] - Tabstopp 1
+		[2] - Tabstopp 2
+		[n] - Tabstopp n
+@@End@@
+
+###ReturnValue###
+True:	Alle Tabs sind gesetzt
+False:	Alle Tabs sind nicht gesetzt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuDefaultItem
+
+###Description###
+Ermittelt das Standard Men&uuml;item auf dem festgelegten Men&uuml;
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuDefaultItem ( $hMenu [, $fByPos = True [, $iFlags = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$fByPos
+	[optional] Entscheidet, ob die ID des Men&uuml;items oder deren Position ermittelt werden soll:
+		True - Gibt die Men&uuml;item Position zur&uuml;ck
+		False - Gibt die Men&uuml;item ID zur&uuml;ck
+$iFlags
+	[optional] legt fest wie die Funktion nach Men&uuml;items sucht:
+		0 - keine besonderen Suchparameter
+		1 - legt fest, dass die Funktion ein Standard Item zur&uuml;ckgibt, auch wenn es deaktiviert ist
+		2 - legt fest, dass falls das Standarditem eines ist, welches ein Untermen&uuml; &ouml;ffnet, die Funktion rekursiv in dem entsprechenden Untermen&uuml; sucht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die ID oder Position des Men&uuml;items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetMenuDefaultItem
+
+
+###See Also###
+@@MsdnLink@@ GetMenuDefaultItem
+
+
+###Example###
+@@IncludeExample@@

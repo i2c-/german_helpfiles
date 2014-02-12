@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlTab_HitTest
+
+###Description###
+Ermittelt, ob der angegebene Punkt &uuml;ber einem Tab-Control liegt.
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_HitTest($hWnd, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iX
+	zu testende X Position
+$iY
+	zu testende Y Position
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - 0-basierender Index des Tabs oder -1 falls sich kein Tab an der Position befindet
+	[1] - Ergebnis aus dem Hit Test:
+	 1 - Die Position befindet sich nicht &uuml;ber einem Tab
+	 2 - Die Position befindet sich &uuml;ber einem Icon des Tabs
+	 4 - Die Position befindet sich &uuml;ber einem Text des Tabs
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

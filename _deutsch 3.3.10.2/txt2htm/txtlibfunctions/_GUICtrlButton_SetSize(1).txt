@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlButton_SetSize
+
+###Description###
+Legt die Gr&ouml;&szlig;e des Buttons fest
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetSize ( $hWnd, $iWidth, $iHeight )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iWidth
+	Neue Breite des Buttons
+$iHeight
+	Neue H&ouml;he des Buttons
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_GetIdealSize
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###Function###
+WinWaitNotActive
+
+###Description###
+Unterbricht die Ausf&uuml;hrung des Skripts bis das angegebene Fenster nicht mehr aktiv ist.
+
+###Syntax###
+WinWaitNotActive ( "title" [, "text" [, timeout = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel / das Handle / die Klasse des Fensters, auf das gewartet werden soll.  Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text im Fenster, auf das gewartet werden soll. Standard ist ein leerer String. Siehe <a href="../intro/windowsbasic.htm#specialtext">Erweiterte Textbeschreibung</a>.
+timeout
+	[optional] Maximale Unterbrechungsdauer nach der fortgefahren wird, auch wenn das Fenster noch aktiv ist. Standard ist 0 (keine Unterbrechung)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 wenn die maximale Unterbrechungszeit &uuml;berschritten wurde.
+@@End@@
+
+
+###Remarks###
+Das Fenster wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+
+###Related###
+WinActive, WinExists, WinWait, WinWaitActive, WinWaitClose, WinWaitDelay (Option)
+
+
+###Example###
+@@IncludeExample@@

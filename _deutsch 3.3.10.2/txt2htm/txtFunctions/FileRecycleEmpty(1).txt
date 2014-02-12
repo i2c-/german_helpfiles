@@ -1,0 +1,35 @@
+###Function###
+FileRecycleEmpty
+
+###Description###
+Leert den Papierkorb.
+
+###Syntax###
+FileRecycleEmpty ( ["source"] )
+
+
+###Parameters###
+@@ParamTable@@
+source
+	[optional] Der Verzeichnispfad, des Laufwerkes dessen Papierkorb geleert werden soll - wenn nicht angegeben, werden alle Papierk&ouml;rbe geleert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 (der Papierkorb konnte nicht geleert werden - siehe unten).
+@@End@@
+
+
+###Remarks###
+Damit diese Funktion funktioniert, muss IE4 oder h&ouml;her verf&uuml;gbar sein.
+
+Das Leeren des Papierkorbes l&ouml;scht die Dateien nicht physikalisch, so dass sie recht einfach wiederhergestellt werden k&ouml;nnen. Sollen die Dateien dauerhaft gel&ouml;scht werden, muss man geeignete Spezialtools verwenden.
+
+
+###Related###
+FileDelete, FileRecycle
+
+
+###Example###
+@@IncludeExample@@

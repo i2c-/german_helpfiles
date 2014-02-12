@@ -1,0 +1,46 @@
+###User Defined Function###
+_NamedPipes_SetNamedPipeHandleState
+
+###Description###
+Legt den Lesemodus und den Wartemodus der angegebenen benannten Pipe fest.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_SetNamedPipeHandleState ( $hNamedPipe, $iRead, $iWait [, $iBytes = 0 [, $iTimeOut = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hNamedPipe
+	Handle zu der Instanz der benannten Pipe.
+$iRead
+	Pipe-Lesemodus. Darf folgende Werte annehmen:
+		0 - Daten werden als Byte-Stream aus der Pipe gelesen.
+		1 - Daten werden als Nachrichten-Stream aus der Pipe gelesen.
+$iWait
+	Pipe-Wartemodus. Darf folgende Werte annehmen:
+		0 - Blockierender Modus aktiviert.
+		1 - Nichtblockierender Modus aktiviert.
+$iBytes
+	[optional] Maximale Anzahl von Bytes die gesammelt werden, bevor sie zum Server &uuml;bertragen werden.
+$iTimeout
+	[optional] Maximale Zeit (in Millisekunden) die vergehen darf, bis eine ferngesteuerte Pipe Informationen &uuml;bermittelt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_NamedPipes_GetNamedPipeHandleState
+
+
+###See Also###
+@@MsdnLink@@ SetNamedPipeHandleState

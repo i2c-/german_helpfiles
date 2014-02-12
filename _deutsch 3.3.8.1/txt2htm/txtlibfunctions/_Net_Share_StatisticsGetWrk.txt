@@ -1,0 +1,75 @@
+###User Defined Function###
+_Net_Share_StatisticsGetWrk
+
+###Description###
+Ermittelt die Verbindungsstatistik einer Workstation
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_StatisticsGetWrk([$sWorkStation = ""])
+
+###Parameters###
+@@ParamTable@@
+$sWorkStation
+	[optional] Legt den DNS- oder NetBIOS-Namen des Remote-Servers fest, auf dem die Funktion ausgef&uuml;hrt werden soll.
+		Wenn dieser Parameter leer ist, wird der lokale Computer verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[ 0] - Zeit, zu der die Datensammlung begonnen wurde. Der Wert wird die Anzahl der Sekunden gespeichert, die seit dem 1. Januar 1970 00:00:00 vergangen sind.
+	[ 1] - Anzahl der von der Workstation empfangenen Bytes
+	[ 2] - Anzahl der von der Workstation empfangenen Nachrichtenbl&ouml;cke (SMBs)
+	[ 3] - Bytes, die durch Paging-I/O-Anfragen gelesen wurden
+	[ 4] - Bytes, die durch Non-Paging-I/O-Anfragen gelesen wurden
+	[ 5] - Bytes, die durch Cache-I/O-Anfragen gelesen wurden
+	[ 6] - Bytes, die durch Disk-I/O-Anfragen gelesen wurden
+	[ 7] - Anzahl der von der Workstation gesendeten Bytes
+	[ 8] - Anzahl der von der Workstation gesendeten Nachrichtenbl&ouml;cke (SMBs)
+	[ 9] - Bytes, die durch Paging-I/O-Anfragen geschrieben wurden
+	[10] - Bytes, die durch Non-Paging-I/O-Anfragen geschrieben wurden
+	[11] - Bytes, die durch Cache-I/O-Anfragen geschrieben wurden
+	[12] - Bytes, die durch Disk-I/O-Anfragen geschrieben wurden
+	[13] - Netzwerkoperationen, deren Ausf&uuml;hrung nicht gestartet werden konnte
+	[14] - Netzwerkoperationen, deren Ausf&uuml;hrung nicht fertiggestellt werden konnte
+	[15] - Leseoperationen, die von der Workstation initiiert wurden
+	[16] - Leseoperationen mit wahlfreiem Zugriff, die von der Workstation initiiert wurden
+	[17] - Leseanfragen, welche die Workstation an Server gesendet hat
+	[18] - Leseanfragen, welche die Workstation an Server gesendet hat, deren Gr&ouml;&szlig;e mindestens doppelt so gro&szlig; wie der ausgehandelte Puffer des Servers war
+	[19] - Leseanfragen, welche die Workstation an Server gesendet hat, deren Gr&ouml;&szlig;e kleiner als 1/4 der ausgehandelten Puffergr&ouml;&szlig;e des Servers war
+	[20] - Schreiboperationen, die von der Workstation initiiert wurden
+	[21] - Schreiboperationen mit wahlfreiem Zugriff, die von der Workstation initiiert wurden
+	[22] - Schreibanfragen, welche die Workstation an Server gesendet hat
+	[23] - Schreibanfragen, welche die Workstation an Server gesendet hat, deren Gr&ouml;&szlig;e mindestens doppelt so gro&szlig; wie der ausgehandelte Puffer des Servers war
+	[24] - Schreibanfragen, welche die Workstation an Server gesendet hat, deren Gr&ouml;&szlig;e kleiner als 1/4 der ausgehandelten Puffergr&ouml;&szlig;e des Servers war
+	[25] - Raw-Leseanfragen durch die Workstation, die verweigert wurden
+	[26] - Raw-Schreibanfragen durch die Workstation, die verweigert wurden
+	[27] - Netzwerkfehler, die von der Workstation empfangen wurden
+	[28] - Sitzungen, die von der Workstation eingerichtet wurden
+	[29] - Anzahl der Fehlversuche der Workstation, eine Sitzung zu erstellen
+	[30] - Fehlerhafte Verbindungen
+	[31] - Erfolgreiche PCNET-Verbindungen
+	[32] - Erfolgreiche LanManager 20 Verbindungen
+	[33] - Erfolgreiche LanManager 21 Verbindungen
+	[34] - Erfolgreiche Windows NT Verbindungen
+	[35] - Anzahl der Trennungen durch einen Netzwerkserver
+	[36] - Anzahl der abgelaufenen Sitzungen auf der Workstation
+	[37] - Verbindungen, die von der Workstation eingerichtet wurden
+	[38] - Anzahl der Fehlversuche der Workstation, eine Verbindung herzustellen
+	[39] - Zurzeit noch nicht abgeschlossene Anfragen
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Es ist keine besondere Gruppenmitgliedschaft notwendig, um Workstation-Statistiken zu erhalten. Aber nur Mitglieder der lokalen
+Administrator- oder Server-Operator-Gruppe k&ouml;nnen diese Funktion erfolgreich auf einem Remote Server ausf&uuml;hren.
+
+###Related###
+_Net_Share_StatisticsGetSvr
+
+###See Also###
+@@MsdnLink@@ NetStatisticsGet
+
+###Example###
+@@IncludeExample@@

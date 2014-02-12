@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlToolbar_SetColorScheme
+
+###Description###
+Setzt die Informationen zu einem Farbenschema
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetColorScheme($hWnd, $iHighlight, $iShadow)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iHighlight
+	hervorgehobene Farbe
+$iShadow
+	Schattenfarbe
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Das Control verwendet Informationen &uuml;ber das Farbenschema, wenn es 3D Items im Control zeichnet
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetColorScheme
+
+###Example###
+@@IncludeExample@@

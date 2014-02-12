@@ -1,0 +1,36 @@
+###User Defined Function###
+_SoundClose
+
+###Description###
+Schlie&szlig;t eine zuvor mit _SoundOpen ge&ouml;ffnete Sounddatei.
+
+###Syntax###
+#include <Sound.au3>
+_SoundClose ( $aSnd_id )
+
+
+###Parameters###
+@@ParamTable@@
+$aSnd_id
+	Sound ID Array welches durch _SoundOpen() zur&uuml;ckgegeben wurde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0.
+@Error:	1 = Fehler
+	3 = Ung&uuml;ltige Sound ID. Es ist das zur&uuml;ckgegebene Array von _SoundOpen() zu verwenden.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SoundOpen
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlSlider_GetNumTics
+
+###Description###
+Ermittelt die Anzahl von Skalenstrichen des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetNumTics($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Falls kein Skalenflag gesetzt ist, wird 2 f&uuml;r das erste und letzte Skalenstrich zur&uuml;ckgegeben.
+
+	Falls $TBS_NOTICKS gesetzt ist, wird 0 zur&uuml;ckgegeben.
+	Sonst wird der Unterschied zwischen dem minimalen und maximalen Bereich geteilt durch die Strichfrequenz plus 2 zur&uuml;ckgegeben.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetTicFreq
+
+###Example###
+@@IncludeExample@@

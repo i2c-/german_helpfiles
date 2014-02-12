@@ -1,0 +1,48 @@
+###Function###
+FileSetAttrib
+
+###Description###
+Setzt die Attribute einer oder mehrerer Dateien.
+
+
+###Syntax###
+FileSetAttrib ( "file pattern", "+-RASHNOT" [, recurse] )
+
+
+###Parameters###
+@@ParamTable@@
+file pattern
+	Datei(en), die ver&auml;ndert werden sollen, z. B. C:\*.au3 oder C:\Dir
++-RASHNOT
+	Attribut(e), die gesetzt oder entfernt werden sollen, z.B. "+A", "+RA-SH"
+recurse
+	[optional] Wenn dies auf 1 gesetzt ist, werden Verzeichnisse rekursiv durchsucht. Standard ist 0 (keine Rekursion).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn irgendwelche Fehler aufgetreten sind.
+@@End@@
+
+
+###Remarks###
+Die <i>file pattern</i> darf keine Leerzeichen enthalten!
+Die Attribute, die mit der Funktion ver&auml;ndert werden k&ouml;nnen, sind + oder -:
+"R" = Schreibgesch&uuml;tzt (READONLY)
+"A" = Archiv (ARCHIVE)
+"S" = System (SYSTEM)
+"H" = Versteckt (HIDDEN)
+"N" = Normal (NORMAL)
+"O" = Offline (OFFLINE)
+"T" = Tempor&auml;r (TEMPORARY)
+
+(Es ist zu beachten, dass das Attribut "komprimiertes Verzeichnis" nicht gesetzt werden kann.)
+
+###Related###
+FileGetAttrib, FileGetTime, FileSetTime
+
+
+###Example###
+@@IncludeExample@@

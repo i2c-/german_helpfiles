@@ -1,0 +1,33 @@
+###User Defined Function###
+_StringRepeat
+
+###Description###
+Ein String wird eine bestimmte Anzahl mal wiederholt.
+
+###Syntax###
+#include <String.au3>
+_StringRepeat($sString, $iRepeatCount)
+
+###Parameters###
+@@ParamTable@@
+$sString
+	String, der wiederholt werden soll
+$iRepeatCount
+	Zahl der Wiederholungen vom String
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den String eine bestimmte Anzahl mal zur&uuml;ck
+Fehler:	Gibt einen leeren String ("") zur&uuml;ck und setzt @error
+@Error:	0 = Kein Fehler.
+	1 = Einer der Parameter ist ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

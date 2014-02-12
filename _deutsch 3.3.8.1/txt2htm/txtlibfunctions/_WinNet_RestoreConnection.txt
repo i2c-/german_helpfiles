@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinNet_RestoreConnection
+
+###Description###
+Stellt die Verbindung zu einer Netzwerkressource wieder her.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_RestoreConnection([$sDevice = "" [, $hWnd = 0 [, $fUseUI = True]]])
+
+###Parameters###
+@@ParamTable@@
+$sDevice
+	[optional] Der lokale Name des Laufwerks, mit dem verbunden werden soll, z.B."Z:". Wenn leer, werden alle Verbindungen wiederhergestellt, die
+		dauerhaft als Laufwerk in der Registry des aktuellen Benutzers gespeichert sind.
+$hWnd
+	[optional] Handle zum Parent-Fenster, das die Funktion benutzt, um den Benutzer nach Name und Passwort f&uuml;r die Netzwerkverbindung zu fragen.
+		Wenn 0, hat das Fenster keinen Besitzer.
+$fUseUI
+	[optional] Wenn True, wird dem Aufrufer ein Login-Dialog angezeigt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ WNetRestoreConnection

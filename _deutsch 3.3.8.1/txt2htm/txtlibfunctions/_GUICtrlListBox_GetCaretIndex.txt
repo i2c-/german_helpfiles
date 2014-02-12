@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlListBox_GetCaretIndex
+
+###Description###
+Gibt den Index des Item zur&uuml;ck, welches den Fokus besitzt.
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetCaretIndex($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	0-basierender Index des ausgew&auml;hltem Item
+Fehler:	-1 wenn nichts ausgew&auml;hlt wurde
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_SetCaretIndex
+
+###Example###
+@@IncludeExample@@

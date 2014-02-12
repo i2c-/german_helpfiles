@@ -1,0 +1,27 @@
+###Function###
+WinMinimizeAllUndo
+
+###Description###
+Macht eine vorangegangene "WinMinimizeAll"-Funktion r&uuml;ckg&auml;ngig.
+
+###Syntax###
+WinMinimizeAllUndo (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Das Dr&uuml;cken von Win + M erledigt das gleiche.
+
+
+###Related###
+WinMinimizeAll, WinSetState
+
+
+###Example###
+@@IncludeExample@@

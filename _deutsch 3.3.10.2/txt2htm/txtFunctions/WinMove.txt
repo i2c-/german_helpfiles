@@ -1,0 +1,52 @@
+###Function###
+WinMove
+
+###Description###
+Verschiebt oder und &auml;ndert die Gr&ouml;&szlig;e eines Fensters.
+
+###Syntax###
+WinMove ( "title", "text", x, y [, width [, height [, speed]]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel / das Handle / die Klasse des zu ver&auml;ndernden Fensters.  Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	Der Text des zu ver&auml;ndernden Fensters. 
+x
+	X-Koordinate, an die bewegt werden soll.
+y
+	Y-Koordinate, an die bewegt werden soll.
+width
+	[optional] Neue Fensterh&ouml;he.
+height
+	[optional] Neue Fensterbreite.
+speed
+	[optional] Die Geschwindigkeit, mit welcher die Fensteranpassungen vorgenommen werden sollen, von 1 (schnell) bis 100 (langsam). Wenn dieser Parameter nicht angegeben wird, werden die &Auml;nderungen ohne Verz&ouml;gerung vorgenommen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Handle des Fensters
+Fehler:	0 wenn das Fenster nicht ausgemacht werden konnte
+@@End@@
+
+
+###Remarks###
+<a href="WinMove.htm">WinMove()</a> arbeitet zwar nicht mit minimierten, wohl aber mit versteckten Fenstern.
+Werden die Breite sehr gro&szlig; oder die H&ouml;he sehr klein (oder negativ) angegeben, kann das Fenster nicht kleiner als 112 x 27 Pixel werden. Ist die Breite und H&ouml;he sehr gro&szlig; angegeben, kann das Fenster nicht gr&ouml;&szlig;er als ca. [12+@DesktopWidth] x [12+@DesktopHeight] Pixel werden.
+Negative Werte sind f&uuml;r die X- und Y-Koordinaten erlaubt. Damit kann ein Fenster auch aus dem Bildschirm hinaus bewegt werden. Ist es nun ein Programm, welches sich an seine letzte Fensterposition erinnert, wird das Fenster am Fensterrand erscheinen, aber noch voll auf dem Bildschirm.
+Falls mehrere Fenster das Kriterium erf&uuml;llen, wird das zuletzt aktive Fenster genommen.
+
+Werden x und y mit "default" angegeben (<a href="../keywords/Default.htm">Schl&uuml;sselwort Default</a>) wird nur die Fenstergr&ouml;&szlig;e ge&auml;ndert.
+
+Wenn "speed" angegeben ist wird die Bewegung mit der neuen Gr&ouml;&szlig;e vollzogen.
+
+
+###Related###
+WinActivate, WinClose, WinGetClientSize, WinGetPos, WinSetState
+
+
+###Example###
+@@IncludeExample@@

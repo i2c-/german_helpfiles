@@ -1,0 +1,40 @@
+###Structure Name###
+$tagBITMAPINFO
+
+###Description###
+Diese Struktur definiert die Dimension und Farbinformationen einer Windowsbasierten Ger&auml;teunabh&auml;ngigen Bitmap (DIB).
+
+###Syntax###
+Global Const $tagBITMAPINFO = "struct; dword Size;long Width;long Height;word Planes;word BitCount;dword Compression;dword SizeImage;" & _
+		"long XPelsPerMeter;long YPelsPerMeter;dword ClrUsed;dword ClrImportant; endstruct;dword RGBQuad"
+
+###Fields###
+@@ParamTable@@
+Size
+	Die Anzahl der Bytes, die von der Struktur ben&ouml;tigt werden, minus der Gr&ouml;&szlig;e der RGBQuad Daten
+Width
+	Bestimmt die Breite der Bitmap, in Pixel
+Height
+	Bestimmt die H&ouml;he der Bitmap, in Pixel
+Planes
+	Bestimmt die Anzahl der Ebenen f&uuml;r das Zielger&auml;t. Dies muss auf 1 gesetzt werden
+BitCount
+	Bestimmt die Anzahl der Bits/Pixel (Farbtiefe)
+Compression
+	Bestimmt die Art der Kompression f&uuml;r eine komprimiert aufbauende Bitmap
+SizeImage
+	Bestimmt die Gr&ouml;&szlig;e, in Bytes, des Bildes
+XPelsPerMeter
+	Bestimmt die horizontale Aufl&ouml;sung, in Pixel/Meter, des Zielger&auml;tes f&uuml;r die Bitmap
+YPelsPerMeter
+	Bestimmt die vertikale Aufl&ouml;sung, in Pixel/Meter, des Zielger&auml;tes f&uuml;r die Bitmap
+ClrUsed
+	Bestimmt die Anzahl der Farbindizes in der Farbtabelle, die aktuell f&uuml;r die Bitmap genutzt werden
+ClrImportant
+	Bestimmt die Anzahl der Farbindizes die n&ouml;tig sind um die Bitmap anzuzeigen
+RGBQuad
+	Ein Array von tagRGBQUAD Strukturen. Die Elemente des Arrays, welche die Farbtabelle ausmachen.
+@@End@@
+
+###Remarks###
+Keine.

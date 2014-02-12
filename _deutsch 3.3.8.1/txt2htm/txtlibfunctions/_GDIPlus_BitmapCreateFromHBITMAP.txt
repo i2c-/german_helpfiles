@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_BitmapCreateFromHBITMAP
+
+###Description###
+Erstellt ein Bitmap-Objekt von einem Bitmap-Handle
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCreateFromHBITMAP($hBmp [, $hPal = 0])
+
+###Parameters###
+@@ParamTable@@
+$hBmp
+	Handle zu einem HBITMAP
+$hPal
+	[optional] Handle zu einem HPALETTE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Bitmap-Objekt 
+Fehler:	0
+@@End@@
+
+###Remarks###
+Nachdem die Funktion beendet wurde, sollte _GDIPlus_BitmapDispose aufgerufen werden, um die Ressourcen wieder freizugeben.
+
+###Related###
+_WinAPI_DeleteObject
+
+###See Also###
+@@MsdnLink@@ GdipCreateBitmapFromHBITMAP
+
+###Example###
+@@IncludeExample@@

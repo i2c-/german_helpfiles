@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlEdit_SetModify
+
+###Description###
+Setzt oder l&ouml;scht das &Auml;nderungsflag
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetModify($hWnd, $fModified)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fModified
+	legt den neuen Wert f&uuml;r das &Auml;nderungsflag fest:
+		 True - zeigt, an, dass der Text ge&auml;ndert wurde.
+		False - zeigt, an, dass der Text nicht ge&auml;ndert wurde.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Das System &auml;ndert das &Auml;nderungsflag automatisch auf 0, wenn das Control erstellt wurde.
+Falls der Benutzer den Text des Controls &auml;ndert, setzt das System das Flag auf nonzero.
+Man kann _GUICtrlEdit_GetModify aufrufen, um das aktuelle Flag zu ermitteln.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_GetModify, _GUICtrlEdit_CanUndo
+
+###Example###
+@@IncludeExample@@

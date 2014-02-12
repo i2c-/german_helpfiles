@@ -1,0 +1,57 @@
+###User Defined Function###
+_IEFormElementCheckBoxSelect
+
+###Description###
+Setzt den Wert des angegebenen Formitems.
+
+###Syntax###
+#include <IE.au3> 
+_IEFormElementCheckBoxSelect(ByRef $o_object, $s_string [, $s_name = "" [, $f_select = 1 [, $s_mode = "byValue" [, $f_fireEvent = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable von einer Internet Explorer Anwendung, Formular Objekt
+$s_String
+	Wert wird zum Vergleichen von Elementen genutzt - Behandlungsweise basiert auf $s_mode
+$s_name
+	[optional] Name oder ID der Checkbox(en)
+$f_select
+	[optional] bestimmt ob ein Element gew&auml;hlt oder abgew&auml;hlt werden soll
+	-1 = gibt den Zustand zur&uuml;ck
+	0 = w&auml;hlt das Element ab
+	1 = (Standard) w&auml;hlt das Element aus
+$s_mode
+	[optional] spezieller Suchmodus
+	byValue = (Standard) Wert der Checkbox, die man ausw&auml;hlen m&ouml;chte
+	byIndex = 0-base Index von der Checkbox, die man ausw&auml;hlen m&ouml;chte
+$f_fireEvent
+	[optional] spezifiziert ob man ein OnChange und OnClick Ereignis, ausl&ouml;sen m&ouml;chte, nachdem man den Wert ge&auml;ndert hat
+	0 = nicht ausl&ouml;sen eines OnChange oder OnClick Ereignisses nach setzen des Wertes 
+	1 = (Standard) ausl&ouml;sen eines OnChange oder OnClick Ereignisses nach setzen des Wertes @@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	If $f_select = -1, gibt den momentanen Wahl Zustand zur&uuml;ck, else gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Der $f_fireEvent Parameter ist nur bedeutend, wenn das Formelement mit einem onChange Ereignis verbunden ist.
+
+$s_Name ist optional f&uuml;r diese Funktion.  Wenn man es ausl&auml;sst, wird die Funktion auf alle vorhandenen Elemente vom Typ <input type=checkbox> in dem Formular angewendet.
+Wenn man es angibt wird diese Funktion auf alle Elemente vom Typ  <input type=checkbox> mit diesem Namen angewendet.
+
+###Related###
+_IEFormElementOptionSelect, _IEFormElementRadioSelect, _IEFormElementGetValue, _IEFormElementSetValue
+
+
+###Example###
+@@IncludeExample@@

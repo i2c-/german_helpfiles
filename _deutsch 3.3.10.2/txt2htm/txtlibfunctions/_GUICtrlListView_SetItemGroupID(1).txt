@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_SetItemGroupID
+
+###Description###
+Setzt die Gruppe-ID eines Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemGroupID ( $hWnd, $iIndex, $iGroupID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iGroupID
+	Gruppen-ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemGroupID, _GUICtrlListView_InsertGroup
+
+
+###Example###
+@@IncludeExample@@

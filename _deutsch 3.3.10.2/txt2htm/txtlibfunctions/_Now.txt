@@ -1,0 +1,29 @@
+###User Defined Function###
+_Now
+
+###Description###
+Gibt das aktuelle Datum und die aktuelle Zeit entsprechend dem im PC eingestellten Format zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_Now (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt das aktuelle Datum und aktuelle Zeit entsprechend dem im PC eingestellten Format zur&uuml;ck
+
+
+###Remarks###
+Falls das Datumsformat in der Registry nicht gefunden wird, wird das Datum im Format MM/DD/YYYY zur&uuml;ckgegeben.
+Falls das Zeitformat in der Registry nicht gefunden wird, wird die Zeit im Format HH:MM:SS zur&uuml;ckgegeben.
+
+
+###Related###
+_NowDate, _NowTime
+
+
+###Example###
+@@IncludeExample@@

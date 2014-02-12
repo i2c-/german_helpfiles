@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTab_SetItemState
+
+###Description###
+Setzt den Status eines Tabs
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetItemState($hWnd, $iIndex, $iState)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iState
+	Itemstatus. Kann eine Kombination der folgenden sein:
+		$TCIS_BUTTONPRESSED - Das Tab-Control ist markiert
+		$TCIS_HIGHLIGHTED - Das Tab-Control ist hervorgehoben
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_GetItemState
+
+###Example###
+@@IncludeExample@@

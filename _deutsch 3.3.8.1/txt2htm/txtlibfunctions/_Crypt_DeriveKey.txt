@@ -1,0 +1,42 @@
+###User Defined Function###
+_Crypt_DeriveKey
+
+###Description###
+Generiert einen Schl&uuml;ssel aus dem Algorithmus und dem Passwort
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_DeriveKey($vPassword, $iALG_ID [, $iHash_ALG_ID = $CALG_MD5])
+
+###Parameters###
+@@ParamTable@@
+$vPassword
+	Zu verwendendes Passwort
+$iALG_ID
+	Verschl&uuml;sselungs ID des Algorithmus f&uuml;r den Schl&uuml;ssel
+$iHash_ALG_ID
+	[optional] Id des Algorithmus um das Passwort zu zerst&uuml;ckeln
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg	Gibt den Handle des Algorithmusschl&uuml;ssel,
+	Setzt @error auf 0
+Fehler	Gibt -1 zur&uuml;ck und setzt @error auf:
+	1 - Konnte kein Hash Objekt erstellen
+	2 - Konnte das Passwort nicht Zerst&uuml;ckeln
+	3 - Konnte keinen Schl&uuml;ssel generieren
+@@End@@
+
+###Remarks###
+Der Schl&uuml;ssel wird zerst&ouml;rt mit _Crypt_DestroyKey.
+Der AES Algorithmus ist auf Windows 2000 nicht verf&uuml;gbar.
+
+###Related###
+_Crypt_DestroyKey, _Crypt_EncryptData, _Crypt_EncryptFile, _Crypt_DecryptData, _Crypt_DecryptFile
+
+###See Also###
+@@MsdnLink@@ CryptDeriveKey
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTreeView_DeleteAll
+
+###Description###
+L&ouml;scht alle Items eines Treeview Controls
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_DeleteAll($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_Delete, _GUICtrlTreeView_DeleteChildren
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlListView_GetSelectedIndices
+
+###Description###
+Ermittelt die Indizes der markierten Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetSelectedIndices ( $hWnd, $fArray = False )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fArray
+	Gibt einen String oder ein Array zur&uuml;ck
+		True - gibt ein Array zur&uuml;ck
+		False - gibt einen durch "|" getrennten String zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	markierte Indizes basierend auf $fArray:
+	Array mit dem folgenden Format
+		[0] - Anzahl von Items im Array (n)
+		[1] - Erster Itemindex
+		[2] - Zweiter Itemindex
+		[n] - Letzter Itemindex
+	String mit dem folgenden Format
+		"0|1|2|n"
+Fehler:	basierend auf $fArray
+	Array mit dem folgenden Format
+		[0] - Anzahl von Items im Array (0)
+	leerer String ("")
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

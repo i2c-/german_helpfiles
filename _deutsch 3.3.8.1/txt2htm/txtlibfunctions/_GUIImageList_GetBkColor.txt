@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUIImageList_GetBkColor
+
+###Description###
+Ermittelt die aktuelle Hintergrundfarbe f&uuml;r eine Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetBkColor($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Hintergrundfarbe zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_SetBkColor
+
+###Example###
+@@IncludeExample@@

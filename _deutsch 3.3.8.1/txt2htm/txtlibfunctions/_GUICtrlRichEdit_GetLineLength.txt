@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetLineLength
+
+###Description###
+Gibt die L&auml;nge der Zeile zur&uuml;ck
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetLineLength($hWnd, $iLine)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iLine
+	Zeilennummer
+		Besonderer Wert: -1 - Gibt die Anzahl nicht ausgew&auml;hlter Zeichen der Zeilen zur&uuml;ck, in denen es eine Auswahl gibt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Mehrzeiliges Control - L&auml;nge der Zeile (in Zeichen)
+	Einzeiliges Control - Anzahl der Zeichen im Control
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iLine ist weder positiv noch -1
+	1022 - $iLine ist gr&ouml;&szlig;er als die Anzahl der Zeichen im Control
+@@End@@
+
+###Remarks###
+Ein Control, das keinen Text enth&auml;lt, hat eine Zeile.
+Die erste Zeichenposition in einem Control ist 0.
+
+Das Ergebnis enth&auml;lt keine Wagenr&uuml;cklauf-Zeichen (@CR) am Ende der Zeile.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EM_LINELENGTH
+
+###Example###
+@@IncludeExample@@

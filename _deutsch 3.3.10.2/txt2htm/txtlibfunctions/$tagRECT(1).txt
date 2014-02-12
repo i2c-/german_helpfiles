@@ -1,0 +1,25 @@
+###Structure Name###
+$tagRECT
+
+###Description###
+Definiert die Koordinaten der oberen linken Ecke und der unteren rechten Ecke eines Rechtecks
+
+###Syntax###
+Global Const $tagRECT = "struct; long Left;long Top;long Right;long Bottom; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+Left
+	legt die X-Koordinate der oberen linken Ecke fest
+Top
+	legt die Y-Koordinate der oberen linken Ecke fest
+Right
+	legt die X-Koordinate der unteren rechten Ecke fest
+Bottom
+	legt die Y-Koordinate der unteren rechten Ecke fest
+@@End@@
+
+
+###Remarks###
+Keine.

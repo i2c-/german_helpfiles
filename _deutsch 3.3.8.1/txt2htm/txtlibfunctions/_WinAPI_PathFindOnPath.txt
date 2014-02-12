@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_PathFindOnPath
+
+###Description###
+Sucht eine Datei in den Standard-Systempfaden
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_PathFindOnPath($szFile, $aExtraPaths="", $szPathDelimiter=@LF)
+
+###Parameters###
+@@ParamTable@@
+$szFile
+	Dateiname der gesucht werden soll
+$aExtraPaths
+	Extra Pfade die vor allen anderen gepr&uuml;ft werden sollen.
+$szPathDelimiter
+	Trennzeichen das genutzt wird, um $aExtraPaths zu splitten wenn es ein Nicht-leerer String ist (StringSplit mit Flag 2).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Vollst&auml;ndiger Pfad der gefundenen Datei
+Fehler:	Unver&auml;nderter Dateiname, @error=1
+@@End@@
+
+###Remarks###
+$aExtraPaths kann eine Liste mit Pfaden enthalten, zu pr&uuml;fen vor allen Systemstandards.
+Es kann ein Array oder ein String sein. Ist es Ersteres, sollte es keine Z&auml;hlung im ersten Element enthalten.
+Ist es Letzteres, wird $szPathDelimiter durch das Trennzeichen gesplittet, welches standardm&auml;&szlig;ig @LF ist.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ PathFindOnpath
+
+###Example###
+@@IncludeExample@@
+

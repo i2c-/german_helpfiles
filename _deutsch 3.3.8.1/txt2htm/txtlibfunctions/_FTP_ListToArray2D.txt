@@ -1,0 +1,40 @@
+###User Defined Function###
+_FTP_ListToArray2D
+
+###Description###
+Listet Namen und Gr&ouml;&szlig;en der Dateien des aktuellen Remoteverzeichnisses.
+
+###Syntax###
+#include <FTPEx.au3>
+_Ftp_ListToArray2D($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $l_Context]]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabe von _FTP_Connect().
+$Return_type
+	[optional] 0 = Dateien und Verzeichnisse, 1 = nur Verzeichnisse, 2 = nur Dateien.
+$l_Flags
+	[optional] siehe _FTP_FindFileFirst().
+$l_Context
+	[optional] Eine Variable, die einen anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit beliebigen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um eine Status Callbackfunktion zu setzen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	2D-Array mit Namen und Gr&ouml;&szlig;en der Dateien. Array[0][0] enth&auml;lt die Anzahl gefundener Eintr&auml;ge.
+Fehler:	Array[0][0] = 0
+@@End@@
+
+###Remarks###
+Array[0][0] = Anzahl gefundener Eintr&auml;ge
+
+Array[x][0] Dateiname
+Array[x][1] Dateigr&ouml;&szlig;e
+
+###Related###
+_FTP_Connect, _FTP_SetStatusCallback
+
+###Example###
+@@IncludeExample@@

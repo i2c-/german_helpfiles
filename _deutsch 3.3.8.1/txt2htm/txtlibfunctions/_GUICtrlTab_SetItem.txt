@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTab_SetItem
+
+###Description###
+Setzt Informationen &uuml;ber einen Tab
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetItem($hWnd, $iIndex [, $sText = -1 [, $iState = -1 [, $iImage = -1 [, $iParam = -1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$sText
+	[optional] Itemtext
+$iState
+	[optional] Itemstatus
+$iImage
+	[optional] 0-basierendes Itembild
+$iParam
+	[optional] anwendungsspezifische Daten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_GetItem
+
+###Example###
+@@IncludeExample@@

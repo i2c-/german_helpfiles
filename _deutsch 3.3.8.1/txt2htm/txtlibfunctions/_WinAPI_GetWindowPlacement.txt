@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetWindowPlacement
+
+###Description###
+Ermittelt die minimale, maximale und normale Position des Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindowPlacement($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagWINDOWPLACEMENT Struktur mit den Ortskoordinaten
+Fehler:	0, @error = 1, @extended = _WinAPI_GetLastError()
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_SetWindowPlacement, $tagWINDOWPLACEMENT
+
+###See Also###
+@@MsdnLink@@ GetWindowPlacement
+
+###Example###
+@@IncludeExample@@

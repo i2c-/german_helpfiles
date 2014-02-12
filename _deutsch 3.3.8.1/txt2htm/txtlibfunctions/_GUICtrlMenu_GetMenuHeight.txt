@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuHeight
+
+###Description###
+Ermittelt die maximale H&ouml;he des Men&uuml;s
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuHeight($hMenu)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+@@End@@
+
+###ReturnValue###
+Gibt die maximale H&ouml;he des Men&uuml;s in Pixel zur&uuml;ck
+
+###Remarks###
+Wenn die Men&uuml;items den verf&uuml;gbaren Platz &uuml;berschreitet, werden automatisch Scrollbars verwendet. Der Standard (0) ist die Bildschirmh&ouml;he.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetMenuHeight
+
+###Example###
+@@IncludeExample@@

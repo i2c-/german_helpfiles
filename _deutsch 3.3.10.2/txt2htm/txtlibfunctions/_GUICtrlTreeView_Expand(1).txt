@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlTreeView_Expand
+
+###Description###
+Erweitert (aufklappen) oder reduziert (zuklappen) die Liste mit den Subitems, welche zu dem festgelegten "Parent"-Item geh&ouml;ren
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_Expand ( $hWnd [, $hItem = 0 [, $fExpand = True]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	[optional] Handle des Items. Standard 0 bedeutet alle Items werden aufgeklappt
+$fExpand
+	[optional] Erweitern oder reduzieren, folgende Werte verwenden:
+		True - Erweitert Items
+		False - Reduziert Items
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_ExpandedOnce, _GUICtrlTreeView_GetExpanded
+
+
+###Example###
+@@IncludeExample@@

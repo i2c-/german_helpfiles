@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_ImageSaveToFile
+
+###Description###
+Speichert ein Bild in einer Datei
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageSaveToFile($hImage, $sFileName)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu dem Bild-Objekt
+$sFileName
+	Kompletter Dateiname des Bildes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ImageLoadFromFile, _GDIPlus_ImageSaveToFileEx
+
+###See Also###
+@@MsdnLink@@ GdipSaveImageToFile
+
+###Example###
+@@IncludeExample@@

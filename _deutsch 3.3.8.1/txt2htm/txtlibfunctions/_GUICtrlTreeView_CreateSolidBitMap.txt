@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTreeView_CreateSolidBitMap
+
+###Description###
+Erstellt ein vollfarbiges Bitmap
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_CreateSolidBitMap($hWnd, $iColor, $iWidth, $iHeight)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iColor
+	Die Farbe des Bitmaps, dargestellt in RGB
+$iWidth
+	Die Breite des Bitmaps
+$iHeight
+	Die H&ouml;he des Bitmaps
+@@End@@
+
+###ReturnValue###
+Gibt das Handle des Bitmaps zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlSlider_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_Destroy ( ByRef $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True, $hWnd wird auf 0 gesetzt
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Funktioniert nur mit einem Slider-Controls, welche mit _GUICtrlSlider_Create() erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_Create
+
+
+###Example###
+@@IncludeExample@@

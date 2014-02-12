@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlMenu_MapAccelerator
+
+###Description###
+Stellt eine Abk&uuml;rzungstaste (Tastenkombination die einen schnellen Zugriff auf Funktionen erm&ouml;glicht) in deren Position des Men&uuml;s dar.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_MapAccelerator($hMenu, $cAccel)
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$cAccel
+	Beschleunigertaste
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die 0-basierende Position des Items in dem Men&uuml;
+Fehler:	-1
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

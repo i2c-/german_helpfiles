@@ -1,0 +1,32 @@
+###User Defined Function###
+_GDIPlus_PenSetColor
+
+###Description###
+Setzt die Farbe des Zeichenstifts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenSetColor($hPen, $iARGB)
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu dem Zeichenstift-Objekt
+$iARGB
+	Alpha, Rot, Gr&uuml;n und Blau Komponenten der Zeichenstiftfarbe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenGetColor
+
+###See Also###
+@@MsdnLink@@ GdipSetPenColor

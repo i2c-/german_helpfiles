@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetScrollPos
+
+###Description###
+Scrollt die Anzeige so, dass ($ix,$iY) sich in der oberen linken Ecke des Controls befinden
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetScrollPos ( $hWnd, $iX, $iY )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iX
+	x-Koorindate (in Pixel)
+$iY
+	y-Koorindate (in Pixel)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	102 - $iX ist weder eine positive Zahl noch null
+	103 - $iY ist weder eine positive Zahl noch null
+@@End@@
+
+
+###Remarks###
+Der Text darf nicht komplett aus dem Ansichtsrechteck gescrollt werden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetScrollPos
+
+
+###See Also###
+@@MsdnLink@@ EM_SETSCROLLPOS
+
+
+###Example###
+@@IncludeExample@@

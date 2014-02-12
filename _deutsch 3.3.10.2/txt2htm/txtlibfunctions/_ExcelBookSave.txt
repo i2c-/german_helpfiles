@@ -1,0 +1,37 @@
+###User Defined Function###
+_ExcelBookSave
+
+###Description###
+Speichert die aktive Excel-Datei des angegebenen Excel-Objekts.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelBookSave ( $oExcel [, $fAlerts = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel-Objekt, welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$fAlerts
+	[optional] Flag f&uuml;r das Deaktivieren/Aktivieren von Hinweisfenstern (0 = deaktiviert, 1 = aktiviert) (Standard = 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - Datei existiert, &Uuml;berschreibflag nicht gesetzt
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlEdit_CharFromPos
+
+###Description###
+Ermittelt Informationen &uuml;ber das Zeichen, welches sich am n&auml;chsten zu einem festgelegten Punkt im Client-Bereich des Fensters befindet.
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_CharFromPos ( $hWnd, $iX, $iY )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iX
+	Horizontale Position des Bezugspunkts 
+$iY
+	Vertikale Position des Bezugspunkts 
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - 0-basierender Index des Zeichens, welches sich am n&auml;chsten zu einem festgelegten Punkt befindet
+	[1] - 0-basierender Index der Zeile,  welche das Zeichen im Parameter 0 enth&auml;lt
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlTreeView_SelectItem
+
+###Description###
+W&auml;hlt das festgelegte Item aus, scrollt das Item in die Ansicht oder zeichnet das Item neu
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SelectItem($hWnd, $hItem [, $iFlag=0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iFlag
+	[optional] Aktionsflag:
+		$TVGN_CARET - Setzt die Auswahl auf das festgelegte Item
+		$TVGN_DROPHILITE - Zeichnet das festgelegte Item gem&auml;&szlig; dem Stil neu, um das Ziel der drag-and-drop Aktion zu verwenden
+		$TVGN_FIRSTVISIBLE - Scrollt das Treeview vertikal, so dass das festgelegte Item das erste sichtbare Item ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Der hier gesetzte Status kann nur durch die Funktion _GUICtrlTreeView_GetSelection ermittelt werden.
+Es kann nur ein Item ausgew&auml;hlt sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

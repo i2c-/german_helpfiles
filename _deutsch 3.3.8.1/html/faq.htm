@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AutoIt FAQ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="css/default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1><a name="FAQ"></a>H&auml;ufig gestellte Fragen (FAQ)</h1>
+<p>Dieser Abschnitt stellt einige der im <a class="ext" href="http://www.autoitscript.com/forum/">Forum</a>
+h&auml;ufiger gestellten Fragen zusammen. Wenn du die Antwort auf deine Frage hier nicht findest, 
+dann sollte das <a class="ext" href="http://www.autoitscript.com/forum/">Forum</a> deine erste Anlaufstelle sein.</p>
+<h2>Fragen</h2>
+<p>1. <a href="#1">Warum laufen meine alten Skripte aus der Version 2.64 in der Version 3 nicht (mehr)?</a></p>
+<p>2. <a href="#2">Ist die Version 3 nicht viel komplizierter als die vorherigen Versionen?</a></p>
+<p>3. <a href="#3">Wie kann ich meine Skripte aus der Version 2.64 in Version 3-konforme Skripte umwandeln?</a></p>
+<p>4. <a href="#4">Wo ist der "goto"-Befehl hingekommen?</a></p>
+<p>5. <a href="#5">Wie kann ich DOS-Programme aus AutoIt heraus ausf&uuml;hren?</a></p>
+<p>6. <a href="#6">Warum funktioniert der "run"-Befehl nur bei .exe- und .com-Dateien, nicht aber bei .msi-, .txt- oder anderen Dateien?</a></p>
+<p>7. <a href="#7">Warum erhalte ich Fehlermeldungen, wenn ich doppelte Anf&uuml;hrungszeichen (") verwende?</a></p>
+<p>8. <a href="#8">Was bedeuten die Fenster<b>titel</b> und -<b>text</b>-Parameter?</a></p>
+<p>9. <a href="#9">Warum kann ich Variablen nicht verwenden, indem ich folgendes schreibe: "Meine Variable hat den Wert $variable"?</a></p>
+<p>10. <a href="#10">Warum passieren merkw&uuml;rdige Dinge, wenn ich Variablen an den Send-Befehl &uuml;bergebe?</a></p>
+<p>11. <a href="#11">Was ist der Unterschied zwischen dem "return"-Wert und @error?</a></p>
+<p>12. <a href="#12">Wie kann ich mein Skript &uuml;ber einen Hotkey beenden?</a></p>
+<p>13. <a href="#13">Wie kann ich ein selbst gew&auml;hltes Icon benutzen, wenn ich mein Skript kompiliere?</a></p>
+<p>14. <a href="#14">Wie kann ich sicher gehen, dass nur eine Instanz meines Skriptes l&auml;uft?</a></p>
+<p>15. <a href="#15">Wo liegen die derzeitigen technischen Grenzen von AutoIt v3?</a></p>
+<p>16. <a href="#16">Ich habe ein Symbol wie bei fehlenden Bildern unter den Beispielen in der Hilfe.</a></p>
+<p> </p>
+<p> </p>
+
+
+
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+<h2><a name="1"></a>1. Warum laufen meine alten Skripte aus der Version 2.64 in der Version 3 nicht (mehr)?</h2>
+<p>Die Version 3 hat eine andere Sprachstruktur als die Version 2.64.
+</p>
+
+<p>Fr&uuml;here Versionen von AutoIt erf&uuml;llten den Zweck, f&uuml;r
+den sie gedacht waren - einfache Skripte zu schreiben, um bei
+Softwareinstallationen zu helfen - sehr gut. Aber mit der Zeit wollten
+die Nutzer das Programm immer universeller f&uuml;r kompliziertere
+Skripting-Aufgaben nutzen. Die alte Syntaxstruktur lie&szlig; das zwar
+zu, es w&auml;re aber sehr, sehr schwierig und hindernisreich geworden.
+Also haben wir die Entscheidung getroffen, AutoIt st&auml;rker auf
+verschiedenste Automationsaufgaben auszurichten und daf&uuml;r eine
+besser standardisierte und BASIC-artige Sprache zu entwerfen.
+Das bedeutet auch, dass sich AutoIt 3 sehr leicht aneignen l&auml;sst, 
+wenn man die alte Skriptsprache beherrscht.
+</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<p></p>
+
+<h2><a name="2"></a>2. Ist die Version 3 nicht viel komplizierter als die vorherigen Versionen?</h2>
+
+<p>Nein. Tats&auml;chlich ist sie in vielen Bereichen viel
+einfacher als die vorherigen Versionen, weil man nicht so sehr
+herumprobieren und die Sprache zu etwas zwingen muss, f&uuml;r das sie
+nie gedacht war. Au&szlig;erdem ist die Sprache BASIC-artig und
+BASIC ist daf&uuml;r bekannt, nun ja, eben grundlegend und einfach zu
+erlernen zu sein.</p>
+
+<p> </p>
+
+<p> Die &uuml;berw&auml;ltigende Masse der alten AutoIt-Skripte
+k&uuml;mmerten sich v.a. um Softwareinstallationen und darum, in vielen
+Dialogen auf "Weiter" zu klicken. Die meisten dieser Skripte
+k&ouml;nnen einfach an die neue Version angepasst werden, indem hie
+und da einige Klammern hinzugef&uuml;gt werden. Hier ein Beispiel
+eines solchen Skriptes in Version 2 und 3.
+Es simuliert eine Softwareinstallation mit einigen Dialogen, 
+die einen <u><strong>W</strong></u><strong>eiter</strong>-
+und einen <u><strong>F</strong></u><strong>ertig stellen</strong>-Button haben.
+
+</p>
+<p> </p>
+
+<p class="code"> ; v2.64-Skript<br>
+WinWaitActive, Willkommen, Willkommen zur XSoft installation<br>
+Send, !w<br>
+WinWaitActive, Zielverzeichnis w&auml;hlen, Bitte<br>
+Send, !w<br>
+WinWaitActive, Fertig zum Installieren, Weiter klicken zur Installation<br>
+Send, !w<br>
+WinWaitActive, Installation fertig gestellt, Beenden<br>
+Send, !f<br>
+WinWaitClose, Installation fertig gestellt<br>
+<br>
+; v3-Skript<br>
+WinWaitActive("Willkommen", "Willkommen zur XSoft installation")<br>
+Send("!w")<br>
+WinWaitActive("Zielverzeichnis w&auml;hlen", "Bitte")<br>
+Send("!w")<br>
+WinWaitActive("Fertig zum Installieren", "Weiter klicken zur Installation")<br>
+Send("!w")<br>
+WinWaitActive("Installation fertig gestellt", "Beenden")<br>
+Send("!f")<br>
+WinWaitClose("Installation fertig gestellt")
+</p>
+
+<p> </p>
+
+<p>Nun, das war doch nicht so kompliziert, oder? Weil Zeichenketten nun
+in Anf&uuml;hrungszeichen eingeschlossen werden, muss man sich nicht mehr
+mit f&uuml;hrenden und abschlie&szlig;enden Leerzeichen herumschlagen.
+Au&szlig;erdem werden viele <a href="intro/editors.htm">Skripteditoren</a>
+unterst&uuml;tzt, sodass neue Skripte z.B. mit Syntaxhervorhebung
+geschrieben werden k&ouml;nnen, was die ganze Arbeit deutlich vereinfacht.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="3"></a>3. Wie kann ich meine Skripte aus der Version 2.64 in Version 3-konforme Skripte umwandeln?</h2>
+
+<p>
+Als aller erstes stellt sich die Frage: "Muss ich meine Skripte &uuml;berhaupt umwandeln?"
+Die Version 2.64 wird weiter heruntergeladen werden k&ouml;nnen und unterst&uuml;tzt werden.
+Passe also deine Skripte nicht nur um der Anpassung willen an - au&szlig;er du stehst darauf ;-)
+
+</p>
+
+<p> </p>
+
+<p>Es gibt in dieser Hilfe einen Abschnitt, der sich mit den Unterschieden in den Befehlen besch&auml;ftigt - klicke <a href="intro/v264users.htm">hier</a>, um sie aufzurufen.
+</p>
+
+<p> </p>
+
+<p>
+Einer der Autoren von AutoIt v3 hat einen Konverter geschrieben, der
+deine alten Skripte automatisch umwandeln kann. Das funktioniert ganz
+gut, solange deine Skripte nicht voll w&uuml;ster Sprunganweisungen
+sind.
+Du findest den Konverter im Unterordner "Extras" deines
+Installationsverzeichnisses von AutoIt v3 oder im entsprechenden
+Untermen&uuml; des Startmen&uuml;eintrages.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<p></p>
+
+<h2><a name="4"></a>4. Wo ist der "goto"-Befehl hingekommen?</h2>
+
+<p>
+Weg. Er ist <i>b&ouml;se</i>. Nein, im Ernst, frag' nicht warum, es ist einfach so. Das ist wie mit dem Steinbrocken, den sie im Film <a class="ext" href="http://www.imdb.com/title/tt0081633/">Time Bandits</a> in der Mikrowelle finden ;-)
+</p>
+
+<p> </p>
+
+<p>Die in AutoIt v3 verwendeten Schleifen machen den goto-Befehl schlicht &uuml;berfl&uuml;ssig. Schau' dir die <a href="keywords/While.htm">While-</a>, <a href="keywords/Do.htm">do-</a>, <a href="keywords/For.htm">For</a>, <a href="keywords/ExitLoop.htm">ExitLoop-</a>, <a href="keywords/ContinueLoop.htm">ContinueLoop-</a>Befehle sowie die <a ref="keywords/Func.htm">Funktionen</a>
+an, um den modernen Weg, solche Dinge zu realisieren, kennen zu lernen :).
+Und wenn du schon dabei bist, schau dir doch auch gleich die <a href="intro/lang_loops.htm">Schleifen</a>, <a href="intro/lang_conditional.htm">Konditionelle Ausdr&uuml;cke</a> und <a href="intro/lang_functions.htm">Funktionen</a> an.
+Ich verspreche dir, wenn du das erst einmal durchschaut hast, wirst du
+jede andere Programmiersprache in wenigen Minuten programmieren k&ouml;nnen.
+</p>
+
+<p> </p>
+
+<p>Eine kurze Einf&uuml;hrung: Die einfachste Verwendung des goto-Befehles in Version 2.64 war eine Endlosschleife.</p>
+
+<p class="code"> :meinlabel<br>
+...mache etwas...<br>
+...mache etwas anderes...<br>
+goto, meinlabel<br>
+
+</p>
+
+<p>Eine einfache Umsetzung davon in AutoIt v3 ist eine "while"-Schleife, deren Abbruchbedingung immer "wahr" ist.</p>
+
+<p class="code">While 1 = 1<br>
+   ...mache etwas...<br>
+   ...mache etwas anderes...<br>
+Wend<br>
+</p>
+
+<p>Sollte es einen massiven Aufschrei dar&uuml;ber geben, nachdem die
+Version 3 freigegeben wird, w&uuml;rde ich mir &uuml;berlegen, den
+goto-Befehl erneut aufzunehmen, um die Arbeit beim Umschreiben der
+Skripte ertr&auml;glich zu halten.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<p></p>
+
+<h2><a name="5" id="5"></a>5. <a href="#5">Wie kann ich DOS-Programme aus AutoIt heraus ausf&uuml;hren?</a></h2>
+
+<p>Wenn du etwas wie den DOS-Befehl "dir" ausf&uuml;hren m&ouml;chtest,
+dann musst du dazu den Kommandozeileninterpreter verwenden (je nach
+Betriebssystem ist das "command.com" oder "cmd.exe"). Das Makro <a href="macros.htm">@Comspec</a> beinhaltet den korrekten Ort dieser Datei. Du solltest den <a href="functions/RunWait.htm">RunWait()-Befehl</a>
+verwenden, weil es auf die Beendigung des DOS-Programms abwartet,
+bevor die Ausf&uuml;hrung des eigenen Skriptes fortgesetzt wird. Hier
+ein Beispiel, wie man den DOS-"dir"-Befehl auf das Laufwerk C:\
+anwendet (tats&auml;chlich wird folgendes ausgef&uuml;hrt: <strong>command.com /c Dir C:\</strong> ):
+</p>
+<p class="code">    RunWait(@COMSPEC & " /c Dir C: ")</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+
+<h2><a name="6" id="6"></a>6. <a href="#6">Warum funktioniert der "run"-Befehl nur bei .exe- und .com-Dateien, nicht aber bei .msi-, .txt- oder anderen Dateien?</a></h2>
+
+<p>
+Nur wenige Dateitypen sind per Definition "ausf&uuml;hrbar" -
+n&auml;mlich .exe, .bat, .com, .pif. Andere Dateitypen wie .txt und
+.msi werden von einem anderen Programm wiedergegeben. Wenn du auf eine
+Datei namens "myfile.msi" doppelklickst, dann wird im Hintergrund
+"msiexec.exe myfile.msi" ausgef&uuml;hrt. Um eine .msi-Datei
+auszuf&uuml;hren, kann man also folgendes tun:</p>
+
+<p class="code">    RunWait("msiexec myfile.msi")</p>
+
+<p> </p>
+
+<p>Der noch einfachere Weg ist, den (DOS-)Befehl "start" aufzurufen,
+der sich selbst darum k&uuml;mmert, wie die Datei auszuf&uuml;hren ist:</p>
+
+<p class="code">    RunWait(@COMSPEC " /c Start myfile.msi")</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<p></p>
+
+<h2><a name="7" id="7"></a>7. <a href="#7">Warum erhalte ich Fehlermeldungen, wenn ich doppelte Anf&uuml;hrungszeihen (") verwende?</a></h2>
+
+<p>Wenn du doppelte Anf&uuml;hrungszeichen innerhalb eines Strings
+verwenden m&ouml;chtest, dann musst du sie "verdoppeln". Also immer
+zwei statt ein doppeltes Anf&uuml;hrungszeichen. Wenn du also z.B.
+eine Variable in einen String einbinden willst (<strong>Ein Wort in "diesem" Satz hat Anf&uuml;hrungszeichen um sich!</strong>), dann m&uuml;sstest du das folgenderma&szlig;en schreiben:</p>
+
+<p class="code">    $var = "Ein Wort in ""diesem"" Satz hat Anf&uuml;hrungszeichen um sich!"</p>
+
+<p>Oder du benutzt stattdessen einfache Anf&uuml;hrungszeichen:</p>
+
+<p class="code">    $var = 'Ein Wort in "diesem" Satz hat doppelte Anf&uuml;hrungszeichen um sich!'</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<p></p>
+
+<h2><a name="8" id="8"></a>8. <a href="#8">Was bedeuten die Fenster<b>titel</b> und -<b>text</b>-Parameter?</a></h2>
+
+<p>Dazu gibt es <a href="intro/windowsbasic.htm">hier</a> eine detaillierte Beschreibung.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+
+<h2><a name="9" id="9"></a>9. <a href="#9">Warum kann ich Variablen nicht verwenden, indem ich folgendes schreibe: "Meine Variable hat den Wert $variable"?</a></h2>
+
+<p>Angenommen, du hast eine Variable namens $msg und du m&ouml;chtest sie in einer MessageBox ausgeben, dann wird <i>das</i> NICHT funktionieren:</p>
+
+<p class="code">    MsgBox(0, "Example", "Meine Variable ist $msg")</p>
+
+<p>Das wird einfach folgendes ausgeben: <strong>Meine Variable ist $msg</strong>. Du musst AutoIt anweisen, den Text und den Inhalt der Variablen zu verbinden. Dazu ben&ouml;tigst du den <a href="intro/lang_operators.htm">&-Operator</a>:</p>
+
+<p class="code">    MsgBox(0, "Example", "Meine Variable ist " & $msg)</p>
+
+<p> </p>
+
+<p><strong>F&uuml;r Fortgeschrittene:</strong> Wenn du viele Variablen in einen String einbinden willst, dann k&ouml;nnte die <a href="functions/StringFormat.htm">StringFormat()</a>-Funktion f&uuml;r dich interessant sein. Die Variablen $var1 bis $var5 bindest du so einfacher ein:</p>
+
+<p class="code">     $msg = StringFormat("Var1 ist %s, 
+Var2 ist %s, Var3 ist %s, Var4 ist %s, Var5 ist %s", $var1, $var2,
+$var3, $var4, $var5)<br>
+     MsgBox(0, "Beispiel", $msg)</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="10" id="10"></a>10. <a href="#10">Warum passieren merkw&uuml;rdige Dinge, wenn ich Variablen an den Send-Befehl &uuml;bergebe?</a></h2>
+
+<p>Wenn du den Inhalt einer Variablen per <a href="functions/Send.htm">Send-Befehl</a>
+weitergibst, dann bedenke, dass spezielle Zeichen wie !, ^, + oder
+{SPACE} umgewandelt werden. Das ist aber nur selten erw&uuml;nscht. Um
+das zu umgehen, benutzt man den "RAW"-Modus des <a href="functions/Send.htm">Send-Befehls</a>, der diese Umwandlung nicht durchf&uuml;hrt:</p>
+
+<p class="code">    Send($meinevariable, 1)</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="11" id="11"></a>11. <a href="#11">Was ist der Unterschied zwischen dem "return"-Wert und @error?</a></h2>
+
+<p>Normalerweise wird der "return"-Wert dazu benutzt, anzugeben, ob
+eine Funktion erfolgreich durchgef&uuml;hrt wurde. Gibt die Funktion
+(wie z.B. <a href="functions/WinGetText.htm">WinGetText()</a>) aber
+schon einen anderen Wert zur&uuml;ck, dann brauchen wir eine andere
+M&ouml;glichkeit, festzustellen, ob die Funktion erfolgreich
+ausgef&uuml;hrt wurde. Dazu dient dann @error.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="12" id="12"></a>12. <a href="#12">Wie kann ich mein Skript &uuml;ber einen HotKey beenden?</a></h2>
+
+<p>Ah, etwas leichtes. Wenn du willst, dass sich dein Skript beendet,
+wenn du eine bestimmte Tastenkombination dr&uuml;ckst, dann benutze
+die <a href="functions/HotKeySet.htm">HotKeySet()</a>-Funktion, um eine selbstdefinierte 
+Funktion auszuf&uuml;hren. Diese sollte einfach das Schl&uuml;sselwort <a href="keywords/Exit.htm">Exit</a> enthalten.</p>
+
+
+<p>Hier ein St&uuml;ck Code, das das Skript beendet, wenn Strg + ALT + x gedr&uuml;ckt wird:<br></p>
+
+<p class="code"> HotKeySet("^!x", "MeinExit")<br>
+...<br>
+...<br>
+; Rest des Skriptes<br>
+...<br>
+...<br>
+Func MeinExit()<br>
+    Exit <br>
+EndFunc
+</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="13" id="13"></a>13. <a href="#13">Wie kann ich ein selbst gew&auml;hltes Icon benutzen, wenn ich mein Skript kompiliere?</a></h2>
+
+<p>Dazu musst du den richtigen Compiler starten und nicht nur mit der
+rechten Maustaste auf das Skript klicken und "Compile" (=Kompilieren)
+ausw&auml;hlen.
+<a href="intro/compiler.htm">Diese Seite</a> beschreibt den Compiler en detail.</p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="14" id="14"></a>14. <a href="#14">Wie kann ich sicher gehen, dass nur eine Instanz meines Skriptes l&auml;uft?</a></h2>
+<p>Verwende die _Singleton() Funktion. Schau in der Dokumentation zu den benutzerdefinierten Funktion nach mehr Informationen f&uuml;r _Singleton() und wie es zu verwenden ist.
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+
+<h2><a name="15" id="15"></a>15. <a href="#15">Wo liegen die derzeitigen technischen Grenzen von AutoIt v3?</a></h2>
+
+<p>Hier sind die technischen Limitierungen von AutoIt v3. Bedenke, dass
+manche Begrenzungen theoretischer Natur sind und du sie
+m&ouml;glicherweise aufgrund zuvor auftretender Speicher- oder
+Performanceprobleme gar nicht erreichen kannst.</p>
+
+<p>  </p>
+
+<p> Maximale L&auml;nge einer einzelnen Skriptzeile: 4.095 Zeichen<br>
+Maximale L&auml;nge eines Strings: 2.147.483.647 Zeichen</p>
+
+<p>Wertebereich (Flie&szlig;kommazahlen (floating point)): 1.7E–308 bis 1.7E+308 mit 15 Stellen Genauigkeit<br>
+Wertebereich (Ganzzahlen (integer)): 64-bit vorzeichenbehafteter Integer<br>
+Hexadezimalzahlen: 32-bit vorzeichenbehafteter Integer (0x80000000 bis 0x7FFFFFFF)</p>
+
+<p>Arrays: Ein Maximum von 64 Dimensionen und/oder ein Maximum von 16 Millionen Elementen<br>
+Maximale Tiefe rekursiver Funktionsaufrufe: 5100 Level</p>
+
+<p>Gleichzeitig ge&ouml;ffnete Dateien: 64<br>
+Gleichzeitig aktive HotKeys: 64</p>
+
+<p>Maximale Anzahl gleichzeitig benutzter Variablen: unlimitiert <br>
+Maximale Anzahl benutzerdefinierter Funktionen: unlimitiert</p>
+
+<p>Maximale Anzahl von GUI-Fenstern: unlimitiert <br>
+Maximale Anzahl von GUI-Controls pro Fenster: 65532 </p>
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+<h2><a name="16" id="16"></a>16. <a href="#16">Ich habe ein Symbol wie bei fehlenden Bildern unter den Beispielen in der Hilfe.</a></h2>
+
+<p>An dieser Stelle sollte eine Schaltfl&auml;che "&Ouml;ffnen" sein, mit der man das Beispiel direkt im Editor &ouml;ffnen kann. <br>
+In diesem Fall ist m&ouml;glicherweise die Datei hhctrl.ocx nicht im System registriert oder besch&auml;digt. <br>
+Man kann versuchen, "regsvr32 hhctrl.ocx" bei "Start", "Ausf&uuml;hren..." einzugeben, um damit dieses Problem zu beheben.</p>
+
+
+<p> </p>
+
+<p><font size="-2"><a href="#FAQ">Zur&uuml;ck nach oben</a></font></p>
+
+<p></p>
+
+<p><img src="images/blue_gradient_1024x24.jpg" width="1024" height="1" alt=""></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+</body>
+</html>

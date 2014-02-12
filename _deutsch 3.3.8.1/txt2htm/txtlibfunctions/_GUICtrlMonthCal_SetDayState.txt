@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlMonthCal_SetDayState
+
+###Description###
+Setzt den Tagesstatus f&uuml;r alle Monats die aktuell sichtbar sind
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_SetDayState($hWnd, $aMasks)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$aMasks
+	Ein Array mit Integern die zu den sichtbaren Monaten im Kalender geh&ouml;ren
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Das Kalender Control muss mit dem Stil $MCS_DAYSTATE erstellt worden sein, wenn man diese Funktion verwenden will
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

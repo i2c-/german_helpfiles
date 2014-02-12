@@ -1,0 +1,32 @@
+###Function###
+DirCreate
+
+###Description###
+Erstellt ein Verzeichnis/Ordner.
+
+###Syntax###
+DirCreate ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Der Pfad des zu erstellenden Verzeichnisses.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 wenn das Erstellen des Verzeichnisses fehlschlug.
+@@End@@
+
+
+###Remarks###
+Diese Funktion erstellt auch alle &uuml;bergeordneten Verzeichnisse, die in der Variable "path" enthalten sind, wenn sie noch nicht existieren.
+
+###Related###
+DirRemove, FileCopy
+
+
+###Example###
+@@IncludeExample@@

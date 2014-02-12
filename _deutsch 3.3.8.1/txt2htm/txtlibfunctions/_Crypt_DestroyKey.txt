@@ -1,0 +1,35 @@
+###User Defined Function###
+_Crypt_DestroyKey
+
+###Description###
+Gibt die Ressourcen die ein Schl&uuml;ssel ben&ouml;tigt wieder frei.
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_DestroyKey($hCryptKey)
+
+###Parameters###
+@@ParamTable@@
+$hCryptKey
+	Schl&uuml;ssel der aufgel&ouml;st werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg gibt true zur&uuml;ck
+	Setzt @error auf 0
+Fehler gibt -1 und setzt @error:
+	1 - Aufl&ouml;sen des Schl&uuml;ssels Fehlgeschlagen.
+@@End@@
+
+###Remarks###
+L&ouml;st einen Schl&uuml;ssel auf der vorher mit _Crypt_DeriveKey erstellt wurde
+
+###Related###
+_Crypt_DeriveKey
+
+###See Also###
+@@MsdnLink@@ CryptDestroyKey
+
+###Example###
+@@IncludeExample@@

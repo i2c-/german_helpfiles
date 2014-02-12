@@ -1,0 +1,31 @@
+###Function###
+SRandom
+
+###Description###
+Setzt den Startwert (Seed) f&uuml;r den Zufallszahlengenerator.
+
+###Syntax###
+SRandom ( Seed )
+
+
+###Parameters###
+@@ParamTable@@
+Seed
+	Startwert (Seed) f&uuml;r den Zufallszahlengenerator. Zahl zwischen -2^31 und 2^31-1
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Random
+
+
+###Example###
+@@IncludeExample@@

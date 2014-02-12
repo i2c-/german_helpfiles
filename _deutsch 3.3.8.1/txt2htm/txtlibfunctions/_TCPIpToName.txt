@@ -1,0 +1,54 @@
+###User Defined Function###
+_TCPIpToName
+
+###Description###
+L&ouml;st eine IP-Adresse in den/die Hostnamen auf.
+
+###Syntax###
+#include <iNet.au3>
+_TCPIpToName($sIp [,$iOption = 0 [, $hDll_Ws2_32 = "Ws2_32.dll"]])
+
+
+###Parameters###
+@@ParamTable@@
+$sIp
+	IP-Adresse im (v4) Format
+$iOption
+	[optional] Standard = 0
+	0 = Gibt den Hostnamen als String zur&uuml;ck
+	1 = Gibt ein Array zur&uuml;ck (siehe Bemerkungen)
+$hDll_Ws2_32
+	[optional] Handle zu Ws2_32.dll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Hostname oder Array (siehe Bemerkungen)
+Fehler:	""
+@Error:	0 = Kein Fehler.
+	1 = inet_addr DllCall fehlgeschlagen
+	2 = inet_addr fehlgeschlagen
+	3 = gethostbyaddr DllCall fehlgeschlagen
+	4 = gethostbyaddr fehlgeschlagen, WSAGetLastError = @Extended
+	5 = gethostbyaddr fehlgeschlagen, WSAGetLastError fehlgeschlagen
+	6 = strlen/sZStringRead fehlgeschlagen
+	7 = Fehler beim Lesen des Aliases Array
+@@End@@
+
+
+###Remarks###
+Ein erfolgreicher WSAStartup (wird durch TCPStartup ausgef&uuml;hrt) wird ben&ouml;tigt,
+wenn $iOption = 1 dann sieht das zur&uuml;ckgegebene Array folgenderma&szlig;en aus:
+	$aResult[0] = Anzahl der Elemente
+	$aResult[1] = "Hostname"
+	$aResult[2] = "Alias 1"
+	$aResult[3] = "Alias 2"
+	...
+
+
+###Related###
+TCPStartup, TCPNameToIP
+
+
+###Example###
+@@IncludeExample@@

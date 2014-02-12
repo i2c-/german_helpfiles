@@ -1,0 +1,37 @@
+###Function###
+WinSetTitle
+
+###Description###
+&Auml;ndert den Titel eines Fensters.
+
+###Syntax###
+WinSetTitle ( "title", "text", "newtitle" )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fensters, der ge&auml;ndert werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	Der Text des Fensters, das ge&auml;ndert werden soll. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+newtitle
+	Der neue Titel, den das Fenster erhalten soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1. 
+Fehler:	0 falls das Fenster nicht gefunden wird. 
+@@End@@
+
+
+###Remarks###
+Falls mehrere Fenster das Kriterium erf&uuml;llen, wird das zuletzt aktive Fenster verwendet.
+
+
+###Related###
+AutoItWinSetTitle, WinGetTitle, WinTitleMatchMode (Option), WinGetHandle
+
+
+###Example###
+@@IncludeExample@@

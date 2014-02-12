@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_SetRangeMin
+
+###Description###
+Setzt die minimale logische Position des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetRangeMin($hWnd, $iMinimum)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMinimum
+	minimale Position des Sliders
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Falls die aktuelle Position kleiner als das neue Minimum ist, setzt _GUICtrlSlider_SetRangeMin die Sliderposition auf den neuen minimalen Wert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_GetRangeMin, _GUICtrlSlider_SetRange, _GUICtrlSlider_SetRangeMax
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,41 @@
+###Structure Name###
+$tagLVFINDINFO
+
+###Description###
+Enth&auml;lt Informationen, die f&uuml;r die Suche nach einem ListView Item gebraucht werden
+
+###Syntax###
+Global Const $tagLVFINDINFO = "struct; uint Flags;ptr Text;lparam Param;" & $tagPOINT & ";uint Direction; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+Flags
+	Art der Suche, die durchgef&uuml;hrt werden soll. Dieses Mitglied kann einer oder mehrere der folgenden Werte sein:
+		$LVFI_PARAM - Sucht nach einer &Uuml;bereinstimmung zwischen dem <b>Param</b>-Mitglied dieser Struktur und dem <b>Param</b>-Mitglied eines Elements. Wenn $LVFI_PARAM festgelegt ist, werden alle anderen Flags ignoriert.
+		$LVFI_PARTIAL - Pr&uuml;ft nach, ob der Text des Elements mit der des Strings beginnt, auf die das <b>Text</b>-Mitglied verweist. Dieser Wert setzt voraus, dass $LVFI_STRING genutzt wird.
+		$LVFI_STRING - Die Suchen basieren auf dem Text des Elements. Sofern nicht zus&auml;tzliche Werte festgelegt sind, muss der Text des &uuml;bereinstimmenden Elements exakt des Strings entsprechen, auf die das <b>Text</b>-Mitglied verweist.
+		$LVFI_WRAP - F&uuml;hrt die Suche am Beginn fort, wenn keine &Uuml;bereinstimmung gefunden wurde
+		LVFI_NEARESTXY - Ermittelt das Element, das der in den <b>X</b>- und <b>Y</b>-Mitgliedern festgelegten Position an n&auml;chsten ist, und zwar in der Richtung, die im <b>Direction</b>-Mitglied festgelegt ist. Dieses Flag wird nur im "Gro&szlig;e Icons"- und "Kleine Icons"-Modus unterst&uuml;tzt.
+Text
+	Adresse eines Strings, die mit dem Text des Elements verglichen werden soll. Dieses Mitglied ist nur g&uuml;ltig, wenn $LVFI_STRING oder $LVFI_PARTIAL im <b>Flags</b>-Mitglied gesetzt ist.
+Param
+	Wert, der mit dem <b>Param</b>-Mitglied einer $LVITEM-Struktur verglichen werden soll. Ist nur g&uuml;ltig, wenn $LVFI_PARAM im <b>Flags</b>-Mitglied gesetzt ist.
+$tagPOINT
+	Anf&auml;ngliche X- und Y-Position der Suche. Ist nur g&uuml;ltig, wenn $LVFI_NEARESTXY im <b>Flags</b>-Mitglied gesetzt ist.
+Direction
+	Virtueller Tastaturkode, der die Suchrichtung festlegt. Die folgenden Codes werden unterst&uuml;tzt:
+		VK_LEFT
+		VK_RIGHT
+		VK_UP
+		VK_DOWN
+		VK_HOME
+		VK_END
+		VK_PRIOR
+		VK_NEXT
+		Dieses Mitglied ist nur g&uuml;ltig, wenn $LVFI_NEARESTXY im <b>Flags</b>-Mitglied gesetzt ist.
+@@End@@
+
+
+###Remarks###
+Keine.

@@ -1,0 +1,58 @@
+###User Defined Function###
+_Net_Share_ShareGetInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber eine bestimmte, auf einem Server freigegebene Ressource.
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareGetInfo($sServer, $sShare)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Strings, die den DNS- oder NetBIOS-Namen des Servers, auf dem die Funktion ausgef&uuml;hrt werden soll, angibt. Wird der Parameter nicht angegeben, so wird der lokale Computer verwendet.
+$sShare
+	Name der Freigabe, f&uuml;r die Informationen zur&uuml;ckgegeben werden sollen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0] – Freigabename der Ressource
+	[1] – Art der freigegebenen Ressource.
+ Kann eine Kombination der folgenden sein:
+	 $STYPE_DISKTREE - Laufwerk
+	 $STYPE_PRINTQ – Druckerwarteschlange
+	 $STYPE_DEVICE – Kommunikationsger&auml;t (Modem)
+	 $STYPE_IPC - IPC
+	 $STYPE_SPECIAL – Spezielle Freigabe, die f&uuml;r IPC$ oder die Fernadministration des Servers reserviert ist.
+	 $STYPE_TEMPORARY - Tempor&auml;re Freigabe
+	[2] - Optionaler Kommentar zur freigegebenen Ressource
+	[3] - Enth&auml;lt die Zugriffsrechte f&uuml;r die freigegebene Ressource:
+	  1 - Erlaubnis, Daten aus der Ressource zu lesen und auszuf&uuml;hren
+	  2 - Erlaubnis, Daten in die Ressource zu schreiben
+	  4 - Erlaubnis, eine Instanz der Ressource zu erzeugen
+	  8 - Erlaubnis, die Ressource auszuf&uuml;hren
+	 16 - Erlaubnis, die Ressource zu l&ouml;schen
+	 32 - Erlaubnis, die Eigenschaften der Ressource zu ver&auml;ndern
+	 64 - Erlaubnis, die einer Ressource zugewiesenen Berechtigungen zu &auml;ndern
+	[4] - maximal m&ouml;gliche Anzahl von Verbindungen zur Ressource
+	[5] - Anzahl der momentanen Verbindungen zur Ressource
+	[6] - Lokaler Pfad f&uuml;r die freigegebene Ressource
+	[7] - Passwort der Freigabe
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Die Mitgliedschaft in einer der folgenden Gruppen ist notwendig, um die Funktion erfolgreich ausf&uuml;hren zu k&ouml;nnen:
+Administratoren, Hauptbenutzer, Druck-Operatoren oder Server-Operatoren.
+
+###Related###
+_Net_Share_FileGetInfo, _Net_Share_SessionGetInfo, _Net_Share_ShareSetInfo
+
+###See Also###
+@@MsdnLink@@ NetShareGetInfo
+
+###Example###
+@@IncludeExample@@

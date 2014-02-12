@@ -1,0 +1,35 @@
+###User Defined Function###
+_Date_Time_SystemTimeToArray
+
+###Description###
+Schreibt die Systemzeit in ein Array
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SystemTimeToArray(ByRef $tSystemTime)
+
+###Parameters###
+@@ParamTable@@
+$tSystemTime
+	$tagSYSTEMTIME Struktur
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Monat
+	[1] - Tag
+	[2] - Jahr
+	[3] - Stunden
+	[4] - Minuten
+	[5] - Sekunden
+	[6] - Millisekunden
+	[7] - Wochentag
+
+###Remarks###
+Keine.
+
+###Related###
+$tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

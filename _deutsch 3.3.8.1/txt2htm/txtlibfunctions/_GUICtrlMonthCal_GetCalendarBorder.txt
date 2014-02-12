@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetCalendarBorder
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;e des Randes in Pixel
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetCalendarBorder($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gr&ouml;&szlig;e des Randes in Pixel
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_SetCalendarBorder
+
+###Example###
+@@IncludeExample@@

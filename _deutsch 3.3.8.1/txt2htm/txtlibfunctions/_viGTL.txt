@@ -1,0 +1,36 @@
+###User Defined Function###
+_viGTL
+
+###Description###
+<b>G</b>o <b>T</b>o <b>L</b>ocal mode: Instrumente, die dieses Kommando akzeptieren, werden den "Remote Control mode" verlassen und in den "Local mode" wechseln. Wenn das Instrument schon im "Local mode" ist, wird der Befehl einfach ignoriert. Ein Instrument, welches diese Funktion nicht unterst&uuml;tzt, wird normalerweise im "Remote Control mode" verbleiben.
+
+###Syntax###
+#include <Visa.au3>
+_viGTL($h_session)
+
+
+###Parameters###
+@@ParamTable@@
+$h_session
+	Ein VISA descriptor (STRING) oder ein VISA session Handle (INTEGER).
+	F&uuml;r mehr Informationen, siehe die Bemerkungen zu _viExecCommand.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 0 zur&uuml;ck
+Fehler:	 Gibt -1 zur&uuml;ck, wenn die VISA DLL nicht ge&ouml;ffnet werden konnte oder ein NICHT-Null-Wert im VISA error code steht (siehe das VISA Programmierer Handbuch)
+@@End@@
+Diese Funktion setzt im Falle eines Fehlers immer @error auf 1
+
+###Remarks###
+Wie f&uuml;r alle VISA Funktionen m&uuml;ssen die VISA Bibliotheken installiert sein (es muss die visa32.dll in {WINDOWS}\system32 vorhanden ist) und eine GPIB Karte (wie z.B. National Instruments NI PCI-GPIB Karte oder die Agilent 82350B PCI High-Performance GPIB Karte) installiert sein.
+
+* Eine detaillierte Beschreibung der bekanntesten VISA DESCRIPTORS ist in den Bemerkungen zu der Funktion "_viExecCommand" zu finden.
+
+###Related###
+_viExecCommand, _viGpibBusReset, _viFindGpib, _viOpen, _viClose
+
+
+###Example###
+@@IncludeExample@@

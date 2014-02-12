@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinNet_EnumResource
+
+###Description###
+Setzt die Auflistung der Netzwerk-Ressourcen fort.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_EnumResource($hEnum, ByRef $iCount, $pBuffer, ByRef $iBufSize)
+
+###Parameters###
+@@ParamTable@@
+$hEnum
+	Handle, das die Auflistungs-Instanz eindeutig identifiziert. Das Handle wird von der _WinNet_OpenEnum Funktion zur&uuml;ckgegeben.
+$iCount
+	Anzahl der Eintr&auml;ge, die von der Funktion ermittelt werden sollen. Wird als Anzahl -1 angegeben, werden so viele Eintr&auml;ge wie m&ouml;glich zur&uuml;ckgegeben.
+		Wenn die Funktion erfolgreich ausgef&uuml;hrt wurde, enth&auml;lt die Variable die Anzahl der Eintr&auml;ge die derzeitig eingelesen wurden.
+$pBuffer
+	Zeiger auf den Puffer der die Auflistung aufnimmt. Das zur&uuml;ckgegebene Ergebnis, ist ein Array mit einer $tagNETRESOURCE Struktur.
+		Der Puffer muss gro&szlig; genug sein, um die Struktur und die Strings aufzunehmen, auf welche die Strukturmitglieder verweisen.
+		Der Puffer ist solange g&uuml;ltig, bis der n&auml;chste Aufruf durch verwenden des Handles (festgelegt durch <b>hEnum</b>) erfolgt.
+		Die Reihenfolge der $tagNETRESOURCE Struktur in dem Array ist nicht vorhersehbar.
+$iBufSize
+	Die Gr&ouml;&szlig;e des Puffers f&uuml;r die Eintr&auml;ge, in Byte. Ist der Puffer zu klein um die Daten aufzunehmen, so wird die erforderliche Puffer-Gr&ouml;&szlig;e zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_OpenEnum, $tagNETRESOURCE
+
+###See Also###
+@@MsdnLink@@ WNetEnumResourceA

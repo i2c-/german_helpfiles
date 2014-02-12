@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlMenu_DrawMenuBar
+
+###Description###
+Baut die Men&uuml;leiste des festgelegten Fensters neu auf
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_DrawMenuBar($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters dessen Men&uuml;leiste neu aufgebaut werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls sich die Men&uuml;leiste ver&auml;ndert, nachdem Windows das Fenster erstellt hat, muss diese Funktion aufgerufen werden um die Men&uuml;leiste neu aufzubauen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ DrawMenuBar
+
+###Example###
+@@IncludeExample@@

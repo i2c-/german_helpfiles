@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetClientRect
+
+###Description###
+Ermittelt die Koordinaten einer Fensterfl&auml;che
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetClientRect($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagRECT Struktur, welche die Fensterkoordinaten enth&auml;lt
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ GetClientRect
+
+###Example###
+@@IncludeExample@@

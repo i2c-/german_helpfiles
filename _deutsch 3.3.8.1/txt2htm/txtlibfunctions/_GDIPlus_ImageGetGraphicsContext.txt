@@ -1,0 +1,32 @@
+###User Defined Function###
+_GDIPlus_ImageGetGraphicsContext
+
+###Description###
+Ermittelt den Grafikkontext des Bildes
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetGraphicsContext($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu einem Bild-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Grafik-Objekt
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipGetImageGraphicsContext
+
+###Example###
+@@IncludeExample@@

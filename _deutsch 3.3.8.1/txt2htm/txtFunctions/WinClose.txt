@@ -1,0 +1,36 @@
+###Function###
+WinClose
+
+###Description###
+Schlie&szlig;t ein Fenster.
+
+###Syntax###
+WinClose ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des zu schlie&szlig;enden Fensters. Hier: <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des zu schlie&szlig;enden Fensters.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck. 
+Fehler:	Gibt 0 zur&uuml;ck, wenn das Fenster nicht geschlossen werden konnte.
+@@End@@
+
+
+###Remarks###
+Diese Funktion sendet einen Schlie&szlig;en/Beenden-Befehl an das angegebene Fenster. Das Ergebnis ist abh&auml;ngig vom Status des Programms. Sind z.B. noch ge&auml;nderte Dokumente offen, so wird es nachfragen, ob die Daten gesichert werden sollen. Um das Schlie&szlig;en eines Fensters zu erzwingen ist die WinKill Funktion zu verwenden. Falls mehrere Fenster das Kriterium erf&uuml;llen, wird das zuletzt aktive Fenster geschlossen.
+
+
+###Related###
+WinActivate, WinExists, WinKill, WinSetState, WinTitleMatchMode (Option), ProcessClose, WinMove
+
+
+###Example###
+@@IncludeExample@@

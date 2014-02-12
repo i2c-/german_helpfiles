@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlListView_GetHotItem
+
+###Description###
+Ermittelt den Index des "hot" Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetHotItem($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt den Index des "hot" Items zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetHotItem
+
+###Example###
+@@IncludeExample@@

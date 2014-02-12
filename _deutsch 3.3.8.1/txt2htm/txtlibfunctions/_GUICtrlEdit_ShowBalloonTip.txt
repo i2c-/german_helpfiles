@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlEdit_ShowBalloonTip
+
+###Description###
+Zeigt einen Balloontip, der mit einem Edit-Control verbunden ist
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_ShowBalloonTip($hWnd, $sTitle, $sText, $iIcon)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sTitle
+	String f&uuml;r den Titel des ToolTips (Unicode)
+$sText
+	String f&uuml;r den Text des ToolTips (Unicode)
+$iIcon
+	Icon kann eines der folgenden sein:
+		$TTI_ERROR - benutzt das Fehlericon
+		$TTI_INFO - benutzt das Informationsicon
+		$TTI_NONE - benutzt kein Icon
+		$TTI_WARNING - benutzt das Warnicon
+		Die folgenden Wert sind f&uuml;r Vista und neuer
+		$TTI_ERROR_LARGE - benutzt das Fehlericon
+		$TTI_INFO_LARGE - benutzt das Informationsicon
+		$TTI_WARNING_LARGE - benutzt das Warnicon
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_HideBalloonTip
+
+###Example###
+@@IncludeExample@@

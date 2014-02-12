@@ -1,0 +1,61 @@
+###Function###
+GUISetOnEvent
+
+###Description###
+Definiert eine vom Benutzer geschriebene Funktion, die aufgerufen wird, wenn ein Control angeklickt wird.
+
+###Syntax###
+GUISetOnEvent ( specialID, "function" [, winhandle] )
+
+
+###Parameters###
+@@ParamTable@@
+specialID
+	Siehe <a href="#SpecialIDTable">Spezielle ID Tabelle</a> unten.
+function
+	Der Name der aufzurufenden Funktion.
+winhandle
+	[optional] Fenster-Handle wie von <a href="GUICreate.htm">GUICreate()</a> zur&uuml;ckgegeben (Standard ist das zuvor verwendete Fenster).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+OnEvent-Funktionen werden nur aufgerufen, wenn die Option GUIOnEventMode auf 1 gesetzt ist - In diesem Modus wird <a href="GUIGetMsg.htm">GUIGetMsg()</a> &uuml;berhaupt NICHT verwendet.
+
+Es kann keine Funktion aufgerufen werden die Parameter enth&auml;lt.
+
+Wenn die Option GUIEventOptions auf 1 gesetzt wurde, haben die Minimier-, Wiederherstellen- und Maximier-Buttons keine Funktion, au&szlig;er einer einfachen Benachrichtigung.
+
+Wird als Funktion ein leerer String ("") &uuml;bergeben, wird die zuvor zugewiesene Benutzerfunktion deaktiviert.
+
+	<a id="SpecialIDTable"></a><b>Spezial ID-Tabelle</b>
+@@StandardTable1@@
+<b>Spezial ID</b>	<b>Bemerkungen</b>
+$GUI_EVENT_CLOSE	die Dialogbox wird geschlossen (entweder durch einen bestimmten Button oder das Systemmen&uuml;).
+$GUI_EVENT_MINIMIZE	die Dialogbox wird per Button in der Titelleiste minimiert.
+$GUI_EVENT_RESTORE	die Dialogbox wird durch Klick auf das Taskleistensymbol wiederhergestellt.
+$GUI_EVENT_MAXIMIZE	die Dialogbox wird per Button in der Titelleiste maximiert.
+$GUI_EVENT_MOUSEMOVE	der Mauszeiger wurde bewegt
+$GUI_EVENT_PRIMARYDOWN	die erste (linke) Maustaste wurde gedr&uuml;ckt
+$GUI_EVENT_PRIMARYUP	die erste (linke) Maustaste wurde losgelassen
+$GUI_EVENT_SECONDARYDOWN	die zweite (rechte) Maustaste wurde gedr&uuml;ckt 
+$GUI_EVENT_SECONDARYUP	die zweite (rechte) Maustaste wurde losgelassen
+$GUI_EVENT_RESIZED	Dialogbox wurde mit neuer Gr&ouml;&szlig;e neu angezeigt
+$GUI_EVENT_DROPPED	Ende einer Drag&Drop Aktion @GUI_DragId, @GUI_DragFile und @GUI_DropId werden verwendet, um die passende ID bzw. Datei von dem Control zu erhalten.
+@@End@@
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUIOnEventMode (Option), GUIEventOptions (Option), GUICtrlSetOnEvent
+
+
+###Example###
+@@IncludeExample@@

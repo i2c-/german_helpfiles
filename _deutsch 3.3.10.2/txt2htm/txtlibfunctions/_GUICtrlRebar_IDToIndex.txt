@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlRebar_IDToIndex
+
+###Description###
+Konvertiert eine Gruppen-ID in einen Gruppenindex in einem Rebar-Control.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_IDToIndex ( $hWnd, $iID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iID
+	Die anwendungsspezifische ID der Gruppe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der 0-basierende Gruppenindex
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+Falls eine doppelte Gruppen-ID existiert, wird die erste zur&uuml;ckgegeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

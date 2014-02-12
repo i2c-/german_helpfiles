@@ -1,0 +1,47 @@
+###Function###
+GUICtrlCreateObj
+
+###Description###
+Erzeugt ein ActiveX Control in der GUI.
+
+###Syntax###
+GUICtrlCreateObj ( ObjectVar, left, top [, width [, height]] )
+
+
+###Parameters###
+@@ParamTable@@
+ObjectVar
+	Eine Variable die auf ein vorher ge&ouml;ffnetes Objekt zeigt
+left
+	Linke Seite des Controls. Wenn -1 gesetzt wird, errechnet sich Links entsprechend zu <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a>.
+top
+	Obere Seite des Controls. Wenn -1 gesetzt wird, errechnet sich Oben entsprechend zu <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode</a>.
+width
+	[optional] Die Breite des Controls (Standard ist bisher genutzte Breite).
+height
+	[optional] Die H&ouml;he des Controls (Standard ist bisher genutzte H&ouml;he).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Diese Funktion versucht ein 'ActiveX Control' oder ein 'Dokument-Objekt' innerhalb der GUI einzubetten.
+Nicht jedes Control kann eingebettet werden. Es muss mindestens Unterst&uuml;tzung einer 'IDispatch'-Schnittstelle bieten. 
+
+'Dokument-Objekte' werden nur erkannt wenn der Fenster-Stil $WS_CLIPCHILDREN in GUICreate() gesetzt wurde.
+
+Die GUI Funktionen GUICtrlRead und GUICtrlSet haben keinen Effekt auf dieses Control. Das Objekt kann nur gesteuert werden, nutzt man 'methods' oder 'properties' an der $ObjectVar.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+ObjCreate, ObjGet, ObjEvent, IsObj
+
+
+###Example###
+@@IncludeExample@@

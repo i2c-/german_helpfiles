@@ -1,0 +1,37 @@
+###Function###
+ControlShow
+
+###Description###
+Zeigt ein verstecktes Control an.
+
+###Syntax###
+ControlShow ( "title", "text", controlID )
+
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck wenn das Fenster/Control nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlHide, ControlEnable, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_ClearSel
+
+###Description###
+L&ouml;scht den aktuellen ausgew&auml;hlten Bereich
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_ClearSel ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelEnd, _GUICtrlSlider_SetSelStart
+
+
+###Example###
+@@IncludeExample@@

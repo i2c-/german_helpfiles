@@ -1,0 +1,38 @@
+###Function###
+GUICtrlGetState
+
+###Description###
+Liefert den aktuellen Status eines Controls.
+
+###Syntax###
+GUICtrlGetState ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Status. Die Werte findet man unter <a href="GUICtrlSetState.htm">GUICtrlSetState()</a>
+Fehler:	-1 wenn das Control nicht definiert ist.
+@@End@@
+
+
+###Remarks###
+Im Gegensatz zu <a href="GUICtrlRead.htm">GUICtrlRead()</a> liefert diese Funktion <b>nur</b> den Status eines Controls (aktiviert, deaktiviert, versteckt, sichtbar, drag and drop erlaubt)
+
+Ausnahme:
+Auf ListView-Controls (Listen mit mehreren Spalten) angewendet wird die Nummer der angeklickten Spalte zur&uuml;ckgegeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlRead, GUICtrlSetState
+
+
+###Example###
+@@IncludeExample@@

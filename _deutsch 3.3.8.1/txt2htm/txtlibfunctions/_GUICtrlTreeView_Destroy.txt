@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTreeView_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_Destroy(ByRef $hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True, Handle wird auf 0 gesetzt
+Fehler:	False
+@@End@@
+
+###Remarks###
+Funktioniert nur mit TreeView-Controls, welche mit _GUICtrlTreeView_Create erstellt wurden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_Create
+
+###Example###
+@@IncludeExample@@

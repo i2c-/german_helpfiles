@@ -1,0 +1,37 @@
+###User Defined Function###
+_IEBodyReadText
+
+###Description###
+Gibt den Text zwischen '<'body'>' und '<'/body'>' zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IEBodyReadText(ByRef $o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Fensters oder eines Frames.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Text im Bodyelement zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Diese Funktion benutzt die Eigenschaft .innerText des Dokument-Body. .innerText ist f&uuml;r nahezu alle DOM-Elemente verf&uuml;gbar und ist eine schnelle und bequeme Methode, f&uuml;r genaues analysieren von Text im Dokument verwende _IEPropertyGet.
+Die Zeichen ' in der Beschreibung existieren in Wirklichkeit nicht. Sie dienen nur der Darstellung in der Hilfedatei.
+
+
+###Related###
+_IEBodyReadHTML, _IEBodyWriteHTML, _IEPropertyGet
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_SetEndOfFile
+
+###Description###
+Setzt die physische Dateigr&ouml;&szlig;e der angegebenen Datei auf die aktuelle Position des Dateizeigers.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetEndOfFile($hFile)
+
+###Parameters###
+@@ParamTable@@
+$hFile
+	Handle zu der Datei, die erweitert oder geschrumpft werden soll.
+		Das Dateihandle muss das Zugriffsrecht $GENERIC_WRITE besitzen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False, @extend wird gesetzt. F&uuml;r mehr Details ist GetLastError() zu verwenden
+@@End@@
+
+###Remarks###
+Diese Funktion kann verwendet werden, um eine Datei zu erweitern oder zu schrumpfen.
+Falls die Datei erweitert wird, so sind die Inhalte der Datei zwischen dem alten Ende der Datei und dem neuen Ende der Datei nicht definiert.
+Diese Funktion setzt die Dateigr&ouml;&szlig;e.
+
+###Related###
+_WinAPI_CloseHandle, _WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_ReadFile, _WinAPI_SetFilePointer, _WinAPI_WriteFile
+
+###See Also###
+@@MsdnLink@@ SetEndOfFile
+
+###Example###
+@@IncludeExample@@

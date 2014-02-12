@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_RegisterWindowMessage
+
+###Description###
+Definiert eine neue Fensternachricht, welche garantiert einzigartig im System ist
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_RegisterWindowMessage ( $sMessage )
+
+
+###Parameters###
+@@ParamTable@@
+$sMessage
+	Strings, welche die zu registrierende Nachricht festlegt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Nachrichten-Identifizierer im Bereich von 0xC000 bis 0xFFFF
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Die RegisterWindowMessage Funktion wird genutzt, um Nachrichten zur Kommunikation zweier kooperierender Anwendungen zu
+registrieren. Wenn zwei verschiedene Anwendungen denselben Nachrichten-String registrieren, geben die Anwendungen denselben
+Nachrichtenwert zur&uuml;ck. Die Nachricht bleibt registriert bis die Sitzung beendet ist.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ RegisterWindowMessage

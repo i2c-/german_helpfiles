@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SetItemCut
+
+###Description###
+Legt fest, ob das Item f&uuml;r eine verschieben Operation markiert werden soll
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemCut($hWnd, $iIndex [, $fEnabled = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$fEnabled
+	[optional] Falls True wird der Status des Items gesetzt, andernfalls nicht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemCut
+
+###Example###
+@@IncludeExample@@

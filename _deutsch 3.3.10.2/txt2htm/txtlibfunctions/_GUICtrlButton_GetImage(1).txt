@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlButton_GetImage
+
+###Description###
+Ermittelt ein Handle zu dem Bild (Icon oder Bitmap), welches dem Button zugewiesen ist
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetImage ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Bild
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_SetImage
+
+
+###See Also###
+@@MsdnLink@@ BM_GETIMAGE
+
+
+###Example###
+@@IncludeExample@@

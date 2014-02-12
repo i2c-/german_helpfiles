@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlAVI_IsPlaying
+
+###Description###
+Pr&uuml;ft, ob eine avi-Datei gerade abgespielt wird
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_IsPlaying($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ ACM_ISPLAYING
+
+###Example###
+@@IncludeExample@@

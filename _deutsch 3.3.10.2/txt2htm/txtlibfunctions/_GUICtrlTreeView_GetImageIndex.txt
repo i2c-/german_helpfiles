@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetImageIndex
+
+###Description###
+Ermittelt den normalen Status Bilderindex
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetImageIndex ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Imagelistindex
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_SetImageIndex
+
+
+###Example###
+@@IncludeExample@@

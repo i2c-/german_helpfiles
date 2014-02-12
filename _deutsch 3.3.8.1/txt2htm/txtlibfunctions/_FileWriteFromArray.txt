@@ -1,0 +1,44 @@
+###User Defined Function###
+_FileWriteFromArray
+
+###Description###
+Schreibt ein Array in die angegebene Datei.
+
+###Syntax###
+#include <File.au3>
+_FileWriteFromArray($File, $a_Array [, $i_Base = 0 [, $i_UBound = 0 [, $s_Delim= "|"]]])
+
+###Parameters###
+@@ParamTable@@
+$File
+	Pfad der Datei, in die geschrieben werden soll, oder ein Handle einer Datei, das von FileOpen() zur&uuml;ckgegeben wurde.
+$a_Array
+	Das Array, das in die Datei geschrieben werden soll.
+$i_Base
+	[optional] Startindex des Arrays; normalerweise auf 0 oder 1 setzen. Standard=0
+$i_Ubound
+	[optional] Letzter Index, der in die Datei geschrieben werden soll. Standard=0 (entspricht dem ganzen Array).
+$s_Delim
+	[optional] Trennzeichen f&uuml;r 2-dimensionale Arrays. Standard="|"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	1 = Fehler beim &Ouml;ffnen der angegebenen Datei
+	2 = Eingabe ist kein Array
+	3 = Fehler beim Schreiben der Datei
+	4 = Arraydimension > 2
+@@End@@
+
+###Remarks###
+Falls die Datei bereits existiert, wird die Datei &uuml;berschrieben und geschlossen.
+Um einen anderen Schreibmodus, wie z. B. Append oder Unicode Format zu verwenden, ist die Datei zuerst mit FileOpen() zu &ouml;ffnen und anstatt des Dateinamens das Handle zu verwenden.
+Falls ein Handle &uuml;bergeben wird, bleibt die Datei nach dem Schreiben ge&ouml;ffnet.
+
+###Related###
+_FileReadToArray
+
+###Example###
+@@IncludeExample@@

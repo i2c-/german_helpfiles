@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>AutoIt unter Windows Vista</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css"></head>
+<body>
+<h1>AutoIt unter Windows Vista </h1>
+<p>Windows Vista bringt neue Sicherheitsfunktionen mit, um das Ausf&uuml;hren von Dateien, die Administratorrechte ben&ouml;tigen, zu erschweren. Auch Administratoren werden jedesmal um Erlaubnis gefragt, wenn eine ausf&uuml;hrbare Datei versucht, administrative Operationen auszuf&uuml;hren (wie z.B. Schreibzugriffe in die Registry unter HKEY_LOCAL_MACHINE oder ins Verzeichnis C:\Windows). Das wird als <strong>Benutzerkontensteuerung (UAC)</strong> bezeichnet.</p>
+<p>Standardm&auml;&szlig;ig starten AutoIt-Skripte mit normalen Benutzerrechten, aber AutoIt erlaubt dem Skriptautor, sein Skript so zu kennzeichnen, dass es AutoIt mitteilt, ob es Adminrechte ben&ouml;tigt oder nicht. </p>
+<p>Um ein Skript mit Adminrechten auszustatten, kann die <strong>#requireadmin</strong>-Direktive am Anfang des Skripts eingetragen werden:</p>
+<p class="codebox">
+; Dieses Skript ben&ouml;tigt volle Administratorrechte<br>
+  #requireadmin<br>
+  <br>
+  MsgBox(0, "Info", "Dieses Skript hat Adminrechte! ")</p>
+<p class="code"> </p>
+<p>Wenn das Skript ausgef&uuml;hrt wird, pr&uuml;ft AutoIt, ob es bereits Adminrechte hat. Wenn nicht, veranlasst AutoIt das Betriebssystem, mittels UAC die Genehmigung vom Benutzer einzuholen. Verweigert der die Genehmigung, wird das Skript beendet. </p>
+<p> </p>
+<h2>UAC Aufforderungen  </h2>
+<p>Im Folgenden sind die Abfragen aufgef&uuml;hrt, die von Vista angezeigt werden, wenn ein Programm mit administrativen Rechten gestartet wird. Die Art der Abfrage h&auml;ngt davon ab, ob der Benutzer ein "Eingeschr&auml;nkter Benutzer" oder ein "Computeradministrator" ist
+(man erinnere sich, dass auch Administratoren ihre Erlaubnis f&uuml;r administrative Operationen geben m&uuml;ssen).<br>
+Beachte: Die gezeigten Abfragen sind f&uuml;r die digital signierte AutoIt-Version - alle freigegebenen Versionen sind signiert, aber Betaversionen sind es m&ouml;glicherweise nicht und erzeugen eine Warnung wie im Abschnitt "Kompilierte Skripte" weiter unten. </p>
+<p> </p>
+<p><strong>Abfrage bei eingeschr&auml;nktem Benutzer</strong></p>
+<p><img src="../images/autoit_standarduser_uac_signed.png" width="439" height="427" alt=""></p>
+<p>Ein eingeschr&auml;nkter Benutzer muss einen Benutzernamen und ein Passwort eingeben, um fortzufahren und das Skript mit erweiterten Rechten auszuf&uuml;hren. </p>
+<p> </p>
+<p><strong>Abfrage bei Computeradministrator</strong></p>
+<p><img src="../images/autoit_uac_signed.png" width="439" height="241" alt=""></p>
+<p>Wenn der Benutzer bereits als Administrator angemeldet ist, wird nur seine Best&auml;tigung verlangt - es ist keine Passworteingabe notwendig. </p>
+<p> </p>
+<h2>Kompilierte Skripte </h2>
+<p>Kompilierte Skripte (und m&ouml;glicherweise Betaversionen von AutoIt) sind <strong>nicht </strong>digital signiert und erzeugen eine ernsthafter aussehende Warnung:</p>
+<p><img src="../images/compiled_uac_unsigned.png" width="460" height="369" alt=""> </p>
+<p>Der Benutzer muss auf <strong>Erlauben</strong> klicken um fortzufahren (oder als eingeschr&auml;nkter Benutzer das Passwort eingeben).</p>
+<p>Wenn man eine eigene Authenticode-Signatur besitzt, kann man seine eigenen kompilierten Skripte selbst signieren.</p>
+<p> </p>
+<p><strong>Wichtig: Egal ob AutoIt oder ein kompiliertes Skript signiert ist oder nicht,
+sollte man nur Skripte starten, die aus einer Quelle stammen, der man vertraut!</strong></p>
+<p><strong><u>Auch signierter Code kann b&ouml;sartig sein!</u> </strong></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+###Function###
+FileGetPos
+
+###Description###
+Ermittelt die aktuelle Datei-Position.
+
+###Syntax###
+FileGetPos ( "filehandle" )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle
+	Das Handle einer Datei, welches durch vorherigen Aufruf von FileOpen zur&uuml;ckgegen wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Position vom Anfang der Datei zur&uuml;ck (Erster Index ist 0).
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error.
+@@End@@
+
+
+###Remarks###
+Ein Fehler gibt zwar 0 zur&uuml;ck, aber 0 ist ebenso eine g&uuml;ltige Dateiposition, also ist es ratsam @error zu pr&uuml;fen um Fehler zu ermitteln.
+
+###Related###
+FileSetPos, FileRead, FileReadLine, FileWrite, FileWriteLine, FileOpen
+
+
+###Example###
+@@IncludeExample@@

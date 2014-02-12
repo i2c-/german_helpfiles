@@ -1,0 +1,58 @@
+###User Defined Function###
+_GUICtrlComboBox_Create
+
+###Description###
+Erstellt ein ComboBox Control
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_Create($hWnd, $sText, $iX, $iY [, $iWidth = 100 [, $iHeight = 120 [, $iStyle = 0x00200042 [, $iExStyle = 0x00000000]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Parent- oder Eigner-Fenster
+$sText
+	Mit '|' (Delimiter) unterteilter String, dessen Unterstrings der ComboBox hinzugef&uuml;gt werden sollen
+$iX
+	Horizontale Position des Controls
+$iY
+	Vertikale Position des Controls
+$iWidth
+	[optional] Breite des Controls
+$iHeight
+	[optional] H&ouml;he des Controls im ausgeklappten Zustand
+$iStyle
+	[optional] Stile des Controls:
+		$CBS_AUTOHSCROLL - Scrollt den Text in einem Textfeld automatisch nach rechts, wenn der Benutzer ein Zeichen am Zeilenende eingibt. 
+		$CBS_DISABLENOSCROLL - Zeigt eine inaktive vertikale Scroll-Leiste in der Auswahl-Box der Liste an.
+		$CBS_DROPDOWN - &Auml;hnlich wie $CBS_SIMPLE, au&szlig;er dass die ListBox nicht dargestellt wird, bis der Benutzer ein Icon in der N&auml;he des Edit-Controls markiert
+		$CBS_DROPDOWNLIST - &Auml;hnlich wie $CBS_DROPDOWN, au&szlig;er dass das Edit-Control durch ein statisches Textitem ersetzt wird, welches die aktuelle Markierung in der ListBox darstellt
+		$CBS_LOWERCASE - Wandelt den gesamten Text in Kleinbuchstaben um, sowohl im Auswahlfeld als auch in der Liste der Combobox
+		$CBS_NOINTEGRALHEIGHT - Legt fest, dass die Combobox genau die Gr&ouml;&szlig;e beibeh&auml;lt, die beim Erzeugen der Combobox festgelegt wurde 
+		$CBS_OEMCONVERT - Wandelt eingetippten Text im Combobox-Input-Control vom Windows CE-Zeichensatz in den OEM-Zeichensatz um, und dann wieder in den Windows CE-Zeichensatz zur&uuml;ck
+		$CBS_OWNERDRAWFIXED - Legt fest, dass der Besitzer der List-Box verantwortlich f&uuml;r das Zeichnen des Inhalts ist und dass die Items in der List-Box alle die selbe H&ouml;he haben
+		$CBS_OWNERDRAWVARIABLE - Legt fest, dass der Besitzer der ListBox verantwortlich f&uuml;r das Zeichnen des Inhalts ist und dass die Items in der ListBox in der H&ouml;he variabel sind
+		$CBS_SIMPLE - Zeigt die Auswahlliste immer an.
+		$CBS_SORT - Sortiert automatisch Strings, die in die Liste eingegeben wurden.
+		$CBS_UPPERCASE - Wandelt den gesamten Text in Gro&szlig;buchstaben um, sowohl im Auswahlfeld als auch in der Liste der Combobox
+		Standard: $CBS_DROPDOWN, $CBS_AUTOHSCROLL, $WS_VSCROLL
+		Erzwungen: $WS_CHILD, $WS_TABSTOP, $WS_VISIBLE
+$iExStyle
+	[optional] erweiterte Stile des Controls. Diese entsprechen den Standard $WS_EX_ Konstanten.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Handle zu dem Listbox Control
+Fehler:	0
+
+###Remarks###
+Diese Funktion ist f&uuml;r erfahrene Benutzer und zum erlernen der Funktion von Controls.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_Destroy
+
+###Example###
+@@IncludeExample@@

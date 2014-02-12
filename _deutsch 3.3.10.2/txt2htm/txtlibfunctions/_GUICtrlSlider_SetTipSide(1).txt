@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlSlider_SetTipSide
+
+###Description###
+Positioniert ein ToolTip-Control
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetTipSide ( $hWnd, $fLocation )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fLocation
+	Den Ort an dem das ToolTip-Control dargestellt wird. Dieser kann einer der folgenden Werte sein:
+		$TBTS_TOP - wird &uuml;ber dem Slider positioniert. Dieses Flag ist f&uuml;r horizontale Slider zu verwenden.
+		$TBTS_LEFT - wird links vom Slider positioniert. Dieses Flag ist f&uuml;r vertikale Slider zu verwenden.
+		$TBTS_BOTTOM - wird unter dem Slider positioniert. Dieses Flag ist f&uuml;r horizontale Slider zu verwenden.
+		$TBTS_RIGHT - wird rechts vom Slider positioniert. Dieses Flag ist f&uuml;r vertikale Slider zu verwenden.
+@@End@@
+
+###ReturnValue###
+Gibt den Ort des obigen ToolTip Controls zur&uuml;ck.
+	Der R&uuml;ckgabewert entspricht einem der m&ouml;glichen Werte von $fLocation
+
+
+###Remarks###
+Es ist der Stil $TBS_TOOLTIPS zu verwenden um ToolTips anzuzeigen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

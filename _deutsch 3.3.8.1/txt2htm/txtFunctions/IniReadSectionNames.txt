@@ -1,0 +1,37 @@
+###Function###
+IniReadSectionNames
+
+###Description###
+Liest alle Sektionen aus einer standardkonformen .ini-Datei.
+
+###Syntax###
+IniReadSectionNames ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname der .ini-Datei.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array aller Sektionen der .ini-Datei zur&uuml;ck.
+Fehler:	Setzt @error auf Fehler.
+@@End@@
+
+
+###Remarks###
+Eine standardkonforme .ini-Datei sieht folgenderma&szlig;en aus:
+<i>[SektionsName]
+Schl&uuml;ssel=Wert</i>
+
+Die Anzahl der zur&uuml;ckgegebenen Elemente steht in $result[0]. Wenn ein @error auftaucht, wird kein Array erstellt.
+Nur die ersten 32767 Zeichen werden aufgrund der Win9x-Kompatibilit&auml;t in einer Sektion ber&uuml;cksichtigt.
+
+###Related###
+IniDelete, IniWrite, IniRead, IniReadSection, IniRenameSection, IniWriteSection
+
+
+###Example###
+@@IncludeExample@@

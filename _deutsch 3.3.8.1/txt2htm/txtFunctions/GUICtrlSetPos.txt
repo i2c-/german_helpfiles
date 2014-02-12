@@ -1,0 +1,42 @@
+###Function###
+GUICtrlSetPos
+
+###Description###
+Ver&auml;ndert die Position eines Controls innerhalb des GUI-Fensters.
+
+###Syntax###
+GUICtrlSetPos ( controlID, left [, top [, width [, height]]] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben.
+left
+	Die linke Kante des Controls.
+top
+	[optional] Die Oberkante des Controls.
+width
+	[optional] Die Breite des Controls.
+height
+	[optional] Die H&ouml;he des Controls.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Falls <a href="../keywords/Default.htm">Default keyword</a> verwendet wird, so wird der aktuelle Wert nicht ver&auml;ndert.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreate...
+
+
+###Example###
+@@IncludeExample@@

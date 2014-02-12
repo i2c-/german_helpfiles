@@ -1,0 +1,52 @@
+###User Defined Function###
+_WinAPI_SetDIBits
+
+###Description###
+Setzt die Pixel in einer kompatiblen Bitmap mit den Farbdaten aus einer DIB
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetDIBits($hDC, $hBmp, $iStartScan, $iScanLines, $pBits, $pBMI [, $iColorUse = 0])
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu einem Ger&auml;tekontext
+$hBmp
+	Handle zu der kompatiblen Bitmap (DDB) welches, unter Gebrauch der Farbdaten einer DIB, ver&auml;ndert werden soll
+$iStartScan
+	Legt die erste einzulesende Zeile f&uuml;r die ger&auml;teunabh&auml;ngigen Farbdaten, in dem Array auf welches
+		der pBits Parameter verweist, fest.
+$iScanLines
+	Legt die Anzahl der einzulesenden Zeilen, aus dem Array mit ger&auml;teunabh&auml;ngigen Farbdaten, fest.
+$pBits
+	Zeiger auf die DIB Farbdaten, die in einem BYTE-Array abgelegt sind. Das Format der Bitmapwerte
+		h&auml;ngt vom biBitCount Mitglied in der $tagBITMAPINFO Struktur ab, auf welches der pBMI Parameter verweist.
+$pBMI
+	Zeiger auf eine $tagBITMAPINFO Struktur, welche Informationen &uuml;ber das DIB enth&auml;lt
+$iColorUse
+	[optional] Legt fest, ob das iColors Mitglied der $tagBITMAPINFO Struktur unterst&uuml;tzt wurde und, falls ja,
+		ob iColors explizit rot, gr&uuml;n, blau (RGB) Werte enth&auml;lt oder Palettenindizes. Der iColorUse Parameter
+		muss einer der folgenden Werte sein:
+		0 - Die Farbtabelle wird unterst&uuml;tzt und enth&auml;lt literale RGB Werte
+		1 - Die Farbtabelle setzt sich aus einem Array mit 16-bit in der logischen Palette von hDC Indizes zusammen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Der Ger&auml;tekontext, identifiziert durch den hDC Parameter, wird nur genutzt, wenn iColorUse auf 1 gesetzt ist, andernfalls
+wird er ignoriert. Die Bitmap, identifiziert durch den hBmp Parameter, darf nicht in einen Ger&auml;tekontext eingesetzt werden, wenn
+diese Funktion aufgerufen wird. Die einzulesenden Zeilen m&uuml;ssen nach einem DWORD ausgerichtet sein, au&szlig;er f&uuml;r RLE komprimierte Bitmaps.
+Der Anfang f&uuml;r von unten beginnende DIBs ist die untere-linke Ecke der Bitmap; der Anfang f&uuml;r von oben beginnende DIBs ist die obere-linke
+Ecke der Bitmap.
+
+###Related###
+$tagBITMAPINFO
+
+###See Also###
+@@MsdnLink@@ SetDIBits

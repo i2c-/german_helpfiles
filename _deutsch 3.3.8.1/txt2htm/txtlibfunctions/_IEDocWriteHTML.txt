@@ -1,0 +1,45 @@
+###User Defined Function###
+_IEDocWriteHTML
+
+###Description###
+Ersetzt den HTML-Code des gesamten Dokuments.
+
+###Syntax###
+#include <IE.au3> 
+_IEDocWriteHTML(ByRef $o_object, $s_html)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Window- oder eines Frameobjekts
+$s_html
+	Der HTML-Text, der ins Dokument geschrieben wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Wartezeit &uuml;berschritten
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung unterbrochen
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Diese Funktion ersetzt den Inhalt des Dokuments im Browser oder Frame vollst&auml;ndig. Sie kann dazu genutzt werden, um eine neue Seite mit angepasstem HTML oder JavaScript zu erstellen.
+
+Gelegentlich ist es notwendig, die Seite nach dem Bearbeiten, mit _IEAction($oIE, "refresh"), zu aktualisieren (z.B. nach Erstellen eines FRAMESET).
+
+
+###Related###
+_IEDocReadHTML, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

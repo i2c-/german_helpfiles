@@ -1,0 +1,48 @@
+###Function###
+ProgressOn
+
+###Description###
+Zeigt ein konfigurierbares Progressbarfenster an.
+
+###Syntax###
+ProgressOn ( "title", "maintext" [, "subtext" [, x pos [, y pos [, opt]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Progressbarfensters.
+maintext
+	Der Text f&uuml;r das obere, fettgedruckte Haupttextlabel.
+subtext
+	[optional] Der Text f&uuml;r das untere, normal geschriebenes Textlabel (standardm&auml;&szlig;ig ist leer).
+x pos
+	[optional] Die Position (in Pixeln) des Progressbarfensters von links (standardm&auml;&szlig;ig zentriert).
+y pos
+	[optional] Die Position (in Pixeln) des Progressbarfensters von oben (standardm&auml;&szlig;ig zentriert).
+opt
+	[optional] Standard ist "immer im Vordergrund, mit Titelleiste"
+	Die folgenden Optionswerte k&ouml;nnen auch addiert werden.
+		$DLG_NOTITLE (1) = ohne Rand, Fenster ohne Titelzeile
+		$DLG_NOTONTOP (2) = ohne das "Immer im Vordergrund"-Attribut
+		$DLG_MOVEABLE (16) = Fenster kann verschoben werden
+	Konstanten sin in Constants.au3 definiert
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Um optionale Parameter anzugeben und dennoch den Standardwert zu erhalten, sind folgende Werte zu benutzen:
+	"" f&uuml;r String-Parameter
+	-1 f&uuml;r numerische Parameter
+Wenn <a href="ProgressOn.htm">ProgressOn()</a> aufgerufen wird, w&auml;hrend bereits ein Progressbarfenster angezeigt wird, wird dieses angepasst. (Wenn mehrere Progressbarfenster gleichzeitig angezeigt werden sollen, sind mehrere Skripte zu verwenden.)
+
+
+###Related###
+ProgressOff, ProgressSet
+
+
+###Example###
+@@IncludeExample@@

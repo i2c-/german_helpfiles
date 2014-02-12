@@ -1,0 +1,25 @@
+###Structure Name###
+$tagNMIPADDRESS
+
+###Description###
+Enth&auml;lt Informationen f&uuml;r die $IPN_FIELDCHANGED Benachrichtigung
+
+###Syntax###
+Global Const $tagNMIPADDRESS = $tagNMHDR & ";int Field;int Value"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Field
+	Die 0-basierte Zahl des Feldes das ver&auml;ndert wurde.
+Value
+	Der neue Wert des Feldes, festgelegt in dem <b>Field</b> Mitglied.
+	W&auml;hrend der Bearbeitung der $IPN_FIELDCHANGED Benachrichtigung, kann dieses Mitglied auf irgendeinen Wert
+	gesetzt werden, der in dem Bereich des Feldes liegt und das Control wird diesen Wert in das Feld &uuml;bernehmen.
+@@End@@
+
+
+###Remarks###
+Keine.

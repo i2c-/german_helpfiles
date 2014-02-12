@@ -1,0 +1,39 @@
+###User Defined Function###
+_GDIPlus_GraphicsClear
+
+###Description###
+F&auml;rbt ein Grafik-Objekt in einer festgelegten Farbe
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsClear ( $hGraphics [, $iARGB = 0xFF000000] )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$iARGB
+	[optional] Alpha, Rot, Gr&uuml;n und Blau Komponenten der Farbe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise GPSTATUS Fehlercode ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipGraphicsClear
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlButton_SetShield
+
+###Description###
+Setzt den ben&ouml;tigten Status f&uuml;r einen festgelegten Button oder Befehlszeilen-Button um ein erh&ouml;ht versetztes Icon darzustellen
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetShield($hWnd [, $fRequired = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fRequired
+	[optional] True um ein erh&ouml;ht versetztes Icon zu zeichnen, andernsfalls False
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ BCM_SETSHIELD
+
+###Example###
+@@IncludeExample@@

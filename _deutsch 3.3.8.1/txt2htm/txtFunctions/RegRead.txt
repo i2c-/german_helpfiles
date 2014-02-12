@@ -1,0 +1,52 @@
+###Function###
+RegRead
+
+###Description###
+Liest einen Wert aus der Registry.
+
+###Syntax###
+RegRead ( "keyname", "valuename" )
+
+
+###Parameters###
+@@ParamTable@@
+keyname
+	Der Registry-Schl&uuml;ssel, der den auszulesenden Wert beinhaltet.
+valuename
+	Der Wert, der ausgelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Inhalt des angegebenen Werts zur&uuml;ck. @EXTENDED wird auf den Typ des jeweiligen Wertes gesetzt (siehe Constants.au3 bei $REG_...). 
+Fehler:	Gibt "" zur&uuml;ck und setzt @error auf:
+	 1 falls der angegebene Schl&uuml;ssel nicht ge&ouml;ffnet werden kann
+	 2 falls es nicht m&ouml;glich ist auf den Hauptschl&uuml;ssel zuzugreifen
+	 3 wenn von extern (remote) nicht auf die Registry zugegriffen werden kann
+	-1 falls der angegebene Wert nicht ge&ouml;ffnet werden kann
+	-2 falls der Typ des Werts nicht unterst&uuml;tzt wird
+@@End@@
+
+###Remarks###
+Ein Registry-Schl&uuml;ssel muss mit "HKEY_LOCAL_MACHINE" ("HKLM"), "HKEY_USERS" ("HKU"), "HKEY_CURRENT_USER" ("HKCU"), "HKEY_CLASSES_ROOT" ("HKCR") oder "HKEY_CURRENT_CONFIG" ("HKCC") beginnen.
+
+Falls bei einem 64-Bit Windows auf die speziellen Eintr&auml;ge des 64-Bit Systems zugegriffen werden soll, muss dem Begriff HK... das Suffix 64 angeh&auml;ngt werden (z. B. HKLM64).
+
+AutoIt unterst&uuml;tzt Registry-Werte der Typen REG_BINARY, REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ und REG_DWORD.
+
+Um mit dem <b>(Standard)</b>-Wert zu operieren, muss man <b>""</b> (einen leeren String) als Wertname verwenden.
+
+Wenn ein REG_BINARY gelesen wird, wird ein bin&auml;rer Datentyp zur&uuml;ckgegeben. (in den vorherigen Versionen war es ein String mit den Zeichen in der hexadezimalen Schreibweise).
+
+Wenn Werte des Typs REG_MULTI_SZ gelesen werden, werden diese mit @LF voneinander abgetrennt. Man sollte die Funktion StringSplit(..., @LF) verwenden, um die einzelnen Eintr&auml;ge zu erhalten.
+
+Es ist m&ouml;glich, Registries im Netzwerk zu bearbeiten. Dazu ist "\\Computername\Schl&uuml;sselname" zu verwenden. Um diese Funktion verwenden zu k&ouml;nnen, ist es unter Windows NT/2000/XP/2003 notwendig, die entsprechenden Zugriffsrechte zu besitzen.
+
+
+###Related###
+RegDelete, RegWrite, StringSplit
+
+
+###Example###
+@@IncludeExample@@

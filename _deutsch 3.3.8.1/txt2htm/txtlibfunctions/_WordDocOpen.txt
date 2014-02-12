@@ -1,0 +1,72 @@
+###User Defined Function###
+_WordDocOpen
+
+###Description###
+&Ouml;ffnet ein existierendes Word Dokument
+
+###Syntax###
+#include <Word.au3> 
+_WordDocOpen(ByRef $o_object , $s_FilePath [, $b_ConfirmConversions = 0 [, $i_Format = 0 [, $b_ReadOnly = 0 [, $b_Revert = 0 [, $b_AddToRecentFiles = 0 [, $s_PasswordDocument = "" [, $s_WritePasswordDocument = ""]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable eines Word.Application Objekts
+$s_FilePath
+	Vollst&auml;ndiger Pfad des zu &ouml;ffnenden Dokuments (siehe Bemerkungen)
+$b_ConfirmConversions
+	[optional] Gibt an, ob die Datei Konvertierungs-Dialogbox auch angezeigt werden soll, wenn es sich nicht um eine Microsoft Word Datei handelt.
+	0 = (Standard) Nicht anzeigen
+	1 = Anzeigen
+$i_Format
+	[optional] Der Dateikonvertierer, welcher benutzt werden soll, um das Dokument zu &ouml;ffnen.
+	0 = (Standard) Das existierende Format
+	1 = Microsoft Word Document Format
+	2 = Microsoft Word Template Format
+	3 = Rich Text Format (RTF)
+	4 = Unencoded Text Format
+	5 = Unicode Text Format oder Encoded Text Format
+	6 = Microsoft Word Format, welches mit fr&uuml;heren Microsoft Word Versionen kompatibel ist.
+	7 = HTML Format
+	8 = XML Format
+$b_ReadOnly
+	[optional] Bestimmt, ob das Dokument mit der Option 'schreibgesch&uuml;tzt' ge&ouml;ffnet werden soll.
+	Notiz: Dieser Parameter &uuml;berschreibt nicht den Schreibschutz eines gespeicherten Dokumentes.
+	0 = (Standard) &Ouml;ffnen zum Lesen/Schreiben
+	1 = &Ouml;ffnet als schreibgesch&uuml;tzt
+$b_Revert
+	[optional] Bestimmt, was passiert, wenn $s_FilePath ein bereits ge&ouml;ffnetes Dokument ist.
+	0 = (Standard) Aktiviert das ge&ouml;ffnete Dokument
+	1 = Verwirft alle nicht gesicherten &Auml;nderungen an dem ge&ouml;ffneten Dokument und &ouml;ffnet es erneut.
+$b_AddToRecentFiles
+	[optional] Bestimmt, ob die Datei in die Liste der zuletzt ge&ouml;ffneten Dateien unten im Datei Men&uuml; aufgenommen werden soll.
+	0 = (Standard) Nicht aufnehmen
+	1 = Aufnehmen
+$s_PasswordDocument
+	[optional] Passwort, um das Dokument zu &ouml;ffnen.
+$s_WritePasswordDocument
+	[optional] Passwort, um &Auml;nderungen am Dokument zu speichern.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objekt Variable zur&uuml;ck, welche auf eine Word.Application und ein Dokument Objekt verweist
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = Allgemeiner Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType =  Ung&uuml;ltiger Objekttyp
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Dokument wird erstellt, falls es noch nicht existiert.
+
+
+###Related###
+_WordDocAdd, _WordDocClose, _WordDocSave, _WordDocSaveAs
+
+
+###Example###
+@@IncludeExample@@

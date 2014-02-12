@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTreeView_GetItemByIndex
+
+###Description###
+Ermittelt ein Item durch dessen Position in der Liste der Child-Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetItemByIndex ( $hWnd, $hItem, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iIndex
+	0-basierender Index des Items in der Liste der Child-Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle des Items
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_Index
+
+
+###Example###
+@@IncludeExample@@

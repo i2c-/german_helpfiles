@@ -1,0 +1,54 @@
+###User Defined Function###
+_WordDocAddPicture
+
+###Description###
+F&uuml;gt dem Dokument ein Bild hinzu
+
+###Syntax###
+#include <Word.au3> 
+_WordDocAddPicture(ByRef $o_object, $s_FilePath [, $b_LinkToFile = 0 [, $b_SaveWithDocument = 0 [, $o_Range = ""]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable mit dem Verweis auf das Word.Application Objekt
+$s_FilePath
+	Der Pfad und Dateiname des Bildes.
+$b_LinkToFile
+	[optional] Legt fest, ob das Bild mit der Datei in der es erstellt wurde verkn&uuml;pft bleiben soll.
+	0 = (Standard) Erstellt eine unabh&auml;ngige Kopie der Datei
+	1 = Verkn&uuml;pft das Bild mit der Datei in der es erstellt wurde
+$b_SaveWithDocument
+	[optional] Legt fest, ob das verkn&uuml;pfte Bild mit dem Dokument gespeichert werden soll.
+	0 = (Standard) Speichert das Bild nicht mit dem Dokument
+	1 = Speichert das Bild mit dem Dokument
+$o_Range
+	[optional] Der Ort wo das Bild in dem Text platziert werden soll.
+	"" = (Standard) Das Bild wird automatisch platziert
+	irgendein Objektbereich
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable mit dem Verweis auf eine Word.Application, shape object zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt auf @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = Allgemeiner Fehler
+	$_WordStatus_ComError = Com Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt Typ
+	$_WordStatus_InvalidValue = Ung&uuml;ltiger Wert
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

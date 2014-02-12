@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListBox_Sort
+
+###Description###
+Sortiert eine Listbox, wenn diese den Stil $LBS_SORT besitzt
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_Sort($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Sortiert eine Listbox, wenn diese den Stil $LBS_SORT besitzt.
+K&ouml;nnte hilfreich sein, wenn man InsertString verwendet
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

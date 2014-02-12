@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_SetWindowPlacement
+
+###Description###
+Setzt die minimale, maximale und normale Position des Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetWindowPlacement($hWnd, $pWindowPlacement)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$pWindowPlacement
+	Verweis auf eine $tagWINDOWPLACEMENT Struktur
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False, @error = 1, @extended = _WinAPI_GetLastError()
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetWindowPlacement, $tagWINDOWPLACEMENT
+
+###See Also###
+@@MsdnLink@@ SetWindowPlacement
+
+###Example###
+@@IncludeExample@@

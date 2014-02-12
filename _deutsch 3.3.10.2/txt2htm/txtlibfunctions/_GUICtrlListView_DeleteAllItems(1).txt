@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_DeleteAllItems
+
+###Description###
+L&ouml;scht alle Items eines ListView-Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_DeleteAllItems ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls diese Funktion mit einem Listview, welches durch die Funktion GUICtrlCreateListView erstellt wurde, angewendet wird, muss der Befehl _GUICtrlListView_DeleteAllItems(GUICtrlGetHandle($ListView)) hei&szlig;en, da sonst eine Fehlermeldung erscheint. ($ListView ist die Variable wie das Listview hei&szlig;t)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_DeleteItem, _GUICtrlListView_DeleteItemsSelected
+
+
+###Example###
+@@IncludeExample@@

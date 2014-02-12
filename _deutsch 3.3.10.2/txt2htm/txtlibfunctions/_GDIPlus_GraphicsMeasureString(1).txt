@@ -1,0 +1,49 @@
+###User Defined Function###
+_GDIPlus_GraphicsMeasureString
+
+###Description###
+Misst die Gr&ouml;&szlig;e eines Strings
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsMeasureString ( $hGraphics, $sString, $hFont, $tLayout, $hFormat )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$sString
+	Zu zeichnende Strings
+$hFont
+	Handle zur verwendeten Schrift
+$tLayout
+	<b>$tagGDIPRECTF</b>-Struktur, welche der String begrenzt
+$hFormat
+	Handle zum verwendeten Stringformat
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Array mit dem folgenden Format
+	[0] - $tagGDIPRECTF-Struktur, die das Rechteck enth&auml;lt, welches der String begrenzt
+	[1] - Die Anzahl an Zeichen, die in das $tLayout-Rechteck passen
+	[2] - Die Anzahl an Zeilen, die in das $tLayout-Rechteck passen
+Fehler:	setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Mit dieser Funktion kann z. B. die L&auml;nge und H&ouml;he eines Labels ermittelt werden.
+
+
+###Related###
+$tagGDIPRECTF
+
+
+###See Also###
+@@MsdnLink@@ GdipMeasureString
+
+
+###Example###
+@@IncludeExample@@

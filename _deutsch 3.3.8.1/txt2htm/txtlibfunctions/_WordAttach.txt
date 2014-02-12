@@ -1,0 +1,45 @@
+###User Defined Function###
+_WordAttach
+
+###Description###
+H&auml;ngt sich an die erste existierende Instanz von Microsoft Word, wo der Suchstring passt, gem&auml;&szlig; dem gew&auml;hlten Modus.
+
+###Syntax###
+#include <Word.au3> 
+_WordAttach($s_string [, $s_mode = "FilePath"])
+
+###Parameters###
+@@ParamTable@@
+$s_String
+	Suchstring
+$s_mode
+	[optional] legt den Suchmodus fest
+	FileName = Name des offenen Dokuments
+	FilePath = (Standard) kompletter Pfad zu dem ge&ouml;ffneten Dokument
+	HWND = hwnd des Word-Fensters
+	Text = Text von dem Inhalt des Dokuments
+	Title = Titel des Word-Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable mit dem Verweis auf das Word.Application Objekt zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_InvalidValue = ung&uuml;ltiger Wert
+	$_WordStatus_NoMatch = keine &Uuml;bereinstimmung
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WordCreate, _WordQuit
+
+
+###Example###
+@@IncludeExample@@

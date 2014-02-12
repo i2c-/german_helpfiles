@@ -1,0 +1,38 @@
+###User Defined Function###
+_WordDocSave
+
+###Description###
+Speichert ein vorher ge&ouml;ffnetes Dokument
+
+###Syntax###
+#include <Word.au3> 
+_WordDocSave($o_object)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable von einem Word.Application Dokumentobjekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Falls ein Dokument vorher noch nicht gespeichert wurde, erscheint der "Speichern unter" Dialog f&uuml;r den Dateinamen.
+
+
+###Related###
+_WordDocAdd, _WordDocClose, _WordDocOpen, _WordDocSaveAs
+
+
+###Example###
+@@IncludeExample@@

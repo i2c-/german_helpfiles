@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTreeView_HitTestItem
+
+###Description###
+Gibt das Item an den festgelegten Koordinaten zur&uuml;ck
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_HitTestItem ( $hWnd, $iX, $iY )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iX
+	zu testende X Position
+$iY
+	zu testende Y Position
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu dem Item an der festgelegten Stelle
+Fehler:	0 falls sich kein Item an der festgelegten Stelle befindet
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_HitTest, _GUICtrlTreeView_HitTestEx
+
+
+###Example###
+@@IncludeExample@@

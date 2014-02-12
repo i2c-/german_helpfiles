@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlToolbar_MoveButton
+
+###Description###
+Verschiebt einen Button von einem Index zum anderen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_MoveButton($hWnd, $iOldPos, $iNewPos)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iOldPos
+	0-basierender Index des zu verschiebenden Buttons
+$iNewPos
+	0-basierender Index wo der Button hinverschoben werden soll
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

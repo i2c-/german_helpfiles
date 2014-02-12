@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetNextUndo
+
+###Description###
+Ermittelt den Namen oder die ID der n&auml;chsten R&uuml;ckg&auml;ngig-Aktion
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetNextUndo($hWnd, $fName = True)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fName
+	True - Gibt den Namen der Aktion zur&uuml;ck [Standard]
+	False - Gibt die ID der Aktion zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Abh&auml;ngig vom Wert $fName:
+	True: "Unknown", "Typing", "Delete", "Drag and drop", "Cut" oder "Paste"
+	False: Entsprechende Nummer (0 - 5)
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fName ist weder True noch False
+@@End@@
+
+###Remarks###
+Beachte, dass EM_GETUNDONAME nicht zwischen "Unknown" und dem Zustand, dass der Stapel leer ist, unterscheidet.
+
+Falls die R&uuml;ckgaben der Funktion bei "$fName = True" ebenfalls &uuml;bersetzt werden sollen, kann dies am Besten in der "GuiRichEdit.au3" ge&auml;ndert werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_CanUndo
+
+###See Also###
+@@MsdnLink@@ EM_GETUNDONAME
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_Customize
+
+###Description###
+Zeigt die anpassbare Werkzeug Dialogbox
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_Customize ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Die Toolbar muss eine $TBN_QUERYINSERT und $TBN_QUERYDELETE Nachricht f&uuml;r das erscheinen der anpassbare Werkzeug Dialogbox erhalten. Falls die Toolbar dies nicht erh&auml;lt, hat $TB_CUSTOMIZE keinen Effekt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###

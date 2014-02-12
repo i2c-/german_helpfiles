@@ -1,0 +1,42 @@
+###User Defined Function###
+_NamedPipes_CreatePipe
+
+###Description###
+Erzeugt eine anonyme Pipe.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_CreatePipe ( ByRef $hReadPipe, ByRef $hWritePipe [, $tSecurity = 0 [, $iSize = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hReadPipe
+	Variable, in die das Lesehandle f&uuml;r die Pipe geschrieben werden soll.
+$hWritePipe
+	Variable, in die das Schreibhandle f&uuml;r die Pipe geschrieben werden soll.
+$tSecurity
+	[optional] tagSECURITY_ATTRIBUTES Struktur die ermittelt, ob das zur&uuml;ckgegebene Handle durch den child Prozess &uuml;bernommen werden kann
+	Falls 0, kann das Handle nicht &uuml;bernommen werden.
+$iSize
+	[optional] Die Gr&ouml;&szlig;e des Puffers f&uuml;r die Pipe in Bytes.
+	Falls 0, benutzt das System die Standardgr&ouml;&szlig;e.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_NamedPipes_CreateNamedPipe, $tagSECURITY_ATTRIBUTES
+
+
+###See Also###
+@@MsdnLink@@ CreatePipe

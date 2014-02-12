@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandBackColor
+
+###Description###
+Ermittelt die Hintergrundfarbe einer Gruppe
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandBackColor($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+Gibt die Hintergrundfarbe der Gruppe zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_SetBandBackColor
+
+###Example###
+@@IncludeExample@@

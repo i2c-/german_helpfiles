@@ -1,0 +1,44 @@
+###User Defined Function###
+_ArrayToString
+
+###Description###
+Schreibt die Elemente eines Arrays, durch das angegebene Trennzeichen getrennt, in einen String.
+
+###Syntax###
+#include <Array.au3>
+_ArrayToString ( Const ByRef $avArray [, $sDelim = "|" [, $iStart = 0 [, $iEnd = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array, das in ein String umgewandelt werden soll.
+$sDelim
+	[Optional] Das Trennzeichen, durch das die Elemente getrennt werden sollen.
+$iStart
+	[Optional] Start-Index des Arrays
+$iEnd
+	[Optional] Stopp-Index des Arrays
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein, durch Trennzeichen getrennten String, mit allen einzubeziehenden Werten
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	1 - $avArray ist kein Array
+	2 - $iStart ist gr&ouml;&szlig;er als $iEnd
+	3 - $avArray ist kein 1-dimensionales Array
+	4 - $avArray ist leer
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_ArrayToClip
+
+
+###Example###
+@@IncludeExample@@

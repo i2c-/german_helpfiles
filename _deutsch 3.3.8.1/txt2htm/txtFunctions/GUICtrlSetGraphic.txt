@@ -1,0 +1,60 @@
+###Function###
+GUICtrlSetGraphic
+
+###Description###
+&Auml;ndert die Daten f&uuml;r ein Steuerungsitem.
+
+###Syntax###
+GUICtrlSetGraphic ( controlID, type [, par1 [, ... par6]] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Der Control-Identifizierer (Control-ID), wie von <a href="GUICtrlCreateGraphic.htm">GUICtrlCreateGraphic</a> zur&uuml;ckgegeben.
+type
+	Art des Zeichens : Punkt, Linie, Bezierkurve, Rechteck, Ellipse, Tortenst&uuml;ck.
+par1...par6
+	Siehe die <a href="GUICtrlSetGraphic.htm#Graphic Type table">Grafiktyp Tabelle</a> weiter unten.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+	Gibt im Falle ung&uuml;ltiger Daten -1 zur&uuml;ck
+@@End@@
+
+
+###Remarks###
+Die Position des Punktes (x,y) ist relativ zu den GUICtrlCreateGraphic Koordinaten. Er kann au&szlig;erhalb des Graphic-Controls aber innerhalb des GUI-Fensters liegen.
+
+<a name="Graphic Type table"></a><b>Grafiktyp Tabelle</b>
+@@StandardTable1@@
+<b>Typ</b>	<b>Parameter</b>	<b>Ergebnis</b>
+$GUI_GR_COLOR	Color [,BkColor]	Legt die Farbe f&uuml;r den n&auml;chsten Zeichenvorgang fest. Wenn BkColor gleich $GUI_GR_NOBKCOLOR ist, wird der Zeichenvorgang nicht farblich gef&uuml;llt. Das ist die Standardeinstellung. F&uuml;r Color ist die Standard-Linienfarbe schwarz.
+$GUI_GR_MOVE	x,y	&Auml;ndert die derzeitige Position ohne Zeichenvorgang. 
+$GUI_GR_DOT	x,y	Zeichnet einen Punkt(kleinstes Quadrat um den Punkt), der n&auml;chste Zeichenvorgang startet von der vorigen Position.
+$GUI_GR_PIXEL	x,y	Zeichnet einen Pixel, der n&auml;chste Zeichenvorgang startet von der vorigen Position.
+$GUI_GR_LINE	x,y	Zeichnet eine Linie.
+$GUI_GR_BEZIER	x,y,x1,y1,x2,y2	Zeichnet eine Bezierkurve mit 2 Kontrollpunkten.
+$GUI_GR_RECT	x,y,w,h	Zeichnet ein Rechteck. Falls w=h wird es ein Quadrat.
+$GUI_GR_ELLIPSE	x,y,w,h	Zeichnet eine Ellipse. Falls w=h wird es ein Kreis.
+$GUI_GR_PIE	x,y,r,sa,wa	Zeichnet ein Tortenst&uuml;ck. Radius=r Startwinkel=sa Breite des St&uuml;cks in Grad=wa. Winkelangaben in Grad.
+$GUI_GR_CLOSE	 	Beendet den derzeitigen Zeichenvorgang. Um den laufenden Zeichenvorgang zu beenden, muss es $GUI_GR_LINE oder $GUI_GR_BEZIER hinzugef&uuml;gt werden. Alleinige Benutzung wird ignoriert.
+$GUI_GR_REFRESH	 	Erzwingt die Aktualisierung der Grafik nach einer &Auml;nderung.
+$GUI_GR_HINT	 	Zeigt den Kontroll- und den Endpunkt von Bezierkurven.
+$GUI_GR_PENSIZE	n	Setzt die Gr&ouml;&szlig;e des Zeichenstifts f&uuml;r den n&auml;chsten Zeichenvorgang. Um zum Tragen zu kommen, muss sie vor $GUI_GR_COLOR definiert werden.
+$GUI_GR_NOBKCOLOR	 	ist ein Dummywert f&uuml;r BkColor, um das Ausf&uuml;llen geschlossener ZeichnungsItems zu verhindern (nur Umrandungslinien).
+@@End@@
+
+Aufgrund von Darstellungsbeschr&auml;nkungen werden sowohl RECHTECK, ELLIPSE und Tortenst&uuml;ck zuerst gezeichnet. D.h. eine LINIE wird immer &uuml;ber ein RECHTECK gezeichnet. Falls die Zeichenreihenfolge f&uuml;r das Aussehen der Grafik wichtig ist, dann ist es empfehlenswert, dass Multi Grafik-Controls verwendet werden anstatt eines einzigen Controls wo alles gezeichnet wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateGraphic
+
+
+###Example###
+@@IncludeExample@@

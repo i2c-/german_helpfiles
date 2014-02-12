@@ -1,0 +1,36 @@
+###Function###
+IsKeyword
+
+###Description###
+Kontrolliert ob die Variable ein keyword ist (z. B. Default).
+
+###Syntax###
+IsKeyword ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Die zu &uuml;berpr&uuml;fende Variable.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:		$KEYWORD_DEFAULT (1) das "Default" keyword.
+	$KEYWORD_NULL (2) das "Null" keyword.
+Fehler:		0, wenn die Variable kein keyword ist.
+@@End@@
+
+Die Konstanten sind in der Datei Constants.au3 definiert.
+
+
+###Remarks###
+Siehe <a href="../intro/lang_datatypes.htm">Sprachreferenz - Datentypen</a> f&uuml;r eine detaillierte Beschreibung.
+
+
+###Related###
+Default, Null, VarGetType
+
+
+###Example###
+@@IncludeExample@@

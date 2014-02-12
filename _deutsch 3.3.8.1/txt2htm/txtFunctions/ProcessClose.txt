@@ -1,0 +1,45 @@
+###Function###
+ProcessClose
+
+###Description###
+Beendet den genannten Prozess.
+
+###Syntax###
+ProcessClose ( "process" )
+
+
+###Parameters###
+@@ParamTable@@
+process
+	Der Name oder die PID des Prozesses, der beendet werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf:
+	1 = OpenProcess fehlgeschlagen
+	2 = AdjustTokenPrivileges fehlgeschlagen
+	3 = TerminateProcess fehlgeschlagen
+	4 = Es konnte nicht sichergestellt werden, ob der Prozess existiert
+@extended wird auf Win API GetLastError() gesetzt
+@@End@@
+
+
+###Remarks###
+Die Prozessnamen sind die ausf&uuml;hrbaren Dateien ohne den kompletten Pfad, also z.B. "notepad.exe" oder "winword.exe".
+
+Wenn mehrere Prozesse den gleichen Namen haben, dann wird derjenige mit der h&ouml;chsten PID beendet - egal, wann er gestartet wurde.
+
+Die PID ist eine eindeutige Zahl, die einen Prozess indentifiziert.  Die PID kann &uuml;ber die R&uuml;ckgabewerte der Funktionen ProcessExists oder Run ermittelt werden.
+
+Der Prozess wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+
+###Related###
+ProcessExists, ProcessWait, ProcessWaitClose, Run, WinClose, ProcessList, RunAs, Shutdown, WinKill
+
+
+###Example###
+@@IncludeExample@@

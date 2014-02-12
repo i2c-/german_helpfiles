@@ -1,0 +1,41 @@
+###Function###
+WinList
+
+###Description###
+Ruft eine Liste von Fenstern ab.
+
+###Syntax###
+WinList ( ["title" [, "text"]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	[optional] Der Titel des/der Fenster, die gelesen werden sollen.
+text
+	[optional] Der Text des/der Fenster, die gelesen werden sollen.
+@@End@@
+
+
+###ReturnValue###
+Gibt ein Array mit den Fenstertiteln und den entsprechenden Handles zur&uuml;ck.
+
+
+###Remarks###
+Wird kein Titel und Text angegeben werden alle top-level Fenster zur&uuml;ckgegeben.
+
+Das zur&uuml;ckgegebene Array ist 2-dimensional und wie folgt aufgebaut:
+$array[0][0] = Anzahl der gefundenen Fenster.
+$array[1][0] = erster Fenstertitel.
+$array[1][1] = erste Fenster-ID (Handle=HWND)
+$array[2][0] = zweiter Fenstertitel
+$array[2][1] = zweite Fenster-ID (Handle=HWND)
+...
+$array[n][0] = n-ter Fenstertitel
+$array[n][1] = n-te Fenster-ID (Handle=HWND)
+
+###Related###
+WinGetHandle
+
+###Example###
+@@IncludeExample@@

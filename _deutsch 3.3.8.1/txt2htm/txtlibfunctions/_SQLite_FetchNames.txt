@@ -1,0 +1,38 @@
+###User Defined Function###
+_SQLite_FetchNames
+
+###Description###
+Liest die Spaltennamen einer _SQLite_Query()-Abfrage aus
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_FetchNames($hQuery, ByRef $aNames)
+
+
+###Parameters###
+@@ParamTable@@
+$hQuery
+	Abfrage-Handle der von SQLite_Query() erzeugt wurde
+$aNames
+	1-dimensionales Array, das die Spaltennamen beinhaltet
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	Der R&uuml;ckgabewert kann mit den $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite hat einen Fehler festgestellt (R&uuml;ckgabewert &uuml;berpr&uuml;fen)
+	1 - Fehler ruft SQLite API 'sqlite3_data_count' auf
+	2 - Fehler ruft SQLite API 'sqlite3_column_name16' auf
+	3 - Aufruf wurde durch den Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SQLite_Query
+
+###Example###
+@@IncludeExample@@

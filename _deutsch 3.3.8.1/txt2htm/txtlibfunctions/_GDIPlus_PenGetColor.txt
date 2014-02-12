@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_PenGetColor
+
+###Description###
+Ermittelt die Farbe des Zeichenstifts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenGetColor($hPen)
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu dem Zeichenstift-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Farbe des Zeichenstifts
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenSetColor
+
+###See Also###
+@@MsdnLink@@ GdipGetPenColor

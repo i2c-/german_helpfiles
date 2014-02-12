@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlTreeView_GetISearchString
+
+###Description###
+Ermittelt den inkrementellen Suchstring
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetISearchString ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Inkrementelle Suchstring falls sich das Control im inkrementellen Suchmodus befindet
+Fehler:	sonst ""
+@@End@@
+
+
+###Remarks###
+Der inkrementelle Suchstring wird verwendet um ein Item auszuw&auml;hlen, basierend auf den vom Benutzer eingetippten Zeichen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlToolbar_SetButtonWidth
+
+###Description###
+Legt die minimale und maximale Breite des Buttons in einem Toolbar-Control fest
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetButtonWidth ( $hWnd, $iMin, $iMax )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iMin
+	Minimale Breite des Buttons in Pixel
+$iMax
+	Maximale Breite des Buttons in Pixel
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

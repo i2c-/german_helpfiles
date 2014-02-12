@@ -1,0 +1,52 @@
+###User Defined Function###
+_WordDocAdd
+
+###Description###
+Gibt eine Objektvariable zu einem neu erstellten Dokument zur&uuml;ck
+
+###Syntax###
+#include <Word.au3> 
+_WordDocAdd(ByRef $o_object [, $i_DocumentType = 0 [, $s_Template = "" [, $b_NewTemplate = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable mit dem Verweis auf das Word.Application Objekt
+$i_DocumentType
+	[optional] Gibt den neuen Dokumententyp an
+	0 = (Standard) Leeres Dokument
+	1 = Webseite
+	2 = Email Nachricht (zur Zeit ohne Funktion)
+	3 = Frameset
+	4 = XML Dokument
+$s_Template
+	[optional] Gibt den Namen des Template, dass f&uuml;r das neue Dokument verwendet werden soll zur&uuml;ck
+	"" = (Standard) Das normale Template wird verwendet
+$b_NewTemplate
+	[optional] Gibt an, ob das Dokument als Template ge&ouml;ffnet werden soll
+	0 = (Standard) &Ouml;ffnet das Dokument nicht als Template
+	1 = &Ouml;ffnet das Dokument als Template
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable mit dem Verweis auf das Word.Application Objekt zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = Allgemeiner Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Daten Typ
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WordDocClose, _WordDocOpen, _WordDocSave, _WordDocSaveAs
+
+
+###Example###
+@@IncludeExample@@

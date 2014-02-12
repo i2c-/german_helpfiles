@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetMousePosY
+
+###Description###
+Gibt die aktuelle Y-Koordinate der Maus zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetMousePosY([$fToClient = False [, $hWnd = 0]])
+
+###Parameters###
+@@ParamTable@@
+$fToClient
+	[optional] Falls TRUE, werden die Koordinaten zu Clientkoordinaten umgewandelt
+$hWnd
+	[optional] Fensterhandle dessen Anwendungsbereich f&uuml;r die Koordinatenangabe dienen soll, falls $fToClient TRUE ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Y-Koordinate der Maus
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Diese Funktion ber&uuml;cksichtigt die aktuellen Einstellungen in MouseCoordMode bei der Ermittlung der Mauskoordinaten.
+Obgleich auch Bildschirm- zu Anwendungsbereichskoordinaten umgewandelt, wenn die entsprechenden Parameter angegeben sind.
+
+###Related###
+_WinAPI_GetMousePos
+
+###Example###
+@@IncludeExample@@

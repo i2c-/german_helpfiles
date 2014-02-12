@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_LoadShell32Icon
+
+###Description###
+Extrahiert ein Icon aus der Shell32.dll
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadShell32Icon($iIconID)
+
+###Parameters###
+@@ParamTable@@
+$iIconID
+	ID des zu extrahierenden Icons
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem festgelegten Icon
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn das Icon nicht mehr ben&ouml;tigt wird, sollte man _WinAPI_DestroyIcon aufrufen um die Ressource im Speicher wieder freizugeben.
+
+###Related###
+_WinAPI_DestroyIcon

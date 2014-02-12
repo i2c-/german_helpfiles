@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_GraphicsCreateFromHWND
+
+###Description###
+Erstellt ein Grafik-Objekt von einem Fenster-handle
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsCreateFromHWND($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Grafik-Objekt 
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit dem Grafik-Objekt fertig ist, ist  _GDIPlus_GraphicsDispose aufzurufen, um die Ressourcen wieder freizugeben
+
+###Related###
+_GDIPlus_GraphicsDispose
+
+###See Also###
+@@MsdnLink@@ GdipCreateFromHWND
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,44 @@
+###User Defined Function###
+_IETableWriteToArray
+
+###Description###
+Liest den Inhalt einer Tabelle in ein Array ein.
+
+###Syntax###
+#include <IE.au3>
+_IETableWriteToArray ( ByRef $o_object [, $f_transpose] )
+
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, Table-Objekt
+$f_transpose
+	[optional] Bool'scher Wert, der festlegt, ob die Zeilen und Spalten im Ausgabearray vertauscht werden sollen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein 2-dimensionales Array mit dem Inhalt der Tabelle
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	2 ($_IEStatus_COMError) - COM Fehler in der Objektreferenz
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+@extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wenn Tabellenzellen &uuml;ber mehrere Spalten oder Zeilen gehen, dann werden leere Elemente in das Array eingef&uuml;gt, sodass die Zuordnung stimmt.
+Die eigentlichen Daten werden in der obersten bzw. am weitesten links liegenden Position abgelegt.
+
+Tabellen sind in HTML-Dokumenten oft verschachtelt.
+Wenn alle Daten in einem Element landen, dann sollte man &uuml;berlegen, ob man eine "tiefer" gelegene Tabelle an diese Funktion &uuml;bergibt.
+
+
+###Related###
+_IETableGetCollection
+
+
+###Example###
+@@IncludeExample@@

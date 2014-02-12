@@ -1,0 +1,38 @@
+###User Defined Function###
+_FTP_DirPutContents
+
+###Description###
+Legt den Inhalt eines lokalen Verzeichnisses auf einem FTP-Server ab. Arbeit rekursiv, wenn gew&uuml;nscht.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_DirPutContents($l_InternetSession, $s_LocalFolder, $s_RemoteFolder, $b_RecursivePut [, $l_Context])
+
+###Parameters###
+@@ParamTable@@
+$l_InternetSession
+	R&uuml;ckgabe von _FTP_Connect().
+$s_LocalFolder
+	das lokale Verzeichnis, z.B. "c:\temp".
+$s_RemoteFolder
+	das Verzeichnis auf dem Server, z.B. '/website/home'.
+$b_RecursivePut
+	durch Unterverzeichnisse rekursieren, 0 = nein, 1 = ja
+$l_Context
+	[optional] Eine Variable, die einen anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit beliebigen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um eine Status Callbackfunktion zu installieren.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Verzeichnisname
+Fehler:	0  und setzt @ERROR
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect, _FTP_SetStatusCallback
+
+###Example###

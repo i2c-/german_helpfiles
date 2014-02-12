@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUIToolTip_AdjustRect
+
+###Description###
+Berechnet das Rechteck des Textes von dem Fensterrechteck
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_AdjustRect($hWnd, ByRef $tRect [, $fLarger = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$tRect
+	$tagRECT Struktur welche ein Fenster oder ein Textrechteck enth&auml;lt
+$fLarger
+	[optional] Wert der festlegt, welche Aktion durchgef&uuml;hrt werden soll. Falls True, wird $tRect verwendet um ein Textrechteck
+		festzulegen und es ermittelt das zugeh&ouml;rige Fensterrechteck. Falls False, wird $tRect verwendet um ein Fensterrechteck
+		festzulegen und es enth&auml;lt das zugeh&ouml;rigen Fensterrechteck.
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagRECT Struktur
+
+###Remarks###
+Das Rechteck des ToolTip-Fensters ist etwas gr&ouml;&szlig;er als das Textrechteck welches den ToolTip String begrenzt.
+Der Fensterursprung ist als oben und links versetzt zu dem Ursprung des Textrechtecks.
+Um das Textrecht zu positionieren, muss man das zugeh&ouml;rigen Fensterrechteck berechnen und dieses Rechteck verwenden um den ToolTip zu positionieren.
+$TTM_ADJUSTRECT erledigt diese Berechnung f&uuml;r den User. Wenn man $fLarger auf
+True setzt, nimmt $TTM_ADJUSTRECT die Gr&ouml;&szlig;e und 
+Position des gew&uuml;nschten Textrechtecks und gibt die Gr&ouml;&szlig;e und Position des ToolTip Fensters zur&uuml;ck. Dies wird ben&ouml;tigt, um den Text in der festgelegten Position darzustellen. Wenn man
+$fLarger auf False setzt, kann man ein ToolTip Fensterrechteck festlegen und $TTM_ADJUSTRECT gibt die Gr&ouml;&szlig;e und Position dessen Textrechtecks zur&uuml;ck.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

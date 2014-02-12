@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_GetCurrentProcessID
+
+###Description###
+Gibt die Prozess ID des aufrufenden Prozesses zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetCurrentProcessID()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt die Prozess-ID des aufrufenden Prozesses zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetWindowThreadProcessID, _WinAPI_GetCurrentProcess
+
+###See Also###
+@@MsdnLink@@ GetCurrentProcessId
+
+###Example###
+@@IncludeExample@@

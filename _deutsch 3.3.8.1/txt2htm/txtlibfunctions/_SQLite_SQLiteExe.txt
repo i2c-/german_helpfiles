@@ -1,0 +1,45 @@
+###User Defined Function###
+_SQLite_SQLiteExe
+
+###Description###
+F&uuml;hrt Befehle mit der SQLite3.exe aus.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_SQLiteExe($sDatabaseFile, $sInput, ByRef $sOutput [, $sSQLiteExeFilename = "SQLite3.exe" [, $fDebug = False]])
+
+
+###Parameters###
+@@ParamTable@@
+$sDatabaseFile
+	Dateiname der Datenbank
+$sInput
+	Befehle f&uuml;r SQLite3.exe
+$sOutput
+	Variable f&uuml;r die (ungefilterten) Ausgaben der SQLite3.exe
+$sSQLiteExeFilename
+	[optional] Pfad zur SQLite3.exe
+$fDebug
+     [optional] True, wenn Debug-Befehle an die in _SQLite_Startup() angegebene Callback-Funktion &uuml;bergeben werden sollen; False, wenn die &Uuml;bermittlung an die Callback-Funktion &uuml;bersprungen werden soll. Siehe Bemerkungen bei _SQLite_Startup() f&uuml;r weitere Details.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	Der R&uuml;ckgabewert ist eine der $SQLITE_-Konstanten
+@error:	1 - Kann keine neue Datenbank anlegen
+	2 - SQLite3.exe nicht gefunden
+	3 - SQL-Fehler / SQL-Befehl unvollst&auml;ndig
+ 	4 - Kann die Eingabedatei nicht &ouml;ffnen
+@@End@@
+
+###Remarks###
+Um mehr &uuml;ber die SQLite3.exe-Befehle zu erfahren, die SQLite3.exe ausf&uuml;hren, Enter dr&uuml;cken und dann ".Help" eingeben.
+
+SQLite3.exe ist auf der SQLite-Webseite zu finden. Eine Kopie (mit einer Hilfedatei) liegt im Verzeichnis AutoIt3\Extras\SQLite.
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

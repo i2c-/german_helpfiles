@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_DeleteItem
+
+###Description###
+L&ouml;scht ein Item eines ListView-Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_DeleteItem ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	ID/Handle des Controls
+$iIndex
+	0-basierender Index des zu l&ouml;schenden ListView Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls diese Funktion mit einem Listview, welches durch die Funktion GUICtrlCreateListView erstellt wurde, angewendet wird, muss der Befehl _GUICtrlListView_DeleteItem(GUICtrlGetHandle($ListView), iIndex) hei&szlig;en, da sonst eine Fehlermeldung erscheint. ($ListView ist die Variable wie das Listview hei&szlig;t)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_DeleteAllItems, _GUICtrlListView_DeleteItemsSelected
+
+
+###Example###
+@@IncludeExample@@

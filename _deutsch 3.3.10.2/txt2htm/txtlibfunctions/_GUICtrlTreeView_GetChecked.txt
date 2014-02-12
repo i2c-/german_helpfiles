@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetChecked
+
+###Description###
+Ermittelt, ob die Checkbox eines Items angehakt ist
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetChecked ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	die Checkbox des Items ist angehakt
+False:	die Checkbox des Items ist nicht angehakt
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_SetChecked
+
+
+###Example###
+@@IncludeExample@@

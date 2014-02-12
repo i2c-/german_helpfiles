@@ -1,0 +1,33 @@
+###User Defined Function###
+_SQLite_ErrMsg
+
+###Description###
+Gibt einen String zur&uuml;ck, der in englisch die Fehlerbedingung des letzten sqlite3_* API Aufrufes beschreibt.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_ErrMsg([$hDB])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Eine offene Datenbank, Standard ist die zuletzt ge&ouml;ffnete Datenbank.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Fehlermeldung zur&uuml;ck
+Fehler:	@error = 1 - Fehler beim Aufruf von SQLite API 'sqlite3_errmsg16'
+	2 - Aufruf wegen Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SQLite_ErrCode
+
+###Example###
+@@IncludeExample@@

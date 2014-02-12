@@ -1,0 +1,75 @@
+###User Defined Function###
+_WinAPI_DrawText
+
+###Description###
+Zeichnet formatierten Text in das angegebene Rechteck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DrawText($hDC, $sText, ByRef $tRect, $iFlags)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu einem Ger&auml;tekontext
+$sText
+	Die zu zeichnenden Strings
+$tRect
+	$tagRECT Struktur, die das Rechteck enth&auml;lt, in das der Text gezeichnet werden soll
+$iFlags
+	Legt die Methode der Textformatierung fest:
+		$DT_BOTTOM - Setzt den Text untenb&uuml;ndig im Rechteck
+		$DT_CALCRECT - Ermittelt die Breite und H&ouml;he des Rechtecks
+		$DT_CENTER - Zentriert den Text horizontal im Rechteck
+		$DT_EDITCONTROL - Dupliziert die Textanzeige-Eigenschaften eines mehrzeiligen Edit-Controls
+		$DT_END_ELLIPSIS - Ersetzt Teile des Strings notfalls mit Auslassungszeichen (...)
+		$DT_EXPANDTABS - Expandiert Tab Druckzeichen
+		$DT_EXTERNALLEADING - Ber&uuml;cksichtigt bei mehrzeiligem Text den Durchschuss in der Zeichenh&ouml;he
+		$DT_HIDEPREFIX - Ignoriert den Kaufmannsund-Pr&auml;fix (& - Unterstreichung) im Text.
+		  Der darauf folgende Buchstabe wird nicht unterstrichen, andere Mnemonik-Pr&auml;fixe werden aber weiterhin verarbeitet.
+		$DT_INTERNAL - Benutzt den Systemzeichensatz, um die Schriftma&szlig;e zu berechnen
+		$DT_LEFT - Text ist linksb&uuml;ndig
+		$DT_MODIFYSTRING - Modifiziert die Strings, um den anzuzeigenden Text anzupassen
+		$DT_NOCLIP - Unterdr&uuml;ckt das Abschneiden von Text bzw. Zeichenteilen an den Grenzen des Rechtecks
+		$DT_NOFULLWIDTHCHARBREAK - Verhindert Zeilenumbr&uuml;che bei DBCS (doppelt-lange Strings), dadurch gilt die gleiche Regel wie f&uuml;r Strings einfacher L&auml;nge.
+		  Dies kann zum Beispiel genutzt werden, um unter einem koreanischen Windows die Lesbarkeit der Icon-Beschriftungen zu verbessern.
+		  Dieser Wert hat keinen Einfluss, wenn nicht auch $DT_WORDBREAK angegeben wird.
+		$DT_NOPREFIX - Schaltet das Verarbeiten aller Pr&auml;fixzeichen ab (z.B. & f&uuml;r Unterstreichung)
+		$DT_PATH_ELLIPSIS - Ersetzt im angezeigten Text so viele Zeichen in der Mitte des Strings durch Auslassungszeichen (...), bis das Ergebnis in das angegebene Rechteck passt.
+		  Wenn der String Backslash-Zeichen (\) enth&auml;lt, beh&auml;lt $DT_PATH_ELLIPSIS so viele Zeichen wie m&ouml;glich nach dem letzten Backslash bei.
+		  der String wird nicht ver&auml;ndert, wenn nicht auch $DT_MODIFYSTRING angegeben wird.
+		$DT_PREFIXONLY - Zeichnet nur die Unterstreichung an der Position eines Zeichens, das auf einen Kaufmannsund-Pr&auml;fix (&) folgt.
+		  Es wird kein weiteres Zeichen des Strings ausgegeben.
+		$DT_RIGHT - Text ist rechtsb&uuml;ndig
+		$DT_RTLREADING - Rechts-nach-Links Ausrichtung des Textes
+		$DT_SINGLELINE - Zeigt den Text einzeilig an
+		$DT_TABSTOP - Setzt die Tabstopps. Die Bits 15-8 der $iFlags legen die Anzahl der Druckzeichen in einem Tab fest.
+		$DT_TOP - Setzt den Text obenb&uuml;ndig im Rechteck (nur bei einzeiligem Text)
+		$DT_VCENTER - Zentriert den Text vertikal (nur bei einzeiligem Text)
+		$DT_WORDBREAK - Bricht W&ouml;rter in Zeilen um
+		$DT_WORD_ELLIPSIS - Beschneidet alle W&ouml;rter, die nicht in das angegebene Rechteck passen und f&uuml;gt daf&uuml;r Auslassungszeichen an (...).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die H&ouml;he des Textes
+Fehler:	0
+@@End@@
+
+###Remarks###
+Die DrawText-Funktion benutzt zum Zeichnen die im Ger&auml;tekontext gew&auml;hlte Schriftart, Textfarbe und Hintergrundfarbe.
+Sofern nicht das $DT_NOCLIP-Format verwendet wird, beschneidet DrawText den Text, sodass dieser nicht au&szlig;erhalb des
+angegebenen Rechtecks erscheint. Bei allen Formatierungen wird angenommen, dass es sich um mehrzeiligen Text handelt,
+au&szlig;er wenn $DT_SINGLELINE angegeben wird. Ist die gew&auml;hlte Schriftart zu gro&szlig;, versucht DrawText nicht, diese durch
+eine kleinere zu ersetzen.
+
+Die <WindowsConstants.au3> muss eingebunden werden, um die vordefinierten Konstanten benutzen zu k&ouml;nnen.
+
+###Related###
+$tagRECT, _WinAPI_GetBkMode, _WinAPI_SetBkMode
+
+###See Also###
+@@MsdnLink@@ DrawText
+
+###Example###
+@@IncludeExample@@

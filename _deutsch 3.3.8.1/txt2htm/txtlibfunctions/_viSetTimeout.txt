@@ -1,0 +1,46 @@
+###User Defined Function###
+_viSetTimeout
+
+###Description###
+Setzt das VISA Timeout in Millisekunden
+
+###Syntax###
+#include <Visa.au3>
+_viSetTimeout($h_session, $i_timeout_ms)
+
+
+###Parameters###
+@@ParamTable@@
+$h_session
+	Ein VISA Descriptor (STRING) oder ein VISA Session-Handle (INTEGER).
+	F&uuml;r mehr Informationen, siehe die Bemerkungen zu _viExecCommand.
+$i_timeout_ms
+	Der Timeout in Millisekunden f&uuml;r den VISA Vorgang (haupts&auml;chlich f&uuml;r GPIB Abfrage)
+	Wenn dies auf 0 gesetzt wird, werden die Timeouts deaktiviert.
+	Wenn dies auf "INF" gesetzt wird, hat der VISA Vorgang keinen Timeout.
+	Mit diesem Wert muss vorsichtig umgegangen werden, da dadurch das Programm abst&uuml;rzen kann, falls das Ger&auml;t nicht auf die Suchanfragen antwortet. 
+	Abh&auml;ngig vom Bustyp (GPIB, TCP, etc) kann es sein, dass der Timeout nicht auf den exakt notwendigen Wert gesetzt wird. Stattdessen wird der n&auml;chste g&uuml;ltige Timeout verwendet der gr&ouml;&szlig;er ist als der gew&uuml;nschte.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 0 zur&uuml;ck
+Fehler:	Gibt -1 zur&uuml;ck, falls die VISA-DLL nicht ge&ouml;ffnet werden konnte oder ein nicht-null Wert den VISA Fehlercode darstellt (siehe VISA Programmierhandbuch)
+@@End@@
+Diese Funktion setzt @error im Falle eines Fehlers immer auf 1.
+
+
+###Remarks###
+Meistens ist es nicht notwendig diese Funktion aufzurufen, da _viExecCommand einen dritten optionalen Parameter $i_timeout_ms hat, der auch verwendet werden kann um das VISA Timeout zu setzen.
+
+Wie f&uuml;r alle VISA Funktionen m&uuml;ssen die VISA Bibliotheken (sind installiert, wenn die visa32.dll sich in dem Ordner {WINDOWS}\system32 befindet) und eine GPIB Karte (wie zum Beispiel eine National Instruments NI PCI-GPIB Karte oder eine Agilent 82350B PCI High-Performance GPIB Karte) installiert sein.
+
+* F&uuml;r eine detaillierte Beschreibung der meisten gemeinsamen VISA DESCRIPTORS ist in den Bemerkungen der Hilfe zu der _viExecCommand Funktion nachzusehen.
+
+
+###Related###
+_viSetAttribute, _viExecCommand, _viOpen, _viClose
+
+
+###Example###
+@@IncludeExample@@

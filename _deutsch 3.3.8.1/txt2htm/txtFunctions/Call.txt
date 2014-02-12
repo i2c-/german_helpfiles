@@ -1,0 +1,36 @@
+###Function###
+Call
+
+###Description###
+Ruft eine benutzerdefinierte Funktion auf, deren Name in einem String &uuml;bergeben wird.
+
+
+###Syntax###
+Call ( "function" [, param1 [, param2 [, param<i>N</i>]]] )
+
+
+###Parameters###
+@@ParamTable@@
+function
+	Der Name der benutzerdefinierten Funktion, die aufgerufen werden soll.
+param
+	Parameter, die &uuml;bergeben werden, wenn die Funktion aufgerufen wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den R&uuml;ckgabewert der aufgerufenen Funktion zur&uuml;ck. @error und @extended k&ouml;nnen Werte enthalten, falls die aufgerufene Funktion diese festgelegt hat.
+Fehler:	setzt @Error auf 0xDEAD und @extended auf 0xBEEF, wenn die Funktion nicht existiert oder die Anzahl der Parameter falsch ist.
+@@End@@
+
+###Remarks###
+In <i>function</i> kann keine AutoIt-eigene Funktion oder PlugIn-Funktion enthalten sein. Die Funktion kann Argumente an Funktionen weitergeben, jedoch werden ByRef Parameter nicht unterst&uuml;tzt. Es gibt keine M&ouml;glichkeit um ByRef Parameter aufzurufen. Ein spezielles Array kann anstelle von individuellen Parametern weitergegeben werden.
+
+Das erste Element dieses Arrays muss den Wert "CallArgArray" haben und die Elemente 1 bis n werden als  separate Argumente an die Funktion &uuml;bergeben. Wenn dieses besondere Array genutzt wird, k&ouml;nnen keine anderen Argumente an Call() &uuml;bergeben werden. Siehe Beispiel zur Demonstration.
+Call() kann einen @error festlegen und auch die aufgerufene Funktion. Falls Call() f&uuml;r @error einen Wert setzt, ist dieser 0xDEAD und ebenfalls der Wert von @extended auf 0xBEEF gesetzt. Siehe das Beispiel f&uuml;r eine Demonstration, wie man testet, ob eine Funktion nicht gefunden wurde.
+
+###Related###
+Execute
+
+###Example###
+@@IncludeExample@@

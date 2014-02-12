@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlStatusBar_SetBkColor
+
+###Description###
+Setzt die Hintergrundfarbe
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_SetBkColor ( $hWnd, $iColor )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iColor
+	Neue Hintergrundfarbe. Legt den CLR_DEFAULT Wert fest, welcher bewirkt, dass die Statusbar seine eigene Hintergrundfarbe verwendet.
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Hintergrundfarbe oder CLR_DEFAULT falls die Hintergrundfarbe die Standardfarbe ist zur&uuml;ck
+
+
+###Remarks###
+Gibt die RGB COLORREF Farbe zur&uuml;ck. Die Farbe muss in BGR Hex Farbe oder RGB COLORREF sein.
+StatusBar Controls k&ouml;nnen nicht gezeichnet werden, wenn der "Windows XP Style" verwendet wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+PluginOpen
+
+###Experimental###
+
+###Description###
+&Ouml;ffnet ein Pluginfile.
+
+###Syntax###
+PluginOpen ( filename )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname des zu &ouml;ffnenden Plugins.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein DLL-Handle zur&uuml;ck um das Plugin zu schlie&szlig;en.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+PluginClose
+
+
+###Example###
+@@IncludeExample@@

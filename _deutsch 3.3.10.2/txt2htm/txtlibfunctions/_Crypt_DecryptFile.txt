@@ -1,0 +1,44 @@
+###User Defined Function###
+_Crypt_DecryptFile
+
+###Description###
+Entschl&uuml;sselt eine Datei mit einem angegebenen Schl&uuml;ssel und Algorithmus
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_DecryptFile ( $sSourceFile, $sDestinationFile, $vCryptKey, $iALG_ID )
+
+
+###Parameters###
+@@ParamTable@@
+$sSourceFile
+	Datei die entschl&uuml;sselt werden soll
+$sDestinationFile
+	Pfad und Name der Ausgabedatei
+$vCryptKey
+	Passwort oder Handle zu einem Schl&uuml;ssel, wenn der CALG_USERKAY Flag angegeben ist.
+$iALG_ID
+	Der zu verwendende Algorithmus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+	2 - Quelldatei konnte nicht ge&ouml;ffnet werden
+	3 - Zieldatei konnte nicht ge&ouml;ffnet werden
+	400+ - Das letzte St&uuml;ck konnte nicht entschl&uuml;sselt werden
+	500+ - Das St&uuml;ck konnte nicht entschl&uuml;sselt werden
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Crypt_EncryptFile, _Crypt_DeriveKey
+
+
+###Example###
+@@IncludeExample@@

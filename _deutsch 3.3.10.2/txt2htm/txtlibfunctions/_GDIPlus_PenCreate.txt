@@ -1,0 +1,49 @@
+###User Defined Function###
+_GDIPlus_PenCreate
+
+###Description###
+Erzeugt ein Zeichenstift Objekt
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenCreate ( [$iARGB = 0xFF000000 [, $nWidth = 1 [, $iUnit = 2]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$iARGB
+	[optional] Alpha, Rot, Gr&uuml;n und Blau-Komponenten der Zeichenstiftfarbe 
+$nWidth
+	[optional] Die Breite des Zeichenstiftes, gemessen in den Einheiten, die im $iUnit-Parameter festgelegt sind. 
+$iUnit
+	[optional] Ma&szlig;einheit f&uuml;r die Zeichenstiftgr&ouml;&szlig;e: 
+		0 - Welt-Koordinaten, eine nicht-physikalische Einheit 
+		1 - Darstellungseinheiten
+		2 - Eine Einheit ist 1 Pixel 
+		3 - Eine Einheit ist 1 Punkt oder 1/72 Zoll
+		4 - Eine Einheit ist 1 Zoll
+		5 - Eine Einheit ist 1/300 Zoll
+		6 - Eine Einheit ist 1 Millimeter 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Handle auf das Zeichenstift-Objekt
+Fehler:	0 und setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Wenn man mit dem Zeichenstift fertig ist, sollte man zur Freigabe der Ressourcen <a href="_GDIPlus_PenDispose.htm">_GDIPlus_PenDispose()</a> aufrufen. 
+
+
+###Related###
+_GDIPlus_PenDispose
+
+
+###See Also###
+@@MsdnLink@@ GdipCreatePen1
+
+
+###Example###
+@@IncludeExample@@

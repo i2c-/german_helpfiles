@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetCount
+
+###Description###
+Ermittelt die Anzahl von Abschnitten
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetCount ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl von Statusbarabschnitten zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

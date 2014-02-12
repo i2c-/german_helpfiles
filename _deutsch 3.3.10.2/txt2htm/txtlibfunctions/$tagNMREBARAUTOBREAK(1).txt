@@ -1,0 +1,31 @@
+###Structure Name###
+$tagNMREBARAUTOBREAK
+
+###Description###
+Enth&auml;lt Informationen, die in $RBN_AUTOBREAK Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMREBARAUTOBREAK = $tagNMHDR & ";uint uBand;uint wID;int lParam;uint uMsg;uint fStyleCurrent;int fAutoBreak"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+uBand
+	0-basierter Index der von der Benachrichtigung betroffenen Gruppe. Dies ist -1, falls kein Bereich vorgegeben ist.
+wID
+	Anwendungsdefinierter Identifizierer der Gruppe
+lParam
+	Anwendungsdefinierter Wert des lParam Members der $tagREBARBANDINFO Struktur, welche den Bereich der Rebar definiert.
+uMsg
+	ID der Nachricht.
+fStyleCurrent
+	Stil der bestimmten Gruppe.
+fAutoBreak
+	Weist darauf hin, ob ein Abbruch erfolgen soll.
+@@End@@
+
+
+###Remarks###
+Keine.

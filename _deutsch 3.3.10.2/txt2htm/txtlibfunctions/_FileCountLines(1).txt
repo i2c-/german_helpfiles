@@ -1,0 +1,34 @@
+###User Defined Function###
+_FileCountLines
+
+###Description###
+Gibt die Anzahl der Zeilen in der angegebenen Datei zur&uuml;ck.
+
+###Syntax###
+#include <File.au3>
+_FileCountLines ( $sFilePath )
+
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Pfad und Dateiname der Datei die eingelesen werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Anzahl der Zeilen in der Datei.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@Error:	1 - Die Datei kann nicht ge&ouml;ffnet bzw. gefunden werden.
+@@End@@
+
+
+###Remarks###
+Ein abschlie&szlig;ender Zeilenvorschub (@LF) am Ende der Datei wird nicht als Zeile gez&auml;hlt.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

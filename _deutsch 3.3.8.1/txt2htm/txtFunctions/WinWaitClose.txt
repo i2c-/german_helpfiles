@@ -1,0 +1,38 @@
+###Function###
+WinWaitClose
+
+###Description###
+Unterbricht die Ausf&uuml;hrung des Skripts bis das angegebene Fenster nicht mehr existiert.
+
+###Syntax###
+WinWaitClose ( "title" [, "text" [, timeout]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das gewartet werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text im Fenster, auf den gewartet werden soll.
+timeout
+	[optional] Maximale Unterbrechungsdauer nach der fortgefahren wird, auch wenn das Fenster noch existiert.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die maximale Unterbrechungszeit &uuml;berschritten wurde.
+@@End@@
+
+
+###Remarks###
+Wenn die Funktion aufgerufen wird und das Fenster bereits nicht mehr existiert, wird direkt 1 zur&uuml;ckgegeben. Das Fenster wird ungef&auml;hr alle 250 Millisekunden abgefragt.
+
+
+###Related###
+WinActive, WinExists, WinWait, WinWaitActive, WinWaitNotActive, WinWaitDelay (Option), ProcessWaitClose
+
+
+###Example###
+@@IncludeExample@@

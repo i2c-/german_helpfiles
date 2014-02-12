@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_GetBkMode
+
+###Description###
+Liefert den aktuellen Hintergrund-Mischmodus f&uuml;r den angegebenen Ger&auml;tekontext.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetBkMode ( $hDC )
+
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu dem Ger&auml;tekontext, dessen Hintergrund-Mischmodus zur&uuml;ckgegeben werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wert, der den aktuellen Mischmodus angibt, entweder OPAQUE oder TRANSPARENT
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Der Hintergrund-Mischmodus eines Ger&auml;tekontexts beeinflusst Text, Schraffur-F&uuml;llmuster und Stiftstile, die keine durchgezogenen Linien sind.
+
+
+###Related###
+_WinAPI_SetBkMode, _WinAPI_DrawText, _WinAPI_CreatePen, _WinAPI_SelectObject
+
+
+###See Also###
+@@MsdnLink@@ GetBkMode
+
+
+###Example###
+@@IncludeExample@@

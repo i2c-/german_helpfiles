@@ -1,0 +1,41 @@
+###User Defined Function###
+_SQLite_Exec
+
+###Description###
+F&uuml;hrt eine SQLite Abfrage durch, bearbeitet jedoch keine Ergebnisse.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Exec($hDB, $sSQL [, $sCallBack])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	Eine offene Datenbank, mit -1 wird die zuletzt ge&ouml;ffnete Datenbank verwendet
+$sSQL
+	SQL-Anweisung die ausgef&uuml;hrt werden soll
+$sCallback
+	[optional] Wenn angegeben, wird diese Funktion f&uuml;r jede Zeile ausgef&uuml;hrt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	R&uuml;ckgabewert kann mit den $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite hat einen Fehler festgestellt (R&uuml;ckgabewert &uuml;berpr&uuml;fen)
+	1 - Fehler beim Aufruf des SQLite API 'sqlite3_exec'
+	2 - Aufruf vom Sicherheitsmodus verhindert
+	3 - Fehler in der Callback-Funktion von _SQLite_GetTable2d
+	4 - Fehler beim konvertieren des SQL-Auszuges in UTF-8
+@@End@@
+
+###Remarks###
+Die Callback-Funktion muss einen Parameter annehmen und kann $SQLITE_ABORT zur&uuml;ckgeben, um die Bearbeitung zu stoppen (siehe Beispiel).
+Die erste Zeile in der Callback-Sequenz wird der Spaltenname sein.
+
+###Related###
+_SQLite_Query, _SQLite_GetTable, _SQLite_GetTable2d
+
+###Example###
+@@IncludeExample@@

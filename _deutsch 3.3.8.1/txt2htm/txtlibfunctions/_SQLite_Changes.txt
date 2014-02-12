@@ -1,0 +1,33 @@
+###User Defined Function###
+_SQLite_Changes
+
+###Description###
+Gibt die Anzahl der Datenbank-Reihen zur&uuml;ck, die durch die letzte vollendete Abfrage mit dieser Verbindung ver&auml;ndert wurden.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Changes([$hDB])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Eine ge&ouml;ffnete Datenbank, Standard ist die zuletzt ge&ouml;ffnete Datenbank.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Anzahl der Ver&auml;nderungen zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck
+@error	1 - Fehler beim Aufruf des SQLite API 'sqlite3_changes'
+	2 - Aufruf wurde vom Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+&Auml;nderungen, die durch Trigger oder Fremdschl&uuml;ssel veranlasst wurden, werden von diese Z&auml;hlung nicht erfasst. Siehe _SQLite_TotalChanges()
+
+###Related###
+_SQLite_TotalChanges
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+Round
+
+###Description###
+Gibt eine Zahl gerundet auf eine angegebene Anzahl von Nachkommastellen zur&uuml;ck.
+
+###Syntax###
+Round ( expression [, decimalplaces] )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein g&uuml;ltiger numerischer Ausdruck.
+decimalplaces
+	[optional] Zahl die angibt, auf wie viele Nachkommastellen gerundet werden soll. Wenn der Parameter nicht angegeben wird, gibt Round eine ganze Zahl zur&uuml;ck.
+@@End@@
+
+
+###ReturnValue###
+Gibt den gerundeten Zahlenwert zur&uuml;ck.
+
+
+###Remarks###
+Der Parameter <i>decimalplaces</i> kann negativ sein, was das Runden auf Einer-, Zehner-, Hunderter-Stelle etc. erm&ouml;glicht. Beachten, dass bis zu f&uuml;nfzehn Stellen einer Zahl angezeigt werden und dass <i>decimalplaces</i> nie eine Zahl mit angeh&auml;ngten Nullen auff&uuml;llt.
+
+
+
+###Related###
+Int, Number, Ceiling, Floor, Random
+
+
+###Example###
+@@IncludeExample@@

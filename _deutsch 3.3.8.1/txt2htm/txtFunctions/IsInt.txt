@@ -1,0 +1,34 @@
+###Function###
+IsInt
+
+###Description###
+&Uuml;berpr&uuml;ft ob die Variable eine ganze Zahl ist (Integer).
+
+###Syntax###
+IsInt ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Die zu &uuml;berpr&uuml;fende Variable.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Variable keine ganze Zahl (Integer) ist.
+@@End@@
+
+
+###Remarks###
+IsInt(7.5 - 2.5) gibt 1 zur&uuml;ck (also True).
+Diese Funktion pr&uuml;ft nur, ob es ein 64bit Integer ist. Es wird nicht gepr&uuml;ft, ob es ein 32bit Integer ist.
+
+
+###Related###
+IsArray, IsFloat, IsString, IsNumber, IsBool, IsHWnd, StringIsInt, IsBinary, IsPtr, VarGetType
+
+
+###Example###
+@@IncludeExample@@

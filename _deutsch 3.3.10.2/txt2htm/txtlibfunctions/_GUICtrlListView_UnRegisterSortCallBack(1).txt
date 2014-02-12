@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_UnRegisterSortCallBack
+
+###Description###
+Deregistriert die Sortier-Callback Funktion
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_UnRegisterSortCallBack ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_RegisterSortCallBack
+
+
+###Example###
+@@IncludeExample@@

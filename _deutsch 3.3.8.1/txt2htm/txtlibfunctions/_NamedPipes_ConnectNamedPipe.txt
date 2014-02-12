@@ -1,0 +1,38 @@
+###User Defined Function###
+_NamedPipes_ConnectNamedPipe
+
+###Description###
+Aktiviert einen benannten Datenstromserver, der auf eine Client-Verbindung wartet.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_ConnectNamedPipe($hNamedPipe [, $pOverlapped = 0])
+
+###Parameters###
+@@ParamTable@@
+$hNamedPipe
+	Handle zur Server-Adresse eines benannten Datenstroms
+$pOverlapped
+	[optional] Zeiger auf die $tagOVERLAPPED Struktur. Wenn hNamedPipe mit $FILE_FLAG_OVERLAPPED ge&ouml;ffnet wurde, darf pOverlapped nicht 0 sein. Wenn hNamedPipe mit $FILE_FLAG_OVERLAPPED erzeugt wurde und pOverlapped nicht 0 ist, dann sollte die $tagOVERLAPPED Struktur
+		ein Handle auf ein benutzerdefiniertes Abbruchobjekt enthalten.	
+		Wenn hNamedPipe nicht mit $FILE_FLAG_OVERLAPPED ge&ouml;ffnet wurde, kehrt die Funktion nicht zur&uuml;ck, bevor die Verbindung zu einem Client besteht
+		oder ein Fehler auftritt.
+		Bei erfolgreicher synchroner Abarbeitung gibt die Funktion einen Wert ungleich Null zur&uuml;ck, wenn nach Aufruf der Funktion sich ein Client verbindet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn sich ein Client mit dem Server verbindet, bevor die Funktion aufgerufen wurde, gibt die Funktion 0 zur&uuml;ck und
+GetLastError wird ERROR_PIPE_CONNECTED zur&uuml;ckgeben. Das kann zum Beispiel zwischen dem Aufruf von CreateNamedPipe und dem von ConnectNamedPipe geschehen.
+Die Funktion wird Null zur&uuml;ckgeben, obwohl eine korrekte Verbindung zwischen Client und Server besteht.
+
+###Related###
+_NamedPipes_CreateNamedPipe, $tagOVERLAPPED
+
+###See Also###
+@@MsdnLink@@ ConnectNamedPipe

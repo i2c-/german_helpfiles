@@ -1,0 +1,36 @@
+###Structure Name###
+$tagNMLISTVIEW
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber eine Listview Nachricht
+
+###Syntax###
+Global Const $tagNMLISTVIEW = $tagNMHDR & ";int Item;int SubItem;uint NewState;uint OldState;uint Changed;" & _
+	"struct; long ActionX;long ActionY; endstruct;lparam Param"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Item
+	Identifiziert das Element oder -1 falls nicht verwendet
+SubItem
+	Identifiziert das Child-Item oder 0 falls es keines gibt
+NewState
+	Neuer Elementstatus
+OldState
+	Alter Elementstatus
+Changed
+	Satz mit Flags welcher die zu &auml;ndernden Elementattribute anzeigt
+ActionX
+	X-Position an der das Ereignis auftritt
+ActionY
+	Y-Position an der das Ereignis auftritt
+Param
+	Anwendungsspezifischer Wert des Elements
+@@End@@
+
+
+###Remarks###
+Keine.

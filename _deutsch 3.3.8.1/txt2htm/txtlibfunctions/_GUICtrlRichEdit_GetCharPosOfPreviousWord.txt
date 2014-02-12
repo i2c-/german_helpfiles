@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetCharPosOfPreviousWord
+
+###Description###
+Ermittelt die Zeichenposition vor dem vorherigen Wort
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetCharPosOfPreviousWord($hWnd, $iCpStart)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCPStart
+	Zeichenposition, ab der gesucht werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zeichenposition vor dem vorherigen Wort
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iCpStart ist keine Zahl
+@@End@@
+
+###Remarks###
+"Wort" ist ungenau definiert - es enth&auml;lt Zeichensetzung [".,"], Klammern ["()[]{}"] und Bindestriche ['-']
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetCharPosOfNextWord, _GUICtrlRichEdit_GetCharWordBreakInfo
+
+###See Also###
+@@MsdnLink@@ EM_FINDWORDBREAK
+
+###Example###
+@@IncludeExample@@

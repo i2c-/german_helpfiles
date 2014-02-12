@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandIdealSize
+
+###Description###
+Ermittelt die ideale Breite der Gruppe in Pixel.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandIdealSize($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+Gibt die ideale Breite der Gruppe zur&uuml;ck
+
+###Remarks###
+Falls die Gruppe zu der idealen Breite maximiert ist (siehe _GUICtrlRebar_MaximizeBand), wird versucht die Gruppe auf diese Breite zu bringen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_SetBandIdealSize, _GUICtrlRebar_MaximizeBand
+
+###Example###
+@@IncludeExample@@

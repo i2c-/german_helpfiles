@@ -1,0 +1,37 @@
+###Function###
+GUICtrlGetHandle
+
+###Description###
+Gibt den Handle f&uuml;r ein Control und einige (Item-)Sonder-Handles (Menu, ContextMenu, TreeViewItem) zur&uuml;ck.
+
+###Syntax###
+GUICtrlGetHandle ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+controlID
+	Control-Identifikation wie von <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> zur&uuml;ckgegeben
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Handle der &uuml;bergebenen Control-Identifikation zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+! Diese Controls werden nicht unterst&uuml;tzt: Dummy, Graphic, Object, ListViewItem und TabItem !
+
+ListView-Items und Tab-Items werden durch Indizes verwaltet.
+Um den Index zu erhalten, ist <a href="DllCall.htm">DllCall()</a> und <a href="DllStructCreate.htm">DllStructCreate()</a> zu nutzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+IsHWnd
+
+
+###Example###
+@@IncludeExample@@

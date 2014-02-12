@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlStatusBar_Destroy
+
+###Description###
+L&ouml;scht das Control
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_Destroy ( ByRef $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True, $hWnd wird auf 0 gesetzt
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Funktioniert nur mit einem StatusBar-Control welches mit _GUICtrlStatusBar_Create() erstellt wurde
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlStatusBar_Create
+
+
+###Example###
+@@IncludeExample@@

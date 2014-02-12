@@ -1,0 +1,47 @@
+###Function###
+InetGetSize
+
+###Description###
+Gibt die Gr&ouml;&szlig;e einer im Internet gespeicherten Datei (in Bytes) zur&uuml;ck.
+
+###Syntax###
+InetGetSize ( "URL" [, options = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+URL
+	URL der zu downloadenden Datei.  Siehe Bemerkungen unten.
+options
+	[optional] 
+		$INET_LOCALCACHE (0) = Holt die Datei aus dem lokalen Cache, wenn verf&uuml;gbar (Standard). 
+		$INET_FORCERELOAD (1) = Erzwingt ein erneutes Laden von der Remote-Seite
+		$INET_IGNORESSL (2) = Ignoriert alle SSL Fehler (bei HTTPS Verbindungen).
+		$INET_ASCIITRANSFER (4) = Verwendet ASCII wenn Dateien mit dem FTP Protokoll transferiert werden (Kann nicht mit Flag $INET_BINARYTRANSFER (8) kombiniert werden).
+		$INET_BINARYTRANSFER (8) = Verwendet BINARY, wenn Dateien mit dem FTP-Protokol transferiert werden (Kann nicht mit Flag $INET_ASCIITRANSFER (4) kombiniert werden). Dies ist der Standardtransfermodus, falls kein anderer angegeben wird.
+	Die Konstanten sind in der Datei InetConstants.au3 definiert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Gr&ouml;&szlig;e der Datei in Bytes.
+Fehler:	0 und setzt @error auf ungleich 0.
+@@End@@
+
+
+###Remarks###
+F&uuml;r diese Funktion muss Internet Explorer 3 oder h&ouml;herer installiert sein.  (F&uuml;r ftp:// URLs ist Internet Explorer 5 notwendig!)
+
+Der URL Parameter sollte die folgende Form haben: "http://www.somesite.com/path/file.html" - wie eine Adresse, die man in den Webbrowser tippt.
+
+Um einen Benutzernamen und Passwort zum Verbinden zu benutzen, schreibt man einfach "Username:Passwort@" vor den Servernamen, z.B. "http://myuser:mypassword@www.somesite.com"
+
+Nicht alle Server geben die korrekte Dateigr&ouml;&szlig;e zur&uuml;ck, insbesondere, wenn man einen Proxy-Server benutzt.
+
+
+###Related###
+InetGet, InetRead, HttpSetProxy, FtpSetProxy, HttpSetUserAgent
+
+
+###Example###
+@@IncludeExample@@

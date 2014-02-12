@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlToolbar_GetRows
+
+###Description###
+Ermittelt die Anzahl von Zeilen von Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetRows($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl von Zeilen
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetRows
+
+###Example###
+@@IncludeExample@@

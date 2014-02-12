@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlTreeView_GetSelection
+
+###Description###
+Ermittelt das aktuell markierte Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetSelection ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu dem aktuell markierten Item oder 0, wenn kein Item markiert ist
+Fehler:	0 falls kein Item markiert ist
+@@End@@
+
+
+###Remarks###
+Durch diese Funktion kann nur der Status welcher durch _GUICtrlTreeView_SelectItem oder _GUICtrlTreeView_SelectItemByIndex gesetzt wurde ermittelt werden.
+Es kann nur ein Item ausgew&auml;hlt sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

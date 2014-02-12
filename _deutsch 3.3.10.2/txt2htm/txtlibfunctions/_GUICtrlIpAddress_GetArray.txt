@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlIpAddress_GetArray
+
+###Description###
+Ermittelt die Adresse des IP-Address-Controls
+
+###Syntax###
+#include <GuiIPAddress.au3>
+_GUICtrlIpAddress_GetArray ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array wie folgt formatiert zur&uuml;ck:
+
+	[0] - 1. Adressteil
+	[1] - 2. Adressteil
+	[2] - 3. Adressteil
+	[3] - 4. Adressteil
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlIpAddress_SetArray, _GUICtrlIpAddress_GetEx
+
+
+###Example###
+@@IncludeExample@@

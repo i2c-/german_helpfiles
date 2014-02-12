@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlHeader_DeleteItem
+
+###Description###
+L&ouml;scht ein Item des Headers
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_DeleteItem ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_AddItem, _GUICtrlHeader_InsertItem
+
+
+###Example###
+@@IncludeExample@@

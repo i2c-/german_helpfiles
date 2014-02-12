@@ -1,0 +1,31 @@
+###Function###
+HttpSetUserAgent
+
+###Description###
+Setzt den User Agent, der mit InetGet() und InetRead()-Anfragen gesendet wird.
+
+###Syntax###
+HttpSetUserAgent ( "user agent" )
+
+
+###Parameters###
+@@ParamTable@@
+user agent
+	Der String, welcher als User Agent gesetzt wird. &Uuml;bergabe eines leeren Strings wird den User Agent zur&uuml;ck auf Standard (="AutoIt") stellen.
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+InetGet, InetGetSize, InetRead
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,50 @@
+###User Defined Function###
+_Net_Share_StatisticsGetSvr
+
+###Description###
+Ermittelt die Verbindungsstatistik eines Servers
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_StatisticsGetSvr([$sServer = ""])
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	[optional] Legt den DNS- oder NetBIOS-Namen des Remote-Servers fest, auf dem die Funktion ausgef&uuml;hrt werden soll.
+		Wenn dieser Parameter leer ist, wird der lokale Computer verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[ 0] - Zeit, zu der die Datensammlung begonnen wurde. Der Wert wird die Anzahl der Sekunden gespeichert, die seit dem 1. Januar 1970 00:00:00 vergangen sind.
+	[ 1] - Gibt an, wie oft eine Datei auf dem Server ge&ouml;ffnet wurden
+	[ 2] - Gibt an, wie oft Ger&auml;te auf dem Server ge&ouml;ffnet wurden
+	[ 3] - Gibt an, wie oft ein Druckauftrag in die Warteschlange gestellt wurde
+	[ 4] - Gibt an, wie oft eine Server-Sitzung gestartet wurde
+	[ 5] - Gibt an, wie oft eine Server-Sitzung getrennt wurde
+	[ 6] - Gibt an, wie oft eine Server-Sitzung mit einem Fehler abgebrochen wurde
+	[ 7] - Gibt an, wie oft Passwort-Verst&ouml;&szlig;e auf dem Server aufgetreten sind
+	[ 8] - Gibt an, wie oft Fehler bei Zugriffsberechtigungen auf dem Server aufgetreten sind
+	[ 9] - Gibt an, wie oft Systemfehler auf dem Server aufgetreten sind
+	[10] - Anzahl der Bytes, die der Server &uuml;ber das Netzwerk verschickt hat
+	[11] - Anzahl der Bytes, die der Server aus dem das Netzwerk empfangen hat
+	[12] - Gibt die durchschnittliche Antwortzeit des Servers an (in Millisekunden)
+	[13] - Gibt an, wie oft der Server einen Anfrage-Puffer ben&ouml;tigte, ihn aber nicht reservieren konnte
+	[14] - Gibt an, wie oft der Server einen gro&szlig;en Puffer ben&ouml;tigte, ihn aber nicht reservieren konnte
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Es ist keine besondere Gruppenmitgliedschaft notwendig, um Server-Statistiken zu erhalten. Aber nur Mitglieder der lokalen
+Administrator- oder Server-Operator-Gruppe k&ouml;nnen diese Funktion erfolgreich auf einem Remote Server ausf&uuml;hren.
+
+###Related###
+_Net_Share_StatisticsGetWrk
+
+###See Also###
+@@MsdnLink@@ NetStatisticsGet
+
+###Example###
+@@IncludeExample@@

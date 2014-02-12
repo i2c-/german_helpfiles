@@ -1,0 +1,36 @@
+###User Defined Function###
+_Crypt_Startup
+
+###Description###
+Initialisiert die Crypt Bibliothek
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_Startup()
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt True zur&uuml;ck
+	Setzt @error auf 0
+Fehler:	Gibt False zur&uuml;ck und setzt @error wie folgt:
+	1 - Fehler beim &Ouml;ffnen von Advapi32.dll
+	2 - Fehler beim &Ouml;ffnen des crypt context
+@@End@@
+
+###Remarks###
+Das Aufrufen der Funktion ist optional.
+Jedoch entsteht durch das vorherige Initialisieren der Crypt ein Performanceunterschied.
+Um die Abw&auml;rts-Kompatibilit&auml;t bereitzustellen wird PROV_RSA_FULL f&uuml;r Windows 2000 und PROV_RSA_AES f&uuml;r Windows XP und neuer benutzt.
+
+###Related###
+_Crypt_Shutdown
+
+###See Also###
+@@MsdnLink@@ CryptAcquireContext
+
+###Example###
+@@IncludeExample@@

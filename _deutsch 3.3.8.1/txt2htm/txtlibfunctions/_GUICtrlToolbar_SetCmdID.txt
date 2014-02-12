@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlToolbar_SetCmdID
+
+###Description###
+Setzt die Command ID eines Toolbar Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetCmdID($hWnd, $iIndex, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Index eines Buttons, dessen Command ID zu setzen ist
+$iCommandID
+	Command ID
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,50 @@
+###Function###
+GUICtrlSetTip
+
+###Description###
+Legt den "Tip-Text" eines Controls fest.
+
+###Syntax###
+GUICtrlSetTip ( controlID, tiptext [, "title" [, icon [, options]]] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das letzte erzeugte Control.
+tiptext
+	Tip-Text, der angezeigt wird, wenn die Maus einige Zeit auf dem Control steht.
+title
+	[optional] Der Titel f&uuml;r den Tooltip <b>Ben&ouml;tigt IE5+</b>
+icon
+	[optional] Vordefiniertes Icon, welches neben dem Titel angezeigt werden soll: <b>Ben&ouml;tigt IE5+.</b> Ben&ouml;tigt einen Titel.
+	0 = Kein Icon, 1 = Info-Icon, 2 = Warn-Icon, 3 = Fehler-Icon
+options
+	[optional] Setzt die verschiedenen Optionen, wie der Tooltip dargestellt werden soll (kann addiert werden):
+		1 = Darstellung als Balloon-Tipp <b>Ben&ouml;tigt IE5+</b>
+		2 = Zentriert den Tipp horizontal entlang des Controls.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Dieser Tipp-Text wird in einem rechteckigen Tooltip-Feld dargestellt.
+Um einen optionalen Parameter zu &uuml;berspringen, also bei seinem Standardwert zu belassen, ist das <a href="../keywords/Default.htm">Schl&uuml;sselwort "Default"</a> zu verwenden.
+F&uuml;r mehrzeilige Tooltips k&ouml;nnen @CR oder @LF verwendet werden.
+Die Titel-, Icon- und Balloon- Tip-Option ben&ouml;tigt jeweils den Internet Explorer 5.0 oder neuer, um zu funktionieren.
+Um ein Icon darzustellen, muss ein "nicht leerer" Titel definiert werden. Das Icon erscheint in der selben Zeile wie der Titel, deshalb muss auch ein Titel vorhanden sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlUpdate...
+
+
+###Example###
+@@IncludeExample@@

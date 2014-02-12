@@ -1,0 +1,30 @@
+###User Defined Function###
+_GDIPlus_MatrixCreate
+
+###Description###
+Erstellt und initialisiert ein Matrix Objekt, das die Identit&auml;tsmatrix repr&auml;sentiert.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_MatrixCreate()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Matrix Objekt
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn man mit der Matrix fertig ist, ist _GDIPlus_MatrixDispose aufzurufen, um die Ressourcen freizusetzen.
+
+###Related###
+_GDIPlus_MatrixDispose
+
+###See Also###
+@@MsdnLink@@ GdipCreateMatrix
+
+###Example###
+@@IncludeExample@@

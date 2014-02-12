@@ -1,0 +1,30 @@
+###Function###
+StringStripCR
+
+###Description###
+Entfernt alle Eingabezeichen ( Chr(13) ) von einem String.
+
+###Syntax###
+StringStripCR ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu konvertierende String.
+@@End@@
+
+###ReturnValue###
+Gibt den String ohne Eingabezeichen (<a href="Chr.htm">Chr</a>(13)) zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringAddCR, StringStripWS, StringIsSpace
+
+
+###Example###
+@@IncludeExample@@

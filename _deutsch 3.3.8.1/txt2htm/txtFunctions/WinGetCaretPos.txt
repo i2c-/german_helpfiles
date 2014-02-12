@@ -1,0 +1,32 @@
+###Function###
+WinGetCaretPos
+
+###Description###
+Gibt die Koordinaten der aktuellen Cursorposition des Fensters im Vordergrund zur&uuml;ck.
+
+###Syntax###
+WinGetCaretPos (  )
+
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array mit zwei Elementen und folgenden Informationen zur&uuml;ck:
+	$array[0] = X Koordinate
+	$array[1] = Y Koordinate
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+###Remarks###
+WinGetCaretPos gibt bei "Multiple Document Interface (MDI)"-Programmen eventuell nicht die genauen Werte zur&uuml;ck, falls als Option "absolute CaretCoordMode" (siehe unten) genutzt wurde. Im Beispiel wird eine Ann&auml;herung (workaround) dargestellt. Hinweis: Manche Programme liefern - ungeachtet der aktuellen Cursorposition - statische Koordinaten!
+
+
+###Related###
+CaretCoordMode (Option)
+
+
+###Example###
+@@IncludeExample@@

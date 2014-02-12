@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlComboBox_SetEditSel
+
+###Description###
+W&auml;hlt Zeichen im Edit-Control einer ComboBox aus
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SetEditSel ( $hWnd, $iStart, $iStop )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iStart
+	Startposition
+$iStop
+	Endposition
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False wenn die Nachricht an eine ComboBox mit dem Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST gesendet wird
+@@End@@
+
+
+###Remarks###
+Die Positionen sind 0-basierend. Das erste Zeichen eines Edit-Controls befindet sich an der nullten Position.
+Falls $iStop –1 ist, werden alle Zeichen von der Startposition bis zur Endposition im Edit-Control markiert.
+
+Das erste Zeichen nach dem letzten markierten Zeichen befindet sich in der Endposition.
+
+Zum Beispiel: Sollen die ersten vier Zeichen des Edit-Controls markiert werden, ist als Startposition 0 und als Endposition 4 zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_GetEditSel, _GUICtrlComboBox_ReplaceEditSel
+
+
+###Example###
+@@IncludeExample@@

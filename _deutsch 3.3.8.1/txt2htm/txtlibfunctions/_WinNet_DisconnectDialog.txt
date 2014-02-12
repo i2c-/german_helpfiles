@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinNet_DisconnectDialog
+
+###Description###
+&Ouml;ffnet eine Standardbrowsing-Dialog-Box, um sich von Netzwerk-Ressourcen zu trennen
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_DisconnectDialog($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Besitzer- bzw. Eigner-Fenster f&uuml;r die Dialog-Box
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_DisconnectDialog1
+
+###See Also###
+@@MsdnLink@@ WNetDisconnectDialog

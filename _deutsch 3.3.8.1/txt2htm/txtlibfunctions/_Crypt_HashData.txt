@@ -1,0 +1,44 @@
+###User Defined Function###
+_Crypt_HashData
+
+###Description###
+Erstellt einen Datenhash mit einem speziellen Algorithmus.
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_HashData($vData, $iALG_ID [, $fFinal = True [, $hCryptHash = 0]])
+
+###Parameters###
+@@ParamTable@@
+$vData
+	Daten aus denen ein Hash erstellt werden soll
+$iALG_ID
+	Hash ID zum arbeiten
+$fFinal
+	[optional] Fehler wenn dies nur ein Segment der Daten ist, dann gibt die Funktion nur in Hash-Objekt zur&uuml;ck anstelle des Hash.
+$hCryptHash
+	[optional] R&uuml;ckgabe des Hash-Objekt vom vorherigem Aufruf von _Crypt_HashData
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen Hash oder ein Hash-Objekt zur&uuml;ck wenn $fFinal=False
+	Setzt @error auf 0
+Fehler:	Gibt -1 zur&uuml;ck und setzt @error:
+	1 - Fehler beim erstellen des Hash-Objekts
+	2 - Fehler im Hashwert
+	3 - Fehler beim erstellen der Hasgr&ouml;sse
+	4 - Fehler beim erstellen des Hash
+@@End@@
+
+###Remarks###
+Die Hasauswahl wird als Binary String wiedergegeben, die Gr&ouml;&szlig;e wird durch den Algorithmus bestimmt. Wenn man die Funktion auch auf Teilst&uuml;cke der Daten anwenden m&ouml;chte muss das fFinal flag auf False f&uuml;r alle nicht &auml;ndenden Teile gesetzt werden und das zur&uuml;ckgegebene Hash-Objekt muss in den n&auml;chsten Funktionsaufrufen verwendet werden.
+
+###Related###
+_Crypt_HashFile
+
+###See Also###
+@@MsdnLink@@ CryptHashData
+
+###Example###
+@@IncludeExample@@

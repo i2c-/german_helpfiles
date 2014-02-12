@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_SetStyleCustomErase
+
+###Description###
+Legt fest, ob das Control NM_CUSTOMDRAW Nachrichten erstellt
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetStyleCustomErase ( $hWnd [, $fState = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	[optional] True um es zu setzen, False um es nicht zu setzen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetStyleCustomErase
+
+
+###Example###
+@@IncludeExample@@

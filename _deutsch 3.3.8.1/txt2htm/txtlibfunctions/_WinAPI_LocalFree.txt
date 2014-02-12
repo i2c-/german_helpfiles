@@ -1,0 +1,29 @@
+###User Defined Function###
+_WinAPI_LocalFree
+
+###Description###
+Gibt das festgelegte lokale Speicherobjekt frei und setzt dessen Handle au&szlig;er Kraft
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LocalFree($hMem)
+
+###Parameters###
+@@ParamTable@@
+$hMem
+	Ein Handle zu dem lokalen Speicherobjekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ LocalFree

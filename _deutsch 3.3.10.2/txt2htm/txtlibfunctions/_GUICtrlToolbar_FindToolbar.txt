@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlToolbar_FindToolbar
+
+###Description###
+Findet eine bestimmte Toolbar
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_FindToolbar ( $hWnd, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Fensterhandle oder Text des Fensters
+$sText
+	Buttontext nach dem gesucht werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle der Toolbar
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

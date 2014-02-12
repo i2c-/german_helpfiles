@@ -1,0 +1,5 @@
+Local $var = PixelGetColor(10, 10)
+$sMsgText = StringFormat("Der dezimale Wert der Farbe ist: %d\t", $var)
+MsgBox(0, "PixelGetColor", $sMsgText)
+$sMsgText = StringFormat("Der hexadezimale Wert der Farbe ist: %#06x\t", $var)
+MsgBox(0, "PixelGetColor", $sMsgText)

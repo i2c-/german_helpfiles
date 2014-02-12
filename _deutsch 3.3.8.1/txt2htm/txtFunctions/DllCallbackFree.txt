@@ -1,0 +1,30 @@
+###Function###
+DllCallbackFree
+
+###Description###
+Gibt ein zuvor mit DllCallbackRegister erzeugtes Handle wieder frei.
+
+###Syntax###
+DllCallbackFree ( handle )
+
+
+###Parameters###
+@@ParamTable@@
+handle
+	Das DllCallback Handle, welches durch einen vorherigen Aufruf von DllCallbackRegister erzeugt wurde.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Nach Beendigung des Skriptes schlie&szlig;t AutoIt automatisch jedes ge&ouml;ffnete Handle, allerdings ist trotzdem der Aufruf von DllCallbackFree sinnvoll.
+
+
+###Related###
+DllCall, DllCallbackGetPtr, DllCallbackRegister
+
+
+###Example###
+@@IncludeExample@@

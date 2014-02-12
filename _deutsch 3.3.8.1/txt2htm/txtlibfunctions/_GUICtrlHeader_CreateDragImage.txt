@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlHeader_CreateDragImage
+
+###Description###
+Erstellt eine halbtransparente Version eines Itembildes zur Verwendung als ziehendes Bild.
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_CreateDragImage($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex. Das Bild, das mit dem Item verkn&uuml;pft ist, ist die Basis f&uuml;r das transparente Bild.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Handle zu einer Imagelist, welches das neue Bild als einziges Item enth&auml;lt.
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlHeader_GetImageList
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,54 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetSel
+
+###Description###
+Setzt die Anfangs- und Endposition der Zeichen einer Markierung
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetSel ( $hWnd, $iAnchor, $iActive [, $fHideSel = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iAnchor
+	Die erste Zeichenposition der Markierung
+	Spezial: -1 = Ende des Textes
+$iActive
+	Die letze Zeichenposition der Markierung
+	Spezial: -1 = Ende des Textes
+$fHideSel
+	[optional] True, um die Markierung zu verstecken
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	102 - $iAnchor < -1
+	103 - $iActive < -1
+	104 - $fHideSel muss True oder False sein
+@@End@@
+
+
+###Remarks###
+Das erste Zeichen des Textes im Control ist Zeichenposition 0.
+
+$iActive kann kleiner als $iAnchor sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_GetSelAA, _GUICtrlRichEdit_Deselect, _GUICtrlRichEdit_IsTextSelected, _GUICtrlRichEdit_GotoCharPos
+
+
+###See Also###
+@@MsdnLink@@ EM_EXSETSEL
+
+
+###Example###
+@@IncludeExample@@

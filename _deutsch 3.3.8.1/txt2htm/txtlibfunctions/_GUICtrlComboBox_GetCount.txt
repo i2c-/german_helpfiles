@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlComboBox_GetCount
+
+###Description###
+Ermittelt die Anzahl von Items
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl von Items
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

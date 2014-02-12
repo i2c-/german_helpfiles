@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_GetSelEnd
+
+###Description###
+Ermittelt die Endposition des aktuellen ausgew&auml;hlten Bereichs
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetSelEnd ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Endposition des aktuellen ausgew&auml;hlten Bereichs zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_SetSelEnd
+
+
+###Example###
+@@IncludeExample@@

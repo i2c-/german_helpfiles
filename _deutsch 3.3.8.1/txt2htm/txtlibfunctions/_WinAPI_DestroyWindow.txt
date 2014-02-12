@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_DestroyWindow
+
+###Description###
+L&ouml;scht das festgelegte Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DestroyWindow($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem zu l&ouml;schenden Fenster
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+_WinAPI_DestroyWindow kann nicht verwendet werden, um ein Fenster zu l&ouml;schen, welches in verschiedenen Threads erstellt wurde.
+
+###Related###
+_WinAPI_CreateWindowEx
+
+###See Also###
+@@MsdnLink@@ DestroyWindow

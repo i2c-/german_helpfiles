@@ -1,0 +1,55 @@
+###User Defined Function###
+_GUIToolTip_AddTool
+
+###Description###
+Registriert ein Tool mit dem Control
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_AddTool($hTool, $hWnd, $sText [, $iID = 0 [, $iLeft = 0 [, $iTop = 0 [, $iRight = 0 [, $iBottom = 0 [, $iFlags = 8 [, $iParam = 0]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hTool
+	Handle des ToolTips
+$hWnd
+	Handle zum Fenster welches das Tool enth&auml;lt
+$sText
+	Text f&uuml;r das ToolTip-Control. Siehe Bemerkungen.
+$iID
+	[optional] ID oder Fenster Handle des Tools
+$iLeft
+	[optional] X Koordinate der oberen linken Ecke des Rechtecks
+$iTop
+	[optional] Y Koordinate der oberen linken Ecke des Rechtecks
+$iRight
+	[optional] X Koordinate der unteren rechten Ecke des Rechtecks
+$iBottom
+	[optional] Y Koordinate der unteren rechten Ecke des Rechtecks
+$iFlags
+	[optional] Flags welche die ToolTip Anzeige steuern:
+		  1 - Zeigt an, dass $iID das Fenster Handle des Tools anstatt der ID ist
+		  2 - Zentriert das Fenster, zugeh&ouml;rig zu dem durch $iID festgelegten Tool
+		  4 - Zeigt an, dass der Text in umgekehrter Richtung angezeigt werden soll
+		  8 - Zeigt an, dass das Control das Fenster des Tool unterklassifizieren soll
+		 16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+		 32 - Positioniert das Fenster bei den gleichen Koordinaten wie TTM_TRACKPOSITION
+		 64 - Sorgt daf&uuml;r, dass das Control die Nachrichten an das Hauptfenster weiterleitet
+		128 - Zeigt an, dass links im Control Text ausgegeliedert sein sollte
+$iParam
+	[optional] Anwendungsspezifischer Wert der mit dem Tool verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls ein Benachrichtigungs-Callback ben&ouml;tigt wird, so ist $sText = -1 (LPSTR_TEXTCALLBACK) festzulegen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_DelTool

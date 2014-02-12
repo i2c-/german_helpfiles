@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTreeView_GetFirstVisible
+
+###Description###
+Ermittelt das erste sichtbare Item in dem Control
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetFirstVisible ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des ersten sichtbaren Item in dem Control
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetFirstItem
+
+
+###Example###
+@@IncludeExample@@

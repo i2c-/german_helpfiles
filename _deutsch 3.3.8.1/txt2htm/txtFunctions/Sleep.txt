@@ -1,0 +1,30 @@
+###Function###
+Sleep
+
+###Description###
+Pausiert die Skript Ausf&uuml;hrung.
+
+###Syntax###
+Sleep ( delay )
+
+
+###Parameters###
+@@ParamTable@@
+delay
+	Zeitdauer der Pause (in Millisekunden).
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Die maximale Pausenzeit betr&auml;gt 2147483647 Millisekunden (24 Tage).
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

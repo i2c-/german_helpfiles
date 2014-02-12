@@ -1,0 +1,37 @@
+###User Defined Function###
+_FTP_ListToArray
+
+###Description###
+Listet Dateinamen und/oder Verzeichnisse des aktuellen Remoteverzeichnisses.
+
+###Syntax###
+#include <FTPEx.au3>
+_Ftp_ListToArray($l_FTPSession [, $Return_Type = 0 [, $l_Flags = 0 [, $l_Context]]])
+
+###Parameters###
+@@ParamTable@@
+$l_FTPSession
+	R&uuml;ckgabe von _FTP_Connect().
+$Return_type
+	[optional] 0 = Dateien und Verzeichnisse, 1 = nur Verzeichnisse, 2 = nur Dateien.
+$l_Flags
+	[optional] siehe _FTP_FindFileFirst().
+$l_Context
+	[optional] Eine Variable, die einen anwendungsdefinierten Wert enth&auml;lt, der diese Suche mit beliebigen Anwendungsdaten verkn&uuml;pft.
+	Dies wird nur benutzt, wenn die Anwendung bereits die Funktion _FTP_SetStatusCallback() aufgerufen hat, um eine Status Callbackfunktion zu installieren.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array, das die Namen enth&auml;lt. Array[0] enth&auml;lt die Anzahl gefundener Eintr&auml;ge.
+Fehler:	Array[0] = 0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_Connect, _FTP_SetStatusCallback
+
+###Example###
+@@IncludeExample@@

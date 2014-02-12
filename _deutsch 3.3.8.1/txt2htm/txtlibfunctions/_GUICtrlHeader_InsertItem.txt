@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlHeader_InsertItem
+
+###Description###
+F&uuml;gt ein neues Headeritem ein
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_InsertItem($hWnd, $iIndex, $sText [, $iWidth = 50 [, $iAlign = 0 [, $iImage = -1 [, $fOnRight = False]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	Index des Items nach dem das neue Item eingef&uuml;gt werden soll. Das neue Item wird am
+		Ende des Controls eingef&uuml;gt, falls der Index gr&ouml;&szlig;er oder gleich der Anzahl von Items im Control ist. Falls der Index 0 ist,
+		wird das neue Item am Anfang des Controls eingef&uuml;gt.
+$sText
+	Itemtext. Siehe Bemerkungen
+$iWidth
+	[optional] Breite des Items
+$iAlign
+	[optional] Textausrichtung:
+		0 - Text ist linksb&uuml;ndig
+		1 - Text ist rechtsb&uuml;ndig
+		2 - Text ist zentriert
+$iImage
+	[optional] 0-basierender Index eines Bilder innerhalb der Imagelist
+$fOnRight
+	[optional] Falls True erscheint das Bild der Spalte rechts vom Text
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des neuen Items
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Falls ein Benachrichtigungs-Callback ben&ouml;tigt wird, so ist $sText = -1 (LPSTR_TEXTCALLBACK) festzulegen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlHeader_AddItem, _GUICtrlHeader_DeleteItem
+
+###Example###
+@@IncludeExample@@

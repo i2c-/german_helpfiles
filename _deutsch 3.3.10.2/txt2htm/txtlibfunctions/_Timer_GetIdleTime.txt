@@ -1,0 +1,32 @@
+###User Defined Function###
+_Timer_GetIdleTime
+
+###Description###
+Gibt die Anzahl von Ticks seit der letzten Aktivit&auml;t des Benutzers zur&uuml;ck (z.B. Tastatur/Maus)
+
+###Syntax###
+#include <Timers.au3>
+_Timer_GetIdleTime (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ticks als Integer seit der letzten Aktivit&auml;t in Millisekunden (ungef&auml;hr)
+Fehler:	Setzt @extended = 1 falls der Timer zur&uuml;ckgesetzt wurde (siehe Bemerkungen)
+@@End@@
+
+
+###Remarks###
+Die aktuellen Ticks seit dem letzten Systemstart werden etwa alle 50 Tage auf 0 zur&uuml;ckgesetzt (&Uuml;berlauf).
+Also liefert die Funktion vor dem &Uuml;berlauf die Zeit seit der letzten Benutzeraktivit&auml;t, nach dem &Uuml;berlauf kann es jedoch auch die Laufzeit des Programms seit dem &Uuml;berlauf sein.
+Falls ein &Uuml;berlauf auftrat, wird deshalb @extended = 1 gesetzt und der R&uuml;ckgabewert enth&auml;lt die Ticks seit dem letzten &Uuml;berlauf.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

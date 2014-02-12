@@ -1,0 +1,30 @@
+###User Defined Function###
+_HexToString
+
+###Description###
+Konvertiert einen hexadezimalen String in einen String.
+
+###Syntax###
+#include <String.au3>
+_HexToString($strHex)
+
+###Parameters###
+@@ParamTable@@
+$strHex
+	ein hexadezimaler String
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen String zur&uuml;ck.
+Fehler:	Gibt -1 zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_StringToHex
+
+###Example###
+@@IncludeExample@@

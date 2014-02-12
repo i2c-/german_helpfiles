@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlRichEdit_ScrollLineOrPage
+
+###Description###
+Scrollt den Text eine Zeile oder eine Seite nach oben oder nach unten
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_ScrollLineOrPage($hWnd, $sAction)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sAction
+	eines der folgenden:
+		"ld" - Zeilen runter
+		"lu" - Zeilen rauf
+		"pd" - Seite runter
+		"pu" - Seite rauf
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Anzahl der gescrollten Zeilen (positiv falls runter)
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $sAction besteht nicht aus zwei Zeichen
+	1022 - Das erste Zeichen muss eine l oder p sein
+	1023 - Das zweite Zeichen muss ein d oder u sein
+@@End@@
+
+###Remarks###
+Es wird immer maximal so weit gescrollt, sodass mindestens eine Zeile noch sichtbar ist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_ScrollLines, _GUICtrlRichEdit_ScrollToCaret
+
+###See Also###
+@@MsdnLink@@ EM_SCROLL
+
+###Example###
+@@IncludeExample@@

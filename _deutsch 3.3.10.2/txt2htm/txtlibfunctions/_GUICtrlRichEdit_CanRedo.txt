@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlRichEdit_CanRedo
+
+###Description###
+&Uuml;berpr&uuml;ft, ob eine r&uuml;ckg&auml;ngig gemachte Aktion wiederholt werden kann.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_CanRedo ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True oder False
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_Redo, _GUICtrlRichEdit_SetUndoLimit
+
+
+###See Also###
+@@MsdnLink@@ EM_CANREDO
+
+
+###Example###
+@@IncludeExample@@

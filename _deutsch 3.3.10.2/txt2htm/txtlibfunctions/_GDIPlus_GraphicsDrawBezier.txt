@@ -1,0 +1,58 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawBezier
+
+###Description###
+Zeichnet eine Bezierkurve
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawBezier ( $hGraphics, $nX1, $nY1, $nX2, $nY2, $nX3, $nY3, $nX4, $nY4 [, $hPen = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+$hPen
+	Handle zu dem Zeichenstift-Objekt, welches verwendet wird um den Bogen zu zeichnen
+$nX1
+	X-Koordinate des Startpunktes
+$nY1
+	Y-Koordinate des Startpunktes
+$nX2
+	X-Koordinate des ersten Kontrollpunktes
+$nY2
+	Y-Koordinate des ersten Kontrollpunktes
+$nX3
+	X-Koordinate des zweiten Kontrollpunktes
+$nY3
+	Y-Koordinate des zweiten Kontrollpunktes
+$nX4
+	X-Koordinate des Endpunktes
+$nY4
+	Y-Koordinate des Endpunktes
+$hPen
+	[optional] Handle zu dem Zeichenstift-Objekt, welches verwendet wird, um die Bezierkurve zu zeichnen. Falls 0, wird ein vollfarbig schwarz gef&uuml;llter Zeichenstift mit einer Breite von 1 verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise einen GPSTATUS Fehlercode ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Eine Bezierkurve durchl&auml;uft nicht seine Kontrollpunkte.
+Die Kontrollpunkte wirken wie Magnete, mit denen der Weg der Kurve in einer bestimmten Richtung beeinflusst werden kann.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipDrawBezier
+
+
+###Example###
+@@IncludeExample@@

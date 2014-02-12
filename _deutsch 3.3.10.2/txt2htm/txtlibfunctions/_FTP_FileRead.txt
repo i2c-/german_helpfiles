@@ -1,0 +1,41 @@
+###User Defined Function###
+_FTP_FileRead
+
+###Description###
+Liest Daten des Handles, das mit _FTP_FileOpen() erzeugt wurde.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileRead ( $hFTPFile, $iNumberOfBytesToRead )
+
+
+###Parameters###
+@@ParamTable@@
+$hFTPFile
+	Handle der FTP-Datei, zur&uuml;ckgegeben von _FTP_FileOpen().
+$iNumberOfBytesToRead
+	Anzahl der Bytes, die gelesen werden sollen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der gelesene Binary/String.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	-1 f&uuml;r End-Of-File
+	ungleich 0 f&uuml;r andere Fehler.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_FTP_FileOpen
+
+
+###See Also###
+@@MsdnLink@@ InternetReadFile
+
+
+###Example###

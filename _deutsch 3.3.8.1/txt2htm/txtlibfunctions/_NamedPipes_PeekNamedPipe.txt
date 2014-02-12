@@ -1,0 +1,33 @@
+###User Defined Function###
+_NamedPipes_PeekNamedPipe
+
+###Description###
+Kopiert Daten aus einer Pipe in einen Puffer, ohne die Daten aus der Pipe zu entfernen.
+
+###Syntax###
+#include <NamedPipes.au3>
+_NamedPipes_PeekNamedPipe($hNamedPipe)
+
+###Parameters###
+@@ParamTable@@
+$hNamedPipe
+	Handle zur Pipe
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aInfo[0] - aus der Pipe gelesene Daten
+	$aInfo[1] - Anzahl der gelesenen Bytes
+	$aInfo[2] - Gesamtzahl der in der Pipe zum Lesen verf&uuml;gbaren Bytes
+	$aInfo[3] - Anzahl der ungelesenen Bytes
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ PeekNamedPipe

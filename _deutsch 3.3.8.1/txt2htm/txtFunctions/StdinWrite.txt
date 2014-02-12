@@ -1,0 +1,42 @@
+###Function###
+StdinWrite
+
+###Description###
+Schreibt eine Anzahl von Zeichen in den STDIN-Stream eines zuvor gestarteten Child-Prozesses.
+
+###Syntax###
+StdinWrite ( process_id [, data] )
+
+
+###Parameters###
+@@ParamTable@@
+process_id
+	Die Prozess-ID eines Child-Prozesses, wie aus einem vorigen Aufruf von Run zur&uuml;ckgegeben.
+data
+	[optional] Die auszugebenden Daten. Diese k&ouml;nnen entweder Text oder bin&auml;r sein.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Anzahl der geschriebenen Zeichen zur&uuml;ck.
+Fehler:	Setzt @error auf nicht-Null, falls STDIN an diesen Prozess nicht weitergeleitet wurde oder falls ein anderer Fehler auftrat.
+@@End@@
+
+
+###Remarks###
+StdinWrite schreibt in den Konsolen-Standard-Eingabe-Stream eines Child-Prozesses, der normalerweise von Konsolen-Applikationen genutzt wird, um Benutzereingaben zu lesen, z.B. von der Tastatur. W&auml;hrend des Aufrufs von Run f&uuml;r den Child-Prozess, in den man schreiben m&ouml;chte, muss der STD I/O Parameter den Wert von $Stdin_Child (1) enthalten, damit diese Funktion richtig arbeitet (siehe die Funktion <a href="Run.htm">Run</a>).
+
+Der zweite, optionale, Parameter enth&auml;lt den String, den man mit StdinWrite in den Stream schreiben m&ouml;chte. Wenn die Funktion ohne zweites Argument aufgerufen wird, dann schlie&szlig;t StdinWrite den Stream und macht weiteres Schreiben in ihn ung&uuml;ltig.
+
+Der Stream ist ein FIFO Puffer willk&uuml;rlicher Gr&ouml;sse. Sollte, wann immer die Funktion aufgerufen wird (es sei denn, sie wird aufgerufen, um den Stream zu schliessen) nicht gen&uuml;gend Platz sein, um Zeichen in den Stream zu schreiben, blockiert (pausiert) StdinWrite, bis der Child-Prozess den Stream schlie&szlig;t oder gen&uuml;gend Zeichen aus dem Stream liest, um den Schreibvorgang zu vollenden. Das bedeutet, der AutoIt Prozess wird solange gestoppt -und es findet keine Verarbeitung von Hotkeys, GUI-Nachrichten, etc. statt- bis der Child-Prozess aus dem STDIN-Stream liest.
+
+Zeichen werden in ANSI umgewandelt bevor diese geschrieben werden.
+
+Bin&auml;rdaten werden so geschrieben wie sie sind. Sie werden nicht in einen String umgewandelt.  Um die hex Darstellung von Bin&auml;rdaten auszugebenen ist die String()-Funktion zu verwenden. Dadurch werden die Daten explizit in einen String umgewandelt.
+
+###Related###
+StdoutRead, StderrRead, StdioClose, Run, RunAs
+
+
+###Example###
+@@IncludeExample@@

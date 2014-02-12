@@ -1,0 +1,52 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawImageRectRect
+
+###Description###
+Zeichnet ein Bild-Objekt und vergr&ouml;&szlig;ert, bzw. verkleinert dieses, falls gew&uuml;nscht
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawImageRectRect($hGraphics, $hImage, $iSrcX, $iSrcY, $iSrcWidth, $iSrcHeight, $iDstX, $iDstY, $iDstWidth, $iDstHeight [, $iUnit = 2])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$hImage
+	Handle zu einem Bild-Objekt
+$iSrcX
+	Die X Koordinate der oberen linken Ecke des Quellbildes
+$iSrcY
+	Die Y Koordinate der oberen linken Ecke des Quellbildes
+$iSrcWidth
+	Breite des Quellbildes
+$iSrcHeight
+	H&ouml;he des Quellbildes
+$iDstX
+	Die X Koordinate der oberen linken Ecke des Zielbildes
+$iDstY
+	Die Y Koordinate der oberen linken Ecke des Zielbildes
+$iDstWidth
+	Breite des Zielbildes
+$iDstHeight
+	H&ouml;he des Zielbildes
+$iUnit
+	[optional] Legt die Ma&szlig;einheit des Bildes fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipDrawImageRectRectI
+
+###Example###
+@@IncludeExample@@

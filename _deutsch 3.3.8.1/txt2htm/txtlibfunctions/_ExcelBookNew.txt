@@ -1,0 +1,32 @@
+###User Defined Function###
+_ExcelBookNew
+
+###Description###
+Erstellt eine neue Excel-Datei und gibt dessen Objekt-ID zur&uuml;ck.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelBookNew([$fVisible = 1])
+
+###Parameters###
+@@ParamTable@@
+$fVisible
+	[optional] Flag, ob die Datei sichtbar oder versteckt sein soll (0=versteckt, 1=sichtbar)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die neue Objekt-ID zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @Error:
+@error:	1 - es war nicht m&ouml;glich ein Excel COM Objekt zu erstellen
+	2 - $fVisible Parameter ist keine Zahl
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_ExcelBookAttach
+
+###Example###
+@@IncludeExample@@

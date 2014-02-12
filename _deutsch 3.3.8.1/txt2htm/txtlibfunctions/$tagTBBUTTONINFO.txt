@@ -1,0 +1,48 @@
+###Structure Name###
+$tagTBBUTTONINFO
+
+###Description###
+Enth&auml;lt oder ermittelt Informationen eines bestimmten Buttons in einer Toolbar
+
+###Syntax###
+Global Const $tagTBBUTTONINFO = "int Size;int Mask;int Command;int Image;byte State;byte Style;short CX;int Param;ptr Text;int TextMax"
+
+###Fields###
+@@ParamTable@@
+Size
+	Gr&ouml;&szlig;e der Struktur, in Bytes
+Mask
+	Flags die angeben welche der anderen Strukturmitglieder g&uuml;ltige Daten enthalten:
+		$TBIF_BYINDEX - Das <b>Param</b>, gesendet mit einer $TB_GETBUTTONINFO oder $TB_SETBUTTONINFO Nachricht, ist ein Index
+		$TBIF_COMMAND - Das <b>Command</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_IMAGE - Das <b>Image</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_IMAGELABEL - Weist darauf hin, dass <b>ImageLabel</b> benutzt werden soll
+		$TBIF_LPARAM - Das <b>Param</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_SIZE - Das <b>CX</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_STATE - Das <b>State</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_STYLE - Das <b>Style</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+		$TBIF_TEXT - Das <b>Text</b> Mitglied enth&auml;lt g&uuml;ltige Informationen oder sollen abgerufen werden
+Command
+	Befehls-Identifizierer des Buttons
+Image
+	0-basierter Index des Bildes des Buttons. Setzt man dieses Mitglied auf $I_IMAGECALLBACK, so wird die Toolbar
+	eine $TBN_GETDISPINFO Benachrichtigung senden, um den Bilderindex zu ermitteln, wenn es gebraucht wird. Setzt man dieses Mitglied auf
+	$I_IMAGENONE, wird darauf hingewiesen, dass der Button kein Bild beinhaltet.
+State
+	Zustandsflags des Buttons
+Style
+	Stilflags des Buttons
+CX
+	Breite der Schalfl&auml;che, in Pixel
+Param
+	Anwendungsdefinierter Wert, der mit dem Buttons verkn&uuml;pft ist
+Text
+	Adresse eines Zeichen Puffers, der den Text des Buttons enth&auml;lt oder empf&auml;ngt
+TextMax
+	Gr&ouml;&szlig;e des Puffers von <b>Text</b>. Falls die Informationen des Buttons gesetzt werden sollen, wird dieses Mitglied ignoriert
+ImageLabel
+	Unterst&uuml;tzt die M&ouml;glichkeit die Textbeschriftung eines Elements durch ein Bild zu ersetzen
+@@End@@
+
+###Remarks###
+Keine.

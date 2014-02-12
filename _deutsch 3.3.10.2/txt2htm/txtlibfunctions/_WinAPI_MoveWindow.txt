@@ -1,0 +1,47 @@
+###User Defined Function###
+_WinAPI_MoveWindow
+
+###Description###
+&Auml;ndert die Position und Gr&ouml;&szlig;e des angegebenen Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MoveWindow ( $hWnd, $iX, $iY, $iWidth, $iHeight [, $fRepaint = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$iX
+	Neue Position der linken Seite des Fensters
+$iY
+	Neue Position der oberen Seite des Fensters
+$iWidth
+	Neue Breite des Fensters
+$iHeight
+	Neue H&ouml;he des Fensters
+$fRepaint
+	[optional] Legt fest, ob das Fenster neu gezeichnet werden muss. Wenn True, erh&auml;lt das Fenster eine $WM_PAINT
+	Nachricht. Wenn False, findet keine Neuzeichnung irgendwelcher Art statt. Dies gilt f&uuml;r den Anwendungsbereich, 
+	den Nicht-Anwendungsbereich, und jedem unverdeckten Bereich des Parent-Fensters resultierend aus der Bewegung
+	eines Child-Fensters. Wenn False, muss die Anwendung explizit jeden Bereich im Fenster und im Parent-Fenster
+	f&uuml;r ung&uuml;ltig erkl&auml;ren oder neuzeichnen, wenn diese ein neuzeichnen ben&ouml;tigen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ MoveWindow

@@ -1,0 +1,35 @@
+###Function###
+BitAND
+
+###Description###
+F&uuml;hrt eine Bitweise AND Operation durch.
+
+###Syntax###
+BitAND ( value1, value2 [, value n] )
+
+
+###Parameters###
+@@ParamTable@@
+value1
+	Der erste Wert.
+value2
+	Der zweite Wert.
+value n
+	[optional] Der n-te Wert - bis zu 255 Werte k&ouml;nnen festgelegt werden.
+@@End@@
+
+###ReturnValue###
+Gibt den Wert f&uuml;r das Bitweise AND der Parameter zusammen aus.
+Bit Operationen werden als 32-bit Integer ausgef&uuml;hrt.
+
+
+###Remarks###
+Es k&ouml;nnen auch HEX-Ausdr&uuml;cke als Parameter verwendet werden.
+BitAND gibt 1 f&uuml;r jede Bitposition zur&uuml;ck, an der alle gegebenen Argumente eine 1 an korrespondierender Position haben und eine 0 in allen anderen F&auml;llen. 
+
+###Related###
+BitNOT, BitOR, BitShift, BitXOR, Hex, BitRotate
+
+
+###Example###
+@@IncludeExample@@

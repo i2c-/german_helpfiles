@@ -1,0 +1,30 @@
+###User Defined Function###
+_WordErrorHandlerDeRegister
+
+###Description###
+Deaktiviert einen registrierten User COM Errorhandler
+
+###Syntax###
+#include <Word.au3> 
+_WordErrorHandlerDeRegister()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Nichts
+@@End@@
+
+
+###Remarks###
+Siehe Bemerkungen f&uuml;r _WordErrorHandlerRegister.
+
+
+###Related###
+_WordErrorHandlerRegister
+
+
+###Example###
+@@IncludeExample@@

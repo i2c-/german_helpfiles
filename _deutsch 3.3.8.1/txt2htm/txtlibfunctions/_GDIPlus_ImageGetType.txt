@@ -1,0 +1,38 @@
+###User Defined Function###
+_GDIPlus_ImageGetType
+
+###Description###
+Gibt den Typ (Bitmap oder Metadatei) eines Bildes zur&uuml;ck
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetType($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu einem Bild-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Integer des Bildtyps
+	$GDIP_IMAGETYPE_UNKNOWN - Keine Bitmap Datei oder durch GDI+ nicht als Bitmap Datei identifiziert
+	$GDIP_IMAGETYPE_BITMAP - Bitmap Typen: BMP, PNG, GIF, JPEG, TIFF, ICO, EXIF
+	$GDIP_IMAGETYPE_METAFILE - Metadateitypen: EMF, WMF
+Fehler:	Gibt -1 zur&uuml;ck und @error wird gesetzt
+@error:	0 - kein Fehler.
+	10 - ung&uuml;ltiges Bildhandle
+@@End@@
+
+###Remarks###
+@error 4 basiert auf GDI+ UDF, welche -1 oder 0 anstelle von Bildhandles f&uuml;r Fehler zur&uuml;ckgegeben wird
+
+###Related###
+_GDIPlus_ImageGetRawFormat
+
+###See Also###
+@@MsdnLink@@ GdipGetImageType
+
+###Example###
+@@IncludeExample@@

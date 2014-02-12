@@ -1,0 +1,54 @@
+###User Defined Function###
+_Net_Share_FileEnum
+
+###Description###
+Gibt Informationen &uuml;ber die ge&ouml;ffnete Datei auf dem Server zur&uuml;ck.
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_FileEnum([$sServer = "" [, $sBaseName = "" [, $sUserName = ""]]])
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	[optional] String der den Namen des Server beinhaltet auf dem die Funktion ausgef&uuml;hrt wird. 
+	Ein leerer String spezifiziert den lokalen Computer.
+$sBaseName
+	[optional] String beinhaltet den Ausdruck der zur&uuml;ckgegebenen Informationen. 
+	Wenn er leer ist sind alle offenen Ressourcen aufgez&auml;hlt. 
+	Wenn er nicht leer ist, z&auml;hlt die Funktion nur Ressourcen auf, die den $sBaseName als Pr&auml;fix besitzen.
+$sUserName
+	[optional] String der den Benutzernamen spezifiziert. Wenn $sUserName nicht leer ist,  
+	dient er als Abfragekriterium f&uuml;r die Aufz&auml;hlung.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[0][0] - Anzahl der Eintr&auml;ge im Array(n)
+	[1][0] - ID die der Ressource zugeteilt wird wenn sie ge&ouml;ffnet ist.
+	[1][1] - Zugriffsberechtigungen f&uuml;r die auszuf&uuml;hrende Ressource:
+	  1 - Berechtigung zum lesen und ausf&uuml;hren einer Ressource.
+	  2 - Berechtigung zum schreiben einer Ressource.
+	  4 - Berechtigung zum erstellen einer Ressource.
+	  8 - Berechtigung zum ausf&uuml;hren.
+	 16 - Berechtigung zum l&ouml;schen.
+	 32 - Berechtigung zum Rechte &auml;ndern.
+	 64 - &Auml;ndern der ACL Berechtigungen
+	[1][2] - Beinhaltet die maximale Anzahl der Dateien.
+	[1][3] - Spezifiziert den Pfad zu der ge&ouml;ffneten Ressource.
+	[1][4] - Spezifiziert welcher Benutzer an welchem Computer die Ressource ge&ouml;ffnet hat.
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+Nur Mitglieder der Lokalen-Gruppe Administratoren oder Server-Operater k&ouml;nnen diese Funktion ausf&uuml;hren.
+
+###Related###
+_Net_Share_ConnectionEnum, _Net_Share_SessionEnum, _Net_Share_ShareEnum
+
+###See Also###
+@@MsdnLink@@ NetFileEnum
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUIImageList_GetImageInfoEx
+
+###Description###
+Ermittelt Informationen &uuml;ber ein Bild
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetImageInfoEx($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	Index des Bildes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	$tagIMAGEINFO Struktur, die Informationen &uuml;ber das Bild enth&auml;lt
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+$tagIMAGEINFO
+
+###Example###
+@@IncludeExample@@

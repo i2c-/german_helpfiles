@@ -1,0 +1,45 @@
+###Function###
+ObjGet
+
+###Description###
+Ruft eine Referenz zu einem COM-Objekt ab, von einem vorhandenem Prozess oder Dateinamen.
+
+###Syntax###
+ObjGet ( "filename" [, "classname"] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Vollst&auml;ndiger Pfad und Name der Datei die das Objekt enth&auml;lt (Siehe Bemerkungen)
+classname
+	[optional] Die Klasse des Objekts in folgendem Format:
+	"appname.objectype"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Objekt zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der Dateiname ist optional wenn man nur den Klassennamen nutzen m&ouml;chte, aber der Parameter
+darf nicht ausgelassen werden. Es ist ein leerer String zu setzen wenn nur der Klassenname genutzt werden soll. 
+Wie hier: $Object = ObjGet("","Excel.Application")
+
+Wenn ein Dateiname benutzt werden soll, ist der Klassenname optional. Er wird nur ben&ouml;tigt wenn 
+mehrere Klassen im selben Dateityp definiert sind und man auf eine bestimmte Klasse zugreifen m&ouml;chte.
+
+Es ist stets zu beachten, dass nicht alle Computer den gleichen Satz an Objekten hat. Also <b>immer</b> auf Fehler pr&uuml;fen, nach einem Aufruf von ObjGet().
+
+Siehe die <a href="../intro/ComRef.htm">Obj/COM Referenz</a> f&uuml;r mehr Informationen &uuml;ber Objekte.
+
+###Related###
+GUICtrlCreateObj, IsObj, ObjCreate, ObjEvent, ObjName
+
+
+###Example###
+@@IncludeExample@@
+

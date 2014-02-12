@@ -1,0 +1,52 @@
+###Structure Name###
+$tagSCROLLBARINFO
+
+###Description###
+Enth&auml;lt Informationen zu Scrollbars
+
+###Syntax###
+Global Const $tagSCROLLBARINFO = "dword cbSize;int Left;int Top;int Right;int Bottom;int dxyLineButton;int xyThumbTop;" & _
+	"int xyThumbBottom;int reserved;dword rgstate[6]"
+
+
+###Fields###
+@@ParamTable@@
+cbSize
+	Legt die Gr&ouml;&szlig;e dieser Struktur in Bytes fest. Der Aufrufer muss sie mit DllStructGetSize($tagSCROLLBARINFO) setzen.
+Left
+	Legt die x-Koordinate der oberen linken Ecke des Rechtecks der Scrollbar fest
+Top
+	Legt die y-Koordinate der oberen linken Ecke der Rechtecks der Scrollbar fest
+Right
+	Legt die x-Koordinate der unteren rechten Ecke der Rechtecks der Scrollbar fest
+Bottom
+	Legt die y-Koordinate der unteren rechten Ecke der Rechtecks der Scrollbar fest
+dxyLineButton
+	H&ouml;he oder Breite des Schiebers.
+xyThumbTop
+	Position der oberen oder linken Seite des Schiebers.
+xyThumbBottom
+	Position der unteren oder rechten Seite des Schiebers.
+reserved
+	Reserviert.
+rgstate
+	Ein Array mit DWORD-Elementen. Jedes Element zeigt den Status einer Scrollbarkomponente an.
+	Die folgenden Werte geben die dem Arrayindex entsprechenden Scrollbarkomponenten an:
+		0 Die komplette Scrollbar.
+		1 Der obere oder rechte Pfeilbutton.
+		2 Die 'Seite hoch'- oder 'Seite nach rechts'-Region.
+		3 Die Scrollbox (der Schieber).
+		4 Die 'Seite runter' oder 'Seite nach links'-Region.
+		5 Der untere oder linke Pfeilbutton.
+
+	Das DWORD-Element kann f&uuml;r jede Scrollbarkomponente eine Kombination der folgenden Bit-Flags enthalten:
+		STATE_SYSTEM_INVISIBLE - F&uuml;r die Scrollbar selbst wird angezeigt, dass die eingestellte vertikale oder horizontale Scrollbar nicht existiert.
+		  F&uuml;r die 'Seite hoch'- oder 'Seite runter'-Regionen wird angezeigt, dass der Schieber so positioniert ist, dass keine Seitenumschalter verf&uuml;gbar sind.
+		STATE_SYSTEM_OFFSCREEN - F&uuml;r die Scrollbar selbst wird angezeigt, dass das Fenster so gro&szlig; ist, dass die eingestellte vertikale oder horizontale Scrollbar momentan nicht angezeigt wird.
+		STATE_SYSTEM_PRESSED - Pfeilbutton oder Seitenumschalter wurden gedr&uuml;ckt.
+		STATE_SYSTEM_UNAVAILABLE - Die Komponente wurde deaktiviert.
+@@End@@
+
+
+###Remarks###
+$SIF_xxxxx und $SB_xxxxx f&uuml;r die Scrollbar ben&ouml;tigen #include <WindowsConstants.au3>

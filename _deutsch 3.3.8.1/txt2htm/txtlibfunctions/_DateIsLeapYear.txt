@@ -1,0 +1,31 @@
+###User Defined Function###
+_DateIsLeapYear
+
+###Description###
+Pr&uuml;ft ein Jahr um festzustellen ob es ein Schaltjahr ist.
+
+###Syntax###
+#include <Date.au3>
+_DateIsLeapYear($iYear)
+
+###Parameters###
+@@ParamTable@@
+$iYear
+	Das 4-stellige Jahr, das gepr&uuml;ft werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, falls es kein Schaltjahr ist und setzt @Error:
+	0 - Kein Fehler.
+	1 - ung&uuml;ltiges Jahr.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

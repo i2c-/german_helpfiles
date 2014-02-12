@@ -1,0 +1,86 @@
+###Function###
+ControlTreeView
+
+###Description###
+Sendet einen Befehl an ein TreeView32 Control.
+
+###Syntax###
+ControlTreeView ( "title", "text", ControlID, "command" [, option1 [, option2]] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Das Control, dass gesteuert werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+command
+	Der zu sendende Befehl an das Control (siehe unten).
+option1
+	[optional] Zus&auml;tzlicher Parameter, welcher bei manchen Befehl ben&ouml;tigt wird.
+option2
+	[optional] Zus&auml;tzlicher Parameter, welcher bei manchen Befehl ben&ouml;tigt wird.
+@@End@@
+
+
+###ReturnValue###
+Abh&auml;ngig vom Befehl, welche in der unteren Tabelle stehen. Im Falle eines Fehlers (wie z. B. ein ung&uuml;ltiger Befehl oder falls ein Fenster / Control nicht gefunden werden konnte), wird @error auf 1 gesetzt.
+
+@@ControlCommandTable@@
+<b>Command, Option1, Option2</b>
+	<b>Operation</b>
+"Check", "item"
+	Pr&uuml;ft ein Item (falls das Item dies unterst&uuml;tzt).
+"Collapse", "item"
+	klappt ein Item zu, um dessen Childs zu verstecken.
+"Exists", "item"
+	Gibt 1 zur&uuml;ck, falls ein Item existiert, andererseits 0.
+"Expand", "item"
+	klappt ein Item auf, um dessen Childs zu sehen.
+"GetItemCount", "item"
+	Gibt die Anzahl von Childs des markierten Items zur&uuml;ck.
+"GetSelected" [, UseIndex]
+	Gibt die Itemreferenz der aktuellen Markierung zur&uuml;ck. Es wird die Textreferenz des Items verwendet (oder Indexreferenz, falls UseIndex auf 1 gesetzt ist).
+"GetText", "item"
+	Gibt den Text eines Items zur&uuml;ck.
+"IsChecked"
+	Gibt den Status eines Items zur&uuml;ck. 1:markiert, 0:nicht markiert, -1:keine Checkbox.
+"Select", "item"
+	W&auml;hlt ein Item aus.
+"Uncheck", "item"
+	Hebt die Markierung eines Items auf (falls das Item dies unterst&uuml;tzt).
+@@End@@
+
+Der "item" Parameter ist ein String-basierender Parameter, welcher verwendet wird, um die Referenz zu einem teilweise &uuml;bereinstimmenden Treeview zu erhalten (nutzt eine Kombination von Text und Indexe).  Indizes sind 0-basierend.  zum Beispiel:
+
+&Uuml;berschrift1
+----> H1SubItem1
+----> H1SubItem2
+----> H1SubItem3
+----> ----> H1S1SubItem1
+&Uuml;berschrift2
+&Uuml;berschrift3
+
+Jedes "Level" wird durch ein | getrennt. Einem Index wird ein # vorangestellt.  Beispiele:
+
+@@StandardTable1@@
+<b>Item</b>	<b>Itemreferenz</b>
+&Uuml;berschrift2	"&Uuml;berschrift2" oder "#1"
+H1SubItem2	"&Uuml;berschrift1|H1SubItem2" oder "#0|#1"
+H1S1SubItem1	"&Uuml;berschrift1|H1SubItem3|H1S1SubItem1" oder "#0|#2|#0"
+@@End@@
+
+Referenzen k&ouml;nnen auch gemischt werden. Zum Beispiel "&Uuml;berschrift1|#1".
+
+
+###Remarks###
+Da AutoIt eine 32-bit Anwendung ist, ist es m&ouml;glich, dass manche Befehle nicht verf&uuml;gbar sind, wenn eine 64-bit Anwendung, beispielsweise auf einem 64-bit Windows, angesprochen wird.
+
+###Related###
+ControlCommand
+
+
+###Example###
+@@IncludeExample@@

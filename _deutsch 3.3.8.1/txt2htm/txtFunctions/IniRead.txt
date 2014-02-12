@@ -1,0 +1,47 @@
+###Function###
+IniRead
+
+###Description###
+Liest einen Wert aus einer standardkonformen .ini-Datei.
+
+###Syntax###
+IniRead ( "filename", "section", "key", "default" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname der .ini-Datei.
+section
+	Der Name der Sektion in der .ini-Datei.
+key
+	Der Name des Schl&uuml;ssels in der .ini-Datei.
+default
+	Der Standardwert, der verwendet wird, wenn der gefragte Schl&uuml;ssel nicht existiert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Wert des angefragten Schl&uuml;ssels zur&uuml;ck.
+Fehler:	Gibt den <i>default</i>-String zur&uuml;ck, wenn der angefragte Schl&uuml;ssel nicht existiert.
+@@End@@
+
+
+###Remarks###
+Eine standardkonforme .ini-Datei sieht folgenderma&szlig;en aus:
+<i>[SektionsName]
+Schl&uuml;ssel=Wert</i>
+
+Im Zusammenspiel mit der Funktion _FileReadToArray kann man auch die url einer mit dem Internet Explorer gespeicherten Internetseite herausfinden.
+Dies geht so:
+IniRead(C:\test.url, "InternetShortcut", "URL", "")
+Es lassen sich noch mehr Infos auslesen.
+Welche Infos die gespeicherte url enth&auml;lt kann man &uuml;ber _FileReadToArray ermitteln.
+
+
+###Related###
+IniDelete, IniWrite, FileReadLine, IniReadSection, IniReadSectionNames, IniRenameSection, IniWriteSection
+
+
+###Example###
+@@IncludeExample@@

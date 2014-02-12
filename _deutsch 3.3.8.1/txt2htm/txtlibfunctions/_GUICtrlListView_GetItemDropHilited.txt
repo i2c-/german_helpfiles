@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlListView_GetItemDropHilited
+
+###Description###
+Ermittelt, ob das Item markiert ist wie ein drag-and-drop Ziel
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemDropHilited($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemDropHilited
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,122 @@
+###User Defined Function###
+_viExecCommand
+
+###Description###
+Sendet ein(e) Kommando/Suchanfrage &uuml;ber eine VISA-Verbindung (GPIB/TCP) an ein Instrument/Ger&auml;t.
+
+###Syntax###
+#include <Visa.au3>
+_viExecCommand($h_session, $s_command [, $i_timeout_ms = -1])
+
+
+###Parameters###
+@@ParamTable@@
+$h_session
+	Ein VISA-Deskriptor (STRING) oder ein VISA-Session-Handle (INTEGER). 
+	Ein VISA-DESKRIPTOR ist ein String, die die Ressource spezifiziert, zu der eine Verbindung aufgebaut werden soll.
+	Beispiel f&uuml;r einen Deskriptor: "GPIB::20::0".
+	Diese Funktion unterst&uuml;tzt alle g&uuml;ltigen VISA-Deskriptoren, einschlie&szlig;lich GPIB, TCP, VXI und ASRL.
+	Eine detaillierte Beschreibung der VISA-Deskriptoren findest du bei den Bemerkungen zu dieser Funktion.
+	Als K&uuml;rzel kann auch ein STRING verwendet werden, der die Adressnummer (z.Bsp. "20") eines GPIB-Ger&auml;ts statt des vollst&auml;ndigen 
+	Deskriptors (in diesem Fall: "GPIB::20::0") enth&auml;lt.
+	Ein VISA-Session-Handle ist ein Integerwert, der von _viOpen zur&uuml;ckgegeben wird.
+	Es wird empfohlen, das von _viOpen gelieferte VISA-Session-Handle anstatt des Deskriptors zu benutzen, wenn wiederholt auf ein Ger&auml;t zugegriffen werden soll, 
+	da sonst bei jedem Zugriff auf das Ger&auml;t unn&ouml;tig Rechenzeit f&uuml;r das &Ouml;ffnen und Schlie&szlig;en der Verbindung verschwendet wird.
+	Nach dem letzten Zugriff auf ein Ger&auml;t darf das Schlie&szlig;en der Verbindung nicht vergessen werden (mit _viClose).
+$s_command
+	Auszuf&uuml;hrende(s) Kommando/Suchanfrage (z.Bsp.: "*IDN?" oder "SOURCE:POWER -20 dBM")
+	Eine Suchanfrage muss ein Fragezeichen enthalten (?).
+	Wenn eine Suchanfrage gestellt wurde, wird automatisch auf die Antwort des Ger&auml;ts (oder auf Zeit&uuml;berschreitung [Timeout]) gewartet.
+$i_timeout_ms
+	[optional] Gibt die Wartezeit (Timeout) in Millisekunden an. Nur f&uuml;r Suchanfragen bedeutsam.
+	Wenn nicht angegeben, wird der zuletzt benutzte Timeout verwendet oder der Standard-VISA-Timeout.
+	Timeouts k&ouml;nnen auch separat per _viSetTimeout gesetzt werden.
+	Abh&auml;ngig vom Verbindungstyp (GPIB, TCP, etc) kann die Timeout-Zeit nicht immer auf den von dir gew&auml;hlten Wert gesetzt werden. 
+	In diesem Fall wird der n&auml;chstgr&ouml;&szlig;ere Wert gew&auml;hlt.
+@@End@@
+
+###ReturnValue###
+Der R&uuml;ckgabewert h&auml;ngt davon ab, ob eine Suchanfrage gestellt wurde oder nicht und ob die Operation erfolgreich war oder nicht:
+
+* Kommando, Keine Suche:
+@@ReturnTable@@
+Erfolg:	NULL
+Fehler:	Gibt -1 zur&uuml;ck, wenn die VISA-DLL nicht ge&ouml;ffnet werden konnte,
+	oder gibt einen Wert ungleich Null zur&uuml;ck, der dem VISA-Fehlercode (siehe VISA-Programmierhandbuch) entspricht.
+@@End@@
+* Suchanfrage:
+@@ReturnTable@@
+Erfolg:	Gibt die Antwort des Ger&auml;ts auf die Anfrage zur&uuml;ck.
+Fehler:	Gibt -1 zur&uuml;ck, wenn die VISA-DLL nicht ge&ouml;ffnet werden konnte,
+	gibt -3 zur&uuml;ck, wenn die VISA-DLL eine unerwartete Anzahl an Ergebnissen liefert,
+	oder gibt einen Wert ungleich Null zur&uuml;ck, der dem VISA-Fehlercode (siehe VISA-Programmierhandbuch) entspricht.
+@@End@@
+Bei jedem Fehler wird @error auf 1 gesetzt.
+
+
+###Remarks###
+* VISA liefert nur die erste Zeile der Ger&auml;teantwort.                   
+Das ist in den meisten F&auml;llen kein Problem, da fast alle Ger&auml;te mit einer einzeiligen Meldung antworten.
+
+* Es folgt eine Beschreibung der gebr&auml;uchlichsten VISA-DESKRIPTOREN.
+Es gibt jedoch einige weitere Typen, schlage dazu bitte im VISA-Programmierhandbuch nach (www.ni.com).
+Optionale Angaben sind in eckige Klammern eingeschlossen ([]).
+Board w&uuml;rde ich mit Baugruppe &uuml;bersetzen.
+
+Interface   Syntax
+------------------------------------------------------------
+GPIB INSTR      GPIB[board]::Prim&auml;radresse[::Sekund&auml;radresse] [::INSTR]
+GPIB INTFC      GPIB[board]::INTFC
+TCPIP SOCKET    TCPIP[board]::Hostadresse::Port::SOCKET
+Serial INSTR    ASRL[board][::INSTR]
+PXI INSTR       PXI[board]::Ger&auml;t[::FunKtion][::INSTR]
+VXI INSTR       VXI[board]::VXI logische Adresse[::INSTR]
+GPIB-VXI INSTR  GPIB-VXI[board]::VXI logische Adresse[::INSTR]
+TCPIP INSTR     TCPIP[board]::Hostadresse[::LAN Ger&auml;tename]
+                [::INSTR]
+
+Das Schl&uuml;sselwort GPIB wird f&uuml;r GPIB-Ger&auml;te verwendet.
+Das Schl&uuml;sselwort TCPIP wird f&uuml;r TCP/IP-Kommunikation verwendet.
+Das Schl&uuml;sselwort ASRL wird f&uuml;r serielle Ger&auml;te verwendet.
+Das Schl&uuml;sselwort GPIB wird f&uuml;r GPIB-Ger&auml;te verwendet.
+Das Schl&uuml;sselwort VXI wird f&uuml;r VXI-Ger&auml;te (auch f&uuml;r MXI-Bus-Controls) verwendet.
+Das Schl&uuml;sselwort GPIB-VXI wird f&uuml;r VXI-Ger&auml;te verwendet, die &uuml;ber GPIB-VXI-Controls kommunizieren.
+
+Die Standardwerte f&uuml;r die optionalen Argumente sind:
+
+Optionale Angabe          Standardwert
+---------------------------------------
+board                     0
+Sekund&auml;radresse           Nichts
+LAN Ger&auml;tename            inst0
+
+
+Beispiele f&uuml;r VISA-Deskriptoren (Ressource Strings):
+--------------------------------------------------------------
+GPIB::1::0::INSTR     Ein GPIB-Ger&auml;t an Prim&auml;radresse 1 und
+                      Sekund&auml;radresse 0 in GPIB-Interface 0.
+
+GPIB2::INTFC          Interface oder raw resource der GPIB-Schnittstelle 2 (<- Rohdaten?).
+      
+
+TCPIP0::1.2.3.4::999::SOCKET    Raw TCP/IP Zugriff auf Port 999
+                                der angegebenen IP-Adresse.
+
+ASRL1::INSTR          Ein serielles Ger&auml;t, das an die Schnittstelle ASRL1 angeschlossen ist.  
+
+VXI::MEMACC           Board-level register
+                      Zugriff auf das VXI-Interface.
+
+PXI::15::INSTR        PXI-Ger&auml;t Nr. 15 an Bus 0.
+
+VXI0::1::INSTR        Ein VXI-Ger&auml;t an der logischen Adresse 1 im VXI-Interface VXI0.
+
+GPIB-VXI::9::INSTR    Ein VXI-Ger&auml;t an der logischen Adresse 9 in einem GPIB-VXI-gesteuerten System.
+
+
+###Related###
+_viFindGpib, _viOpen, _viClose, _viSetTimeout, _viGTL, _viGpibBusReset, _viSetAttribute
+
+
+###Example###
+@@IncludeExample@@

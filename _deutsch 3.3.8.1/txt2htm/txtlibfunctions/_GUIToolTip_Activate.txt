@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUIToolTip_Activate
+
+###Description###
+Aktiviert oder deaktiviert das Control
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_Activate($hWnd [, $fActivate = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fActivate
+	[optional] Aktivierungsflag:
+		True - Aktiviert den ToolTip
+		False - Deaktiviert den ToolTip
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

@@ -1,0 +1,31 @@
+###User Defined Function###
+_EventLog__RegisterSource
+
+###Description###
+Stellt einen registrierten Handle zum angegebenen Event Log wieder her
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__RegisterSource($sServerName, $sSourceName)
+
+###Parameters###
+@@ParamTable@@
+$sServerName
+	Der UNC-Name des Servers auf dem der Eventlog ge&ouml;ffnet werden soll. Wenn dieser leer ist, wird
+		die Anweisung auf dem lokalem Computer ausgef&uuml;hrt.
+$sSourceName
+	Der Name der Eventquelle deren Handle wieder hergestellt werden soll. Der Sourcename muss ein Unterschl&uuml;ssel
+	 vom Eventlog Registry Eintrag sein.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Handle des Eventlog
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wird der Quellname nicht gefunden, verwendet der "logging" Service den Eintrag log; es wird keine neue Quelle angelegt. Events werden nach Ihrer Quelle bezeichnet, wenn keine Message und Kategoriemessages-Files zur genaueren Beschreibung der Eventquelle vorliegen. Um den Handle des Eventlog zu beenden muss die Funktion 
+DeregisterEventSource benutzt werden.
+###Related###
+_EventLog__DeregisterSource

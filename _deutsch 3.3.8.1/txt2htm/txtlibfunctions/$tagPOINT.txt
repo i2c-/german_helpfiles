@@ -1,0 +1,19 @@
+###Structure Name###
+$tagPOINT
+
+###Description###
+Definiert die X- und Y-Koordinaten eines Punktes
+
+###Syntax###
+Global Const $tagPOINT = "struct; long X;long Y; endstruct"
+
+###Fields###
+@@ParamTable@@
+X
+	legt die X-Koordinate eines Punktes fest
+Y
+	legt die Y-Koordinate eines Punktes fest
+@@End@@
+
+###Remarks###
+Keine.

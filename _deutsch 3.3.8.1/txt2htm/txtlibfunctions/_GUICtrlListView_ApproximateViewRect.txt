@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlListView_ApproximateViewRect
+
+###Description###
+Berechnet die ungef&auml;hre Gr&ouml;&szlig;e, welche f&uuml;r die Darstellung einer gegebenen Anzahl von Items notwendig ist
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_ApproximateViewRect($hWnd [, $iCount = -1 [, $iCX = -1 [, $iCY = -1]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCount
+	[optional] Anzahl von Items, welche im Control dargestellt werden sollen. Falls dieser Parameter auf -1 gesetzt wird, wird
+		die gesamte Anzahl von Items in dem Control verwendet.
+$iCX
+	[optional] Vorgeschlagene X-Dimension des Controls in Pixeln. Falls dieser Parameter auf -1 gesetzt wird,
+		wird die aktuelle Breite verwendet.
+$iCY
+	[optional] Vorgeschlagene Y-Dimension des Controls in Pixeln. Falls dieser Parameter auf -1 gesetzt wird,
+		wird die aktuelle H&ouml;he verwendet.
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Ungef&auml;hre Breite in Pixel, notwendig um die Items darzustellen
+	[1] - Ungef&auml;hre H&ouml;he in Pixel, notwendig um die Items darzustellen
+
+###Remarks###
+Das Setzen der Gr&ouml;&szlig;e des Controls, basierend auf den Dimensionen kann den Neuaufbau verbessern und das Flimmern reduzieren.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_ApproximateViewHeight, _GUICtrlListView_ApproximateViewWidth
+
+###Example###
+@@IncludeExample@@

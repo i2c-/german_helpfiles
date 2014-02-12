@@ -1,0 +1,62 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetCharAttributes
+
+###Description###
+Gibt die Attribute markierten Textes zur&uuml;ck
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetCharAttributes ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, zusammengesetzt aus Drei-Zeichen Gruppen. Jede Gruppe besteht aus:
+	Erstes und zweites Zeichen: irgendeiner von:
+		bo - Fett
+		di - Deaktiviert - Zeichen angezeigt mit einem Schatten [nd]
+		em - Ausgepr&auml;gt [nd]
+		hi - Versteckt, z.B. nicht angezeigt
+		im - Eingepr&auml;gt [nd]
+		it - Schr&auml;g
+		li - EN_LINK Nachrichten werden gesendet, wenn die Maus &uuml;ber Text mit diesem Attribut f&auml;hrt.
+		ou - Umrissen [nd]
+		pr - EN_PROTECT gesendet, wenn der Benutzer versucht den Text zu ver&auml;ndern.
+		re - Markiert als revidiert [nd]
+		sh - Schattiert [nd]
+		sm - Kleinbuchstaben [nd]
+		st - Durchgestrichen
+		sb - Tiefgestellt [nd]
+		sp - Hochgestellt [nd]
+		un - Unterstrichen
+	Drittes Zeichen: + f&uuml;r gesetzt, ~ f&uuml;r gemischt
+Fehler:	"" und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	-1 - Kein Text markiert
+@@End@@
+
+
+###Remarks###
+Manche Attribute werden in einem RichEdit Control nicht dargestellt; diese sind oben mit [nd] gekennzeichnet.
+
+Gibt "" zur&uuml;ck, wenn keine Attribute gesetzt sind.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_SetCharAttributes
+
+
+###See Also###
+@@MsdnLink@@ EM_GETCHARFORMAT
+
+
+###Example###
+@@IncludeExample@@

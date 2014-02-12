@@ -1,0 +1,25 @@
+###User Defined Function###
+_GUIToolTip_GetTitleText
+
+###Description###
+Ermittelt den Titel
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetTitleText($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt den Titel des ToolTips zur&uuml;ck
+
+###Remarks###
+Funktioniert nur unter Windows XP
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

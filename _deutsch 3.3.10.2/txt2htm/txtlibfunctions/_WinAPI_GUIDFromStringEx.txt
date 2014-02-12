@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_GUIDFromStringEx
+
+###Description###
+Konvertiert den String einer GUID in die bin&auml;re Form
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GUIDFromStringEx ( $sGUID, $pGUID )
+
+
+###Parameters###
+@@ParamTable@@
+$sGUID
+	GUID in Form eines Strings
+$pGUID
+	Zeiger auf eine $tagGUID Struktur in der die GUID abgelegt wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_StringFromGUID, $tagGUID
+
+
+###See Also###
+@@MsdnLink@@ CLSIDFromString

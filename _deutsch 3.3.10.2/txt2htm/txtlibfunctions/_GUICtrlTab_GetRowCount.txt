@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTab_GetRowCount
+
+###Description###
+Ermittelt die aktuelle Anzahl von Zeilen von Tabs
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetRowCount ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl von Zeilen von Tabs zur&uuml;ck.
+
+
+###Remarks###
+Nur Tab-Controls die mit dem Stil $TCS_MULTILINE erstellt wurden, k&ouml;nnen mehrzeilen Zeilen von Tabs besitzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

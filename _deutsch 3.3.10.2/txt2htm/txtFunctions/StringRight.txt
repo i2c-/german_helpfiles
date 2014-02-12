@@ -1,0 +1,32 @@
+###Function###
+StringRight
+
+###Description###
+Gibt von dem String eine Anzahl von Zeichen von rechts ausgehend zur&uuml;ck.
+
+###Syntax###
+StringRight ( "string", count )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der auszuwertende String.
+count
+	Die Anzahl der Zeichen die zur&uuml;ckgegeben werden soll.
+@@End@@
+
+###ReturnValue###
+Gibt einen String zur&uuml;ck, der die von <i>rechts ausgehende</i> Anzahl an Zeichen enth&auml;lt.
+
+
+###Remarks###
+Wenn <i>count</i> die L&auml;nge des Strings &uuml;berschreitet, wird der gesamte String zur&uuml;ckgegeben. Ist <i>count</i> negativ, wird ein leerer String zur&uuml;ckgegeben.
+
+
+###Related###
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringTrimLeft, StringTrimRight, StringUpper, StringCompare, StringReplace, StringSplit
+
+
+###Example###
+@@IncludeExample@@

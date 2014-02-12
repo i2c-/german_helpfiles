@@ -1,0 +1,44 @@
+###Function###
+FileWrite
+
+###Description###
+F&uuml;gt eine Text/Daten an das Ende einer zuvor ge&ouml;ffneten Textdatei.
+
+###Syntax###
+FileWrite ( "filehandle/filename", "text/data" )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle/filename
+	Das Handle der Datei, wie es von einem fr&uuml;heren Aufruf von FileOpen zur&uuml;ckgegeben wurde. Alternativ kann ein String mit dem Dateinamen als erster Parameter verwendet werden.
+text/data
+	Der Text/Die Daten, die in die Datei geschrieben werden soll(en). Die Zeile wird so wie sie ist in die Datei geschrieben. Es wird kein @CR oder @LF angeh&auml;ngt. Siehe Bemerkungen f&uuml;r die Datentypen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die Datei nicht im writemode ge&ouml;ffnet wurde, die Datei schreibgesch&uuml;tzt ist oder sie aus anderen Gr&uuml;nden nicht beschrieben werden konnte.
+@@End@@
+
+
+###Remarks###
+Die Datei muss im Schreibmodus (write mode) ge&ouml;ffnet sein, damit FileWrite keinen Fehler hervorruft.
+
+Wenn ein Dateiname statt eines Dateihandles angegeben wird, wird die Datei w&auml;hrend des Funktionsaufrufes ge&ouml;ffnet und geschlossen. Wenn man gro&szlig;e Textdateien bearbeitet, ist das nat&uuml;rlich viel langsamer als die Arbeit mit Handles. Die Datei wird erstellt, wenn sie noch nicht existiert.
+
+Hinweis: Die Verwendung von Dateihandles und -namen sollte nicht vermischt werden. So sollte man z.B. vermeiden, eine Datei mit FileOpen zu &ouml;ffnen und dann in dieser Funktion einen Dateinamen verwenden. Es sind entweder Handles oder Dateinamen zu benutzen - nicht beides.
+
+AutoIt schreibt Text standardm&auml;&szlig;ig mit ANSI Kodierung. Um in Unicode Kodierung zu schreiben, muss die Datei mit FileOpen unter Verwendung der notwendigen Flags ge&ouml;ffnet werden.
+
+Wenn die Daten ein bin&auml;rer Datentyp (und kein Text) sind, wird byteweise in die Datei geschrieben. Der Bin&auml;rmode kann auch durch Aufruf von FileOpen mit dem Bin&auml;rmode Flag erzwungen werden.
+
+Mit der Funktion _FileWriteToLine kann man auch an einer ganz bestimmten Stelle in einer Datei schreiben (z. B. an den Anfang der Datei)
+
+###Related###
+FileFlush, FileOpen, FileRead, FileReadLine, FileWriteLine, Binary, FileSetPos, FileGetPos
+
+
+###Example###
+@@IncludeExample@@

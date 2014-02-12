@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlSlider_GetThumbRectEx
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;e und Position des begrenzenden Rechtecks des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetThumbRectEx($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagRECT Strukur, welche des begrenzende Rechteck des Sliders in Fensterkoordinaten enth&auml;lt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_GetThumbRect, $tagRECT
+
+###Example###
+@@IncludeExample@@

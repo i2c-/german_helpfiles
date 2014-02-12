@@ -1,0 +1,67 @@
+###User Defined Function###
+_WinAPI_DrawEdge
+
+###Description###
+Zeichnet eine oder mehrere Kanten eines Rechtecks
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DrawEdge($hDC, $ptrRect, $nEdgeType, $grfFlags)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zum Ger&auml;tekontext, der das zu umrandende Grafikobjekt enth&auml;lt
+$ptrRect
+	Zeiger zur $tagRECT-Struktur, welche die logischen Koordinaten des Rechtecks enth&auml;lt
+$nEdgeType
+	Legt den Stil fest, wie die inneren und &auml;u&szlig;eren Kanten gezeichnet werden sollen. Muss eine Kombination eines Innenkanten-Flags und eines Au&szlig;enkanten-Flags sein.
+		Die Innenkanten-Flags sind:
+		$BDR_RAISEDINNER - Erh&ouml;hte (hervorgehobene) Innenkante
+		$BDR_SUNKENINNER - Vertiefte (abgesenkte) Innenkante
+		Die Au&szlig;enkanten-Flags sind:
+		$BDR_RAISEDOUTER - Erh&ouml;hte (hervorgehobene) Au&szlig;enkante
+		$BDR_SUNKENOUTER - Vertiefte (abgesenkte) Au&szlig;enkante
+		Alternativ kann der Kantenparameter eines der folgenden Flags festlegen:
+		$EDGE_BUMP - Kombination von $BDR_RAISEDOUTER und $BDR_SUNKENINNER
+		$EDGE_ETCHED - Kombination von $BDR_SUNKENOUTER und $BDR_RAISEDINNER
+		$EDGE_RAISED - Kombination von $BDR_RAISEDOUTER und $BDR_RAISEDINNER
+		$EDGE_SUNKEN - Kombination von $BDR_SUNKENOUTER und $BDR_SUNKENINNER
+$grfFlags
+	Legt fest, welche Kanten gezeichnet werden. Kann eine Kombination der folgenden Werte sein:
+		$BF_ADJUST - Wenn dieses Flag angegeben wird, wird das Rechteck, auf das der Zeiger $ptrRect verweist, so verkleinert, dass die gezeichneten Kanten au&szlig;erhalb des Rechtecks liegen.
+		Ist das Flag nicht angegeben, wird das Rechteck nicht ver&auml;ndert.
+		$BF_BOTTOM - Untere Kante der Umrandung
+		$BF_BOTTOMLEFT - Untere und linke Kante der Umrandung
+		$BF_BOTTOMRIGHT - Untere und rechte Kante der Umrandung
+		$BF_DIAGONAL - Diagonale Umrandung
+		$BF_DIAGONAL_ENDBOTTOMLEFT - Diagonale Umrandung. Endpunkt ist die untere linke Ecke des Rechtecks; der Anfang ist oben rechts
+		$BF_DIAGONAL_ENDBOTTOMRIGHT - Diagonale Umrandung. Endpunkt ist die untere rechte Ecke des Rechtecks; der Anfang ist oben links
+		$BF_DIAGONAL_ENDTOPLEFT - Diagonale Umrandung. Endpunkt ist die obere linke Ecke des Rechtecks; der Anfang ist unten rechts
+		$BF_DIAGONAL_ENDTOPRIGHT - Diagonale Umrandung. Endpunkt ist die obere rechte Ecke des Rechtecks; der Anfang ist unten links
+		$BF_FLAT - Flache Umrandung
+		$BF_LEFT - Linke Seite der Umrandung
+		$BF_MIDDLE - Innenseite der Umrandung
+		$BF_MONO - 1-dimensionale Umrandung
+		$BF_RECT - Gesamte Umrandung
+		$BF_RIGHT - Rechte Seite der Umrandung
+		$BF_SOFT - Sanfte Kanten statt Kacheln
+		$BF_TOP - Obere Kante der Umrandung
+		$BF_TOPLEFT - Obere und linke Seite der Umrandung
+		$BF_TOPRIGHT - Obere und rechte Seite der Umrandung
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Ben&ouml;tigt die BorderConstants.au3 f&uuml;r die vordefinierten Konstanten
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ DrawEdge

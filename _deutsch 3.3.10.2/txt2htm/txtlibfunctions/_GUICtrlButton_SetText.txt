@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlButton_SetText
+
+###Description###
+Setzt den Text eines Buttons
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetText ( $hWnd, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	Neuer Text
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_GetText
+
+
+###Example###
+@@IncludeExample@@

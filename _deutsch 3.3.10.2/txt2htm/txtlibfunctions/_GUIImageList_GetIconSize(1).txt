@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUIImageList_GetIconSize
+
+###Description###
+Ermittelt die Abmessungen von Bildern in der Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetIconSize ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Imagelist
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck
+	[0] - Breite jedes Bildes in Pixel
+	[1] - H&ouml;he jedes Bildes in Pixel
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_GetIconHeight, _GUIImageList_GetIconSizeEx, _GUIImageList_GetIconWidth, _GUIImageList_SetIconSize
+
+
+###Example###
+@@IncludeExample@@

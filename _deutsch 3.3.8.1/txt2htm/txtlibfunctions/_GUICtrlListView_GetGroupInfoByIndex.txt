@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_GetGroupInfoByIndex
+
+###Description###
+Ermittelt Gruppeninformationen
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetGroupInfoByIndex($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index, welcher festlegt f&uuml;r welche Gruppe Informationen abgerufen werden sollen
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+		[0] - Text der &Uuml;berschrift
+		[1] - Ausrichtung der &Uuml;berschrift:
+		 0 - Links
+		 1 - zentriert
+		 2 - Rechts
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetGroupInfo, _GUICtrlListView_GetGroupInfo
+
+###Example###
+@@IncludeExample@@

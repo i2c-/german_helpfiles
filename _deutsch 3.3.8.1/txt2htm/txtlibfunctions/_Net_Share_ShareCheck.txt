@@ -1,0 +1,42 @@
+###User Defined Function###
+_Net_Share_ShareCheck
+
+###Description###
+&Uuml;berpr&uuml;ft, ob ein Server ein Ger&auml;t freigibt oder nicht
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareCheck($sServer, $sShare)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Bestimmt die DNS oder den NetBIOS-Namen vom Remote-Server, auf welchem die Funktion auszuf&uuml;hren ist. Falls
+		dieser Parameter leergelassen wird, wird die Funktion auf den lokalen Computer angewendet.
+$sShare
+	Bestimmt den Namen eines Ger&auml;tes, welches auf Freigabezugiff &uuml;berpr&uuml;ft werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Typ des freigegebenen Ger&auml;tes. Kann eine Kombination der folgenden sein:
+	$STYPE_DISKTREE - Laufwerk
+	$STYPE_PRINTQ - Druckwarteschlange
+	$STYPE_DEVICE - Ger&auml;t
+	$STYPE_IPC - IPC
+	$STYPE_SPECIAL - Spezielle Freigabe, die f&uuml;r IPC$ oder Remote-Administration des Servers reserviert ist
+	$STYPE_TEMPORARY - Eine tempor&auml;re Freigabe
+Fehler:	-1 - Die Freigabe existiert nicht
+@@End@@
+
+###Remarks###
+Keine spezielle Gruppenmitgliedschaft wird ben&ouml;tigt, um diese Funktion erfolgreich auszuf&uuml;hren.
+
+###Related###
+_Net_Share_ShareAdd, _Net_Share_ShareDel
+
+###See Also###
+@@MsdnLink@@ NetShareCheck
+
+###Example###
+@@IncludeExample@@

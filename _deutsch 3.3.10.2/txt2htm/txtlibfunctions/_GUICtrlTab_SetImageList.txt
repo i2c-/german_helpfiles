@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlTab_SetImageList
+
+###Description###
+Setzt die Imagelist, welche zu dem Tab-Control geh&ouml;rt
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetImageList ( $hWnd, $hImage )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hImage
+	Handle zu der Imagelist, welche zu dem Tab-Control geh&ouml;rt
+@@End@@
+
+###ReturnValue###
+Gibt ein Handle zu der vorherigen Imagelist zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_GetImageList
+
+
+###Example###
+@@IncludeExample@@

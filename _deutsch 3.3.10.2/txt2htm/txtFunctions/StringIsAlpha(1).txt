@@ -1,0 +1,33 @@
+###Function###
+StringIsAlpha
+
+###Description###
+Pr&uuml;ft, ob ein String nur alphabetische Zeichen enh&auml;lt.
+
+###Syntax###
+StringIsAlpha ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn der String nicht alphabetische Zeichen enh&auml;lt.
+@@End@@
+
+
+###Remarks###
+Es ist zu beachten, dass <a href="StringIsAlpha.htm">StringIsAlpha()</a> beim Erkennen von Leerzeichen den Wert "0" zur&uuml;ckgibt.
+
+
+###Related###
+StringIsAlNum, StringIsASCII, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringUpper, StringLower
+
+
+###Example###
+@@IncludeExample@@

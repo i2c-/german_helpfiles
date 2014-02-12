@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetTextLength
+
+###Description###
+Ermittelt die L&auml;nge des gesamten Textes in einem Control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetTextLength($hWnd [, $fExact = True [, $fChars = False]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fExact
+	[optional]
+		True - Ermittelt die exakte L&auml;nge (Standard)
+		False - Ermittelt zumindest die Anzahl der Zeichen im Control (schneller)
+$fChars
+	[optional]
+		True - Ermittelt die L&auml;nge/Anzahl der Zeichen
+		False - Ermittelt die L&auml;nge/Anzahl der Bytes (Standard)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Anzahl der Bytes oder Zeichen
+Fehler:	0 und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fExact ist nicht True oder False
+	103 - $fChars ist nicht True oder False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ EM_GETTEXTLENGTHEX
+
+###Example###
+@@IncludeExample@@

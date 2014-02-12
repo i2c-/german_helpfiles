@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTab_SetItemText
+
+###Description###
+Setzt den Text eines Tabs
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetItemText ( $hWnd, $iIndex, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$sText
+	Itemtext
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_GetItemText
+
+
+###Example###
+@@IncludeExample@@

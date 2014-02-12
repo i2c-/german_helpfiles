@@ -1,0 +1,35 @@
+###User Defined Function###
+_Security__GetAccountSid
+
+###Description###
+Gibt den "Security Identifier" (SID) f&uuml;r ein Konto zur&uuml;ck.
+
+###Syntax###
+#include <Security.au3>
+_Security__GetAccountSid($sAccount [, $sSystem = ""])
+
+###Parameters###
+@@ParamTable@@
+$sAccount
+	Legt den Kontonamen fest. Benutzt einen komplett geeigneten String in dem domain_name\user_name Format um
+		sicherzustellen, dass die Funktion das Konto in dem gew&uuml;nschten Bereich findet.
+$sSystem
+	[optional] Name des Systems. Dieser String kann der Name eines Remote-Computers sein. Wenn der String leer ist, 
+	beginnt die Kontonames&uuml;bersetzung auf dem lokalen System. Wenn der Name auf dem lokalen System nicht ermittelt werden kann,
+	wird die Funktion versuchen den Namen unter Verwendung des Domain Controllers getreu dem lokalen System zu ermitteln.  
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine bin&auml;re SID in einer Byte-Struktur zur&uuml;ck.
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__LookupAccountSid
+
+###Example###
+@@IncludeExample@@

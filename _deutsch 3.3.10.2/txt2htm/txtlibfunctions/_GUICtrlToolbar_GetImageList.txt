@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlToolbar_GetImageList
+
+###Description###
+Ermittelt die standardm&auml;&szlig;ige Imagelist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetImageList ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu der Imagelist
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Ein Toolbar-Control benutzt diese Imagelist um Buttons darzustellen wenn sie nicht "hot" oder deaktiviert sind
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_SetImageList
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,83 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaShading
+
+###Description###
+&Auml;ndert die Schattierungseinstellungen von markierten Abs&auml;tzen oder, wenn keine markiert sind, f&uuml;r den Text, der nach dem Eingabepunkt (Caret) eingef&uuml;gt wird
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaShading($hWnd [, $iWeight = Default [, $sStyle = Default [, $sForeColor = Default [, $sBackColor = Default]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iWeight
+	[optional] Gewichtung - Anteil (in %) der Vordergrundfarbe, der Rest ist Hintergrundfarbe
+$sStyle
+	[optional] Schattierungsstil - String, der einen der folgenden Werte enth&auml;lt:
+	   non - keiner
+	   dhz - dunkel, horizontal
+	   dvt - dunkel, vertikal
+	   ddd - dunkel, diagonal abw&auml;rts
+	   dud - dunkel, diagonal aufw&auml;rts
+	   dgr - dunkel, netzf&ouml;rmig
+	   dtr - dunkel, gitterf&ouml;rmig
+	   lhz - hell, horizontal
+	   lvt - hell, vertikal
+	   ldd - hell, diagonal abw&auml;rts
+	   lud - hell, diagonal aufw&auml;rts
+	   lgr - hell, netzf&ouml;rmig
+	   ltr - hell, gitterf&ouml;rmig
+$sForeColor
+	[optional] Vordergrundfarbe - eine der folgenden:
+		"blk" - schwarz (Voreinstellung)
+		"blu" - blau
+		"cyn" - zyan
+		"grn" - gr&uuml;n
+		"mag" - magenta
+		"red" - rot
+		"yel" - gelb
+		"whi" - wei&szlig;
+		"dbl" - dunkles blau
+		"dgn" - dunkles gr&uuml;n
+		"dmg" - dunkles magenta
+		"drd" - dunkles rot
+		"dyl" - dunkles gelb
+		"dgy" - dunkles grau
+		"lgy" - helles grau
+$sBackColor
+	[optional] Hintergrundfarbe - gleiche Werte wie bei $sForeColor (Vordergrundfarbe)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $iWeight ist keine positive Zahl
+	1022 - Wert von $iWeight ist ung&uuml;ltig
+	103 - Wert von $sStyle ist ung&uuml;ltig
+	104 - Wert von $sForeColor ist ung&uuml;ltig
+	105 - Wert von $sBackColor ist ung&uuml;ltig
+	700 - Operation fehlgeschlagen
+@@End@@
+
+###Remarks###
+Unter Word 2007 f&uuml;hren die Codes f&uuml;r den Schattierungsstil nicht zu den erwarteten Ergebnissen, also ggf. vorher ausprobieren!
+
+Wenn Text ausgew&auml;hlt ist, entsprechen die Vorgabewerte den Werten des ersten Absatzes mit ausgew&auml;hltem Text.
+Ist nichts ausgew&auml;hlt, entsprechen die Vorgabewerte den Werten des aktuellen Absatzes.
+
+Ein RichEdit-Control zeigt keine Schattierungen an, aber hier erstellte Schattierungen werden in Word angezeigt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetParaShading
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

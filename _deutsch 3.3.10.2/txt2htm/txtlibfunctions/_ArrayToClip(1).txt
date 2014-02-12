@@ -1,0 +1,40 @@
+###User Defined Function###
+_ArrayToClip
+
+###Description###
+Sendet den Inhalt eines Arrays an die Zwischenablage. Jedes Element wird durch ein Carriage Return getrennt.
+
+###Syntax###
+#include <Array.au3>
+_ArrayToClip ( Const ByRef $avArray [, $iStart = 0 [, $iEnd = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array, das in die Zwischenablage kopiert werden soll.
+$iStart
+	[Optional] Start Array-Index
+$iEnd
+	[Optional] Stopp Array-Index
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	-1 - <a href="../functions/ClipPut.htm">ClipPut()</a> fehlgeschlagen
+	andere - Siehe <a href="_ArrayToString.htm">_ArrayToString()</a> Beschreibung f&uuml;r @error
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_ArrayToString
+
+
+###Example###
+@@IncludeExample@@

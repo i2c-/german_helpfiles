@@ -1,0 +1,36 @@
+###Function###
+TraySetIcon
+
+###Description###
+&Auml;ndert das Trayicon.
+
+###Syntax###
+TraySetIcon ( [filename [, iconID]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	[optional] Der Dateiname des Icons, welches im Tray angezeigt werden soll.
+iconID
+	[optional] Iconindex, falls die Datei mehrere Icons enth&auml;lt.  
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Um das Standardicon wiederherzustellen, ist die Funktion ohne Parameter zu verwenden: TraySetIcon().
+
+Die Angabe einer positiven Zahl bezieht sich auf den "string-equivalenten" Iconindex. Das erste Icon hat den Index "0".
+Die Angabe einer negativen Zahl f&uuml;hrt zu numerischem "Index"-Verhalten, wobei das erste Icon den Index 1 erh&auml;lt. Einige DLLs k&ouml;nnen Icons enthalten, die nur mit negativen Nummern entpackt werden.
+
+Der iconfile-Parameter kann auf "blank", "info", "question", "stop" oder "warning" gesetzt werden. um das entsprechende Standardicon auszuw&auml;hlen.
+
+
+###Related###
+TraySetPauseIcon, TraySetState
+
+
+###Example###
+@@IncludeExample@@

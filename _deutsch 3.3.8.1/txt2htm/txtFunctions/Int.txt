@@ -1,0 +1,44 @@
+###Function###
+Int
+
+###Description###
+Gibt einen Integer (ganze Zahl) eines Ausdrucks zur&uuml;ck
+
+###Syntax###
+Int ( expression [, flag ] )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Als Integer darzustellender Ausdruck.
+flag
+	[optional] legt das Verhalten fest.
+	Dieser Parameter kann einer der folgenden Werte sein:
+	  Default = das Ergebnis ist ein Integer mit automatischer Gr&ouml;&szlig;e. Siehe Bemerkungen.
+	  1 = das Ergebnis ist ein 32bit Integer.
+	  2 = das Ergebnis ist ein 64bit Integer.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt einen Integer zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Das Standardverhalten ist, dass wenn sich das Ergebnis innerhalb des Bereichs eines 32bit Integers befindet ein 32bit Integer zur&uuml;ckgegeben wird.
+Falls nicht, wird ein 64bit Integer zur&uuml;ckgegeben. Beide sind signiert.
+Kommazahlen werden abgeschnitten, also Int(1.999999) ergibt 1.
+Int(0/0) gibt -9223372036854775807 zur&uuml;ck, falls man sich wundern sollte.
+Somit kann diese Funktion auch zum Abrunden verwendet werden. Jedoch k&ouml;nnte f&uuml;r dies auch Floor() verwendet werden.
+Diese Funktion macht geringf&uuml;gige Korrekturen an Flie&szlig;kommazahlen, um die unpr&auml;zise Natur der Flie&szlig;kommazahlen zu ber&uuml;cksichtigen. Zum Beispiel, der Flie&szlig;komma-Ausdruck 0.7 + 0.2 + 0.1 erzeugt eine Flie&szlig;kommazahl die nicht ganze 1.0 ist. Int() korrigiert diese Anomalie, allerdings, gewisse extrem seltene Umst&auml;nde k&ouml;nnten Int() dazu verleiten einen unerwarteten Wert zur&uuml;ckzugeben (die Chancen einen unerwarteten Wert zur&uuml;ckzuerhalten sind geringer als wenn Int() gar keine Korrekturen vornimmt).
+
+
+###Related###
+Number, String, Round, HWnd, Binary, Ceiling, Floor, Ptr, Mod
+
+
+
+###Example###
+@@IncludeExample@@

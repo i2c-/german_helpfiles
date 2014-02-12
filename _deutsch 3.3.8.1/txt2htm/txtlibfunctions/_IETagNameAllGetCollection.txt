@@ -1,0 +1,43 @@
+###User Defined Function###
+_IETagNameAllGetCollection
+
+###Description###
+Gibt ein Auflistungsobjekt aller Elemente des Dokuments oder der Dokumentenhierarchie in der Reihenfolge der Quelle oder ein dem Index entsprechendes Element zur&uuml;ck.
+
+###Syntax###
+#include <IE.au3> 
+_IETagNameAllGetCollection(ByRef $o_object [, $i_index = -1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines InternetExplorer.Application, Fensters, Frame-, iFrame- oder beliebigen Objekts des DOM
+$i_index
+	[optional] Gibt an, ob eine Auflistung oder ein einzelnes Element zur&uuml;ckgegeben werden soll 
+	0 oder positive Ganzzahl gibt das entsprechende Element zur&uuml;ck
+	-1 = (Standard) Gibt eine Auflistung zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die eine Auflistung der Tags enth&auml;lt, @EXTENDED = Anzahl der Tags
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Das DOM ist hierarchisch angelegt. Ist das &uuml;bergebene Objekt das Dokument-Objekt, werden alle Elemente des Dokuments zur&uuml;ckgegeben. Ist das &uuml;bergebene Objekt jedoch ein Objekt innerhalb des Dokuments (z.B. ein TABLE-Objekt), werden lediglich alle Elemente innerhalb dieses bestimmten Objekts zur&uuml;ckgegeben.
+
+
+###Related###
+_IETagNameGetCollection
+
+
+###Example###
+@@IncludeExample@@

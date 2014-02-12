@@ -1,0 +1,23 @@
+###User Defined Function###
+_GUIToolTip_GetToolCount
+
+###Description###
+Ermittelt die Anzahl von Tools
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_GetToolCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl von Tools
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

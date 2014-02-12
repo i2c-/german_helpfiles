@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemWidth
+
+###Description###
+Legt die Breite des Items fest
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemWidth ( $hWnd, $iIndex, $iWidth )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+$iWidth
+	Neue Breite des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemWidth
+
+
+###Example###
+@@IncludeExample@@

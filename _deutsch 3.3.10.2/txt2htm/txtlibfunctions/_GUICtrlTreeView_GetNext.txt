@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlTreeView_GetNext
+
+###Description###
+Ermittelt das n&auml;chste Item nach dem aufgerufenen Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetNext ( $hWnd, $hItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle des n&auml;chsten Items
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Falls das aufgerufene Item das letzte Item ist, wird _GUICtrlTreeView_GetNext 0 zur&uuml;ckgeben. Sonst wird das n&auml;chste Item einschlie&szlig;lich Items die unsichtbar sind und Child-Items zur&uuml;ckgeben. Um das n&auml;chste Item auf der gleichen Ebene wie das aufgerufene Item zu erhalten ist _GUICtrlTreeView_GetNextSibling zu verwenden. Um das n&auml;chste sichtbare Item zu erhalten ist _GUICtrlTreeView_GetNextVisible zu verwenden.
+
+Mit dieser Funktion ist es unter anderem m&ouml;glich alle Items eines Treeviewes durchzugehen.
+Dazu muss die Treeview nicht aufgeklappt sein.
+Die Items werden von oben nach unten der Reihe nach durchgegangen. Dies geschieht unabh&auml;ngig von den unterschiedlichen Ebenen auf der sich die Items befinden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetNextVisible, _GUICtrlTreeView_GetNextSibling, _GUICtrlTreeView_GetPrev
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,38 @@
+###User Defined Function###
+_FileWriteLog
+
+###Description###
+Schreibt das aktuelle Datum, die aktuelle Zeit und den angegebenen Text in eine Log Datei.
+
+###Syntax###
+#include <File.au3>
+_FileWriteLog($sLogPath, $sLogMsg [, $iFlag = -1])
+
+###Parameters###
+@@ParamTable@@
+$sLogPath
+	Pfad der Datei, in die geschrieben werden soll, oder ein Handle einer Datei, das von FileOpen() zur&uuml;ckgegeben wurde.
+$sLogMsg
+	Text, der in die Log-Datei geschrieben werden soll.
+$iFlag
+	[Optional] Flag welches festlegt, ob $sLogMsg an den Anfang oder das Ende der Datei geschrieben werden soll.
+		Falls $iFlag = -1 (Standard) wird $sLogMsg an das Ende der Datei geschrieben.
+		Falls $iFlag <> -1 wird $sLogMsg an den Anfang der Datei geschrieben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	1 = Die angegebene Datei konnte nicht ge&ouml;ffnet werden
+	2 = Die Datei konnte nicht geschrieben werden
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+FileOpen
+
+###Example###
+@@IncludeExample@@

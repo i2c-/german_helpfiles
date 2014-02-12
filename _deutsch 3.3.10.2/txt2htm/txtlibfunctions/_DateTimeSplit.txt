@@ -1,0 +1,47 @@
+###User Defined Function###
+_DateTimeSplit
+
+###Description###
+Spaltet einen String, der Datum und Zeit enth&auml;lt, in 2 separate Arrays.
+
+###Syntax###
+#include <Date.au3>
+_DateTimeSplit ( $sDate, ByRef $asDatePart, ByRef $iTimePart )
+
+
+###Parameters###
+@@ParamTable@@
+$sDate
+	Eines dieser Formate:
+	"YYYY/MM/DD[ hh:mm[:ss]]"
+	"YYYY/MM/DD[Thh:mm[:ss]]"
+	"YYYY-MM-DD[ hh:mm[:ss]]"
+	"YYYY-MM-DD[Thh:mm[:ss]]"
+	"YYYY.MM.DD[ hh:mm[:ss]]"
+	"YYYY.MM.DD[Thh:mm[:ss]]"
+$asDatePart
+	Array f&uuml;r das Datum
+	$asDatePart[0] Anzahl der zur&uuml;ckgegebenen Werte.
+$iTimePart
+	Array f&uuml;r die Zeit
+	$asTimePart[0] Anzahl der zur&uuml;ckgegebenen Werte.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Datum und Zeit in 2 separaten Arrays.
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@error:	1 - ung&uuml;ltig eingegebenes Datum
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_DayValueToDate, _DateAdd, _DateDiff
+
+
+###Example###
+@@IncludeExample@@

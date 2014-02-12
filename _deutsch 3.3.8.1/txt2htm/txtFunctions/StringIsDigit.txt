@@ -1,0 +1,34 @@
+###Function###
+StringIsDigit
+
+###Description###
+Pr&uuml;ft, ob ein String nur Ziffern (0-9) enth&auml;lt.
+
+###Syntax###
+StringIsDigit ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der String auch andere Zeichen enth&auml;lt.
+@@End@@
+
+
+###Remarks###
+Siehe Beispiele
+
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringIsInt
+
+
+###Example###
+@@IncludeExample@@

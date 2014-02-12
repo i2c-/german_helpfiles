@@ -1,0 +1,29 @@
+###User Defined Function###
+_ArraySwap
+
+###Description###
+Vertauscht zwei Elemente eines Arrays.
+
+###Syntax###
+#include <Array.au3>
+_ArraySwap(ByRef $vItem1, ByRef $vItem2)
+
+###Parameters###
+@@ParamTable@@
+$vItem1
+	Erstes zu tauschendes Element.
+$vItem2
+	Zweites zu tauschendes Element.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Diese Funktion vertauscht zwei Elemente, wenn sie durch eine Referenz &uuml;bergeben werden. Normalerweise k&ouml;nnen auch Variablen, die kein Array sind, durch diese Funktion vertauscht werden.
+
+###Related###
+_ArrayReverse
+
+###Example###
+@@IncludeExample@@

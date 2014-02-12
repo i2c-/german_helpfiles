@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlButton_GetImageList
+
+###Description###
+Ermittelt ein Array, welches eine Imagelist f&uuml;r die jeweiligen Button-Controls enth&auml;lt
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetImageList ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit folgendem Inhalt zur&uuml;ck:
+	[0] - Handle der Imagelist
+	[1] - Linker Rand des Icons
+	[2] - Oberer Rand des Icons
+	[3] - Rechter Rand des Icons
+	[4] - Unterer Rand des Icons
+	[5] - Bestimmt die Ausrichtung. Dies ist einer der folgenden Werte:
+		0 - Bild ist am linken Rand ausgerichtet.
+		1 - Bild ist am rechten Rand ausgerichtet.
+		2 - Bild ist am oberen Rand ausgerichtet.
+		3 - Bild ist am unteren Rand ausgerichtet.
+		4 - Bild ist zentriert.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_SetImageList
+
+
+###See Also###
+@@MsdnLink@@ BCM_GETIMAGELIST
+
+
+###Example###
+@@IncludeExample@@

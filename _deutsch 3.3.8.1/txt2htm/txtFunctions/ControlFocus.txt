@@ -1,0 +1,36 @@
+###Function###
+ControlFocus
+
+###Description###
+Setzt den Eingabefokus auf ein bestimmtes Control in einem Fenster.
+
+###Syntax###
+ControlFocus ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlGetFocus, ControlCommand, ControlSend
+
+
+###Example###
+@@IncludeExample@@

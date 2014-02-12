@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlStatusBar_SetUnicodeFormat
+
+###Description###
+Setzt das Unicode Zeichen-Format-Flag
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_SetUnicodeFormat ( $hWnd [, $fUnicode = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fUnicode
+	[optional] Unicode Zeichen-Format-Flag:
+		True - Das Control verwendet Unicode Zeichen
+		False - Das Control verwendet ANSI Zeichen
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Einstellung f&uuml;r das Zeichen-Format-Flag zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlStatusBar_GetUnicodeFormat
+
+
+###Example###
+@@IncludeExample@@

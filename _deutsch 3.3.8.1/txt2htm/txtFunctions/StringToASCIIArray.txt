@@ -1,0 +1,43 @@
+###Function###
+StringToASCIIArray
+
+###Description###
+Konvertiert einen String in ein Array, welches f&uuml;r jedes Zeichen den ASCII-Code enth&auml;lt.
+
+###Syntax###
+StringToASCIIArray ( "string", [start [, end [, encoding]]] )
+
+
+###Parameters###
+@@ParamTable@@
+"String"
+	Der in ein Array mit ASCII-Codes zu konvertierende String.
+start
+	[optional] Die 0-basierende Startposition (Standard: 0).
+end
+	[optional] Die 0-basierende Endposition (Standard: StringLen("String")).
+encoding
+	[optional] Das zur&uuml;ckzugebende Array enth&auml;lt die Werte im festgelegten Zeichensatz:
+		0 - UTF-16 (Standard)
+		1 - ANSI
+		2 - UTF-8
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array, dessen Elemente den UNICODE-Wert jedes einzelnen Zeichens des Strings an der entsprechenden Position enthalten.
+Fehler:	Gibt einen leeren String zur&uuml;ck.
+@@End@@
+
+###Remarks###
+Der String k&ouml;nnte ein eingebundenes Chr(0) enthalten. Diese erscheinen im zur&uuml;ckgegebenen Array auch, wenn weitere Daten folgen. Die Umwandlung stoppt, wenn das Ende des Strings oder das festgelegte Ende erreicht wurde.
+
+Um mit dieser Funktion bin&auml;re Daten in ein Array zu konvertieren muss es zuerst in einen String mit der BinaryToString() Funktion konvertiert werden.
+
+###Related###
+StringFromASCIIArray, BinaryToString
+
+
+###Example###
+@@IncludeExample@@

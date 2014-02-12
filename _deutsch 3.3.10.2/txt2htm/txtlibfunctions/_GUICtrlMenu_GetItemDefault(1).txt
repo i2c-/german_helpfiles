@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemDefault
+
+###Description###
+Ermittelt, ob ein Men&uuml;punkt den Standardstatus besitzt
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemDefault ( $hMenu, $iItem [, $fByPos = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist ein Men&uuml;item Identifizierer
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item ist das Standarditem
+False:	Item ist nicht das Standarditem
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_SetItemDefault
+
+
+###Example###
+@@IncludeExample@@

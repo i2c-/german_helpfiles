@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_GlobalMemoryStatus
+
+###Description###
+Ermittelt Informationen &uuml;ber den aktuell verf&uuml;gbaren Speicher
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GlobalMemoryStatus (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	$aMem[0] - Prozent vom Speicher in Gebrauch
+	$aMem[1] - Physischer Speicher: Gesamt
+	$aMem[2] - Physischer Speicher: Frei
+	$aMem[3] - Auslagerungsdatei: Gesamt
+	$aMem[4] - Auslagerungsdatei: Frei
+	$aMem[5] - Benutzer Speicher: Gesamt
+	$aMem[6] - Benutzer Speicher: Frei
+Fehler:	setzt das @error-Flag ungleich 0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+
+###Remarks###
+Anders als die AutoIt MemGetStats() Funktion, gibt diese Funktion die Werte in Bytes zur&uuml;ck
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GlobalMemoryStatusEx

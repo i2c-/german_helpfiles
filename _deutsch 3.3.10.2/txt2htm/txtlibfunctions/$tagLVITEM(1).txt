@@ -1,0 +1,72 @@
+###Structure Name###
+$tagLVITEM
+
+###Description###
+Bestimmt oder nimmt Attribute auf f&uuml;r ein ListView Item
+
+###Syntax###
+Global Const $tagLVITEM = "struct; uint Mask;int Item;int SubItem;uint State;uint StateMask;ptr Text;int TextMax;int Image;lparam Param;" & _
+	"int Indent;int GroupID;uint Columns;ptr pColumns;ptr piColFmt;int iGroup; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+Mask
+	Satz von Flags die festlegen, ob die Mitglieder dieser Struktur zu setzende Daten enthalten oder f&uuml;r welche Mitglieder
+	Daten ermittelt werden sollen. Dieses Mitglied kann einen oder eine Kombination der folgenden Werte sein:
+		$LVIF_COLFMT - The piColFmt member is valid or must be set. If this flag is used, the cColumns member is valid or must be set (Microsoft Windows Vista and later).
+		$LVIF_COLUMNS - Das <b>Columns</b> Mitglied ist g&uuml;ltig
+		$LVIF_DI_SETITEM - Das Betriebssystem soll die erw&uuml;nschten Informationen f&uuml;r das ListView Item speichern
+		$LVIF_GROUPID - Das <b>GroupID</b> Mitglied ist g&uuml;ltig
+		$LVIF_IMAGE - Das <b>Image</b> Mitglied ist g&uuml;ltig
+		$LVIF_INDENT - Das <b>Indent</b> Mitglied ist g&uuml;ltig
+		$LVIF_NORECOMPUTE - Das Control wird keine LVN_GETDISPINFO erzeugen um Textinformationen zu ermitteln
+		$LVIF_PARAM - Das <b>Param</b> Mitglied ist g&uuml;ltig
+		$LVIF_STATE - Das <b>State</b> Mitglied ist g&uuml;ltig
+		$LVIF_TEXT - Das <b>Text</b> Mitglied ist g&uuml;ltig
+Item
+	0-basierter Index des Elements auf welches sich diese Struktur bezieht
+SubItem
+	1-basierter Index des Subelements auf welches sich diese Struktur bezieht
+State
+	Kennzeichnet den Status des Elements, Status-Image und Overlay-Image
+StateMask
+	Wert, der festlegt welche Bits des <b>State</b> Mitglieds ermittelt oder ver&auml;ndert werden sollen
+Text
+	Zeiger auf einen String die den Text des Elements enth&auml;lt
+TextMax
+	Anzahl der Bytes in dem Puffer auf den das Text Mitglied verweist, inklusive abschlie&szlig;endem Nullzeichen
+Image
+	Index des Icons von dem Element in der Imagelist des Controls
+Param
+	Element-spezifischer Wert
+Indent
+	Anzahl der Bilderbreiten um die das Element einger&uuml;ckt wird. Eine einfache Einr&uuml;ckung entspricht der Breite eines Elements.
+	Folglich bewirkt der Wert 1, dass das Element um die Breite eines Bildes einger&uuml;ckt wird, der Wert 2 um die Breite zweier Bilder, usw.
+	Es gilt zu beachten, dass dieses Feld nur f&uuml;r Elemente unterst&uuml;tzt wird. Der Versuch auf diese Weise ein Subelement einzur&uuml;cken wird fehlschlagen.
+GroupID
+	Identifizierer der Gruppe zu der das Element geh&ouml;rt oder einer der folgenden Werte:
+	I_GROUPIDCALLBACK
+		Das ListView-Control sendet dem Parentfenster eine LVN_GETDISPINFO Benachrichtigung um den
+		Index der Gruppe zu ermitteln
+	I_GROUPIDNONE
+		Das Element geh&ouml;rt zu keiner Gruppe
+Columns
+	Anzahl der Datenspalten (Subelemente) die f&uuml;r dieses Element dargestellt werden sollen
+pColumns
+	Zeiger auf ein Array von Spalten-Indizes
+piColFmt
+	A pointer to an array of the following flags (alone or in combination, specifying the format of each subitem in extended tile view (Windows 7 and later).
+	Value Meaning:
+		$LVCFMT_LINE_BREAK - Forces the column to wrap to the top of the next list of columns.
+		$LVCFMT_FILL Fills - the remainder of the tile area. Might have a title.
+		$LVCFMT_WRAP - Allows the column to wrap within the remaining space in its list of columns.
+		$LVCFMT_NO_TITLE - Removes the title from the subitem.
+		$LVCFMT_TILE_PLACEMENTMASK - Equivalent to a combination of $LVCFMT_LINE_BREAK and $LVCFMT_FILL.
+iGroup
+	Group index of the item. Valid only for owner data/callback (single item in multiple groups).(Windows Vista and later).
+@@End@@
+
+
+###Remarks###
+Keine.

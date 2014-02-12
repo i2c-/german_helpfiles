@@ -1,0 +1,32 @@
+###User Defined Function###
+_FileCreate
+
+###Description###
+Erstellt eine Datei oder setzt die L&auml;nge der angegebenen Datei auf 0 zur&uuml;ck.
+
+###Syntax###
+#include <File.au3>
+_FileCreate($sFilePath)
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Pfad und Name der Datei, die erstellt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@Error:	1 = Fehler beim &Ouml;ffnen der angegebenen Datei
+	2 = Es konnte nicht in die Datei geschrieben werden
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+FileOpen
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetLimitOnText
+
+###Description###
+&Auml;ndert die Anzahl an Zeichen im RichText-Format, die in das RichEdit-Control eingetippt, eingef&uuml;gt oder gestreamt werden kann
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetLimitOnText($hWnd, $iNewLimit)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iNewLimit
+	Neue maximale Anzahl (0 setzt als Obergrenze 65536)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iNewLimit ist weder positiv noch null
+@@End@@
+
+###Remarks###
+Diese Funktion setzt die maximale Anzahl von Zeichen, die der Benutzer in das Control eingeben oder einf&uuml;gen kann.
+
+Sie begrenzt auch die Zeichenanzahl, die unter Verwendung von <b>_GUICtrlRichEdit_StreamFromFile</b> und <b>_GUICtrlRichEdit_StreamFromVar</b>
+in das RichEdit-Control gestreamt werden kann.
+
+Die Menge an Klartext, die in das RichEdit-Control gesendet werden kann, wird dadurch nicht begrenzt.
+
+Vor dem ersten Aufruf von <b>_GUICtrlRichEdit_SetLimitOnText</b> betr&auml;gt die Obergrenze 32767 Zeichen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_StreamToFile, _GUICtrlRichEdit_StreamToVar, _GUICtrlRichEdit_StreamFromFile, _GUICtrlRichEdit_StreamFromVar
+
+###See Also###
+@@MsdnLink@@ EM_EXLIMITTEXT
+
+###Example###
+@@IncludeExample@@

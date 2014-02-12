@@ -1,0 +1,51 @@
+###Function###
+RegDelete
+
+###Description###
+L&ouml;scht einen Schl&uuml;ssel oder einen Wert aus der Registry.
+
+###Syntax###
+RegDelete ( "keyname" [, "valuename"] )
+
+
+###Parameters###
+@@ParamTable@@
+keyname
+	Der zu l&ouml;schende Registry-Schl&uuml;ssel.
+valuename
+	[optional] Der zu l&ouml;schende Wert.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Spezial:	Gibt 0 zur&uuml;ck, wenn der Schl&uuml;ssel/Wert nicht existiert.
+Fehler:	Gibt 2 zur&uuml;ck, wenn das L&ouml;schen des Schl&uuml;ssels/Wertes einen Fehler verursacht hat.
+	 @error kann folgende Werte annehmen:	 
+         1 wenn der gew&uuml;nschte Schl&uuml;ssel nicht ge&ouml;ffnet werden konnte
+	 2 wenn der gew&uuml;nschte Hauptschl&uuml;ssel nicht ge&ouml;ffnet werden konnte
+	 3 wenn von extern (remote) nicht auf die Registry zugegriffen werden konnte
+	-1 wenn der gew&uuml;nschte Wert nicht gel&ouml;scht werden konnte
+	-2 wenn der gew&uuml;nschte Wert bzw. Schl&uuml;ssel nicht gel&ouml;scht werden konnte
+@@End@@
+
+
+###Remarks###
+Ein Registry-Schl&uuml;ssel muss mit "HKEY_LOCAL_MACHINE" ("HKLM"), "HKEY_USERS" ("HKU"), "HKEY_CURRENT_USER" ("HKCU"), "HKEY_CLASSES_ROOT" ("HKCR")oder "HKEY_CURRENT_CONFIG" ("HKCC") beginnen.
+
+Um einen Schl&uuml;ssel oder Wert auf einem 64-bit Windows zu l&ouml;schen, muss dem Begriff HK... das Suffix 64 angeh&auml;ngt werden (z. B. HKLM64).
+
+Um mit dem <b>(Standard)</b>-Wert zu operieren, ist <b>""</b> (ein leerer String) als Wertname zu verwenden.
+
+Werte aus der Registry zu l&ouml;schen, ist potentiell gef&auml;hrlich - also Vorsicht!
+
+Es ist m&ouml;glich, Registries im Netzwerk zu bearbeiten. Dazu ist "\\Computername\Schl&uuml;sselname" zu verwenden. Um diese Funktion verwenden zu k&ouml;nnen, muss man die entsprechenden Zugriffsrechte besitzen.
+
+
+###Related###
+RegRead, RegWrite, RegEnumKey, RegEnumVal
+
+
+###Example###
+@@IncludeExample@@

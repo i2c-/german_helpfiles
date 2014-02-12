@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMonthRange
+
+###Description###
+Ermittelt Datumsinformationen, welche das h&ouml;chste und niedrigste Anzeigelimit aufzeigen
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMonthRange ( $hWnd [, $fPartial = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fPartial
+	[optional] legt den Bereich des zu ermittelnden Limits fest:
+		True - vorherige und nachfolgende Monate werden eingeschlossen
+		False - Nur Monate die komplett dargestellt werden werden eingeschlossen
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagMCMONTHRANGE Struktur zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetMonthRangeMax, _GUICtrlMonthCal_GetMonthRangeMin, $tagMCMONTHRANGE
+
+
+###Example###
+@@IncludeExample@@

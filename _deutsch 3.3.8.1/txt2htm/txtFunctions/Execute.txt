@@ -1,0 +1,33 @@
+###Function###
+Execute
+
+###Description###
+F&uuml;hrt einen Ausdruck aus.
+
+###Syntax###
+Execute ( string )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	String, welcher den auszuwertenden Ausdruck beinhaltet.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Wert des ausgewerteten Ausdrucks zur&uuml;ck.
+Fehler:	Gibt "" (leerer String) zur&uuml;ck und @error wird nicht auf 0 gesetzt.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+Assign, Eval, Call
+
+
+###Example###
+@@IncludeExample@@

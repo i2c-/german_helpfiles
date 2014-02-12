@@ -1,0 +1,44 @@
+###Function###
+WinGetState
+
+###Description###
+Ermittelt den Status eines Fensters.
+
+###Syntax###
+WinGetState ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Zahl zur&uuml;ck, die den Status repr&auml;sentiert. Dabei werden mehrere der nachfolgenden dargestellten Werte addiert. Die Funktion "BitAND()" kann dann zur Pr&uuml;fung genutzt werden:
+	1 = Fenster existiert.
+	2 = Fenster ist sichtbar.
+	4 = Fenster ist freigegeben.
+	8 = Fenster ist aktiv.
+	16 = Fenster ist minimiert.
+	32 = Fenster ist maximiert.
+	
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error = 1, wenn das Fenster nicht gefunden wurde.
+@@End@@
+
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+BitAND, WinGetPos
+
+
+###Example###
+@@IncludeExample@@

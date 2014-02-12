@@ -1,0 +1,34 @@
+###Function###
+IsString
+
+###Description###
+&Uuml;berpr&uuml;ft, ob eine Variable oder ein Ausdruck vom Datentyp "String" ist.
+
+###Syntax###
+IsString ( variable )
+
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Die Variable oder der Ausdruck, die/der &uuml;berpr&uuml;ft werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der Ausdruck nicht vom Typ "String" ist.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+IsArray, IsFloat, IsInt, IsNumber, IsBool, IsHWnd, IsBinary, IsPtr, String, VarGetType
+
+
+###Example###
+@@IncludeExample@@

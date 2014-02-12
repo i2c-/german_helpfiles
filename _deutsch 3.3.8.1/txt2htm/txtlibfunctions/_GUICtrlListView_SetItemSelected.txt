@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_SetItemSelected
+
+###Description###
+Setzt f&uuml;r ein Item den Status "ausgew&auml;hlt"
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetItemSelected($hWnd, $iIndex [, $fSelected = True [, $fFocused = False]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items oder -1 um bei allen Item den Status "ausgew&auml;hlt" zu setzen
+$fSelected
+	[optional] Falls True wird der Status des Items gesetzt, sonst nicht.
+$fFocused
+	[optional] Falls True besitzt das Item den Fokus, sonst nicht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Falls das Listview den Control-Stil $LVS_SINGLESEL verwendet, so ist $iIndex auf -1 zu setzen, damit nicht alle Items markiert werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetItemSelected
+
+###Example###
+@@IncludeExample@@

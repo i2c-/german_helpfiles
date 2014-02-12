@@ -1,0 +1,36 @@
+###User Defined Function###
+_FTP_SetStatusCallback
+
+###Description###
+Registriert eine Callback-Funktion, die von den WinINet-Funktionen aufgerufen werden kann, wenn ein Fortschritt w&auml;hrend der Abarbeitung erfolgt.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_SetStatusCallback($l_InternetSession, $sFunctionName)
+
+###Parameters###
+@@ParamTable@@
+$l_InternetSession
+	R&uuml;ckgabe von _FTP_Connect().
+$sFunctionName
+	Name der aufzurufenden benutzerdefinierten Funktion.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Zeiger zur Callback-Funktion
+Fehler:	0 und setzt @error auf nicht-Null
+@@End@@
+
+###Remarks###
+Die Callback-Funktion wird mit folgenden Parametern aufgerufen (siehe InternetStatusCallback Windows API):
+$hInternet, $dwContent, $dwInternetStatus, $lpvStatusInformation, $dwStatusInformationLength
+
+###Related###
+_FTP_Open, _FTP_FileOpen, _FTP_Command, _FTP_Connect, _FTP_DirPutContents, _FTP_FileGet, _FTP_FilePut, _FTP_FindFileFirst, _FTP_ListToArray, _FTP_ListToArray2D, _FTP_ListToArrayEx, _FTP_DecodeInternetStatus
+
+###See Also###
+@@MsdnLink@@ InternetSetStatusCallback
+
+###Example###
+@@IncludeExample@@

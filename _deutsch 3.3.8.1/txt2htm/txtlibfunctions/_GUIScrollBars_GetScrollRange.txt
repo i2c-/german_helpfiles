@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUIScrollBars_GetScrollRange
+
+###Description###
+Ermittelt die aktuelle minimale und maximale Scrollposition f&uuml;r die festgelegte Scrollbar
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_GetScrollRange($hWnd, $nBar)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+$nBar
+	Legt den Typ der Scrollbar fest. Dieser Parameter kann einer der folgenden Werte sein:
+		  $SB_CTL - Ermittelt den Bereich eines ScrollBar-Controls. Der $hWnd Parameter muss dabei das Handle des ScrollBar-Control sein.
+		  $SB_HORZ - Ermittelt den Bereich einer standardm&auml;&szlig;igen horizontalen Scrollbar.
+		  $SB_VERT - Ermittelt den Bereich einer standardm&auml;&szlig;igen vertikalen Scrollbar.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Aktuelle minimale und maximale Scrollposition f&uuml;r die festgelegte Scrollbar, im folgenden Format:
+	[0] - minimale Scrollposition
+	[1] - maximale Scrollposition
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Obige Konstanten ben&ouml;tigen ScrollBarConstants.au3
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIScrollBars_SetScrollRange
+
+###See Also###
+@@MsdnLink@@ GetScrollRange
+
+###Example###
+@@IncludeExample@@

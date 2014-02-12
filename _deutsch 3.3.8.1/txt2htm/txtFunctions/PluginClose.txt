@@ -1,0 +1,34 @@
+###Function###
+PluginClose
+
+###Experimental###
+
+###Description###
+Schlie&szlig;t ein Plugin
+
+###Syntax###
+PluginClose ( dllhandle )
+
+
+###Parameters###
+@@ParamTable@@
+dllhandle
+	Das Handle einer dll welches von einem vorherigen Aufruf von PluginOpen zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+PluginOpen
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,65 @@
+###Structure Name###
+$tagMENUITEMINFO
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Men&uuml;element
+
+###Syntax###
+Global Const $tagMENUITEMINFO = "int Size;int Mask;int Type;int State;int ID;int SubMenu;int BmpChecked;int BmpUnchecked;" & _
+	"int ItemData;ptr TypeData;int CCH;int BmpItem"
+
+
+###Fields###
+@@ParamTable@@
+Size
+	Legt die Gr&ouml;&szlig;e der Struktur fest, in Bytes
+Mask
+	Mitglieder die zu ermitteln oder zu setzen sind. Dieses Mitglied kann einer oder mehrere der folgenden Werte sein:
+		$MIIM_BITMAP - Ermittelt oder setzt das <b>BmpItem</b> Mitglied
+		$MIIM_CHECKMARKS - Ermittelt oder setzt das <b>BmpChecked und BmpUnchecked</b> Mitglied
+		$MIIM_DATA - Ermittelt oder setzt das <b>ItemData</b> Mitglied
+		$MIIM_FTYPE - Ermittelt oder setzt das <b>Type</b> Mitglied
+		$MIIM_ID - Ermittelt oder setzt das <b>ID</b> Mitglied
+		$MIIM_STATE - Ermittelt oder setzt das <b>State</b> Mitglied
+		$MIIM_STRING - Ermittelt oder setzt das <b>TypeData</b> Mitglied
+		$MIIM_SUBMENU - Ermittelt oder setzt das <b>SubMenu</b> Mitglied
+		$MIIM_TYPE - Ermittelt oder setzt das <b>Type und TypeData</b> Mitglied
+Type
+	Men&uuml;element-Typ. Dieses Mitglied kann einer oder mehrere der folgenden Werte sein:
+		$MFT_BITMAP - Zeigt das Men&uuml;element mit einer Bitmap an
+		$MFT_MENUBARBREAK - Platziert das Men&uuml;element (f&uuml;r eine Men&uuml;leiste) in einer neuen Zeile oder neuen Spalte (f&uuml;r ein Aufklappmen&uuml;, Untermen&uuml; oder Kontextmen&uuml;)
+		$MFT_MENUBREAK - Platziert das Men&uuml;element (f&uuml;r eine Men&uuml;leiste) in einer neuen Zeile oder neuen Spalte (f&uuml;r ein Aufklappmen&uuml;, Untermen&uuml; oder Kontextmen&uuml;)
+		$MFT_OWNERDRAW - Setzt fest, dass der Eigner des Men&uuml;s f&uuml;r das Zeichnen selbst verantwortlich ist
+		$MFT_RADIOCHECK - Zeigt ausgew&auml;hlte Men&uuml;elemente mit einem Radiobutton an
+		$MFT_RIGHTJUSTIFY - Setzt das Men&uuml;element und alle nachfolgenden Elemente rechtsb&uuml;ndig
+		$MFT_RIGHTORDER - Legt fest, dass Men&uuml;s von rechts nach links hintereinandergeschaltet sind
+		$MFT_SEPARATOR - Legt fest, dass das Men&uuml;element eine Trennlinie ist
+State
+	Men&uuml;element-Status. Dieses Mitglied kann einer oder mehrere der folgenden Werte sein:
+		$MFS_CHECKED - Pr&uuml;ft das Men&uuml;element
+		$MFS_DEFAULT - Legt fest, dass das Men&uuml;element der Standard ist
+		$MFS_DISABLED - Deaktiviert das Men&uuml;element und graut es aus, sodass es nicht ausgew&auml;hlt werden kann
+		$MFS_ENABLED - Aktiviert das Men&uuml;element, sodass es ausgew&auml;hlt werden kann
+		$MFS_GRAYED - Deaktiviert das Men&uuml;element und graut es aus, sodass es nicht ausgew&auml;hlt werden kann
+		$MFS_HILITE - Hebt das Men&uuml;element hervor ("Highlight")
+ID
+	Anwendungsdefinierter 16-Bit Wert, welcher das Men&uuml;element identifiziert
+SubMenu
+	Handle zu dem Aufklappmen&uuml; ("Drop Down") Men&uuml; oder Untermen&uuml; das mit dem Men&uuml;element verbunden ist
+BmpChecked
+	Handle zu der Bitmap das neben dem Element angezeigt werden soll wenn es ausgew&auml;hlt ist
+BmpUnchecked
+	Handle zu der Bitmap das neben dem Element angezeigt werden soll wenn es <i>nicht</i> ausgew&auml;hlt ist
+ItemData
+	Anwendungsdefinierter Wert der mit dem Men&uuml;element verbunden ist
+TypeData
+	Inhalt des Men&uuml;elements
+CCH
+	Textl&auml;nge des Men&uuml;elements
+BmpItem
+	Handle zu der Bitmap das angezeigt werden soll
+@@End@@
+
+
+###Remarks###
+Keine.

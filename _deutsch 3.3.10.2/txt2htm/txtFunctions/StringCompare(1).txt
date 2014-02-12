@@ -1,0 +1,42 @@
+###Function###
+StringCompare
+
+###Description###
+Vergleicht zwei Strings mit Optionen.
+
+###Syntax###
+StringCompare ( "string1", "string2" [, casesense = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+string1
+	Der erste auszuwertende String.
+string2
+	Der zweite auszuwertende String.
+casesense
+	[optional] Flag zur Suchgenauigkeit.
+		$STR_NOCASESENSE (0) = Gro&szlig;- und Kleinschreibung werden nicht ber&uuml;cksichtigt (Standardwert).
+		$STR_CASESENSE (1) = Ber&uuml;cksichtigt Gro&szlig;- und Kleinschreibung.
+		$STR_NOCASESENSEBASIC (2) = Gro&szlig;- und Kleinschreibung werden nicht ber&uuml;cksichtigt. Es findet ein einfacherer schnellerer Vergleich statt.
+	Konstanten sind in StringConstants.au3 definiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+0	string1 und string2 sind gleich
+> 0	string1 ist gr&ouml;&szlig;er als string2
+< 0	string1 ist kleiner als string2
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+StringInStr, StringLeft, StringLen, StringLower, StringMid, StringRight, StringTrimLeft, StringTrimRight, StringUpper
+
+
+###Example###
+@@IncludeExample@@

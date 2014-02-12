@@ -1,0 +1,43 @@
+###User Defined Function###
+_WinAPI_GetObject
+
+###Description###
+Ermittelt Informationen &uuml;ber das angegebene Grafik-Objekt
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetObject($hObject, $iSize, $pObject)
+
+###Parameters###
+@@ParamTable@@
+$hObject
+	Identifiziert den logischen Zeichenstift, F&uuml;llmuster, Schrift, Bitmap, Region oder Palette
+$iSize
+	Legt die Anzahl der Bytes fest die in den Puffer geschrieben werden sollen
+$pObject
+	Zeiger auf einen Puffer, der die Informationen aufnimmt. Folgendes zeigt den Typ der Informationen
+		die der Puffer f&uuml;r Grafik-Objekte jeden Typs aufnimmt den man festlegen kann:
+		HBITMAP - BITMAP oder DIBSECTION
+		HPALETTE - Anzahl der Eintr&auml;ge in der logischen Palette
+		HPEN - EXTLOGPEN oder LOGPEN
+		HBRUSH - LOGBRUSH
+		HFONT - LOGFONT
+		Ist $pObject 0, gibt die Funktion die Anzahl der erforderlichen Bytes zur&uuml;ck, um die Informationen f&uuml;r das angegebene 
+		Grafik-Objekt in dem Puffer zu speichern.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ist $pObject ein g&uuml;ltiger Zeiger, ist der R&uuml;ckgabewert die Anzahl der Bytes die in dem Puffer abgelegt wurden.
+	Ist die Funktion erfolgreich und $pObject ist 0, ist der R&uuml;ckgabewert die Anzahl der Bytes, die erforderlich w&auml;ren
+	um die Informationen in dem Puffer zu speichern.
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetObject

@@ -1,0 +1,53 @@
+###User Defined Function###
+_GDIPlus_ParamAdd
+
+###Description###
+F&uuml;gt einen Wert zu einer Encoder-Parameter-Liste hinzu.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ParamAdd(ByRef $tParams, $sGUID, $iCount, $iType, $pValues)
+
+###Parameters###
+@@ParamTable@@
+$tParams
+	$tagGDIPPENCODERPARAMS Struktur zur&uuml;ckgegeben aus _GDIPlus_ParamInit
+$sGUID
+	Encoder Parameter GUID. Kann einer der folgenden Optionen sein: 
+		$GDIP_EPGCHROMINANCETABLE - Einstellungen der Farbwert-Tabelle
+		$GDIP_EPGCOLORDEPTH - Einstellungen der Farbtiefe
+		$GDIP_EPGCOMPRESSION - Einstellungen der Komprimierung
+		$GDIP_EPGLUMINANCETABLE - Einstellungen der Leuchtdichte-Tabelle
+		$GDIP_EPGQUALITY - Qualit&auml;tseinstellungen
+		$GDIP_EPGRENDERMETHOD - Einstellungen der Render-Methode
+		$GDIP_EPGSAVEFLAG - Einstellungen der Speichern-Flag
+		$GDIP_EPGSCANMETHOD - Einstellungen des Scan-Modus
+		$GDIP_EPGTRANSFORMATION - Transformationseinstellungen
+		$GDIP_EPGVERSION - Einstellungen der Software-Version
+$iCount
+	Anzahl der Elemente im Array $pValues
+$iType
+	Encoder Typ des Parameter Wertes. Kann einer der folgenden Optionen sein:
+		$GDIP_EPTBYTE - 8 Bit vorzeichenloser Integer (unsigned integer)
+		$GDIP_EPTASCII - Null-terminierter String
+		$GDIP_EPTSHORT - 16 Bit vorzeichenloser Integer (unsigned integer)
+		$GDIP_EPTLONG - 32 Bit vorzeichenloser Integer (unsigned integer)
+		$GDIP_EPTRATIONAL - Zwei longs (Z&auml;hler, Nenner)
+		$GDIP_EPTLONGRANGE - Zwei longs (low, high)
+		$GDIP_EPTUNDEFINED - Array von Bytes (jedes Typs)
+		$GDIP_EPTRATIONALRANGE - Zwei longs (low, high)
+$pValues
+	Zeiger auf ein Array von Werten. Jeder Wert hat den Typ, der von dem Datenelement $iType festgelegt wurde.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ParamInit, $tagGDIPPENCODERPARAMS
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Makro Referenz - AutoIt Related</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <link href="../css/default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Makro Referenz - AutoIt Related</h1>
+<p>Es folgt eine Liste mit den Makros von AutoIt.<br>  </p>
+<p>Die komplette Liste der Makros kann <a href="../macros.htm">hier</a> eingesehen werden. </p>
+<p> </p>
+<table height="590" bordercolor="#c0c0c0" cellpadding="3" cellspacing="0" width="100%" border="1">
+<tr>
+  <td width="25%" bgcolor="#000099" height="16"><font color="#ffffff"><strong>Makro</strong></font></td>
+  <td width="75%" bgcolor="#000099" height="16"><font color="#ffffff"><strong>Beschreibung</strong></font></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@compiled</td>
+  <td>Gibt 1 zur&uuml;ck, wenn das Skript eine kompilierte exe-Datei ist; ansonsten wird 0 zur&uuml;ckgegeben</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@error</td>
+  <td>Status des error-Flags. Siehe die Funktion <a href="../functions/SetError.htm">SetError.</a></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@exitCode</td>
+  <td>Exit-Code wie durch den <a href="../keywords/Exit.htm">Exit</a>-Befehl gesetzt.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@exitMethod</td>
+  <td>Exit Methode. Siehe Funktion <a
+href="../functions/OnAutoItExitRegister.htm">OnAutoItExitRegister()</a>.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@extended</td>
+  <td>Erweiterte Funktionsr&uuml;ckgabe - wird in bestimmten Funktionen wie z. B.
+    <a href="../functions/StringReplace.htm">StringReplace</a> benutzt.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@NumParams</td>
+  <td>Zahl der genutzten Parameter beim Aufruf einer benutzerdefinierten Funktion. </td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@ScriptName</td>
+  <td>Langer Dateiname des laufenden Skriptes.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@ScriptDir</td>
+  <td>Verzeichnis des laufenden Skriptes (beinhaltet <i>keinen</i> abschlie&szlig;enden
+    Backslash)</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@ScriptFullPath</td>
+  <td>Gleichbedeutend mit  <i>@ScriptDir & "\" & @ScriptName</i></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@ScriptLineNumber</td>
+  <td>Zeilennummer der aktuell ausgef&uuml;hrten Zeile in einem Skript. N&uuml;tzlich f&uuml;r Debug-Aussagen, besonders wenn eine Funktion aufgerufen wird und eine Zeilennummer &uuml;bergeben werden kann.
+  (Funktioniert nicht in kompilierten Skripten)</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@WorkingDir</td>
+  <td>Aktuelles/Aktives Arbeitsverzeichnis (beinhaltet <i>keinen</i> abschlie&szlig;enden
+    Backslash).</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@AutoItExe</td>
+  <td>Der komplette Pfad und Dateiname der AutoIt-Exe-Datei. Bei kompilierten Skripten der Pfad des laufenden Skriptes.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@AutoItPID</td>
+  <td>Prozess-ID des laufenden Skripts.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@AutoItVersion</td>
+  <td>Versionsnummer von AutoIt, z.B.: <i>3.3.6.1</i></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@AutoItX64</td>
+  <td>Gibt 1 zur&uuml;ck, falls das Skript unter einer nativen X64 Version von AutoIt l&auml;uft.</td>
+</tr>
+<tr>
+    <td height="16" colspan="2"></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@COM_EventObj</td>
+  <td> Objekt f&uuml;r das ein COM Event gestartet wird. Nur g&uuml;ltig in einer COM Event Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@GUI_CtrlId</td>
+  <td>Identifier des zuletzt geklickten GUI Controls. Nur g&uuml;ltig in einer Event
+    Funktion. Siehe GUICtrlSetOnEvent-Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@GUI_CtrlHandle</td>
+  <td>Handle des zuletzt geklickten GUI Controls. Nur g&uuml;ltig in einer Event
+    Funktion. Siehe GUICtrlSetOnEvent-Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @GUI_DragID</td>
+  <td>Drag ID des GUI Controls. Nur g&uuml;ltig bei Drop Events. Siehe GUISetOnEvent Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @GUI_DragFile</td>
+  <td>Dateiname der 'drag and drop'-Datei. Nur g&uuml;ltig bei Drop Events. Siehe
+    GUISetOnEvent Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @GUI_DropID</td>
+  <td>DropID des GUI Controls. Nur g&uuml;ltig bei Drop Events. Siehe GUISetOnEvent Funktion.</</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @GUI_WinHandle</td>
+  <td>Handle des zuletzt geklickten GUI Fensters. Nur g&uuml;ltig in einer Event
+    Funktion. Siehe GUICtrlSetOnEvent-Funktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @HotKeyPressed</td>
+  <td>Letzter gedr&uuml;ckter Hotkey. Siehe <a
+href="../functions/HotKeySet.htm">HotkeySet</a> Funktion.</td>
+</tr>
+<tr>
+    <td height="16" colspan="2"></td>
+</tr>
+<tr>
+    <td height="16" rowspan="1" colspan="2">Zur Verwendung mit den <a href="../functions/WinSetState.htm">WinSetState</a>,
+      <a href="../functions/Run.htm">Run</a>, <a href="../functions/RunWait.htm">RunWait</a>, <a href="../functions/FileCreateShortcut.htm">FileCreateShortcut</a> und <a href="../functions/FileGetShortcut.htm">FileGetShortcut</a> Funktionen:</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@SW_DISABLE</td>
+  <td>Deaktiviert das Fenster.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@SW_ENABLE</td>
+  <td>Aktiviert das Fenster.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_HIDE </td>
+  <td>Versteckt das Fenster und aktiviert ein anderes.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_LOCK</td>
+  <td>Sperrt das Fenster, um Ver&auml;nderungen zu verhindern.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_MAXIMIZE </td>
+  <td>Maximiert das angegebene Fenster.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_MINIMIZE </td>
+  <td>Minimiert das angegebene Fenster und aktiviert das n&auml;chste Hauptfenster in der Z-Reihenfolge.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_RESTORE </td>
+  <td>Aktiviert und zeigt das Fenster. Wenn das Fenster minimiert oder maximiert
+    ist, stellt das System die originale Gr&ouml;&szlig;e und Position wieder her. Eine
+    Applikation sollte dieses Flag angeben, wenn ein minimiertes Fenster wieder
+    hergestellt wird.
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOW </td>
+  <td>Aktiviert und zeigt das Fenster in seiner gegenw&auml;rtigen Position und Gr&ouml;&szlig;e.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWDEFAULT </td>
+  <td>Setzt den Fensterstatus eines Fensters entsprechend dem SW_-Wert der aufrufenden Applikation.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWMAXIMIZED </td>
+  <td>Aktiviert das Fenster und zeigt es maximiert an.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWMINIMIZED </td>
+  <td>Aktiviert das Fenster und zeigt es minimiert an.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWMINNOACTIVE </td>
+  <td>Zeigt das Fenster minimiert an. Dies ist &auml;hnlich zu @SW_SHOWMINIMIZED,
+    allerdings wird das Fenster nicht aktiviert.
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWNA </td>
+  <td>Zeigt das Fenster in seiner aktuellen Position und Gr&ouml;&szlig;e. Dies ist &auml;hnlich zu
+    @SW_SHOW, allerdings wird das Fenster nicht aktiviert.
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWNOACTIVATE </td>
+  <td>Zeigt das Fenster in seiner letzten Position und Gr&ouml;&szlig;e. Dies ist &auml;hnlich zu
+    @SW_SHOWNORMAL, allerdings wird das Fenster nicht aktiviert.
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_SHOWNORMAL </td>
+  <td>Aktiviert und zeigt ein Fenster. Wenn das Fenster minimiert oder oder
+    maximiert ist, stellt das System die originale Gr&ouml;&szlig;e und Position wieder
+    her. Eine Applikation sollte dieses Flag angeben, wenn ein Fenster zum
+    ersten Mal dargestellt wird.
+</tr>
+<tr>
+  <td style="font-weight: bold;"> @SW_UNLOCK</td>
+  <td>Gibt das Fenster wieder frei, damit es ver&auml;ndert werden kann.</td>
+</tr>
+<tr>
+    <td height="16" rowspan="1" colspan="2"></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@TRAY_ID</td>
+  <td>Identifier des zuletzt geklickten Items w&auml;hrend einer TraySet(Item)OnEvent Aktion.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@TrayIconFlashing</td>
+  <td>Gibt 1 zur&uuml;ck, wenn das Tray-Icon blinkt; sonst wird 0 zur&uuml;ckgegeben.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@TrayIconVisible</td>
+  <td>Gibt 1 zur&uuml;ck, wenn das Tray-Icon sichtbar ist, sonst wird 0 zur&uuml;ckgegeben.</td>
+</tr>
+<tr>
+    <td height="16" rowspan="1" colspan="2"></td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@CR</td>
+  <td>Carriage Return ("Wagenr&uuml;cklauf"), Chr(13); manchmal f&uuml;r Zeilenumbr&uuml;che verwendet.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@LF</td>
+  <td>Zeilenvorschub, Chr(10); normalerweise f&uuml;r Zeilenumbr&uuml;che verwendet.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@CRLF</td>
+  <td>= @CR & @LF ; gelegentlich f&uuml;r Zeilenumbr&uuml;che verwendet.</td>
+</tr>
+<tr>
+  <td style="font-weight: bold;">@TAB</td>
+  <td>Tab-Zeichen, Chr(9)</td>
+</tr>
+</table>
+
+<p> </p>
+</body>
+</html>

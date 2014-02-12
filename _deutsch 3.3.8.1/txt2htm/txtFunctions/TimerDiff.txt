@@ -1,0 +1,31 @@
+###Function###
+TimerDiff
+
+###Description###
+Gibt den Zeitunterschied zu einem vorherigen Aufruf der Funktion TimerInit() zur&uuml;ck.
+
+###Syntax###
+TimerDiff ( handle )
+
+
+###Parameters###
+@@ParamTable@@
+handle
+	Handle zur&uuml;ckgegeben durch einen vorherigen Aufruf von TimerInit().
+@@End@@
+
+
+###ReturnValue###
+Gibt in Millisekunden den Zeitunterschied zu einem vorherigen Aufruf von TimerInit() zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+TimerInit
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetParaAlignment
+
+###Description###
+Setzt die Ausrichtung der Abs&auml;tze der aktuellen Markierung oder, falls nichts markiert ist, der eingef&uuml;gten Abs&auml;tze an dem Einf&uuml;gepunkt.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetParaAlignment ( $hWnd, $sAlignment )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sAlignment
+	values:
+		"l" - ausgerichtet am linken Rand.
+		"r" - ausgerichtet am rechten Rand.
+		"c" - zentriert zwischen den R&auml;ndern
+		"j" - dehnbar zwischen die R&auml;nder
+		"f" - dehnbar zwischen die R&auml;nder aber nur die Leerzeichen erweitern
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	102 - $sAlignment ung&uuml;ltig
+@@End@@
+
+
+###Remarks###
+In Richedit 2.0 wird dehnen nicht angezeigt
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetParaAlignment
+
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+
+###Example###
+@@IncludeExample@@

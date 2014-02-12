@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_LoadLibrary
+
+###Description###
+Mapped ein bestimmtes ausf&uuml;hrbares Modul in den Adressraum des aufrufenden Prozesses
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadLibrary($sFileName)
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Benennt ein ausf&uuml;hrbares Win32 Modul (entweder eine .DLL oder eine .EXE Datei). Der angegebene Name ist
+		der Dateiname des ausf&uuml;hrbaren Moduls.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Handle zu dem ausf&uuml;hrbaren Modul
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_LoadLibraryEx, _WinAPI_FreeLibrary
+
+###See Also###
+@@MsdnLink@@ LoadLibrary

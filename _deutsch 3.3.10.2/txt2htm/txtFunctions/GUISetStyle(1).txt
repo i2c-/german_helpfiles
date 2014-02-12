@@ -1,0 +1,41 @@
+###Function###
+GUISetStyle
+
+###Description###
+&Auml;ndert den Stil eines GUI-Fensters.
+
+###Syntax###
+GUISetStyle ( Style [, ExStyle [, winhandle]] )
+
+
+###Parameters###
+@@ParamTable@@
+style
+	Legt den Stil des Fensters fest. Siehe <a href="../appendix/GUIStyles.htm">Anhang GUI-Stile f&uuml;r Controls</a>.
+	Um nichts zu &auml;ndern ist -1 zu setzen.
+exStyle
+	[optional] Legt den erweiterten Stil des Fensters fest. Siehe die <a href="GUICreate.htm#Extended Style Table">Tabelle der erweiterten Stile</a>.  -1 ist der Standardwert.
+	Um nichts zu &auml;ndern ist -1 zu setzen.
+winhandle
+	[optional] Fensterhandle der aus <a href="GUICreate.htm">GUICreate()</a> zur&uuml;ckgegeben wird (Standard ist das zuvor genutzte Fenster).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Es findet weder f&uuml;r den Stilwert, noch f&uuml;r die Interaktion mit bereits definierten Controls eine &Uuml;berpr&uuml;fung statt. Es ist Sache des (GUI) Designers diesbez&uuml;glich auf Kompatibilit&auml;t acht zu geben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUIGetStyle
+
+
+###Example###
+@@IncludeExample@@

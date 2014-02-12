@@ -1,0 +1,45 @@
+###User Defined Function###
+_WinAPI_GetAncestor
+
+###Description###
+Ermittelt das Handle zum "Urvater" eines Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetAncestor ( $hWnd [, $iFlags = 1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster, dessen Urvater ermittelt werden soll. Wird das Desktopfenster als Parameter angegeben, gibt
+	die Funktion 0 zur&uuml;ck.
+$iFlags
+	[optional] Legt den Urvater fest, der ermittelt werden soll. Dieser Parameter kann einen der folgenden Werte beinhalten:
+	$GA_PARENT - Ermittelt das Parent-Fenster
+	$GA_ROOT - Ermittelt das Root-Fenster, indem die Kette der Parent-Childfenster durchlaufen wird
+	$GA_ROOTOWNER - Ermittelt das Owner-Root-Fenster, indem die Kette der Parent-Ownerfenster durchlaufen wird (zur&uuml;ckgegeben von GetParent).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des "Urvater"-Fensters
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Ein Owner-Fenster ist das Hauptfenster, das in WinMain erstellt wird.
+Oben stehende Konstanten ben&ouml;tigen #include <WindowsConstants.au3>
+
+
+###Related###
+_WinAPI_GetParent
+
+
+###See Also###
+@@MsdnLink@@ GetAncestor
+
+
+###Example###
+@@IncludeExample@@

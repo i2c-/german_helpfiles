@@ -1,0 +1,38 @@
+###User Defined Function###
+_GDIPlus_ImageGetRawFormat
+
+###Description###
+Gibt zu einem Bild die GUID des Dateiformats und den Namen des Imageformats zur&uuml;ck.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetRawFormat($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle auf ein Bild-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format
+	[0] - - String mit GUID des Dateiformats
+	[1] - - String mit dem Namen des Imageformats
+Fehler:	Gibt ein leeres Array zur&uuml;ck und Makro @error ist gesetzt. Makro @extended wird auf die Fehlerposition gesetzt.
+@error:	0 - Kein Fehler.
+	10 - Ung&uuml;ltiges Handle des Bild-Objekts
+@@End@@
+
+###Remarks###
+Der R&uuml;ckgabewert 4 des Makros @error beruht darauf, dass die GDI+ UDF im Fehlerfall -1 oder 0 anstelle des Bild-Handles zur&uuml;ckgibt.
+
+
+###Related###
+_GDIPlus_ImageGetType
+
+###See Also###
+@@MsdnLink@@ GdipGetImageRawFormat
+
+###Example###
+@@IncludeExample@@

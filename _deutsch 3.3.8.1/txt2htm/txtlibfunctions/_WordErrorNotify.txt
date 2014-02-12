@@ -1,0 +1,38 @@
+###User Defined Function###
+_WordErrorNotify
+
+###Description###
+Legt fest, ob Word.au3 automatisch bei Warnungen und Fehlern benachrichtigt (in die Konsole)
+
+###Syntax###
+#include <Word.au3> 
+_WordErrorNotify([$f_notify = -1])
+
+###Parameters###
+@@ParamTable@@
+$f_notify
+	[optional] legt fest, ob die Benachrichtigung an oder aus ist
+	-1 = (Standard) gibt die aktuelle Einstellung zur&uuml;ck
+	True = ein
+	False = aus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Falls $f_notify = -1 ist, wird die aktuelle Benachrichtigungseinstellung zur&uuml;ckgegeben ansonsten wird 1 zur&uuml;ckgegeben
+Fehler:	Gibt 0 zur&uuml;ck
+@@End@@
+
+
+###Remarks###
+Word.au3 schreibt Diagnoseinformationen, Warnungen und Fehler standardm&auml;&szlig;ig in die Konsole. Diese Informationen k&ouml;nnen gelsen werden, wenn der SciTe Editor zum starten der Skripte verwendet wird.
+
+Diese Funktion erlaubt es die Funktionali&auml;t an oder auszuschalten.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

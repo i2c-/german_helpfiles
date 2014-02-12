@@ -1,0 +1,74 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetCharAttributes
+
+###Description###
+Setzt/Entfernt ein Attribut f&uuml;r den markierten Text oder, falls keiner markiert ist, f&uuml;r den Text nach der Einf&uuml;gemarke (Cursor)
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetCharAttributes ( $hWnd, $sStatesAndEffects [, $fWord = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sStatesAndEffects
+	Ein String, zusammengesetzt aus einer/mehreren Zeichengruppe(n) aus 3 Zeichen: +/- f&uuml;r den Zustand und ein zweibuchstabiges K&uuml;rzel f&uuml;r das Attribut. 
+	Erstes Zeichen: + f&uuml;r gesetzt, - f&uuml;r nicht gesetzt
+	K&uuml;rzel f&uuml;r das zweite und dritte Zeichen:
+		bo - Fett
+		di - Deaktiviert - Zeichen angezeigt mit einem Schatten [nd]
+		em - Ausgepr&auml;gt [nd]
+		hi - Versteckt, z.B. nicht angezeigt
+		im - Eingepr&auml;gt [nd]
+		it - Kursiv
+		li - EN_LINK Nachrichten werden gesendet, wenn die Maus &uuml;ber Text mit diesem Attribut f&auml;hrt.
+		ou - Umrissen [nd]
+		pr - EN_PROTECT gesendet, wenn der Benutzer versucht den Text zu ver&auml;ndern.
+		re - Markiert als revidiert [nd]
+		sh - Schattiert [nd]
+		sm - Kleinbuchstaben [nd]
+		st - Durchgestrichen
+		sb - Tiefgestellt [nd]
+		sp - Hochgestellt [nd]
+		un - Unterstrichen
+$fWord
+	[optional] <b>True</b>
+		Falls Text markiert ist, wird das Attribut auf alle W&ouml;rter im markierten Text angewendet.
+		Falls nicht:
+		Ist der Einf&uuml;gepunkt in einem Wort, oder an dessen Ende, werden die Attribute auf das Wort angewendet.
+		Ist er es nicht, werden die Attribute auf den eingef&uuml;gten Text angewendet.
+	 <b>False</b> (Standard)
+		Falls Text markiert ist, wird das Attribut auf den markierten Text angewendet.
+		Falls nicht, werden die Attribute auf den eingef&uuml;gten Text angewendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt das @error-Flag ungleich 0
+@error:	101 - $hWnd ist kein Handle
+	103 - $fWord muss entweder True oder False sein
+	1021 - L&auml;nge von $sStatesAndEffects ist kein Vielfaches von 3
+	1022 - Erstes Zeichen der Gruppe ist nicht + oder -. Das Zeichen ist in @extended abgelegt.
+	1023 - Ein ung&uuml;ltiges Attribut-K&uuml;rzel. Ist in @extended abgelegt.
+@@End@@
+
+
+###Remarks###
+Manche Attribute werden in einem RichEdit Control nicht dargestellt; diese sind oben mit [nd] gekennzeichnet.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_GetCharAttributes
+
+
+###See Also###
+@@MsdnLink@@ EM_SETCHARFORMAT
+
+
+###Example###
+@@IncludeExample@@

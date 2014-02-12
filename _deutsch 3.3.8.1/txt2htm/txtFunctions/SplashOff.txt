@@ -1,0 +1,27 @@
+###Function###
+SplashOff
+
+###Description###
+Schlie&szlig;t ein "Splash"-Fenster (SplashText oder SplashImage).
+
+
+###Syntax###
+SplashOff (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Keine.
+
+###Related###
+SplashImageOn, SplashTextOn
+
+
+###Example###
+@@IncludeExample@@

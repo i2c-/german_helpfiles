@@ -1,0 +1,30 @@
+###User Defined Function###
+_Date_Time_SetLocalTime
+
+###Description###
+Setzt die lokale Zeit und Datum
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SetLocalTime($pSystemTime)
+
+###Parameters###
+@@ParamTable@@
+$pSystemTime
+	Zeiger zu einer $tagSYSTEMTIME Struktur, die die neue lokale Zeit und Datum beinhaltet
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Die SetLocalTime Function aktiviert die SE_SYSTEMTIME_NAME Rechte, bevor die lokale Zeit ge&auml;ndert wird
+
+###Related###
+_Date_Time_GetLocalTime, $tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

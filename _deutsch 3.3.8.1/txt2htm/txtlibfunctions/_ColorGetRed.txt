@@ -1,0 +1,27 @@
+###User Defined Function###
+_ColorGetRed
+
+###Description###
+Gibt den Rotwert des angegebenen RGB-Farbwertes zur&uuml;ck.
+
+###Syntax###
+#include <Color.au3>
+_ColorGetRed($nColor)
+
+###Parameters###
+@@ParamTable@@
+$nColor
+	Der RGB-Farbwert, dessen Rot-Anteil ermittelt werden soll (0x00RRGGBB).
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt den Byte-Wert des roten Farbanteils zur&uuml;ck ( 0-255 dezimal).
+
+###Remarks###
+Keine.
+
+###Related###
+_ColorGetBlue, _ColorGetGreen, _ColorGetRGB
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,53 @@
+###Structure Name###
+$tagMCRANGE
+
+###Description###
+Enth&auml;lt Informationen f&uuml;r das Setzen des minimal und maximal erlaubten Datums f&uuml;r ein MonthCal-Control
+
+###Syntax###
+Global Const $tagMCRANGE = "short MinYear;short MinMonth;short MinDOW;short MinDay;short MinHour;short MinMinute;short MinSecond;" & _
+		"short MinMSeconds;short MaxYear;short MaxMonth;short MaxDOW;short MaxDay;short MaxHour;short MaxMinute;short MaxSecond;" & _
+		"short MaxMSeconds;short MinSet;short MaxSet"
+
+###Fields###
+@@ParamTable@@
+MinYear
+	Jahr
+MinMonth
+	Montag
+MinDOW
+	Wochentag
+MinDay
+	Tag
+MinHour
+	Stunde
+MinMinute
+	Minute
+MinSecond
+	Sekunde
+MinMSeconds
+	Millisekunde
+MaxYear
+	Jahr
+MaxMonth
+	Montag
+MaxDOW
+	Wochentag
+MaxDay
+	Tag
+MaxHour
+	Stunde
+MaxMinute
+	Minute
+MaxSecond
+	Sekunde
+MaxMSeconds
+	Millisekunde
+MinSet
+	Ein minimales Limit, das f&uuml;r das Control gesetzt wird
+MaxSet
+	Ein maximales Limit, das f&uuml;r das Control gesetzt wird
+@@End@@
+
+###Remarks###
+Keine.

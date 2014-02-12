@@ -1,0 +1,35 @@
+###Function###
+GUICtrlDelete
+
+###Description###
+L&ouml;scht ein Control.
+
+###Syntax###
+GUICtrlDelete ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+F&uuml;r Kontextmen&uuml;-Controls siehe GUICtrlCreateContextMenu.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICreate, GUICtrlCreate..., GUICtrlCreateContextMenu
+
+
+###Example###
+@@IncludeExample@@

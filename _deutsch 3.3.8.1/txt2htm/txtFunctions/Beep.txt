@@ -1,0 +1,31 @@
+###Function###
+Beep
+
+###Description###
+Spielt einen Beep-Ton &uuml;ber den Systemlautsprecher ab.
+
+###Syntax###
+Beep ( [Frequency [, Duration]] )
+
+###Parameters###
+@@ParamTable@@
+Frequency
+	[optional] Die Frequenz des Beep-Tons. Sie kann zwischen 37 Hz und 32.767 Hz(0x25 bis 0x7FFF)liegen. Standard sind 500 Hz.
+Duration
+	[optional] Die L&auml;nge des Beep-Tons in Millisekunden. Standard = 1000 ms.
+@@End@@
+
+
+###ReturnValue###
+Gibt ohne R&uuml;cksicht auf Erfolg immer 1 zur&uuml;ck.
+
+###Remarks###
+Keine.
+
+
+###Related###
+SoundPlay
+
+
+###Example###
+@@IncludeExample@@

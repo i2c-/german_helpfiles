@@ -1,0 +1,59 @@
+###User Defined Function###
+_WinAPI_CreateFile
+
+###Description###
+Erstellt oder &ouml;ffnet eine Datei oder anderes Ger&auml;t
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateFile($sFileName, $iCreation [, $iAccess = 4 [, $iShare = 0 [, $iAttributes = 0 [, $pSecurity = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Name eines Objekts, das erstellt oder ge&ouml;ffnet werden soll
+$iCreation
+	Aktion, die auf existierende oder nicht existierende Dateien angewendet werden soll:
+		0 - Erstellt eine neue Datei. Die Funktion schl&auml;gt fehl, wenn die Datei bereits besteht
+		1 - Erstellt eine neue Datei. Falls die Datei bereits existiert, wird sie &uuml;berschrieben
+		2 - &Ouml;ffnet eine Datei. Die Funktion schl&auml;gt fehl, falls die Datei nicht existiert
+		3 - &Ouml;ffnet eine Datei. Falls die Datei nicht existiert, erstellt die Funktion die Datei
+		4 - &Ouml;ffnet eine Datei und trimmt sie so, dass deren Gr&ouml;&szlig;e 0 Bytes betr&auml;gt. Die Funktion schl&auml;gt fehl, falls die Datei nicht existiert.
+$iAccess
+	[optional] Zugriff auf das Objekt:
+		1 - ausf&uuml;hren
+		2 - lesen
+		4 - schreiben
+$iShare
+	[optional] Sharing mode auf das Objekt:
+		1 - l&ouml;schen
+		2 - lesen
+		4 - schreiben
+$iAttributes
+	[optional] Die Dateieigenschaften:
+		1 - Datei sollte archiviert sein
+		2 - Datei ist versteckt
+		4 - Datei ist schreibgesch&uuml;tzt
+		8 - Datei ist ein Teil des Betriebssystems oder wird exklusiv von diesem verwendet.
+$pSecurity
+	[optional] Zeiger auf eine $tagSECURITY_ATTRIBUTES Struktur, die bestimmt, ob das zur&uuml;ckgegebene Handle von
+		Unterprozessen geerbt werden kann. Falls pSecurity 0 ist, kann das Handle nicht geerbt werden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das ge&ouml;ffnete Handle zu einer festgelegten Datei
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+$tagSECURITY_ATTRIBUTES, _WinAPI_CloseHandle, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_ReadFile, _WinAPI_SetEndOfFile, _WinAPI_SetFilePointer, _WinAPI_WriteFile
+
+###See Also###
+@@MsdnLink@@ CreateFile
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###User Defined Function###
+_Date_Time_DOSDateToStr
+
+###Description###
+Dekodiert ein DOS-Datum als String
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_DOSDateToStr ( $iDosDate )
+
+
+###Parameters###
+@@ParamTable@@
+$iDosDate
+	MS-DOS Datum, gepackt wie folgt:
+	Bits 0- 4 Tag des Monats (1–31)
+	Bits 5- 8 Monat (1 = Januar, 2 = Februar, und so weiter)
+	Bits 9-15 Jahr Offset ab 1980 (addiere 1980, um das aktuelle Jahr zu bekommen)
+@@End@@
+
+###ReturnValue###
+Gibt einen Datums-String im Format mm/dd/yyyy zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Date_Time_DOSTimeToStr, _Date_Time_DOSDateTimeToStr
+
+
+###Example###
+@@IncludeExample@@

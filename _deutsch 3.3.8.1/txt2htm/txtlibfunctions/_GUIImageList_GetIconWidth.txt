@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUIImageList_GetIconWidth
+
+###Description###
+Ermittelt die Breite der Bilder in einer Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetIconWidth($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Breite jedes Bildes in Pixel
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_GetIconHeight, _GUIImageList_GetIconSize, _GUIImageList_GetIconSizeEx
+
+###Example###
+@@IncludeExample@@

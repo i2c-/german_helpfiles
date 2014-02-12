@@ -1,0 +1,37 @@
+###Function###
+ControlGetHandle
+
+###Description###
+Erfragt den internen "handle" (Prozessidentifizierungscode) eines Controls.
+
+###Syntax###
+ControlGetHandle ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den "handle (HWND)" Wert zur&uuml;ck.
+Fehler:	Gibt "" (leeren String) zur&uuml;ck und setzt @error=1, wenn kein Fenster mit diesen Kriterien gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt einen "handle (HWND)" Wert zur&uuml;ck.
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

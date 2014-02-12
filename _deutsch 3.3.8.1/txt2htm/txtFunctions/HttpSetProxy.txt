@@ -1,0 +1,48 @@
+###Function###
+HttpSetProxy
+
+###Description###
+Setzt den Internet Proxy f&uuml;r den Gebrauch des http-Zugriffs.
+
+###Syntax###
+HttpSetProxy ( mode [, "proxy:port" [, "username" [, "password"]]] )
+
+
+###Parameters###
+@@ParamTable@@
+mode
+	Der zu nutzende Proxy-Mode:
+	0 = (Standard) Nutzt die momentanen Internet Explorer Einstellungen f&uuml;r den Proxy.
+	1 = Nutzt keinen Proxy (direkter Zugriff)
+	2 = Nutzt den angegebenen Proxy
+proxy:port
+	[optional] Die Adresse und der Port des zu nutzenden Proxys.  Siehe Bemerkungen unten.
+username
+	[optional] Falls erforderlich, der Username f&uuml;r den Proxy
+password
+	[optional] Falls erforderlich, das Passwort f&uuml;r den Proxy
+@@End@@
+
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+F&uuml;r diese  Funktion muss Internet Explorer 3 oder h&ouml;her installiert sein.
+
+Nur CERN Proxy-Server werden unterst&uuml;tzt.
+
+Proxy-Server bestehen normalerweise aus einer Web-Adresse und einer Portnummer.  Die meisten Internet Service Provider nutzen die Portnummer 8080.  Lautet ein Proxy "www.proxy.com" mit der  Portnummer "8080", muss man folgenden Befehl benutzen, um den Proxy zu setzen:
+HttpSetProxy(2, "www.proxy.com:8080")
+
+Die meisten Proxy-Server ben&ouml;tigen keinen Benutzernamen und kein Passwort.
+
+Wenn "mode" 0 verwendet wird, so muss ein Benutzername und Passwort festgelegt werden. Diese werden dann mit dem im Internet Explorer verwendeten Proxy verwendet.
+
+###Related###
+InetGet, InetGetSize, InetRead, FtpSetProxy
+
+
+###Example###
+@@IncludeExample@@

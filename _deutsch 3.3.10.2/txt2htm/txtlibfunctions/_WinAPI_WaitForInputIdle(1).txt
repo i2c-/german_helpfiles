@@ -1,0 +1,43 @@
+###User Defined Function###
+_WinAPI_WaitForInputIdle
+
+###Description###
+Wartet, w&auml;hrend ein Prozess auf Benutzereingaben ohne bevorstehende Eingabe oder Zeitlimit wartet
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_WaitForInputIdle ( $hProcess [, $iTimeout = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hProcess
+	Ein Handle zu dem Prozess. Ist dieser Prozess eine Konsolenanwendung oder hat er keine Nachrichten-
+	Warteschlange, kehrt diese Funktion unverz&uuml;glich zur&uuml;ck.
+$iTimeOut
+	[optional] Der Zeitlimit-Intervall, in Millisekunden. Falls auf -1 gesetzt, kehrt die Funktion nicht zur&uuml;ck w&auml;hrend
+	der Prozess im Leerlauf ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Diese Funktion veranlasst einen Thread die Ausf&uuml;hrung solange zu unterbrechen bis der angegebene Prozess seine
+Initialisierung beendet hat und auf eine Benutzereingabe ohne anstehende Eingabe wartet. Das kann n&uuml;tzlich sein
+um einen Parent-Prozess und einen neu erzeugten Child-Prozess zu synchronisieren. Wenn ein Parent-Prozess einen
+Chld-Prozess erzeugt, kehrt die CreateProcess Funktion zur&uuml;ck, ohne auf die Beendigung der Initialisierung des
+Child-Prozesses zu warten. Bevor der Parent-Prozess versucht mit dem Child-Prozess zu kommunizieren, kann er
+diese Funktion benutzen, um zu ermitteln, ob die Initialisierung vollst&auml;ndig abgeschlossen ist. Diese Funktion
+kann zu jeder Zeit benutzt werden, nicht nur w&auml;hrend dem Start der Anwendung.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ WaitForInputIdle

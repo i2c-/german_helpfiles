@@ -1,0 +1,50 @@
+###User Defined Function###
+_IELinkClickByText
+
+###Description###
+Simuliert einen Mausklick auf einen Link. Er wird anhand eines angegebenen Textes identifiziert, der in seinem Namen vorkommen muss.
+
+###Syntax###
+#include <IE.au3> 
+_IELinkClickByText(ByRef $o_object, $s_linkText [, $i_index = 0 [, $f_wait = 1]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer.Application, eines Window- oder Frameobjekts
+$s_linkText
+	Auf der Webseite angezeigter Text, der den anzuklickenden Link repr&auml;sentiert
+$i_index
+	[optional] Gibt den bei 0 beginnenden Index des anzuklickenden Texts an, wenn der Text des Links mehr als einmal vorkommt.
+$f_wait
+	[optional] Gibt an, ob gewartet werden soll bis die Seite geladen wird.
+	0 = Nicht warten. 
+	1 = (Standard) Warten, bis die Seite komplett geladen ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Ladezeit &uuml;berschritten
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung abgebrochen
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Nicht alle Elemente, die Links zu sein scheinen, sind tats&auml;chlich welche. Es ist g&auml;ngige Praxis anderen DOM-Elementen onClick-JavaScript-Events zuzuweisen, die das Verhalten von Links simulieren. Um solche DOM-Elemente zu aktivieren, sollte die Funktion _IEAction mit "click" benutzt werden.
+
+
+###Related###
+_IELinkClickByIndex, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,48 @@
+###Function###
+FileCopy
+
+###Description###
+Kopiert eine oder mehrere Dateien.
+
+###Syntax###
+FileCopy ( "source", "dest" [, flag = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+source
+	Das Quellverzeichnis der zu kopierenden Datei(en). (* und ? Wildcards werden akzeptiert - siehe Bemerkungen)
+dest
+	Das Zielverzeichnis der zu kopierenden Datei(en).
+flag
+	[optional] Dieses Flag bestimmt, ob Dateien &uuml;berschrieben werden, falls sie schon bestehen.
+	Kann eine Kombination der folgenden sein:
+		$FC_NOOVERWRITE (0) = (Standard) bestehende Dateien nicht &uuml;berschreiben
+		$FC_OVERWRITE (1) = &Uuml;berschreiben bestehender Dateien
+		$FC_CREATEPATH (8) = Erstellt die Zielverzeichnisstruktur, falls diese nicht besteht (siehe Anmerkungen).
+	Die Konstanten sind in der Datei "FileConstants.au3" definiert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Siehe <a href="FileFindFirstFile.htm">FileFindFirstFile()</a> f&uuml;r Erl&auml;uterungen zu Wildcards.
+
+Das Zielverzeichnis muss bestehen, au&szlig;er der Flagwert $FC_CREATEPATH (8) wird genutzt.
+Beispiel: Der kombinierte Flagwert $FC_OVERWRITE (1) + $FC_CREATEPATH (8) &uuml;berschreibt das Zielverzeichnis und pr&uuml;ft vorher, ob die Zielverzeichnisstruktur besteht und erstellt sie gegebenenfalls automatisch.
+
+
+Einige Dateiattribute k&ouml;nnen ein &Uuml;berschreiben unm&ouml;glich machen, in diesem Fall siehe <a href="FileSetAttrib.htm">FileSetAttrib()</a> um die Attribute der Datei zu &auml;ndern.
+
+
+###Related###
+FileMove, FileDelete, DirCopy, DirCreate
+
+
+###Example###
+@@IncludeExample@@

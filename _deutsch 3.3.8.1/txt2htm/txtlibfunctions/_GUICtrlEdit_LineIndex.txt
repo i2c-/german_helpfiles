@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlEdit_LineIndex
+
+###Description###
+Ermittelt den Index des ersten Zeichens in der festgelegten Zeile
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_LineIndex($hWnd [, $iIndex = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	[optional] legt die 0-basierende Zeilennummer fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Zeichenindex der Zeile, festgelegt durch den Parameter $iIndex
+Fehler:	–1 falls die festgelegte Zeilennummer gr&ouml;&szlig;er als die Anzahl von Zeilen im Edit-Control ist
+@@End@@
+
+###Remarks###
+$iIndex = –1 legt fest, dass die aktuelle Zeilennummer verwendet wird (die Zeile in der der Textcursor steht)
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

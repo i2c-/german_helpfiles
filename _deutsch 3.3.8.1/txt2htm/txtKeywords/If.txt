@@ -1,0 +1,28 @@
+###Keyword###
+If...Then
+
+###Description###
+F&uuml;hrt eine einzige Anweisung konditionell aus.
+
+###Syntax###
+<b>If</b> &lt;expression&gt; <b>Then</b> <i>statement</i>
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Wenn der Ausdruck wahr ist, wird die Anweisung ausgef&uuml;hrt.
+@@End@@
+
+
+###Remarks###
+Diese Version der If-Anweisung wird verwendet, um eine einzelne Anweisung ohne ein zus&auml;tzliches EndIf auszuf&uuml;hren.
+Die <i>expression</i> kann sowohl die bool'schen Operatoren AND, OR und NOT als auch die logischen Operatoren &lt;, &lt;=, &gt;, &gt;=, =, == und &lt;&gt; enthalten, wenn n&ouml;tig mit Klammern gruppiert.
+
+
+###Related###
+<a href="IfElseEndIf.htm">If...Else...EndIf</a>, <a href="Select.htm">Select...Case...EndSelect</a>, <a href="Switch.htm">Switch...EndSwitch</a>
+
+
+###Example###
+@@IncludeExample@@

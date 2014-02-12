@@ -1,0 +1,48 @@
+###User Defined Function###
+_WinAPI_CombineRgn
+
+###Description###
+Verkn&uuml;pft zwei Bereiche und speichert das Ergebnis in einem weiteren (dritten) Bereich
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CombineRgn($hRgnDest, $hRgnSrc1, $hRgnSrc2, $iCombineMode)
+
+###Parameters###
+@@ParamTable@@
+$hRgnDest
+	Handle des neuen Bereichs, dessen Gr&ouml;&szlig;e sich aus der Kombination der zwei anderen Bereiche ergibt. (Dieser Bereich muss schon vor dem Aufruf von CombineRgn existieren.)
+$hRgnSrc1
+	Handle zum ersten Bereich, der verkn&uuml;pft werden soll.
+$hRgnSrc2
+	Handle zum zweiten Bereich, der verkn&uuml;pft werden soll.
+$iCombineMode
+	Legt fest, wie die beiden Bereiche verkn&uuml;pft werden sollen. Dieser Parameter kann einen der folgenden Werte haben.
+		$RGN_AND - Erzeugt die Schnittmenge der beiden verkn&uuml;pften Bereiche.
+		$RGN_COPY - Erzeugt eine Kopie des (ersten) Bereichs, der durch das Handle hrgnSrc1 festgelegt wird.
+		$RGN_DIFF - Erzeugt einen Bereich, der die Teile des ersten Bereichs (Handle hrgnSrc1) enth&auml;lt, die nicht Teil des zweiten Bereichs (Handle hrgnSrc2) sind.
+		$RGN_OR - Erzeugt die Vereingungsmenge beider Bereiche.
+		$RGN_XOR - Erzeugt die Vereingungsmenge beider Bereiche ohne den (&uuml;berlappenden) Teil, der in beiden Bereichen liegt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Legt den Typ des verkn&uuml;pften Bereichs fest. Das Ergebnis kann einen der folgenden Werte annehmen.
+	$NULLREGION - Der resultierende Bereich ist leer.
+	$SIMPLEREGION - Der resultierende Bereich ist ein einfaches Rechteck.
+	$COMPLEXREGION - Der resultierende Bereich ist kein einfaches Rechteck.
+Fehler:	0 - Es wurde kein verkn&uuml;pfter Bereich erzeugt.
+@@End@@
+
+###Remarks###
+Die beiden Bereiche werden entsprechend dem gew&auml;hlten Verkn&uuml;pfungsmodus kombiniert.
+Die Bereiche m&uuml;ssen nicht verschieden sein. Zum Beispiel kann das Handle f&uuml;r die Parameter hrgnSrc1 und hrgnDest identisch sein.
+
+###Related###
+_WinAPI_CreateRectRgn, _WinAPI_CreateRoundRectRgn, _WinAPI_SetWindowRgn, _WinAPI_GetWindowRgn
+
+###See Also###
+@@MsdnLink@@ CombineRgn
+
+###Example###
+@@IncludeExample@@

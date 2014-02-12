@@ -1,0 +1,37 @@
+###User Defined Function###
+_Security__GetTokenInformation
+
+###Description###
+Gibt den angegebenen Typ an Informationen &uuml;ber ein Access Token zur&uuml;ck
+
+###Syntax###
+#include <Security.au3>
+_Security__GetTokenInformation($hToken, $iClass)
+
+###Parameters###
+@@ParamTable@@
+$hToken
+	Handle zu einem Access Token, dessen Informationen zur&uuml;ckgegeben werden sollen. Wenn $iClass $sTokenSource
+		angibt, muss das Handle $TOKEN_QUERY_SOURCE Zugriff haben. F&uuml;r alle anderen $iClass Werte muss das Handle
+		$TOKEN_QUERY Zugriff haben.
+$iClass
+	Gibt einen Wert an, um den Informationstyp zu identifizieren, den die Funktion zur&uuml;ckgeben soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Eine Byte Struktur mit den angeforderten Informationen
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__OpenProcessToken, _Security__OpenThreadToken, _Security__OpenThreadTokenEx
+
+###See Also###
+@@MsdnLink@@ GetTokenInformation
+
+###Example###
+@@IncludeExample@@

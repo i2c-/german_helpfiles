@@ -1,0 +1,101 @@
+###Structure Name###
+$tagREBARBANDINFO
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Element in einem Rebar-Control
+
+###Syntax###
+Global Const $tagREBARBANDINFO = "uint cbSize;uint fMask;uint fStyle;dword clrFore;dword clrBack;ptr lpText;uint cch;" & _
+		"int iImage;hwnd hwndChild;uint cxMinChild;uint cyMinChild;uint cx;handle hbmBack;uint wID;uint cyChild;uint cyMaxChild;" & _
+		"uint cyIntegral;uint cxIdeal;lparam lParam;uint cxHeader;" & $tagRECT & ";uint uChevronState"
+
+###Fields###
+@@ParamTable@@
+cbSize
+	Gr&ouml;&szlig;e dieser Struktur, in Bytes. Die Anwendung muss dieses Mitglied ausf&uuml;llen, bevor irgendwelche Nachrichten gesendet werden, welche die Adresse dieser Struktur als Parameter verwenden.
+fMask
+	Flags, die angeben welche Mitglieder dieser Struktur g&uuml;ltig sind und ausgef&uuml;llt werden m&uuml;ssen.
+	Dieser Wert kann eine Kombination aus folgendendem sein:
+		$RBBIM_BACKGROUND - Das <b>hbmBack</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_CHILD - Das <b>hwndChild</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_CHILDSIZE - Die <b>cxMinChild</b>, <b>cyMinChild</b>, <b>cyChild</b>, <b>cyMaxChild</b>, und <b>cyIntegral</b> Mitglieder sind g&uuml;ltig oder m&uuml;ssen gesetzt werden.
+		$RBBIM_COLORS - Die <b>clrFore</b> und <b>clrBack</b> Mitglieder sind g&uuml;ltig oder m&uuml;ssen gesetzt werden.
+		$RBBIM_HEADERSIZE - Version 4.71. Das <b>cxHeader</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_IDEALSIZE - Version 4.71. Das <b>cxIdeal</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_ID - Das <b>wID</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_IMAGE - Das <b>iImage</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_LPARAM - Version 4.71. Das <b>lParam</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_SIZE - Das <b>cx</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_STYLE - Das <b>fStyle</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_TEXT - Das <b>lpText</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_CHEVRONLOCATION - Das <b>rcChevronLocation</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+		$RBBIM_CHEVRONSTATE - Das <b>uChevronState</b> Mitglied ist g&uuml;ltig oder muss gesetzt werden.
+fStyle
+	Flags, die den Gruppenstil festlegen.
+	Dieser Wert kann eine Kombination aus folgendendem sein:
+		$RBBS_BREAK - Die Gruppe ist in einer neuen Zeile.
+		$RBBS_CHILDEDGE - Die Gruppe hat, oben und unten des Child-Fensters, einen Rand.
+		$RBBS_FIXEDBMP - Das Hintergrund-Bitmap bleibt unbeweglich, wenn die Gruppe seine Gr&ouml;&szlig;e &auml;ndert.
+		$RBBS_FIXEDSIZE - Die Gr&ouml;&szlig;e Gruppe kann nicht ge&auml;ndert werden. Mit diesem Stil wird der "Griff" zur Gr&ouml;&szlig;enver&auml;nderung nicht angezeigt.
+		$RBBS_GRIPPERALWAYS - Version 4.71. Die Gruppe hat immer einen "Griff" zur Gr&ouml;&szlig;enver&auml;nderung, auch wenn es die einzige Gruppe in der Rebar ist.
+		$RBBS_HIDDEN - Die Gruppe ist nicht sichtbar.
+		$RBBS_NOGRIPPER - Version 4.71. Die Gruppe hat niemals hat immer einen "Griff" zur Gr&ouml;&szlig;enver&auml;nderung, auch wenn mehr als eine Gruppe in der Rebar sind.
+		$RBBS_USECHEVRON - Version 5.80. Zeigt einen Button mit zwei senkrechten Pfeilen an (Ausklapp-Button), wenn die Gruppe kleiner als <b>cxIdeal</b> ist.
+		$RBBS_VARIABLEHEIGHT - Version 4.71. Die Gr&ouml;&szlig;e Gruppe kann von dem Rebar-Control angepasst werden; <b>cyIntegral</b> und <b>cyMaxChild</b> bestimmen wie die Rebar die Gr&ouml;&szlig;e anpassen.
+		$RBBS_NOVERT - Nicht anzeigen, wenn vertikal.
+		$RBBS_USECHEVRON - Ausklapp-Button anzeigen.
+		$RBBS_HIDETITLE - Gruppentitel verstecken.
+		$RBBS_TOPALIGN - Gruppe in der obersten Reihe behalten.
+clrFore
+	Vordergrundfarben der Gruppe.
+clrBack
+	Hintergrundfarben der Gruppe.
+		Falls <b>hbmBack</b> eine Bitmap als Hintergrund festlegt, werden diese Mitglieder ignoriert.
+		Standardm&auml;&szlig;ig benutzt die Gruppe die Hintergrundfarbe des Rebar-Controls die mit der $RB_SETBKCOLOR Nachricht gesetzt wurde.
+		Falls die Hintergrundfarbe hier festgelegt wird, wird diese als Hintergrundfarbe benutzt.
+lpText
+	Zeiger auf einen Puffer, der den Anzeigetext f&uuml;r die Gruppe enth&auml;lt.
+		Wenn Gruppeninformationen von dem Control erfragt werden und $RBBIM_TEXT ist in <b>fMask</b> festgelegt,
+		muss dieses Mitglied mit der Adresse des Puffers initialisiert werden, welcher den Text empf&auml;ngt.
+cch
+	Gr&ouml;&szlig;e des Puffers in <b>lpText</b>, in Bytes. Falls keine Informationen von dem Control abgefragt werden, wird dieses Mitglied ignoriert.
+iImage
+	0-basierter Index von irgendeinem Bild, das in der Gruppe angezeigt werden soll. Die Imagelist wird mit Hilfe der $RB_SETBARINFO Nachricht gesetzt.
+hwndChild
+	Handle zu dem Child-Fenster, das in der Gruppe enthalten ist, sofern erw&uuml;nscht.
+cxMinChild
+	Minimale Breite des Child-Fensters, in Pixel. Die Gr&ouml;&szlig;e der Gruppe kann nicht auf kleinere Werte als diesen ge&auml;ndert werden.
+cyMinChild
+	Minimale H&ouml;he des Child-Fensters, in Pixel. Die Gr&ouml;&szlig;e der Gruppe kann nicht auf kleinere Werte als diesen ge&auml;ndert werden.
+cx
+	L&auml;nge der Gruppe, in Pixel.
+hbmBack
+	Handle zu einer Bitmap, die als Hintergrund dieser Gruppe genutzt wird.
+wID
+	UINT Wert, den das Control nutzt, um diese Gruppe zu identifizieren, f&uuml;r benutzerdefinierte Zeichen-Nachrichten.
+cyChild
+	Version 4.71. Ursprungsh&ouml;he der Gruppe, in Pixel. Dieses Mitglied wird ignoriert, es sei denn der Stil $RBBS_VARIABLEHEIGHT ist festgelegt.
+cyMaxChild
+	Version 4.71. Maximale H&ouml;he des Bereichs in Pixel. Dieses Mitglied wird ignoriert, es sei denn der Stil $RBBS_VARIABLEHEIGHT ist festgelegt.
+cyIntegral
+	Version 4.71. Schrittwert, um welchen die Gruppe wachsen oder schrumpfen kann, in Pixel.
+		Falls die Gr&ouml;&szlig;e der Gruppe sich &auml;ndert, wird die Gr&ouml;&szlig;e schrittweise um diesen Wert ge&auml;ndert.
+		Dieses Mitglied wird ignoriert, es sei denn der Stil $RBBS_VARIABLEHEIGHT ist festgelegt.
+cxIdeal
+	Version 4.71. Ideale Breite der Gruppe, in Pixel.
+		Falls die Gruppe auf die ideale Breite maximiert wird (siehe $RB_MAXIMIZEBAND), versucht das Rebar-Control die Gruppe auf diese Breite zu setzen.
+lParam
+	Version 4.71. Anwendungsdefinierter Wert.
+cxHeader
+	Version 4.71. Gr&ouml;&szlig;e des Kopfes der Gruppe, in Pixel.
+		Der Kopf der Gruppe ist der Bereich zwischen dem Rand der Gruppe und dem Rand des Child-Fensters.
+		Dies ist der Bereich in dem der Text der Gruppe und Bilder angezeigt werden, sofern sie bestimmt worden sind.
+		Falls dieser Wert festgelegt ist, &uuml;berschreibt dieser die normalen Dimensionen des Kopfes, den das Control errechnet.
+$tagRECT
+	Version 6. Lage des Chevron.
+uChevronState
+	Version 6. Eine Kombination der Objektstatuskonstanten.
+@@End@@
+
+###Remarks###
+Keine.

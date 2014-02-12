@@ -1,0 +1,36 @@
+###Function###
+DllStructGetPtr
+###Description###
+Gibt den Zeiger auf die Struktur oder ein Element in der Struktur zur&uuml;ck.
+
+###Syntax###
+DllStructGetPtr ( Struct [,Element] )
+
+
+###Parameters###
+@@ParamTable@@
+Struct
+	Struktur, zur&uuml;ckgegeben von DllStructCreate.
+Element
+	[optional] Das Element der Struktur dessen Zeiger man braucht, beginnend bei 1 oder dem Elementnamen wie in DllStructCreate festgelegt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Zeiger auf die Struktur.
+Fehler:	0.
+@Error:	0 = Kein Fehler.
+	1 = Struct ist keine korrekte Struktur aus DllStructCreate zur&uuml;ckgegeben.
+	2 = Element ist ausserhalb des Index.
+@@End@@
+
+
+###Remarks###
+Verwendet in DllCall.
+
+###Related###
+DllCall, DllStructCreate
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_GetForegroundWindow
+
+###Description###
+Gibt das Handle des Fensters im Vordergrund zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetForegroundWindow (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle des Fensters im Vordergrund
+Fehler:	Das Vordergrundfenster kann in bestimmten F&auml;llen NULL sein, z.B. wenn ein Fenster die Aktivierung verliert.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetForegroundWindow
+
+
+###Example###
+@@IncludeExample@@

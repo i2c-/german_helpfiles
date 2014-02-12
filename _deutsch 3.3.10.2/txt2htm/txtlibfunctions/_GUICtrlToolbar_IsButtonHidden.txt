@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonHidden
+
+###Description###
+Pr&uuml;ft, ob der festgelegte Button versteckt ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonHidden ( $hWnd, $iCommandID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	der Button ist versteckt
+False:	der Button ist nicht versteckt
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

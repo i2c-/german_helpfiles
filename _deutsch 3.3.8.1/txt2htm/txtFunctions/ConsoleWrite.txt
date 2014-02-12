@@ -1,0 +1,35 @@
+###Function###
+ConsoleWrite
+
+###Description###
+Schreibt Daten in den STDOUT-Stream. Viele Texteditoren k&ouml;nnen diesen Stream lesen und viele andere Programme k&ouml;nnen diesen String verarbeiten.
+
+###Syntax###
+ConsoleWrite ( "data" )
+
+
+###Parameters###
+@@ParamTable@@
+data
+	Die Daten, die ausgegeben werden sollen. Dies kann entweder Text oder bin&auml;r sein.
+@@End@@
+
+###ReturnValue###
+Die Menge der zu schreibenden Daten. Falls bin&auml;r geschrieben wird, die Anzahl von geschriebenen Bytes. Falls Text geschrieben wird, die Anzahl von geschriebenen Zeichen.
+
+
+###Remarks###
+Der Zweck dieser Funktion ist das Schreiben in den STDOUT Stream. Viele gebr&auml;uchliche Texteditoren k&ouml;nnen diesen Stream lesen. Skripte, die als Konsolenprogramme kompiliert wurden, haben auch einen STDOUT Stream.
+
+<b>Diese Funktion kann nicht in ein DOS-Fenster schreiben, es sei denn, das Skript wurde als Konsolenprogramm kompiliert.</b>
+
+Die Zeichen werden nach ANSI konvertiert, bevor sie geschrieben werden.
+
+Die Bin&auml;rdaten werden geschrieben wie sie sind. Sie werden nicht in einen String gewandelt. Um den HEX-Wert der Bin&auml;rdaten zu schreiben, muss die String() Funktion benutzt werden, damit die Daten explizit in einen String geschrieben werden.
+
+###Related###
+ConsoleWriteError, ConsoleRead
+
+
+###Example###
+@@IncludeExample@@

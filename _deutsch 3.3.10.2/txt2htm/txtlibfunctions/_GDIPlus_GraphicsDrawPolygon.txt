@@ -1,0 +1,48 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawPolygon
+
+###Description###
+Zeichnet ein Polygon
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawPolygon ( $hGraphics, $aPoints [, $hPen = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$aPoints
+	Array welches die Eckpunkte des Polygons festlegt:
+		[0][0] - Anzahl von Eckpunkten
+		[1][0] - Eckpunkt 1 X-Position
+		[1][1] - Eckpunkt 1 Y-Position
+		[2][0] - Eckpunkt 2 X-Position
+		[2][1] - Eckpunkt 2 Y-Position
+		[n][0] - Eckpunkt n X-Position
+		[n][1] - Eckpunkt n Y-Position
+$hPen
+	[optional] Handle zu einem Zeichenstift-Objekt, welcher verwendet wird um das Polygon zu zeichnen. Falls 0 wird ein vollfarbig schwarz gef&uuml;llter Zeichenstift mit der Breite von 1 verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error auf nicht Null, @extended enth&auml;lt m&ouml;glicherweise GPSTATUS Fehlercode ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Falls der erste und letzte Punkt nicht identisch sind, wird eine Linie zwischen diese beiden Punkte gezeichnet um das Polygon zu schlie&szlig;en
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GdipDrawPolygon
+
+
+###Example###
+@@IncludeExample@@

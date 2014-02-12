@@ -1,0 +1,30 @@
+###User Defined Function###
+_EventLog__Close
+
+###Description###
+Schlie&szlig;t ein lesendes Handle zum Event Log
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Close($hEventLog)
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle zum Event Log
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_EventLog__Open, _EventLog__Notify, _EventLog__OpenBackup, _EventLog__Read, _EventLog__Report
+
+###Example###
+@@IncludeExample@@

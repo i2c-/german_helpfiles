@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_LineTo
+
+###Description###
+Zeichnet eine Linie von der aktuellen Position bis zum angegebenen Punkt, aber ohne den Punkt selbst.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LineTo($hDC, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle zu dem Ger&auml;tekontext
+$iX
+	X-Koordinate der neuen Position.
+$iY
+	Y-Koordinate der neuen Position.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Die Linie wird durch den aktuellen Zeichenstift gezeichnet. Falls der Stift ein geometrischer Stift ist, wird das aktuelle F&uuml;llmuster verwendet.
+Falls LineTo erfolgreich war, wird die aktuelle Position an den festgelegten Endpunkt gelegt.
+
+###Related###
+_WinAPI_MoveTo, _WinAPI_DrawLine, _WinAPI_SelectObject, _WinAPI_CreatePen
+
+###See Also###
+@@MsdnLink@@ LineTo
+
+###Example###
+@@IncludeExample@@

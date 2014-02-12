@@ -1,0 +1,23 @@
+###User Defined Function###
+_WinAPI_TwipsPerPixelX
+
+###Description###
+Gibt die Breite eines Pixels in Twips zur&uuml;ck.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_TwipsPerPixelX (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt die Breite eines Pixels in Twips zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###

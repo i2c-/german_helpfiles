@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListView_GetTextBkColor
+
+###Description###
+Ermittelt die Texthintergrundfarbe des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetTextBkColor ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Texthintergrundfarbe zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetTextBkColor
+
+
+###Example###
+@@IncludeExample@@

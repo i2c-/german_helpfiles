@@ -1,0 +1,45 @@
+###Function###
+DllStructGetData
+
+###Description###
+Gibt die Daten eines Elements der Struktur zur&uuml;ck.
+
+###Syntax###
+DllStructGetData ( Struct, Element [, index] )
+
+
+###Parameters###
+@@ParamTable@@
+Struct
+	Die Struktur zur&uuml;ckgegeben aus DllStructCreate.
+Element
+	Das Element auf das man zugreifen m&ouml;chte, beginnend bei 1 oder dem Elementnamen wie in DllStructCreate festgelegt.
+index
+	[optional] Befinden sich die Elemente in einem Array, so legt dies den 1-basierenden Index des zu erneuernenden Arrays fest. Falls dies nicht angegeben wird oder das Schl&uuml;sselwort Default verwendet wird, so wird das komplette Array erneuert (n&uuml;tzlich f&uuml;r String die schnell erneuert werden sollten). <b>Nicht f&uuml;r nicht-Array Elemente.</b>
+@@End@@
+*char[n], byte[n] und ubyte[n] geben alle Daten der Elemente zur&uuml;ck wenn der Index ausgelassen wird.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Daten in dem Element der Struktur.
+Fehler:	0.
+@Error:	0 = Kein Fehler.
+	1 = Struct ist keine korrekte Struktur aus DllStructCreate zur&uuml;ckgegeben.
+	2 = Element-Wert nicht im zul&auml;ssigen Bereich.
+	3 = Index w&uuml;rde ausserhalb der Struktur sein.
+	4 = Element Datentyp unbekannt
+	5 = Index <= 0.
+@@End@@
+
+
+###Remarks###
+Wenn das Element char[n] ist und der Index ausgelassen wird, ist der zur&uuml;ckgegebene Datentyp ein Zeichenstring,
+Wenn das Element byte[n] ist oder ubyte[n] und der Index wird ausgelassen, ist der zur&uuml;ckgegebene Datentyp bin&auml;r ,
+andernfalls ist der zur&uuml;ckgegebene Datentyp immer eine Zahl.
+
+###Related###
+DllStructCreate, DllStructSetData
+
+
+###Example###
+@@IncludeExample@@

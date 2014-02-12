@@ -1,0 +1,40 @@
+###User Defined Function###
+_ArrayDelete
+
+###Description###
+Entfernt das spezifizierte Element aus dem Array
+
+###Syntax###
+#include <Array.au3>
+_ArrayDelete ( ByRef $avArray, $iElement )
+
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Das Array welches ver&auml;ndert werden soll.
+$iElement
+	Der Index des zu entfernenden Elementes.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die neue Gr&ouml;&szlig;e des Arrays (siehe Bemerkungen) 
+Fehler:	-1 und setzt das @error-Flag ungleich 0
+@error:	1 - $avArray ist kein Arrays
+	3 - $avArray hat zuviele Dimensionen. Es werden nur 2-dimensionale Arrays unterst&uuml;tzt
+	(2 - Missbilligt Fehlercodes)
+@@End@@
+
+
+###Remarks###
+Wenn das &uuml;bergebene Array nur ein Element oder nur eine Spalte hat, gibt die Funktion einen leeren String ("") zur&uuml;ck nachdem <a href="_ArrayDelete.htm">_ArrayDelete()</a> angewendet wurde.
+Falls $iElement gr&ouml;&szlig;er ist als die Arraygr&ouml;&szlig;e, dann wird das letzte Element gel&ouml;scht.
+
+
+###Related###
+_ArrayAdd, _ArrayInsert, _ArrayPop, _ArrayPush
+
+
+###Example###
+@@IncludeExample@@

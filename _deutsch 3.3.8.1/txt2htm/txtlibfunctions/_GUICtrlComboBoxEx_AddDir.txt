@@ -1,0 +1,47 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_AddDir
+
+###Description###
+F&uuml;gt den Namen von Verzeichnissen und Dateien hinzu
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_AddDir($hWnd, $sFile [, $iAttributes = 0 [, $fBrackets = True]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sFile
+	Legt einen absoluten Pfad, relativen Pfad oder Dateinamen fest
+$iAttributes
+	[optional] Legt die Attribute der hinzuzuf&uuml;genden Dateien oder Verzeichnisse fest:
+		$DDL_READWRITE - schlie&szlig;t lesen-schreiben Dateien ohne zus&auml;tzliche Attribute ein
+		$DDL_READONLY - schlie&szlig;t schreibgesch&uuml;tzte Dateien ein
+		$DDL_HIDDEN - schlie&szlig;t versteckte Dateien ein
+		$DDL_SYSTEM - schlie&szlig;t Systemdateien ein
+		$DDL_DIRECTORY - schlie&szlig;t Unterverzeichnisse ein
+		$DDL_ARCHIVE - schlie&szlig;t Archivdateien ein
+		$DDL_DRIVES - alle gemappten Laufwerke werden der Liste hinzugef&uuml;gt
+		$DDL_EXCLUSIVE - schlie&szlig;t nur Dateien mit den festgelegten Attributen ein
+$fBrackets
+	[optional] Schlie&szlig;t Klammern ein/aus wenn $DDL_DRIVES  verwendet wird
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0-basierender Index des letzten hinzugef&uuml;gten Namens
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Wenn es nicht gen&uuml;gend Speicher f&uuml;r den neuen String gibt, ist der R&uuml;ckgabewert $CB_ERRSPACE.
+Ben&ouml;tigt Constants.au3 f&uuml;r vordefinierte Konstanten
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_InitStorage
+
+###Example###
+@@IncludeExample@@

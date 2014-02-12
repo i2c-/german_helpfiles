@@ -1,0 +1,47 @@
+###User Defined Function###
+_WordMacroRun
+
+###Description###
+Startet ein Visual Basic Makro
+
+###Syntax###
+#include <Word.au3> 
+_WordMacroRun($o_object, $s_MacroName [, $v_Arg1 [, $v_Arg<i>n</i> [, $v_Arg30]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt Variable eines Word.Application Objekt
+$s_MacroName
+	Der Name des Makros. Kann eine Kombination von eine Vorlage, Modul und Makro Name sein. (siehe Bemerkungen)
+$v_Arg1
+	[optional] Der erste Parameter um das Makro laufen zu lassen
+$v_Arg<i>n</i>
+	[optional] ...
+$v_Arg30
+	[optional] Der 30. Parameter um das Makro laufen zu lassen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_ComError = Com Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Falls man den Dokumentname festlegt, kann der Code nur Makros in Dokumenten laufen lassen, welche mit dem aktuellen Kontext verbunden sind - nicht jedes Makro in jedem Dokument.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

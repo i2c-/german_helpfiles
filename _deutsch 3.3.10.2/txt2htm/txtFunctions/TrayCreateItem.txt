@@ -1,0 +1,46 @@
+###Function###
+TrayCreateItem
+
+###Description###
+Erstellt ein Menueintrags-Element f&uuml;r den Tray.
+
+###Syntax###
+TrayCreateItem ( "text" [, menuID = -1 [, menuentry = -1 [, menuradioitem = 0]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Der Text des Elements.
+menuID
+	[optional] Erm&ouml;glicht, ein Untermen&uuml; im angegebenen Men&uuml; zu erstellen. Wenn der Wert -1 entspricht, wird das Element "hinter" dem letzten erstellten Eintrag hinzugef&uuml;gt (Standardeinstellung).
+menuentry
+	[optional] Erm&ouml;glicht, die zu erstellende Eintragsnummer anzugeben. Die Eintr&auml;ge werden bei 0 beginnend nummeriert. Wenn der Wert auf -1 gesetzt wird, wird das Element "hinter" dem letzten erstellten Eintrag hinzugef&uuml;gt (Standardeinstellung).
+menuradioitem
+	[optional] 0 (Standard) = Erstellt einen normalen Men&uuml;eintrag, 1 = Erstellt einen Radiobuttonmen&uuml;eintrag
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Kennung (Control-ID) des neuen Traymen&uuml;eintrags.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Wenn der 'text'-Parameter ein leerer String ("") ist, wird eine Trennlinie erzeugt.
+
+Standardm&auml;&szlig;ig werden normale, ausgew&auml;hlte Menueintr&auml;ge (keine Radiomen&uuml;eintr&auml;ge) automatisch demarkiert (der Haken entfernt), wenn man darauf klickt!
+Um dieses Verhalten abzustellen, verwendet man den Wert '2' in <a href="../functions/AutoItSetOption.htm#TrayMenuMode">TrayMenuMode</a>.
+
+Radiomen&uuml;eintr&auml;ge werden automatisch zusammen gruppiert und diese Gruppen sind durch eine Trennlinie oder einen normalen Men&uuml;eintrag, der kein Radiomen&uuml;eintrag ist, getrennt.
+Standardm&auml;&szlig;ig wird ein geklicktes Radiomen&uuml;element automatisch markiert und alle anderen Radioeintr&auml;ge in der gleichen Gruppe demarkiert!
+Um dieses Verhalten abzustellen, verwendet man den Wert '8' in <a href="../functions/AutoItSetOption.htm#TrayMenuMode">TrayMenuMode</a>.
+
+
+###Related###
+TrayItemSetState, TrayItemSetText, TrayGetMsg, TrayItemDelete, TrayItemSetOnEvent
+
+
+###Example###
+@@IncludeExample@@

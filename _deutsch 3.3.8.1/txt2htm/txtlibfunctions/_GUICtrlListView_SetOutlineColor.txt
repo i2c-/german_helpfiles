@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_SetOutlineColor
+
+###Description###
+Setzt die Farbe des Rands
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetOutlineColor($hWnd, $iColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iColor
+	die zu setzende Farbe des Rands
+@@End@@
+
+###ReturnValue###
+Gibt die zuvor gew&auml;hlte Farbe zur&uuml;ck
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP.
+
+Das Control muss den erweiterten Windows Stil $LVS_EX_BORDERSELECT aufweisen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetOutlineColor
+
+###Example###
+@@IncludeExample@@

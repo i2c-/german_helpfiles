@@ -1,0 +1,48 @@
+###User Defined Function###
+_WinAPI_CreatePen
+
+###Description###
+Erstellt einen logischen Stift, der den angegebenen Stil, Breite und Farbe hat.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreatePen($iPenStyle, $iWidth, $nColor)
+
+###Parameters###
+@@ParamTable@@
+$iPenStyle
+	Gibt den Stifttyp an. Es kann einer der folgenden Werte verwendet werden.
+		PS_SOLID - Der Stift ist ununterbrochen.
+		PS_DASH - Der Stift ist gestrichelt. Dieser Stil ist nur g&uuml;ltig, wenn die Stiftbreite eine Ger&auml;teeinheit oder weniger betr&auml;gt.
+		PS_DOT - Der Stift ist gepunktet. Dieser Stil ist nur g&uuml;ltig, wenn die Stiftbreite eine Ger&auml;teeinheit oder weniger betr&auml;gt.
+		PS_DASHDOT - Der Stift ist abwechselnd gepunktet und gestrichelt. Dieser Stil ist nur g&uuml;ltig, wenn die Stiftbreite eine Ger&auml;teeinheit oder weniger betr&auml;gt.
+		PS_DASHDOTDOT - Der Stift wechselt zwischen einem Strich und zwei Punkten. Dieser Stil ist nur g&uuml;ltig, wenn die Stiftbreite eine Ger&auml;teeinheit oder weniger betr&auml;gt.
+		PS_NULL - Der Stift ist unsichtbar.
+		PS_INSIDEFRAME - Der Stift ist ununterbrochen. Wenn der Stift in irgend einer GDI-Zeichenfunktion verwendet wird, die ein Begrenzungsrechteck annimmt, werden die Ausma&szlig;e der Figur geschrumpft, so dass sie vollst&auml;ndig in das Begrenzungsrechteck passt, wobei die Breite des Zeichenstifts beachtet wird. Das gilt nur f&uuml;r geometrische Stifte.
+$iWidth
+	Gibt die Breite des Stifts in logischen Einheiten an.
+$nColor
+	Gibt die Farbe des Stifts an (BGR, umgekehrt zum "normalen" RGB)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	HPEN-Wert, der einen logischen Stift identifiziert
+Fehler:	0
+@@End@@
+
+###Remarks###
+Der Stift kann anschlie&szlig;end in einem Ger&auml;tekontext gew&auml;hlt und dazu benutzt werden, Linien und Kurven zu zeichnen.
+Nachdem eine Anwendung einen logischen Stift erstellt hat, kann sie ihn durch Aufrufen von SelectObject in einen Ger&auml;tekontext einbinden. Nachdem ein Stift in einen Ger&auml;tekontext eingebunden ist, kann er zum Zeichnen von Linien und Kurven verwendet werden.
+Falls der Wert f&uuml;r nWidth 0 (null) ist, wird eine Linie, die damit gezeichnet wird, immer einen Pixel breit (ungeachtet der aktuellen Transformation).
+Falls der Wert f&uuml;r nWidth gr&ouml;&szlig;er als 1 ist, muss der fnPenStyle-Parameter PS_NULL, PS_SOLID oder PS_INSIDEFRAME sein.
+Wenn der Stift nicht l&auml;nger ben&ouml;tigt wird, muss dieser mit der Funktion DeleteObject gel&ouml;scht werden.
+
+###Related###
+_WinAPI_MoveTo, _WinAPI_LineTo, _WinAPI_SelectObject, _WinAPI_DeleteObject, _WinAPI_DrawLine, _WinAPI_GetBkMode, _WinAPI_SetBkMode
+
+###See Also###
+@@MsdnLink@@ CreatePen
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_Undo
+
+###Description###
+Macht die letzte Edit-Control Operation in des Controls Undo-Queue r&uuml;ckg&auml;ngig
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_Undo($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True - R&uuml;ckg&auml;ngig-Operation war erfolgreich
+Fehler:	False - R&uuml;ckg&auml;ngig-Operation fehlgeschlagen, setzt m&ouml;glicherweise @error:
+	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+F&uuml;r ein einzeiliges Edit-Control ist der R&uuml;ckgabewert immer True
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_CanUndo, _GUICtrlRichEdit_GetNextUndo, _GUICtrlRichEdit_Redo, _GUICtrlRichEdit_GetNextRedo, _GUICtrlRichEdit_EmptyUndoBuffer, _GUICtrlRichEdit_SetUndoLimit
+
+###See Also###
+@@MsdnLink@@ EM_UNDO
+
+###Example###
+@@IncludeExample@@

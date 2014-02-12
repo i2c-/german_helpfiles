@@ -1,0 +1,38 @@
+###User Defined Function###
+_IEErrorNotify
+
+###Description###
+Legt fest, ob die IE.au3 Warnung und Fehler automatisch (auf der Konsole) ausgibt.
+
+###Syntax###
+#include <IE.au3> 
+_IEErrorNotify([$f_notify = -1])
+
+###Parameters###
+@@ParamTable@@
+$f_notify
+	[optional] Legt fest, ob die Benachrichtigung an oder aus ist
+	-1 = (Standard) liefert die aktuelle Einstellung zur&uuml;ck
+	True = Einschalten
+	False = Ausschalten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ist $f_notify = -1, dann wird die aktuelle Einstellung zur&uuml;ckgegeben, sonst 1
+Fehler:	Gibt 0 zur&uuml;ck
+@@End@@
+
+
+###Remarks###
+IE.au3 schreibt standardm&auml;&szlig;ig Informationen, die bei der Fehlersuche hilfreich sein k&ouml;nnen, Warnungen und Fehler in die Konsole. Diese Informationen k&ouml;nnen einfach angesehen werden, wenn man seine Skripte mit SciTe ausf&uuml;hrt.
+
+Diese Funktion erlaubt es, diese Einstellung an- oder auszuschalten.
+
+
+###Related###
+_IEErrorHandlerRegister
+
+
+###Example###
+@@IncludeExample@@

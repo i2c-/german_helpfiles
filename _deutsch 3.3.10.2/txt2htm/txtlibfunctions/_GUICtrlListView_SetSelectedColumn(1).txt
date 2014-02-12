@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_SetSelectedColumn
+
+###Description###
+Setzt den Index der markierten Spalte
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetSelectedColumn ( $hWnd, $iCol )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCol
+	Bestimmt den Spaltenindex
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Spalten haben einen 0-basierenden Index
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetSelectedColumn
+
+
+###Example###
+@@IncludeExample@@

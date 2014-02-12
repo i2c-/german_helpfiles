@@ -1,0 +1,82 @@
+###User Defined Function###
+_viSetAttribute
+
+###Description###
+Setzt VISA Attribute. Diese Funktion, welche durch _viSetTimeout aufgerufen wird, kann auch verwendet werden um die anderen VISA-spezifischen Attribute zu setzen. F&uuml;r mehr Information und eine Liste der VISA-Attribute, sowie deren entsprechender Werte, lesen Sie die VISA Dokumentation.
+
+###Syntax###
+#include <Visa.au3>
+_viSetAttribute($h_session, $i_attribute, $i_value)
+
+
+###Parameters###
+@@ParamTable@@
+$h_session
+	Ein VISA Descriptor (STRING) oder ein VISA Session-Handle (INTEGER).
+	F&uuml;r mehr Informationen, siehe die Bemerkungen zu _viExecCommand.
+$i_attribute
+	Der Index des Attributes welche ge&auml;ndert werden soll.
+	Die Attribute sind in der VISA Bibliothek definiert.
+	Diese AutoIt Bibliothek verwendet nur eine Konstante f&uuml;r das TIMEOUT Attribut ($VI_ATTR_TMO_VALUE) und f&uuml;r die Serial Interface Attribute und
+	Werte (siehe Bemerkungen). Aber man kann jeden anderen g&uuml;ltigen Index (als ein Integer) &uuml;bergeben falls man will.
+$i_value
+	Der Wert des Attributes. Es muss ein Integer sein und die m&ouml;glichen Werte sind abh&auml;ngig von den Attributtypen und in der VISA Dokumentation definiert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 0 zur&uuml;ck
+Fehler:	Gibt -1 zur&uuml;ck, falls die VISA-DLL nicht ge&ouml;ffnet werden konnte oder ein nicht-null Wert den VISA Fehlercode darstellt (siehe VISA Programmierhandbuch).
+@@End@@
+Diese Funktion setzt @error im Falle eines Fehlers immer auf 1.
+
+
+###Remarks###
+Es folgt eine List mit den aktuell vordefinierten Attributen und Werte. Jedoch kann jedes(r) andere g&uuml;ltige Attribute/Wert, durch das &Uuml;bergeben des entsprechenden Integerindexes (so wie in dem VISA Programmierhandbuch definiert) an diese Funktion, verwendet werden.
+
+* Attribute: $VI_ATTR_TMO_VALUE -> Setzt das Timeout
+* Werte:
+          Ein Timeout in Millisekunden oder
+          $VI_TMO_IMMEDIATE (oder 0) f&uuml;r "Sofort zur&uuml;ckkehren"
+          VI_TMO_INFINITE (oder "INF") f&uuml;r "Kein Timeout"
+        
+* Attribute: $VI_ATTR_ASRL_BAUD
+* Werte:
+          Jede g&uuml;ltige Baudrate (9600, 115200, etc)
+
+* Attribute: $VI_ATTR_ASRL_DATA_BITS
+* Werte: 
+          Von 5 zu 8
+
+* Attribute: $VI_ATTR_ASRL_PARITY
+* Werte:
+          $VI_ASRL_PAR_NONE
+          $VI_ASRL_PAR_ODD
+          $VI_ASRL_PAR_EVEN
+          $VI_ASRL_PAR_MARK
+          $VI_ASRL_PAR_SPACE
+
+* Attribute: $VI_ATTR_ASRL_STOP_BITS
+* Werte:
+          $VI_ASRL_STOP_ONE 
+          $VI_ASRL_STOP_ONE5
+          $VI_ASRL_STOP_TWO 
+          
+* Attribute: $VI_ATTR_ASRL_FLOW_CNTRL
+* Werte:
+          $VI_ASRL_FLOW_NONE
+          $VI_ASRL_FLOW_XON_XOFF
+          $VI_ASRL_FLOW_RTS_CTS
+          $VI_ASRL_FLOW_DTR_DSR
+
+Wie f&uuml;r alle VISA Funktionen m&uuml;ssen die VISA Bibliotheken (sind installiert, wenn die visa32.dll sich in dem Ordner {WINDOWS}\system32 befindet) und eine GPIB Karte (wie zum Beispiel eine National Instruments NI PCI-GPIB Karte oder eine Agilent 82350B PCI High-Performance GPIB Karte) installiert sein.
+
+* F&uuml;r eine detaillierte Beschreibung der meisten gemeinsamen VISA DESCRIPTORS ist in den Bemerkungen der Hilfe zu der _viExecCommand Funktion nachzusehen.
+
+
+###Related###
+_viSetTimeout, _viExecCommand, _viOpen, _viClose
+
+
+###Example###
+@@IncludeExample@@

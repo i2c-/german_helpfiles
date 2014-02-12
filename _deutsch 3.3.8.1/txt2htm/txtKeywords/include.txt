@@ -1,0 +1,66 @@
+###Keyword###
+#include
+
+###Description###
+Bindet eine Datei in das aktuelle Skript ein.
+
+###Syntax###
+<b>#include</b> "[path\]filename"
+<b>#include</b> <filename>
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname des Skriptes, das eingebunden werden soll. Der Pfad ist optional. <b>Er muss einen String sein - er darf keine Variable sein.</b>
+	Wenn <b>"..."</b> verwendet wird, wird der Dateiname als relativ zum aktuellen Skript aufgefasst.
+	Wenn <b><...></b> verwendet wird, wird der Dateiname als relativ zum Include-Verzeichnis aufgefasst (normalerweise C:\Programme\AutoIt3\Include). Das Include-Verzeichnis beinhaltet bereits viele vor-produzierte Funktionen, die eingebunden und dann verwendet werden k&ouml;nnen.
+@@End@@
+
+###Remarks###
+In einem AutoIt-Skript k&ouml;nnen andere Skripte mittels des #include-Kommandos eingebunden werden.
+
+Wenn man eine Datei mehrfach einbindet und damit eine Funktion mehrfach existieren w&uuml;rde, wird man folgenden Fehler erhalten: "Duplicate function". Wenn man eine Include-Datei schreibt, die das verursachen k&ouml;nnte, muss man sicherstellen, dass die erste Zeile <b>#include-once</b> beinhaltet, sodass die Datei nicht mehrfach eingebunden werden kann.
+
+Es gibt einen besonderen Registrywert, namens "Include" welche in "HKEY_CURRENT_USER\Software\AutoIt v3\AutoIt" erstellt wurde.  Es sollte ein REG_SZ (String) Wert sein.  Die Inhalte dieses Wertes sind durch ein Semikolon getrennte Verzeichnisse, welche zus&auml;tzlich zu den Standardordnern durchsucht werden sollten, wenn #include's im Skript angegeben wird.
+
+Der von AutoIt verwendete Suchordner ist unterschiedlich, je nachdem welche Form von #include verwendet wird.  Die untenstehenden Tabellen zeigen welche Ordner bei den beiden Formen durchsucht werden.
+
+Using #include <>
+@@ParamTable@@
+Standard library
+	Der Pfad des aktuell laufenden Interpreter mit dem Anhang "\Include" wird durchsucht.
+User-defined libraries
+	Der oben erw&auml;hnte Registrywert wird gelesen und jedes Verzeichnis wird in der Reihenfolge durchsucht in der sie erscheinen.
+Script directory
+	Das Verzeichnis des momentan ausgef&uuml;hrten Skripts.
+@@End@@
+
+Using #include "" (Dies ist die Umkehrung von #include <>).
+@@ParamTable@@
+Script directory
+	Das Verzeichnis des momentan ausgef&uuml;hrten Skripts.
+User-defined libraries
+	Der oben erw&auml;hnte Registrywert wird gelesen und jedes Verzeichnis wird in der Reihenfolge durchsucht in der sie erscheinen.
+Standard Library
+	Der Pfad des aktuell laufenden Interpreter mit dem Anhang "\Include" wird durchsucht.
+@@End@@
+
+Folgendes ist bei der Verwendung der /AutoIt3ExecuteScript Option zu beachten. Seit die Standard-Library im aktuellen Interpreter's Verzeichnis durchsucht wird, wird die Standard-Library-Funktion nicht mehr gefunden; Diese Library wird nur noch gefunden, wenn AutoIt3.exe durchlaufen wird. Es ist empfehlenswert, ein Skript in das .a3x Format zu kompilieren, bevor man versucht es mit /AutoIt3ExecuteScript laufen zu lassen.
+
+Aut2Exe verwendet den selben Algorithmus wie AutoIt3.exe, mit dem einzigen Unterschied, dass es nach dem Sub-Include-Ordner auch in einem Schwesternordner zu sich selbst schaut (..\Include).
+
+Falls Opt("TrayIconDebug",1) k&ouml;nnen nur 64 include Dateinamen im Tray-ToolTip dargestellt werden. Bei den anderen wird kein Dateiname angezeigt.
+
+Folgende Erleichterungen funktionieren, wenn man SciTE4AutoIt3 installiert hat.
+Steht der Cursor in der Zeile eines Funktionsaufrufes (z. B. "_ArraySort($array)" und man dr&uuml;ckt die Tastenkombination "STRG+j", springt man automatisch zu der Funktion.
+Dort ist dann ersichtlich, in welchem include diese Funktion steht und wie die Funktion programmiert wurde.
+Dabei ist es egal ob die Funktion in einer separaten UDF-Datei steht oder im Skript selbst.
+Steht der Cursor in der Zeile eines Includes (z. B. "#include<Array.au3>") und man dr&uuml;ckt die Tastenkombination "ALT+i", springt man automatisch in die Datei mit dieser Funktion.
+
+###Related###
+<a href="include-once.htm">#include-once</a>
+
+
+###Example###
+@@IncludeExample@@

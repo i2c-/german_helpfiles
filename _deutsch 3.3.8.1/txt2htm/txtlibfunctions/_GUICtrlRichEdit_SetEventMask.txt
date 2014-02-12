@@ -1,0 +1,57 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetEventMask
+
+###Description###
+Setzt fest, welche Benachrichtigungen an das Parent-Window (GUI) gesendet werden sollen
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetEventMask($hWnd, $iEventMask)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iEventMask
+	BitOr Kombination aus:
+		$ENM_CHANGE - Sendet $EN_CHANGE Benachrichtigungen (Der Benutzer hat Text ge&auml;ndert)
+		$ENM_CORRECTTEXT - Sendet $EN_CORRECTTEXT Benachrichtigungen (Parent-Window kann die Textkorrektur abbrechen)
+		$ENM_DRAGDROPDONE - Sendet $EN_DRAGDROPDONE Benachrichtigungen (Drag&Drop abgeschlossen)
+		$ENM_DROPFILES - Sendet $EN_DROPFILES Benachrichtigungen (Der Benutzer versucht Dateien in ein Control zu ziehen)
+		$ENM_KEYEVENTS - Sendet $EN_MSGFILTER Benachrichtigungen (Tastatur-Benachrichtigung)
+		$ENM_LINK - Sendet $EN_LINK Benachrichtigungen (Der Cursor ist &uuml;ber einem Text, der das Link-Attribut besitzt) (Wenn der Benutzer diesen Text angeklickt hat [2.0+])
+		$ENM_MOUSEEVENTS - Sendet $EN_MSGFILTER Benachrichtigungen (Maus-Benachrichtigung)
+		$ENM_OBJECTPOSITIONS - Sendet $EN_OBJECTPOSITIONS Benachrichtigungen (Ein Control liest Objekte)
+		$ENM_PROTECTED - Sendet $EN_PROTECTED Benachrichtigungen (Wenn der Benutzer Text &auml;ndern will, der das Gesch&uuml;tzt-Attribut besitzt)
+		$ENM_REQUESTRESIZE - Sendet $EN_REQUESTRESIZE Benachrichtigungen (Der Inhalt des Controls ist entweder kleiner oder gr&ouml;&szlig;er als die Fenstergr&ouml;&szlig;e des Controls)
+		$ENM_SCROLL - Sendet $EN_HSCROLL und $EN_VSCROLL Benachrichtigungen (Der Benutzer klickt auf die horizontale/vertikale Scrollbar)
+		$ENM_SCROLLEVENTS - Sendet $EN_MSGFILTER Benachrichtigungen (Mausrad-Benachrichtigung)
+		$ENM_SELCHANGE - Sendet EN_SELCHANGE Benachrichtigungen (Die Auswahl &auml;ndert sich)
+		$ENM_UPDATE - Sendet EN_UPDATE Benachrichtigungen (Ein Control ist dabei, sich neuzuzeichnen)
+		<b>Oder</b>
+		$ENM_NONE - Deaktiviert das Senden von Nachrichten an das Parent-Window
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iEventMask ist keine Zahl
+@@End@@
+
+###Remarks###
+$ENM_IMECHANGE wird nur bei einer asiatischen Version von Windows angewendet.
+
+$EN_UPDATE Benachrichtigungen werden immer gesendet, es sei denn 4.0 emuliert 1.0.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_AutoDetectURL
+
+###See Also###
+@@MsdnLink@@ EM_SETEVENTMASK
+
+###Example###
+@@IncludeExample@@

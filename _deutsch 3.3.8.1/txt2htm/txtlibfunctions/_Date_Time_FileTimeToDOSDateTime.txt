@@ -1,0 +1,35 @@
+###User Defined Function###
+_Date_Time_FileTimeToDOSDateTime
+
+###Description###
+Konvertiert Datei Datum/Zeit in MS-DOS Datum/Zeit
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_FileTimeToDOSDateTime($pFileTime)
+
+###Parameters###
+@@ParamTable@@
+$pFileTime
+	Zeiger auf eine $tagFILETIME Struktur, die ein Datei-Datum/Zeit beinhaltet, die ins MS-DOS Format konvertiert werden soll
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - MS-DOS Datum, verpackt wie folgt:
+	 Bits 0- 4 Tag des Monats (1–31)
+	 Bits 5- 8 Monat (1 = Januar, 2 = Februar und so weiter)
+	 Bits 9-15 Offset des Jahres von 1980 aus gesehen (es ist 1980 hinzuzuaddieren, um das aktuelle Jahr zu bekommen)
+	[1] - MS-DOS Zeit, verpackt wie folgt:
+	 Bits 0- 4 Sekunden zweigeteilt
+	 Bits 5-10 Minuten (0–59)
+	 Bits 11-15 Stunden (0–23 im 24h-Format)
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_FileTimeToLocalFileTime, _Date_Time_FileTimeToSystemTime, _Date_Time_DOSDateTimeToFileTime, $tagFILETIME
+
+###Example###
+@@IncludeExample@@

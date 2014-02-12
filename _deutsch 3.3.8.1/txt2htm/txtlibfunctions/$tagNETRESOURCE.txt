@@ -1,0 +1,52 @@
+###Structure Name###
+$tagNETRESOURCE
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber eine Netzwerk-Ressource
+
+###Syntax###
+Global Const $tagNETRESOURCE = "int Scope;int Type;int DisplayType;int Usage;ptr LocalName;ptr RemoteName;ptr Comment;ptr Provider"
+
+###Fields###
+@@ParamTable@@
+Scope
+	Bereich der Aufz&auml;hlung:
+		$RESOURCE_CONNECTED - Listet alle aktuell verbundenen Ressourcen auf
+		$RESOURCE_GLOBALNET - Listet alle Ressourcen in dem Netzwerk auf
+		$RESOURCE_REMEMBERED - Listet gemerkte Verbindungen auf
+Type
+	Satz von Bit-Flags die den Typ der Ressource identifizieren:
+		$RESOURCETYPE_ANY - Alle Ressourcen
+		$RESOURCETYPE_DISK - Disk Ressourcen
+		$RESOURCETYPE_PRINT - Drucker Ressourcen
+DisplayType
+	Zeigt Optionen f&uuml;r das Netzwerkobjekt in einer netzwerkdurchsuchenden Benutzerschnittstelle ("Browser") an:
+		$RESOURCEDISPLAYTYPE_DOMAIN - Das Objekt soll als eine Dom&auml;ne angezeigt werden
+		$RESOURCEDISPLAYTYPE_SERVER - Das Objekt soll als ein Server angezeigt werden
+		$RESOURCEDISPLAYTYPE_SHARE - Das Objekt soll als eine Freigabe angezeigt werden
+		$RESOURCEDISPLAYTYPE_GENERIC - Die Methode um das Objekt anzuzeigen spielt keine Rolle
+Usage
+	Satz von Bit-Flags die beschreiben wie die Ressource genutzt werden kann. Es gilt zu beachten,
+	dass dieses Mitglied nur festgelegt	werden kann wenn das <b>Scope</b> Mitglied $RESOURCE_GLOBALNET entspricht.
+	Dieses Mitglied kann einer der folgenden Werte sein:
+		$RESOURCEUSAGE_CONNECTABLE - Die Ressource ist eine anschlie&szlig;bare Ressource; der Name auf den <b>RemoteName</b>
+	verweist kann der _WNet_AddConnection Funktion &uuml;bergeben werden um eine Netzwerkverbindung aufzubauen.
+		$RESOURCEUSAGE_CONTAINER   - Die Ressource ist eine Container Ressource; der Name auf den <b>RemoteName</b>						verweist kann der WNet_OpenEnum Funktion um die Ressourcen in dem Container aufzulisten.
+LocalName
+	Wenn das <b>Scope</b> Mitglied gleichbedeutend mit $RESOURCE_CONNECTED oder $RESOURCE_REMEMBERED ist,
+	dann ist dieses	Mitglied ein Zeiger auf einen null-terminierten String die den Namen des lokalen Ger&auml;tes festlegt.
+	Dieses Mitglied ist 0 wenn die Verbindung kein Ger&auml;t nutzt.
+RemoteName
+	Ist der Eintrag eine Netzwerkressource, dann ist dieses Mitglied ein Zeiger auf einen null-terminierten String die
+	den Remote-Netzwerknamen angibt. Ist der Eintrag eine augenblickliche oder st&auml;ndige Verbindung, dann verweist <b>RemoteName</b>
+	auf den Namen der Ressource der mit dem Namen verkn&uuml;pft ist auf den das <b>LocalName</b> Mitglied verweist.
+Comment
+	Zeiger auf einen null-terminierten String die einen Kommentar enth&auml;lt die von dem Netzwerk-Provider bereitgestellt wird
+Provider
+	Zeiger auf einen null-terminierten String die die den Namen des Providers enth&auml;lt, der die Ressource zur Verf&uuml;gung stellt.
+	Dieses Mitglied kann NULL sein wenn der Providername unbekannt ist. Um den Providername zu ermitteln, kann die WNet_GetProviderName
+	Funktion aufgerufen werden.
+@@End@@
+
+###Remarks###
+Keine.

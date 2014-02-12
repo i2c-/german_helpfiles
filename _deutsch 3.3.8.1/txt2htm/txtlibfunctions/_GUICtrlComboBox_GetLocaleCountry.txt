@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlComboBox_GetLocaleCountry
+
+###Description###
+Ermittelt den aktuellen L&auml;ndercode
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_GetLocaleCountry($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der L&auml;ndercode der ComboBox
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetLocale
+
+###Example###
+@@IncludeExample@@

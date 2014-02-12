@@ -1,0 +1,43 @@
+###User Defined Function###
+_ArrayDisplay
+
+###Description###
+Zeigt ein 1-dimensionales oder 2-dimensionales Array in einer Listenansicht.
+
+###Syntax###
+#include <Array.au3>
+_ArrayDisplay(Const ByRef $avArray [, $sTitle = "Array: ListView Display" [, $iItemLimit = -1 [, $iTranspose = 0 [, $sSeparator = "" [, $sReplace = "|" [, $sHeader = ""]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Name des anzuzeigenden Arrays
+$sTitle
+	[optional] Der neue Titel f&uuml;r das ListView, welches das Array anzeigt.
+$iItemLimit
+	[optional] Maximale Anzahl von darzustellenden Listenansicht-Eintr&auml;gen (Zeilen)
+$iTranspose
+	[optional] Wenn gesetzt, werden bei einem 2D-Array die erste Dimension als Spalten und die zweite Dimension als Zeilen dargestellt. Per Standard ist es umgekehrt.
+$sSeparator
+	[optional] &auml;ndert Opt("GUIDataSeparatorChar") sofort
+$sReplace
+	[optional] String mit dem jedes Vorkommen von $sSeparator in jedem Arrayelement ersetzt werden soll
+$sheader
+	[optional] Spaltennamen (Spalten getrennt durch "|") 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error:
+@error:	1 - $avArray ist kein Array
+	2 - $avArray hat zu viele Dimensionen. Es werden nur 2-dimensionale Arrays unterst&uuml;tzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

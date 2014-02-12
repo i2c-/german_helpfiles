@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SortItems
+
+###Description###
+Startet die Sortier-Callback Funktion und setzt den Pfeil in der Kopfzeile
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SortItems($hWnd, $iCol)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCol
+	angeklickte Spalte
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Nur in Verbindung mit _GUICtrlListView_RegisterSortCallBack nutzbar.
+
+Ein Pfeil-runter/Pfeil-rauf wird auf die ausgew&auml;hlte Spalte gezeichnet (Windows XP und neuer), falls die Option gesetzt ist
+wenn _GUICtrlListView_RegisterSortCallBack aufgerufen wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_RegisterSortCallBack
+
+###Example###
+@@IncludeExample@@

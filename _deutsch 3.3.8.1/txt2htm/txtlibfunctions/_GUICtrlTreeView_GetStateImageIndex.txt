@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlTreeView_GetStateImageIndex
+
+###Description###
+Ermittelt den Index des Statusbildes, welches f&uuml;r das Item dargestellt wird
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetStateImageIndex($hWnd, $hItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+Gibt den Statusbilderindex zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_SetStateImageIndex
+
+###Example###
+@@IncludeExample@@

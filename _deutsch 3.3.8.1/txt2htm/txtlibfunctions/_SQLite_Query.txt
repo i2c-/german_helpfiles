@@ -1,0 +1,39 @@
+###User Defined Function###
+_SQLite_Query
+
+###Description###
+Bereitet eine SQLite-Abfrage vor
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Query($hDB, $sSQL, ByRef $hQuery)
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	Eine ge&ouml;ffnete Datenbank, -1 ist zu verwenden, um die zuletzt ge&ouml;ffnete Datenbank aufzurufen
+$sSQL
+	SQL-Anweisung, die ausgef&uuml;hrt werden soll
+$hQuery
+	Gibt ein Abfragen-Handle zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	Der R&uuml;ckgabewert kann mit $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite hat einen Fehler festgestellt(&uuml;berpr&uuml;ft R&uuml;ckgabewert)
+	1 - Fehler beim Aufruf von SQLite API 'sqlite3_prepare16_v2'
+	2 - Aufruf vom Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Keine.
+
+
+###Related###
+_SQLite_FetchData, _SQLite_FetchNames, _SQLite_Exec, _SQLite_GetTable, _SQLite_GetTable2d, _SQLite_QueryFinalize, _SQLite_QueryReset, _SQLite_QuerySingleRow, _SQLite_SetTimeout
+
+###Example###
+@@IncludeExample@@

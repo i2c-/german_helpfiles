@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetRECT
+
+###Description###
+Ermittelt das formatierte Rechteck eines Controls
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetRECT($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array bestehend aus x und y Koordinaten - [<links>;<oben>;<rechts>;<unten>]
+Fehler:	setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Das formatierte Rechteck ist der Bereich in dem Text gezeichnet ist. Teile davon k&ouml;nnten auch nicht sichtbar sein.
+
+Alle zur&uuml;ckgegebenen Werte sind in Diaglogeinheiten, beziehend auf das Control.
+
+Laut MSDN kann es sein, dass die zur&uuml;ckgegebenen Werte durch diese Funktion nicht die gleichen sind, wie die durch _GUICtrlRichEdit_SetRECT() gesetzten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetRECT
+
+###See Also###
+@@MsdnLink@@ EM_GETRECT
+
+###Example###
+@@IncludeExample@@

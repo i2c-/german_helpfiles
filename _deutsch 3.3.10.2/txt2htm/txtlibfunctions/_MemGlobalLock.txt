@@ -1,0 +1,34 @@
+###User Defined Function###
+_MemGlobalLock
+
+###Description###
+Sperrt ein Global-Memory Objekt und gibt einen Zeiger zum ersten Byte des Objekt-Memory-Blocks zur&uuml;ck.
+
+###Syntax###
+#include <Memory.au3>
+_MemGlobalLock ( $hMem )
+
+
+###Parameters###
+@@ParamTable@@
+$hMem
+	Handle zu dem Global-Memory Objekt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Zeiger zum ersten Byte des Objekt-Memory-Blocks.
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_MemGlobalUnlock, _MemGlobalAlloc
+
+
+###See Also###
+@@MsdnLink@@ GlobalLock

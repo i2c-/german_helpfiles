@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_SetFocus
+
+###Description###
+Setzt den Fokus der Tastatur auf das angegebenen Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetFocus ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Identifiziert das Fenster, das den Fokus erhalten soll. Wenn der Wert 0 ist, werden Tastatureingaben ignoriert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Fensters, das den Fokus der Tastatur erhalten hat
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ SetFocus

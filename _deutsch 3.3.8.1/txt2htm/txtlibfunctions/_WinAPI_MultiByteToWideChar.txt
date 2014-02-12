@@ -1,0 +1,47 @@
+###User Defined Function###
+_WinAPI_MultiByteToWideChar
+
+###Description###
+Wandelt einen ANSI-String in einen Unicode-String um
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MultiByteToWideChar($sText [, $iCodePage = 0 [, $iFlags = 0 [, $bRetString = False]]])
+
+###Parameters###
+@@ParamTable@@
+$sText
+	Text oder DllStruct der den umzuwandelnden Multibyte-Text enth&auml;lt
+$iCodePage
+	[optional] Legt die Kodierungsseite f&uuml;r die Umwandlung fest:
+		0 - ANSI Kodierungsseite
+		1 - OEM Kodierungsseite
+		2 - Macintosh Kodierungsseite
+		3 - Die Windows ANSI Kodierungsseite f&uuml;r den aktuellen Thread
+		42 - Symbol-Kodierungsseite
+		65000 - UTF-7
+		65001 - UTF-8
+$iFlags
+	[optional] Flags die den Konvertierungstyp bestimmen:
+		$MB_PRECOMPOSED - Immer vor-zusammengesetzte Zeichen verwenden
+		$MB_COMPOSITE - Immer zusammengesetzte Zeichen verwenden
+		$MB_USEGLYPHCHARS - Verwendet Glyph-Zeichen anstelle von Steuerzeichen
+
+$bRetString
+	[optional] Flag welches anzeigt ob ein String oder eine DllStruct (Standard False: Structure) zur&uuml;ckgegeben werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Text oder DllStruct der den umzuwandelnden Multibyte-Text enth&auml;lt
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_WideCharToMultiByte, _WinAPI_MultiByteToWideCharEx
+
+###See Also###
+@@MsdnLink@@ MultiByteToWideChar

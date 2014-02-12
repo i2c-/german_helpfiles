@@ -1,0 +1,27 @@
+###Function###
+WinMinimizeAll
+
+###Description###
+Minimiert alle Fenster.
+
+###Syntax###
+WinMinimizeAll (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="Send.htm">Send</a>("#m") ist auch eine M&ouml;glichkeit (Windows-Taste + M)
+
+
+###Related###
+WinMinimizeAllUndo, WinSetState
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMonthDelta
+
+###Description###
+Ermittelt die Datumsdifferenz f&uuml;r das MonthCal-Control
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMonthDelta($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Falls das Monatsdelta (die Monatssprungweite) bereits zuvor durch _GUICtrlMonthCal_SetMonthDelta gesetzt wurde,
+	wird ein Integer Wert zur&uuml;ckgegeben, der die aktuelle Datumsdifferenz des Monatskalenders enth&auml;lt. Falls das Monatsdelta zuvor nicht durch _GUICtrlMonthCal_SetMonthDelta gesetzt oder die Sprungweite auf den Standard zur&uuml;ckgesetzt wurde, so wird ein Integerwert zur&uuml;ckgegeben, der die aktuelle Sprungweite der angezeigten Monate enth&auml;lt.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###Structure Name###
+$tagNMTCKEYDOWN
+
+###Description###
+Enth&auml;lt Informationen, die in der Behandlung von $LVN_KEYDOWN Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMTCKEYDOWN = "align 1;" & $tagNMHDR & ";word VKey;uint Flags"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+VKey
+	Virtueller Tastaturcode
+Flags
+	Bits, wie in folgender Tabelle gezeigt:
+		0-15  - Legt die Wiederholzahl f&uuml;r die aktuelle Nachricht fest.
+		16-23 - Legt den Einlesecode fest. Dieser Wert ist abh&auml;ngig von der OEM.
+		24    - Legt fest, ob die Taste eine erweiterte Taste ist, so wie die rechts-seitigen ALT und CTRL Tasten, die auf einer erweiterten 101- oder 102-Tasten Tastatur vorkommen. Der Wert ist 1, wenn es eine erweiterte Taste ist; andernfalls ist es 0.
+		25-28 - Reserviert; nicht benutzen.
+		29    - Legt den Kontextcode fest. Der Wert ist immer 0 f&uuml;r eine $WM_KEYDOWN Nachricht.
+		30    - Legt den vorherigen Status der Taste fest. Der Wert ist 1 wenn die Taste vor senden der Nachricht nach unten gedr&uuml;ckt wurde,
+	oder der Wert ist 0 wenn die Taste oben ist.
+		31    - Legt den Transition-Status fest. Der Wert ist immer 0 f&uuml;r eine $WM_KEYDOWN Nachricht.
+@@End@@
+
+###Remarks###
+Keine.
+

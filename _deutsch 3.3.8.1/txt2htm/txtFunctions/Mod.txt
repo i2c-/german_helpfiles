@@ -1,0 +1,40 @@
+###Function###
+Mod
+
+###Description###
+F&uuml;hrt eine Modulo-Rechnung durch.
+
+###Syntax###
+Mod ( value1, value2 )
+
+
+###Parameters###
+@@ParamTable@@
+value1
+	Der Dividend.
+value2
+	Der Divisor.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Rest der Division von value1 geteilt durch value2 zur&uuml;ck.
+Fehler:	Gibt "-1.#IND" zur&uuml;ck, falls der Divisor 0 ist.
+@@End@@
+
+
+###Remarks###
+Diese Funktion stellt sicher, dass <i> Dividend = (Dividend / Divisor) * Divisor + Mod (Dividend, Divisor) </ i>.
+
+Diese Funktion <b>stellt nicht </b> sicher, dass der Dividend oder Divisor genau dargestellt werden k&ouml;nnen, speziell mit Flie&szlig;kommazahlen.
+
+Wenn Integer (Ganzzahlen) &uuml;bergeben werden, so macht diese Funktion eine integrale Modulo-Operation. Sonst f&auml;llt es auf eine Flie&szlig;komma-Operation zur&uuml;ck. Dies bedeutet, dass es zu einem unerwarteten Ergebnis kommen kann.
+
+
+###Related###
+Int
+
+
+###Example###
+@@IncludeExample@@

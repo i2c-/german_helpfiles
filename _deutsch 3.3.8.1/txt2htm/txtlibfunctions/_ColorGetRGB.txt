@@ -1,0 +1,33 @@
+###User Defined Function###
+_ColorGetRGB
+
+###Description###
+Gibt ein Array zur&uuml;ck in welchem die RGB Werte in ihren entsprechenden Positionen enthalten sind.
+
+###Syntax###
+#include <Color.au3>
+_ColorGetRGB($nColor)
+
+###Parameters###
+@@ParamTable@@
+$nColor
+	Die RGB Farbe mit der gearbeitet werden soll (0x00RRGGBB).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array mit den Werten in der Reichweite 0-255:
+	[0] Rot   Komponent Farbe
+	[1] Gr&uuml;n  Komponent Farbe
+	[2] Blau  Komponent Farbe
+Fehler:	setzt @error auf 1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_ColorSetRGB, _ColorGetRed, _ColorGetGreen, _ColorGetBlue
+
+###Example###
+@@IncludeExample@@

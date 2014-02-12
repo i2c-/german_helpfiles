@@ -1,0 +1,31 @@
+###Function###
+VarGetType
+
+###Description###
+Gibt den internen Datentyp eines Variants zur&uuml;ck.
+
+###Syntax###
+VarGetType ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Der Ausdruck, dessen Datentyp ermittelt werden soll.
+@@End@@
+
+
+###ReturnValue###
+Gibt einen String zur&uuml;ck, die den Datentyp des Ausdrucks beschreibt.
+
+
+###Remarks###
+IsInt kann abweichende Ergebnisse liefern, wenn eine String- oder Gleitkommaumwandlung erfolgt.
+
+
+###Related###
+IsInt, IsFloat, IsString, IsBinary, IsArray, IsDllStruct, IsHwnd, IsObj, IsBool, IsKeyword
+
+
+###Example###
+@@IncludeExample@@

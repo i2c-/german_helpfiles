@@ -1,0 +1,37 @@
+###Function###
+WinActivate
+
+###Description###
+Holt ein bestimmtes Fenster in den Vordergrund und setzt den Fokus auf dasselbe.
+
+###Syntax###
+WinActivate ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, welches in den Vordergrund gebracht werden soll. Hier: <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, welches in den Vordergrund gebracht werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Handle des Fensters zur&uuml;ck. 
+Fehler:	Gibt 0 zur&uuml;ck, wenn das Fenster nicht gefunden wurde oder nicht aktiviert werden konnte. 
+@@End@@
+
+
+###Remarks###
+Mit der "WinActive"-Funktion kann gepr&uuml;ft werden, ob "WinActivate" erfolgreich war. Falls mehrere Fenster die Kriterien erf&uuml;llen, wird das zuletzt aktive Fenster aktiviert. "WinActivate" funktioniert auch mit minimierten Fenstern. Trotzdem kann ein Fenster, welches den Status "immer im Vordergrund" hat, das aktivierte Fenster &uuml;berlappen bzw. &uuml;berdecken.
+
+@extended enth&auml;lt zus&auml;tzliche Infos, wie der Aktivierungsprozess erledigt wurde.
+
+###Related###
+WinClose, WinSetState, WinTitleMatchMode (Option), WinKill, WinMove
+
+
+###Example###
+@@IncludeExample@@

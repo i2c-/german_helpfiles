@@ -1,0 +1,26 @@
+###User Defined Function###
+_WinAPI_GetDesktopWindow
+
+###Description###
+Ermittelt das Handle des Windows Desktop Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetDesktopWindow()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt das Handle zum Desktop Fenster zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GetDesktopWindow
+
+###Example###
+@@IncludeExample@@

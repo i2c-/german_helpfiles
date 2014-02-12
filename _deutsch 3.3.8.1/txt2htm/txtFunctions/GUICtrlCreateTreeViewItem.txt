@@ -1,0 +1,44 @@
+###Function###
+GUICtrlCreateTreeViewItem
+
+###Description###
+Erstellt einen Eintrag in einem Treeview.
+
+###Syntax###
+GUICtrlCreateTreeViewItem ( "text", treeviewID )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Der Text des Controls.
+treeviewID
+	Die Treeview-ID, die beim Erstellen eines Treeviews oder eines Treeview-Eintrags zur&uuml;ckgegeben wird; mit letzterer wird ein Sub-Treeview erzeugt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um weitere Informationen f&uuml;r das Control zu setzen siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...</a>.
+
+Um ein Treevieweintrag in dick darzustellen (als Standard angezeigen) ist GuiCtrlSetState($treeviewItem, $GUI_DEFBUTTON) zu benutzen.
+Um den Standardeintrag wieder zur&uuml;ckzusetzen ist GUICtrlSetState() mit einem anderen Wert au&szlig;er $GUI_DEFBUTTON zu benutzen.
+Z. B. GuiCtrlSetState($treeviewItem, 0)
+
+Um einen Treevieweintrag aufzuklappen ist GuiCtrlSetState($treeviewItem, $GUI_EXPAND) zu benutzen.
+
+Um einen bestimmten Treevieweintrag auszuw&auml;hlen ist GuiCtrlSetState($treeviewItem, $GUI_FOCUS) zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreateTreeView, GUICtrlUpdate..., GUIGetMsg, GUICtrlRead, GUICtrlGetHandle
+
+
+###Example###
+@@IncludeExample@@

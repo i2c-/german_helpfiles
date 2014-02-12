@@ -1,0 +1,32 @@
+###Function###
+DriveGetSerial
+
+###Description###
+Gibt die Seriennummer eines Laufwerkes zur&uuml;ck.
+
+###Syntax###
+DriveGetSerial ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Pfad des Laufwerkes, von dem die Seriennummer ermittelt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Seriennummer des Laufwerkes als String zur&uuml;ck.
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Der R&uuml;ckgabewert ist nicht die hardware Seriennummer die auf dem Label des Laufwerks steht. Es ist die Windows Volume ID f&uuml;r dieses Laufwerk.
+
+###Related###
+DriveGetDrive, DriveGetFileSystem, DriveGetLabel, DriveGetType, DriveSetLabel, DriveSpaceFree, DriveSpaceTotal, DriveStatus
+
+
+###Example###
+@@IncludeExample@@

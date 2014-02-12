@@ -1,0 +1,34 @@
+###Function###
+TraySetPauseIcon
+
+###Description###
+Setzt ein bestimmtes Pause-Trayicon.
+
+###Syntax###
+TraySetPauseIcon ( [filename [, iconID]] )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	[optional] Der Dateiname des Icons, welches als Pause-Icon im Tray angezeigt werden soll.
+iconID
+	[optional] Icon-Name, falls die Datei mehrere Icons enth&auml;lt. 
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Um das Standardpauseicon (rotes Kreuz) wiederherzustellen, ist die Funktion ohne Parameter zu verwenden: TraySetIcon().
+
+Die Angabe einer positiven Zahl bezieht sich auf den "string-equivalenten" Icon-Namen.
+Die Angabe einer negativen Zahl f&uuml;hrt zu zahlenbasiertem "Index"-Verhalten. Einige DLLs k&ouml;nnen Icons nur mit negativen Zahlen entpacken.
+
+
+###Related###
+TraySetIcon, TraySetState
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,54 @@
+###Structure Name###
+$tagNMSELCHANGE
+
+###Description###
+Beinhaltet Informationen, die zur Verarbeitung von $MCN_SELCHANGE Nachrichten notwendig sind
+
+###Syntax###
+Global Const $tagNMSELCHANGE = $tagNMHDR & _
+	";struct ;word BegYear;word BegMonth;word BegDOW;word BegDay;word BegHour;word BegMinute;word BegSecond;word BegMSeconds; endstruct;" & _
+	"struct; word EndYear;word EndMonth;word EndDOW;word EndDay;word EndHour;word EndMinute;word EndSecond;word EndMSeconds; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+BegYear
+	Jahr
+BegMonth
+	Monat
+BegDOW
+	Tag der Woche
+BegDay
+	Tag
+BegHour
+	Stunde
+BegMinute
+	Minute
+BegSecond
+	Sekunde
+BegMSeconds
+	Millisekunden
+EndYear
+	Jahr
+EndMonth
+	Monat
+EndDOW
+	Tag der Woche
+EndDay
+	Tag
+EndHour
+	Stunde
+EndMinute
+	Minute
+EndSecond
+	Sekunde
+EndMSeconds
+	Millisekunden
+@@End@@
+
+
+###Remarks###
+Keine.
+

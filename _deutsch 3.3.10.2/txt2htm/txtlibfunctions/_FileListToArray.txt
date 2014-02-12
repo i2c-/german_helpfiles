@@ -1,0 +1,57 @@
+###User Defined Function###
+_FileListToArray
+
+###Description###
+Listet Dateien und/oder Ordner eines bestimmten Ordners auf (&auml;hnlich zu "dir" mit der Option "/B" unter DOS).
+
+###Syntax###
+#include <File.au3>
+_FileListToArray ( $sFilePath [, $sFilter = "*" [, $iFlag = 0 [, $fReturnPath = False]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Ordner von dem eine Dateiliste erstellt werden soll.
+$sFilter
+	[optional] zu verwendender Filter, Standard ist *. F&uuml;r mehr Details ist in der Hilfedatei nach dem Stichwort "WildCards" zu suchen.
+$iFlag
+	[optional] Bestimmt, ob nur Dateien, nur Ordner oder Dateien und Ordner zur&uuml;ckgegeben werden sollen.
+		0 (Standard) Gibt Dateien und Ordner zur&uuml;ck
+		1 Gibt nur Dateien zur&uuml;ck
+		2 Gibt nur Ordner zur&uuml;ck
+$fReturnPath
+	[optional] Falls True, so wird der komplette Pfad an den Pfad der Datei bzw. des Ordners angeh&auml;ngt. Bei False ist dieser relativ zu dem $sFilePath Ordner. Standard ist False.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein 1-dimensionales Array.
+		$aArray[0] = Anzahl von zur&uuml;ckgegebenen Dateien/Ordnern
+		$aArray[1] = erste(r) Datei/Ordner
+		$aArray[2] = zweite(r) Datei/Ordner
+		$aArray[3] = dritte(r) Datei/Ordner
+		$aArray[n] = n-te Datei/Ordner
+Fehler:	setzt das @error-Flag ungleich 0.
+@Error:	1 - Pfad nicht gefunden oder ung&uuml;ltig
+	2 - $sFilter ung&uuml;ltig
+	3 - $iFlag ung&uuml;ltig
+	4 - Keine Datei(en) gefunden
+@@End@@
+
+
+###Remarks###
+Diese Funktion verwendet das Windows Betriebssystem um passende Unterordner mit dem festgelegten Filter zur&uuml;ckzugeben.
+Dies funktioniert perfekt f&uuml;r einfache Filter.
+Werden komplexe Filter mit mehreren Wildcards verwendet, so kann es zu unerwarteten Ergebnisse kommen.
+Die wird zum Beispiel *test*.* beide Unterordner testX und testX.X erkennen.
+Falls dies passiert ist die _FileListToArrayRec Funktion passender, da diese RegEx verwendet und alle Unterordner so auf den passenden Filter untersucht.
+Allerdings kann dies zu einer deutlichen Geschwindigkeitsreduzierung f&uuml;hren.
+
+
+###Related###
+_FileListToArrayRec
+
+
+###Example###
+@@IncludeExample@@

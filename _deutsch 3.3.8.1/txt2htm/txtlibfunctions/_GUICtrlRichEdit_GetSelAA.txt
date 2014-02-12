@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetSelAA
+
+###Description###
+Ermittelt die Ankerposition (Startposition) und die aktive Position (Endposition) einer Auswahl, in dieser Reihenfolge.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetSelAA($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array im Format [$iAnchor, $iActive]
+Fehler:	setzt @error
+@error:	-1 - Kein Text ist ausgew&auml;hlt
+	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Das erste Zeichen des Textes ist bei Zeichenposition 0.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_GetSel, _GUICtrlRichEdit_GetScrollPos
+
+###See Also###
+@@MsdnLink@@ EM_EXGETSEL
+
+###Example###
+@@IncludeExample@@

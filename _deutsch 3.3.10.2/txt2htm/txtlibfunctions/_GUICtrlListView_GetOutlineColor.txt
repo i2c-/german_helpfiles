@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlListView_GetOutlineColor
+
+###Description###
+Ermittelt die Randfarbe des Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetOutlineColor ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Randfarbe des Controls zur&uuml;ck
+
+
+###Remarks###
+Das Control muss den erweiterten Windows Stil $LVS_EX_BORDERSELECT aufweisen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetOutlineColor
+
+
+###Example###
+@@IncludeExample@@

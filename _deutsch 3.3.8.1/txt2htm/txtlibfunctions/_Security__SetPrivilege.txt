@@ -1,0 +1,37 @@
+###User Defined Function###
+_Security__SetPrivilege
+
+###Description###
+Aktiviert oder deaktiviert Rechte in einem lokalen Token
+
+###Syntax###
+#include <Security.au3>
+_Security__SetPrivilege($hToken, $sPrivilege, $fEnable)
+
+###Parameters###
+@@ParamTable@@
+$hToken
+	Handle zu einem Token
+$sPrivilege
+	Name des Rechts
+$fEnable
+	Einstellung f&uuml;r das Recht:
+		 True - Aktiviert das Recht
+		False - Deaktiviert das Recht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__AdjustTokenPrivileges
+
+###Example###
+@@IncludeExample@@
+

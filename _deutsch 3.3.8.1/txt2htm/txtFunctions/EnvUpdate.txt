@@ -1,0 +1,32 @@
+###Function###
+EnvUpdate
+
+###Description###
+Aktualisiert die Betriebssystem-Umgebung.
+
+###Syntax###
+EnvUpdate (  )
+
+
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Keine.
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Hat einen &auml;hnlichen Effekt wie das Abmelden und neu Anmelden. &Auml;nderungen an den %path%-Variablen z.B. wirken sich u.U. erst nach dem Aufruf dieser Funktion aus (bzw. nach dem Abmelden oder einem Neustart).
+
+
+###Related###
+EnvGet, EnvSet
+
+
+###Example###
+@@IncludeExample@@

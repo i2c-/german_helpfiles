@@ -1,0 +1,36 @@
+###User Defined Function###
+_GDIPlus_PenGetDashCap
+
+###Description###
+Ermittelt den Stil der Strich-Endkappe des Zeichenstiftes
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenGetDashCap($hPen)
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu einem Zeichenstift-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Stil der einzelnen Striche:
+	$GDIP_DASHCAPFLAT - Eine quadratische Endkappe, die beide Enden jeder Linie abflacht
+	$GDIP_DASHCAPROUND - Eine kreisf&ouml;rmige Endkappe, die beide Enden jeder Linie abrundet
+	$GDIP_DASHCAPTRIANGLE - Eine dreieckige Endkappe, die beide Enden jeder Linie anspitzt
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenSetDashCap
+
+###See Also###
+@@MsdnLink@@ GdipGetPenDashCap197819
+
+###Example###
+@@IncludeExample@@

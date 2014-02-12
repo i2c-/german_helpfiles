@@ -1,0 +1,1 @@
+AutoItWinSetTitle("Mein AutoIt-Fenster")

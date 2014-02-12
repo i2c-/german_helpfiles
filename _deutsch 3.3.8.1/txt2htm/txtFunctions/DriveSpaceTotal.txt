@@ -1,0 +1,32 @@
+###Function###
+DriveSpaceTotal
+
+###Description###
+Gibt den gesamten Speicher auf einem Laufwerk in Megabyte zur&uuml;ck.
+
+###Syntax###
+DriveSpaceTotal ( "path" )
+
+
+###Parameters###
+@@ParamTable@@
+path
+	Pfad des zu untersuchenden Laufwerkes.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den gesamten Speicher in Megabyte als Flie&szlig;kommazahl zur&uuml;ck.
+Fehler:	Setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+DriveSpaceFree funktioniert m&ouml;glicherweise sogar, wenn ein kompletter (existierender) Verzeichnispfad angegeben wird. Ein Dateipfad wird aber nicht funktionieren.
+
+###Related###
+DriveGetDrive, DriveGetFileSystem, DriveGetLabel, DriveGetSerial, DriveGetType, DriveSetLabel, DriveSpaceFree, DriveStatus, FileGetSize
+
+
+###Example###
+@@IncludeExample@@

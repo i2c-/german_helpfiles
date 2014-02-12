@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_DeleteDC
+
+###Description###
+L&ouml;scht den festgelegten Ger&auml;tekontext
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DeleteDC($hDC)
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifiziert den zu l&ouml;schenden Ger&auml;tekontext
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Eine Anwendung muss einen Ger&auml;tekontext nicht l&ouml;schen dessen Handle durch die _WinAPI_GetDC Funktion entstand. Stattdessen muss _WinAPI_ReleaseDC aufgerufen werden um den Ger&auml;tekontext wieder freizugeben.
+
+###Related###
+_WinAPI_GetDC, _WinAPI_ReleaseDC, _WinAPI_CreateCompatibleDC
+
+###See Also###
+@@MsdnLink@@ DeleteDC

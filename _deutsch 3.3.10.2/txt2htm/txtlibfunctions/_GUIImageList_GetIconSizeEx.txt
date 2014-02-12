@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUIImageList_GetIconSizeEx
+
+###Description###
+Ermittelt die Dimensionen der Bilder in der Imagelist.
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetIconSizeEx ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Imagelist
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagPOINT Struktur zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_GetIconHeight, _GUIImageList_GetIconSize, _GUIImageList_GetIconWidth
+
+
+###Example###
+@@IncludeExample@@

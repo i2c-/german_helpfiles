@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlListView_JustifyColumn
+
+###Description###
+Setzt die Ausrichtung einer Spalte eines ListView-Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_JustifyColumn ( $hWnd, $iIndex [, $iAlign = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index der neuen Spalte
+$iAlign
+	[optional] Ausrichtung des Spaltenkopfes und des Textes der Subitems in der Spalte:
+		0 - Text ist linksb&uuml;ndig
+		1 - Text ist rechtsb&uuml;ndig
+		2 - Text ist zentriert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetColumn, _GUICtrlListView_SetColumn
+
+
+###Example###
+@@IncludeExample@@

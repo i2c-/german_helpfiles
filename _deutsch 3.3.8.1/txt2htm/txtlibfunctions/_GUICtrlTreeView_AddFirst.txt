@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTreeView_AddFirst
+
+###Description###
+F&uuml;gt ein neues Item am Anfang hinzu
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_AddFirst($hWnd, $hSibling, $sText [, $iImage = -1 [, $iSelImage = -1]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hSibling
+	Item auf gleicher Ebene
+$sText
+	Text des Items
+$iImage
+	[optional] 0-basierender Index des Item Icons in der Imagelist des Controls
+$iSelImage
+	[optional] 0-basierender Index des Item Icons in der Imagelist des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zum neuen Item
+Fehler:	0
+@@End@@
+
+###Remarks###
+Das Item wird als erstes Item auf gleicher Ebene zu $hSibling hinzugef&uuml;gt. Items die nach dem hinzugef&uuml;gten Item erscheinen wandern einen Platz nach unten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_Add
+
+###Example###
+@@IncludeExample@@

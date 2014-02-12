@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_InProcess
+
+###Description###
+Bestimmt ob ein Fenster zu dem aktuellen Prozess geh&ouml;rt
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_InProcess($hWnd, ByRef $hLastWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Zu testendes Fensterhandle
+$hLastWnd
+	Zuletzt getestetes Fensterhandle. Ist $hWnd = $hLastWnd, gibt dieser Prozess unverz&uuml;glich True zur&uuml;ck. Andernfalls
+		wird _WinAPI_InProcess aufgerufen. Falls $hWnd in Bearbeitung ist, wird bei der R&uuml;ckgabe $hLastWnd zu $hWnd gesetzt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Fensterhandle geh&ouml;rt zu dem aktuellen Prozess
+False:	Fensterhandle geh&ouml;rt nicht zu dem aktuellen Prozess
+@@End@@
+
+###Remarks###
+Dies ist eine der Schl&uuml;sselfunktionen zur Regelungstechnik der Speicherabbildung (Memory Mapping). Es pr&uuml;ft die Prozess-ID des
+Fensters, um zu erkennen, ob es zu dem aktuellen Prozess geh&ouml;rt. Ist dies der Fall, kann auf das Fenster zugegriffen werden, 
+ohne den Speicher abzubilden.
+
+###Related###

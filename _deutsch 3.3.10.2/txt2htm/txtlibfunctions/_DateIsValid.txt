@@ -1,0 +1,36 @@
+###User Defined Function###
+_DateIsValid
+
+###Description###
+Pr&uuml;ft das gegebene Datum auf G&uuml;ltigkeit.
+
+###Syntax###
+#include <Date.au3>
+_DateIsValid ( $sDate )
+
+
+###Parameters###
+@@ParamTable@@
+$sDate
+	Das Datum, das gepr&uuml;ft werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 falls das Datum ung&uuml;ltig ist
+@@End@@
+
+
+###Remarks###
+Diese Funktion erlaubt Datumsangaben in den folgenden Formaten:
+"YYYY/MM/DD[ hh:mm[:ss]]" oder "YYYY/MM/DD[Thh:mm[:ss]]"
+"YYYY-MM-DD[ hh:mm[:ss]]" oder "YYYY-MM-DD[Thh:mm[:ss]]"
+"YYYY.MM.DD[ hh:mm[:ss]]" oder "YYYY.MM.DD[Thh:mm[:ss]]"
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

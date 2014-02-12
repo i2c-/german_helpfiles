@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinAPI_FlashWindow
+
+###Description###
+L&auml;sst das angegebene Fenster einmal aufblinken
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_FlashWindow($hWnd [, $fInvert = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster, welches aufblinken soll. Das Fenster muss entweder ge&ouml;ffnet oder minimiert sein.
+$fInvert
+	[optional] Falls TRUE, wechselt die Anzeige der Titelleiste des Fensters von einem Status zum anderen (Aktiv/Inaktiv oder umgekehrt). Falls FALSE, kehrt das Fenster
+		zum vorigen Anzeigestatus zur&uuml;ck. Ist eine Anwendung minimiert und dieser Parameter ist TRUE, blinkt der Taskbar-Button
+		des Fensters Aktiv/Inaktiv. Ist der Parameter in diesem Falle FALSE, wechselt der Taskbar-Button des Fensters zu Inaktiv, d.h.
+		der Button wechselt nicht die Farbe. Es blinkt als w&auml;re sie neu gezeichnet worden, unterst&uuml;tzt jedoch nicht den visuellen Effekt
+		zum Benutzer.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Diese Funktion &auml;ndert nicht den aktiven Status des Fensters. Um ein Fenster mehrmalig aufblinken zu lassen,
+ist die FlashWindowEx Funktion zu benutzen.
+
+###Related###
+_WinAPI_FlashWindowEx
+
+###See Also###
+@@MsdnLink@@ FlashWindow
+
+###Example###
+@@IncludeExample@@

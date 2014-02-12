@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlTreeView_SetLineColor
+
+###Description###
+Setzt die Linienfarbe
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetLineColor($hWnd, $vRGBColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$vRGBColor
+	Neue Hex RGB Linienfarbe
+@@End@@
+
+###ReturnValue###
+Gibt die vorherige Hex RGB Linienfarbe zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetLineColor
+
+###Example###
+@@IncludeExample@@

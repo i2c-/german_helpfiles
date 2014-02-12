@@ -1,0 +1,63 @@
+###User Defined Function###
+_ClipBoard_GetDataEx
+
+###Description###
+Ruft Daten eines bestimmten Format's aus der Zwischenablage ab
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_GetDataEx ( [$iFormat = 1] )
+
+
+###Parameters###
+@@ParamTable@@
+$iFormat
+	[optional] Legt ein Format f&uuml;r die Zwischenablage fest:
+	$CF_TEXT - Textformat ($iFormat = 1)
+	$CF_BITMAP - Handle zu einer Bitmap (HBITMAP) ($iFormat = 2)
+	$CF_METAFILEPICT - Handle zu einem Bild im Format der Zwischendateien (Win16) (METAFILEPICT) ($iFormat = 3)
+	$CF_SYLK - Microsoft Symbolic Link (SYLK) Format ($iFormat = 4)
+	$CF_DIF - Software Arts' Data Interchange Format ($iFormat = 5)
+	$CF_TIFF - Tagged Image File Format ($iFormat = 6)
+	$CF_OEMTEXT - Textformat mit Zeichen im OEM Zeichensatz ($iFormat = 7)
+	$CF_DIB - BITMAPINFO-Struktur gefolgt von den Bitmap Bits ($iFormat = 8)
+	$CF_PALETTE - Ein (direkter) Handle zu einer Farbpalette, die sich &uuml;blicherweise auf ein ger&auml;teabh&auml;ngiges Bitmap (CF_BITMAP) bezieht, d.h. dessen "echte" Farbe festlegen ($iFormat = 9)
+	$CF_PENDATA - f&uuml;r die Erweiterungen der (mittlerweile durch CE ersetzten) Pen-Variante von Windows ($iFormat = 10)
+	$CF_RIFF - Audiodateien im RIFF Format ($iFormat = 11)
+	$CF_WAVE - Audiodateien im WAVE Format ($iFormat = 12)
+	$CF_UNICODETEXT - Unicode Textformat ($iFormat = 13)
+	$CF_ENHMETAFILE - Handle zu einer Zwischendatei im neuen "erweiterten" Format (Win32) (HENHMETAFILE) ($iFormat = 14)
+	$CF_HDROP - Handle zu einer Liste von Dateinamen f&uuml;r Drag & Drop-Operationen ($iFormat = 15)
+	$CF_LOCALE - ist eine zus&auml;tzliche Information f&uuml;r ANSI-Texte (CF_TEXT) und gibt an, auf welche landessprachliche Variante sich die Zeichencodes beziehen ($iFormat = 16)
+	$CF_DIBV5 - ein Speicherobjekt, das eine BITMAPV5HEADER-Struktur gefolgt von der Bitmap-Farbe und den Bitmap-Bits  enth&auml;lt ($iFormat = 17)
+	$CF_OWNERDISPLAY - Owner Display Format ($iFormat = 0x0080)
+	$CF_DSPTEXT - Text, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0081)
+	$CF_DSPBITMAP - Bitmap, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0082)
+	$CF_DSPMETAFILEPICT - Zwischendatei, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x0083)
+	$CF_DSPENHMETAFILE - Erweiterte Zwischendatei, dessen Anzeigeformat mit eigenem (private) Format verbunden ist (CF_PRIVATEFIRST, CF_PRIVATELAST) ($iFormat = 0x008E)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einem Objekt aus der Zwischendatei im angegebenen Format
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Falls die in der Zwischenablage gespeicherten Daten nicht das bei <a href="_ClipBoard_GetData.htm">_ClipBoard_GetData()</a> angegebene Format haben, liefert diese Funktion den Wert NULL anstelle eines Handles zur&uuml;ck. Das sollte auf jeden Fall gepr&uuml;ft und die Zwischenablage mit _ClipBoard_Close geschlossen werden.
+Der zur&uuml;ckgegebene Handle ist nur solange g&uuml;ltig, bis _ClipBoard_Close das n&auml;chste mal aufgerufen wird und geh&ouml;rt in diesem Moment auch nicht zum Programm (Freigabe und &Auml;nderungen der zugeordneten Daten des Handles sind dann nicht m&ouml;glich).
+Das Handle muss vom Programm weder freigegeben, noch im Speicher belassen (locked) werden.
+Das Programm darf/muss das Handle nicht nach einem Aufruf von <a href="_ClipBoard_Empty.htm">_ClipBoard_Empty()</a> oder <a href="_ClipBoard_Close.htm">_ClipBoard_Close()</a>, oder nach Aufruf der Funktion <a href="_ClipBoard_SetData.htm">_ClipBoard_SetData()</a> mit demselben Datenformat.
+
+
+###Related###
+_ClipBoard_SetData, _ClipBoard_GetData
+
+
+###See Also###
+@@MsdnLink@@ GetClipboardData
+
+
+###Example###
+@@IncludeExample@@

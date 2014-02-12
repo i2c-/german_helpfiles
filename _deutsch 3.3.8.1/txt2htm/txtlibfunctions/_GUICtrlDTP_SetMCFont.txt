@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlDTP_SetMCFont
+
+###Description###
+Setzt die Schrift des Monatskalenders
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_SetMCFont($hWnd, $hFont [, $fRedraw = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hFont
+	Handle zu der zu setzenden Schrift
+$fRedraw
+	[optional] Legt fest, ob das Control sofort neu aufgebaut werden soll
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlDTP_GetMCFont
+
+###Example###
+@@IncludeExample@@

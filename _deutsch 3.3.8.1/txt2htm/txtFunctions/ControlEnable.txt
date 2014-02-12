@@ -1,0 +1,36 @@
+###Function###
+ControlEnable
+
+###Description###
+Gibt ein gesperrtes (disabled) Control frei.
+
+###Syntax###
+ControlEnable ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlDisable, ControlShow, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

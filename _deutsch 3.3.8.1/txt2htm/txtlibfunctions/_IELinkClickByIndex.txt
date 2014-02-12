@@ -1,0 +1,48 @@
+###User Defined Function###
+_IELinkClickByIndex
+
+###Description###
+Simuliert einen Mausklick auf einem Link eines bei 0 beginnenden Indexes (in der Reihenfolge der Quelle).
+
+###Syntax###
+#include <IE.au3> 
+_IELinkClickByIndex(ByRef $o_object, $i_index [, $f_wait = 1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines InternetExplorer.Application, Fensters oder Frameobjekts
+$i_index
+	Bei 0 beginnender Index des Links, der ausgew&auml;hlt werden soll
+$f_wait
+	[optional] Gibt an, ob gewartet werden soll bis die Seite geladen wird.
+	0 = Nicht warten. 
+	1 = (Standard) Warten, bis die Seite komplett geladen ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt -1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Ladezeit &uuml;berschritten
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung abgebrochen
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Nicht alle Elemente, die Links zu sein scheinen, sind tats&auml;chlich welche. Es ist g&auml;ngige Praxis anderen DOM-Elementen onClick-JavaScript-Events zuzuweisen, die das Verhalten von Links simulieren. Um solche DOM-Elemente zu aktivieren, sollte die Funktion _IEAction mit "click" benutzt werden.
+
+
+###Related###
+_IELinkClickByText, _IELoadWait
+
+
+###Example###
+@@IncludeExample@@

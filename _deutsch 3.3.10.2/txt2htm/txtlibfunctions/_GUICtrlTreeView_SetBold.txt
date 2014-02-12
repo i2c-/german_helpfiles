@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlTreeView_SetBold
+
+###Description###
+Legt fest, ob das Item im Stil 'fett' gezeichnet werden soll
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetBold ( $hWnd, $hItem [, $fFlag = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$fFlag
+	[optional] True, wenn das Item im Stil 'fett'  gezeichnet werden soll, sonst False
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetBold
+
+
+###Example###
+@@IncludeExample@@

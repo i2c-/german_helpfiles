@@ -1,0 +1,36 @@
+###Function###
+WinActive
+
+###Description###
+Pr&uuml;ft, ob das angegebene Fenster existiert und gerade aktiv ist.
+
+###Syntax###
+WinActive ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fenster, das gepr&uuml;ft werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gepr&uuml;ft werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt das Handle des Fensters zur&uuml;ck, wenn es aktiv ist.
+Fehler:	Gibt ansonsten 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+WinExists, WinWait, WinWaitActive, WinWaitClose, WinWaitNotActive, WinTitleMatchMode (Option)
+
+
+###Example###
+@@IncludeExample@@

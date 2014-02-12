@@ -1,0 +1,38 @@
+###Function###
+Ping
+
+###Description###
+Pingt einen anderen Computer an und gibt die Laufzeit zur&uuml;ck.
+
+###Syntax###
+Ping ( "address/hostname" [, timeout] )
+
+
+###Parameters###
+@@ParamTable@@
+address/hostname
+	Kann z.B. "www.autoit.de" oder "87.106.244.38" sein.
+timeout
+	[optional] Die Zeit (in Millisekunden), die das Skript auf eine Antwort warten soll (der Standardwert ist 4000).
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Antwortzeit in Millisekunden zur&uuml;ck (gr&ouml;&szlig;er als 0).
+Fehler:	Gibt 0 zur&uuml;ck, wenn der Computer nicht angepingt werden kann oder andere Netzwerkfehler aufgetreten sind, und setzt @error auf (siehe Bemerkungen). 
+@@End@@
+ 
+
+###Remarks###
+Wenn die Funktion scheitert(also 0 zur&uuml;ckgibt), enth&auml;lt @error weitere Informationen:
+ 1 = Der Computer ist offline
+ 2 = Der Computer ist nicht erreichbar
+ 3 = Falsche Adresse
+ 4 = Andere Fehler
+
+###Related###
+Keine.
+
+###Example###
+@@IncludeExample@@

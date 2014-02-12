@@ -1,0 +1,65 @@
+###User Defined Function###
+_GUICtrlRichEdit_FindTextInRange
+
+###Description###
+Sucht nach Text im Bereich zwischen den angegebenen Zeichenpositionen
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_FindTextInRange($hWnd, $sText [, $iStart = 0 [, $iEnd = -1 [, $fMatchCase = False [, $fwholeWord = False [, $iBehavior = 0]]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Zu suchender Text
+$iStart
+	[optional] Startposition der Suche
+		Standard: Anfang des Controls
+$iEnd
+	[optional] Endposition der Suche
+		Standard: Ende des Controls
+$fMatchCase
+	[optional] Die Suche unterscheidet zwischen Gro&szlig;- und Kleinschreibung
+		Standard: Keine Unterscheidung [ = False]
+$fWholeWord
+	[optional] Gesucht wird nur nach ganzen W&ouml;rtern
+		Standard: Wortteile und ganze W&ouml;rter [ = False]
+$iBehavior
+	[optional] Jede BitOR-Kombination aus $FR_MATCHALEFHAMZA, $FR_MATCHDIAC und $FR_MATCHKASHIDA
+		Standard: 0
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array[2], das folgende Werte enth&auml;lt
+	Wenn der Suchtext gefunden wurde, die Start- und Endposition des gefundenen Suchtextes, z.B. [45, 52]
+	Wenn er nicht gefunden wurde, [-1, -1]
+Fehler:	0 and set @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $sText = ""
+	103 - $iStart < -1
+	104 - $iEnd < -1
+	105 - $fMatchCase ist nicht True oder False
+	106 - $fwholeWord ist nicht True oder False
+	1071 - $iBehavior ist keine Zahl
+	1072 - $iBehavior ist ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Die Position am Anfang des Controls ist 0.
+Bei den Standardwerten f&uuml;r $iStart und $iEnd (0 und -1) wird der gesamte Text abw&auml;rts durchsucht.
+Ist $iStart = -1 wird aufw&auml;rts bis zum Anfang des Controls gesucht.
+Wenn $iEnd = -1 ist, wird abw&auml;rts bis zum Ende des Controls gesucht.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_FindText
+
+###See Also###
+@@MsdnLink@@ EM_FINDTEXTEX
+
+###Example###
+@@IncludeExample@@

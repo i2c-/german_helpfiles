@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlIpAddress_ShowHide
+
+###Description###
+Blendet das IP-Address-Control ein oder aus.
+
+###Syntax###
+#include <GuiIPAddress.au3>
+_GUICtrlIpAddress_ShowHide ( $hWnd, $iState )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iState
+	Der Status des IP-Address-Control kann wie folgt sein:
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Das Control war vorher sichtbar
+False:	Das Control war vorher unsichtbar
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

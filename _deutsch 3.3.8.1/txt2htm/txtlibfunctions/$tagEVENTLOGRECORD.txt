@@ -1,0 +1,49 @@
+###Structure Name###
+$tagEVENTLOGRECORD
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Ereignis-Datensatz
+
+###Syntax###
+Global Const $tagEVENTLOGRECORD = "int Length;int Reserved;int RecordNumber;int TimeGenerated;int TimeWritten;int EventID;" & _
+		"short EventType;short NumStrings;short EventCategory;short ReservedFlags;int ClosingRecordNumber;int StringOffset;" & _
+		"int UserSidLength;int UserSidOffset;int DataLength;int DataOffset"
+
+###Fields###
+@@ParamTable@@
+Length
+	Die Gr&ouml;&szlig;e dieses Ereignis-Datensatzes, in Bytes
+Reserved
+	Reserviert
+RecordNumber
+	Die Nummer des Datensatzes
+TimeGenerated
+	Die Zeit, zu der der Eintrag vorgelegen hat
+TimeWritten
+	Die Zeit, zu welcher dieser Eintrag von dem Dienst ermittelt wurde, der in den Log schrieb
+EventID
+	Der Ereignis-Identifizierer
+EventType
+	Der Ereignistyp
+NumStrings
+	Die Anzahl der im Log vorhandenen Strings
+EventCategory
+	Die Kategorie dieses Ereignisses
+ReservedFlags
+	Reserviert
+ClosingRecordNumber
+	Reserviert
+StringOffset
+	Der Abstand (Offset) zu den Strings innerhalb dieses Log-Datensatzes
+UserSidLength
+	Die Gr&ouml;&szlig;e des UserSid Mitgliedes, in Bytes
+UserSidOffset
+	Der Abstand (Offset) zu dem Security Identifier (SID) innerhalb dieses Log-Datensatzes
+DataLength
+	Die Gr&ouml;&szlig;e der Ereignisspezifischen Daten (an der Position angezeigt durch DataOffset), in Bytes
+DataOffset
+	Der Abstand (Offset) der Ereignisspezifischen Informationen innerhalb dieses Log-Datensatzes, in Bytes
+@@End@@
+
+###Remarks###
+Keine.

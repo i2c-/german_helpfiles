@@ -1,0 +1,47 @@
+###User Defined Function###
+_WinAPI_SetFilePointer
+
+###Description###
+Verschiebt den Dateizeiger der angegebenen Datei
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetFilePointer($hFile, $iPos [, $iMethod = 0])
+
+###Parameters###
+@@ParamTable@@
+$hFile
+	Handle der zu bearbeitenden Datei
+$iPos
+	Anzahl der Bytes, um den Dateizeiger zu bewegen. Maximaler Wert betr&auml;gt 2^32
+		Ein positiver Wert bewegt den Dateizeiger vorw&auml;rts in der Datei, und ein negativer Wert bewegt ihn r&uuml;ckw&auml;rts.
+$iMethod
+	[optional] Der Startpunkt f&uuml;r die Dateizeigerbewegung.
+		Kann einer der vordefinierten Werte sein:
+		$FILE_BEGIN = 0 - Der Startpunkt ist Null (0) oder der Beginn der Datei
+		$FILE_CURRENT = 1 - Der Startpunkt ist der aktuelle Wert des Dateizeigers.
+		$FILE_END = 2 - Der Startpunkt ist die aktuelle Datei-Ende Position.
+		Impliziter Wert ist $FILE_BEGIN = 0
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Neuer Dateizeiger.
+Fehler:	Gibt INVALID_SET_FILE_POINTER (-1) zur&uuml;ck und setzt @Error
+@error:	0 - Kein Fehler
+	2 - API gab INVALID_SET_FILE_POINTER zur&uuml;ck
+@@End@@
+
+###Remarks###
+Diese Funktion kann au&szlig;erdem dazu benutzt werden, um die aktuelle Position des Dateizeigers zu ermitteln, indem man als Bewegungsmethode FILE_CURRENT und eine Distanz von 0 festlegt.
+Diese Funktion speichert den Dateizeiger in einem LONG Wert. Um mit Dateizeigern die gr&ouml;&szlig;er als ein LONG Wert sind zu arbeiten, muss die SetFilePointerEx Funktion benutzt werden.
+Ein Dateizeiger bestimmt die Position innerhalb der Datei zum Lesen/Schreiben in/von durch _WinAPI_ReadFile/_WinAPI_WriteFile.
+
+###Related###
+_WinAPI_CloseHandle, _WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_ReadFile, _WinAPI_SetEndOfFile, _WinAPI_WriteFile
+
+###See Also###
+@@MsdnLink@@ SetFilePointer
+
+###Example###
+@@IncludeExample@@

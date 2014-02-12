@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTab_ActivateTab
+
+###Description###
+Aktiviert einen Tab durch dessen Indes
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_ActivateTab($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des zuvor ausgew&auml;hlten Tabs
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###

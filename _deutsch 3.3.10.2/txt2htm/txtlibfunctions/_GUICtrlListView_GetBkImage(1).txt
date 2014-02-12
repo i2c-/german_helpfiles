@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_GetBkImage
+
+###Description###
+Ermittelt das Hintergrundbild im Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetBkImage ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Eines oder mehrere der folgenden Flags:
+		0 - Das Control hat keinen Hintergrund
+		1 - Der Hintergrund ist von einem Bitmap
+		2 - Der Hintergrund ist von einer URL
+	[1] - URL des Hintergrundbildes
+	[2] - Prozent der Fl&auml;che, welche das Bild in X verschoben sein soll
+	[3] - Prozent der Fl&auml;che, welche das Bild in Y verschoben sein soll
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetBkImage
+
+
+###Example###
+@@IncludeExample@@

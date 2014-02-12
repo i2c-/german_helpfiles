@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlListView_GetItemSpacing
+
+###Description###
+Ermittelt den Abstand zwischen den Items in dem Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemSpacing ( $hWnd [, $fSmall = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fSmall
+	[optional] Ansicht f&uuml;r welche der Abstand ermittelt werden soll:
+		 True - Ansicht  "kleine Icons "
+		False - Iconansicht
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Horizontaler Abstand
+	[1] - Vertikaler Abstand
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItemSpacingX, _GUICtrlListView_GetItemSpacingY
+
+
+###Example###
+@@IncludeExample@@

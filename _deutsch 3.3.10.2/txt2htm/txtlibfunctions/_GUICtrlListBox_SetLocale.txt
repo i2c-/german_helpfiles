@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListBox_SetLocale
+
+###Description###
+Bestimmt das korrekte Gebietsschema
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SetLocale ( $hWnd, $iLocal )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLocal
+	Spezifiziert das Gebietsschema, das die ListBox benutzt, wenn eingegebener Text sortiert werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das bisherige Gebietsschema
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_GetLocale
+
+
+###Example###
+@@IncludeExample@@

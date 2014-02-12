@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUICtrlToolbar_ButtonCount
+
+###Description###
+Ermittelt die Anzahl an Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_ButtonCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl an Buttons auf der Toolbar
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

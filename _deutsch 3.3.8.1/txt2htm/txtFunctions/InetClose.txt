@@ -1,0 +1,33 @@
+###Function###
+InetClose
+
+###Description###
+Schlie&szlig;t ein Handle, welches von InetGet() zur&uuml;ckgegeben wird.
+
+###Syntax###
+InetClose ( handle )
+
+
+###Parameters###
+@@ParamTable@@
+handle
+	Ein Handle, welches von InetGet() zur&uuml;ckgegeben wird,
+@@End@@
+
+
+###ReturnValue###
+"True", wenn das Handle gefunden und geschlossen wurde, "False", wenn nicht.
+
+
+###Remarks###
+InetGet() Handles m&uuml;ssen geschlossen werden, ansonsten w&uuml;rden zuviele Ressourcen verbraucht.
+
+Falls das Handle zu einem Download geh&ouml;rt, wird dieser abgebrochen, sollte InetClose() erfolgreich sein.
+
+
+###Related###
+InetGet
+
+
+###Example###
+@@IncludeExample@@

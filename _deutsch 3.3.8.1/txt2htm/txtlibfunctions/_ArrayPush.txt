@@ -1,0 +1,39 @@
+###User Defined Function###
+_ArrayPush
+
+###Description###
+F&uuml;gt dem Array einen neuen Wert hinzu, ohne dessen Gr&ouml;&szlig;e zu &auml;ndern. Beim Einf&uuml;gen an das Ende wird das erste Array-Element gel&ouml;scht bzw. entgegengesetzt.
+
+###Syntax###
+#include <Array.au3>
+_ArrayPush(ByRef $avArray, $vValue [, $iDirection = 0])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Array, das aktualisiert werden soll.
+$vValue
+	Der hinzuzuf&uuml;gende neue Wert. Dieser kann auch ein Array sein.
+$iDirection
+	[Optional] Richtung in die die Arrayelemente verschoben werden sollen:
+		0 = Linksseitiges Verschieben der Werte (hinzuf&uuml;gen am Ende)
+		1 = Rechtsseitiges Verschieben der Werte (hinzuf&uuml;gen am Anfang)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0, setzt @error:
+@error:	1 - $avArray ist kein Array
+	2 - $vValue ist ein Array gr&ouml;&szlig;er als $avArray (somit kann es nicht eingepasst werden)
+	3 - $avArray ist kein 1-dimensionales Array
+@@End@@
+
+###Remarks###
+Diese Funktion wird genutzt, um kontinuierlich Daten in einem Array zu aktualisieren, welche anderenfalls eine gewaltige Arraygr&ouml;&szlig;e erzeugen w&uuml;rden. So werden alle Werte innerhalb des Arrays gehalten - wie in einem Verlauf -, ohne den ersten oder letzten, in Abh&auml;ngigkeit der getroffenen Richtungswahl. Es ist vergleichbar mit dem Push-Befehl im Assembler.
+
+###Related###
+_ArrayAdd, _ArrayConcatenate, _ArrayDelete, _ArrayInsert, _ArrayPop
+
+###Example###
+@@IncludeExample@@

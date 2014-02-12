@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListView_GetItemEx
+
+###Description###
+Ermittelt von manchen oder allen Items die Attribute
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemEx ( $hWnd, ByRef $tItem )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$tItem
+	$tagLVITEM Struktur, welche die zu ermittelnden Informationen bestimmt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetItem, $tagLVITEM
+
+
+###Example###
+@@IncludeExample@@

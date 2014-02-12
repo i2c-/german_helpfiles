@@ -1,0 +1,40 @@
+###User Defined Function###
+_GDIPlus_MatrixTranslate
+
+###Description###
+Berechnet den Inhalt eines Matrix-Objekts als Produkt aus sich selbst und einer Translationsmatrix neu (Anmerkung: Verschiebung des Inhalts des Matrix).
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_MatrixTranslate($hMatrix, $fOffsetX, $fOffsetY [, $bAppend = False])
+
+###Parameters###
+@@ParamTable@@
+$hMatrix
+	Handle auf ein Matrix-Objekt
+$fOffsetX
+	Anzahl der Pixel, die auf der X-Achse hinzugef&uuml;gt werden
+$fOffsetY
+	Anzahl der Pixel, die auf der Y-Achse hinzugef&uuml;gt werden
+$bAppend
+	[optional] Legt die Reihenfolge der Matrizenmultiplikation fest:
+		 True - Legt fest, dass die Translationsmatrix links steht
+		False - Legt fest, dass die Translationsmatrix rechts steht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipTranslateMatrix
+
+###Example###
+@@IncludeExample@@

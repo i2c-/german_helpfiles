@@ -1,0 +1,26 @@
+###Function###
+TimerInit
+
+###Description###
+Gibt ein Handle welches durch TimerDiff() &uuml;bergeben wurde zur&uuml;ck, um die Zeitdifferenz in Millisekunden zu berechnen.
+
+###Syntax###
+TimerInit (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt ein Handle welches durch TimerDiff() &uuml;bergeben wurde zur&uuml;ck, um die Zeitdifferenz in Millisekunden zu berechnen.
+
+
+###Remarks###
+Der R&uuml;ckgabewert von TimerInit() sollte als ein unklares Handle behandelt werden und sollte nur verwendet werden um es an TimerDiff() zu &uuml;bergeben. Jede andere Verwendung des R&uuml;ckgabewertes ist eine potenzielle Fehlerquelle.
+
+###Related###
+TimerDiff
+
+
+###Example###
+@@IncludeExample@@

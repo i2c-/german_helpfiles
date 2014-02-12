@@ -1,0 +1,37 @@
+###User Defined Function###
+_Net_Share_PermStr
+
+###Description###
+Gibt die als Integer &uuml;bergebene Berechtigung einer Ressource als String zur&uuml;ck.
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_PermStr ( $iPerm )
+
+
+###Parameters###
+@@ParamTable@@
+$iPerm
+	Berechtigungen der Ressource:
+		1 - Erlaubnis, Daten aus einer Ressource zu lesen und auszuf&uuml;hren.
+		2 - Erlaubnis, Daten in die Ressource zu schreiben.
+		4 - Erlaubnis, eine neue Instanz einer Ressource zu erzeugen.
+		8 - Erlaubnis, die Ressource auszuf&uuml;hren.
+		16 - Erlaubnis, die Ressource zu l&ouml;schen.
+		32 - Erlaubnis, die Eigenschaften der Ressource zu ver&auml;ndern.
+		64 - Erlaubnis, die einer Ressource zugewiesenen Berechtigungen zu &auml;ndern.
+@@End@@
+
+###ReturnValue###
+Gibt eine Berechtigung der Ressource als String (englisch) zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

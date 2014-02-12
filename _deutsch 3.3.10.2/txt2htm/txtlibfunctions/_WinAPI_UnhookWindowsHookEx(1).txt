@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_UnhookWindowsHookEx
+
+###Description###
+Entfernt eine "Hook"-Prozedur die durch eine "Hook"-Kette durch die _WinAPI_SetWindowsHookEx installiert wurde
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_UnhookWindowsHookEx ( $hhk )
+
+
+###Parameters###
+@@ParamTable@@
+$hhk
+	Handle zu dem "Hook", der entfernt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_SetWindowsHookEx
+
+
+###See Also###
+@@MsdnLink@@ UnhookWindowsHookEx
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,33 @@
+###Function###
+IsFloat
+
+###Description###
+&Uuml;berpr&uuml;ft, ob der Ausdruck eine Gleitkommazahl (Float) ist.
+
+###Syntax###
+IsFloat ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Zu &uuml;berpr&uuml;fender Ausdruck.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn der Ausdruck keine Gleitkommazahl ist.
+@@End@@
+
+
+###Remarks###
+Siehe Beispiel
+
+
+###Related###
+IsArray, IsInt, IsString, IsNumber, IsBool, IsHWnd, StringIsFloat, IsBinary, IsPtr, VarGetType
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###Function###
+ControlGetText
+
+###Description###
+Erfragt Text vom Control.
+
+###Syntax###
+ControlGetText ( "title", "text", controlID )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, auf das zugegriffen werden soll.
+text
+	Der Text des Fensters, auf das zugegriffen werden soll.
+ControlID
+	Die ID des Controls, das beeinflusst werden soll. Siehe <a href="../intro/controls.htm">Controls</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Text des Controls zur&uuml;ck.
+Fehler:	Setzt @error = 1 und gibt einen leeren String "" zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+WinGetText, StatusbarGetText, ControlSetText, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,58 @@
+###Function###
+TraySetOnEvent
+
+###Description###
+Definiert eine Benutzerfunktion, welche aufgerufen werden soll, wenn eine besondere Trayaktion passiert.
+
+###Syntax###
+TraySetOnEvent ( specialID, "function" )
+
+
+###Parameters###
+@@ParamTable@@
+specialID
+	Siehe <a href="#SpecialIDTable">Spezielle ID Tabelle</a> im Folgenden.
+function
+	Der Name der aufzurufenden Funktion.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@error:	1 = "function" ist nicht definiert.
+@@End@@
+
+
+###Remarks###
+OnEvent Funktionen werden nur aufgerufen, wenn die Option TrayOnEventMode auf 1 gesetzt wurde. In diesem Modus wird <a href="TrayGetMsg.htm">TrayGetMsg()</a> &uuml;berhaupt nicht verwendet.
+
+
+	<a id="SpecialIDTable"></a><b>Spezielle ID Tabelle</b>
+@@StandardTable1@@
+<b>Spezielle Id</b>	<b>Wert</b>	<b>Kommentar</b>
+$TRAY_EVENT_SHOWICON	-3	Das Trayicon wird gezeigt.
+$TRAY_EVENT_HIDEICON	-4	Das Trayicon wird versteckt.
+$TRAY_EVENT_FLASHICON	-5	Der Benutzer schaltet das Blinken des Trayicons ein.
+$TRAY_EVENT_NOFLASHICON	-6	Der Benutzer schaltet das Blinken des Trayicons aus.
+$TRAY_EVENT_PRIMARYDOWN	-7	Die erste Maustaste wurde &uuml;ber dem Trayicon gedr&uuml;ckt.
+$TRAY_EVENT_PRIMARYUP	-8	Die erste Maustaste wurde &uuml;ber dem Trayicon losgelassen.
+$TRAY_EVENT_SECONDARYDOWN	-9	Die zweite Maustaste wurde &uuml;ber dem Trayicon gedr&uuml;ckt.
+$TRAY_EVENT_SECONDARYUP	-10	Die zweite Maustaste wurde &uuml;ber dem Trayicon losgelassen.
+$TRAY_EVENT_MOUSEOVER	-11	Die Maus bewegt sich &uuml;ber das Trayicon.
+$TRAY_EVENT_PRIMARYDOUBLE	-13	Die erste Maustaste wurde &uuml;ber dem Trayicon doppelgeklickt.
+$TRAY_EVENT_SECONDARYDOUBLE	-14	Die zweite Maustaste wurde &uuml;ber dem Trayicon doppelgeklickt.
+@@End@@
+
+Falls ein leerer String ("") als Parameter "function" &uuml;bergeben wird, wird die zuvor verwendete Benutzerfunktion deaktiviert.
+
+Die obenstehenden Konstanten sind definiert in #include <TrayConstants.au3>
+
+
+###Related###
+TrayOnEventMode (Option), TrayItemSetOnEvent, TraySetClick
+
+
+###Example###
+@@IncludeExample@@

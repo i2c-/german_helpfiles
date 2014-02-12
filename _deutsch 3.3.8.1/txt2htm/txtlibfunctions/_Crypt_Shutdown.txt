@@ -1,0 +1,28 @@
+###User Defined Function###
+_Crypt_Shutdown
+
+###Description###
+Deinizialisiert die Verschl&uuml;sselungsbibliothek
+
+###Syntax###
+#include <Crypt.au3>
+_Crypt_Shutdown()
+
+###Parameters###
+Keine.
+
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Diese Funktion muss nur aufgerufen werden wenn _Crypt_Startup aufgerufen wurde
+
+###Related###
+_Crypt_Startup
+
+###See Also###
+@@MsdnLink@@ CryptReleaseContext
+
+###Example###
+@@IncludeExample@@

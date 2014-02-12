@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlTreeView_GetVisibleCount
+
+###Description###
+Gibt die Anzahl von Items zur&uuml;ck, die komplett sichtbar sind
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetVisibleCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die maximale Anzahl von komplett sichtbaren Items im Control zur&uuml;ck
+
+###Remarks###
+Die Anzahl von komplett sichtbaren Items kann gr&ouml;&szlig;er sein als die Anzahl von Items im Control. Das Control berechnet diesen Wert durch die Teilung von der H&ouml;he des Fensters durch die H&ouml;he eines Items.
+Es ist zu beachten, dass der zur&uuml;ckgegebene Wert, die Anzahl von komplett sichtbaren Items ist. Falls man alle 20 Items und einen Teil von mehr Items sieht, ist der R&uuml;ckgabewert 20 und nicht 21.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

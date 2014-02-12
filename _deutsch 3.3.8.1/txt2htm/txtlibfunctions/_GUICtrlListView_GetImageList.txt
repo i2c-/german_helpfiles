@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_GetImageList
+
+###Description###
+Ermittelt das Handle zu einer Imagelist, welche f&uuml;r das Zeichnen von Listview Items verwendet wird
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetImageList($hWnd, $iImageList)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iImageList
+	zu ermittelnde Imagelist:
+		0 - Imagelist mit "gro&szlig;en Icons"
+		1 - Imagelist mit "kleinen Icons"
+		2 - Imagelist mit Statusbildern
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu der festgelegten Imagelist
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetImageList
+
+###Example###
+@@IncludeExample@@

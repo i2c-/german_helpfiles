@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlToolbar_SetButtonText
+
+###Description###
+Setzt den angezeigten Text des Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetButtonText ( $hWnd, $iCommandID, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$sText
+	Buttontext
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetButtonText
+
+
+###Example###
+@@IncludeExample@@

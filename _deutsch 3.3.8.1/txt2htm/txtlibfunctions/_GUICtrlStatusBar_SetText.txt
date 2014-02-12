@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlStatusBar_SetText
+
+###Description###
+Setzt den Text in dem festgelegten Abschnitt eines Statusfensters
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_SetText($hWnd, $sText = "", $iPart = 0, $iUFlag = 0)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Darzustellender Text in einem Abschnitt
+$iPart
+	Der Abschnitt f&uuml;r den Text
+$iUFlag
+	Typ der Darstellung. Der Typ kann einer der folgenden Werte sein:
+		0 - Der Text wird mit einem Rand dargestellt, um niedriger als die Ebene des Fensters zu erscheinen
+		$SBT_NOBORDERS - Der Text wird ohne R&auml;nder dargestellt
+		$SBT_OWNERDRAW - Der Text wird durch das Hauptfenster dargestellt
+		$SBT_POPOUT - Der Text wird mit einem Rand dargestellt, um h&ouml;her als die Ebene des Fensters zu erscheinen
+		$SBT_RTLREADING - Der Text wird in Gegenrichtung des Textes im Hauptfenster dargestellt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+F&uuml;r eine einfache Statusbar ist $iPart auf $SB_SIMPLEID zu setzen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetText
+
+###Example###
+@@IncludeExample@@

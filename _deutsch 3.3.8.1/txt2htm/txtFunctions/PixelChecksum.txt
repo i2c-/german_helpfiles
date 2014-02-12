@@ -1,0 +1,51 @@
+###Function###
+PixelChecksum
+
+
+###Description###
+Erstellt eine Pr&uuml;fsumme f&uuml;r einen Bereich von Pixeln.
+
+
+###Syntax###
+PixelChecksum ( left, top, right, bottom [, step [, hwnd [, mode]]] )
+
+
+###Parameters###
+@@ParamTable@@
+left
+	linke Koordinate des Rechtecks.
+top
+	obere Koordinate des Rechtecks.
+right
+	rechte Koordinate des Rechtecks.
+bottom
+	untere Koordinate des Rechtecks.
+step
+	[optional] Anstatt jedes Pixel in die Pr&uuml;fsumme einzubeziehen, kann man einen Wert gr&ouml;&szlig;er als 1 verwenden, um Pixel zu &uuml;berspringen (schneller), z.B. wird ein Wert von 2 nur jedes zweite Pixel pr&uuml;fen. Standard ist 1. <b>Es wird nicht empfohlen, eine Schrittweite gr&ouml;&szlig;er als 1 anzuwenden.</b>
+hwnd
+	[optional] Handle des zu durchsuchenden Fensters
+mode
+	[optional] Standard 0 ADLER Pr&uuml;fsumme , 1 CRC32 Pr&uuml;fsumme.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Pr&uuml;fsumme des Bereichs zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Eine Pr&uuml;fsumme erlaubt nur festzustellen, dass sich "etwas" in einem Bereich ge&auml;ndert hat - aber nicht, was genau.
+
+Fr&uuml;here Versionen waren sehr langsam, jedoch l&auml;uft die Funktion mittlerweile erheblich schneller. Es wird nicht mehr empfohlen, den step Parameter zu verwenden. Weil die Funktion jetzt insgesamt schneller arbeitet, ist durch eine gr&ouml;&szlig;ere Schrittweite kein wirklich erkennbarer Leistungsgewinn zu verzeichnen. Au&szlig;erdem, je gr&ouml;&szlig;er die Schrittweite, desto unzuverl&auml;ssiger wird die Pr&uuml;fsumme darin, geringe Ver&auml;nderungen in dem Bereich zu erkennen.
+
+CRC32 Pr&uuml;fsumme ist etwas langsamer als ADLER. Jedoch werden Pixelunterschiede besser erkannt.
+
+###Related###
+PixelGetColor, PixelCoordMode (Option), PixelSearch
+
+
+###Example###
+@@IncludeExample@@

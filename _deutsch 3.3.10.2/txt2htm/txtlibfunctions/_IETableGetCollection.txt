@@ -1,0 +1,42 @@
+###User Defined Function###
+_IETableGetCollection
+
+###Description###
+Gibt eine Auflistung von Objektvariablen zur&uuml;ck, welche alle Tabellen in dem Dokument oder eine einzelne Tabelle (angegeben &uuml;ber ihren Index) beinhaltet.
+
+###Syntax###
+#include <IE.au3>
+_IETableGetCollection ( ByRef $o_object [, $i_index = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable eines InternetExplorer.Application-, eines Window- oder eines Frameobjekts
+$i_index
+	[optional] Legt fest, ob eine Auflistung aller Tabellen in dem Dokument oder eine einzelne Tabelle (angegeben &uuml;ber ihren Index) zur&uuml;ckgegeben werden soll
+		 0 oder positive Ganzzahl gibt eine einzelne Tabelle zur&uuml;ck (Wert ist Index)
+		-1 = (Standard) Gibt eine Auflistung aller Tabellenobjekte zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	eine Auflistung von Objekten aller oder einer Tabelle(n) in einem Dokument, @extended = Tabellenanzahl
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	5 ($_IEStatus_InvalidValue) = Ung&uuml;ltiger Wert
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung
+@extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_IETableWriteToArray
+
+
+###Example###
+@@IncludeExample@@

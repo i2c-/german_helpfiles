@@ -1,0 +1,41 @@
+###Function###
+TrayItemSetOnEvent
+
+###Description###
+Legt die Funktion (UDF) fest, die aufgerufen wird, wenn ein TrayItem angeklickt wird.
+
+###Syntax###
+TrayItemSetOnEvent ( itemID, "function" )
+
+
+###Parameters###
+@@ParamTable@@
+itemID
+	Die ID des Items, wie sie die Funktion <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> zur&uuml;ckgibt.
+function
+	Der Name der User-Funktion, die aufgerufen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@error:	1 falls "function" nicht definiert ist.
+@@End@@
+
+
+###Remarks###
+Die OnEvent-Funktionen werden nur aufgerufen, wenn die Option TrayOnEventMode auf 1 gesetzt ist. In diesem Zustand wird TrayGetMsg &uuml;berhaupt nicht verwendet.
+
+In der aufgerufenen User-Funktion erh&auml;lt man mit dem Makro @TRAY_ID die ID des geklickten Items.
+
+Ein Aufruf mit einem leeren String ("") bewirkt, dass die zuvor auf das Item gesetzte Funktion deaktiviert wird.
+
+
+###Related###
+TrayCreateItem, TrayGetMsg, TrayOnEventMode (Option), TraySetOnEvent
+
+
+###Example###
+@@IncludeExample@@

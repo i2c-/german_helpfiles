@@ -1,0 +1,35 @@
+###Function###
+TrayItemSetText
+
+###Description###
+Setzt den Text eines Eintrags von einem Tray Men&uuml; Control.
+
+###Syntax###
+TrayItemSetText ( controlID, text )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Control-Identifikationsnummer (Control-ID) wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="..\functions\TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben.
+text
+	Der neue Text eines Eintrags von einem Tray Men&uuml; Control.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Um den Text des Standardeintrages (Skript pausieren/beenden) zu &auml;ndern sind die Konstanten $TRAY_ITEM_EXIT und $TRAY_ITEM_PAUSE als controlID zu verwenden.
+
+
+###Related###
+TrayItemGetText, TrayCreateItem, TrayCreateMenu
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetStyleList
+
+###Description###
+Zeigt an, ob das Control den Buttontext rechts im Bitmap hat oder nicht
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetStyleList($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+True:	Stil wird verwendet
+False:	Stil wird nicht verwendet
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetStyleList
+
+###Example###
+@@IncludeExample@@

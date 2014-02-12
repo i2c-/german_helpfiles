@@ -1,0 +1,46 @@
+###Function###
+ProcessList
+
+###Description###
+Gibt ein Array zur&uuml;ck, das die aktuell laufenden Prozesse auflistet (Namen und PIDs).
+
+###Syntax###
+ProcessList ( ["name"] )
+
+
+###Parameters###
+@@ParamTable@@
+name
+	[optional] Wird ein "Name" angegeben, werden nur Prozesse dieses Namens zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array der Prozessnamen und -PIDs wird zur&uuml;ckgegeben (siehe Bemerkungen).
+Fehler:	@error wird auf 1 gesetzt, falls die Liste nicht erstellt werden kann.
+@@End@@
+
+
+###Remarks###
+Das zur&uuml;ckgegebene Array ist 2-dimensional und wie folgt aufgebaut:
+	$aArray[0][0] = Anzahl der Prozesse
+	$aArray[1][0] = Name des 1. Prozesses
+	$aArray[1][1] = Process ID (PID) des 1. Prozesses
+	$aArray[2][0] = Name des 2. Prozesses
+	$aArray[2][1] = Process ID (PID) des 2. Prozesses
+	...
+	$aArray[n][0] = Name des n-ten Prozesses
+	$aArray[n][1] = Process ID (PID) des n-ten Prozesses
+
+Die Liste kann leer sein, wenn $aArray[0][0] = 0. In diesem Fall wird @error nicht gesetzt.
+
+[Anm. d. &Uuml;.]
+Diese Funktion zeigt keine Prozesse von alten 16-Bit Programmen die unter der Windowseigenen "Windows NT Virtual DOS Machine" (NTVDM) ausgef&uuml;hrt werden. Solche Prozesse sind an einem f&uuml;hrenden Leerzeichen im Taskmanager erkennbar.
+
+
+###Related###
+ProcessClose, ProcessExists, ProcessSetPriority, ProcessWait, ProcessWaitClose, ProcessGetStats, WinGetProcess
+
+
+###Example###
+@@IncludeExample@@

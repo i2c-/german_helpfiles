@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_GetHoverTime
+
+###Description###
+Ermittelt wie lange der Mauscursor &uuml;ber einem Item stehen bleiben muss, bevor dieses ausgew&auml;hlt wird
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetHoverTime ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Zeit in Millisekunden zur&uuml;ck, wie lange der Mauscursor &uuml;ber einem Item stehen bleiben muss, bevor dieses ausgew&auml;hlt wird.
+Falls der R&uuml;ckgabewert (DWORD) -1 ist, dann entspricht die Zeit dem Standardwert.
+
+
+###Remarks###
+Die "hover time" erfasst nur ListView-Controls welche die erweiterten Listview Stile $LVS_EX_TRACKSELECT, $LVS_EX_ONECLICKACTIVATE, oder $LVS_EX_TWOCLICKACTIVATE besitzen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetHoverTime
+
+
+###Example###
+@@IncludeExample@@

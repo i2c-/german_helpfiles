@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlToolbar_SetStyleWrapable
+
+###Description###
+Legt fest, ob das Control "umbruchf&auml;hig" ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetStyleWrapable($hWnd, $fState)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	True um es zu setzen, False um es nicht zu setzen
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Mit diesem Fensterstil k&ouml;nnen Toolbars mit mehrzeiligen Buttons erzeugt werden. Toolbar-Buttons k&ouml;nnen auf die n&auml;chste Zeile umgebrochen werden, wenn der Platz f&uuml;r alle Buttons in einer Zeile zu knapp wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetStyleWrapable
+
+###Example###
+@@IncludeExample@@

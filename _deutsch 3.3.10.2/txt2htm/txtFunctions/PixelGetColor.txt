@@ -1,0 +1,37 @@
+###Function###
+PixelGetColor
+
+###Description###
+Gibt die Farbe des Pixels x,y zur&uuml;ck.
+
+###Syntax###
+PixelGetColor ( x , y [, hwnd] )
+
+
+###Parameters###
+@@ParamTable@@
+x
+	X-Koordinate des Pixels.
+y
+	Y-Koordinate des Pixels.
+hwnd
+	[optional] Handle des zu verwendenden Fensters.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der dezimale Wert der Pixelfarbe.
+Fehler:	-1 bei ung&uuml;ltigen Koordinaten.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+PixelSearch, PixelCoordMode (Option), MouseGetPos, PixelChecksum
+
+
+###Example###
+@@IncludeExample@@

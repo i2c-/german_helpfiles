@@ -1,0 +1,40 @@
+###User Defined Function###
+_Security__OpenThreadTokenEx
+
+###Description###
+&Ouml;ffnet das Access-Token, welches mit einem Thread verbunden ist und personifiziert den Sicherheitskontext des Client-Prozesses, falls notwendig
+
+###Syntax###
+#include <Security.au3>
+_Security__OpenThreadTokenEx($iAccess [, $hThread = 0 [, $fOpenAsSelf = False]])
+
+###Parameters###
+@@ParamTable@@
+$iAccess
+	Access-Maske, welche die ben&ouml;tigten Zugriffsarten auf das Access-Token festlegt. Diese angeforderten
+		Zugriffsarten werden mit der Discretionary Access Control List (DACL) abgeglichen, um festzustellen, welche
+		Zugriffe erlaubt bzw. verboten sind.
+$hThread
+	[optional] Handle zu dem Thread, dessen Access-Token ge&ouml;ffnet wurde
+$fOpenAsSelf
+	[optional] Zeigt an, ob der Zugriffscheck gegen den Sicherheitskontext des Threads durch Aufruf der Funktion OpenThreadToken
+		oder gegen gegen den Sicherheitskontext des Prozesses f&uuml;r den aufgerufenen Thread erfolgen soll.
+		Falls dieses Parameter False ist, so wird der Sicherheitscheck durch Verwenden des Sicherheitskontexts f&uuml;r den aufgerufenen Thread durchgef&uuml;hrt.
+		Falls der Thread einen Client personifiziert, kann dieser Sicherheitskontext der Client-Prozess sein.
+		Falls dieser Parameter True ist, so wird der Sicherheitscheck durch Verwenden des Sicherheitskontexts des Prozesses f&uuml;r den aufgerufenen Thread durchgef&uuml;hrt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem k&uuml;rzlich ge&ouml;ffneten Access-Token
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__OpenThreadToken, _Security__ImpersonateSelf
+
+###Example###
+@@IncludeExample@@

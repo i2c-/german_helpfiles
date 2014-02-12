@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlTreeView_SetIndent
+
+###Description###
+Setzt die Breite der Einr&uuml;ckung f&uuml;r das Treeview-Control und zeichnet das Control neu um die neue Breite darzustellen
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetIndent ( $hWnd, $iIndent )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndent
+	Breite der Einr&uuml;ckung in Pixel.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Falls der $iIndent Parameter kleiner ist als die systemdefinierte Breite, wird die neue Breite auf die systemdefinierte Breite gesetzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetIndent
+
+
+###Example###
+@@IncludeExample@@

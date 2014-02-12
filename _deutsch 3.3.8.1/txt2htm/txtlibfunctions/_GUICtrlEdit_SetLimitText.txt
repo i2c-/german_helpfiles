@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlEdit_SetLimitText
+
+###Description###
+Setzt das Textlimit
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetLimitText($hWnd, $iLimit)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLimit
+	Die maximale Anzahl von TCHARs die der Benutzer eingeben kann
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Die _GUICtrlEdit_SetLimitText Function begrenzt nur den Text den der Benutzer eingeben kann.
+Es hat keinen Einfluss auf den Text der bereits in dem Edit-Control steht, wenn die Nachricht gesendet wird. Auch hat es keinen Einfluss auf die L&auml;nge des Textes der durch die _GUICtrlEdit_SetText Funktion in das Edit-Control kopiert wurde.
+Wenn eine Anwendung die _GUICtrlEdit_SetText Funktion verwendet um mehr Text in dem Edit-Control zu platzieren, dann wird in der _GUICtrlEdit_SetLimitText Funktion festgelegt, ob der Benutzer den kompletten Inhalt des Edit-Controls &auml;ndern kann.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_GetLimitText
+
+###Example###
+@@IncludeExample@@

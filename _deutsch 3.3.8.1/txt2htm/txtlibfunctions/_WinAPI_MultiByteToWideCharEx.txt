@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_MultiByteToWideCharEx
+
+###Description###
+Wandelt einen ANSI-String in einen Unicode-String um
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MultiByteToWideCharEx($sText, $pText [, $iCodePage = 0 [, $iFlags = 0]])
+
+###Parameters###
+@@ParamTable@@
+$sText
+	Text der umgewandelt werden soll
+$pText
+	Zeiger auf eine BYTE-Struktur, welche den konvertierten String aufnimmt
+$iCodePage
+	[optional] Legt die Kodierungsseite f&uuml;r die Umwandlung fest:
+		0 - ANSI Kodierungsseite
+		1 - OEM Kodierungsseite
+		2 - Macintosh Kodierungsseite
+$iFlags
+	[optional] Flags die den Konvertierungstyp bestimmen:
+		$MB_PRECOMPOSED - Immer vor-zusammengesetzte Zeichen verwenden
+		$MB_COMPOSITE - Immer zusammengesetzte Zeichen verwenden
+		$MB_USEGLYPHCHARS - Verwenden Sie Glyph-Zeichen anstelle von Steuerzeichen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Die BYTE-Struktur muss mindestens der doppelten L&auml;nge von $sText entsprechen
+
+###Related###
+_WinAPI_MultiByteToWideChar

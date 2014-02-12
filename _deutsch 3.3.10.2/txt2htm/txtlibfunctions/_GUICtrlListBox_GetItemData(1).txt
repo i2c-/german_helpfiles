@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlListBox_GetItemData
+
+###Description###
+Ermittelt den anwendungsspezifische Wert welcher mit einem Item verbunden ist
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetItemData ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	legt den 0-basierenden Index des Items fest
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	den anwendungsspezifischen Wert
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListBox_SetItemData
+
+
+###Example###
+@@IncludeExample@@

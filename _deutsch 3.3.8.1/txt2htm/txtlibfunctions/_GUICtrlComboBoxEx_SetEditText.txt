@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetEditText
+
+###Description###
+Setzt den Text eines Edit-Controls der ComboBox
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetEditText($hWnd, $sText)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	String, der den neuen Text enth&auml;lt 
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Falls die Nachricht zu einer ComboBox mit dem Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST gesendet wird, schl&auml;gt die Funktion fehl.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetEditText, _GUICtrlComboBoxEx_GetEditText, _GUICtrlComboBoxEx_ReplaceEditSel
+
+###Example###
+@@IncludeExample@@

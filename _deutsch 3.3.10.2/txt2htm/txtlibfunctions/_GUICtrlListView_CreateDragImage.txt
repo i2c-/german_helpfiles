@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_CreateDragImage
+
+###Description###
+Erstellt eine Imagelist f&uuml;r das bestimmte Item
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_CreateDragImage ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0] - Handle zu der Imagelist falls erfolgreich, ansonsten 0
+	[1] - X-Koordinate der oberen linken Ecke des Bildes
+	[2] - Y-Koordinate der oberen linken Ecke des Bildes
+
+
+###Remarks###
+Es ist wichtig, dass die Imagelist gel&ouml;scht wird, wenn sie nicht l&auml;nger ben&ouml;tigt wird
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_DrawDragImage
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_SQLite_SetTimeout
+
+###Description###
+Setzt einen Timeout f&uuml;r besch&auml;ftigte Pr&uuml;froutinen
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_SetTimeout([$hDB = -1 [, $iTimeout = 1000]])
+
+
+###Parameters###
+@@ParamTable@@
+$hDB
+	[optional] Eine offene Datenbank, -1 um die letzte offene Datenbank zu nehmen
+$iTimeout
+	[optional] Timeout [msec]
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	R&uuml;ckgabe $SQLITE_OK
+Fehler:	Der R&uuml;ckgabewert kann mit den $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite gibt einen Fehler zur&uuml;ck (Pr&uuml;fe den R&uuml;ckgabewert)
+	1 - Der Aufruf der SQLite API war fehlerhaft 'sqlite3_busy_timeout'
+	2 - Aufruf durch den Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Diese Routine setzt eine besch&auml;ftigte Pr&uuml;froutine die eine Weile anh&auml;lt, wenn eine Tabelle geschlossen wird. Die Pr&uuml;froutine wird mehrfach ruhen, mindestens solange bis eine vorgegebene Zeit von "ms" Millisekunden abgelaufen ist. Anschlie&szlig;end gibt er den Wert 0 zur&uuml;ck, was die Funktion sqlite3_exec() dazu veranlasst SQLITE_BUSY zur&uuml;ckzugeben.
+
+###Related###
+_SQLite_Query
+
+###Example###
+@@IncludeExample@@

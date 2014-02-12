@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinAPI_EnumWindows
+
+###Description###
+Listet alle Fenster auf
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_EnumWindows ( [$fVisible = True [, $hwnd = Default]] )
+
+
+###Parameters###
+@@ParamTable@@
+$fVisible
+	[optional] Fensterauswahl-Flag:
+	True - Gibt nur sichtbare Fenster zur&uuml;ck
+	False - Gibt alle Fenster zur&uuml;ck
+$hwnd
+	[optional] Handle zu dem Startfenster (Standard-Desktopfenster)
+@@End@@
+
+###ReturnValue###
+Gibt ein Array mit dem folgenden Format zur&uuml;ck:
+	[0][0] - Anzahl der Reihen im Array (n)
+	[1][0] - Fensterhandle
+	[1][1] - Fensterklassenname
+	[n][0] - Fensterhandle
+	[n][1] - Fensterklassenname
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_EnumWindowsPopup, _WinAPI_EnumWindowsTop
+
+
+###Example###
+@@IncludeExample@@

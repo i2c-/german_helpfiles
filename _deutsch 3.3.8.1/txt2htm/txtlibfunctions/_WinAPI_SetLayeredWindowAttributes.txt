@@ -1,0 +1,42 @@
+###User Defined Function###
+_WinAPI_SetLayeredWindowAttributes
+
+###Description###
+Setzt die Attribute f&uuml;r ein mehrschichtiges Fenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetLayeredWindowAttributes($hWnd, $i_transcolor [, $Transparency = 255 [, $dwFlags = 0x03 [, $isColorRef = False]]])
+
+###Parameters###
+@@ParamTable@@
+$hwnd
+	Handle zu dem Fenster
+$i_transcolor
+	Transparente Farbe
+$Transparency
+	[optional] Setzt Transparenz der GUI (0-255)
+$dwFlags
+	[optional] Flags.
+$isColorRef
+	[optional] Falls True, ist $i_transcolor ein COLORREF (0x00bbggrr) Farbwert, andernfalls ein RGB-Farbwert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@error:	4 - Funktion war nicht erfolgreich - @extended ist gesetzt zu _WinAPI_GetLastErrorMessage um mehr Informationen zu bekommen
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetLayeredWindowAttributes, _WinAPI_GetLastError
+
+###See Also###
+@@MsdnLink@@ SetLayeredWindowAttributes
+
+###Example###
+@@IncludeExample@@

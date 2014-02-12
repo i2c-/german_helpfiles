@@ -1,0 +1,52 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaAttributes
+
+###Description###
+Ermittelt die Attribute markierter Abs&auml;tze oder, falls keine markiert sind, des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaAttributes($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@                                             
+Erfolg:	Ein String, bestehend aus durch Semikola getrennten Werten ";".
+	Werte 1 bis 10: eine Gruppe bestehend aus:
+	   Zeichen 1 bis 3 - Attribut
+	      fpg - Forciere die Ausgabe dieser Abs&auml;tze auf eine neue Seite (anf&auml;nglich aus)
+	      hyp - Automatische Silbentrennung (anf&auml;nglich an)
+	      kpt - Halte diese Abs&auml;tze auf einer Seite zusammen (anf&auml;nglich aus)
+	      kpn - Halte diese Abs&auml;tze und die n&auml;chsten zusammen auf einer Seite (anf&auml;nglich aus)
+	      pwo - Verhindere Verwaisungen, z.B. eine einzelne Zeile eines Absatzes
+	auf einer Seite (anf&auml;nglich aus)
+	      r2l - Zeige Text von rechts nach links an (anf&auml;nglich aus)
+	      sbs - Zeige Abs&auml;tze seitlich nebeneinander an (anf&auml;nglich aus)
+	      sln - Unterdr&uuml;cke Zeilennummern in Dokumenten oder Sektionen mit Zeilennummern (anf&auml;nglich aus)
+	      row - Abs&auml;tze sind Tabellenzeilen (anf&auml;nglich aus)
+	   Zeichen 4 - Zustand:
+	      + - Attribut ist gesetzt
+	      - - Attribut ist nicht gesetzt
+	Wert 11 - G&uuml;ltigkeitsbereich:
+	   f - Der erste markierte Absatz hat dieses Attribut
+	   c - Der aktuelle Absatz hat dieses Attribut
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaAttributes
+
+###See Also###
+@@MsdnLink@@ EM_SETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

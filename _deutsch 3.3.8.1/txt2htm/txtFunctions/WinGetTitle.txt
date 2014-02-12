@@ -1,0 +1,38 @@
+###Function###
+WinGetTitle
+
+###Description###
+Ermittelt den vollen Titel eines Fensters.
+
+###Syntax###
+WinGetTitle ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:
+	Gibt den vollst&auml;ndigen Fenstertitel als String zur&uuml;ck. 
+Fehler:
+	Gibt 0 zur&uuml;ck, wenn kein Fenster mit dem Titel gefunden wurde.
+@@End@@
+
+
+###Remarks###
+WinGetTitle("[active]") gibt den Fenstertitel des aktiven Fensters zur&uuml;ck und arbeitet sowohl mit minimierten wie auch versteckten Fenstern. Falls mehrere Fenster das Kriterium erf&uuml;llen, wird der Titel des zuletzt aktiven Fensters gelesen.
+
+
+###Related###
+AutoItWinGetTitle, WinGetText, WinSetTitle, WinTitleMatchMode (Option)
+
+
+###Example###
+@@IncludeExample@@

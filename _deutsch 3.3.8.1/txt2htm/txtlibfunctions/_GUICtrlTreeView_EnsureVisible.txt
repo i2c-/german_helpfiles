@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTreeView_EnsureVisible
+
+###Description###
+Stellt sicher, dass ein Item sichtbar ist, notfalls durch aufklappen des Items oder durch scrollen des Controls.
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_EnsureVisible($hWnd, $hItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Falls das System die Items scrollt und kein Item aufgeklappt wurde.
+False:	sonst
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetVisible
+
+###Example###
+@@IncludeExample@@

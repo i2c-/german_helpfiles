@@ -1,0 +1,34 @@
+###Function###
+FileGetSize
+
+###Description###
+Gibt die Gr&ouml;&szlig;e einer Datei in Bytes zur&uuml;ck.
+
+###Syntax###
+FileGetSize ( "filename" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Dateiname der zu &uuml;berpr&uuml;fenden Datei.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Gr&ouml;&szlig;e einer Datei in Bytes.
+Fehler:	0 und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Funktioniert nicht bei Verzeichnissen.
+Die Division (Teilung) des Ergebnisses durch 1024 ergibt die Gr&ouml;&szlig;e in Kilobyte (KB), durch 1048576 die Gr&ouml;&szlig;e in Megabyte (MB)
+
+
+###Related###
+FileGetAttrib, FileGetTime, DriveSpaceTotal, FileGetVersion
+
+
+###Example###
+@@IncludeExample@@

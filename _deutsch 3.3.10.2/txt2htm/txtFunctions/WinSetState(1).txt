@@ -1,0 +1,45 @@
+###Function###
+WinSetState
+
+###Description###
+Zeigt, versteckt, minimiert, maximiert oder stellt ein Fenster wieder her.
+
+###Syntax###
+WinSetState ( "title", "text", flag )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fensters, dessen Status ver&auml;ndert werden soll.  Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	Der Text des Fensters, dessen Status ver&auml;ndert werden soll. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+flag
+	Der "show" Flag des ausgef&uuml;hrten Programms:
+		@SW_HIDE = Versteckt das Fenster.
+		@SW_SHOW = Zeigt ein vorher verstecktes Fenster.
+		@SW_MINIMIZE = Minimiert das Fenster.
+		@SW_MAXIMIZE = Maximiert das Fenster.
+		@SW_RESTORE = Macht eine Fensterminimierung oder -maximierung r&uuml;ckg&auml;ngig.
+		@SW_DISABLE = Deaktiviert ein Fenster.
+		@SW_ENABLE = Aktiviert ein Fenster.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1. 
+Fehler:	0 wenn das Fenster nicht gefunden wurde. 
+@@End@@
+
+
+###Remarks###
+Falls mehrere Fenster das Kriterium erf&uuml;llen, wird das zuletzt aktive Fensters genommen.
+@SW_MINIMIZE und @SW_MAXIMIZE arbeiten auch mit modalen Dialogfenstern.
+
+
+###Related###
+ControlHide, WinActivate, WinClose, WinFlash, WinGetState, WinKill, WinMinimizeAll, WinMinimizeAllUndo, WinMove, WinSetOnTop
+
+
+###Example###
+@@IncludeExample@@

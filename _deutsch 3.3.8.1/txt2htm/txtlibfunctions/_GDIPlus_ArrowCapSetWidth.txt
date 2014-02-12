@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_ArrowCapSetWidth
+
+###Description###
+Setzt die Breite der Pfeilspitze
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ArrowCapSetWidth($hArrowCap, $fWidth)
+
+###Parameters###
+@@ParamTable@@
+$hArrowCap
+	Handle zu dem ArrowCap-Objekt
+$fWidth
+	Setzt die Breite (in Einheiten) zwischen den Endpunkten der Basen des Pfeils
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_ArrowCapGetWidth
+
+###See Also###
+@@MsdnLink@@ GdipSetAdjustableArrowCapWidth
+
+###Example###
+@@IncludeExample@@

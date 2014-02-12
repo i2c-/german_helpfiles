@@ -1,0 +1,37 @@
+###Function###
+ConsoleRead
+
+###Description###
+Liest vom STDIN-Strom des AutoIt-Skriptprozesses.
+
+###Syntax###
+ConsoleRead ( [peek = false [, binary = false]] )
+
+
+###Parameters###
+@@ParamTable@@
+peek
+	[optional] Wenn True, entfernt die Funktion die gelesenen Zeichen nicht aus dem Strom.
+binary
+	[optional] Wenn True, liest diese Funktion die Daten als bin&auml;r anstatt als Text (Standard ist Text).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die gelesenen Daten zur&uuml;ck. @extended enth&auml;lt die Anzahl von gelesenen Bytes.
+Fehler:	@error wird auf Nicht-Null gesetzt, wenn EOF erreicht wird, STDIN f&uuml;r den Prozess nicht verbunden ist oder ein anderer Fehler auftritt.
+@@End@@
+
+
+###Remarks###
+ConsoleRead liest den Standardeingabe-Strom der Konsole des AutoIt-Skriptprozesses, welcher &uuml;blicherweise f&uuml;r die Daten&uuml;bernahme vom aufrufenden Prozess verwendet wird.
+ConsoleRead blockiert nicht, es wird sofort zur&uuml;ckgegeben. Sollen alle Daten ermittelt werden, muss es in einer Schleife aufgerufen werden.
+"Peeking" auf dem Strom entfernt die Daten nicht vom Puffer. Jedoch gibt es die verf&uuml;gbaren Daten als normal zur&uuml;ck.
+Standardm&auml;&szlig;ig werden Daten im Textformat zur&uuml;ckgegeben. Wird die bin&auml;r-Option verwendet, so werden die Daten im Bin&auml;rformat zur&uuml;ckgegeben.
+
+###Related###
+ConsoleWrite, ConsoleWriteError, Run
+
+
+###Example###
+@@IncludeExample@@

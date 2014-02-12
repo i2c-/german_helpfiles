@@ -1,0 +1,35 @@
+###User Defined Function###
+_ExcelColumnInsert
+
+###Description###
+F&uuml;gt ein Anzahl von Spalten in die aktuelle Excel-Datei ein.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelColumnInsert($oExcel, $iColumn [, $iNumCols = 1])
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel Objekt welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$iColumn
+	Die Spaltenposition f&uuml;r das einf&uuml;gen
+$iNumCols
+	[optional] Die Anzahl der einzuf&uuml;genden Spalten
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - festgelegtes Spalte ist ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Diese Funktion wird alle Spalten die sich nach der eingef&uuml;gten Spalte befinden nach rechts schieben
+
+###Related###
+
+###Example###
+@@IncludeExample@@

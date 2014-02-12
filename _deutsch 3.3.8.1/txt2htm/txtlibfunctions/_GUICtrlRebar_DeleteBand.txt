@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlRebar_DeleteBand
+
+###Description###
+L&ouml;scht eine Gruppe von einem Rebar-Control
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_DeleteBand($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index des zu l&ouml;schenden Bereiches
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_AddBand, _GUICtrlRebar_AddToolBarBand
+
+###Example###
+@@IncludeExample@@

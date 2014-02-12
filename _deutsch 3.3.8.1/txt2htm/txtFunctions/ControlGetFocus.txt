@@ -1,0 +1,34 @@
+###Function###
+ControlGetFocus
+
+###Description###
+Gibt den Klassennamen des Controls zur&uuml;ck, das den (Eingabe-) Fokus in einem bestimmten Fenster hat.
+
+###Syntax###
+ControlGetFocus ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Titel des zu pr&uuml;fenden Fensters.
+text
+	[optional] Text des zu pr&uuml;fenden Fensters.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den <a href="../intro/controls.htm">ClassNameNN</a> (Klassennamen) des Controls zur&uuml;ck, das den (Eingabe-) Fokus in dem angegebenen Fenster hat.
+Fehler:	Gibt "" (einen leeren String) zur&uuml;ck und setzt @error auf 1, wenn das Fenster nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+ControlFocus, ControlCommand
+
+
+###Example###
+@@IncludeExample@@

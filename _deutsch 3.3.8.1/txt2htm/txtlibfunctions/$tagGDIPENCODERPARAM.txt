@@ -1,0 +1,23 @@
+###Structure Name###
+$tagGDIPENCODERPARAM
+
+###Description###
+$tagGDIPENCODERPARAM Struktur
+
+###Syntax###
+Global Const $tagGDIPENCODERPARAM = "byte GUID[16];ulong Count;ulong Type;ptr Values"
+
+###Fields###
+@@ParamTable@@
+GUID
+	Identifiziert die Parameter Kategorie (GDI_EPG Konstanten)
+Count
+	Anzahl der Werte in dem Array auf welches das Strukturmitglied <i>Values</i> verweist
+Type
+	Identifiziert den Datentyp des Parameters (GDI_EPT Konstanten)
+Values
+	Zeiger auf ein Array mit Werten. Jeder Wert hat den Typ der durch den das Strukturmitglied <i>Type</i> festgelegt wurde.
+@@End@@
+
+###Remarks###
+Keine.

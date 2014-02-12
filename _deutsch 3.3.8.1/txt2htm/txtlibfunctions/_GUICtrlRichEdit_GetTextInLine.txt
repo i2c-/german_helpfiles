@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetTextInLine
+
+###Description###
+Ermittelt den Text einer Zeile
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetTextInLine($hWnd, $iLine)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iLine
+	Zeilennummer
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Text
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	1021 - $iLine < 1
+	1022 - $iLine &uuml;berschreitet die Anzahl der Zeilen im Control
+	700 - Interner Fehler
+@@End@@
+
+###Remarks###
+Die erste Zeile im Control ist 1.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetTextInRange, _GUICtrlRichEdit_GetSel
+
+###See Also###
+@@MsdnLink@@ EM_GETLINE
+
+###Example###
+@@IncludeExample@@

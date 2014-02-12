@@ -1,0 +1,39 @@
+###Function###
+GUISwitch
+
+###Description###
+&Auml;ndert die Wahl des aktuellen Fensters, auf welches GUI-Funktionen angewendet werden k&ouml;nnen.
+
+###Syntax###
+GUISwitch ( winhandle [, tabitemID] )
+
+
+###Parameters###
+@@ParamTable@@
+winhandle
+	Der Handle des Fensters, zu dem gewechselt wird.
+tabitemID
+	[optional] Control-ID des Tab-Controls, welches ausgew&auml;hlt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Handle des vorher aktuellen Fensters.
+Fehler:	Ein NULL-Handle.
+@@End@@
+
+
+###Remarks###
+Viele der GUI-spezifischen Funktionen arbeiten mit dem "aktuellen" Fenster - das ist &uuml;blicherweise das zuletzt mit <a href="GUICreate.htm">GUICreate()</a> erstellte Fenster. Die Funktion GUISwitch erlaubt es, ein anderes Fenster zum "aktuellen" Fenster (f&uuml;r die Bearbeitung) zu machen. Das bedeutet aber nicht, dass dieses gew&auml;hlte Fenster daraufhin aktiv ist. Hierf&uuml;r muss <a href="WinActivate.htm">WinActivate()</a> benutzt werden.
+
+TabitemID ist zu benutzen, um neue Controls in dem angegebenen tabitem zu erstellen. Es darf nicht vergessen werden, das tabitem mit der Funktion <a href="GUICtrlCreateTabItem.htm">GUICtrlCreateTabItem</a>("") zu schlie&szlig;en.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICreate, GUIDelete, GUICtrlCreateTabItem
+
+
+###Example###
+@@IncludeExample@@

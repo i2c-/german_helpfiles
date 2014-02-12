@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetWindowWidth
+
+###Description###
+Gibt die Breite des Fensters zur&uuml;ck
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetWindowWidth ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die Breite eines Fensters
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_WinAPI_GetWindowHeight

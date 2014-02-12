@@ -1,0 +1,54 @@
+###User Defined Function###
+_GUIImageList_Create
+
+###Description###
+Erstellt ein Imagelist Control
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_Create ( [$iCX=16 [, $iCY=16 [, $iColor=4 [, $iOptions=0 [, $iInitial=4 [, $iGrow=4]]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$iCX
+	[optional] Breite jedes Bildes in Pixel
+$iCY
+	[optional] H&ouml;he jedes Bildes in Pixel
+$iColor
+	[optional] Farbtiefe:
+		0 - verwendet Standardeinstellung
+		1 - verwendet eine 4 Bit DIB Sektion
+		2 - verwendet eine 8 Bit DIB Sektion
+		3 - verwendet eine 16 Bit DIB Sektion
+		4 - verwendet eine 24 Bit DIB Sektion
+		5 - verwendet eine 32 Bit DIB Sektion
+		6 - verwendet ein ger&auml;teabh&auml;ngiges Bitmap
+$iOptions
+	[optional] Optionsflags. Kann eine Kombination der folgenden sein:
+		1 - verwendet eine Maske
+		2 - Die Bilder in den Listen werden gespiegelt
+		4 - Die Imagelist enth&auml;lt einen Ausschnitt der Bilder
+$iInitial
+	[optional] Anzahl der Bilder die die Imagelist enth&auml;lt
+$iGrow
+	[optional] Anzahl von Bildern auf die die Imagelist wachsen kann, wenn das System mehr Speicher f&uuml;r neue Bilder ben&ouml;tigt. Dieser Parameter stellt die Anzahl der neuen Bildern dar, die die vergr&ouml;&szlig;erte Imagelist enthalten kann.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Handle zum neuen Control
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_Destroy
+
+
+###Example###
+@@IncludeExample@@

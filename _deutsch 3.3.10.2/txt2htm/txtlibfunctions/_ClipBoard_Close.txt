@@ -1,0 +1,36 @@
+###User Defined Function###
+_ClipBoard_Close
+
+###Description###
+Schlie&szlig;t die Zwischenablage
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_Close (  )
+
+
+###Parameters###
+Keine
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Wenn das Fenster die Zwischenablage ausgelesen oder ge&auml;ndert hat, schlie&szlig;e die Zwischenablage mit dieser Funktion.
+Das erlaubt anderen Fenstern auf die Zwischenablage zuzugreifen. Kopiere nach dem Aufruf dieser Funktion kein Objekt in die Zwischenablage.
+
+
+###Related###
+_ClipBoard_Open
+
+
+###See Also###
+@@MsdnLink@@ CloseClipboard
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlAVI_Open
+
+###Description###
+&Ouml;ffnet einen AVI Clip und zeigt dessen erster Frame in einem Animations-Control
+
+###Syntax###
+#include <GuiAVI.au3>
+_GUICtrlAVI_Open($hWnd, $sFileName)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sFileName
+	kompletter Pfad der AVI Datei
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Man kann nur stumme AVI Clips &ouml;ffnen
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlAVI_Close, _GUICtrlAVI_OpenEx
+
+###Example###
+@@IncludeExample@@

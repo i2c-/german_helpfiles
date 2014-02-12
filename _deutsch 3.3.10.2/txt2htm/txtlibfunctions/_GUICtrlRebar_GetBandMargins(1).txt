@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandMargins
+
+###Description###
+Ermittelt die Randbreiten der Gruppe.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandMargins ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array wie folgt zur&uuml;ck:
+	[0] - Breite des linken Randes welche dessen Gr&ouml;&szlig;e enth&auml;lt.
+	[1] - Breite des rechten Randes welche dessen Gr&ouml;&szlig;e enth&auml;lt.
+	[2] - H&ouml;he des oberen Randes welche dessen Gr&ouml;&szlig;e enth&auml;lt.
+	[3] - H&ouml;he des unteren Randes welche dessen Gr&ouml;&szlig;e enth&auml;lt.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_GetBandMarginsEx
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetSel
+
+###Description###
+Ermittelt die Anfangs- ($iLow) und Endposition ($iHigh) einer Auswahl
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetSel($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array in dem Format [$iLow, $iHigh]
+Fehler:	Setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Die erste Zeichenposition des Textes ist 0.
+Wenn $iHigh = $iLow, ist kein Text ausgew&auml;hlt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetSel, _GUICtrlRichEdit_GetSelText, _GUICtrlRichEdit_GetSelAA, _GUICtrlRichEdit_GetTextInLine, _GUICtrlRichEdit_Deselect, _GUICtrlRichEdit_IsTextSelected
+
+###See Also###
+@@MsdnLink@@ EM_EXGETSEL
+
+###Example###
+@@IncludeExample@@

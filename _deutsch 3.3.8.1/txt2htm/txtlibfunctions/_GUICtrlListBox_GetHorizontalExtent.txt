@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlListBox_GetHorizontalExtent
+
+###Description###
+Ermittelt von einer Listbox die scrollbare Breite
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetHorizontalExtent($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	scrollbare Breite der Listbox in Pixel
+
+###Remarks###
+Die Listbox muss mit dem Stil $WS_HSCROLL definiert sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_SetHorizontalExtent
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###Function###
+HWnd
+
+###Description###
+Wandelt einen Ausdruck in ein HWND Handle.
+
+###Syntax###
+HWnd ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Der Ausdruck, der in ein HWND Handle konvertiert werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Wenn der Ausdruck in ein HWND konvertiert werden kann, wird dieser zur&uuml;ckgegeben.
+Fehler:	Falls kein Fenster mit diesem HWND existiert, wird ein 0 (NULL) HWND zur&uuml;ckgegeben und @error auf 1 gesetzt.
+@@End@@
+
+###Remarks###
+Doppelzahlen k&ouml;nnen nicht in einen HWND konvertiert werden. Zudem sollte kein nur Buchstaben enthaltener String in einen HWND gewandelt werden, da es keine Garantie gibt, dass ein Fenster jemals wieder den selben HWND hat. Es ist zwar nicht verboten, stellt aber einen Programmierfehler dar, der vermieden werden sollte.
+
+
+###Related###
+Int, String, Number, Ptr
+
+
+###Example###
+@@IncludeExample@@

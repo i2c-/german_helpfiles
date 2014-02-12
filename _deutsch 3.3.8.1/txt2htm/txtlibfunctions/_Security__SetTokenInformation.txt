@@ -1,0 +1,39 @@
+###User Defined Function###
+_Security__SetTokenInformation
+
+###Description###
+Setzt verschiedene Eigenschaften eines Tokens.
+
+###Syntax###
+#include <Security.au3>
+_Security__SetTokenInformation($hToken, $iTokenInformation, $vTokenInformation, $iTokenInformationLength)
+
+###Parameters###
+@@ParamTable@@
+$hToken
+	Das Handle zu einem Zugriffstoken, welches bearbeitet werden soll.
+$iTokenInformation
+	Der Typ der Einstellung die ver&auml;ndert werden soll.
+$vTokenInformation
+	Ein Pointer einer Struct, die die neuen Informationen enth&auml;lt.
+$iTokenInformationLength
+	Die L&auml;nge des Buffers, auf welchen $vTokenInformation zeigt, in Bytes.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__GetTokenInformation
+
+###See Also###
+@@MsdnLink@@ SetTokenInformation
+
+###Example###
+@@IncludeExample@@

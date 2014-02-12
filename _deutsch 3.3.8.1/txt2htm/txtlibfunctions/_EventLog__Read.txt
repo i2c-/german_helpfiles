@@ -1,0 +1,58 @@
+###User Defined Function###
+_EventLog__Read
+
+###Description###
+Liest einen Eintrag aus dem Event Log
+
+###Syntax###
+#include <EventLog.au3>
+_EventLog__Read($hEventLog [, $fRead = True [, $fForward = True [, $iOffset = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$hEventLog
+	Handle des Event Log
+$fRead
+	[optional] Wenn True angegeben wird, liest die Funktion sequentiell ab dem Eintrag, der beim letzten Aufruf des Event Log's gelesen wurde.
+	Wenn False, beginnt die Funktion ab dem mit $iOffset &uuml;bergebenem Eintrag zu lesen.
+$fForward
+	[optional] Wenn True wird das Event Log aufsteigend nach Datum gelesen. 
+		Wenn False, wird das Event Log absteigend nach Datum gelesen.
+$iOffset
+	[optional] Die Nummer des Eintrages im Event Log, ab dem gelesen wird. Dieser Parameter wird ignoriert, wenn $fRead auf True gesetzt ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format:
+	[ 0] - True
+	[ 1] - Nummer des Eintrags
+	[ 2] - Datum wann der Eintrag &uuml;bermittelt wurde
+	[ 3] - Zeitstempel wann der Eintrag &uuml;bermittelt wurde
+	[ 4] - Datum wann der Eintrag ins Event Log geschrieben wurde 
+	[ 5] - Zeitstempel wann der Eintrag ins Event Log geschrieben wurde
+	[ 6] - Ereigniskennung
+	[ 7] - Ereignistyp. Diese kann einen der folgenden Werte annehmen:
+	  1 - Fehler
+	  2 - Warnung
+	  4 - Information
+	  8 - erfolgreiche Kontrolle
+	 16 - fehlerhafte Kontrolle
+	[ 8] - Ereignistyp String
+	[ 9] - Ereignis Kategorie
+	[10] - Ereignis Quelle
+	[11] - Computer Name
+	[12] - Username
+	[13] - Ereignis Beschreibung
+	[14] - Ereignis Daten Array
+Fehler:	Array[0] = False
+@@End@@
+
+###Remarks###
+Wenn diese Funktion erfolgreich ausgef&uuml;hrt wurde, wird die Leseposition im Event Log an die Anzahl der Eintr&auml;ge angepasst. Obwohl mehrere Eintr&auml;ge gleichzeitig gelesen werden k&ouml;nnen, liefert die Funktion immer nur einen Datensatz zur gleichen Zeit zur&uuml;ck.
+
+###Related###
+_EventLog__Close, _EventLog__Open
+
+###Example###
+@@IncludeExample@@

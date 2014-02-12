@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlListView_GetItemState
+
+###Description###
+Ermittelt den Status eines Listview Items
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemState($hWnd, $iIndex, $iMask)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index des Items
+$iMask
+	zu ermittelnde Statusinformationen. Dies kann eine Kombination der folgenden sein:
+		$LVIS_CUT - Das Item ist markiert f&uuml;r eine "ausschneiden Operation" (cut-and-paste)
+		$LVIS_DROPHILITED - Das Item ist hervorgehoben als "verschieben-Ziel" (drag-and-drop)
+		$LVIS_FOCUSED - Das Item hat den Fokus, also wird es durch ein Standard Fokus-Rechteck umrandet
+		$LVIS_SELECTED - Das Item ist ausgew&auml;hlt
+		$LVIS_OVERLAYMASK - Diese Maske nutzen, um den Overlay-Image Index des Items zu ermitteln
+		$LVIS_STATEIMAGEMASK - Diese Maske nutzen, um den State-Image Index des Items zu ermitteln
+@@End@@
+
+###ReturnValue###
+Gibt den aktuellen Status des angegebenen Items zur&uuml;ck
+
+###Remarks###
+Die Statusinformationen eines Items beinhalten so wohl einen Satz von Bit-Flags, als auch einen Imagelistenindex, der das State-Image und das Overlay-Image kennzeichnet.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_SetItemState
+
+###Example###
+@@IncludeExample@@

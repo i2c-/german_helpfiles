@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTab_SetItemSize
+
+###Description###
+Setzt die Breite und H&ouml;he eines Tabs (mit fester Breite oder selbst gezeichnet)
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetItemSize($hWnd, $iWidth, $iHeight)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iWidth
+	Neue Breite in Pixel
+$iHeight
+	Neue H&ouml;he in Pixel
+@@End@@
+
+###ReturnValue###
+Erfolg:	Gibt die alte Breite und H&ouml;he zur&uuml;ck. Die Breite ist der Low-Order Wert, die H&ouml;he der High-Order Wert.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

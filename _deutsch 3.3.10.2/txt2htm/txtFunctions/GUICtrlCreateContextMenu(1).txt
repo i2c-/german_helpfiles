@@ -1,0 +1,41 @@
+###Function###
+GUICtrlCreateContextMenu
+
+###Description###
+Erstellt ein Kontextmen&uuml; f&uuml;r ein Control oder das ganze GUI-Fenster.
+
+###Syntax###
+GUICtrlCreateContextMenu ( [controlID] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	[optional] Die Control-ID des Items wie von <a href="GUICtrlCreate Management.htm">GUICtrlCreate...()</a> Funktion zur&uuml;ckgegeben.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Nach dem Erstellen des Hauptitems f&uuml;r das Kontextmen&uuml; mit dieser Funktion k&ouml;nnen die Men&uuml;eintr&auml;ge einzeln mit der Funktion <a href="GUICtrlCreateMenuItem.htm">GUICtrlCreateMenuItem()</a> erzeugt werden. Unter-Men&uuml;s k&ouml;nnen mit <a href="GUICtrlCreateMenu.htm">GUICtrlCreateMenu()</a> erzeugt werden.
+
+Wenn in dieser Funktion keine Parameter angegeben werden oder -1 als Parameter verwendet wird, wird das Kontextmen&uuml; mit dem gesamten GUI-Fenster verkn&uuml;pft anstatt mit einem einzelnen Control.
+
+Pro Control kann nur ein Kontextmen&uuml; erstellt werden. Wenn ein neues Kontextmen&uuml; erstellt werden soll, muss zuerst das schon existierende Kontextmen&uuml; gel&ouml;scht werden.
+
+Hinweis: Es k&ouml;nnen keine Kontextmen&uuml;s f&uuml;r Controls angelegt werden, die schon ein <b>System</b>-Kontextmen&uuml; haben, wie z.B. Textfelder (edit oder input controls).
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlCreateMenuItem, GUICtrlCreateMenu, GUICtrlGetHandle, GUICtrlSetState, GUICtrlDelete
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,35 @@
+###User Defined Function###
+_SQLite_FastEscape
+
+###Description###
+Escapt einen String oder eine Number zur Benutzung in einem SQLite Statement (Query) als TEXT
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_FastEscape($sString)
+
+
+###Parameters###
+@@ParamTable@@
+$sString
+	String oder Integer zum escapen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den escapten String zur&uuml;ck
+Fehler:	Gibt einen Leer-String zur&uuml;ck und setzt @error
+@error:	1 - Daten sind vom Typ kein String oder Integer
+@@End@@
+
+###Remarks###
+Der escapte String ist bereits von einfachen Anf&uuml;hrungszeichen (') umgeben.
+Zum Beispiel "It's a fine day" wird in "'It''s a fine day'" umgewandelt.
+F&uuml;r Bin&auml;re Daten nutzt man _SQLite_Encode()
+Um numerische Werte als diese zu speichern, benutzt man einfache Verkettung
+
+###Related###
+_SQLite_Encode, _SQLite_Escape
+
+###Example###
+@@IncludeExample@@

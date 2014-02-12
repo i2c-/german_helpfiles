@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlTab_GetImageList
+
+###Description###
+Ermittelt die Imagelist des Tab-Controls
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetImageList ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle zu der Imagelist
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTab_SetImageList
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_Date_Time_FileTimeToStr
+
+###Description###
+Wandelt die Dateizeit in einen Datum/Zeit String um.
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_FileTimeToStr(ByRef $tFileTime [, $bFmt = 0])
+
+###Parameters###
+@@ParamTable@@
+$tFileTime
+	$tagFILETIME Struktur
+$bFmt
+	[optional] 0 gibt es im Format mm/dd/yyyy hh:mm:ss zur&uuml;ck (Standard)
+	1 gibt es im Format yyyy/mm/dd hh:mm:ss zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+Gibt einen Datum/Zeit-String formatiert gem&auml;&szlig; $bFmt zur&uuml;ck
+
+###Remarks###
+Keine.
+
+###Related###
+$tagFILETIME
+
+###Example###
+@@IncludeExample@@

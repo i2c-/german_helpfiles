@@ -1,0 +1,38 @@
+###User Defined Function###
+_Net_Share_SessionDel
+
+###Description###
+Beendet eine Netzwerk-Session zwischen einem Server und einer Workstation
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_SessionDel([$sServer = "" [, $sClientName = "" [, $sUserName = ""]]])
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	[optional] Gibt den DNS- oder NetBIOS-Namen des Remote Servers an, auf dem die Funktion ausgef&uuml;hrt werden soll. Wenn dieser Parameter leer bleibt, wird der lokale Computer verwendet.
+$sClientName
+	[optional] Gibt den Computernamen des zu trennenden Clients an. Wenn nichts angegeben wird, werden alle Sessions des durch den Username-Parameter ermittelten Benutzers auf dem durch $sServer angegebenen Server gel&ouml;scht.
+$sUserName
+	[optional] Gibt den Namen des Benutzers an, dessen Session beendet werden soll. Wenn dieser Parameter leer bleibt, werden alle User-Sessions des durch $sClientName benannten Clients beendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nur Mitglieder der lokalen Gruppen Administratoren oder Server Operatoren k&ouml;nnen diese Funktion ausf&uuml;hren.
+ F&uuml;r diese Funktion muss man entweder $sClientName oder $sUserName (oder beides) angeben.
+
+###Related###
+_Net_Share_ShareDel
+
+###See Also###
+@@MsdnLink@@ NetSessionDel
+
+###Example###
+@@IncludeExample@@

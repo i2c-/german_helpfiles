@@ -1,0 +1,63 @@
+###Function###
+GUICtrlCreateEdit
+
+###Description###
+Erstellt ein (mehrzeiliges) Input-Control f&uuml;r die GUI.
+
+###Syntax###
+GUICtrlCreateEdit ( "text", left, top [, width [, height [, style = -1 [, exStyle = -1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+text
+	Die Beschriftung des Controls.
+left
+	Die linke Seite des Controls. Wird -1 verwendet, dann wird left mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+top
+	Die Oberkante des Controls. Wird -1 verwendet, dann wird top mit Hilfe von <a href="AutoItSetOption.htm#GUICoordMode">GUICoordMode </a> berechnet.
+width
+	[optional] Die Breite des Controls (voreingestellt ist die zuvor verwendete Breite).
+height
+	[optional] Die H&ouml;he des Controls (voreingestellt ist die zuvor verwendete H&ouml;he).
+style
+	[optional] Legt den Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Edit">Anhang GUI-Stile f&uuml;r Controls</a>.	
+		Standard ( -1) : $ES_WANTRETURN, $WS_VSCROLL, $WS_HSCROLL, $ES_AUTOVSCROLL, $ES_AUTOHSCROLL
+		Erzwungene Stile : $ES_MULTILINE, $WS_TABSTOP nur, wenn nicht $ES_READONLY
+exStyle
+	[optional] Legt den erweiterten Stil des Controls fest. Siehe <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+		Standard ( -1) : $WS_EX_CLIENTEDGE
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Identifikationsnummer (Control-ID) des neuen Controls zur&uuml;ck.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Wert des Controls zu erhalten, siehe <a href="GUICtrlRead.htm">GUICtrlRead()</a>.
+Um Informationen im Control zu setzen oder zu ver&auml;ndern, siehe <a href="GUICtrlUpdate Management.htm">GUICtrlUpdate...()</a>.
+
+Um weitere Stile zus&auml;tzlich zum Standardstil zu verwenden, benutzt man <b><a href="BitOR.htm">BitOR</a></b>($GUI_SS_DEFAULT_EDIT, newstyle,...).
+Um die oben angegebenen Werte verwenden zu k&ouml;nnen, muss #include <EditConstants.au3> in das Skript eingef&uuml;gt werden.
+
+Wenn ein Dateiname per drag & drop auf dieses Control gezogen werden soll, verwendet man zus&auml;tzlich den erweiterten Stil <a href="../appendix/GUIStyles.htm#Extended">WS_EX_ACCEPTFILES</a> in <a href="GUICreate.htm">GUICreate()</a> und setzt den Status auf $GUI_DROPACCEPTED.
+Mehrfachauswahlen von Dateien werden als getrennte Zeilen abgelegt.
+
+Als Standard f&uuml;r das Verhalten des Controls (bzgl. Gr&ouml;&szlig;e und/oder Position) bei Gr&ouml;&szlig;en&auml;nderung der GUI gilt $GUI_DOCKAUTO. (Gr&ouml;&szlig;e und Position werden entsprechend dem neuen Fenster angepasst.) 
+M&ouml;gliche Resizing-Parameter siehe <a href="GUICtrlSetResizing.htm">GUICtrlSetResizing</a>.
+
+Das Erstellen eines RichEdit-Controls ist zu kompliziert, deshalb wird es nicht als Basis Control behandelt.
+Hierf&uuml;r muss man <a href="../libfunctions/_GUICtrlRichEdit_Create.htm">_GUICtrlRichEdit_Create()</a> anwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICoordMode (Option), GUICtrlSetData, GUICtrlSetState, GUICtrlSetLimit, GUIGetMsg, GUICtrlRead
+
+
+###Example###
+@@IncludeExample@@

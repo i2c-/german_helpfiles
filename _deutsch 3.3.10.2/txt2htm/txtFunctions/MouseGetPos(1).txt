@@ -1,0 +1,41 @@
+###Function###
+MouseGetPos
+
+###Description###
+Ermittelt die aktuelle Position des Mauscursors.
+
+###Syntax###
+MouseGetPos ( [dimension] )
+
+
+###Parameters###
+@@ParamTable@@
+dimension
+	[optional] Ein Wert, welcher festlegt wie der R&uuml;ckgabewert zur&uuml;ckgegeben werden soll. Siehe R&uuml;ckgabewert.
+@@End@@
+
+###ReturnValue###
+@@ParamTable@@
+Dimension 
+	Werte
+<i>Nichts</i>
+	Gibt ein <b>Array</b> mit 2 Elementen zur&uuml;ck, die die Mauskoordinaten beinhalten: $aArray[0] = X-Koordinate (horizontal), $aArray[1] = Y-Koordinate (vertikal)
+0
+	Gibt die X-Koordinate als Integer (Ganzzahl) zur&uuml;ck.
+1
+	Gibt die Y-Koordinate als Integer (Ganzzahl) zur&uuml;ck.
+@@End@@
+
+Ist der "Dimension"-Wert keine Zahl, wird @error auf 1 gesetzt.
+
+
+###Remarks###
+Siehe MouseCoordMode f&uuml;r die Einstellung zu absoluter/relativer Positionierung. Wenn die Position relativ bestimmt wird, k&ouml;nnen auch negative Werte auftreten.
+
+
+###Related###
+MouseClick, MouseClickDrag, MouseMove, MouseCoordMode (Option), MouseDown, MouseGetCursor, MouseUp, MouseWheel, PixelGetColor
+
+
+###Example###
+@@IncludeExample@@

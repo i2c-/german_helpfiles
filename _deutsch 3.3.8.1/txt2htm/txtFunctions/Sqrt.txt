@@ -1,0 +1,36 @@
+###Function###
+Sqrt
+
+###Description###
+Berechnet die Quadratwurzel einer Zahl
+
+###Syntax###
+Sqrt ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein positiver Ausdruck, um dessen Quadratwurzel zu bekommen.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Quadratwurzel zur&uuml;ck.
+Fehler:	Gibt -1 zur&uuml;ck, #IND falls Parameter negativ ist.
+@@End@@
+
+
+###Remarks###
+Um die n-te Wurzel zu berechnen, benutzt man den Potenzier-Operator:  x ^ (1/n)
+
+MsgBox(0,"Die Kubikwurzel von 27 ist", 27 ^ (1/3) )
+
+
+###Related###
+Keine
+
+
+###Example###
+@@IncludeExample@@

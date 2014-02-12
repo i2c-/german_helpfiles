@@ -1,0 +1,59 @@
+###User Defined Function###
+_GUICtrlDTP_SetFormat
+
+###Description###
+Setzt die Anzeige basierend auf einem gegebenen Formatstrings
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_SetFormat ( $hWnd, $sFormat )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sFormat
+	String welcher das gew&uuml;nschte Format definiert. Falls dies auf leer gesetzt wird, so wird der Standard Formatstring f&uuml;r den aktuellen Stil zur&uuml;ckgesetzt. Man kann folgende Formatstrings verwenden:
+		"d" - Tag mit einer oder zwei Ziffern
+		"dd" - Tag mit zwei Ziffern. Tage mit einer Ziffer werden mit einer 0 aufgef&uuml;llt
+		"ddd" - Die dreistellige Abk&uuml;rzung f&uuml;r den Wochentag
+		"dddd" - Der komplette Name des Wochentages
+		"h" - Die Stunde mit einer oder zwei Ziffern im 12-Stunden Format
+		"hh" - Die Stunde mit zwei Ziffern im 12-Stunden Format
+		"H" - Die Stunde mit einer oder zwei Ziffern im 24-Stunden Format
+		"HH" - Die Stunde mit zwei Ziffern im 24-Stunden Format
+		"m" - Minute mit einer oder zwei Ziffern
+		"mm" - Minute mit zwei Ziffern
+		"M" - Montatsnummer mit einer oder zwei Ziffern
+		"MM" - Montatsnummer mit zwei Ziffern
+		"MMM" - Die dreistellige Abk&uuml;rzung f&uuml;r den Monat
+		"MMMM" - Der komplette Name des Monats
+		"t" - Die einstellige Abk&uuml;rzung f&uuml;r AM/PM
+		"tt" - Die zweistellige Abk&uuml;rzung f&uuml;r AM/PM
+		"yy" - Die letzten zwei Ziffern des Jahres
+		"yyyy" - Das komplette Jahr
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Es ist akzeptabel zus&auml;tzliche Zeichen innerhalb des Formatstrings einzubeziehen um eine bessere Anzeige zu erhalten.
+Allerdings muss jedes nicht dem Format entsprechendes Zeichen mit ' eingeschlossen werden.
+Zum Beispiel: der Formatstring: "'Heute ist:
+'hh':'m':'s ddddMMMdd', 'yyy" w&uuml;rde "Heute ist: 04:22:31 Tuesday Mar 23, 1996" ausgeben. 
+Es ist folgendes zu beachten: Ein DTP Control verfolgt lokale &Auml;nderungen, wenn der Standard Formatstring verwendet wird. Falls ein benutzerdefinierter Formatstring verwendet wird, wird es bei lokalen &Auml;nderungen nicht angepasst.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

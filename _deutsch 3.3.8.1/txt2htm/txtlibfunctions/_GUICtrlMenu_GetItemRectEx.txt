@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemRectEx
+
+###Description###
+Ermittelt das begrenzende Rechteck f&uuml;r das festgelegte Men&uuml;item
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemRectEx($hWnd, $hMenu, $iItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Fenster, welches das Men&uuml; enth&auml;lt
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	0-basierende Position des Men&uuml;items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	tagRECT Struktur
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_GetItemRect
+
+###See Also###
+@@MsdnLink@@ GetMenuItemRect
+
+###Example###
+@@IncludeExample@@

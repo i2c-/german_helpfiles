@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMinReqHeight
+
+###Description###
+Ermittelt die minimale H&ouml;he, die notwendig ist, um einen kompletten Monat darzustellen.
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMinReqHeight($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	minimale H&ouml;he in Pixel
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_GetMinReqRect, _GUICtrlMonthCal_GetMinReqWidth
+
+###Example###
+@@IncludeExample@@

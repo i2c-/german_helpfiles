@@ -1,0 +1,76 @@
+###User Defined Function###
+_WinAPI_LoadImage
+
+###Description###
+L&auml;dt ein Icon, Cursor oder Bitmap
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadImage($hInstance, $sImage, $iType, $iXDesired, $iYDesired, $iLoad)
+
+###Parameters###
+@@ParamTable@@
+$hInstance
+	Identifiziert die Instanz des Moduls, welches das Image enth&auml;lt. Um ein OEM-Image
+		zu laden, ist dieser Parameter auf Null zu setzen.
+$sImage
+	Identifiziert das zu ladende Image. Ist der Parameter $hInstance nicht 0 und der Parameter $iLoad enth&auml;lt
+		nicht $LR_LOADFROMFILE, dann ist $sImage einen String, die den Namen der Image-Ressource aus dem Modul in
+		$hInstance enth&auml;lt. Ist $hInstance 0 und $LR_LOADFROMFILE nicht festgelegt, ist in das niederwertige Wort (WORD)
+		dieses Parameters der Identifizierer des zu ladenden OEM-Images einzusetzen.
+$iType
+	Gibt den zu ladenden Typ des Images an. Dieser Parameter kann einer der folgenden Werte sein:
+		$IMAGE_BITMAP - L&auml;dt eine Bitmap
+		$IMAGE_CURSOR - L&auml;dt einen Cursor
+		$IMAGE_ICON - L&auml;dt ein Icon
+$iXDesired
+	Legt die Breite (in Pixel) des Icons oder Cursors fest. Ist diese 0 und $iLoad enth&auml;lt LR_DEFAULTSIZE, benutzt
+	diese Funktion die in SM_CXICON oder SM_CXCURSOR vom System vorgegebenen Abmessungen. Ist dieser Parameter 0 und LR_DEFAULTSIZE ist nicht
+	in $iLoad gesetzt, wird die originale Breite der Ressource genutzt.
+$iYDesired
+	Legt die H&ouml;he (in Pixel) des Icons oder Cursors fest. Ist diese 0 und $iLoad enth&auml;lt LR_DEFAULTSIZE, benutzt
+	diese Funktion die in SM_CYICON oder SM_CYCURSOR vom System vorgegebenen Abmessungen. Ist dieser Parameter 0 und LR_DEFAULTSIZE ist nicht
+	in $iLoad gesetzt, wird die originale H&ouml;he der Ressource genutzt.
+$iLoad
+	Legt einen oder eine Kombination der folgenden Werte fest:
+		$LR_DEFAULTCOLOR - Das Standard-Flag
+		$LR_CREATEDIBSECTION - Wenn der $iType-Parameter $IMAGE_BITMAP angegeben ist, wird eine DIB-Bitmap anstelle einer 
+		kompatiblen Bitmap (DDB) zur&uuml;ckgegeben. Dies ist n&uuml;tzlich, wenn die geladene Bitmap nicht an den Farbraum des Anzeigeger&auml;tes angepasst werden soll.
+		$LR_DEFAULTSIZE - Benutzt die vom System vorgegebenen Abmessungen f&uuml;r H&ouml;he oder Breite des Cursors oder Icons, wenn
+		die Werte in $iXDesired oder $iYDesired auf 0 gesetzt sind. Ist dieses Flag nicht angegeben und $iXDesired und $iYDesired
+		sind auf 0 gesetzt, wird die originale Gr&ouml;&szlig;e der Ressource genutzt. Enth&auml;lt die Ressource mehrfache Images, nutzt
+		die Funktion die Gr&ouml;&szlig;e des ersten Images.
+		$LR_LOADFROMFILE - L&auml;dt das Image aus der Datei, das in $sImage festgelegt wurde. Wenn dieses Flag nicht gesetzt ist,
+		dann ist $sImage der Name der Ressource.
+		$LR_LOADMAP3DCOLORS - Durchsucht die Farbtabelle f&uuml;r das Image und ersetzt die folgenden Graustufen mit
+		der entsprechenden 3D-Farbe:
+		 Dunkelgrau: RGB(128,128,128) COLOR_3DSHADOW
+		 Grau: RGB(192,192,192) COLOR_3DFACE
+		 Hellgrau: RGB(223,223,223) COLOR_3DLIGHT
+		$LR_LOADTRANSPARENT - Nimmt den Farbwert des ersten Pixels des Bildes und ersetzt den entsprechenden
+		Eintrag in der Farbtabelle mit der Standardfarbe f&uuml;r Fenster. Alle Pixel im Bild, die diesen Eintrag nutzen,
+		erhalten die Standardfarbe f&uuml;r Fenster. Dieser Wert beeinflusst nur Bilder, die eine dementsprechende Farbtabelle besitzen.
+		Wenn $iLoad beides enth&auml;lt, also $LR_LOADTRANSPARENT und $LR_LOADMAP3DCOLORS, erh&auml;lt $LRLOADTRANSPARENT den Vorzug.
+		Trotzdem wird der Farbtabelleneintrag durch COLOR_3DFACE ersetzt, nicht durch COLOR_WINDOW.
+		$LR_MONOCHROME - L&auml;dt das Image monochrom (Schwarz/Wei&szlig;)
+		$LR_SHARED - Teilt das Imagehandle, sollte das Bild mehrfach geladen werden. Ist $LR_SHARED nicht gesetzt,
+		wird ein zweiter Aufruf von LoadImage f&uuml;r dieselbe Ressource das Bild erneut laden und ein anderes Handle zur&uuml;ckgeben. 
+		$LR_SHARED darf nicht f&uuml;r Bilder benutzt werden, die keine Standardabmessungen haben, deren Gr&ouml;&szlig;e nach dem Laden eventuell ge&auml;ndert
+		werden soll, oder die aus einer Bilddatei geladen werden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem Bild
+Fehler:	0
+@@End@@
+
+###Remarks###
+Ben&ouml;tigt die Constants.au3 f&uuml;r vordefinierte Konstanten.
+Wird die Bitmap nicht mehr ben&ouml;tigt, sollte diese Ressource, so wie jedes GDI-Objekt, mit _WinAPI_DeleteObject wieder
+freigegeben werden.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ LoadImage

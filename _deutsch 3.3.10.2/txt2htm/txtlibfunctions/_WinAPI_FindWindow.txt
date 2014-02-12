@@ -1,0 +1,39 @@
+###User Defined Function###
+_WinAPI_FindWindow
+
+###Description###
+Ermittelt das Handle zu dem Top-Level Fenster des entsprechenden Klassen- und Fensternamen
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_FindWindow ( $sClassName, $sWindowName )
+
+
+###Parameters###
+@@ParamTable@@
+$sClassName
+	Ein String, der den Klassennamen oder ein ATOM angibt welches den String des Klassennamens identifiziert. Ist
+	dieser Parameter ein ATOM, muss es ein globales ATOM sein, erzeugt durch einen Aufruf der GlobalAddAtom Funktion. Das
+	ATOM, ein 16-bit Wert, muss in dem Low-Order Wort (LOWORD) vom $sClassName String und das High-Order Wort (HIWORD)
+	muss Null sein.
+$sWindowName
+	Ein String der den Fensternamen festlegt. Ist dieser Parameter leer, werden alle Fensternamen der Klasse abgeglichen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem Fenster
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+Ein ATOM ist ein 16-bit Integer (short int) und wird einem String in einer ATOM-Tabelle zugeordnet,
+sodass dieser String &uuml;ber das ATOM eindeutig identifiziert werden kann.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ FindWindow

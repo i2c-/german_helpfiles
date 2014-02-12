@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlSlider_GetThumbLength
+
+###Description###
+Ermittelt die L&auml;nge des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetThumbLength($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die L&auml;nge des Sliders in Pixel
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetThumbLength
+
+###Example###
+@@IncludeExample@@

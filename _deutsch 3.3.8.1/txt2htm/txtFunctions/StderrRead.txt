@@ -1,0 +1,37 @@
+###Function###
+StderrRead
+
+###Description###
+Liest eine Anzahl von Zeichen aus einem STDERR-Stream eines zuvor gestarteten Child-Prozesses ein.
+
+###Syntax###
+StderrRead ( process_id [, peek = false [, binary = false]] )
+
+###Parameters###
+@@ParamTable@@
+process_id
+	Die Prozess-ID eines Child-Prozesses, wie aus einem vorigen Aufruf von Run zur&uuml;ckgegeben.
+peek
+	[optional] Wenn True, werden die von der Funktion eingelesenen Zeichen nicht aus dem Stream entfernt.
+binary
+	[optional] Wenn True, werden die Daten als Bin&auml;rwerte, wenn False als Text gelesen (Voreinstellung ist Text).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die eingelesenen Daten zur&uuml;ck. @extended gibt die Anzahl der gelesenen Bytes zur&uuml;ck.
+Fehler:	Setzt @error ungleich Null wenn: EOF wurde erreicht, STDERR wurde an diesen Prozess nicht weitergeleitet oder ein anderer Fehler ist aufgetreten.
+@@End@@
+
+
+###Remarks###
+StderrRead liest aus dem Konsolen-Standard-Error-Stream eines Child-Prozesses, der normalerweise von Konsolen-Applikationen genutzt wird, um Fehler auf dem Bildschirm auszugeben. Solange die Funktion aus dem Child-Prozess-Stream lesen m&ouml;chte, muss der STD-I/O-Parameter das $STDERR_CHILD-Flag (Integer 4) enthalten, damit diese Funktion richtig arbeitet (siehe die <a href="Run.htm">Run</a> Funktion).
+StderrRead wartet nicht, sondern kehrt umgehend zur&uuml;ck. Um alle Daten aus dem Stream zu lesen, muss StderrRead In einer Schleife aufgerufen werden.
+Wenn StderrRead mit peek = True aufgerufen wird, dann wird StderrRead auf den Stream nur einen kurzen Blick werfen ("peek at"), anstatt ihn auszulesen, und gibt die Zeichen zur&uuml;ck, die im Stream verf&uuml;gbar sind. Beachte, dass alle Zeichen nach einem "peek" noch im Stream vorhanden sind und beim n&auml;chsten Lesevorgang erneut zur&uuml;ckgegeben werden.
+Normalerweise werden die Daten als Text zur&uuml;ckgegeben, mit der Binary-Option k&ouml;nnen die Daten als Bin&auml;rwert gelesen werden.
+
+###Related###
+StdoutRead, StdinWrite, StdioClose, Run, RunAs
+
+###Example###
+@@IncludeExample@@

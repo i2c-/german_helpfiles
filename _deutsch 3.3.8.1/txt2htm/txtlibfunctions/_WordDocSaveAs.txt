@@ -1,0 +1,74 @@
+###User Defined Function###
+_WordDocSaveAs
+
+###Description###
+Speichert das aktuelle Dokument mit einem bestimmten Namen und Format.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocSaveAs(ByRef $o_object [, $s_FilePath = "" [, $i_Format = 0 [, $b_ReadOnlyRecommended = 0 [, $b_AddToRecentFiles = 0 [, $b_LockComments = 0 [, $s_Password = "" [, $s_WritePassword = ""]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt-Variable einer Word.Application, Dokumentobjekt
+$s_FilePath
+	[optional] Der gesamte Pfad, unter dem das Dokument gespeichert werden soll. (Siehe Bemerkungen)
+	"" = (Standard) Wenn das Dokument nie gespeichert wurde, wird der aktuelle Name verwendet (z.B. Dokument1.doc)
+$i_Format
+	[optional] Das Format, in dem das Dokument gespeichert werden soll.
+	0 = (Standard) Microsoft Word Format
+	1 = Microsoft Word Template Format
+	2 = Microsoft Windows Text Format
+	3 = Microsoft Windows Text Format, bei dem die Zeilenumbr&uuml;che erhalten bleiben
+	4 = Microsoft DOS Text Format
+	5 = Microsoft DOS Text Format, bei dem die Zeilenumbr&uuml;che erhalten bleiben
+	6 = Rich Text Format (RTF)
+	7 = Unicode Text Format oder dekodiertes Text Format
+	8 = Standard HTML Format
+	9 = Web Archiv Format
+	10 = Gefiltertes HTML Format
+	11 = Extensible Markup Language (XML) Format
+$b_ReadOnlyRecommended
+	[optional] Gibt an, ob der von Microsoft Word vorgeschlagene nur-lesen Modus angezeigt werden soll, wenn das Dokument ge&ouml;ffnet wird.
+	0 = (Standard) nur-lesen nicht verwenden
+	1 = nur-lesen verwenden
+$b_AddToRecentFiles
+	[optional] Gibt an, ob der Datei-Name in der Liste der zuletzt verwendeten Dokumente angezeigt werden soll.
+	0 = (Standard) Nicht hinzuf&uuml;gen
+	1 = Hinzuf&uuml;gen
+$b_LockComments
+	[optional] Gibt an, ob das Dokument f&uuml;r Kommentare gesperrt werden soll.
+	0 = (Standard) Nicht f&uuml;r Kommentare sperren
+	1 = F&uuml;r Kommentare sperren
+$s_Password
+	[optional] Ein Passwort-String zum &Ouml;ffnen des Dokumentes (Siehe Bemerkungen)
+$s_WritePassword
+	[optional] Ein Passwort-String zum Speichern des Dokumentes. (Siehe Bemerkungen)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Daten-Typ
+	$_WordStatus_InvalidObjectType = Ung&uuml;ltiger Objekt-Typ
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Wenn ein Dokument mit dem angegebenen Namen schon existiert, wird es &uuml;berschrieben, ohne den Benutzer vorher zu fragen.
+Falls die Datei nicht gespeichert werden konnte, stoppt das Skript ohne dass WordErrorHandler registriert wurde.
+
+Die Verwendung von fest programmierten Passw&ouml;rtern in den Anwendungen ist zu vermeiden. Wenn in der Anwendung ein Passwort ben&ouml;tigt wird, ist der Benutzer nach dem Passwort zu fragen und man schreibt es in eine Variable und benutzt dieses dann in dem Skript.
+
+
+###Related###
+_WordDocAdd, _WordDocClose, _WordDocOpen, _WordDocSave
+
+
+###Example###
+@@IncludeExample@@

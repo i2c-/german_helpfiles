@@ -1,0 +1,24 @@
+###User Defined Function###
+_Date_Time_GetLocalTime
+
+###Description###
+Gibt die lokale Systemzeit / das Systemdatum zur&uuml;ck
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_GetLocalTime()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt die $tagSYSTEMTIME Struktur zur&uuml;ck die die aktuelle lokale Systemzeit und das Systemdatum enth&auml;lt
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_SetLocalTime, $tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

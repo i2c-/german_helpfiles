@@ -1,0 +1,41 @@
+###User Defined Function###
+_WinAPI_GetDlgItem
+
+###Description###
+Ermittelt das Handle des angegebenen Controls in einem Dialogfenster
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetDlgItem ( $hWnd, $iItemID )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle eines Dialogfensters
+$iItemID
+	Gibt den Identifizierer des Controls an, dessen Handle ermittelt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Fensterhandle zu dem Control
+Fehler:	0. Es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten.
+@@End@@
+
+
+###Remarks###
+GetDlgItem kann bei jedem Parent-Child Fensterpaar angewendet werden, nicht nur ausschlie&szlig;lich in Dialogfenstern.
+Soweit der hWnd Parameter ein Parent-Fenster angibt und das Child-Fenster einen eindeutigen Identifizierer besitzt,
+gibt diese Funktion ein g&uuml;ltiges Fensterhandle zu dem Child-Fenster zur&uuml;ck
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ GetDlgItem
+
+
+###Example###
+@@IncludeExample@@

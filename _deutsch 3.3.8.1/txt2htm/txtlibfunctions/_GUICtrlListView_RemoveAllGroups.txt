@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlListView_RemoveAllGroups
+
+###Description###
+Entfernt alle Gruppen eines Controls
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_RemoveAllGroups($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows XP.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_RemoveGroup
+
+###Example###
+@@IncludeExample@@

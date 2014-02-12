@@ -1,0 +1,32 @@
+###User Defined Function###
+_GDIPlus_GraphicsReleaseDC
+
+###Description###
+Gibt den Ger&auml;tekontext des Grafik-Objekts frei
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsReleaseDC($hGraphics, $hDC)
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$hDC
+	Handle zu dem Ger&auml;tekontext der Grafik
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_GraphicsGetDC
+
+###See Also###
+@@MsdnLink@@ GdipReleaseDC

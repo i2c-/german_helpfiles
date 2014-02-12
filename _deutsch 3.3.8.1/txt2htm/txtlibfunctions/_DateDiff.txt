@@ -1,0 +1,45 @@
+###User Defined Function###
+_DateDiff
+
+###Description###
+Gibt die Differenz zwischen Anfangs- und Enddatum in der gew&auml;hlten Einheit zur&uuml;ck.
+
+###Syntax###
+#include <Date.au3>
+_DateDiff($sType, $sStartDate, $sEndDate)
+
+###Parameters###
+@@ParamTable@@
+$sType
+	Ausw&auml;hlen, wie die Differenz zur&uuml;ckgegeben werden soll:
+		D - in Tagen
+		M - in Monaten
+		Y - in Jahren
+		w - in Wochen
+		h - in Stunden
+		n - in Minuten
+		s - in Sekunden
+$sStartDate
+	Startdatum im Format "YYYY/MM/DD[ HH:MM:SS]" 
+$sEndDate
+	Enddatum im Format "YYYY/MM/DD[ HH:MM:SS]" 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Differenz zwischen Anfangs- und Enddatum.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @Error:
+	0 - Kein Fehler.
+	1 - $sType ung&uuml;ltig
+	2 - $sStartDate ung&uuml;ltig
+	3 - $sEndDate ung&uuml;ltig
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_DateAdd, _DateTimeSplit, _DateToDayOfWeek, _DateToDayOfWeekISO, _DateToDayValue, _DayValueToDate
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMinReqRect
+
+###Description###
+Ermittelt die minimale Gr&ouml;&szlig;e um einen kompletten Monat darzustellen
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMinReqRect ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagRECT Struktur zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetMinReqHeight, _GUICtrlMonthCal_GetMinReqWidth, $tagRECT
+
+
+###Example###
+@@IncludeExample@@

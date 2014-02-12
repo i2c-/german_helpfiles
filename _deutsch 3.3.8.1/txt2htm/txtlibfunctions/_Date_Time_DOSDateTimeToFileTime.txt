@@ -1,0 +1,35 @@
+###User Defined Function###
+_Date_Time_DOSDateTimeToFileTime
+
+###Description###
+Konvertiert ein MS-DOS Datum/Zeit in ein Datei Datum/Zeit
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_DOSDateTimeToFileTime($iFatDate, $iFatTime)
+
+###Parameters###
+@@ParamTable@@
+$iFatDate
+	MS-DOS Datum, verpackt wie folgt:
+		Bits 0- 4 Tag des Monats (1–31)
+		Bits 5- 8 Monat (1 = Januar, 2 = Februar und so weiter)
+		Bits 9-15 Offset des Jahres von 1980 aus gesehen (es ist 1980 hinzuzuaddieren, um das aktuelle Jahr zu bekommen)
+$iFatTime
+	MS-DOS Datum, verpackt wie folgt:
+		Bits 0- 4 Sekunde geteilt durch 2
+		Bits 5-10 Minute (0–59)
+		Bits 11-15 Stunde (0–23 im 24h-Format)
+@@End@@
+
+###ReturnValue###
+Gibt die $tagFILETIME Struktur zur&uuml;ck, die das Dateidatum angibt
+
+###Remarks###
+Keine.
+
+###Related###
+_Date_Time_FileTimeToDosDateTime, $tagFILETIME
+
+###Example###
+@@IncludeExample@@

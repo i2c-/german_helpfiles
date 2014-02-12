@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_SetSelectionMark
+
+###Description###
+Setzt die Markierung in einem Control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetSelectionMark($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index der neuen Markierung. Falls -1, wird die Markierung entfernt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die vorherige Markierung
+Fehler:	-1 falls keine vorherige Markierung existiert
+@@End@@
+
+###Remarks###
+Die Markierung ist ein Item Index von dem aus eine Mehrfachauswahl beginnt. Die Nachricht hat keinen Einfluss auf den Status eines Items.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetSelectionMark
+
+###Example###
+@@IncludeExample@@

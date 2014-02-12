@@ -1,0 +1,34 @@
+###User Defined Function###
+_Net_Share_FileClose
+
+###Description###
+Erzwingt, dass die Ressource geschlossen wird
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_FileClose($sServer, $iFileID)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Spezifiziert den DNS oder NetBIOS Namen des Remote-Servers auf dem die Funktion ausgef&uuml;hrt wird. Wenn
+	der Parameter leer ist, wird der lokale Computer benutzt.
+$iFileID
+	Spezifiziert die File-ID der ge&ouml;ffneten Ressource um sie zu schliessen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nur Mitglieder der Lokalen-Gruppe Administratoren oder Server-Operater k&ouml;nnen diese Funktion ausf&uuml;hren
+###Related###
+
+###See Also###
+@@MsdnLink@@ NetFileClose
+
+###Example###
+@@IncludeExample@@

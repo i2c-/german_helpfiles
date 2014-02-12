@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_CreateFontIndirect
+
+###Description###
+Erzeugt eine logische Schriftart mit spezifischen Eigenschaften
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateFontIndirect($tLogFont)
+
+###Parameters###
+@@ParamTable@@
+$tLogFont
+	$tagLOGFONT Struktur welche die Schrifteigenschaften definiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einer logischen Schriftart
+Fehler:	0
+@@End@@
+
+###Remarks###
+Diese Funktion erzeugt eine "logische" Schrift mit den in der tagLOGFONT Struktur festgelegten Eigenschaften. Wenn diese 
+Schrift in der SelctObject Funktion gew&auml;hlt wird, versucht der GDI Font Mapper die logische Schrift mit einer existierenden 
+physikalischen Schrift abzugleichen. Falls keine genaue &Uuml;bereinstimmung gefunden wird, stellt der Font Mapper eine alternative 
+Schriftart bereit, welche den gew&uuml;nschten Eigenschaften bestm&ouml;glichst entspricht.
+
+###Related###
+$tagLOGFONT
+
+###See Also###
+@@MsdnLink@@ CreateFontIndirect

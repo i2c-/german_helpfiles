@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetCalendarCount
+
+###Description###
+Ermittelt die Anzahl von Kalendern die momentan im Kalender Control dargestellt werden
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetCalendarCount($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Anzahl von Kalendern die momentan im Kalender Control dargestellt werden. Die maximale Anzahl von erlaubten Kalendern ist 12
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

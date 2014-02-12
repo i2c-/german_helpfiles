@@ -1,0 +1,48 @@
+###User Defined Function###
+_Date_Time_SetTimeZoneInformation
+
+###Description###
+Setzt die aktuellen Zeitzonen Einstellungen
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SetTimeZoneInformation($iBias, $sStdName, $tStdDate, $iStdBias, $sDayName, $tDayDate, $iDayBias)
+
+###Parameters###
+@@ParamTable@@
+$iBias
+	Der gegenw&auml;rtige Bias f&uuml;r die Lokalzeit-Anpassung auf diesem Computer. Der Bias ist die Differenz in Minutenzwischen der Universal Time Coordinated (UTC) und der lokalen Zeit. Alle Umsetzungen zwischen UTC und der lokalen Zeit verwenden die folgende Formel: UTC = lokale Zeit + Bias
+$sStdName
+	Die Beschreibung der Standardzeit
+$tStdDate
+	Eine $tagSYSTEMTIME Struktur, die ein Datum und eine lokale Zeit beinhaltet,
+		wenn der &Uuml;bergang von der Sommerzeit zur Standardzeit erfolgt.
+$iStdBias
+	Der w&auml;hrend der Standardzeit f&uuml;r Anpassungen der lokalen Zeit zu verwendende Biaswert. Um den w&auml;hrend der Standardzeit zu verwendenden Bias zu bilden, ist $iStdBias zu dem Biaswert zu addieren. F&uuml;r die meisten Zeitzonen ist dieser Wert 0.
+$sDayName
+	Die Beschreibung der Sommerzeit
+$tDayDate
+	Eine $tagSYSTEMTIME Struktur, die ein Datum und eine lokale Zeit beinhaltet,
+		wenn der &Uuml;bergang von der Standardzeit zur Sommerzeit erfolgt.
+$iDayBias
+	Der w&auml;hrend der Sommerzeit f&uuml;r Anpassungen der lokalen Zeit zu verwendende Biaswert. Um den w&auml;hrend der Sommerzeit zu verwendenden Bias zu bilden, ist $iDayBias zu dem Biaswert zu addieren. F&uuml;r die meisten Zeitzonen ist dieser Wert -60.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Um den richtigen Tag im Monat auszuw&auml;hlen ist wYear auf 0 zu setzen, wHour und wMinute auf die Zeit&auml;nderung, wDayOfWeek auf den zugeh&ouml;rigen Wochentag und wDay die Anzahl der Tage innerhalb des Monats. (1 bis 5, wobei 5 das letzte Auftreten w&auml;hrend des Monats darstellt falls dieser Wochentag wengier als 5 Mal auftritt).
+
+Anmerkung:
+Um 02:00 auf den ersten Sonntag im April festzulegen sind folgende Werte notwendig: wHour = 2, wMonth = 4, wDayOfWeek = 0, wDay = 1. 
+Um 02:00 auf den letzten Donnerstag im Oktober festzulegen sind folgende Werte notwendig: wHour = 2, wMonth = 10, wDayOfWeek = 4, wDay = 5. 
+
+###Related###
+_Date_Time_GetTimeZoneInformation, $tagSYSTEMTIME
+
+###Example###
+@@IncludeExample@@

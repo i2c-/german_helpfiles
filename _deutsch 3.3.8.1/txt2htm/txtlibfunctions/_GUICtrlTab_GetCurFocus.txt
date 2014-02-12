@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlTab_GetCurFocus
+
+###Description###
+Gibt den Index des Items zur&uuml;ck, welches den Fokus im Tab-Control besitzt
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_GetCurFocus($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Der 0-basierende Index des Tabitems, welcher den Fokus hat
+Fehler:	-1
+
+###Remarks###
+Das Item, welches den Fokus hat, kann ein anderes Items sein als das markierte Item
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTab_SetCurFocus
+
+###Example###
+@@IncludeExample@@

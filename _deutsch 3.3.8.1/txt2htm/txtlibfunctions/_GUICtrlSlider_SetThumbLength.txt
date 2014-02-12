@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_SetThumbLength
+
+###Description###
+Setzt die L&auml;nge des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetThumbLength($hWnd, $iLength)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iLength
+	L&auml;nge des Sliders in Pixel
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Diese Funktion wird ignoriert, falls die Trackbar den Stil $TBS_FIXEDLENGTH nicht besitzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_GetThumbLength
+
+###Example###
+@@IncludeExample@@

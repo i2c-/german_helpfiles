@@ -1,0 +1,19 @@
+###Structure Name###
+$tagGDIPSTARTUPOUTPUT
+
+###Description###
+$tagGDIPSTARTUPOUTPUT Struktur
+
+###Syntax###
+Global Const $tagGDIPSTARTUPOUTPUT = "ptr HookProc;ptr UnhookProc"
+
+###Fields###
+@@ParamTable@@
+HookProc
+	Erh&auml;lt einen Zeiger zu einer "Hook"-Funktion.
+UnhookProc
+	Erh&auml;lt einen Zeiger zu einer "UnHook"-Funktion.
+@@End@@
+
+###Remarks###
+Keine.

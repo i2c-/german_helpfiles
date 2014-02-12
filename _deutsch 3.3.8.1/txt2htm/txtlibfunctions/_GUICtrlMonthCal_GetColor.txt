@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetColor
+
+###Description###
+Ermittelt eine Farbe des Controls
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetColor($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	legt fest, welche Farbe des Monatskalenders ermittelt werden soll:
+		$MCSC_BACKGROUND - Hintergrundfarbe, die zwischen den Monaten dargestellt wird
+		$MCSC_TEXT - Farbe, die verwendet wird, um Text innerhalb eines Monats darzustellen
+		$MCSC_TITLEBK - Hintergrundfarbe, die in dem Titel des Kalenders dargestellt wird
+		$MCSC_TITLETEXT - Farbe, die verwendet wird, um Text innerhalb des Kalendertitels darzustellen
+		$MCSC_MONTHBK - Hintergrundfarbe, die innerhalb des Monats dargestellt wird
+		$MCSC_TRAILINGTEXT - Farbe f&uuml;r den Text des vorherigen und den folgenden Tag
+@@End@@
+
+###ReturnValue###
+Erfolg:	angezeigte Farbe
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMonthCal_SetColor
+
+###Example###
+@@IncludeExample@@

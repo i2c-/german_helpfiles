@@ -1,0 +1,126 @@
+###User Defined Function###
+_WinAPI_CreateFont
+
+###Description###
+Erstellt eine logische Schriftart mit der angegebenen Charakteristik
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateFont($nHeight, $nWidth [, $nEscape = 0 [, $nOrientn = 0 [, $fnWeight = $FW_NORMAL [, $bItalic = False [, $bUnderline = False [, $bStrikeout = False [, $nCharset = $DEFAULT_CHARSET [, $nOutputPrec = $OUT_DEFAULT_PRECIS [, $nClipPrec = $CLIP_DEFAULT_PRECIS [, $nQuality = $DEFAULT_QUALITY [, $nPitch = 0 [, $szFace = 'Arial']]]]]]]]]]]])
+
+###Parameters###
+@@ParamTable@@
+$nHeight
+	H&ouml;he der Schriftart
+$nWidth
+	Mittlere Zeichenbreite
+$nEscape
+	[optional] Fluchtwinkel
+$nOrientn
+	[optional] Grundlinienausrichtung
+$fnWeight
+	[optional] Schriftgewicht, es k&ouml;nnen folgende Konstanten verwendet werden:
+		$FW_DONTCARE - 0
+		$FW_THIN - 100
+		$FW_EXTRALIGHT - 200
+		$FW_LIGHT - 300
+		$FW_NORMAL - 400
+		$FW_MEDIUM - 500
+		$FW_SEMIBOLD - 600
+		$FW_BOLD - 700
+		$FW_EXTRABOLD - 800
+		$FW_HEAVY - 900
+$bItalic
+	[optional] kursiv
+$bUnderline
+	[optional] unterstrichen
+$bStrikeout
+	[optional] durchgestrichen
+$nCharset
+	[optional] Legt den Zeichensatz fest. Folgende Werte sind vordefiniert:
+		$ANSI_CHARSET - 0
+		$BALTIC_CHARSET - 186
+		$CHINESEBIG5_CHARSET - 136
+		$DEFAULT_CHARSET - 1
+		$EASTEUROPE_CHARSET - 238
+		$GB2312_CHARSET - 134
+		$GREEK_CHARSET - 161
+		$HANGEUL_CHARSET - 129
+		$MAC_CHARSET - 77
+		$OEM_CHARSET - 255
+		$RUSSIAN_CHARSET - 204
+		$SHIFTJIS_CHARSET - 128
+		$SYMBOL_CHARSET - 2
+		$TURKISH_CHARSET - 162
+		$VIETNAMESE_CHARSET - 163
+$nOutputPrec
+	[optional] Legt die Ausgabegenauigkeit fest:
+		$OUT_CHARACTER_PRECIS - Unbenutzt
+		$OUT_DEFAULT_PRECIS - Legt das Standardverhalten des Font-Mappers fest
+		$OUT_DEVICE_PRECIS - Weist den Font-Mapper an, Ger&auml;teschriften zu verwenden, wenn das System mehrere Schriftarten gleichen Namens enth&auml;lt
+		$OUT_OUTLINE_PRECIS - Windows 2000/XP: Weist den Font-Mapper an, aus TrueType- oder anderen Outline-Schriftarten zu w&auml;hlen
+		$OUT_PS_ONLY_PRECIS - Windows 2000/XP: Weist den Font-Mapper an, nur aus PostScript-Schriftarten zu w&auml;hlen.
+		Wenn keine PostScript-Schriften installiert sind, kehrt der Font-Mapper zum Standardverhalten zur&uuml;ck
+		$OUT_RASTER_PRECIS - Weist den Font-Mapper an, Rasterschriften zu verwenden, wenn das System mehrere Schriftarten gleichen Namens enth&auml;lt
+		$OUT_STRING_PRECIS - Dieser Wert wird nicht vom Font-Mapper verwendet, aber er wird zur&uuml;ckgegeben, wenn Rasterschriften aufgelistet werden
+		$OUT_STROKE_PRECIS - Windows 2000/XP: Dieser Wert wird nicht vom Font-Mapper verwendet, aber er wird zur&uuml;ckgegeben, wenn TrueType-Schriften,
+		andere Outline-Schriften und Vektor-Schriften aufgelistet werden
+		$OUT_TT_ONLY_PRECIS - Weist den Font-Mapper an, nur aus TrueType-Schriftarten zu w&auml;hlen.
+		Wenn keine TrueType-Schriften installiert sind, kehrt der Font-Mapper zum Standardverhalten zur&uuml;ck
+		$OUT_TT_PRECIS - Weist den Font-Mapper an, TrueType-Schriften zu verwenden, wenn das System mehrere Schriftarten gleichen Namens enth&auml;lt
+$nClipPrec
+	[optional] Legt die Abschneide-Genauigkeit fest, kann einer oder mehrere der folgenden Werte enthalten:
+		$CLIP_CHARACTER_PRECIS - Unbenutzt
+		$CLIP_DEFAULT_PRECIS - Legt das Standardverhalten fest
+		$CLIP_EMBEDDED - Dieses Flag muss angegeben werden, wenn eingebette (schreibgesch&uuml;tzte) Schriften verwendet werden
+		$CLIP_LH_ANGLES - Die Neigungsrichtung aller Schriftarten h&auml;ngt von der Ausrichtung des Koordinatensystems ab (linksh&auml;ndig oder rechtsh&auml;ndig).
+		Wenn nicht verwendet, werden Ger&auml;teschriften stets entgegen dem Uhrzeigersinn geneigt, alle anderen Schriften jedoch abh&auml;ngig von der Ausrichtung des Koordinatensystems
+		$CLIP_MASK - Unbenutzt
+		$CLIP_STROKE_PRECIS - Dieser Wert wird nicht vom Font-Mapper verwendet, aber er wird zur&uuml;ckgegeben, wenn Rasterschriften, TrueType-Schriften oder
+		Vektor-Schriften aufgelistet werden.
+		Windows 2000/XP: Aus Kompatibilit&auml;tsgr&uuml;nden wird dieser Wert immer zur&uuml;ckgegeben, wenn Schriftarten aufgelistet werden
+		$CLIP_TT_ALWAYS - Unbenutzt
+$nQuality
+	[optional] Legt die Ausgabequalit&auml;t fest. Kann einer der folgenden Werte sein:
+		$ANTIALIASED_QUALITY - Windows NT 2000 und sp&auml;ter: Die Schrift wird weich gezeichnet (Antialiasing oder Smoothing), wenn die Schrift es unterst&uuml;tzt und die Schriftgr&ouml;&szlig;e nicht zu klein oder gro&szlig; ist.
+		Zus&auml;tzlich muss der Auswahl einer TrueType-Schrift im Bildschirm-Ger&auml;tekontext der Vorrang vor einer Verwendung in der DIB-Sektion gegeben werden, sonst wird das Antialiasing nicht funktionieren!
+		$DEFAULT_QUALITY - Das Aussehen der Schrift spielt keine Rolle
+		$DRAFT_QUALITY - Das Aussehen der Schrift ist weniger wichtig, als wenn $PROOF_QUALITY benutzt werden w&uuml;rde.
+		F&uuml;r GDI-Rasterschriften wird die Skalierung verwendet, d.h. es sind mehr Schriftgr&ouml;&szlig;en verf&uuml;gbar, aber die Qualit&auml;t d&uuml;rfte geringer sein.
+		Fette, kursive, unter- und durchgestrichene Schriften werden, falls notwendig, generiert.
+		$NONANTIALIASED_QUALITY - Windows 2000 und sp&auml;ter: Die Schrift wird nicht weich gezeichnet
+		$PROOF_QUALITY - Die Darstellungsqualit&auml;t der Zeichen der Schrift ist wichtiger als die exakte &Uuml;bereinstimmung mit den logischen Schriftattributen.
+		F&uuml;r GDI-Rasterschriften wird keine Skalierung verwendet, es wird stattdessen die Schriftgr&ouml;&szlig;e verwendet, die der gew&auml;hlten am n&auml;chsten ist.
+		Obwohl die Schriftgr&ouml;&szlig;e m&ouml;glicherweise nicht genau passt, wenn $PROOF_QUALITY verwendet wird, ist die Schriftqualit&auml;t hoch und das Erscheinungsbild weist keine Verzerrungen auf.
+		Fette, kursive, unter- und durchgestrichene Schriften werden, falls notwendig, generiert.
+$nPitch
+	[optional] Legt den Zeichenabstand und die Schriftfamilie fest. Die beiden niederwertigsten Bits geben den Zeichenabstand an und k&ouml;nnen einen der folgenden Werte annehmen:
+		$DEFAULT_PITCH, $FIXED_PITCH, $VARIABLE_PITCH
+		Die vier h&ouml;herwertigsten Bits geben die Schriftfamilie an und k&ouml;nnen einen der folgenden Werte annehmen:
+		$FF_DECORATIVE - Neuartige Schriften. Old English ist ein Beispiel
+		$FF_DONTCARE - Die Standardschrift wird benutzt
+		$FF_MODERN - Schriften mit konstanter Zeichenbreite, mit oder ohne Serifen. Pica, Elite und Courier New sind Beispiele
+		$FF_ROMAN - Schriften mit variabler Zeichenbreite und mit Serifen. MS Serif zum Beispiel
+		$FF_SCRIPT - Schriften, die wie handgeschrieben aussehen sollen. Script und Cursive sind Beispiele
+		$FF_SWISS - Schriften mit variabler Zeichenbreite und ohne Serifen. MS Sans Serif zum Beispiel
+$szFace
+	[optional] Schriftbild-Name
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu einer logischen Schriftart
+Fehler:	0
+@@End@@
+
+###Remarks###
+Wenn die Schrift nicht mehr ben&ouml;tigt wird, ist sie durch Aufruf von _WinAPI_DeleteObject zu l&ouml;schen
+Ben&ouml;tigt die FontConstants.au3 f&uuml;r die vordefinierten Konstanten.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ CreateFont
+
+###Example###
+@@IncludeExample@@

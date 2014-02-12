@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_GetDisabledImageList
+
+###Description###
+Ermittelt die Imagelist mit den deaktivierten Buttons
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetDisabledImageList($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Handle zu der Imagelist mit den deaktivierten Buttons
+Fehler:	0
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_SetDisabledImageList
+
+###Example###
+@@IncludeExample@@

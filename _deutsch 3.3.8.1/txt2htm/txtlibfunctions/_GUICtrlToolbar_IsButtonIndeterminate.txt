@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_IsButtonIndeterminate
+
+###Description###
+Zeigt an, ob der festgelegte Button deaktiviert ist
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_IsButtonIndeterminate($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+True:	Button ist deaktiviert 
+False:	Button ist aktiviert
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

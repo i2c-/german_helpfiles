@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_SetMenu
+
+###Description###
+Weist einem bestimmten Fenster ein neues Men&uuml; zu.
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetMenu ( $hWnd, $hMenu )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster dem das Men&uuml; zugewiesen wurde.
+$hMenu
+	Handle des neuen Men&uuml;s. Wenn 0, dann wurde das aktuelle Men&uuml; des Fensters entfernt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_GetMenu
+
+
+###See Also###
+@@MsdnLink@@ SetMenu
+
+
+###Example###
+@@IncludeExample@@

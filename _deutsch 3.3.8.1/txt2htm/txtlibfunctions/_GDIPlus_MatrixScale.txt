@@ -1,0 +1,40 @@
+###User Defined Function###
+_GDIPlus_MatrixScale
+
+###Description###
+Berechnet den Inhalt eines Matrix-Objekts als Produkt aus sich selbst und einer Skalierungsmatrix neu.
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_MatrixScale($hMatrix, $fScaleX, $fScaleY [, $bOrder = False])
+
+###Parameters###
+@@ParamTable@@
+$hMatrix
+	Handle auf ein Matrix-Objekt
+$fScaleX
+	Multiplikator f&uuml;r die Skalierung der X-Achse
+$fScaleY
+	Multiplikator f&uuml;r die Skalierung der Y-Achse
+$bOrder
+	[optional] Legt die Reihenfolge der Matrizenmultiplikation fest:
+		 True - Legt fest, das die Skalierungsmatrix bei der Multiplikation links steht
+		False - Legt fest, das die Skalierungsmatrix bei der Multiplikation rechts steht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipScaleMatrix
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlListBox_GetSelItems
+
+###Description###
+F&uuml;llt einen Puffer mit einem Array der markierten Items
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_GetSelItems($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[0] - Gesamtanzahl der Items im Array
+	[1] - Index des markierten Items
+	[2] - Index des markierten Items
+	[n] - Index des markierten Items
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListBox_GetSelItemsText
+
+###Example###
+@@IncludeExample@@

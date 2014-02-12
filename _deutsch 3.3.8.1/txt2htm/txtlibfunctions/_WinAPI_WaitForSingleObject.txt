@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_WaitForSingleObject
+
+###Description###
+Wartet bis das angegebene Objekt in dem signalisierten Status ist
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_WaitForSingleObject($hHandle [, $iTimeout = -1])
+
+###Parameters###
+@@ParamTable@@
+$hHandle
+	Ein Handle zu dem Objekt
+$iTimeout
+	[optional] Der Unterbrechungsintervall, in Millisekunden. Die Funktion kehrt zur&uuml;ck, wenn der Intervall abgelaufen ist, auch wenn
+		der Status des Objekts nicht signalisiert ist. Ist $iTimeout 0, testet die Funktion den Status des Objekts und kehrt
+		unverz&uuml;glich zur&uuml;ck. Ist $iTimeout -1, l&auml;uft der Unterbrechungsintervall unendlich.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Bezeichnet das Ereignis, das die Funktion zur R&uuml;ckkehr veranlasst hat
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_WaitForMultipleObjects
+
+###See Also###
+@@MsdnLink@@ WaitForSingleObject

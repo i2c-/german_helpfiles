@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlSlider_GetRange
+
+###Description###
+Ermittelt die minimale und maximale Position des Sliders
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetRange($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+
+	[0] - Minimale Position im Bereich des Sliders
+	[1] - Maximale Position im Bereich des Sliders
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetRange, _GUICtrlSlider_GetRangeMax, _GUICtrlSlider_GetRangeMin
+
+###Example###
+@@IncludeExample@@

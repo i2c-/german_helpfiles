@@ -1,0 +1,42 @@
+###User Defined Function###
+_WordDocLinkGetCollection
+
+###Description###
+Gibt ein Objekt mit der Zusammenstellung aller Links in dem Dokument zur&uuml;ck.
+
+###Syntax###
+#include <Word.au3> 
+_WordDocLinkGetCollection(ByRef $o_object [, $i_index = -1])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt-Variable eines Word.Application-Dokumentobjekts
+$i_index
+	[optional] Legt fest, ob eine Zusammenstellung oder eine indexierte Instanz zur&uuml;ckgegeben werden soll
+	Positiver Integer gibt eine indexierte Instanz zur&uuml;ck (1-basierend)
+	-1 = (Standard) Gibt das Objekt mit der Zusammenstellung zur&uuml;ck.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Objekt mit der Zusammenstellung der Links in dem Dokument zur&uuml;ck, @EXTENDED = Anzahl der Links
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR = 1
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_InvalidDataType = Ung&uuml;ltiger Daten-Typ
+	$_WordStatus_InvalidValue = Ung&uuml;ltiger Wert
+	$_WordStatus_NoMatch = Keine &Uuml;bereinstimmung
+@Extended:	Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,44 @@
+###User Defined Function###
+_GUICtrlTreeView_AddChild
+
+###Description###
+F&uuml;gt ein neues Child-Item Am Ende hinzu
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_AddChild ( $hWnd, $hParent, $sText [, $iImage = -1 [, $iSelImage = -1]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hParent
+	Parent-Item
+$sText
+	Text des Items
+$iImage
+	[optional] 0-basierender Index des Itemicons in der Imagelist des Controls
+$iSelImage
+	[optional] 0-basierender Index des Itemicons in der Imagelist des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu dem neuen Item
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Das Item wird als Child-Item von $hParent hinzugef&uuml;gt. Es wird an das Ende von $hParent hinzugef&uuml;gt. Falls das Control sortiert wird, wird das Item an die korrekte sortierte Position gesetzt, anstatt als letztes Child-Item von $hParent.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_AddChildFirst
+
+
+###Example###
+@@IncludeExample@@

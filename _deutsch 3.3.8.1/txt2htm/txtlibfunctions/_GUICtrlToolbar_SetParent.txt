@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_SetParent
+
+###Description###
+Legt das Fenster fest, an welches das Control Nachrichten sendet
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetParent($hWnd, $hParent)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hParent
+	Handle zum Fenster um Nachrichten zu empfangen
+@@End@@
+
+###ReturnValue###
+Erfolg:	Handle zum vorherigen Nachrichtenfenster
+Fehler:	0
+
+###Remarks###
+Die $TB_SETPARENT Nachricht &auml;ndert nicht das Hauptfenster welches festgelegt wurde als das Control erstellt wurde. Durch den Aufruf von _WinAPI_GetParent gibt das Control das aktuelle Hauptfenster und nicht das in $TB_SETPARENT festgelegte Fenster zur&uuml;ck. Um das Hauptfenster des Controls zu &auml;ndern ist _WinAPI_SetParent aufzurufen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

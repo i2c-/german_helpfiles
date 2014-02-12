@@ -1,0 +1,26 @@
+###User Defined Function###
+_GUIToolTip_SetTipBkColor
+
+###Description###
+Setzt die Hintergrundfarbe
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_SetTipBkColor($hWnd, $iColor)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iColor
+	Neue Hintergrundfarbe
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIToolTip_GetTipBkColor

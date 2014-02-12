@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetClientWidth
+
+###Description###
+Ermittelt die Breite des Anwendungsbereichs eines Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetClientWidth($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Fensters
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Breite des Anwendungsbereichs
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinAPI_GetClientHeight
+
+###Example###
+@@IncludeExample@@

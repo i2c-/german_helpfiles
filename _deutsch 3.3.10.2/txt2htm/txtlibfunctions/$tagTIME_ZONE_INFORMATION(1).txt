@@ -1,0 +1,32 @@
+###Structure Name###
+$tagTIME_ZONE_INFORMATION
+
+###Description###
+Legt Informationen f&uuml;r eine bestimmte Zeitzone fest
+
+###Syntax###
+Global Const $tagTIME_ZONE_INFORMATION = "struct; long Bias;wchar StdName[32];word StdDate[8];long StdBias;wchar DayName[32];word DayDate[8];long DayBias; endstruct"
+
+
+###Fields###
+@@ParamTable@@
+Bias
+	Die aktuelle Zeitverschiebung f&uuml;r die lokale Zeit&uuml;bersetzung auf diesem Computer in Minuten
+StdName
+	Eine Beschreibung f&uuml;r die Standardzeit. Zum Beispiel: "EST" k&ouml;nnte f&uuml;r Eastern Standard Time stehen.
+StdDate
+	Eine SYSTEMTIME-Struktur, welche ein Datum und eine lokale Zeit enth&auml;lt, wann die Umstellung von der Sommerzeit auf die Standardzeit auf diesem Betriebssystem auftritt.
+StdBias
+	Die Zeitverschiebung, die bei der Umstellung der lokalen Zeit auf die Standardzeit verwendet wird
+DayName
+	Eine Beschreibung f&uuml;r die Sommerzeit. Zum Beispiel: "PDT" k&ouml;nnte f&uuml;r Pacific Daylight Time stehen. 
+DayDate
+	Eine SYSTEMTIME-Struktur, welche ein Datum und eine lokale Zeit enth&auml;lt, wann die Umstellung von der Standardzeit
+	auf die Sommerzeit auf diesem Betriebssystem auftritt.
+DayBias
+	Die Zeitverschiebung, die bei der Umstellung der lokalen Zeit verwendet wird, welcher w&auml;hrend der Sommerzeit auftritt
+@@End@@
+
+
+###Remarks###
+Keine.

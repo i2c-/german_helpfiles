@@ -1,0 +1,46 @@
+###User Defined Function###
+_SQLite_FetchData
+
+###Description###
+Ruft eine Zeile von einer _SQLite_Query()-Abfrage ab
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_FetchData($hQuery, ByRef $aRow [, $fBinary = False [, $fDoNotFinalize = False]])
+
+
+###Parameters###
+@@ParamTable@@
+$hQuery
+	Abfrage-Handle, das von _SQLite_Query() zur&uuml;ckgegeben wird
+$aRow
+	Ein 1-dimensionales Array, welches die Daten einer Zeile beinhaltet
+$fBinary
+	[optional] wechselt zum Bin&auml;r-Modus ($aRow ist dann ein Array von bin&auml;ren Strings)
+$fDoNotFinalize
+	[optional] Dies kann auf TRUE gesetzt werden, wenn man die Abfrage unfertig f&uuml;r zuk&uuml;nftige Verwendung ben&ouml;tigt.
+	(Es liegt dann am Benutzer _SQLite_QueryFinalize zu verwenden bevor die Datenbank geschlossen wird.)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	R&uuml;ckgabewert kann mit den $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite hat einen Fehler festgestellt (&uuml;berpr&uuml;fe R&uuml;ckgabewerte)
+	1 - Fehler beim Aufruf von SQLite API 'sqlite3_step'
+	2 - Fehler beim Aufruf von SQLite API 'sqlite3_data_count'
+	3 - Fehler beim Aufruf von SQLite API 'sqlite3_column_text16'
+	4 - Fehler beim Aufruf von SQLite API 'sqlite3_column_type'
+	5 - Fehler beim Aufruf von SQLite API 'sqlite3_column_bytes'
+	6 - Fehler beim Aufruf von SQLite API 'sqlite3_column_blob'
+	7 - Aufruf wurde vom Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_SQLite_Query, _SQLite_QueryFinalize
+
+###Example###
+@@IncludeExample@@

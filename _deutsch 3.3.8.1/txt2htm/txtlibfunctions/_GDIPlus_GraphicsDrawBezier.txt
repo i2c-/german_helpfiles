@@ -1,0 +1,52 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawBezier
+
+###Description###
+Zeichnet eine Bezierkurve
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawBezier($hGraphics, $iX1, $iY1, $iX2, $iY2, $iX3, $iY3, $iX4, $iY4 [, $hPen = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+$hPen
+	Handle zu dem Zeichenstift-Objekt, welches verwendet wird um den Bogen zu zeichnen
+$iX1
+	X-Koordinate des Startpunktes
+$iY1
+	Y-Koordinate des Startpunktes
+$iX2
+	X-Koordinate des ersten Kontrollpunktes
+$iY2
+	Y-Koordinate des ersten Kontrollpunktes
+$iX3
+	X-Koordinate des zweiten Kontrollpunktes
+$iY3
+	Y-Koordinate des zweiten Kontrollpunktes
+$iX4
+	X-Koordinate des Endpunktes
+$iY4
+	Y-Koordinate des Endpunktes
+$hPen
+	[optional] Handle zu dem Zeichenstift-Objekt, welches verwendet wird, um die Bezierkurve zu zeichnen. Falls 0, wird ein vollfarbig schwarz gef&uuml;llter Zeichenstift mit einer Breite von 1 verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Eine Bezierkurve durchl&auml;uft nicht seine Kontrollpunkte. Die Kontrollpunkte wirken wie Magnete, mit denen der Weg der Kurve in einer bestimmten Richtung beeinflusst werden kann.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipDrawBezierI
+
+###Example###
+@@IncludeExample@@

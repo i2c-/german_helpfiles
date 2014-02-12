@@ -1,0 +1,52 @@
+###User Defined Function###
+_FTP_FileOpen
+
+###Description###
+Leitet den Zugang zu einer Datei auf einem FTP Server ein, um zu lesen oder zu schreiben.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileOpen($hConnect, $lpszFileName [, $dwAccess = 0x80000000 [, $dwFlags = 2 [, $dwContext = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$hConnect
+	Der R&uuml;ckgabewert von _FTP_Open().
+$lpszFileName
+	Name der Datei, welche ge&ouml;ffnet werden soll.
+$dwAccess
+	[optional] Das Attribut (Standard: $GENERIC_READ)
+$dwFlags
+	[optional] Bestimmen die Umst&auml;nde, unter denen die &Uuml;bertragung stattfinden soll. Die Anwendung sollte einen &Uuml;bermittlungstyp und irgend einen der Flags enthalten, die anzeigen, wie das Puffern kontrolliert wird.
+		<br/>Der &Uuml;bermittlungstyp kann einer der folgenden Werte sein:
+			<b>$FTP_TRANSFER_TYPE_ASCII</b> - &Uuml;bermittelt die Datei per FTP-ASCII-&Uuml;bertragungsmethode (Typ A). Steuerungs- und Formatierungsinformationen werden entsprechend ge&auml;ndert.
+			<b>$FTP_TRANSFER_TYPE_BINARY</b> - &Uuml;bermittelt die Datei per FTP-Abbild-&Uuml;bertragungsmethode (Typ I). Die Datei wird exakt so, wie sie ist, ohne &Auml;nderungen &uuml;bermittelt. (Standard)
+			<b>$FTP_TRANSFER_TYPE_UNKNOWN</b> - Setzt $FTP_TRANSFER_TYPE_BINARY als Standard
+			<b>$INTERNET_FLAG_TRANSFER_ASCII</b> - &Uuml;bermittelt die Datei als ASCII
+			<b>$INTERNET_FLAG_TRANSFER_BINARY</b> - &Uuml;bermittelt die Datei bin&auml;r
+		<br/>Die folgenden Werte werden f&uuml;r die Kontrolle des Pufferns der Datei benutzt. Die Anwendung kann einen oder mehrere dieser Werte benutzen:
+			<b>$INTERNET_FLAG_HYPERLINK</b> - Erzwingt die Datei neu zu laden, wenn keine Fristablaufzeit oder Modifikationszeit vom Server zur&uuml;ckgegeben wird, wenn festgestellt wird, dass das Objekt vom Netzwerk neu zu laden ist.
+			<b>$INTERNET_FLAG_NEED_FILE</b> - Eine tempor&auml;re Datei wird erstellt, wenn die Datei nicht gepuffert werden kann.
+			<b>$INTERNET_FLAG_RELOAD</b> - Erzwingt das Herunterladen der angefragten Datei, des Objekts oder des Verzeichnisses vom originalen Server und nicht vom Cache.
+			<b>$INTERNET_FLAG_RESYNCHRONIZE</b> - L&auml;dt HTTP-Quellen neu, wenn die Quelle nach dem letzten Download ge&auml;ndert wurde. Alle FTP und Gopher Quellen werden neu geladen.
+$dwContext
+	[optional] Eine Variable, die den Definitionswert f&uuml;r die Anwendung enth&auml;lt, der diese Suche mit Anwendungsdaten verbindet.
+	Dies wird nur benutzt, wenn die Anwendung bereits _FTP_SetStatusCallback() aufgerufen hat, um eine Status-Callbackfunktion zu setzen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den Handle der FTP Datei f&uuml;r die Funktion _FTP_FileRead() zur&uuml;ck.
+Fehler:	0 und setzt @error auf Nicht-Null
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_FTP_FileClose, _FTP_FileRead, _FTP_SetStatusCallback, _FTP_FileGet, _FTP_FilePut
+
+###See Also###
+@@MsdnLink@@ FtpOpenFile
+
+###Example###

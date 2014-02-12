@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTreeView_EditText
+
+###Description###
+Beginnt die Editierung des Textes des festgelegten Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_EditText($hWnd, $hItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des zu editierenden Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Edit-Controls
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_EndEdit, _GUICtrlTreeView_GetEditControl
+
+###Example###
+@@IncludeExample@@

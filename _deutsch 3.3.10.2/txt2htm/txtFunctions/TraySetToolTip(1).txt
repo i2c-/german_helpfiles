@@ -1,0 +1,38 @@
+###Function###
+TraySetToolTip
+
+###Description###
+Setzt den Tooltip-Text f&uuml;r das Trayicon.
+
+###Syntax###
+TraySetToolTip ( [text] )
+ 
+ 
+###Parameters###
+@@ParamTable@@
+text
+	[optional] Der neue Text, der als Tooltip angezeigt werden soll. Die L&auml;nge ist jedoch limitiert. Siehe Bemerkungen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Die Tooltip-L&auml;nge ist auf 128 Zeichen begrenzt.
+
+Um den Tooltip auf den Standardtext zur&uuml;ckzusetzen, ist die Funktion ohne Parameter zu nutzen:
+<a href="TraySetToolTip.htm">TraySetToolTip()</a>.
+
+Der Tooltip-Text wird nur ge&auml;ndert, wenn das Trayicon sichtbar ist!
+
+
+###Related###
+TrayTip
+
+
+###Example###
+@@IncludeExample@@

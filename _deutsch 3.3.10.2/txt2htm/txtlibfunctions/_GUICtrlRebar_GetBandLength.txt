@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandLength
+
+###Description###
+Ermittelt die L&auml;nge einer Gruppe in Pixel
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandLength ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+Gibt die L&auml;nge einer Gruppe in Pixel zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBandLength
+
+
+###Example###
+@@IncludeExample@@

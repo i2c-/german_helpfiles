@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlToolbar_SetBitmapSize
+
+###Description###
+Setzt die Gr&ouml;&szlig;e des zu einer Toolbar hinzuzuf&uuml;genden Bitmapbildes
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetBitmapSize($hWnd, $iWidth, $iHeight)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iWidth
+	Breite des Bitmapbildes in Pixel
+$iHeight
+	H&ouml;he des Bitmapbildes in Pixel
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Die Gr&ouml;&szlig;e kann nur gesetzt werden, bevor ein Bitmap der Toolbar hinzugef&uuml;gt wird. Falls eine Anwendung die Bitmapgr&ouml;sse nicht explizit setzt, wird sie standardm&auml;&szlig;ig auf 16 von 15 Pixeln gesetzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

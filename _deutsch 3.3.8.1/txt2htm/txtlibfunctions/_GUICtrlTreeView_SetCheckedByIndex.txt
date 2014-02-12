@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlTreeView_SetCheckedByIndex
+
+###Description###
+Legt fest, ob die Checkbox eines durch seinen Index angegebenen Eintrags eines Items angehakt ist oder nicht.
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetCheckedByIndex($hWnd, $hItem, $iIndex [, $fCheck = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iIndex
+	0-basierender Index in der $hItem Liste der Items
+$fCheck
+	[optional] zu setzender Wert f&uuml;r den "angehakt"-Status:
+		 True - angehakt
+		False - nicht angehakt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

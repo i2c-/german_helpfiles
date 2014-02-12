@@ -1,0 +1,39 @@
+###User Defined Function###
+_FTP_DirCreate
+
+###Description###
+Erstellt ein Verzeichnis auf dem Ftp-Server.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_DirCreate ( $hFTPSession, $sRemote )
+
+
+###Parameters###
+@@ParamTable@@
+$hFTPSession
+	"Identifier", welcher von _FTP_Connect() zur&uuml;ckgegeben wurde.
+$sRemote
+	Das Verzeichnis, welches erstellt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_FTP_Connect
+
+
+###See Also###
+@@MsdnLink@@ FtpCreateDirectory
+
+
+###Example###

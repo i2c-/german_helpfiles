@@ -1,0 +1,38 @@
+###Function###
+GUICtrlSetStyle
+
+###Description###
+Ver&auml;ndert den Stil eines Controls.
+
+###Syntax###
+GUICtrlSetStyle ( controlID, style [, exStyle] )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben.
+style
+	Legt den Stil eines Controls fest. Siehe <a href="../appendix/GUIStyles.htm">Anhang "GUI Control"-Stile</a>.
+exStyle
+	[optional] Legt den erweiterten Stil eines Controls fest. Siehe die <a href="../appendix/GUIStyles.htm#Extended">Tabelle der erweiterten Stile</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+Manche Stile k&ouml;nnen nicht dynamisch ge&auml;ndert werden. Siehe dazu die MSDN Dokumentation. Der Combo-Stil $CBS_UPPERCASE ist ein Beispiel daf&uuml;r.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+GUICtrlCreate...
+
+
+###Example###
+@@IncludeExample@@

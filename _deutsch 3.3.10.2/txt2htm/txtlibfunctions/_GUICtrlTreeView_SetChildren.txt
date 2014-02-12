@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTreeView_SetChildren
+
+###Description###
+Setzt das Child-Item-Flag
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetChildren ( $hWnd, $hItem [, $fFlag = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$fFlag
+	[optional] Flageinstellungen:
+		True - Flag f&uuml;r Child-Item wird gesetzt
+		False - Flag f&uuml;r Child-Item wird gel&ouml;scht
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetChildren
+
+
+###Example###
+@@IncludeExample@@

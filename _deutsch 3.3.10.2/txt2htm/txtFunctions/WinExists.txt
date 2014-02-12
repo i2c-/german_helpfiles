@@ -1,0 +1,35 @@
+###Function###
+WinExists
+
+###Description###
+Pr&uuml;ft, ob ein bestimmtes Fenster existiert.
+
+###Syntax###
+WinExists ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fensters, dessen Existenz &uuml;berpr&uuml;ft werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gepr&uuml;ft werden soll. Standardwert ist ein leerer String. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1 wenn das Fenster existiert. 
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+<a href="WinExists.htm">WinExists()</a> gibt auch 1 zur&uuml;ck, wenn das Fenster versteckt ist.
+
+
+###Related###
+WinActive, WinWait, WinWaitActive, WinWaitClose, WinWaitNotActive, WinTitleMatchMode (Option), ProcessExists, WinClose
+
+
+###Example###
+@@IncludeExample@@

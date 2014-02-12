@@ -1,0 +1,35 @@
+###User Defined Function###
+_SQLite_Encode
+
+###Description###
+Verschl&uuml;sselt Strings, Nummern oder Bin&auml;rdaten zur Verwendung als BLOB in einer SQLite-Abfrage.
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_Encode($vData)
+
+
+###Parameters###
+@@ParamTable@@
+$vData
+	Daten, die verschl&uuml;sselt werden sollen (String, Zahl oder Binar)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt verschl&uuml;sselten String zur&uuml;ck
+Fehler:	Gibt einen leeren String zur&uuml;ck und setzt @error auf 1
+@@End@@
+
+###Remarks###
+Der verschl&uuml;sselte String ist bereits mit einem einfachen Anf&uuml;hrungszeichen eingefasst (').
+Zum Beispiel chr(0) & chr(1) w&uuml;rden folgenderma&szlig;en aussehen X'0001'
+Der verschl&uuml;sselte String kann von SQLite dekodiert und bin&auml;r als BLOB gespeichert werden.
+F&uuml;r Strings, die als TEXT gespeichert werden sollen, ist _SQLite_Escape() zu verwenden.
+F&uuml;r numerische Werte, die als solche gespeichert werden sollen, sind einfache Verkettungen zu verwenden.
+
+###Related###
+_SQLite_Escape
+
+###Example###
+@@IncludeExample@@

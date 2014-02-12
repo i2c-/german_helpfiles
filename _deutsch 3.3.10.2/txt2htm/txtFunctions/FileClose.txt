@@ -1,0 +1,35 @@
+###Function###
+FileClose
+
+###Description###
+Schlie&szlig;t eine zuvor ge&ouml;ffnete Datei.
+
+###Syntax###
+FileClose ( "filehandle" )
+
+
+###Parameters###
+@@ParamTable@@
+filehandle
+	Das Handle einer Datei, das zuvor von einem <a href="FileOpen.htm">FileOpen()</a>-Aufruf zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0, wenn das Dateihandle ung&uuml;ltig ist.
+@@End@@
+
+
+###Remarks###
+Beim Schlie&szlig;en von AutoIt werden zwar alle zuvor ge&ouml;ffneten Dateien geschlossen, dennoch ist das Aufrufen von <a href="FileClose.htm">FileClose()</a> keine schlechte Idee.
+
+Diese Funktion wird ebenfalls benutzt, um Such-Handles zu schlie&szlig;en, die von <a href="FileFindFirstFile.htm">FileFindFirstFile()</a> zur&uuml;ckgegeben wurden.
+
+
+###Related###
+FileFindFirstFile, FileOpen, FileFindNextFile, FileFlush
+
+
+###Example###
+@@IncludeExample@@

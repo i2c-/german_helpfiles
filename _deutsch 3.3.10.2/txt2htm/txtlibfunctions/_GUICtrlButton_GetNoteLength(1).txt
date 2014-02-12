@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlButton_GetNoteLength
+
+###Description###
+Ermittelt die L&auml;nge der Textnotiz, welche in der Beschreibung f&uuml;r einen Befehlszeilen-Button dargestellt werden k&ouml;nnte
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetNoteLength ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	die L&auml;nge der Textnotiz in WCHARs—not inklusive abschlie&szlig;endem 0 WCHAR
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Diese Funktion funktioniert nur mit den Buttonstilen $BS_COMMANDLINK und $BS_DEFCOMMANDLINK
+
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_GetNote, _GUICtrlButton_SetNote
+
+
+###See Also###
+@@MsdnLink@@ BCM_GETNOTELENGTH
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlMonthCal_SetMonthDelta
+
+###Description###
+Setzt die Datumsdifferenz f&uuml;r ein MonthCal-Control
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_SetMonthDelta($hWnd, $iDelta)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iDelta
+	Wert der die Anzahl von Monaten enth&auml;lt, die wie die Datumsdifferenz des Controls gesetzt werden sollen
+		Falls dieser Wert 0 ist, wird das Monatsdelta auf den Standard zur&uuml;ckgesetzt,
+		welches die Anzahl von dargestellten Monaten im Control ist
+@@End@@
+
+###ReturnValue###
+Erfolg:	Integer Wert der die Anzahl der vorherigen Datumsdifferenz enth&auml;lt
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

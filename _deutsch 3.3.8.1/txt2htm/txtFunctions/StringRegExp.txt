@@ -1,0 +1,285 @@
+###Function###
+StringRegExp
+
+###Description###
+Pr&uuml;ft, ob ein String dem Suchmuster eines regul&auml;ren Ausdrucks entspricht.
+
+###Syntax###
+StringRegExp ( "test", "pattern" [, flag [, offset]] )
+
+
+###Parameters###
+@@ParamTable@@
+test
+	Der zu pr&uuml;fende String.
+pattern
+	Das Suchmuster des regul&auml;ren Ausdrucks.
+flag
+	[optional] Eine Zahl, die die Verhaltensweise der Funktion bestimmt. Siehe weiter unten f&uuml;r Details. Der Standard ist 0.
+offset
+	[optional] Die Position des Strings, wo die Funktion beginnen soll (startet bei 1). Der Standard ist 1.
+@@End@@
+<br>
+@@ParamTable@@
+<b>Flag</b>
+	<b>Werte</b>
+0
+	Gibt 1 (passend) oder 0 (nicht passend) zur&uuml;ck.
+1
+	Gibt ein Array mit der ersten &Uuml;bereinstimmung zur&uuml;ck.
+2
+	Gibt ein Array mit den &Uuml;bereinstimmungen zur&uuml;ck inkl. der vollst&auml;ndigen &Uuml;bereinstimmung (Perl / PHP Stil).
+3
+	Gibt ein Array mit den globalen &Uuml;bereinstimmungen zur&uuml;ck.
+4
+	Gibt ein Array mit den globalen &Uuml;bereinstimmungen zur&uuml;ck inkl. der vollst&auml;ndigen &Uuml;bereinstimmung (Perl / PHP Stil).
+@@End@@
+
+###ReturnValue###
+<i>Flag = 0 :</i>
+
+@@ReturnTable@@
+@Error	Bedeutung
+2 	Falsches Muster. @Extended = Offset des Fehlers im Muster.
+@@End@@
+
+<i>Flag = 1 oder 2 :</i>
+
+@@ReturnTable@@
+@Error	Bedeutung
+0	Array ist g&uuml;ltig. @Extended f&uuml;r die weiteren Offsets &uuml;berpr&uuml;fen.
+1	Array ist ung&uuml;ltig. Keine &Uuml;bereinstimmungen.
+2	Falsches Suchmuster, Array ist ung&uuml;ltig. @Extended = Offset des Fehlers im Muster.
+@@End@@
+
+<i>Flag = 3 oder 4 :</i>
+
+@@ReturnTable@@
+@Error	Bedeutung
+0	Array ist g&uuml;ltig.
+1	Array ist ung&uuml;ltig. Keine &Uuml;bereinstimmungen.
+2	Falsches Suchmuster, Array ist ung&uuml;ltig. @Extended = Offset des Fehlers im Muster.
+@@End@@
+
+
+###Remarks###
+Regul&auml;re Ausdr&uuml;cke sind eine kompakte Art, ein Suchmuster f&uuml;r zu suchende Strings anzugeben. Regul&auml;re Ausdr&uuml;cke sind Strings, in denen einfache Textzeichen angeben, welcher Text in dem Zielstring existieren muss. Einige Zeichen haben eine besondere Bedeutung, um anzugeben, welche Variabilit&auml;t in dem Zielstring erlaubt ist. F&uuml;r regul&auml;re Ausdr&uuml;cke in AutoIt ist normalerweise die Gro&szlig;-/Kleinschreibung relevant.
+
+Regul&auml;re Ausdr&uuml;cke werden aus einem oder mehreren der folgenden einfachen Sonderzeichen gebildet. Ist ein Zeichen nicht in der folgenden Tabelle enthalten, dann steht es nur f&uuml;r sich selbst.
+
+Wiederholungszeichen oder auch Quantifizierer genannt (*, +, ?, {...} ) versuchen die gr&ouml;&szlig;tm&ouml;gliche Entsprechung zu finden, au&szlig;er wenn ihnen direkt ein Fragezeichen folgt; dann wird die kleinstm&ouml;gliche Entsprechung der nachfolgenden Zeichen genommen.
+
+Verschachtelte Gruppen sind erlaubt, aber es ist zu beachten, dass alle Gruppen dem zur&uuml;ckgegebenen Array zugewiesen werden, wobei die &auml;u&szlig;eren nach den inneren Gruppen ber&uuml;cksichtigt werden. Verwendet man statt der normalen Gruppierung () eine nicht-fangende Gruppierung (?: ... ) oder (?> ... ) wird die Gruppe dem zur&uuml;ckgegebenen Array nicht hinzugef&uuml;gt.
+
+Alles was in einer runden Klammer "()" steht wird als Gruppe bzw. Subpattern bezeichnet. Der Inhalt mu&szlig; komplett in dem zu pr&uuml;fenden Ausdruck enthalten sein. Alles was eingeklammert wird, wird in SubPatterns geschrieben. Diese k&ouml;nnen dann mit \1,\2...,\n abgerufen werden.
+Alles was in einer eckigen Klammer "[]" steht wird als Set bezeichnet. Dort mu&szlig; lediglich ein Zeichen in dem zu pr&uuml;fenden Ausdruck enthalten sein.
+
+Eine komplette Beschreibung kann <b><a href="http://www.autoitscript.com/autoit3/pcrepattern.html" target="_blank">hier</a></b> (englisch) eingesehen werden.
+
+<b>Achtung</b>: schlechte regul&auml;re Ausdr&uuml;cke k&ouml;nnen zu einer dauerhaft hohen CPU-Auslastung f&uuml;hren und diese eventuell besch&auml;digen.
+
+<b><u>Passende Zeichen</u></b>
+
+@@ParamTable@@
+[ ... ]                                                                                                                                           
+	Findet jedes Zeichen in dem Set.
+	<b>[aeiou]</b> findet alle kleingeschriebenen Vokale.
+	Ein zusammenh&auml;ngendes Set kann definiert werden, indem ein Strich zwischen dem ersten und letzten Zeichen gesetzt wird. <b>[a-z]</b> findet alle kleingeschriebenen Zeichen.
+	Um einen Strich in einem Set einzubeziehen (<b>-</b>), ist der Strich als erstes oder letztes Zeichen des Sets zu verwenden.
+	Um eine schlie&szlig;ende Klammer im Set zu verwenden, ist es als erstes Zeichen im Set zu verwenden. <b>[][]</b> findet alle [ oder ].
+	Es ist zu beachten, das Sonderzeichen ihre urspr&uuml;ngliche Bedeutung im Set <b>verlieren</b>; mit Ausnahme von <b>\\</b>, <b>\^</b>, <b>\-</b>, <b>\[</b> und <b>\]</b>, die dem vorangestellten Backslash innerhalb des Sets folgen (Fachbegriff "escapen").
+[^ ... ]
+	Findet alle Zeichen welche <b>nicht</b> im Set enthalten sind.
+	<b>[^0-9]</b> findet alles au&szlig;er Ziffern. Um ein Caret (<b>^</b>) ins Set einzubinden, muss es nach dem Anfang des Sets stehen oder seine durch einen Backslash seine Bedeutung aufgehoben werden(\^).
+[:class:]
+	Findet ein Zeichen aus der gegebenen Klasse. 
+	G&uuml;ltige Klassen siehe unten unter "Zeichenklassen":
+	Also ist [0-9] equivalent zu [[:digit:]], welches wiederum equivalent zu \d ist.
+[^:class:]
+	Findet alle Zeichen welche <b>nicht</b> in der Klasse vertreten sind, aber nur wenn ^ das erste Zeichen ist.
+( ... )
+	Gruppe.
+	Die Elemente in der Gruppe werden in Reihenfolge bearbeitet und k&ouml;nnen zusammen wiederholt werden.
+	<b>(ab)+</b> entspricht "ab" oder "abab", aber nicht "aba". Eine Gruppe speichert auch den Text ab, der mit dem Set &uuml;bereinstimmt, um ihn bei einem R&uuml;ckverweis und in dem R&uuml;ckgabearray der Funktion zu benutzen, abh&auml;ngig von dem Flag-Parameter.
+	Der Inhalt der Gruppe wird &uuml;berschrieben, sobald ein Wiederholungszeichen auf die Gruppe angewandt wird.
+(?i)
+	Bei der Auswertung des regul&auml;ren Ausdrucks wird nach dem Flag nicht zwischen Gro&szlig;-/Kleinschreibung unterschieden. Dies wird nicht als Gruppe behandelt. 
+(?-i)
+	(Standard) Bei der Auswertung des regul&auml;ren Ausdrucks wird nach dem Flag zwischen Gro&szlig;-/Kleinschreibung unterschieden. Dies wird nicht als Gruppe behandelt. 
+(?i ... )
+	Bei der Auswertung des regul&auml;ren Ausdrucks wird bei der Suche innerhalb der Gruppe nicht zwischen Gro&szlig;-/Kleinschreibung unterschieden. Es verh&auml;lt sich wie eine normale Gruppe. 
+(?-i ... )
+	Bei der Auswertung des regul&auml;ren Ausdrucks wird bei der Suche innerhalb der Gruppe zwischen Gro&szlig;-/Kleinschreibung unterschieden. Es verh&auml;lt sich wie eine normale Gruppe. 
+(?: ... )
+	Jedes gruppierte Elemente wird standardm&auml;&szlig;ig in ein neues Subpattern geschrieben. Durch ?: wird dies verhindert (Nicht-aufzeichnende Gruppe)
+(?i: ... )
+	Bei der Auswertung des regul&auml;ren Ausdrucks wird bei der Suche innerhalb der Gruppe nicht zwischen Gro&szlig;-/Kleinschreibung unterschieden. Es verh&auml;lt sich wie eine nicht-aufzeichnende Gruppe. 
+(?-i: ... )
+	Bei der Auswertung des regul&auml;ren Ausdrucks wird bei der Suche innerhalb der Gruppe zwischen Gro&szlig;-/Kleinschreibung unterschieden. Es verh&auml;lt sich wie eine nicht-aufzeichnende Gruppe. 
+(?# ... )
+	Erlaubt es, Kommentare in das Suchmuster einzuf&uuml;gen. Hierf&uuml;r wird der Parameter (?x) ben&ouml;tigt.
+(?m)
+	^ und $ finden Zeilenschaltungen innerhalb der Datenmenge.
+(?s)
+	"." findet alle Zeichen, auch Zeilenumbr&uuml;che (als Standard findet "." keine Zeilenumbr&uuml;che).
+(?x)
+	Ignoriert Whitespace-Zeichen und # Kommentare. 
+(?U)
+	Kehrt die Standardeinstellung f&uuml;r Gierigkeit der Quantifzierer um (siehe auch ?).
+(?<=...)
+	pr&uuml;ft, was vor der &Uuml;bereinstimmung stehen darf.
+(?=...)
+	pr&uuml;ft, was nach der &Uuml;bereinstimmung stehen darf.
+(?<!...)
+	pr&uuml;ft, was vor der &Uuml;bereinstimmung <b>nicht</b> stehen darf.
+(?!...)
+	pr&uuml;ft, was nach der &Uuml;bereinstimmung <b>nicht</b> stehen darf.
+...{1}
+	darf 1-mal auftreten. Die Gruppe oder das Zeichen, das auftreten darf vor die geschweifte Klammer. Die Anzahl in die geschweifte Klammer. Siehe <b>Wiederholungszeichen</b>
+<b>.</b>
+	Findet jedes einzelne Zeichen (au&szlig;er Zeilenumbr&uuml;che).
+|
+	Oder. Der Ausdruck auf der einen Seite <b>oder</b> auf der anderen Seite wird gefunden.
+\
+	<i>Schaltet</i> ein Sonderzeichen aus (das Sonderzeichen wird dann als Zeichen gefunden) oder schaltet ein Sonderzeichentyp ein (Fachbegriff "escapen" o. "maskieren").
+\\
+	Findet alle tats&auml;chlichen Backslashs (\).
+^
+	Au&szlig;erhalb einer Zeichenklasse (Set) findet dieses Zeichen einen Zeilenanfang. Hierf&uuml;r muss (?m) als zus&auml;tzlicher Parameter genutzt werden. wird (?m) nicht genutzt, steht dieses Zeichen f&uuml;r den Anfang der Datenmenge und ist equivalent zu \A
+$
+	Findet ein Zeilenende innerhalb der Datenmenge. Hierf&uuml;r muss, wie auch bei ^, der Parameter (?m) genutzt werden.
+\a
+	Alarmzeichen, gleich dem Kontrollzeichen BEL (chr(7)).
+\A
+	Findet nur am Anfang des Strings.
+\b
+	Findet an der Wortgrenze.
+\B
+	Findet alles au&szlig;er an der Wortgrenze.
+\c
+	Findet ein Kontrollzeichen, basierend auf dem n&auml;chsten Zeichen. Zum Beispiel, <b>\cM</b> entspricht Strg-M.
+\d
+	Findet eine Ziffer (0-9).
+\D
+	Findet alles au&szlig;er Ziffern.
+\e
+	Findet ein Escape-Zeichen (chr(27)).
+\E
+	Beendet ein Zitat. Siehe \Q
+\f
+	Findet das Kontrollzeichen Seitenvorschub(chr(12)).
+\h
+	Alle waagerechten Whitespace-Zeichen.
+\H
+	Alle Zeichen, die keine waagerechten Whitespace-Zeichen sind.
+\n
+	Findet einen Zeilenvorschub(@LF, chr(10)).
+\Q
+	Zitat, d.h. alle Sonderzeichen/Suchmuster bis zum n&auml;chsten \E werden als normale Zeichen behandelt.
+\r
+	Findet ein Wagenr&uuml;cklaufzeichen (@CR, chr(13)).
+\s
+	Findet alle Leerzeichentypen: Chr(9) bis Chr(13), welche Tabulator, Zeilenschaltung, senkrechter Tab, Seitenvorschub, Wagenr&uuml;cklauf und das Leerzeichen sind ( Chr(32) ).
+\S
+	Findet alles au&szlig;er Leerzeichentypen.
+\t
+	Findet einen Tabulator (chr(9)).
+\v
+	Jede vertikale Leerzeichentypen.
+\V
+	Jedes Zeichen au&szlig;er vertikale Leerzeichentypen.
+\w
+	Findet Buchstaben: a-z, A-Z ,0-9 oder Unterstrich (_).
+\W
+	Findet alles au&szlig;er Buchstaben.
+\ddd
+	Match character with octal code ddd, or backreference if found. Match the prior group number given exactly. For example, <b>([:alpha:])\1</b> would match a double letter.
+\xhh
+	character with hex code hh.
+\x{hhh..} 
+	Match character with hex code hhh..
+\z
+	Findet Zeichen nur am Ende des Strings.
+\Z
+	Findet Zeichen nur am Ende eines Strings oder vor einer neuen Zeile am Ende.
+@@END@@
+
+<u><b>Wiederholungszeichen oder auch Quantifizierer genannt</u></b>
+
+@@ParamTable@@
+{<i>x</i>}
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen genau <i>x</i> mal.
+{<i>x</i>,}
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen mindestens <i>x</i> mal.
+{0,<i>x</i>}
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen h&ouml;chstens <i>x</i> mal.
+{<i>x</i>, <i>y</i>}
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen zwischen <i>x</i> und inklusive <i>y</i> mal.
+*
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen kein oder mehrmals. &Auml;quivalent zu {0,}
++
+	Wiederholt die bisherigen Zeichen, Sets oder Gruppen mindestens einmal. &Auml;quivalent zu {1,}
+?
+	Die bisherigen Zeichen, Sets oder Gruppen d&uuml;rfen h&ouml;chstens einmal auftreten. &Auml;quivalent zu {0, 1}
+? (nach Wiederholungszeichen)
+	Sucht die k&uuml;rzeste passende Stelle anstatt der l&auml;ngsten. Standardm&auml;&szlig;ig sind Wiederholungszeichen gierig und geben die l&auml;ngste Stelle zur&uuml;ck. Durch das ? wird die k&uuml;rzeste Stelle zur&uuml;ckgegeben.
+@@END@@
+
+<u><b>Zeichenklassen</u></b>
+
+Um eine der folgenden Zeichenklassen zu nutzen, muss Sie wiederum in ein Set eingebunden werden. (Bsp: [[:alnum:]])
+
+@@ParamTable@@
+[:alnum:]
+	Buchstaben und Ziffern.
+[:alpha:]
+	Buchstaben.
+[:ascii:]
+	Zeichencodes 0 - 127.
+[:blank:]
+	Leerzeichen oder Tabulator.
+[:cntrl:]
+	Steuerungszeichen.
+[:digit:]
+	dezimale Ziffern (gleich wie \d).
+[:graph:]
+	druckbare Zeichen, ohne Leerzeichen.
+[:lower:]
+	Kleinbuchstaben.
+[:print:]
+	druckbare Zeichen, samt Leerzeichen.
+[:punct:]
+	druckbare Zeichen, ohne Buchstaben und Ziffern.
+[:space:]
+	Leerzeichentypen (nicht exakt das gleiche wie \s, \s findet auch VT: chr(11)).
+[:upper:]
+	Gro&szlig;buchstaben.
+[:word:]
+	Buchstaben (genauso wie \w).
+[:xdigit:]
+	hexadezimale Ziffern.
+@@END@@
+
+<u><b>General comments about UTF-8 mode</b></u> (use internaly by AutoIt to translate pattern) :
+
+    1. An unbraced hexadecimal escape sequence (such as \xb3) matches a two-byte UTF-8 character if the value is greater than 127.
+
+    2. Octal numbers up to \777 are recognized, and match two-byte UTF-8 characters for values greater than \177.
+
+    3. Repeat quantifiers apply to complete UTF-8 characters, not to individual bytes, for example: \x{100}{3}.
+
+    4. The dot metacharacter matches one UTF-8 character instead of a single byte.
+
+    5. The character escapes \b, \B, \d, \D, \s, \S, \w, and \W correctly test characters of any code value, but the characters that PCRE recognizes as digits, spaces, or word characters remain the same set as before, all with values less than 256. Note that this also applies to \b, because it is defined in terms of \w and \W.
+
+    6. Similarly, characters that match the POSIX named character classes are all low-valued characters.
+
+    7. However, the Perl 5.10 horizontal and vertical whitespace matching escapes (\h, \H, \v, and \V) do match all the appropriate Unicode characters.
+
+    8. Case-insensitive matching applies only to characters whose values are less than 128. PCRE supports case-insensitive matching only when there is a one-to-one mapping between a letter's cases. There are a small number of many-to-one mappings in Unicode; these are not supported by PCRE.
+
+###Related###
+StringInStr, StringRegExpReplace
+
+###Example###
+@@IncludeExample@@

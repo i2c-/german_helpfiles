@@ -1,0 +1,39 @@
+###Structure Name###
+$tagNMDATETIMESTRING
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber eine &Auml;nderungsoperation, die in dem Control stattgefunden hat
+
+###Syntax###
+Global Const $tagNMDATETIMESTRING = $tagNMHDR & ";ptr UserString;short Year;short Month;short DOW;short Day;" & _
+		"short Hour;short Minute;short Second;short MSecond;int Flags"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+UserString
+	Adresse der mit "\0" abgeschlossenen Strings, die der Benutzer eingeben hat
+Year
+	Jahr
+Month
+	Monat
+DOW
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSecond
+	Millisekunde
+Flags
+	R&uuml;ckgabefeld. Dies ist auf $GDT_VALID zu setzen, um anzugeben, dass das Datum g&uuml;ltig ist oder auf $GDT_NONE, um
+	das Control auf den "kein Datum"-Status zu setzen (nur im $DTS_SHOWNONE-Stil).
+@@End@@
+
+###Remarks###
+Diese Nachricht wird mit der $DTN_USERSTRING-Nachricht verwendet.

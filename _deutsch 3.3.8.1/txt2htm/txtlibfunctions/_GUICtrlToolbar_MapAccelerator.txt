@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlToolbar_MapAccelerator
+
+###Description###
+Zeigt die ID des Button an welches zu dem festgelegten Shortcutbuchstaben geh&ouml;rt
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_MapAccelerator($hWnd, $cAccel)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$cAccel
+	Shortcutbuchstabe
+@@End@@
+
+###ReturnValue###
+Erfolg:	Command ID des Button welcher cAccel als Shortcutbuchstabe hat
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

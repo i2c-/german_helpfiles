@@ -1,0 +1,48 @@
+###User Defined Function###
+_GDIPlus_GraphicsFillPie
+
+###Description###
+F&uuml;llt einen Ellipsenausschnitt mit Verbindung zur Halbachse ("Kuchenst&uuml;ck")
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsFillPie($hGraphics, $iX, $iY, $iWidth, $iHeight, $fStartAngle, $fSweepAngle [, $hBrush = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$iX
+	Die X-Koordinate der oberen linken Ecke des Rechtecks das die Ellipse in dem das Objekt gezeichnet werden soll begrenzt
+$iY
+	Die Y-Koordinate der oberen linken Ecke des Rechtecks das die Ellipse in dem das Objekt gezeichnet werden soll begrenzt
+$iWidth
+	Die Breite des Rechtecks das die Ellipse in dem das Objekt gezeichnet werden soll begrenzt
+$iHeight
+	Die H&ouml;he des Rechtecks das die Ellipse in dem das Objekt gezeichnet werden soll begrenzt
+$fStartAngle
+	Der Winkel in Grad zwischen der X-Achse und dem Startpunkt des Bogens, welcher das Objekt definiert.
+		Ein positiver Wert bedeutet eine Rotation im Uhrzeigersinn.
+$fSweepAngle
+	Der Winkel in Grad zwischen dem Startpunkt und dem Endpunkt des Bogens welcher das Objekt definiert.
+		Ein positiver Wert bedeutet eine Rotation im Uhrzeigersinn.
+$hBrush
+	[optional] Handle zu einem F&uuml;llmuster-Objekt das verwendet wird um das Objekt zu f&uuml;llen. Falls 0 wird ein schwarzes F&uuml;llmuster verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipFillPieI
+
+###Example###
+@@IncludeExample@@

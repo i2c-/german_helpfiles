@@ -1,0 +1,33 @@
+###Function###
+IsObj
+
+###Description###
+&Uuml;berpr&uuml;ft ob eine Variable oder ein Ausdruck vom Typ Objekt ist.
+
+###Syntax###
+IsObj ( variable )
+
+
+###Parameters###
+@@ParamTable@@
+variable
+	Die zu &uuml;berpr&uuml;fende Variable.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1, wenn die Variable ein Objekt ist.
+Fehler:	0, wenn die Variable kein Objekt ist.
+@@End@@
+
+
+###Remarks###
+Siehe <a href="../intro/lang_datatypes.htm">Sprachreferenz - Datentypen</a> f&uuml;r eine detaillierte Beschreibung.
+
+
+###Related###
+ObjGet, ObjCreate, GUICtrlCreateObj, ObjEvent, ObjName, VarGetType
+
+
+###Example###
+@@IncludeExample@@

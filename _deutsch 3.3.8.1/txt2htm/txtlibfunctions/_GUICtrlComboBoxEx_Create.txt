@@ -1,0 +1,55 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_Create
+
+###Description###
+Erstellt ein ComboBoxEx-Control
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_Create($hWnd, $sText, $iX, $iY [, $iWidth = 100 [, $iHeight = 200 [, $iStyle = 0x00200002 [, $iExStyle = 0x00000000]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Parent- oder Eigner-Fenster
+$sText
+	Getrennter String der der ComboBox hinzugef&uuml;gt werden soll
+$iX
+	Horizontale Position des Controls
+$iY
+	Vertikale Position des Controls
+$iWidth
+	[optional] Breite des Controls
+$iHeight
+	[optional] H&ouml;he des Controls im ausgeklappten Zustand
+$iStyle
+	[optional] Stile des Controls:
+		$CBS_DROPDOWN - &Auml;hnlich wie $CBS_SIMPLE. Erwartet, dass die ListBox nicht dargestellt wird,
+		au&szlig;er der Benutzer markiert ein Icon nach dem Edit-Control
+		$CBS_DROPDOWNLIST - &Auml;hnlich wie $CBS_DROPDOWN. Erwartet, dass das Edit-Control durch ein statisches Textitem ersetzt wird,
+		welches die aktuelle Markierung in der ListBox darstellt
+		$CBS_SIMPLE - Zeigt die Auswahlliste immer an.
+		Standard: $CBS_DROPDOWN, $WS_VSCROLL
+		Erzwungen: $WS_CHILD, $WS_TABSTOP, $WS_VISIBLE
+$iExStyle
+	[optional] erweiterte Stile des Controls:
+		$CBES_EX_CASESENSITIVE - Es wird bei der Suche auch auf die Gro&szlig;- und Kleinschreibung geachtet
+		$CBES_EX_NOEDITIMAGE - Die Editbox und die Dropdown Liste zeigen keine Itembilder an
+		$CBES_EX_NOEDITIMAGEINDENT - Die Editbox und die Dropdown Liste zeigen keine Itembilder an
+		$CBES_EX_NOSIZELIMIT - Erlaubt es dem ComboBoxEx-Control vertikal kleiner zu sein als dessen enthaltenes ComboBox Control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Handle zu dem Listbox Control
+Fehler:	0
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBoxEx_Destroy
+
+###Example###
+@@IncludeExample@@

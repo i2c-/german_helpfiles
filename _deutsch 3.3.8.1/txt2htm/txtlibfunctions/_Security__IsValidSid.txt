@@ -1,0 +1,33 @@
+###User Defined Function###
+_Security__IsValidSid
+
+###Description###
+Pr&uuml;ft die G&uuml;ltigkeit einer SID
+
+###Syntax###
+#include <Security.au3>
+_Security__IsValidSid($pSID)
+
+###Parameters###
+@@ParamTable@@
+$pSID
+	Zeiger auf eine SID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	SID ist g&uuml;ltig
+False:	SID ist nicht g&uuml;ltig
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__GetLengthSid
+
+###See Also###
+@@MsdnLink@@ IsValidSid
+
+###Example###
+@@IncludeExample@@

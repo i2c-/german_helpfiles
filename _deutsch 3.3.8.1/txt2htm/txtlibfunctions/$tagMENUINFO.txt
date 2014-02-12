@@ -1,0 +1,41 @@
+###Structure Name###
+$tagMENUINFO
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber ein Men&uuml;
+
+###Syntax###
+Global Const $tagMENUINFO = "int Size;int Mask;int Style;int YMax;int hBack;int ContextHelpID;ptr MenuData"
+
+###Fields###
+@@ParamTable@@
+Size
+	Legt die Gr&ouml;&szlig;e der Struktur fest, in Bytes
+Mask
+	Mitglieder die zu ermitteln oder zu setzen sind. Dieses Mitglied kann einer oder mehrere der folgenden Werte sein:
+		$MIM_APPLYTOSUBMENUS - Einstellungen gelten f&uuml;r das Men&uuml; und alle seine Untermen&uuml;s
+		$MIM_BACKGROUND - Ermittelt oder setzt das <b>hBack</b> Mitglied
+		$MIM_HELPID - Ermittelt oder setzt das <b>ContextHelpID</b> Mitglied
+		$MIM_MAXHEIGHT - Ermittelt oder setzt das <b>YMax</b> Mitglied
+		$MIM_MENUDATA - Ermittelt oder setzt das <b>MenuData</b> Mitglied
+		$MIM_STYLE - Ermittelt oder setzt das <b>Style</b> Mitglied
+Style
+	Stil des Men&uuml;s. Dies kann einer oder mehrere der folgenden Werte sein:
+		$MNS_AUTODISMISS - Men&uuml; beendet sich automatisch, wenn sich die Maus f&uuml;r etwa 10 Sekunden au&szlig;erhalb des Men&uuml;s befindet
+		$MNS_CHECKORBMP - Der gleiche Freiraum wird f&uuml;r die Checkbox ("Check Mark") und der Bitmap reserviert
+		$MNS_DRAGDROP - Men&uuml;elemente sind OLE Drop Targets oder Drag Sources
+		$MNS_MODELESS - Das Men&uuml; ist nicht modal
+		$MNS_NOCHECK - Keine Leerstelle f&uuml;r ein H&auml;kchen auf der linken Seite des Elements
+		$MNS_NOTIFYBYPOS - Eine WM_MENUCOMMAND Nachricht wird anstatt einer WM_COMMAND Nachricht gesendet wenn eine Auswahl getroffen wurde
+YMax
+	Maximale H&ouml;he des Men&uuml;s in Pixel
+hBack
+	F&uuml;llmuster das f&uuml;r den Hintergrund des Men&uuml;s verwendet werden soll
+ContextHelpID
+	Der Hilfe-Kontext Identifizierer
+MenuData
+	Ein Anwendungsdefinierter Wert
+@@End@@
+
+###Remarks###
+Keine.

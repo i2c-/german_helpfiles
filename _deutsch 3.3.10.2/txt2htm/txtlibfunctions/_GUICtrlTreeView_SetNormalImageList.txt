@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlTreeView_SetNormalImageList
+
+###Description###
+Setzt die normale Imagelist f&uuml;r das Control
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetNormalImageList ( $hWnd, $hImageList )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hImageList
+	Handle zu der Imagelist. Falls 0 werden alle Bilder entfernt
+@@End@@
+
+###ReturnValue###
+Gibt das Handle zu der vorherigen Imagelist zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetNormalImageList
+
+
+###Example###
+@@IncludeExample@@

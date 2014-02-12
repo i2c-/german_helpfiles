@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlDTP_GetMCFont
+
+###Description###
+Ermittelt das Handle der Schrift des Monatskalenders
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_GetMCFont ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	das Handle der Schrift
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlDTP_SetMCFont
+
+
+###Example###
+@@IncludeExample@@

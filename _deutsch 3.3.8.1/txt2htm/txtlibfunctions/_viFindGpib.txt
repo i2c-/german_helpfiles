@@ -1,0 +1,40 @@
+###User Defined Function###
+_viFindGpib
+
+###Description###
+Sendet einen Befehl/Abfrage an ein Instrument/Ger&auml;t durch das VISA-Interface (GPIB / TCP)
+
+###Syntax###
+#include <Visa.au3>
+_viFindGpib(ByRef $a_descriptor_list, ByRef $a_idn_list [, $f_show_search_results = 0])
+
+
+###Parameters###
+@@ParamTable@@
+$a_descriptor_list
+	Gibt ein Array des VISA resource descriptors von dem Instrument, das am GPIB-Anschluss gefunden wurde, zur&uuml;ck (F&uuml;r mehr Informationen siehe die Bemerkungen zu der Funktion _viExecCommand) 
+$a_idn_list
+	Gibt ein Array mit IDNs (z. B. Namen) von den Instrumenten, die am GPIB-Anschluss gefunden wurden, zur&uuml;ck. 
+$f_show_search_results
+	[optional] Wenn auf 1 gesetzt, wird ein Dialogfeld mit den Ergebnissen der Suche angezeigt.
+	Der Standard ist 0, d.h. die Ergebnisse werden nicht angezeigt.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Anzahl der gefundenen Instrumente (0 oder mehr).
+Fehler:	Gibt einen negativen Wert zur&uuml;ck und setzt @error = 1.
+@@End@@
+
+
+###Remarks###
+Wie f&uuml;r alle VISA Funktionen m&uuml;ssen die VISA Bibliotheken installiert sein (es muss die visa32.dll in {WINDOWS}\system32 vorhanden ist) und eine GPIB-Karte (wie z.B. National Instruments NI PCI-GPIB-Karte oder die Agilent 82350B PCI High-Performance GPIB-Karte) installiert sein.
+
+* Eine detaillierte Beschreibung der bekanntesten VISA DESCRIPTORS ist in den Bemerkungen zu der Funktion "_viExecCommand" zu finden.
+
+###Related###
+_viExecCommand, _viOpen, _viClose, _viGTL, _viGpibBusReset
+
+
+###Example###
+@@IncludeExample@@

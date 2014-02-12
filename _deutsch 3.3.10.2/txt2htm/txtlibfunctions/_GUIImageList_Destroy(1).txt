@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUIImageList_Destroy
+
+###Description###
+L&ouml;scht die Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_Destroy ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle der Imagelist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUIImageList_Create
+
+
+###Example###
+@@IncludeExample@@

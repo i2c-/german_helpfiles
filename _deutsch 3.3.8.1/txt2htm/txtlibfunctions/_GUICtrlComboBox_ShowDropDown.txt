@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlComboBox_ShowDropDown
+
+###Description###
+Zeigt oder versteckt die ListBox der ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_ShowDropDown($hWnd [, $fShow = False])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fShow
+	[optional] legt fest, ob die Dropdown ListBox gezeigt wird oder nicht:
+		 True - zeigt die ListBox
+		False - versteckt die ListBox
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+Diese Funktion funktioniert nicht, wenn die ComboBox mit dem Stil $CBS_SIMPLE erstellt wurde.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetDroppedState, _GUICtrlComboBoxEx_GetDroppedState
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_FindStringExact
+
+###Description###
+Sucht einen exakten String.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_FindStringExact($hWnd, $sText [, $iIndex = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	zu suchender String
+$iIndex
+	[optional] 0-basierender Index des Items bei dem die Suche beginnen soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	0-basierender Index des gefundenen Items
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Findet den ersten String welcher mit den festgelegten Zeichen von $sText beginnt
+
+Wenn die Suche das Ende der Listbox erreicht, wird sie am Anfang der Listbox fortgesetzt bis zu dem in $iIndex festgelegten Item.
+
+Falls $iIndex –1 ist, wird die komplette Listbox von Anfang an durchsucht.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_SelectString
+
+###Example###
+@@IncludeExample@@

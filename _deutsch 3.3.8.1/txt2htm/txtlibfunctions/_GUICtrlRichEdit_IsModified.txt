@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlRichEdit_IsModified
+
+###Description###
+Ermittelt den Status des &Auml;nderungsflags eines RichEdit Controls
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_IsModified($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True oder False
+Fehler:	Setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Das System setzt das &Auml;nderungsflag automatisch auf False, wenn das Control erstellt wird.
+Falls sich der Text des Controls &auml;ndert, entweder durch den Benutzer oder durch das Programm, so wird das Flag auf True gesetzt.
+Es ist _GUICtrlRichEdit_SetModified aufzurufen, um das Flag zu setzen oder zu l&ouml;schen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetModified, _GUICtrlRichEdit_GetText
+
+###See Also###
+@@MsdnLink@@ EM_GETMODIFY
+
+###Example###
+@@IncludeExample@@

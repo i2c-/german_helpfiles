@@ -1,0 +1,33 @@
+###Function###
+StringIsInt
+
+###Description###
+Pr&uuml;ft, ob der String eine ganze Zahl (Integer) ist.
+
+###Syntax###
+StringIsInt ( "string" )
+
+
+###Parameters###
+@@ParamTable@@
+string
+	Der zu pr&uuml;fende String.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn der String keine ganze Zahl ist.
+@@End@@
+
+
+###Remarks###
+<a href="StringIsInt.htm">StringIsInt()</a> gibt f&uuml;r eine Ganzzahl die nicht als String angegeben wird auch 1 zur&uuml;ck; Bei hexadezimalen Ausdr&uuml;cken wie "4ff0", wird 0 zur&uuml;ckgegeben. Das einzige weitere erlaubte Schriftzeichen ist ein Plus oder Minus Zeichen am Anfang des Strings.
+
+
+###Related###
+StringIsFloat, StringIsDigit, IsInt
+
+
+###Example###
+@@IncludeExample@@

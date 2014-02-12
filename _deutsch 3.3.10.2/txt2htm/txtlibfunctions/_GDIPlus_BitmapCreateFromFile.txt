@@ -1,0 +1,38 @@
+###User Defined Function###
+_GDIPlus_BitmapCreateFromFile
+
+###Description###
+Erstellt ein Bitmap-Objekt aus einer Datei
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCreateFromFile ( $sFileName )
+
+
+###Parameters###
+@@ParamTable@@
+$sFileName
+	Pfad zu einer Bitmapdatei
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein Handle zu dem Bitmap-Objekt
+Fehler:	0 und setzt das @error-Flag ungleich 0. @extended sollte den GPSTATUS Fehlercode enthalten ($GPID_ERR*).
+@@End@@
+
+
+###Remarks###
+Wenn das Bitmap-Objekt nicht mehr ben&ouml;tigt wird, ist <a href="_GDIPlus_BitmapDispose.htm">_GDIPlus_BitmapDispose()</a> aufzurufen, um die Ressourcen wieder freizugeben
+
+
+###Related###
+_GDIPlus_BitmapDispose, _WinAPI_DeleteObject
+
+
+###See Also###
+@@MsdnLink@@ GdipCreateBitmapFromFile
+
+
+###Example###
+@@IncludeExample@@

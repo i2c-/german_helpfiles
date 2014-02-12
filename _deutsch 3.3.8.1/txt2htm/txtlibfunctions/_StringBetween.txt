@@ -1,0 +1,36 @@
+###User Defined Function###
+_StringBetween
+
+###Description###
+Gibt einen Teilstring zwischen einem angegebenen Start-String und einem Stopp-String zur&uuml;ck
+
+###Syntax###
+#include <String.au3>
+_StringBetween($s_String, $s_Start, $s_End [, $v_Case = -1])
+
+###Parameters###
+@@ParamTable@@
+$s_String
+	Der String, der durchsucht werden soll
+$s_Start
+	Der Start-String, der gesucht werden soll. Wird ein leerer String &uuml;bergeben, so beginnt die Suche am Anfang
+$s_End
+	Der Stopp-String, der gesucht werden soll. Wird ein leerer String &uuml;bergeben, so beginnt die Suche von $s_Start bis zum Ende
+$v_Case
+	[optional]  Suche unter Beachtung der Gro&szlig;- und Kleinschreibung. Beim Standardwert oder bei -1 wird die Gro&szlig;- und Kleinschreibung nicht beachtet, bei anderen Werten dagegen schon.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein 0-basierendes $Array[0] enth&auml;lt den ersten gefundenen String.
+Fehler:	0
+@error:	1 - Kein Zwischenstring gefunden.
+@@End@@
+
+###Remarks###
+2009/05/03 Script breaking change, 5. Parameter entfernt
+
+###Related###
+
+###Example###
+@@IncludeExample@@

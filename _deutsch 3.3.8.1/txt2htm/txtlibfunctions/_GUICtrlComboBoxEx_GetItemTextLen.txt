@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetItemTextLen
+
+###Description###
+Ermittelt die L&auml;nge eines Strings in Zeichen in der Liste einer ComboBox
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetItemTextLen($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex 
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die L&auml;nge des Strings
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

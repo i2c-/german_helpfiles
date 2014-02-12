@@ -1,0 +1,50 @@
+###User Defined Function###
+_WordCreate
+
+###Description###
+Erstellt ein Microsoft Office Word Objekt
+
+###Syntax###
+#include <Word.au3> 
+_WordCreate([$s_FilePath = "" [, $b_tryAttach = 0 [, $b_visible = 1 [, $b_takeFocus = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$s_FilePath
+	[optional] legt die zu &ouml;ffnende Datei fest (Siehe Bemerkungen)
+$b_tryAttach
+	[optional] legt fest, ob versucht werden soll sich an ein bereits existierendes Fenster anzuh&auml;ngen
+	0 = (Standard) versucht nicht sich anzuh&auml;ngen
+	1 = versucht sich an ein existierendes Fenster anzuh&auml;ngen
+$b_visible
+	[optional] legt fest, ob das Fenster sichtbar sein wird
+	0 = Fenster ist versteckt
+	1 = (Standard) Fenster ist sichtbar
+$b_takeFocus
+	[optional] legt fest, ob das angeh&auml;ngte Fenster in den Fokus gebracht werden soll
+	0 =  bringt das Fenster nicht in den Fokus
+	1 = (Standard) bringt das Fenster in den Fokus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable mit dem Verweis auf das Word.Application Objekt zur&uuml;ck
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	$_WordStatus_Success = Kein Fehler
+	$_WordStatus_GeneralError = allgemeiner Fehler
+	$_WordStatus_InvalidDataType = ung&uuml;ltiger Datentyp
+	$_WordStatus_InvalidObjectType = ung&uuml;ltiger Objekt Typ
+@Extended:	Setzt es auf true (1) oder false (0), abh&auml;ngig vom Erfolg von $f_tryAttach
+@@End@@
+
+
+###Remarks###
+Die Datei wird erstellt, wenn sie nicht existiert.
+
+
+###Related###
+_WordAttach, _WordQuit
+
+
+###Example###
+@@IncludeExample@@

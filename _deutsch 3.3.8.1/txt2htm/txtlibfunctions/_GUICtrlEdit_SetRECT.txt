@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlEdit_SetRECT
+
+###Description###
+Setzt das formatierte Rechteck von einem mehrzeiligen Edit-Control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetRECT($hWnd, $aRect)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$aRect
+	Array mit dem folgenden Format:
+		[0] - Legt die X-Koordinate der oberen linken Ecke des Rechtecks fest.
+		[1] - Legt die Y-Koordinate der oberen linken Ecke des Rechtecks fest.
+		[2] - Legt die X-Koordinate der unteren rechten Ecke des Rechtecks fest.
+		[3] - Legt die Y-Koordinate der unteren rechten Ecke des Rechtecks fest.
+@@End@@
+
+###ReturnValue###
+Keine.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlEdit_SetRectEx
+
+###Example###
+@@IncludeExample@@

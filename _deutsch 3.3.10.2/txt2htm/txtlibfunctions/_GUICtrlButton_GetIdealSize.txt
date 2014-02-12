@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlButton_GetIdealSize
+
+###Description###
+Ermittelt die optimale Gr&ouml;&szlig;e des Buttons, damit dessen Text und Bild am besten passen, wenn eine Imagelist vorhanden ist
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_GetIdealSize ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt ein Array zur&uuml;ck, welche folgendes enth&auml;lt:
+	  [0] - ideale Breite
+	  [1] - ideale H&ouml;he
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlButton_SetSize
+
+
+###See Also###
+@@MsdnLink@@ BCM_GETIDEALSIZE
+
+
+###Example###
+@@IncludeExample@@

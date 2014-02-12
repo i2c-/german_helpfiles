@@ -1,0 +1,43 @@
+###Keyword###
+Switch...Case...EndSwitch
+
+###Description###
+F&uuml;hrt bedingt Anweisungen aus.
+
+###Syntax###
+<b>Switch</b> <expression>
+	<b>Case</b> <value> [To <value>] [,<value> [To <value>] ...]
+		<i>statement1</i>
+		...
+	[<b>Case</b> <value> [To <value>] [,<value> [To <value>] ...]
+		<i>statement2</i>
+		...]
+	[<b>Case</b> Else
+		<i>statementN</i>
+		...]
+<b>EndSwitch</b>
+
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ein Ausdruck, welcher einen Wert zur&uuml;ckgibt. Der Wert dieses Ausdruckes wird dann mit jedem Fall (case) verglichen, bis eine &Uuml;bereinstimmung gefunden wurde. Dieser Ausdruck wird f&uuml;r jeden Durchlauf der Switch-Struktur genau ein Mal berechnet.
+value To value
+	Der Fall (case) wird ausgef&uuml;hrt, falls der Ausdruck zwischen den beiden Werten liegt.
+value
+	Der Fall (case) wird ausgef&uuml;hrt, falls der Ausdruck mit dem Wert &uuml;bereinstimmt.
+@@End@@
+
+
+###Remarks###
+Falls kein Fall (case) zu dem Switch-Wert passt, wird, sofern vorhanden, der Case Else Bereich ausgef&uuml;hrt. Falls kein Fall (case) zutrifft und Case Else nicht definiert wurde, dann wird kein Code innerhalb der Switch-Struktur ausgef&uuml;hrt.
+
+Switch-Bl&ouml;cke d&uuml;rfen verschaltet werden. Switch-Bl&ouml;cke ber&uuml;cksichtigen die Gro&szlig;- und Kleinschreibung nicht.
+
+###Related###
+<a href="If.htm">If...Then</a>, <a href="IfElseEndIf.htm">If...Else...EndIf</a>, <a href="Select.htm">Select...EndSelect</a>, ContinueCase
+
+
+###Example###
+@@IncludeExample@@

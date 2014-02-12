@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlHeader_SetOrderArray
+
+###Description###
+Setzt die aktuelle Reihenfolge der Items (links nach rechts)
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetOrderArray($hWnd, ByRef $aOrder)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$aOrder
+	Array welches die Indexwert f&uuml;r die Items in dem Header enth&auml;lt:
+		[0] - Anzahl von Items im Array
+		[1] - Itemindex 1
+		[2] - Itemindex 2
+		[n] - Itemindex n
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlHeader_GetOrderArray
+
+###Example###
+@@IncludeExample@@

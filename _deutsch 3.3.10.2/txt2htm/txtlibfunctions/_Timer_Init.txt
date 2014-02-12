@@ -1,0 +1,28 @@
+###User Defined Function###
+_Timer_Init
+
+###Description###
+Gibt die Zeitmarke (in Millisekunden) zur&uuml;ck.
+
+###Syntax###
+#include <Timers.au3>
+_Timer_Init (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt die Zeitmarke (in Millisekunden) zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Timer_Diff
+
+
+###Example###
+@@IncludeExample@@

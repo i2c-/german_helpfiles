@@ -1,0 +1,39 @@
+###User Defined Function###
+_FTP_DirSetCurrent
+
+###Description###
+Wechselt das zur Zeit aktuelle Verzeichnis des FTP-Servers.
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_DirSetCurrent ( $hFTPSession, $sRemote )
+
+
+###Parameters###
+@@ParamTable@@
+$hFTPSession
+	"Identifier", welcher von _FTP_Connect() zur&uuml;ckgegeben wurde.
+$sRemote
+	Das Verzeichnis, in das gewechselt werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_FTP_Connect
+
+
+###See Also###
+@@MsdnLink@@ FtpSetCurrentDirectory
+
+
+###Example###

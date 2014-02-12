@@ -1,0 +1,34 @@
+###User Defined Function###
+_SoundStop
+
+###Description###
+Stoppt einen spielenden Sound.
+
+###Syntax###
+#include <Sound.au3>
+_SoundStop(ByRef $aSnd_id)
+
+
+###Parameters###
+@@ParamTable@@
+$aSnd_id
+	Sound ID Array welches durch _SoundOpen() zur&uuml;ckgegeben wurde oder ein Dateiname (muss eine Variable sein)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@Error:	1 = Stoppfehler
+	3 = Ung&uuml;ltige Sound ID. Es ist das zur&uuml;ckgegebene Array von _SoundOpen() oder ein g&uuml;ltiger Dateiname zu verwenden.
+@@End@@
+
+###Remarks###
+_SoundPlay() spielt den Sound von Anfang an ab.
+
+###Related###
+_SoundPlay, _SoundOpen
+
+###Example###
+@@IncludeExample@@
+

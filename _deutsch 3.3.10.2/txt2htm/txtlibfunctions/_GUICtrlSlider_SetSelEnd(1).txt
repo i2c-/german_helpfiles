@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlSlider_SetSelEnd
+
+###Description###
+Setzt die logische Endposition des aktuell markierten Bereiches
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_SetSelEnd ( $hWnd, $iMaximum )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iMaximum
+	logische Endposition des aktuell markierten Bereiches
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlSlider_GetSelEnd, _GUICtrlSlider_SetSel, _GUICtrlSlider_SetSelStart, _GUICtrlSlider_ClearSel, _GUICtrlSlider_GetSel
+
+
+###Example###
+@@IncludeExample@@

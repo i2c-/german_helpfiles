@@ -1,0 +1,39 @@
+###User Defined Function###
+_GDIPlus_ImageGetFlags
+
+###Description###
+Gibt eine Aufz&auml;hlung von Pixeldatenattributen zur&uuml;ck, die in einem Bild enthalten sind
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetFlags($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu einem Bild-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Array mit dem folgenden Format
+	[0] - Integer-Flagsatz mit Pixeldatenattributen
+	[1] - String von Pixeldatenattributen, Trennung mit "|"
+Fehler:	Gibt ein leeres Array zur&uuml;ck und setzt @error. @extended wird auf den Fehlerbereich gesetzt
+@error:	0 - kein Fehler
+	10 - ung&uuml;ltiges Bildhandle
+@@End@@
+
+###Remarks###
+@error 4 basiert auf der GDIPlus-UDF, welche im Fehlerfall -1 oder 0 anstelle eines Bildhandles zur&uuml;ckgibt.
+Mit BitAND und den GdipGetImageFlags-Konstanten k&ouml;nnen die im zur&uuml;ckgegebenen Integer-Flagsatz enthaltenen Pixeldatenattribute ermittelt werden.
+Alternativ kann der String mit den Pixeldatenattributen ausgewertet werden (siehe Beispiel).
+
+###Related###
+_GDIPlus_ImageGetPixelFormat
+
+###See Also###
+@@MsdnLink@@ GdipGetImageFlags
+
+###Example###
+@@IncludeExample@@

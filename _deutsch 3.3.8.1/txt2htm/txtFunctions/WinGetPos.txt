@@ -1,0 +1,41 @@
+###Function###
+WinGetPos
+
+###Description###
+Ermittelt die Position und die Gr&ouml;&szlig;e eines Fensters.
+
+###Syntax###
+WinGetPos ( "title" [, "text"] )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel des Fensters, das gelesen werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	[optional] Der Text des Fensters, das gelesen werden soll.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt ein Array mit 4 Elementen und folgenden Informationen zur&uuml;ck:
+	$array[0] = X-Position
+	$array[1] = Y-Position
+	$array[2] = Breite
+	$array[3] = H&ouml;he
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error = 1, wenn des Fenster nicht gefunden wurde.
+@@End@@
+
+
+###Remarks###
+"WinGetPos" gibt eine negative Zahl (z.B. -32000) f&uuml;r ein minimiertes Fenster zur&uuml;ck, arbeitet aber einwandfrei mit (nicht minimierten) versteckten Fenstern.
+Wenn der Fenstertitel "Program Manager" angegeben wird, gibt die Funktion die Gr&ouml;&szlig;e des Desktops zur&uuml;ck. Falls mehrere Fenster das angegebene Kriterium erf&uuml;llen, wird das zuletzt aktive Fenster abgefragt.
+
+
+###Related###
+WinGetClientSize, WinMove, WinGetState
+
+
+###Example###
+@@IncludeExample@@

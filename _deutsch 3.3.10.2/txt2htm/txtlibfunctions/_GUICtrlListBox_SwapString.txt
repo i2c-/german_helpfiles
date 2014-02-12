@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlListBox_SwapString
+
+###Description###
+Vertauscht den Text zweier Items bei den festgelegten Indizes
+
+###Syntax###
+#include <GuiListBox.au3>
+_GUICtrlListBox_SwapString ( $hWnd, $iIndexA, $iIndexB )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndexA
+	0-basierender Index des zu tauschenden Items
+$iIndexB
+	0-basierender Index des zu tauschenden Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

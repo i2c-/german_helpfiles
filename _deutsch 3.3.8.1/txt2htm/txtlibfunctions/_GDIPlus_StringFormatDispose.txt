@@ -1,0 +1,31 @@
+###User Defined Function###
+_GDIPlus_StringFormatDispose
+
+###Description###
+Ein String-Formatobjekt freigeben
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_StringFormatDispose($hFormat)
+
+###Parameters###
+@@ParamTable@@
+$hFormat
+	Handle zu einem String-Formatobjekt
+@@End@@
+
+###ReturnValue###
+Erfolg:	True
+Fehler:	False
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_StringFormatCreate
+
+###See Also###
+@@MsdnLink@@ GdipDeleteStringFormat
+
+###Example###
+@@IncludeExample@@

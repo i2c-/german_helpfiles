@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandText
+
+###Description###
+Ermittelt den dargestellten Text f&uuml;r eine Gruppe
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandText ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe f&uuml;r den die Informationen ermittelt werden sollen
+@@End@@
+
+###ReturnValue###
+Gibt den dargestellten Text f&uuml;r die Gruppe zur&uuml;ck
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_SetBandText
+
+
+###Example###
+@@IncludeExample@@

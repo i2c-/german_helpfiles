@@ -1,0 +1,34 @@
+###User Defined Function###
+_FTP_GetLastResponseInfo
+
+###Description###
+Ermittelt die letzte Fehlerbeschreibung oder Serverantwort des Threads, der diese Funktion aufruft
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_GetLastResponseInfo(ByRef $dwError, ByRef $szMessage)
+
+###Parameters###
+@@ParamTable@@
+$dwError
+	Gibt eine Fehlermeldung zur&uuml;ck, die sich auf die fehlgeschlagene Operation bezieht.
+$szMessage
+	Gibt den Fehlertext zur&uuml;ck.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 und setzt @error
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+Keine.
+
+###See Also###
+@@MsdnLink@@ InternetGetLastResponseInfo
+
+

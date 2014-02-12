@@ -1,0 +1,49 @@
+###User Defined Function###
+_GUIToolTip_HitTest
+
+###Description###
+Ermittelt &uuml;ber die Informationen, die ein ToolTip-Control &uuml;ber ein Tool enth&auml;lt, ob sich ein Koordinatenpunkt innerhalb des Tooltip-Rechtecks befindet.
+
+###Syntax###
+#include <GuiToolTip.au3>
+_GUIToolTip_HitTest($hWnd, $hTool, $iX, $iY)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hTool
+	Handle zu dem Fenster, welches das Tool enth&auml;lt
+$iX
+	zu testende X-Position
+$iY
+	zu testende Y-Position
+@@End@@
+
+###ReturnValue###
+Erfolg:	Array mit dem folgenden Format:
+	[1] - Flags welche die ToolTip Anzeige steuern:
+	   1 - Zeigt an, dass $iID ist das Fenster Handle des Tools anstatt der ID
+	   2 - Zentriert das Fenster, zugeh&ouml;rig zu dem durch $iID festgelegten Tool
+	   4 - Zeigt an, dass der Text in umgekehrter Richtung angezeigt werden soll
+	   8 - Zeigt an, dass das Control das Fenster des Tools unterklassifizieren soll
+	   16 - Positioniert das Control neben dem zugeh&ouml;rigen Tool
+	   32 - Positioniert das Fenster bei den gleichen Koordinaten wie TTM_TRACKPOSITION
+	   64 - Veranlasst das Control, Mausnachrichten an das Parent-Fenster weiterzuleiten
+	   128 - Zeigt an, dass links im Control Text ausgegliedert sein sollte
+	[2] - Handle zu dem Fenster, welches das Tool enth&auml;lt
+	[3] - ID des Tools
+	[4] - X Koordinate der oberen linken Ecke des Rechtecks
+	[5] - Y Koordinate der oberen linken Ecke des Rechtecks
+	[6] - X Koordinate der unteren rechten Ecke des Rechtecks
+	[7] - Y Koordinate der unteren rechten Ecke des Rechtecks
+	[8] - Handle zu der Instanz, welche die Stringressource f&uuml;r das Tool enth&auml;lt
+	[9] - anwendungsspezifischer Wert, der mit dem Tool verkn&uuml;pft ist
+
+###Remarks###
+Diese Nachricht muss gesendet werden, wenn das Tool das Flag $TTF_TRACK gesetzt hat. 
+$TTM_HITTEST schl&auml;gt fehl, wenn $TTF_TRACK nicht gesetzt ist, unabh&auml;ngig davon, ob der "Hit" Punkt sich im Rechteck des Tools befindet oder nicht.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###

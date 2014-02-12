@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlSlider_GetTic
+
+###Description###
+Ermittelt die logische Position des Skalenstriches
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetTic($hWnd, $iTic)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iTic
+	0-basierender Index der einen Skalenstrich identifiziert
+		G&uuml;ltige Indizes liegen im Bereich von 0 bis 2 weniger als die Anzahl der Skalenstrich, welche von _GUICtrlSlider_GetNumTics zur&uuml;ckgegeben wird.
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die logische Position des Skalenstriches
+Fehler:	-1
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetTic
+
+###Example###
+@@IncludeExample@@

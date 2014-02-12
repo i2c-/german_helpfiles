@@ -1,0 +1,44 @@
+###Function###
+MouseClickDrag
+
+###Description###
+F&uuml;hrt eine Verschiebe-Aktion mit der Maus aus.
+
+
+###Syntax###
+MouseClickDrag ( "button", x1, y1, x2, y2 [, speed] ) 
+
+
+###Parameters###
+@@ParamTable@@
+button
+	Die Taste, die gedr&uuml;ckt werden soll: "left", "right", "middle", "main", "menu", "primary", "secondary".
+x1, y1
+	Die Startkoordinaten der Verschiebe-Aktion.
+x2, y2
+	Die Endkoordinaten der Verschiebe-Aktion.
+speed
+	[optional] Die Bewegungsgeschwindigkeit der Maus von 1 (schnellste) bis 100 (langsamste). Eine Geschwindigkeit von 0 bewegt die Maus sofort. Die Standardgeschwindigkeit ist 10.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, falls der Button nicht in der Liste existiert.
+@@End@@
+
+
+###Remarks###
+Wenn "button" ein leerer String ist, wird die linke Maustaste gedr&uuml;ckt.
+
+Wenn der Benutzer die rechte und linke Maustaste in der Systemsteuerung getauscht hat, dann &auml;ndert sich das Verhalten der Buttons.
+"Left" und "right" klicken immer die selben Maustasten, egal, ob die Tasten vertauscht sind, oder nicht. Der "primary"- oder "main"-Button werden das entsprechende tun, ob sie vertauscht sind, oder nicht. Die Tasten "secondary" oder "menu" werden normalerweise das Kontextmen&uuml; aufrufen, wieder unabh&auml;ngig von der Vertauschung.
+Siehe die Tabelle bei <a href="MouseClick.htm#table">MouseClick</a> f&uuml;r weitere Erl&auml;uterungen.
+
+###Related###
+MouseClick, MouseGetPos, MouseMove, MouseCoordMode (Option), MouseClickDragDelay (Option), MouseDown, MouseUp, MouseWheel
+
+
+###Example###
+@@IncludeExample@@

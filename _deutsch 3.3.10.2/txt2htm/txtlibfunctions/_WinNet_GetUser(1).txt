@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinNet_GetUser
+
+###Description###
+Ermittelt den Standard Benutzernamen, oder den Benutzernamen, mit dem eine Verbindung hergestellt wurde.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_GetUser ( $sName )
+
+
+###Parameters###
+@@ParamTable@@
+$sName
+	Entweder den Namen eines lokalen Ger&auml;tes, das umgeleitet wird zu einer Netzwerkressource, oder der Name einer Netzwerkressource,
+	zu der eine Verbindung ohne Umleitung eines lokalen Ger&auml;tes hergestellt wurde. Wenn dieser Parameter leer ist, liefert das System
+	den Namen des aktuellen Benutzers f&uuml;r den Prozess zur&uuml;ck.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der Benutzername
+Fehler:	setzt das @error-Flag ungleich 0
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ WNetGetUser

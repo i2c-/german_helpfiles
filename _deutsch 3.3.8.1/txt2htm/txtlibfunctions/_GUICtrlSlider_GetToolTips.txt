@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlSlider_GetToolTips
+
+###Description###
+Ermittelt, falls vorhanden, das Handle zu dem ToolTip-Control, welches zum Slider geh&ouml;rt.
+
+###Syntax###
+#include <GuiSlider.au3>
+_GUICtrlSlider_GetToolTips($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	das Handle des ToolTip-Control, welches zum Slider geh&ouml;rt
+Fehler:	0
+
+###Remarks###
+Falls das Slider-Control den Stil $TBS_TOOLTIPS nicht verwendet, ist der R&uuml;ckgabewert 0.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlSlider_SetToolTips
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,42 @@
+###User Defined Function###
+_WinAPI_FreeLibrary
+
+###Description###
+Dekrementiert den Referenzz&auml;hler der geladenen, dynamischen Bibliothek (DLL)
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_FreeLibrary ( $hModule )
+
+
+###Parameters###
+@@ParamTable@@
+$hModule
+	Handle, welches das Modul identifiziert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False, es ist _WinAPI_GetLastError() aufzurufen um erweiterte Fehlercodes zu erhalten
+@@End@@
+
+
+###Remarks###
+F&uuml;r jede dynamische Bibliothek unterh&auml;lt Windows einen Referenzz&auml;hler. Der Wert des Z&auml;hlers enth&auml;lt
+die Anzahl der Prozesse, die gerade Gebrauch von dieser Bibliothek machen. Wird eine dynamische Bibliothek
+in einem Prozess geladen, wird der Referenzz&auml;hler inkrementiert (um Eins erh&ouml;ht) und bei der Freigabe der
+Bibliothek dekrementiert (um Eins erniedrigt). Ist der Wert des Referenzz&auml;hlers Null, wird die Bibliothek
+augenblicklich von keinem Prozess genutzt.
+
+
+###Related###
+_WinAPI_LoadLibrary, _WinAPI_LoadLibraryEx, _WinAPI_LoadString
+
+
+###See Also###
+@@MsdnLink@@ FreeLibrary
+
+
+###Example###
+@@IncludeExample@@

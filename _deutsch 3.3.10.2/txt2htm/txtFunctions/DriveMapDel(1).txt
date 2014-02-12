@@ -1,0 +1,33 @@
+###Function###
+DriveMapDel
+
+###Description###
+Trennt die Verbindung zu einem Netzlaufwerk..
+
+###Syntax###
+DriveMapDel ( "drive" )
+
+
+###Parameters###
+@@ParamTable@@
+drive
+	Das zu trennende Laufwerk, z.B. "O:" oder "LPT1:".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0 wenn das Trennen keinen Erfolg hatte.
+@@End@@
+
+
+###Remarks###
+Wurde einer Verbindung kein Laufwerksbuchstabe zugewiesen, kann man zum Trennen den Verbindungsnamen benutzen, z.B. \Server\Freigabe
+
+
+###Related###
+DriveMapAdd, DriveMapGet
+
+
+###Example###
+@@IncludeExample@@

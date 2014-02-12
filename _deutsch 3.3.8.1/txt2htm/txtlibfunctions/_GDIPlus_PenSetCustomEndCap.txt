@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_PenSetCustomEndCap
+
+###Description###
+Setzt die benutzerdefinierte Endkappe f&uuml;r den Zeichenstift
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenSetCustomEndCap($hPen, $hEndCap)
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu einem Zeichenstift-Objekt
+$hEndCap
+	Handle zu einem CustomLineCap-Objekt, welches die benutzerdefinierte Endkappe definiert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenGetCustomEndCap
+
+###See Also###
+@@MsdnLink@@ GdipSetPenCustomEndCap
+
+###Example###
+@@IncludeExample@@

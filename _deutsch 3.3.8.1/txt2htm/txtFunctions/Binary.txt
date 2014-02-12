@@ -1,0 +1,30 @@
+###Function###
+Binary
+
+###Description###
+Gibt die bin&auml;re Darstellung eines Ausdruckes zur&uuml;ck.
+
+###Syntax###
+Binary ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Ausdruck welcher in bin&auml;re oder Byte Daten konvertiert werden soll.
+@@End@@
+
+
+###ReturnValue###
+Gibt eine bin&auml;re Variante zur&uuml;ck.
+
+
+###Remarks###
+Keine.
+
+###Related###
+Int, Number, IsBinary, BinaryLen, BinaryMid, BinaryToString, StringToBinary
+
+
+###Example###
+@@IncludeExample@@

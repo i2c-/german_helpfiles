@@ -1,0 +1,50 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetText
+
+###Description###
+Gibt den gesamten Text des Controls zur&uuml;ck
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetText($hWnd [, $fCrToCrLf = False [, $iCodePage = 0 [, $sReplChar = ""]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fCrToCrLf
+	[optional] True, ersetzt jedes @CR durch ein @CRLF
+		Standard = False
+$iCodePage
+	[optional] Code-Page wird f&uuml;r &Uuml;bertragung genutzt
+		Default: Benutze Systemstandard
+		0 f&uuml;r ANSI, 1200 f&uuml;r Unicode
+$sReplChar
+	[optional] Zeichen, das benutzt wird, wenn $iCodePage nicht 1200 ist und ein breites Zeichen (Unicode) nicht in der Code-Page dargestellt werden kann.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Den Text
+Fehler:	"" und setzt @error:
+@error:	101 - $hWnd ist kein Handle
+	102 - $fCrToCrLf ist nicht True oder False
+	103 - $iCodePage ist keine Zahl
+	700 - Interner Fehler
+@@End@@
+
+###Remarks###
+Bei Erfolg und wenn $sReplChar gesetzt ist, enth&auml;lt @extended das Zeichen, das benutzt wurde.
+
+Ein Aufruf von _GUICtrlRichEdit_IsModified() stellt fest, ob der Text ge&auml;ndert wurde.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetText, _GUICtrlRichEdit_AppendText, _GUICtrlRichEdit_InsertText, _GUICtrlRichEdit_IsModified
+
+###See Also###
+@@MsdnLink@@ EM_GETTEXTEX
+
+###Example###
+@@IncludeExample@@

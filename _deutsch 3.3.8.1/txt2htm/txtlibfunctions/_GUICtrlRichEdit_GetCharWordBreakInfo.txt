@@ -1,0 +1,50 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetCharWordBreakInfo
+
+###Description###
+Ermittelt Informationen &uuml;ber das Zeichen an der angegebenen Zeichenposition vor oder hinter dem n&auml;chsten Zeilenumbruch.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetCharWordBreakInfo($hWnd, $iCp)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCP
+	Zeichenposition links neben dem Zeichen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String mit zwei durch ein Komma getrennten Werten:
+	1. Wert - wortumbrechende(r) Status:
+	  c - Die Zeile kann nach diesem Zeichen umbrechen
+	  d - Das Zeichen ist ein Trennzeichen, das das Ende eines Wortes anzeigt. Zeilen k&ouml;nnen umgebrochen werden
+	  w - Das Zeichen ist ein unsichtbares Zeichen (anh&auml;ngende unsichtbare Zeichen werden nicht in der Zeilenl&auml;nge &uuml;bernommen.)
+
+	2. Wert - Zeichenklasse
+	  0 = Alphanumerisches Zeichen
+	  1 = anderes druckbares Zeichen (au&szlig;er Bindestrichen)
+	  2 = Leerzeichen
+	  3 = Tab
+	  4 = Bindestrich oder Ende des Absatzes
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $iCp ist keine Zahl
+@@End@@
+
+###Remarks###
+Zeilen k&ouml;nnen bei Trennzeichen oder zwischen Zeichen verschiedener Klassen umgebrochen werden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_GetCharPosOfNextWord, _GUICtrlRichEdit_GetCharPosOfPreviousWord
+
+###See Also###
+@@MsdnLink@@ EM_FINDWORDBREAK
+
+###Example###
+@@IncludeExample@@

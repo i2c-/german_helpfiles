@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlHeader_SetBitmapMargin
+
+###Description###
+Setzt die Breite des Randes eines Bitmaps in Pixel
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetBitmapMargin ( $hWnd, $iWidth )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iWidth
+	Breite des Randes eines Bitmaps in Pixel
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die vorherige Bitmaprandbreite
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetBitmapMargin
+
+
+###Example###
+@@IncludeExample@@

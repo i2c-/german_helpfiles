@@ -1,0 +1,46 @@
+###User Defined Function###
+_GUICtrlMenu_SetItemBitmaps
+
+###Description###
+Verkn&uuml;pft das festgelegte Bitmap mit einem Men&uuml;item
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_SetItemBitmaps($hMenu, $iItem, $hChecked, $hUnChecked [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Men&uuml;handle
+$iItem
+	ID oder Position des Men&uuml;items
+$hChecked
+	Handle zu dem Bitmap, welches dargestellt werden soll, wenn das Men&uuml;item ausgew&auml;hlt wird
+$hUnChecked
+	Handle zu dem Bitmap, welches dargestellt werden soll, wenn das Men&uuml;item nicht ausgew&auml;hlt wird
+$fByPos
+	[optional] Men&uuml;-ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn entweder der hBitmapUnchecked oder hBitmapChecked Parameter 0 ist, zeigt das System nichts f&uuml;r das Men&uuml;item an.
+Falls beide Parameter 0 sind zeigt das System das Standard Markiert Bitmap an wenn das Item ausgew&auml;hlt ist und entfernt das Bitmap wenn das Item nicht ausgew&auml;hlt ist.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetItemBmpChecked, _GUICtrlMenu_SetItemBmpUnchecked
+
+###See Also###
+@@MsdnLink@@ SetMenuItemBitmaps
+
+###Example###
+@@IncludeExample@@

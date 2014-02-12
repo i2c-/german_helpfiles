@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUIImageList_Add
+
+###Description###
+F&uuml;gt ein Bild oder mehrere Bilder einer Imagelist hinzu
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_Add($hWnd, $hImage [, $hMask=0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$hImage
+	Handle zum Bitmap welches das Bild oder die Bilder enth&auml;lt. Die Anzahl von Bildern wird aus der Breite des Bitmaps gefolgert.
+$hMask
+	[optional] Handle zum Bitmap welches die Maske enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Index des ersten neuen Bildes
+Fehler:	-1
+@@End@@
+
+###Remarks###
+Diese Funktion kopiert das Bitmap in eine interne Datenstruktur. Nach der Funktion muss _WinAPI_DeleteObject verwendet werden um hImage und hMask wieder zu l&ouml;schen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUIImageList_AddMasked, _GUIImageList_AddBitmap, _GUIImageList_AddIcon
+
+###Example###
+@@IncludeExample@@

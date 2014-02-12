@@ -1,0 +1,47 @@
+###Function###
+GUICtrlSetBkColor
+
+###Description###
+Setzt die Hintergrundfarbe eines Controls.
+
+###Syntax###
+GUICtrlSetBkColor ( controlID, backgroundcolor )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+backgroundcolor
+	Die RGB-Farbe, die verwendet werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Derzeit k&ouml;nnen nur Button, Label, Checkbox, Group, Radio, Edit, Input, List, Listview, ListviewItem, Treeview, TreeviewItem, Graphic, Progress, Slider und Combo Controls eingef&auml;rbt werden.
+
+Progressbar, Checkbox, Radio, Group, Progress oder Combo-Controls k&ouml;nnen nicht ver&auml;ndert werden, wenn der "Windows XP style" verwendet wird.
+
+Buttons werden immer im Windows Classic Stil dargestellt. Sie k&ouml;nnen keinen $BS_ICON Stil haben.
+
+Das spezielle Flag $GUI_BKCOLOR_TRANSPARENT kann verwendet werden um Labels, Group, Radio und Checkbox Controls einen transparenten Hintergrund zu geben.
+
+Das spezielle Flag $GUI_BKCOLOR_LV_ALTERNATE kann zusammen mit dem ListView-Control dazu genutzt werden, den ListviewItems-Zeilen abwechselnd andere Hintergrundfarben zu geben.
+Die ungeraden Zeilen bekommen die Farbe, welche durch <a href="GUICtrlSetBkColor.htm">GUICtrlSetBkColor()</a> dem ListView-Control zugewiesen wird.
+Die geraden Zeilen bekommen die Farbe, welche durch <a href="GUICtrlSetBkColor.htm">GUICtrlSetBkColor()</a> dem ListViewItem Control zugewiesen wird.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUICtrlCreate..., GUICtrlSetColor, GUICtrlSetDefBkColor
+
+
+###Example###
+@@IncludeExample@@

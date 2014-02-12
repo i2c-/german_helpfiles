@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlComboBox_SetCueBanner
+
+###Description###
+Setzt den "cue banner" Text, welcher in einem Edit-Control einer Combobox angezeigt wird
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SetCueBanner ( $hWnd, $sText )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$sText
+	String der den Text enth&auml;lt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Der "cue banner" ist Text, welcher in dem Edit-Control einer ComboBox dargestellt wird, wenn kein Item markiert ist
+
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBox_GetCueBanner
+
+
+###Example###
+@@IncludeExample@@

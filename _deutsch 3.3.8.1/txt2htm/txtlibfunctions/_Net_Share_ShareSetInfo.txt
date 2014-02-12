@@ -1,0 +1,41 @@
+###User Defined Function###
+_Net_Share_ShareSetInfo
+
+###Description###
+Ver&auml;ndert Information einer Server-Freigabe
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareSetInfo($sServer, $sShare, $sComment, $iMaxUses)
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Spezifiziert den DNS- oder NetBIOS-Namen des entfernten Servers, auf dem die Funktion ausgef&uuml;hrt werden soll. Wird dieser
+		Parameter leer gelassen, wird der lokale Rechner verwendet.
+$sShare
+	Gibt den Namen der Freigabe an, dessen Informationen ver&auml;ndert werden sollen 
+$sComment
+	Gibt einen optionalen Kommentar f&uuml;r die Freigabe an
+$iMaxUses
+	Legt die maximale Anzahl der gleichzeitigen Verbindungen fest, welche zu der Freigabe aufgebaut werden k&ouml;nnen. Die Anzahl ist unlimitiert, wenn dieser Wert mit -1 angegeben wird.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nur Mitglieder der lokalen Gruppen der Administratoren oder der Hauptbenutzer, sowie Benutzer die Mitglied der Print- oder Server-Operatoren sind,
+k&ouml;nnen diese Funktion ausf&uuml;hren. Die Print-Operatoren k&ouml;nnen nur Informationen zu Druckerfreigaben ver&auml;ndern.
+
+###Related###
+_Net_Share_ShareGetInfo
+
+###See Also###
+@@MsdnLink@@ NetShareSetInfo
+
+###Example###
+@@IncludeExample@@

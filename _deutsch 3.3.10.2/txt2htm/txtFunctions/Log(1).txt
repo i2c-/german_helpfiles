@@ -1,0 +1,33 @@
+###Function###
+Log
+
+###Description###
+Errechnet den nat&uuml;rlichen Logarithmus einer Zahl.
+
+###Syntax###
+Log ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Beliebige positive Zahl. 
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	der nat&uuml;rliche Logarithmus der Zahl.
+Fehler:	Neigt dazu, "-1.#IND" f&uuml;r negative Parameter zur&uuml;ckzugeben.
+@@End@@
+
+
+###Remarks###
+@error ist immer 0
+
+
+###Related###
+Exp
+
+
+###Example###
+@@IncludeExample@@

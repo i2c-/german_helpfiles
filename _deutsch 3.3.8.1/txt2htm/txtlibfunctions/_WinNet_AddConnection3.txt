@@ -1,0 +1,56 @@
+###User Defined Function###
+_WinNet_AddConnection3
+
+###Description###
+Verbindet ein lokales Laufwerk mit einer Netzwerk Ressource.
+
+###Syntax###
+#include <WinNet.au3>
+_WinNet_AddConnection3($hWnd, $sLocalName, $sRemoteName [, $sUserName = 0 [, $sPassword = 0 [, $iType = 1 [, $iOptions = 1]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster, welches der Anbieter der Netzwerkressource als Eignerfenster f&uuml;r Dialoge nutzen kann.
+	Nutze diesen Parameter, wenn Bit 2 (Interaktion) in <b>Options</b> gesetzt ist. Dieser Parameter kann 0 sein.
+$sLocalName
+	Name des lokalen Laufwerkes das umgeleitet wird, wie zum Beispiel "F:" oder "LPT1". Bei dem String wird keine Gro&szlig;-Kleinschreibung beachtet. Wenn der Parameter 0 ist, wird eine Verbindung aufgebaut, ohne das lokale Laufwerk umzuleiten.
+$sRemoteName
+	Name der Netzwerkressource, zu der verbunden werden soll.
+$sUsername
+	[optional] Benutzername f&uuml;r die Verbindung zu der Netzwerkressource. Wenn 0, benutzt die Funktion den Standard-Benutzernamen.
+$sPassword
+	[optional] Passwort, das benutzt werden soll, um eine Verbindung herzustellen. Dieser Parameter ist normalerweise das Passwort, das mit dem aktuellen Benutzer verkn&uuml;pft ist. Wenn der Parameter 0 ist, wird das Standardpasswort verwendet. Ein leerer String bedeutet, dass kein Passwort verwendet wird.
+$iType
+	[optional] Gibt den Typ der Netzwerkressource an, zu der verbunden werden soll:
+		0 - Jede (Nur wenn $sLocalName 0 ist)
+		1 - Laufwerk
+		2 - Drucker
+$iOptions
+	[optional] Verbindungs-Optionen. Kann eines oder mehrere der folgenden Optionen sein:
+		 1 - Die Netzwerkverbindung soll dauerhaft (persistent) sein.
+		 2 - Das Betriebssystem kann zu Authorisierungszwecken mit dem Benutzer interagieren.
+		 4 - Das System verwendet keine Voreinstellungen f&uuml;r Benutzername und Passwort, ohne dem Benutzer die M&ouml;glichkeit
+		f&uuml;r alternative Angaben zu geben. Dieses Bit wird ignoriert, wenn Bit 2 (Interaktion) nicht gesetzt ist.
+		 8 - Erzwingt die Umleitung eines lokalen Ger&auml;ts, wenn eine Verbindung aufgebaut wird.
+		16 - Das Betriebssystem benutzt die Kommandozeile f&uuml;r die Authentifizierung.
+		Dieses Bit wird ignoriert, wenn Bit 2 (Interaktion) nicht gesetzt ist.
+		32 - Wenn dieses Bit gesetzt ist und das Betriebssystem nach der Berechtigung fragt, wird die Berechtigung gespeichert.
+		Wenn die Rechteverwaltung f&uuml;r die aktuelle Sitzung deaktiviert ist oder der Netzwerkverwalter die Speicherung der Zugangsdaten 
+		nicht unterst&uuml;tzt, wird dieses Bit ignoriert. Diese Option wird auch ignoriert, wenn Bit 5 (Kommandozeile statt GUI) gesetzt ist.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_WinNet_AddConnection, _WinNet_AddConnection2
+
+###See Also###
+@@MsdnLink@@ WNetAddConnection3A

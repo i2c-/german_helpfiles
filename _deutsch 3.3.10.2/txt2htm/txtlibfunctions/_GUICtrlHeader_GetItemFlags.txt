@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlHeader_GetItemFlags
+
+###Description###
+Gibt die Item Flag Informationen zur&uuml;ck
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_GetItemFlags ( $hWnd, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Itemindex
+@@End@@
+
+###ReturnValue###
+Gibt die Item Flag Information zur&uuml;ck:
+	1 - Zeigt ein Bild von einer Imagelist
+	2 - Text wird in der Gegenrichtung vom Text in das Parent-Fenster gelesen
+	4 - Zeichnet ein Pfeil-runter auf das Item
+	8 - Zeichnet ein Pfeil-hoch auf das Item
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_SetItemFlags
+
+
+###Example###
+@@IncludeExample@@

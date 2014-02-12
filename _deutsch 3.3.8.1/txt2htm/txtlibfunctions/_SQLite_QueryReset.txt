@@ -1,0 +1,34 @@
+###User Defined Function###
+_SQLite_QueryReset
+
+###Description###
+Setzt eine auf _SQLite_Query() basierende Abfrage zur&uuml;ck
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_QueryReset($hQuery)
+
+
+###Parameters###
+@@ParamTable@@
+$hQuery
+	Abfrage-handle, welches durch SQLite_Query() erzeugt wurde
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt $SQLITE_OK zur&uuml;ck
+Fehler:	Der R&uuml;ckgabewert kann mit $SQLITE_* Konstanten verglichen werden
+@error:	-1 - SQLite hat einen Fehler festgestellt (&uuml;berpr&uuml;fe R&uuml;ckgabewert)
+	1 - Fehler beim Aufruf von SQLite API 'sqlite3_reset'
+	2 - Aufruf vom Sicherheitsmodus verhindert
+@@End@@
+
+###Remarks###
+Dies setzt eine unfertige Afrage zur&uuml;ck, so dass die sich ergebende Rowset erneut &uuml;berpr&uuml;ft werden kann.
+
+###Related###
+_SQLite_Query, _SQLite_QueryFinalize
+
+###Example###
+@@IncludeExample@@

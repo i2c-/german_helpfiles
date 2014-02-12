@@ -1,0 +1,33 @@
+###Structure Name###
+$tagNMTBHOTITEM
+
+###Description###
+Enth&auml;lt Informationen, die in $TBN_HOTITEMCHANGE Benachrichtigungen genutzt werden
+
+###Syntax###
+Global Const $tagNMTBHOTITEM = $tagNMHDR & ";int idOld;int idNew;dword dwFlags"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+idOld
+	Befehls-Identifizierer des zuvor hervorgehobenen Elements
+idNew
+	Befehls-Identifizierer des Elements, welches hervorgehoben werden soll.
+dwFlags
+	Flags die darauf hinweisen warum das hervorgehobene Element ge&auml;ndert wurde. Dies kann einer oder mehrere der folgenden Werte sein:
+		$HICF_ACCELERATOR    - Die &Auml;nderung des hervorgehobenen Elements wurde durch einen Abk&uuml;rzungsbefehl herbeigef&uuml;hrt
+		$HICF_ARROWKEYS      - Die &Auml;nderung des hervorgehobenen Elements wurde durch eine der Pfeiltasten herbeigef&uuml;hrt
+		$HICF_DUPACCEL       - Modifiziert $HICF_ACCELERATOR. Wenn dieses Flag gesetzt ist, haben mehrere Elemente denselben Abk&uuml;rzungsbefehl
+		$HICF_ENTERING       - Modifiziert die anders begr&uuml;ndeten Flags. Wenn dieses Flag gesetzt ist, gibt es kein zuvor hervorgehobenes Element und <b>idOld</b> enth&auml;lt keine g&uuml;ltigen Informationen
+		$HICF_LEAVING        - Modifiziert die anders begr&uuml;ndeten Flags. Wenn dieses Flag gesetzt ist, gibt es kein neu hervorzuhebendes Element und <b>idNew</b> enth&auml;lt keine g&uuml;ltigen Informationen
+		$HICF_LMOUSE         - Die &Auml;nderung des hervorgehobenen Elements resultiert aus einem Klick der linken Maustaste
+		$HICF_MOUSE          - Die &Auml;nderung des hervorgehobenen Elements resultiert aus einem Mausereignis
+		$HICF_OTHER          - Die &Auml;nderung des hervorgehobenen Elements resultiert aus einem nicht ermittelbaren Ereignis. Dies wird meistens durch eine &Auml;nderung des Fokus oder der $TB_SETHOTITEM Nachricht herr&uuml;hren
+		$HICF_RESELECT       - Die &Auml;nderung des hervorgehobenen Elements resultiert aus der Eingabe eines Abk&uuml;rzungsbefehls durch den Benutzer f&uuml;r ein Element, dass bereits hervorgehoben ist
+		$HICF_TOGGLEDROPDOWN - Version 5.80. Bewirkt, dass der Button zwischen dem Status hin-/herschaltet
+@@End@@
+
+###Remarks###
+Ben&ouml;tigt Abgleich zu x64.

@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_CreateSolidBitMap
+
+###Description###
+Erstellt ein vollfarbiges Farbbitmap.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_CreateSolidBitMap ( $hWnd, $iColor, $iWidth, $iHeight )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu dem Fenster wo das Bitmap dargestellt werden soll
+$iColor
+	Die Farbe des Bitmaps in RGB
+$iWidth
+	Die Breite des Bitmaps
+$iHeight
+	Die H&ouml;he des Bitmaps
+@@End@@
+
+###ReturnValue###
+Gibt ein Handle des Bitmaps zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlTreeView_GetSiblingCount
+
+###Description###
+Ermittelt die Anzahl von Items, die sich auf der gleichen Ebene befinden wie das festgelegte Item
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetSiblingCount($hWnd, $hItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl von Items zur&uuml;ck
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_GetCount, _GUICtrlTreeView_GetChildCount
+
+###Example###
+@@IncludeExample@@

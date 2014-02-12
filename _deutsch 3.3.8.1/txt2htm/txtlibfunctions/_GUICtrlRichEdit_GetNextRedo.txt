@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetNextRedo
+
+###Description###
+Ermittelt den Namen oder die Typ-ID der n&auml;chstm&ouml;glichen Wiederholaktion
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetNextRedo($hWnd, $fName = True)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fName
+	True (gibt den Namen zur&uuml;ck, Standard) oder False (gibt die ID-Nummer zur&uuml;ck)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Abh&auml;ngig vom Wert von $fName:
+	Wenn $fName True ist: "Unknown", "Typing", "Delete", "Drag and drop", "Cut" oder "Paste"
+	Wenn $fName False ist: Die zugeh&ouml;rige Zahl (0 bis 5)
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fName ist weder True noch False
+@@End@@
+
+###Remarks###
+Es ist zu beachten, dass EM_GETREDONAME nicht zwischen "Unknown" und einer leeren Wiederhol-Reihe unterscheidet.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_Redo, _GUICtrlRichEdit_Undo, _GUICtrlRichEdit_SetUndoLimit
+
+###See Also###
+@@MsdnLink@@ EM_GETREDONAME
+
+###Example###
+@@IncludeExample@@

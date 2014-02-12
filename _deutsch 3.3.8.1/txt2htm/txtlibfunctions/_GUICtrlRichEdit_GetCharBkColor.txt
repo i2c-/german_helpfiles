@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetCharBkColor
+
+###Description###
+Gibt die Hintergrundfarbe des markierten Textes zur&uuml;ck oder, wenn keiner markiert ist, vom ersten Buchstaben rechts vom Einf&uuml;gepunkt.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetCharBkColor($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	COLORREF-Wert und @extended wird auf 1 gesetzt, wenn die Farbe in der Markierung durchweg gleich ist.
+Fehler:	Setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Falls ein Farbarray erstellt werden soll, so ist _ColorGetCOLORREF() anstatt _ColorGetRGB() zu verwenden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetCharBkColor
+
+###See Also###
+@@MsdnLink@@ EM_GETCHARFORMAT
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,42 @@
+###User Defined Function###
+_IECreateEmbedded
+
+###Description###
+Erstellt ein Webbrowserobjekt, das man mit GuiCtrlCreateObj() in eine Autoit-GUI einbinden kann.
+
+###Syntax###
+#include <IE.au3> 
+_IECreateEmbedded()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Referenz (einen Verweis) auf ein Webbrowser-Objekt zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR.
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+@@End@@
+
+
+###Remarks###
+Es kann keine Aktion ausgef&uuml;hrt werden, bevor das Objekt in eine GUI eingebettet ist (z.B. kann kein _IENavigate erfolgen). 
+Wegen dieser Einschr&auml;nkung navigiert der Browser nicht automatisch zu 'about:blank', wie dies ein Prozess macht, wenn man _IECreate verwendet. 
+Man muss _IENavigate verwenden, um 'about:blank' zu laden, nachdem das Webbrowserobjekt mit GUICtrlCreateObj() in die Parent-Anwendung eingebunden wurde. 
+Dies muss erledigt sein, bevor man versucht irgendeine Operation zu starten, die voraussetzt, dass ein Dokument geladen wurde. (z. B. _IEBodyWriteHMTL).
+
+F&uuml;r ein normales InternetExplorer-Objekt gibt es Eigenschaften (z.B. erzeugt von _IECreate), die f&uuml;r dieses Objekt nicht verf&uuml;gbar sind. 
+Beispielsweise Statusbar, Adressleiste und andere gibt es f&uuml;r einen Browser, aber nicht f&uuml;r ein eingebettetes Browserobjekt.
+
+M&ouml;glicherweise k&ouml;nnen Darstellungsfehler auftreten, wenn der Fensterstil $WS_CLIPCHILDREN in GUICreate() nicht verwendet wird.
+
+_IEQuit kann mit diesem Objekt nicht benutzt werden. Das Objekt wird automatisch mit der GUI entfernt.
+
+
+###Related###
+GUICreate, GUICtrlCreateObj, _IEAttach, _IECreate, _IENavigate
+
+
+###Example###
+@@IncludeExample@@

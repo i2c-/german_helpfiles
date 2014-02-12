@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUIImageList_GetIcon
+
+###Description###
+Erstellt ein Icon von einem Bild und einer Maske in einer Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_GetIcon($hWnd, $iIndex [, $iStyle = 0])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Index des Bildes
+$iStyle
+	[optional] Zeichenstil und Overlay-Bild:
+		1 - Zeichnet das Bild transparent durch Benutzung einer Maske unabh&auml;ngig von der Hintergrundfarbe
+		2 - Zeichnet das Bild, vermischt mit 25 Prozent von dem Systemfarbe f&uuml;r das Hervorheben
+		4 - Zeichnet das Bild, vermischt mit 50 Prozent von dem Systemfarbe f&uuml;r das Hervorheben
+		8 - Zeichnet die Maske
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle des Icons falls erfolgreich
+Fehler:	0
+@@End@@
+
+###Remarks###
+Nach Benutzen der Funktion muss das Icon durch _GUIImageList_DestroyIcon wieder zerst&ouml;rt werden
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

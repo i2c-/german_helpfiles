@@ -1,0 +1,31 @@
+###Function###
+OnAutoItExitUnRegister
+
+###Description###
+Deregistriert eine Funktion, wenn AutoIt beendet wird.
+
+###Syntax###
+OnAutoItExitUnRegister ( "function" )
+
+
+###Parameters###
+@@ParamTable@@
+function
+	Der Name der Funktion die deregistriert werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck.
+@@End@@
+
+
+###Remarks###
+
+###Related###
+OnAutoItExitRegister
+
+
+###Example###
+@@IncludeExample@@

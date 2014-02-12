@@ -1,0 +1,34 @@
+###Function###
+FileGetLongName
+
+###Description###
+Gibt den angegebenen Dateinamen und -pfad im Langformat zur&uuml;ck.
+
+###Syntax###
+FileGetLongName ( "file" [, flag] )
+
+
+###Parameters###
+@@ParamTable@@
+file
+	Vollst&auml;ndiger Pfad und Dateiname, der umgewandelt werden soll.
+flag
+	[optional] Auf 1 setzen, wenn die Datei ein relatives Verzeichnis haben darf, z. B. "..\file.txt"
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den angegebenen Dateinamen und -pfad im Langformat zur&uuml;ck.
+Fehler:	Gibt den Parameter zur&uuml;ck und setzt @error auf 1.
+@@End@@
+
+
+###Remarks###
+Keine.
+
+###Related###
+FileGetShortName
+
+
+###Example###
+@@IncludeExample@@

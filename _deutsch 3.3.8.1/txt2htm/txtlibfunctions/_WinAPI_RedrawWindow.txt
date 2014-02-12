@@ -1,0 +1,59 @@
+###User Defined Function###
+_WinAPI_RedrawWindow
+
+###Description###
+Aktualisiert das angegebene Rechteck oder Region im Anwendungsbereich eines Fensters
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_RedrawWindow($hWnd [, $tRect = 0 [, $hRegion = 0 [, $iFlags = 5]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zu einem Fenster
+$tRect
+	[optional] $tagRECT Struktur welche die Koordinaten des zu aktualisierenden Rechtecks enth&auml;lt. Dieser Parameter wird
+		ignoriert, wenn der $hRegion Parameter eine Region identifiziert.
+$hRegion
+	[optional] Identifiziert die zu aktualisierende Region. Wenn die $hRegion und $tRect Parameter 0 sind, wird der gesamte
+		Anwendungsbereich des Fensters aktualisiert.
+$iFlags
+	[optional] Legt die Flags f&uuml;rs Neuzeichnen fest. Dieser Parameter kann eine Kombination von Flags sein welche den Fenster-
+		inhalt f&uuml;r g&uuml;ltig oder ung&uuml;ltig erkl&auml;ren, das Neuzeichnen regeln und welche Fenster davon betroffen sind:
+		$RDW_ERASE - Veranlasst, dem Fenster eine WM_ERASEBKGND Nachricht zu senden, wenn es neugezeichnet wird
+		$RDW_FRAME - Veranlasst, dem Fenster eine WM_NCPAINT Nachricht zu senden, sollten Teile des Nicht-Anwendungsbereichs
+		sich mit der zu aktualisierenden Region &uuml;berschneiden.
+		$RDW_INTERNALPAINT - Veranlasst eine WM_PAINT Nachricht an das Fenster zu senden unabh&auml;ngig davon, ob
+		ein Bereich des Fensters ung&uuml;ltig ist.
+		$RDW_INVALIDATE - Annulliert DllStructGetData($tRect oder $hRegion, ""). Sind beide 0, wird das gesamte Fenster f&uuml;r ung&uuml;ltig erkl&auml;rt.
+		$RDW_NOERASE - Unterdr&uuml;ckt jede bevorstehende $WM_ERASEBKGND Nachricht
+		$RDW_NOFRAME - Unterdr&uuml;ckt jede bevorstehende $WM_NCPAINT Nachricht
+		$RDW_NOINTERNALPAINT - Unterdr&uuml;ckt jede bevorstehende interne $WM_PAINT Nachricht
+		$RDW_VALIDATE - Erkl&auml;rt $tRect oder $hRegion f&uuml;r g&uuml;ltig
+		$RDW_ERASENOW - Veranlasst das betroffene Fenster eine $WM_NCPAINT und $WM_ERASEBKGND Nachricht zu erhalten, wenn
+		n&ouml;tig, bevor die Funktion zur&uuml;ckkehrt
+		$RDW_UPDATENOW - Veranlasst das betroffene Fenster eine $WM_NCPAINT, $WM_ERASEBKGND, und $WM_PAINT zu erhalten,
+		wenn n&ouml;tig, bevor die Funktion zur&uuml;ckkehrt
+		$RDW_ALLCHILDREN - Bezieht Child-Fenster in die Zeichenoperation mit ein
+		$RDW_NOCHILDREN - Schlie&szlig;t Child-Fenster von der Zeichenoperation aus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn RedrawWindow benutzt wird, um Teile des Desktop-Fensters f&uuml;r ung&uuml;ltig zu erkl&auml;ren, erh&auml;lt dieses keine
+$WM_PAINT Nachricht. Um den Desktop neuzuzeichnen benutzt eine Anwendung das $RDW_ERASE Flag, um eine $WM_ERASEBKGND
+Nachricht zu erzeugen, welche dann ein neuzeichnen des Desktop-Fensters nach sich zieht.
+
+Ben&ouml;tigt WindowsConstants.au3 f&uuml;r vordefinierte Konstanten.
+
+###Related###
+$tagRECT
+
+###See Also###
+@@MsdnLink@@ RedrawWindow

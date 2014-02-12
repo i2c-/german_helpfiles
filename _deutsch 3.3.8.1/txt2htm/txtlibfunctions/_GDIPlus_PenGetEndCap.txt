@@ -1,0 +1,43 @@
+###User Defined Function###
+_GDIPlus_PenGetEndCap
+
+###Description###
+Ermittelt die Endkappe des Zeichenstifts
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_PenGetEndCap($hPen)
+
+###Parameters###
+@@ParamTable@@
+$hPen
+	Handle zu einem Zeichenstift-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Typ der Endkappe:
+	$GDIP_LINECAPFLAT - legt ein flaches Ende fest
+	$GDIP_LINECAPSQUARE - legt ein quadratisches Ende fest
+	$GDIP_LINECAPROUND - legt ein rundes Ende fest
+	$GDIP_LINECAPTRIANGLE - legt ein dreieckiges Ende fest
+	$GDIP_LINECAPNOANCHOR - legt fest, dass die Enden der Linie nicht verankert sind
+	$GDIP_LINECAPSQUAREANCHOR - legt fest, dass die Enden der Linie mit einem Quadrat verankert sind
+	$GDIP_LINECAPROUNDANCHOR - legt fest, dass die Enden der Linie mit einem Kreis verankert sind
+	$GDIP_LINECAPDIAMONDANCHOR - legt fest, dass die Enden der Linie mit einer Pfeilspitze verankert sind
+	$GDIP_LINECAPARROWANCHOR - legt fest, dass die Enden der Linie mit einem Pfeilkopf verankert sind
+	$GDIP_LINECAPCUSTOM - legt fest, dass die Enden der Linie eine benutzerdefinierte Endkappe haben
+Fehler:	-1 und @error wird gesetzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_PenSetEndCap
+
+###See Also###
+@@MsdnLink@@ GdipGetPenEndCap
+
+###Example###
+@@IncludeExample@@

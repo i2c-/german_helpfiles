@@ -1,0 +1,43 @@
+###User Defined Function###
+_ArrayTrim
+
+###Description###
+K&uuml;rzt alle Elemente in einem Array um eine bestimmte Anzahl von Zeichen.
+
+###Syntax###
+#include <Array.au3>
+_ArrayTrim(ByRef $avArray, $iTrimNum [, $iDirection = 0 [, $iStart = 0 [, $iEnd = 0]]])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Array, dessen Elemente gek&uuml;rzt werden sollen.
+$iTrimNum
+	Anzahl der Zeichen, um die gek&uuml;rzt werden soll.
+$iDirection
+	[optional] Richtung des k&uuml;rzen:
+		0 - links k&uuml;rzen
+		1 - rechts k&uuml;rzen
+$iStart
+	[optional] Start Array-Index
+$iEnd
+	[optional] Stopp Array-Index
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0, setzt @error:
+@error:	1 - $avArray ist kein Array
+	2 - $avArray ist kein 1-dimensionales Array
+	5 - $iStart ist gr&ouml;&szlig;er als $iEnd
+	(3-4 - alte, ungenutzte Fehlercodes)
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

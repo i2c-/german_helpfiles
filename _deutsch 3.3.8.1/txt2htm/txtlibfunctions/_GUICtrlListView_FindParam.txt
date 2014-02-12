@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_FindParam
+
+###Description###
+Sucht nach einem Item mit dem bestimmten lParam
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_FindParam($hWnd, $iParam [, $iStart = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iParam
+	zu suchender Parameterwert
+$iStart
+	[optional] 0-basierender Index des Items, von wo die Suche beginnen soll oder -1 um vom Anfang zu beginnen. Das
+		bestimmte Item wird bei der Suche ausgeschlossen.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der 0-basierende Index des Items
+Fehler:	-1
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_FindItem
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlListView_GetItemTextString
+
+###Description###
+Listet die komplette Zeile eines Listview Items auf
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetItemTextString ( $hWnd [, $iItem = -1] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iItem
+	[optional] 0-basierender Index des abzufragenden Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein getrennter String
+Fehler:	ein leerer String
+@@End@@
+
+
+###Remarks###
+Falls $iItem = -1 ist, wird das aktuell markierte Item ermittelt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_SetItemText, _GUICtrlListView_GetItemText, _GUICtrlListView_GetItemTextArray
+
+
+###Example###
+@@IncludeExample@@

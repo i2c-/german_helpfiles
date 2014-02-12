@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_LoadBitmap
+
+###Description###
+L&auml;dt die angegebene Bitmap-Ressource von einem Modul einer ausf&uuml;hrbaren Datei
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LoadBitmap ( $hInstance, $sBitmap )
+
+
+###Parameters###
+@@ParamTable@@
+$hInstance
+	Handle zu der Instanz des Moduls dessen ausf&uuml;hrbare Datei die zu ladende Bitmap enth&auml;lt
+$sBitmap
+	Der Name der zu ladenden Bitmap. Alternativ kann dies der Identifizierer der Ressource
+	in dem niederwertigen Wort (WORD) und 0 in dem h&ouml;herwertigen Wort sein.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Handle zu der angegebenen Bitmap
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Wird die Bitmap nicht mehr ben&ouml;tigt, muss diese Ressource, so wie jedes GDI-Objekt, mit _WinAPI_DeleteObject wieder
+freigegeben werden.
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ LoadBitmap

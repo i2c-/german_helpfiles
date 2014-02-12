@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlMenu_AddMenuItem
+
+###Description###
+F&uuml;gt ein neues Men&uuml;item an das Ende des Men&uuml;s an
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_AddMenuItem ( $hMenu, $sText [, $iCmdID = 0 [, $hSubMenu = 0]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$sText
+	Text des Men&uuml;items. Falls leer wird ein Trennzeichen hinzugef&uuml;gt.
+$iCmdID
+	[optional] Command ID um das Item zu bestimmen
+$hSubMenu
+	[optional] Handle zu dem Untermen&uuml; welches mit dem Men&uuml;item verbunden ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	ein 0-basierender Index des Men&uuml;items
+Fehler:	-1
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMenu_InsertMenuItem
+
+
+###Example###
+@@IncludeExample@@

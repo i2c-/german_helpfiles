@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlToolbar_SetMaxTextRows
+
+###Description###
+Setzt die maximale Anzahl von Textzeilen die Buttons anzeigen sollen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetMaxTextRows ( $hWnd, $iMaxRows )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iMaxRows
+	Maximale Anzahl von Textzeilen die angezeigt werden k&ouml;nnen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

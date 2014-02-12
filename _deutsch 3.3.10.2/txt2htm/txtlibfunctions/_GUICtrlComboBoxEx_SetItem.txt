@@ -1,0 +1,50 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_SetItem
+
+###Description###
+Setzt einige oder alle Attribute eines Items.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_SetItem ( $hWnd, $sText [, $iIndex = 0 [, $iImage = -1 [, $iSelectedImage = -1 [, $iOverlayImage = -1 [, $iIndent = -1 [, $iParam = -1]]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$sText
+	Itemtext. Siehe Bemerkungen.
+$iIndex
+	[optional] Der 0-basierende Index des Items
+$iImage
+	[optional] 0-basierender Index des Item Icons in der Imagelist des Controls
+$iSelectedImage
+	[optional] 0-basierender Index des Item Icons in der Imagelist des Controls
+$iOverlayImage
+	[optional] 0-basierender Index des Item Icons in der Imagelist des Controls
+$iIndent
+	[optional] Anzahl von Bilderbreiten um das Item einzur&uuml;cken. Eine einfache Einr&uuml;ckung entspricht der Breite eines Bildes.
+$iParam
+	[optional] Wert der das Item spezifiziert
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Falls ein Benachrichtigungs-Callback ben&ouml;tigt wird, so ist $sText = -1 (LPSTR_TEXTCALLBACK) festzulegen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_GetItem, _GUICtrlComboBoxEx_SetItemEx
+
+
+###Example###
+@@IncludeExample@@

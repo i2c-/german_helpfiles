@@ -1,0 +1,33 @@
+###Function###
+TrayItemGetHandle
+
+###Description###
+Gibt den Handle f&uuml;r ein Traymen&uuml; bzw. einen Eintrag davon zur&uuml;ck.
+
+###Syntax###
+TrayItemGetHandle ( controlID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Control-Identifikationsnummer (Control-ID), wie von einer <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> oder <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> Funktion zur&uuml;ckgegeben wurde.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Der Handle der gew&uuml;nschten Control-ID.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Um den Handle des Traymen&uuml;s selbst zu erhalten, ist als Control-ID '0' zu verwenden.
+
+
+###Related###
+TrayItemGetState, TrayItemGetText
+
+
+###Example###
+@@IncludeExample@@

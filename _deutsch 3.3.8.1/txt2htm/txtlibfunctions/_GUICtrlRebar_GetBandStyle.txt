@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlRebar_GetBandStyle
+
+###Description###
+Ermittelt die Stil-Flags der Gruppe
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_GetBandStyle($hWnd, $iIndex)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Rebar-Controls
+$iIndex
+	0-basierender Index der Gruppe
+@@End@@
+
+###ReturnValue###
+Gibt einen Wert eines Flags der Gruppe zur&uuml;ck. Siehe fStyle von $tagREBARBANDINFO
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRebar_SetBandStyle, $tagREBARBANDINFO, _GUICtrlRebar_GetBandStyleBreak, _GUICtrlRebar_GetBandStyleChildEdge, _GUICtrlRebar_GetBandStyleFixedBMP, _GUICtrlRebar_GetBandStyleFixedSize, _GUICtrlRebar_GetBandStyleGripperAlways, _GUICtrlRebar_GetBandStyleHidden, _GUICtrlRebar_GetBandStyleHideTitle, _GUICtrlRebar_GetBandStyleNoGripper, _GUICtrlRebar_GetBandStyleTopAlign, _GUICtrlRebar_GetBandStyleUseChevron, _GUICtrlRebar_GetBandStyleVariableHeight
+
+###Example###
+@@IncludeExample@@

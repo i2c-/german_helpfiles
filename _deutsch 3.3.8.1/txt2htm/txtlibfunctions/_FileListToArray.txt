@@ -1,0 +1,45 @@
+###User Defined Function###
+_FileListToArray
+
+###Description###
+Listet Dateien und/oder Ordner eines bestimmten Pfades auf (&auml;hnlich zu "dir" mit der Option "/B" unter DOS).
+
+###Syntax###
+#include <File.au3>
+_FileListToArray($sPath [, $sFilter = "*" [, $iFlag = 0]])
+
+###Parameters###
+@@ParamTable@@
+$sPath
+	Pfad, von dem eine Dateiliste erstellt werden soll.
+$sFilter
+	[optional] zu verwendender Filter, Standard ist *. F&uuml;r mehr Details ist in der Autoit3-Hilfedatei nach dem Stichwort "WildCards" zu suchen.
+$iFlag
+	[optional] Bestimmt, ob nur Dateien, nur Ordner oder Dateien und Ordner zur&uuml;ckgegeben werden sollen.
+		$iFlag=0 (Standard) Gibt Dateien und Ordner zur&uuml;ck
+		$iFlag=1 Gibt nur Dateien zur&uuml;ck
+		$iFlag=2 Gibt nur Ordner zur&uuml;ck
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein Array. Siehe Bemerkungen
+Fehler:	0
+@Error:	1 = Pfad nicht gefunden oder ung&uuml;ltig
+	2 = $sFilter ung&uuml;ltig
+	3 = $iFlag ung&uuml;ltig
+	4 = Keine Datei(en) gefunden
+@@End@@
+
+###Remarks###
+Das zur&uuml;ckgegebene Array ist 1-dimensional und ist folgenderma&szlig;en aufgebaut:
+$array[0] = Anzahl von zur&uuml;ckgegebenen Dateien/Ordnern
+$array[1] = erste Datei/Ordner
+$array[2] = zweite Datei/Ordner
+$array[3] = dritte Datei/Ordner
+$array[n] = n-te Datei/Ordner
+
+###Related###
+
+###Example###
+@@IncludeExample@@

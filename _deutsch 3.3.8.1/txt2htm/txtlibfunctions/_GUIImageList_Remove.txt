@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUIImageList_Remove
+
+###Description###
+Entfernt ein oder mehrere Bilder von einer Imagelist
+
+###Syntax###
+#include <GuiImageList.au3>
+_GUIImageList_Remove($hWnd [, $iIndex = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	[optional] Der Index des zu entfernenden Bildes. Falls dieser Parameter -1 ist, werden alle Bilder entfernt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn ein Bild entfernt wird, wird der Index der verbleibenden Bilder so angepasst, dass diese von 0 bis 1 weniger als die Anzahl der Bilder in der Imagelist fortlaufend durchnummeriert  sind.
+Wenn zum Beispiel das Bild mit dem Index 0 entfernt wird, dann bekommt das Bild mit dem Index 1 den Index 0, das Bild mit dem Index 2 den Index 1 und so weiter.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

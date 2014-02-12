@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_ImageGetHorizontalResolution
+
+###Description###
+Gibt die horizontale Aufl&ouml;sung in DPI (Punkte pro Zoll) eines Bildes zur&uuml;ck
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetHorizontalResolution($hImage)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle zu einem Bild-Objekt
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Integer mit DPI (Punkte pro Zoll)
+Fehler:	gibt 0 zur&uuml;ck und setzt @error
+@error:	0 - kein Fehler.
+	10 - ung&uuml;ltiges Bild Handle
+@@End@@
+
+###Remarks###
+@error 4 basiert auf einem R&uuml;ckgabewert von -1 oder 0 durch die GDIPlus-UDF anstelle des Bild-Handles im Fehlerfall
+
+###Related###
+_GDIPlus_ImageGetVerticalResolution
+
+###See Also###
+@@MsdnLink@@ GdipGetImageHorizontalResolution
+
+###Example###
+@@IncludeExample@@

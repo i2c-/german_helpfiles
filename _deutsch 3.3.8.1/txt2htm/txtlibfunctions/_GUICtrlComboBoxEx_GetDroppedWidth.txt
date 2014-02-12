@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetDroppedWidth
+
+###Description###
+Ermittelt die Breite der aufgeklappten ListBox einer ComboBox.
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetDroppedWidth($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Erfolg:	Die Breite in Pixel
+Fehler:	-1
+
+###Remarks###
+Die ComboBox muss den Stil $CBS_DROPDOWN oder $CBS_DROPDOWNLIST aufweisen.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetDroppedState, _GUICtrlComboBoxEx_SetDroppedWidth
+
+###Example###
+@@IncludeExample@@

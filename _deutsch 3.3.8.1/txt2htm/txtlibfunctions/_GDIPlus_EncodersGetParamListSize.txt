@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_EncodersGetParamListSize
+
+###Description###
+Ermittelt die Gr&ouml;&szlig;e der Parameterliste f&uuml;r einen festgelegten Bildencoder
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_EncodersGetParamListSize($hImage, $sEncoder)
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	Handle des Bildobjektes
+$sEncoder
+	GUID String des zu verwendenden Encoders
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gr&ouml;&szlig;e der Parameterliste in Byte
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_GDIPlus_EncodersGetParamList
+
+###See Also###
+@@MsdnLink@@ GdipGetEncoderParameterListSize
+
+###Example###
+@@IncludeExample@@

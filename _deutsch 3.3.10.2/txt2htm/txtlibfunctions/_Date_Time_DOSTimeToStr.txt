@@ -1,0 +1,34 @@
+###User Defined Function###
+_Date_Time_DOSTimeToStr
+
+###Description###
+Wandelt die DOS-Zeit in einen String
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_DOSTimeToStr ( $iDosTime )
+
+
+###Parameters###
+@@ParamTable@@
+$iDosTime
+	MS-DOS Datum, verpackt wie folgt:
+	Bits 0- 4 Sekunde geteilt durch 2
+	Bits 5-10 Minute (0–59)
+	Bits 11-15 Stunde (0–23 im 24h-Format)
+@@End@@
+
+###ReturnValue###
+Gibt einen Zeitstring formatiert in hh:mm:ss zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_Date_Time_DOSDateToStr, _Date_Time_DOSDateTimeToStr
+
+
+###Example###
+@@IncludeExample@@

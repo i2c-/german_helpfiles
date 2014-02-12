@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTreeView_SelectItemByIndex
+
+###Description###
+W&auml;hlt ein Item, basierend auf dessen Index in der Parentliste aus
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SelectItemByIndex ( $hWnd, $hItem, $iIndex )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iIndex
+	0-basierender Index des Items in der Parentliste
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Der hier gesetzte Status kann nur durch die Funktion _GUICtrlTreeView_GetSelection ermittelt werden.
+Es kann nur ein Item ausgew&auml;hlt sein.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

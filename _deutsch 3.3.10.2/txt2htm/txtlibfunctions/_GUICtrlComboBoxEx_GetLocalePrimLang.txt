@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlComboBoxEx_GetLocalePrimLang
+
+###Description###
+Extrahiert die prim&auml;re Sprach-ID von einer Sprach-ID
+
+###Syntax###
+#include <GuiComboBoxEx.au3>
+_GUICtrlComboBoxEx_GetLocalePrimLang ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die prim&auml;re Sprach-ID zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlComboBoxEx_GetLocale
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_CommDlgExtendedError
+
+###Description###
+Gibt die Fehlermeldung einer Standard-Dialogbox zur&uuml;ck. Dieser String beschreibt den zuletzt aufgetretenen Fehler beim Aufruf der Standard-Dialogbox Funktionen.
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CommDlgExtendedError()
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	String mit Fehlermeldung
+Fehler:	Ein hexa-String des erweiterten Fehlers
+@@End@@
+
+###Remarks###
+Kann allgemeine Fehlermeldungen von jeder der Standard-Dialogbox Funktionen zur&uuml;ckgeben.
+
+###Related###
+_WinAPI_GetOpenFileName, _WinAPI_GetSaveFileName
+
+###See Also###
+@@MsdnLink@@ CommDlgExtendedError

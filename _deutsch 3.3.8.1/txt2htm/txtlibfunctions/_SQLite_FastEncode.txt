@@ -1,0 +1,37 @@
+###User Defined Function###
+_SQLite_FastEncode
+
+###Description###
+Encodiert bin&auml;r-Daten f&uuml;r den Gebrauch in SQLite-Statements (Querys)
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_FastEncode($vData)
+
+
+###Parameters###
+@@ParamTable@@
+$vData
+	Daten zum Encodieren (Nur Bin&auml;r)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den encodierten Bin&auml;r-String zur&uuml;ck
+Fehler:	Gibt einen Leer-String zur&uuml;ck und setzt @error
+@error:	1 - Daten sind nicht vom Bin&auml;r-Typ
+@@End@@
+
+###Remarks###
+Der encodierte String ist bereits von einfachen Anf&uuml;hrungszeichen (') umgeben.
+Zum Beispiel Binary(chr(0) & chr(1)) sieht wie folgt aus: X'0001'
+Der encodierte String kann von SQLite decodiert und als Bin&auml;rtyp in einem BLOB-Feld gespeichert werden.
+Um Strings in einem TEXT-Feld zu speichern, benutzt man _SQLite_Escape()
+Um numerische Werte als diese zu speichern, benutzt man einfache Verkettung.
+
+
+###Related###
+_SQLite_Escape
+
+###Example###
+@@IncludeExample@@

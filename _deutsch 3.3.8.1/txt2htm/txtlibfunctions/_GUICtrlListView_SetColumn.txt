@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlListView_SetColumn
+
+###Description###
+Setzt die Attribute einer Spalte
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetColumn($hWnd, $iIndex, $sText [, $iWidth = -1 [, $iAlign = -1 [, $iImage = -1 [, $fOnRight = False]]]])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iIndex
+	0-basierender Index der neuen Spalte
+$sText
+	Spalten&uuml;berschrift
+$iWidth
+	[optional] Breite der Spalte in Pixel
+$iAlign
+	[optional] Anpassung des Spaltenkopfes und des Textes des Subitems in der Spalte:
+		0 - Text wird linksb&uuml;ndig ausgerichtet
+		1 - Text wird rechtsb&uuml;ndig ausgerichtet
+		2 - Text wird zentriert
+$iImage
+	[optional] 0-basierender Index eines Bildes innerhalb einer Imagelist
+$fOnRight
+	[optional] Falls True erscheint das Bild der Spalte rechts des Textes
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlListView_GetColumn, _GUICtrlListView_JustifyColumn
+
+###Example###
+@@IncludeExample@@

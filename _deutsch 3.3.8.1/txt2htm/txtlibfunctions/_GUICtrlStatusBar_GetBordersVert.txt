@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetBordersVert
+
+###Description###
+Ermittelt die aktuelle Breite des vertikalen Randes
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetBordersVert($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Breite des vertikalen Randes
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersHorz, _GUICtrlStatusBar_GetBordersRect
+
+###Example###
+@@IncludeExample@@

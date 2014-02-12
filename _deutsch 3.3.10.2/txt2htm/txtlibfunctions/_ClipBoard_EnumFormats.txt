@@ -1,0 +1,39 @@
+###User Defined Function###
+_ClipBoard_EnumFormats
+
+###Description###
+Z&auml;hlt die Datenformate auf, die aktuell in der Zwischenablage vorhanden sind.
+
+###Syntax###
+#include <Clipboard.au3>
+_ClipBoard_EnumFormats ( $iFormat )
+
+
+###Parameters###
+@@ParamTable@@
+$iFormat
+	Gibt ein Zwischenablagen-Format an, das sicher vorhanden ist. Um eine Aufz&auml;hlung zu beginnen, ist $iFormat auf Null zu setzen. Wenn $iFormat Null ist, gibt die Funktion das erste verf&uuml;gbare Zwischenablagen-Format zur&uuml;ck. 
+	Bei weiteren Aufrufen w&auml;hrend der Aufz&auml;hlung muss $iFormat den R&uuml;ckgabewert des vorigen Aufrufs erhalten.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Das Zwischenablagen-Format, das auf das angegebene folgt.
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Die Zwischenablage muss ge&ouml;ffnet worden sein, bevor die Aufz&auml;hlung durchgef&uuml;hrt werden kann
+
+
+###Related###
+_ClipBoard_Open, _ClipBoard_CountFormats, _ClipBoard_GetPriorityFormat, _ClipBoard_RegisterFormat
+
+
+###See Also###
+@@MsdnLink@@ EnumClipboardFormats
+
+
+###Example###
+@@IncludeExample@@

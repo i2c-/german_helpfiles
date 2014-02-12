@@ -1,0 +1,28 @@
+###User Defined Function###
+_NowCalc
+
+###Description###
+Ausgabe des Datums und der Zeit im Format YYYY/MM/DD HH:MM:SS zur Weiterverwendung in Zeitberechnungen.
+
+###Syntax###
+#include <Date.au3>
+_NowCalc (  )
+
+
+###Parameters###
+Keine.
+
+###ReturnValue###
+Gibt das aktuelle Datum und die Zeit im Format YYYY/MM/DD HH:MM:SS zur&uuml;ck
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+_NowDate, _NowTime
+
+
+###Example###
+@@IncludeExample@@

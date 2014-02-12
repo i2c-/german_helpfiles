@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlToolbar_CheckButton
+
+###Description###
+Dr&uuml;ckt oder l&auml;sst einen Button los
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_CheckButton($hWnd, $iCommandID [, $fCheck = True])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+$fCheck
+	[optional] Check state:
+		 True - Button wird gedr&uuml;ckt
+		False - Button wird losgelassen
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Wenn ein Button gedr&uuml;ckt ist, erscheint er im gedr&uuml;ckten Zustand
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

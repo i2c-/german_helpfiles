@@ -1,0 +1,52 @@
+###User Defined Function###
+_ExcelReadSheetToArray
+
+###Description###
+Erstellt ein 2D Array von den Zeilen/Spalten des aktiven Tabellenblattes.
+
+###Syntax###
+#include <Excel.au3>
+_ExcelReadSheetToArray ( $oExcel [, $iStartRow = 1 [, $iStartColumn = 1 [, $iRowCnt = 0 [, $iColCnt = 0 [, $iColShift = False]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Ein Excel Objekt welches durch einen vorherigen Aufruf von _ExcelBookOpen() oder _ExcelBookNew() ge&ouml;ffnet wurde
+$iStartRow
+	[optional] Zeilennummer ab der das lesen beginnen soll, Standard ist i (erste Zeile)
+$iStartColumn
+	[optional] Spaltennummer ab der das lesen beginnen soll, Standard ist i (erste Zeile)
+$iRowCnt
+	[optional] Anzahl von zu lesenden Zeilen, Standard ist 0 (alle)
+$iColCnt
+	[optional] Anzahl von zu lesenden Spalten, Standard ist 0 (alle)
+$iColShift
+	[optional] Bestimmt, ob das zur&uuml;ckgegebene Array beim Index 0 oder 1 beginnen soll. Standard = False. Dadurch passen R1C1 Werte.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein 2D Array mit den durch [$row][$col] festgelegten Zellinhalten
+Fehler:	setzt das @error-Flag ungleich 0
+@error:	1 - festgelegtes Objekt existiert nicht
+	2 - Startparameter au&szlig;erhalb des Bereiches
+	3 - Z&auml;hlparameter au&szlig;erhalb des Bereiches
+@extended:	0 - Zeilenz&auml;hler au&szlig;erhalb des Bereiches
+	1 - Spaltenz&auml;hler au&szlig;erhalb des Bereiches
+@@End@@
+
+
+###Remarks###
+Das zur&uuml;ckgegebe Array hat die Anzahl von Zeilen in [0][0] und die Anzahl von Spalten in [0][1].
+Au&szlig;er den beiden Zellen f&uuml;r die Anzahl der Zeilen und Spalten ist das Array im Index 0 leer.
+Die aktuellen Zelldaten beginnen bei [1][1] (angegeben mit R1C1 Zahlen).
+Standardm&auml;&szlig;ig wird das komplette Tabellenblatt zur&uuml;ckgegeben.
+Falls das Tabellenblatt leer ist, ist der Wert bei [0][0] und [0][1] jeweils 0.
+
+###Related###
+
+
+
+###Example###
+@@IncludeExample@@

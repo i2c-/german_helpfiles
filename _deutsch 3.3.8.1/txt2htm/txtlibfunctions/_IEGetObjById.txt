@@ -1,0 +1,37 @@
+###User Defined Function###
+_IEGetObjById
+
+###Description###
+Gibt eine Objektvariable zur&uuml;ck, die durch die ID oder den Namen bestimmt wird.
+
+###Syntax###
+#include <IE.au3> 
+_IEGetObjById(ByRef $o_object, $s_Id)
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objektvariable einer InternetExplorer-Application, eines Fensters oder Frameobjekts.
+$s_Id
+	Bestimmt die ID oder den Namen des Objektes, nach dem gesucht werden soll.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt eine Objektvariable zur&uuml;ck, die auf ein bestimmtes Objekt verweist.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	7 ($_IEStatus_NoMatch) = Keine &Uuml;bereinstimmung gefunden
+@@End@@
+
+
+###Remarks###
+Diese Funktion gibt eine Referenz auf ein Objekt zur&uuml;ck, das die angegebene ID oder den angegebenen Namen tr&auml;gt. DOM-Objekte k&ouml;nnen als Attribute den Namen, die ID oder beides zusammen haben. Eine ID kann jeweils nur einmal vergeben werden, w&auml;hrend der Name von mehreren Elementen verwendet werden kann. Im Internet Explorer werden der Name und die ID im gleichen Namensraum verwendet.
+
+###Related###
+_IEGetObjByName
+
+
+###Example###
+@@IncludeExample@@

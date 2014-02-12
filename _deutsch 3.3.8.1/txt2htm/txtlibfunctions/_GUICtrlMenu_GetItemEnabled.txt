@@ -1,0 +1,36 @@
+###User Defined Function###
+_GUICtrlMenu_GetItemEnabled
+
+###Description###
+Ermittelt, ob das Men&uuml;item aktiviert ist
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetItemEnabled($hMenu, $iItem [, $fByPos = True])
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle des Men&uuml;s
+$iItem
+	ID oder Position des Men&uuml;items
+$fByPos
+	[optional] Men&uuml; ID Flag:
+		 True - $iItem ist eine 0-basierende Itemposition
+		False - $iItem ist eine Men&uuml;item ID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item ist aktiviert
+False:	Item ist nicht aktiviert
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlMenu_SetItemEnabled
+
+###Example###
+@@IncludeExample@@

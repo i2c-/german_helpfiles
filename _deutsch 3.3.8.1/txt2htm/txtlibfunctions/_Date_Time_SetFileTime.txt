@@ -1,0 +1,48 @@
+###User Defined Function###
+_Date_Time_SetFileTime
+
+###Description###
+Setzt das Datum und die Zeit einer Datei f&uuml;r den Status Erstellt, letzter Zugriff und Ver&auml;ndert
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SetFileTime($hFile, $pCreateTime, $pLastAccess, $pLastWrite)
+
+###Parameters###
+@@ParamTable@@
+$hFile
+	Handle zu der Datei. Das Datei Handle muss mit der Funktion CreateFile und FILE_WRITE_ATTRIBUTES Zugriffsrechten erstellt worden sein.
+$pCreateTime
+	Zeiger auf eine $tagFILETIME Struktur, die das neue Datum und Uhrzeit f&uuml;r 'Datei erstellt' beinhaltet.
+		Wenn '0' gesetzt wird, wird diese Information nicht ver&auml;ndert.
+$pLastAccess
+	Zeiger auf eine $tagFILETIME Struktur die das neue Datum und Uhrzeit f&uuml;r 'letzter Zugriff' beinhaltet.
+	Die Zeitangabe f&uuml;r 'letzter Zugriff' gilt auch f&uuml;r den letzten Schreib- /Lesezugriff oder (im Falle einer
+		ausf&uuml;hrbaren Datei) deren letzte Ausf&uuml;hrung. Wenn '0' gesetzt wird, wird diese Information nicht ver&auml;ndert.
+		Um den Zeitstempel einer Datei f&uuml;r 'letzter Zugriff' auch nach Zugriff unver&auml;ndert zu bewahren,
+		ist die Funktion _Date_Time_SetFileTime und dieser Parameter mit -1 aufzurufen,
+		bevor das Handle der Datei beendet wird.
+$pLastWrite
+	Zeiger auf eine $tagFILETIME Struktur, die das neue Datum und Uhrzeit f&uuml;r 'Datei ver&auml;ndert' beinhaltet. 
+	Wenn '0' gesetzt wird, wird diese Information nicht ver&auml;ndert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Nicht alle Dateisysteme k&ouml;nnen die Daten f&uuml;r 'Erstellung' und 'letzten Zugriff' speichern und die Dateisysteme 
+speichern diese Information auch nicht immer in der selben Art und Weise. 
+Als Beispiel, in FAT-Dateisystemen hat die 'Erstellungszeit' eine Aufl&ouml;sung von 10 Millisekunden,
+'letzte &Auml;nderung' eine Aufl&ouml;sung von 2 Sekunden und 'letzter Zugriff' hat eine Aufl&ouml;sung von 1 Tag (im Grunde also nur das Datum).
+Daher gibt die GetFileTime Funktion m&ouml;glicherweise nicht die selben Zeiten zur&uuml;ck, wie diese durch SetFileTime erstellt wurden.
+NTFS verz&ouml;gert das Erstellen des Zeitstempels f&uuml;r 'letzter Zugriff' bis zu einer Stunde nach dem letzten Zugriff.
+
+###Related###
+_Date_Time_GetFileTime, $tagFILETIME
+
+###Example###
+@@IncludeExample@@

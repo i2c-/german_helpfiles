@@ -1,0 +1,33 @@
+###User Defined Function###
+_Security__GetLengthSid
+
+###Description###
+Gibt die L&auml;nge einer g&uuml;ltigen SID in Bytes zur&uuml;ck
+
+###Syntax###
+#include <Security.au3>
+_Security__GetLengthSid($pSID)
+
+###Parameters###
+@@ParamTable@@
+$pSID
+	Zeiger auf eine SID
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	L&auml;nge einer SID
+Fehler:	0
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+_Security__IsValidSid
+
+###See Also###
+@@MsdnLink@@ GetLengthSid
+
+###Example###
+@@IncludeExample@@

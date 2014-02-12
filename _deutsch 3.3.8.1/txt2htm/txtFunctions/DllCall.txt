@@ -1,0 +1,150 @@
+###Function###
+DllCall
+
+###Description###
+Ruft eine Funktion in einer DLL dynamisch auf.
+
+###Syntax###
+DllCall ( "dll", "return type", "function" [, type1, param1 [, type n, param n]] )
+
+###Parameters###
+@@ParamTable@@
+dll
+	Der Dateiname der zu verwendenden DLL, z.B. "user32.dll". Es kann auch ein Handle verwendet werden, das von DllOpen zur&uuml;ckgegeben wird (siehe Bemerkungen).
+return type
+	Der R&uuml;ckgabewert der Funktion (siehe unten).
+function
+	Der Name oder die Nummer der Funktion in der DLL, die aufgerufen werden soll, z.B. "MessageBox" oder 62.
+type1
+	[optional] Der Typ des Parameters (siehe Bemerkungen).
+param1
+	[optional] Der eigentliche Parameter (siehe Bemerkungen).
+type n
+	[optional] Der Typ des n. Parameters (siehe Bemerkungen).
+param n
+	[optional] Der eigentliche n. Parameter (siehe Bemerkungen).
+@@End@@
+
+
+G&uuml;ltige Typen sind:
+
+@@ParamTable@@
+<b>Typ</b>
+	<b>Details</b>
+none
+	ohne Wert (nur als R&uuml;ckgabewert zul&auml;ssig - entspricht dem void in C)
+BYTE
+	vorzeichenloser 8 bit Integerwert
+BOOLEAN
+	vorzeichenloser 8 bit Integerwert
+short
+	16 bit Integerwert
+USHORT
+	vorzeichenloser 16 bit Integerwert
+WORD
+	vorzeichenloser 16 bit Integerwert
+int
+	32 bit Integerwert
+long
+	32 bit Integerwert
+BOOL
+	32 bit Integerwert
+UINT
+	vorzeichenloser 32 bit Integerwert
+ULONG
+	vorzeichenloser 32 bit Integerwert
+DWORD
+	vorzeichenloser 32 bit Integerwert
+INT64
+	64 bit Integerwert
+UINT64
+	vorzeichenloser 64 bit Integerwert
+ptr
+	allgemeiner Zeiger (pointer), (void *)
+HWND
+	Fensterhandle (Zeiger)
+float
+	Gleitkommazahl, einfache Genauigkeit
+double
+	Gleitkommazahl, doppelte Genauigkeit
+INT_PTR, LONG_PTR, LRESULT, LPARAM
+	Integerwert, der gro&szlig; genug ist, einen Zeiger aufzunehmen, abh&auml;ngig von der AutoIt-Version (x86 oder x64)
+UINT_PTR, LONG_PTR, LRESULT, LPARAM
+	vorzeichenloser Integerwert, der gro&szlig; genug ist, einen Zeiger aufzunehmen, abh&auml;ngig von der AutoIt-Version (x86 oder x64)
+str
+	ANSI-String (maximal 65536 Zeichen)
+wstr
+	UNICODE-Wide-String (Umwandlung von/nach ANSI-String w&auml;hrend des Aufrufs, wenn notwendig), maximal 65536 Zeichen
+struct
+	Struktur erstellt durch DllStructCreate()
+*
+	H&auml;nge * an das Ende eines anderen Typs an, um ihn als Referenz zu &uuml;bergeben. Zum Beispiel &uuml;bergibt "int*" einen Zeiger auf einen "int"-Typ.
+@@End@@
+
+
+Vergleich der Windows-API-Typen mit den AutoIt-Typen:
+
+@@ParamTable@@
+<b>WINDOWS-API-Typ</b>
+	<b>AutoIt-Typ</b>
+LPCSTR/LPSTR
+	str
+LPCWSTR/LPWSTR
+	wstr
+LPVOID
+	ptr
+LP<i>xyz</i>
+	<i>xyz</i>*
+HINSTANCE
+	handle
+HRESULT
+	long
+LONGLONG/LARGE_INTEGER
+	INT64
+ULONGLONG/ULARGE_INTEGER
+	UINT64
+SIZE_T
+	ULONG_PTR
+@@End@@
+
+Um verschachtelte Strukturen innerhalb einer Struktur zu verwenden muss die verschachtelte Struktur neu definiert werden.
+So w&uuml;rde zum Beispiel eine Struktur die eine 2 POINT Struktur enth&auml;lt ("long;long") als "long;long;long;long" deklariert. Die ersten long Werte entsprechen der ersten POINT Struktur und die zweiten Werte entsprechen der zweiten POINT Struktur.
+
+F&uuml;r mehr Windows API Typen siehe <a href="http://msdn.microsoft.com/en-us/library/aa383751.aspx">MSDN</a>.
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	@error = 0.
+Fehler:	setzt @error
+@error:	1 Die Dll-Datei kann nicht verwendet werden,
+	2 unbekannter R&uuml;ckgabewert "return type",
+	3 Funktion "function" wurde in der DLL-Datei nicht gefunden.
+	4 Falsche Anzahl von Parametern.
+	5 Falscher Parameter.
+@@End@@
+siehe Bemerkungen.
+
+###Remarks###
+Wenn der Dateiname einer DLL angegeben wird, wird die DLL automatisch geladen und nach den Funktionsaufruf wieder geschlossen. Wenn man das Laden und Entladen selbst kontrollieren will, verwendet man dazu die Funktionen DllOpen und DllClose und gibt statt des Dateinamens ein Handle an.
+
+Normalerweise benutzt AutoIt die 'stdcall'-Befehlsmethode. Um die 'cdecl'-Methode zu benutzen  ist ':cdecl' nach dem R&uuml;ckgabewert "return type" zu setzen:
+DllCall("SQLite.dll", "int:cdecl", "sqlite3_open", "str", $sDatabase_Filename , "long_*", 0).
+
+Standardm&auml;&szlig;ig versucht AutoIt, die ANSI-Variante des Funktionsnamens zu verwenden, d.h. MessageBoxA wird verwendet, wenn MessageBox als Funktionsname gegeben ist. Um explizit die Unicode-Variante aufzurufen, kann MessageBoxW verwendet werden.
+
+Wenn der Funktionsaufruf scheitert, wird @error auf 1 gesetzt. Ansonsten wird ein Array mit dem R&uuml;ckgabewert der Funktion und einer Kopie aller Parameter (inklusive derer, die die Funktion m&ouml;glicherweise ver&auml;ndert hat) zur&uuml;ckgegeben.
+$return[0] = R&uuml;ckgabewert der Funktion
+$return[1] = Param1
+$return[2] = Param2
+...
+$return[n] = Paramn
+
+Es k&ouml;nnen beliebig viele "type"- und "param"-Parameter angegeben werden. Siehe die Beispiele unten, die viele Parameter verwenden.
+
+###Related###
+DllCallbackFree, DllCallbackGetPtr, DllCallbackRegister, DllOpen, DllClose, DllStructCreate, DllStructGetPtr
+
+
+###Example###
+@@IncludeExample@@

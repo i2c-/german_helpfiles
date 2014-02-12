@@ -1,0 +1,43 @@
+###User Defined Function###
+_GDIPlus_GraphicsDrawClosedCurve
+
+###Description###
+Zeichnet und f&uuml;llt eine geschlossene Spline
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsDrawClosedCurve($hGraphics, $aPoints [, $hPen = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu einem Grafik-Objekt
+$aPoints
+	Array welches die Punkte der Kurve festlegt:
+		[0][0] - Anzahl der Punkte
+		[1][0] - Punkt 1 X Position
+		[1][1] - Punkt 1 Y Position
+		[2][0] - Punkt 2 X Position
+		[2][1] - Punkt 2 Y Position
+		[n][0] - Punkt n X Position
+		[n][1] - Punkt n Y Position
+$hPen
+	[optional] Handle zu einem Zeichenstift-Objekt, welches benutzt wird um die Ellipse zu zeichnen. Falls 0, wird ein vollfarbig schwarz gef&uuml;llter Zeichenstift mit der Breite von 1 verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+In einer geschlossenen Spline verl&auml;uft die Kurve am Schluss durch den letzten und ersten Punkt im Array. Somit wird die Kurve geschlossen. Das Array muss mindestens 3 Punkte beinhalten.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipDrawClosedCurveI
+
+###Example###
+@@IncludeExample@@

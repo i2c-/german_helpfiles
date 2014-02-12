@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlButton_SetDontClick
+
+###Description###
+Setzt den Status des $BST_DONTCLICK Flags eines Buttons
+
+###Syntax###
+#include <GuiButton.au3>
+_GUICtrlButton_SetDontClick ( $hWnd [, $fState = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fState
+	[optional] Der Status. True um $BST_DONTCLICK zu setzen, sonst False
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+Mindestvoraussetzung Betriebssystem: Windows Vista
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+
+
+###See Also###
+@@MsdnLink@@ BM_SETDONTCLICK
+
+
+###Example###
+@@IncludeExample@@

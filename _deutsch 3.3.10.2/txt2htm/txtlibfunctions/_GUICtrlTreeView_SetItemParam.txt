@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTreeView_SetItemParam
+
+###Description###
+Setzt den festgelegten Wert des Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetItemParam ( $hWnd, $hItem, $iParam )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$iParam
+	Ein Wert, der mit dem Item verkn&uuml;pft ist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Achtung: Diese Funktion darf nicht mit Items verwendet werden, welche mit GUICtrlCreateTreeViewItem() erstellt wurden.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetItemParam
+
+
+###Example###
+@@IncludeExample@@

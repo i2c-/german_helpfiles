@@ -1,0 +1,54 @@
+###Function###
+FileCreateShortcut
+
+###Description###
+Erstellt eine Verkn&uuml;pfung (*.lnk).
+
+###Syntax###
+FileCreateShortcut ( "file", "lnk" [, "workdir" [, "args" [, "desc" [, "icon" [, "hotkey" [, icon number [, state]]]]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+file
+	Vollst&auml;ndiger Pfad und Dateiname der Datei, auf die die Verkn&uuml;pfung verweisen soll.
+lnk
+	Vollst&auml;ndiger Pfad und Dateiname der Verkn&uuml;pfung.
+workdir
+	[optional] Arbeitsverzeichnis.
+args
+	[optional] Zus&auml;tzliche Dateiargumente.
+desc
+	[optional] Dateibeschreibung.
+icon
+	[optional] Vollst&auml;ndiger Pfad und Dateiname des zu verwendenden Icons.
+hotkey
+	[optional] Hotkey - im selben Format wie bei der Funktion "Send".
+icon number
+	[optional] Die Nummer des Icons (normalerweise 0).
+state
+	[optional] Der Status, in dem die Datei aufgerufen wird. Es ist entweder @SW_SHOWNORMAL, @SW_SHOWMINNOACTIVE oder @SW_SHOWMAXIMIZED zu verwenden.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck, wenn die .lnk-Datei nicht erstellt werden konnte.
+@@End@@
+
+
+###Remarks###
+Hotkeys f&uuml;r Windows-Verkn&uuml;pfungen haben folgende Form: Strg + Alt + X, Strg + Shift + X, Shift + Alt + X, Strg + Ziffernblocktaste oder Alt + Ziffernblocktaste, wobei X einen Buchstaben, eine Zahl, Interpunktionszeichen oder eine Funktionstaste repr&auml;sentiert. Wenn eine ung&uuml;ltige Form verwendet wird, verwendet Windows typischerweise Strg + Alt.
+Es ist zu beachten, dass Windows die Ziffernblockzahlen von den normalen Zahlen- und Interpunktionstasten unterscheidet. 
+FileCreateShortcut erlaubt es auch, Hotkeys in der Form Strg + X und Alt + X anzulegen, die Windows normalerweise nur zul&auml;sst, wenn X eine Ziffernblocktaste ist. Trotzdem sollte dies vermieden werden, da solche Zuweisungen Konflikte mit Shortcuts von Standardanwendungen hervorrufen k&ouml;nnen.
+Windows verbietet ESC, ENTER, TAB, SPACEBAR (Leertaste), PRINT SCREEN (Drucken), SHIFT und BACKSPACE als Bestandteil von Hotkeys.
+
+FileCreateShortcut ben&ouml;tigt kein g&uuml;ltiges Ziel, Arbeitsverzeichnis, Icon und keinen g&uuml;ltigen Hotkey, um die .lnk-Datei "erfolgreich" anzulegen. Der Ort der Verkn&uuml;pfungsdatei muss aber g&uuml;ltig sein! Wenn der gew&auml;hlte Hotkey schon verwendet wird, bekommt die neue Verkn&uuml;pfung Vorrang. Ebenso &uuml;berschreibt eine Verkn&uuml;pfung mit dem selben Pfad und Namen, wie eine schon existierende, die alte Verkn&uuml;pfung.
+
+
+###Related###
+FileGetShortcut, FileCreateNTFSLink
+
+
+###Example###
+@@IncludeExample@@

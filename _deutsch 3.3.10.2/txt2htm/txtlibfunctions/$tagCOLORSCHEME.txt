@@ -1,0 +1,23 @@
+###Structure Name###
+$tagCOLORSCHEME
+
+###Description###
+Enth&auml;lt Informationen f&uuml;r das Zeichnen von Buttons in einer Toolbar oder Rebar
+
+###Syntax###
+Global Const $tagCOLORSCHEME = "dword Size;dword BtnHighlight;dword BtnShadow"
+
+
+###Fields###
+@@ParamTable@@
+Size
+	Gr&ouml;&szlig;e dieser Struktur in Bytes
+BtnHighlight
+	Der COLORREF Wert der die Farbe f&uuml;r das Hervorheben der Buttons darstellt. F&uuml;r die Standardfarbe ist $CLR_DEFAULT zu verwenden.
+BtnShadow
+	Der COLORREF Wert der die Schattenfarbe f&uuml;r die Buttons darstellt. F&uuml;r die Standardfarbe ist $CLR_DEFAULT zu verwenden.
+@@End@@
+
+
+###Remarks###
+Keine.

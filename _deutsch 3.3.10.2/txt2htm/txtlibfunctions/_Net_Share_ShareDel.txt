@@ -1,0 +1,42 @@
+###User Defined Function###
+_Net_Share_ShareDel
+
+###Description###
+L&ouml;scht eine Freigabekennung von einer Serverliste der freigegebenen Ressourcen
+
+###Syntax###
+#include <NetShare.au3>
+_Net_Share_ShareDel ( $sServer, $sShare )
+
+
+###Parameters###
+@@ParamTable@@
+$sServer
+	Bestimmt die DNS oder den NetBIOS-Namen vom Remote-Server auf welchem die Funktion auszuf&uuml;hren ist.
+	Falls dieser Parameter freigelassen wird, wird es auf den lokalen Computer angewendet.
+$sShare
+	Bestimmt den Namen der Freigabe, die gel&ouml;scht werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Nur Administratoren, Serveroperatoren, Mitglieder der Power Benutzers Gruppe oder jene mit Serveroperatoren Gruppenmitgliedschaft, k&ouml;nnen mit dieser Funktion Dateifreigaben erfolgreich l&ouml;schen.
+Der Druckeroperator kann Druckfreigaben l&ouml;schen.
+
+
+###Related###
+_Net_Share_ShareAdd, _Net_Share_ShareCheck, _Net_Share_SessionDel
+
+
+###See Also###
+@@MsdnLink@@ NetShareDel
+
+
+###Example###
+@@IncludeExample@@

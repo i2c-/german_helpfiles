@@ -1,0 +1,45 @@
+#include <GuiRichEdit.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+
+Global $lblMsg, $hRichEdit
+
+Main()
+
+Func Main()
+	Local $hGui, $iMsg, $btnDoIt
+	$hGui = GUICreate("Beispiel (" & StringTrimRight(@ScriptName, 4) & ")", 320, 350, -1, -1)
+	$hRichEdit = _GUICtrlRichEdit_Create($hGui, "Dies ist ein Test.", 10, 10, 300, 220, _
+			BitOR($ES_MULTILINE, $WS_VSCROLL, $ES_AUTOVSCROLL))
+	$lblMsg = GUICtrlCreateLabel("", 10, 235, 300, 60)
+	$btnDoIt = GUICtrlCreateButton("Mach es", 260, 310, 50, 30)
+	GUISetState()
+
+	_GUICtrlRichEdit_SetSel($hRichEdit, 0, -1) ; select all
+
+	While True
+		$iMsg = GUIGetMsg()
+		Select
+			Case $iMsg = $GUI_EVENT_CLOSE
+				_GUICtrlRichEdit_Destroy($hRichEdit) ; wird ben&ouml;tigt, da sonst das Skript abst&uuml;rzt
+;~ 				GUIDelete() 	; ist auch in Ordnung
+				Exit
+			Case $iMsg = $btnDoIt
+				ChangeFontSize()
+		EndSelect
+	WEnd
+EndFunc   ;==>Main
+
+Func ChangeFontSize()
+	Local $av, $iOld, $iNew
+	$av = _GUICtrlRichEdit_GetFont($hRichEdit)
+	$iOld = $av[0]
+	_GUICtrlRichEdit_ChangeFontSize($hRichEdit, 2)
+	$av = _GUICtrlRichEdit_GetFont($hRichEdit)
+	$iNew = $av[0]
+	Report("Vorher " & $iOld & " Punkt Schrift; jetzt " & $iNew & " Punkt Schrift")
+EndFunc   ;==>ChangeFontSize
+
+Func Report($sMsg)
+	GUICtrlSetData($lblMsg, $sMsg)
+EndFunc   ;==>Report

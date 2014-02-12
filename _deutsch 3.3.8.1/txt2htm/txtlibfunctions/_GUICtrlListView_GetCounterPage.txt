@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlListView_GetCounterPage
+
+###Description###
+Ermittelt die Anzahl von Items, welche vertikal in das sichtbare Feld eingepasst werden k&ouml;nnen
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetCounterPage($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+@@End@@
+
+###ReturnValue###
+Gibt die Anzahl der komplett sichtbaren Items zur&uuml;ck
+
+###Remarks###
+Falls die aktuelle Ansicht "gro&szlig;e Icons" oder "kleine Icons" ist, wird die gesamte Anzahl von Items in dem Control zur&uuml;ckgegeben.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+
+###Example###
+@@IncludeExample@@

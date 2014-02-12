@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlTreeView_SetFocused
+
+###Description###
+Entscheided, ob das Item den Fokus besitzt
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_SetFocused ( $hWnd, $hItem [, $fFlag = True] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+$fFlag
+	[optional] Flageinstellungen:
+		 True - Item besitzt den Fokus
+		False - Item besitzt nicht den Fokus
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_GetFocused
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlToolbar_SetButtonSize
+
+###Description###
+Setzt die Gr&ouml;&szlig;e der Buttons die zu der Toolbar hinzugef&uuml;gt werden sollen
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_SetButtonSize ( $hWnd, $iHeight, $iWidth )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iHeight
+	H&ouml;he der Buttons in Pixel
+$iWidth
+	Breite der Buttons in Pixel
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Die Gr&ouml;&szlig;e kann nur vor dem hinzuf&uuml;gen eines Buttons zur Toolbar gesetzt werden. Falls keine Anwendung die Buttongr&ouml;&szlig;e setzt, wird die Gr&ouml;&szlig;e auf 24 von 22 Pixeln gesetzt.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_GetButtonSize
+
+
+###Example###
+@@IncludeExample@@

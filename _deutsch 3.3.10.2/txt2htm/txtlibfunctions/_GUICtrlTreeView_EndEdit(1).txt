@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlTreeView_EndEdit
+
+###Description###
+Beendet das Editieren des Textes des festgelegten Items
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_EndEdit ( $hWnd, $fCancel = False )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fCancel
+	legt fest, ob die &Auml;nderungen gespeichert werden sollen oder nicht.
+	Falls True, wird das System die &Auml;nderungen nicht speichern.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlTreeView_EditText
+
+
+###Example###
+@@IncludeExample@@

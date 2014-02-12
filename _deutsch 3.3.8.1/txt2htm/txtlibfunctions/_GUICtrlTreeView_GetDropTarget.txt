@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlTreeView_GetDropTarget
+
+###Description###
+Zeigt an, ob das Item wie ein "drag and drop" Ziel dargestellt ist
+
+###Syntax###
+#include <GuiTreeView.au3>
+_GUICtrlTreeView_GetDropTarget($hWnd, $hItem)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$hItem
+	Handle des Items
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Item wird als "drag and drop" Ziel dargestellt
+False:	Item wird nicht als "drag and drop" Ziel dargestellt
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlTreeView_SetDropTarget
+
+###Example###
+@@IncludeExample@@

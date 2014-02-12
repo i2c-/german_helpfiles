@@ -1,0 +1,38 @@
+###Function###
+WinSetOnTop
+
+###Description###
+Ver&auml;ndert das "Always On Top"-Attribut ("immer im Vordergrund"-Attribut) eines Fensters.
+
+###Syntax###
+WinSetOnTop ( "title", "text", flag )
+
+
+###Parameters###
+@@ParamTable@@
+title
+	Der Titel/Fenster-Handle(hWnd)/Klassenname(class) des Fensters, das ver&auml;ndert werden soll. Siehe <a href="../intro/windowsadvanced.htm">Erweiterte Fenstertiteldefinition</a>.
+text
+	Der Text des Fensters, das ver&auml;ndert werden soll. Siehe <a href="../intro/windowsbasic.htm#specialtext">Extra Textdefinition</a>.
+flag
+	Legt fest, ob das "TOPMOST" Flag f&uuml;r das Fenster gesetzt werden soll.
+	1 = setzt das Topmost-Flag, 0 = Topmost-Flag wird gel&ouml;scht.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0 wenn das Fenster nicht gefunden wurde. 
+@@End@@
+
+
+###Remarks###
+Bei Programmen von anderen Anbietern, die ein "Always On Top" im Kontextmen&uuml; haben, wird die Anzeige evtl. nicht aktualisiert, wenn dieses Flag durch AutoIT ge&auml;ndert wird.
+
+
+###Related###
+WinSetState
+
+
+###Example###
+@@IncludeExample@@

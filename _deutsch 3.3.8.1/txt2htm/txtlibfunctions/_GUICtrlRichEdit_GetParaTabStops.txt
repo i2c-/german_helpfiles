@@ -1,0 +1,55 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaTabStops
+
+###Description###
+Ermittelt die Tabstopps des (ersten) markierten Absatzes oder, wenn keiner markiert ist, die des aktuellen Absatzes
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaTabStops($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Ein String, der die durch Semikola (;) getrennten Einstellungen des Absatzes enth&auml;lt:
+	Wert 1 - Anzahl der Tabstopps
+	Wert 2 bis <Wert 1> + 1 - Beschreibung jeweils einen Tabstopps:
+	 Absolute Position des Tabstopps (in Leerzeichen-Einheiten)
+	 Art des Tabulators:
+	   l - linksb&uuml;ndiger Tabulator
+	   c - zentrierter Tabulator
+	   r - Dezimaltabulator (rechtsb&uuml;ndig)
+	   b - Leistentabulator (eine vertikale Leiste, wie in Word)
+	 Art der f&uuml;hrenden Zeichen
+	   . - punktierte F&uuml;hrungszeichen
+	   - - gestrichelte F&uuml;hrungszeichen
+	   _ - Unterstreichung als F&uuml;hrungszeichen
+	   = - doppelte Unterstreichung als F&uuml;hrungszeichen
+	   t - dicke Linie als F&uuml;hrungszeichen
+	   " " (ein Leerzeichen) - kein F&uuml;hrungszeichen
+	Wert <Wert 1> + 2 - Geltungsbereich:
+	   a - Alle (oder nur die) ausgew&auml;hlten Abs&auml;tze haben diese Einstellungen
+	   f - Ausschlie&szlig;lich der erste ausgew&auml;hlte Absatz hat diese Einstellungen
+	   c - Der aktuelle Absatz hat diese Einstellungen
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Um einen Tabulator im RichEdit-Control zu setzen, dr&uuml;cke STRG-Tab
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaTabStops
+
+###See Also###
+@@MsdnLink@@ EM_GETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

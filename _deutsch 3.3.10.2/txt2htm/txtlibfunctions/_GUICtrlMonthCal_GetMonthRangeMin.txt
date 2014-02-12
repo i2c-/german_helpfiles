@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetMonthRangeMin
+
+###Description###
+Ermittelt Datumsinformationen die das niedrigste Limit des Controls darstellen
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetMonthRangeMin ( $hWnd [, $fPartial = False] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$fPartial
+	[optional] legt den Bereich des zu ermittelnden Limits fest:
+		True - vorherige und folgende Monate werden eingeschlossen
+		False - nur Monate die komplette dargestellt werden, werden eingeschlossen
+@@End@@
+
+###ReturnValue###
+Gibt eine $tagSYSTEMTIME Struktur zur&uuml;ck.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlMonthCal_GetMonthRange, _GUICtrlMonthCal_GetMonthRangeMax, _GUICtrlMonthCal_GetMonthRangeMinStr, $tagSYSTEMTIME
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###User Defined Function###
+_GUICtrlRichEdit_CanUndo
+
+###Description###
+Pr&uuml;ft, ob irgendwelche Aktionen in der Undo-Reihe eines (Rich)Edit-Controls vorhanden sind.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_CanUndo ( $hWnd )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True. Es befinden sich Aktionen in der Undo-Reihe.
+Fehler:	False und setzt das @error-Flag m&ouml;glicherweise ungleich 0
+@error:	0 - Es befinden sich keine Aktionen in der Undo-Reihe.
+	101 - $hWnd ist kein Handle
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRichEdit_Undo, _GUICtrlRichEdit_SetUndoLimit
+
+
+###See Also###
+@@MsdnLink@@ EM_CANUNDO
+
+
+###Example###
+@@IncludeExample@@

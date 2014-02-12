@@ -1,0 +1,43 @@
+###User Defined Function###
+_ReplaceStringInFile
+
+###Description###
+Ersetzt in einer Textdatei einen String mit einem anderen String (binary funktioniert nicht!)
+
+###Syntax###
+#include <File.au3>
+_ReplaceStringInFile($szFileName, $szSearchString, $szReplaceString [, $fCaseness = 0 [, $fOccurance = 1]])
+
+###Parameters###
+@@ParamTable@@
+$szFileName
+	Name der zu &ouml;ffnenden Datei. ACHTUNG !! Es wird der komplette Pfad ben&ouml;tigt, nicht nur der zur&uuml;ckgegebene Dateiname (wie z. B. bei FileFindNextFile)
+$szSearchString
+	Der zu ersetzende String in der Datei
+$szReplaceString
+	Der String, welchen man f&uuml;r $szSearchString einsetzen will
+$fCaseness
+	[optional] 0 = Ber&uuml;cksichtigt die Gro&szlig;- und Kleinschreibung nicht (Standard), 1 = Gro&szlig;- und Kleinschreibung wird ber&uuml;cksichtigt, falls dies auftritt
+$fOccurance
+	[optional] 0 = Nur die erste gefundene Stelle wird ersetzt, 1 = Alle Vorkommnisse werden ersetzt (Standard)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt die Anzahl von Vorkommnissen von $szSearchString zur&uuml;ck
+Fehler:	Gibt -1 zur&uuml;ck und setzt @error
+@error:	1 - Datei konnte nicht ge&ouml;ffnet werden
+	2 - Tempor&auml;re Datei konnte nicht ge&ouml;ffnet werden
+	3 - Tempor&auml;re Datei konnte nicht geschrieben werden
+	4 - Originale Datei konnte nicht gel&ouml;scht werden
+	5 - Tempor&auml;re Datei konnte nicht umbenannt/verschoben werden
+	6 - Datei ist schreibgesch&uuml;tzt
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

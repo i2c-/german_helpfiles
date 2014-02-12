@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlListView_SetColumnWidth
+
+###Description###
+&Auml;ndert die Breite einer Spalte
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_SetColumnWidth ( $hWnd, $iCol, $iWidth )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iCol
+	0-basierender Index einer g&uuml;ltigen Spalte. F&uuml;r den Listview Modus muss dieser Parameter auf 0 gesetzt werden
+$iWidth
+	Neue Breite der Spalte in Pixel.
+	F&uuml;r den Reportview Modus werden die folgenden speziellen Werte unterst&uuml;tzt:
+		$LVSCW_AUTOSIZE - Automatische Gr&ouml;&szlig;enanpassung der Spalte.
+		$LVSCW_AUTOSIZE_USEHEADER - Automatische Gr&ouml;&szlig;enanpassung der Spalte, so dass die Kopfzeile der Spalte komplett dargestellt wird.
+	Falls dieser Werte mit der letzten Spalte verwendet wird, wird deren Breite an der noch &uuml;brig gebliebenen Restbreite des ListView-Controls angepasst
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlListView_GetColumnWidth, _GUICtrlListView_HideColumn
+
+
+###Example###
+@@IncludeExample@@

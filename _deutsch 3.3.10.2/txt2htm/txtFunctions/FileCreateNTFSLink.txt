@@ -1,0 +1,50 @@
+###Function###
+FileCreateNTFSLink
+
+###Description###
+Erstellt ein NTFS-Hardlink zu einer Datei oder einem Ordner.
+
+###Syntax###
+FileCreateNTFSLink ( "source", "hardlink" [, flag = 0] )
+
+
+###Parameters###
+@@ParamTable@@
+source
+	Pfad von der Quelle, zu der der Hardlink erstellt wird.
+hardlink
+	Pfad des Hardlinks.
+flag
+	[optional] Dieses Flag bestimmt, ob der Link &uuml;berschrieben werden soll, wenn er schon existiert.
+	Kann eine der folgenden Kombinationen sein:
+		0 = (Standard) &Uuml;berschreibt existierenden Link nicht.
+		1 = &Uuml;berschreibt existierenden Link.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0
+@@End@@
+
+
+###Remarks###
+Der Zielordner muss bereits existieren.
+
+Dieser Befehl funktioniert nur auf Datentr&auml;gern mit dem NTFS-Dateisystem.
+
+Wenn die Quelle eine Datei ist, dann muss der Hardlink auf dem gleichen Datentr&auml;ger sein.
+Wenn die Quelle ein Ordner ist, dann kann der Hardlink auch auf anderen Festplatten sein.
+
+<a href="FileDelete.htm">FileDelete()</a> oder <a href="FileMove.htm">FileMove()</a> k&ouml;nnen f&uuml;r einen Hardlink benutzt werden.
+
+Um die Links mit dem Explorer zu verwalten, kann man die folgende shell extension benutzen:
+<a href="http://elsdoerfer.name/ntfslink">NTFSLink</a>.
+
+
+###Related###
+FileCreateShortcut
+
+
+###Example###
+@@IncludeExample@@

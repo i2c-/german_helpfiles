@@ -1,0 +1,50 @@
+###Function###
+IniRead
+
+###Description###
+Liest einen Wert aus einer standardkonformen .ini-Datei.
+
+###Syntax###
+IniRead ( "filename", "section", "key", "default" )
+
+
+###Parameters###
+@@ParamTable@@
+filename
+	Der Dateiname der .ini-Datei.
+section
+	Der Name der Sektion in der .ini-Datei.
+key
+	Der Name des Schl&uuml;ssels in der .ini-Datei.
+default
+	Der Standardwert, der verwendet wird, wenn der gefragte Schl&uuml;ssel nicht existiert.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	den Wert des angefragten Schl&uuml;ssels
+Fehler:	den <i>default</i>-String, wenn der angefragte Schl&uuml;ssel nicht existiert.
+@@End@@
+
+
+###Remarks###
+Eine standardkonforme .ini-Datei sieht folgenderma&szlig;en aus:
+<p class="codeheader" style="width:103px;padding:6px;background-color:#FCFCFC;">[SektionsName]
+Schl&uuml;ssel=Wert</p>
+
+Alle zur&uuml;ckgegebenen Werte werden als String konvertiert. Wenn ein Integer z.B. 1000 eine Zahl sein soll, muss entweder <a href="Int.htm">Int()</a> oder <a href="Number.htm">Number()</a> benutzt werden, ebenso wenn ein hwnd ein ptr sein soll, muss <a href="Ptr.htm">Ptr()</a> oder <a href="HWnd.htm">HWnd()</a> benutzt werden.
+
+
+Im Zusammenspiel mit der Funktion _FileReadToArray kann man auch die url einer mit dem Internet Explorer gespeicherten Internetseite herausfinden.
+Dies geht so:
+IniRead(C:\test.url, "InternetShortcut", "URL", "")
+Es lassen sich noch mehr Infos auslesen.
+Welche Infos die gespeicherte url enth&auml;lt kann man &uuml;ber _FileReadToArray ermitteln.
+
+
+###Related###
+IniDelete, IniWrite, FileReadLine, IniReadSection, IniReadSectionNames, IniRenameSection, IniWriteSection
+
+
+###Example###
+@@IncludeExample@@

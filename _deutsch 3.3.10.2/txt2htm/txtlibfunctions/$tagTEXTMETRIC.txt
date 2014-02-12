@@ -1,0 +1,90 @@
+###Structure Name###
+$tagTEXTMETRIC
+
+###Description###
+Enth&auml;lt grundlegende Informationen zu einer physikalischen Schrift
+
+###Syntax###
+Global Const $tagTEXTMETRIC = "long tmHeight;long tmAscent;long tmDescent;long tmInternalLeading;long tmExternalLeading;" & _
+	"long tmAveCharWidth;long tmMaxCharWidth;long tmWeight;long tmOverhang;long tmDigitizedAspectX;long tmDigitizedAspectY;" & _
+	"wchar tmFirstChar;wchar tmLastChar;wchar tmDefaultChar;wchar tmBreakChar;byte tmItalic;byte tmUnderlined;byte tmStruckOut;" & _
+	"byte tmPitchAndFamily;byte tmCharSet"
+
+
+###Fields###
+@@ParamTable@@
+tmHeight
+	Definiert die H&ouml;he (Oberl&auml;nge + Unterl&auml;nge) der Zeichen.
+tmAscent
+	Definiert die Oberl&auml;nge (Einheiten &uuml;ber der Grundlinie) der Zeichen.
+tmDescent
+	Definiert die Unterl&auml;nge (Einheiten unter der Grundlinie) der Zeichen.
+tmInternalLeading
+	Definiert den Durchschu&szlig; (Abstand) innerhalb des Bereichs der im Mitglied tmHeight gesetzt ist.
+	Akzentzeichen und andere diakritikale Zeichen k&ouml;nnen in diesem Bereich vorkommen. Der Designer kann dieses Mitglied auf Null setzen.
+tmExternalLeading
+	Definiert den Durchschu&szlig; (Abstand) den die Anwendung zwischen den Zeilen hinzuf&uuml;gt.
+	Da dieser Bereich sich au&szlig;erhalb der Schrift befindet, enth&auml;lt er keine Zeichen und wird nicht durch Textausgabe-Aufrufe modifiziert, weder im Modus OPAQUE noch im Modus TRANSPARENT.
+	Der Designer kann dieses Mitglied auf Null setzen.
+tmAveCharWidth
+	Definiert die durchschnittliche Breite der Zeichen in der Schrift (&uuml;blicherweise festgelegt als die Breite des Buchstabens x).
+	Dieser Wert enth&auml;lt nicht den erforderlichen &Uuml;berhang f&uuml;r Fett oder kursiv geschriebene Zeichen.
+tmMaxCharWidth
+	Definiert die Breite des breitesten Zeichens in der Schrift.
+tmWeight
+	Definiert das Gewicht der Schrift.
+tmOverhang
+	Definiert die zus&auml;tzliche Breite pro Zeichenkette die zu einigen sythetisierten Schriften hinzugef&uuml;gt werden kann.
+	Beim Sythetisieren von einigen Zeichenattributen, wie bei Fett- oder Kursivschrift, muss die Grafische Ger&auml;teschnittstelle (GDI) oder ein Ger&auml;t m&ouml;glicherweise Abstand zu einer Zeichenkette hinzuf&uuml;gen, beiderseits, pro Zeichen und pro Zeichenkette.
+	Zum Beispiel, GDI macht eine Zeichenkette in Fettschrift indem der Abstand von jedem Buchstaben ausgedehnt und mit einem Offset-Wert &uuml;berschrieben wird; es setzt eine Schrift auf kursiv indem die Zeichenkette abgeschr&auml;gt wird. In beiden F&auml;llen entsteht ein &Uuml;berhang nach der grundlegenden Zeichenkette.
+	F&uuml;r Zeichenketten in Fettschrift ist der &Uuml;berhang der Abstand des Versatzes mit dem ein Zeichen &uuml;berschrieben wird. F&uuml;r Zeichenketten in Kursivschrift ist der &Uuml;berhang die H&ouml;he um welche die Schrift nach unten abgeschr&auml;gt wurde.
+	Das Mitglied tmOverhang erm&ouml;glicht es der Anwendung zu ermitteln, wie viel von der Zeichenbreite, die bei einem Aufruf der Funktion GetTextExtentPoint32 an einem einzelnen Buchstaben zur&uuml;ckgegeben wird, die aktuelle Zeichenbreite betr&auml;gt und wie viel die zus&auml;tzliche Pro-Zeichenketten-Breite betr&auml;gt.
+	Die aktuelle Breite ist die Ausdehnung minus dem &Uuml;berhang.
+tmDigitizedAspectX
+	Definiert den horizontalen Aspekt des Ger&auml;ts f&uuml;r das die Schrift entworfen wurde.
+tmDigitizedAspectY
+	Definiert den vertikalen Aspekt des Ger&auml;ts f&uuml;r das die Schrift entworfen wurde.
+	Das Verh&auml;ltnis der Mitglieder tmDigitizedAspectX und tmDigitizedAspectY ist das Verh&auml;ltnis des Aspekts des Ger&auml;ts f&uuml;r das die Schrift entworfen wurde.
+tmFirstChar
+	Definiert den Wert des ersten Zeichens das in der Schrift definiert ist.
+tmLastChar
+	Definiert den Wert des letzten Zeichens das in der Schrift definiert ist.
+tmDefaultChar
+	Definiert den Wert des Zeichens, das f&uuml;r Zeichen die nicht in der Schrift sind ersetzt wird.
+tmBreakChar
+	Definiert den Wert des Zeichens das f&uuml;r f&uuml;r Trennzeichen zwischen Worten benutzt wird.
+tmItalic
+	Definiert eine kursive Schrift, wenn dieser Wert ungleich Null ist.
+tmUnderlined
+	Definiert eine unterstrichene Schrift, wenn dieser Wert ungleich Null ist.
+tmStruckOut
+	Definiert eine durchgestrichene Schrift, wenn dieser Wert ungleich Null ist.
+tmPitchAndFamily
+		Definiert Informationen &uuml;ber Abstand, Technik und Familie einer physikalischen Schrift.
+		Die vier unteren Bits dieses Mitglieds definieren den Abstand und die Technik der Schrift. F&uuml;r jedes der vier Bits ist eine Konstante definiert.
+		$TMPF_FIXED_FONT Wenn dieses Bit gesetzt ist, ist die Schrift mit variabler Breite. Wenn dieses Bit nicht gesetzt ist, ist die Schrift mit fester Breite. Zu beachten ist, das diese Bedeutungen das Gegenteil dessen sind, was der Konstantenname unterstellt.
+		$TMPF_VECTOR Wenn dieses Bit gesetzt ist, ist die Schrift eine Vektor-Schrift.
+		$TMPF_TRUETYPE Wenn dieses Bit gesetzt ist, ist es eine TrueType-Schrift.
+		$TMPF_DEVICE Wenn dieses Bit gesetzt ist, ist es eine Ger&auml;teschrift.
+tmCharSet
+	Definiert den Zeichensatz der Schrift. Der Zeichensatz kann einer der folgenden Werte sein.
+		ANSI_CHARSET
+		BALTIC_CHARSET
+		CHINESEBIG5_CHARSET
+		DEFAULT_CHARSET
+		EASTEUROPE_CHARSET
+		GB2312_CHARSET
+		GREEK_CHARSET
+		HANGUL_CHARSET
+		MAC_CHARSET
+		OEM_CHARSET
+		RUSSIAN_CHARSET
+		SHIFTJIS_CHARSET
+		SYMBOL_CHARSET
+		TURKISH_CHARSET
+		VIETNAMESE_CHARSET
+@@End@@
+
+
+###Remarks###
+Alle Gr&ouml;&szlig;en sind in logischen Einheiten angegeben, d.h., sie h&auml;ngen von dem aktuellen Koordinatensystem der Anzeige ab.

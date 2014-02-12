@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlRebar_SetBarInfo
+
+###Description###
+Setzt die Charakteristik eines Rebar-Controls.
+
+###Syntax###
+#include <GuiRebar.au3>
+_GUICtrlRebar_SetBarInfo ( $hWnd, $himl )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle zum Rebar-Control
+$himl
+	Handle zur Imagelist
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+Aktuell unterst&uuml;tzen Rebar-Controls nur Imagelisten-Handles.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlRebar_GetBarInfo
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,41 @@
+###User Defined Function###
+_ArraySort
+
+###Description###
+Sortiert ein 1-dimensionales oder 2-dimensionales Array durch einen festgelegten Index. Dabei werden Quicksort- und Insertionsort-Algorithmen verwendet.
+
+###Syntax###
+#include <Array.au3>
+_ArraySort(ByRef $avArray [, $iDescending = 0 [, $iStart = 0 [, $iEnd = 0 [, $iSubItem = 0]]]])
+
+###Parameters###
+@@ParamTable@@
+$avArray
+	Array, das sortiert werden soll.
+$iDescending
+	[Optional] Falls auf 1 gesetzt wird absteigend sortiert.
+$iStart
+	[Optional] Start-Index f&uuml;r die Sortierung
+$iEnd
+	[Optional] Stopp-Index f&uuml;r die Sortierung
+$iSubItem
+	[Optional] Sub-Index der in einem 2-dimensionalen Array sortiert werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1
+Fehler:	0, setzt @error:
+@error:	1 - $avArray ist kein Array
+	2 - $iStart ist gr&ouml;&szlig;er als $iEnd
+	3 - $iSubItem ist gr&ouml;&szlig;er als die Anzahl der Subitems
+	4 - $avArray hat zu viele Dimensionen
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###Example###
+@@IncludeExample@@

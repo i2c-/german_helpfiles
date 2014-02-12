@@ -1,0 +1,29 @@
+###Function###
+ASin
+
+###Description###
+Errechnet den Arcus-Sinus einer Zahl.
+
+###Syntax###
+ASin ( expression )
+
+
+###Parameters###
+@@ParamTable@@
+expression
+	Irgendein Wert zwischen -1 und 1 (einschlie&szlig;lich).
+@@End@@
+
+###ReturnValue###
+Gibt den trigonometrischen Arcus-Sinus von <i>expression</i> zur&uuml;ck.  Ergebnis als Bogenma&szlig;.
+
+
+###Remarks###
+ASin(x) wird mathematisch nur f&uuml;r -1 < x < 1 definiert, deshalb neigt ASin dazu, -1.#ind f&uuml;r andere Werte von x zur&uuml;ckzugeben.
+
+###Related###
+Sin, Cos, Tan, ACos, ATan
+
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetText
+
+###Description###
+Ermittelt den Text von dem festgelegten Abschnitt
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetText($hWnd, $iPart)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iPart
+	0-basierender Index des Abschnitts
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Text des Abschnitts
+Fehler:	setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_SetText
+
+###Example###
+@@IncludeExample@@

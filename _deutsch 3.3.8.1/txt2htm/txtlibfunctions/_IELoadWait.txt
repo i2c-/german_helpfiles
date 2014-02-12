@@ -1,0 +1,51 @@
+###User Defined Function###
+_IELoadWait
+
+###Description###
+Pausiert das Skript bis eine Seite im Browser fertig geladen wurde.
+
+###Syntax###
+#include <IE.au3> 
+_IELoadWait(ByRef $o_object [, $i_delay = 0 [, $i_timeout = -1]])
+
+###Parameters###
+@@ParamTable@@
+$o_object
+	Objekt-Variable einer InternetExplorer.Application oder eines DOM-Elements
+$i_delay
+	[optional] Zeit in Millisekunden, welche vor dem Beginn der &Uuml;berpr&uuml;fung gewartet werden soll. 
+$i_timeout
+	[optional] Zeit in Millisekunden, welche maximal gewartet werden soll. (Standardwert: 300000 ms = 5 min)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	R&uuml;ckgabewert = 1
+Fehler:	R&uuml;ckgabewert = 0 und @ERROR
+@Error:	0 ($_IEStatus_Success) = Kein Fehler
+	1 ($_IEStatus_GeneralError) = Allgemeiner Fehler
+	3 ($_IEStatus_InvalidDataType) = Ung&uuml;ltiger Datentyp
+	4 ($_IEStatus_InvalidObjectType) = Ung&uuml;ltiger Objekttyp
+	6 ($_IEStatus_LoadWaitTimeout) = Ladezeit &uuml;berschritten
+	8 ($_IEStatus_AccessIsDenied) = Zugriff verweigert
+	9 ($_IEStatus_ClientDisconnected) = Verbindung abgebrochen
+@Extended:	Beinhaltet Nummer des ung&uuml;ltigen Parameters
+@@End@@
+
+
+###Remarks###
+Einige IE.au3-Funktionen rufen _IELoadWait() automatisch auf (z.B. _IECreate(), _IENavigate() etc.). Bei den meisten dieser Funktionen kann man dieses Verhalten mit einem $f_wait Parameter abschalten, wenn man dies nicht m&ouml;chte oder wenn man _IELoadWait() selbst aufrufen will.
+
+Wenn DOM-Objekte an die _IELoadWait-Funktion &uuml;bergeben werden, wird der Ladestatus der &uuml;bergeordneten Elemente bis zum &uuml;bergeordneten Fenster &uuml;berpr&uuml;ft.
+
+Manche Sicherheitseinstellungen des Browsers k&ouml;nnen unter Umst&auml;nden _IELoadWait daran hindern, dass das Skript erst fortgesetzt wird, wenn die Seite fertig geladen wurde. Dies kann Fehlermeldungen zur Folge haben. In diesen F&auml;llen sollte man auf _IELoadWait() verzichten und stattdessen auf alternative Methoden ausweichen, um auf das Fertigstellen des Ladevorgangs einer Webseite zu warten. Dies kann z.B. durch Sleep(), Auslesen der Browser-Status-Bar oder anderen Methoden erreicht werden. Wenn Funktionen verwendet werden, die _IELoadWait() intern nutzen und diese f&uuml;r andere Objekte als das InternetExplorer-Browser Objekt verwendet werden, kann es unter Umst&auml;nden sinnvoller sein, wenn man _IELoadWait() stattdessen manuell aufruft.
+
+Die h&auml;ufigsten Fehlerquellen sind automatische Weiterleitungen und Sicherheitseinstellungen, die Cross-Site-Scripting verhindern, in Verbindung mit Frames. Automatische Seitenaktualisierungstechniken einiger Anwendungen (z.B. Googlemail) k&ouml;nnen ebenfalls Probleme verursachen.
+
+
+###Related###
+_IELoadWaitTimeout, _IECreate, _IENavigate, _IEFormSubmit, _IELinkClickByText, _IELinkClickByIndex, _IEImgClick, _IEFormImageClick, _IEBodyWriteHTML, _IEDocWriteHTML, _IEAction
+
+
+###Example###
+@@IncludeExample@@

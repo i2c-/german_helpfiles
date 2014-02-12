@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetModified
+
+###Description###
+Setzt oder l&ouml;scht das &Auml;nderungsflag
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetModified($hWnd, $fState = True)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$fState
+	Legt den neuen Wert f&uuml;r das &Auml;nderungsflag fest:
+		 True - zeigt an, dass der Text ge&auml;ndert wurde (Standard)
+		False - zeigt an, dass sich nichts ge&auml;ndert hat.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False und setzt @error
+@error:	101 - $hWnd ist kein Handle
+	102 - $fState muss True oder False sein
+@@End@@
+
+###Remarks###
+Das System setzt das &Auml;nderungsflag automatisch auf False, wenn das Control erstellt wird.
+Falls sich der Text des Controls &auml;ndert, entweder durch den Benutzer oder durch das Programm, so wird das Flag auf True gesetzt.
+Es ist _GUICtrlRichEdit_IsModified aufzurufen, um den aktuellen Status des Flags zu erhalten.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_IsModified
+
+###See Also###
+@@MsdnLink@@ $EM_SETMODIFY
+
+###Example###
+@@IncludeExample@@

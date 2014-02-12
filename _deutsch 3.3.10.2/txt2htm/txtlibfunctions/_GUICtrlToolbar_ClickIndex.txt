@@ -1,0 +1,43 @@
+###User Defined Function###
+_GUICtrlToolbar_ClickIndex
+
+###Description###
+Klickt auf einen Button durch Verwendung des Indexes
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_ClickIndex ( $hWnd, $iIndex [, $sButton = "left" [, $fMove = False [, $iClicks = 1 [, $iSpeed = 1]]]] )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	Buttonindex
+$sButton
+	[optional] Der zu dr&uuml;ckende Button
+$fMove
+	[optional] Mausbewegungsflag:
+		True - Maus bewegt sich
+		False - Maus bewegt sich nicht
+$iClicks
+	[optional] Anzahl von Klicks
+$iSpeed
+	[optional] Mausbewegungsgeschwindigkeit
+@@End@@
+
+###ReturnValue###
+Keine.
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlToolbar_ClickAccel, _GUICtrlToolbar_ClickButton
+
+
+###Example###
+@@IncludeExample@@

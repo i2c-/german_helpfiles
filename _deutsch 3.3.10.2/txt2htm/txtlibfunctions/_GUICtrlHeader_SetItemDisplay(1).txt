@@ -1,0 +1,42 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemDisplay
+
+###Description###
+Gibt die Itemanzeige Informationen zur&uuml;ck.
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemDisplay ( $hWnd, $iIndex, $iDisplay )
+
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iIndex
+	0-basierender Item-Index
+$iDisplay
+	Itemanzeige Informationen. Kann eine Kombination der folgenden sein:
+		1 - Das Item zeigt ein Bitmap an
+		2 - Das Bitmap erscheint rechts vom Text
+		4 - Der Besitzer des Controls zeichnet die Items
+		8 - Das Item zeigt einen String an
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+_GUICtrlHeader_GetItemDisplay, _GUICtrlHeader_SetItemBitmap
+
+
+###Example###
+@@IncludeExample@@

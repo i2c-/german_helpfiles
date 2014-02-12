@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlComboBox_SetItemHeight
+
+###Description###
+Setzt die H&ouml;he der Listitems oder des Markierungsfeld in einer ComboBox
+
+###Syntax###
+#include <GuiComboBox.au3>
+_GUICtrlComboBox_SetItemHeight($hWnd, $iHeight [, $iComponent = -1])
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control-ID / Handle des Controls
+$iHeight
+	Die H&ouml;he der ComboBox Komponente in Pixel, welche durch $iComponent identifiziert wird
+$iComponent
+	[optional] Es sind folgende Werte zu verwenden:
+		–1 - Setzt die H&ouml;he des Markierungsfeldes
+		 0 - Setzt die H&ouml;he der Listitems
+@@End@@
+
+###ReturnValue###
+Fehler:	Falls die H&ouml;he ung&uuml;ltig ist, betr&auml;gt der R&uuml;ckgabewert -1.
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlComboBox_GetItemHeight
+
+###Example###
+@@IncludeExample@@

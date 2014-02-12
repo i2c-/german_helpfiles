@@ -1,0 +1,39 @@
+###Structure Name###
+$tagNMDATETIMECHANGE
+
+###Description###
+Enth&auml;lt Informationen &uuml;ber eine &Auml;nderung, die in einem "Datum und Zeit Picker" (DTP) Control stattgefunden hat
+
+###Syntax###
+Global Const $tagNMDATETIMECHANGE = $tagNMHDR & ";int Flag;short Year;short Month;short DOW;short Day;" & _
+		"short Hour;short Minute;short Second;short MSecond"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Enth&auml;lt Informationen &uuml;ber den Benachrichtigungscode
+Flag
+	Zeigt an, ob das Control auf den "kein Datum"-Status gesetzt wurde. Diese Flag legt also fest, ob der Inhalt
+	des Datums g&uuml;ltig ist und die korrekten Zeitinformationen enth&auml;lt. Dieser Wert kann einer der folgenden sein:
+		 $GDT_NONE - Das Control ist auf den "kein Datum"-Status gesetzt
+		 $GDT_VALID - Das Control ist nicht auf den "kein Datum"-Status gesetzt
+Year
+	Jahr
+Month
+	Monat
+DOW
+	Wochentag
+Day
+	Tag
+Hour
+	Stunde
+Minute
+	Minute
+Second
+	Sekunde
+MSecond
+	Millisekunde
+@@End@@
+
+###Remarks###
+Diese Struktur wird mit der $DTN_DATETIMECHANGE-Nachricht verwendet

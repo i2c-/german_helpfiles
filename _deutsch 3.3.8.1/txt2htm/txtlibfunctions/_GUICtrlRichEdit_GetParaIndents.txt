@@ -1,0 +1,45 @@
+###User Defined Function###
+_GUICtrlRichEdit_GetParaIndents
+
+###Description###
+Ermittelt die Zeileneinz&uuml;ge des (ersten) markierten Absatzes oder, wenn keiner markiert ist, des aktuellen Absatzes.
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_GetParaIndents($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Die Einstellungen - Ein aus vier Werten zusammengesetzter String, getrennt durch Semikola ";":
+	Wert 1 - Links - Einr&uuml;ckung der linken Seite des Absatzes (der Zeilen nach der ersten)
+	Wert 2 - Rechts - Einr&uuml;ckung der rechten Seite des Absatzes
+	Wert 3 - Erste Zeile - Einr&uuml;ckung der ersten Zeile (links) relativ zu der der anderen
+	Wert 4 - Bereich:
+	  a - Alle markierten Abs&auml;tze haben diese Einstellungen
+	  b - Der erste Absatz hat diese Einstellungen, die anderen nicht
+	  c - Der aktuelle Absatz hat diese Einstellungen
+Fehler:	"" und setzt @error
+@error:	101 - $hWnd ist kein Handle
+@@End@@
+
+###Remarks###
+Positive Werte von $iLeft, $iRight und $iFirstLine r&uuml;cken in Richtung der Mitte des Absatzes.
+
+Alle Werte sind in der aktuellen Ma&szlig;einheit des Controls (Standard: Inch).
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlRichEdit_SetParaIndents
+
+###See Also###
+@@MsdnLink@@ EM_GETPARAFORMAT
+
+###Example###
+@@IncludeExample@@

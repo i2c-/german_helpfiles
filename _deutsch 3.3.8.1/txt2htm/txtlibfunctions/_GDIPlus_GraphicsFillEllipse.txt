@@ -1,0 +1,42 @@
+###User Defined Function###
+_GDIPlus_GraphicsFillEllipse
+
+###Description###
+F&uuml;llt eine Ellipse
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_GraphicsFillEllipse($hGraphics, $iX, $iY, $iWidth, $iHeight [, $hBrush = 0])
+
+###Parameters###
+@@ParamTable@@
+$hGraphics
+	Handle zu dem Grafik-Objekt
+$iX
+	Die X-Koordinate der oberen linken Ecke des Rechtecks, welche die Ellipse begrenzt
+$iY
+	Die Y-Koordinate der oberen linken Ecke des Rechtecks, welche die Ellipse begrenzt
+$iWidth
+	Die Breite des Rechtecks, welche die Ellipse begrenzt
+$iHeight
+	Die H&ouml;he des Rechtecks, welche die Ellipse begrenzt
+$hBrush
+	[optional] Handle zu dem F&uuml;llmuster-Objekt, welches verwendet wird, um die Ellipse zu f&uuml;llen. Falls 0, wird ein schwarzes F&uuml;llmuster verwendet.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	True
+Fehler:	False
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+
+###See Also###
+@@MsdnLink@@ GdipFillEllipseI
+
+###Example###
+@@IncludeExample@@

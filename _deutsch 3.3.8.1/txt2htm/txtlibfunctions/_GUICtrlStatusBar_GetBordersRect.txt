@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlStatusBar_GetBordersRect
+
+###Description###
+Ermittelt die aktuelle Breite des Rechteckrandes
+
+###Syntax###
+#include <GuiStatusBar.au3>
+_GUICtrlStatusBar_GetBordersRect($hWnd)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Breite des Rechteckrandes
+Fehler:	Setzt @error
+@@End@@
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlStatusBar_GetBorders, _GUICtrlStatusBar_GetBordersHorz, _GUICtrlStatusBar_GetBordersVert
+
+###Example###
+@@IncludeExample@@

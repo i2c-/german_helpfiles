@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_RectIsEmpty
+
+###Description###
+Ermittelt, ob ein Rechteck leer ist
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_RectIsEmpty ( ByRef $tRect )
+
+
+###Parameters###
+@@ParamTable@@
+$tRect
+	$tagRect Struktur
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Rechteck ist leer (alle Werte sind 0)
+False:	Rechteck ist nicht leer
+@@End@@
+
+
+###Remarks###
+Keine.
+
+
+###Related###
+$tagRect

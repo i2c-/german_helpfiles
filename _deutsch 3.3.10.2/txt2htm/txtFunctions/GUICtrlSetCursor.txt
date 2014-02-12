@@ -1,0 +1,42 @@
+###Function###
+GUICtrlSetCursor
+
+###Description###
+Setzt das Mauszeiger-Icon f&uuml;r ein bestimmtes Control.
+
+###Syntax###
+GUICtrlSetCursor ( controlID, cursorID )
+
+
+###Parameters###
+@@ParamTable@@
+ControlID
+	Die Identifikationsnummer des Controls (Control-ID), wie von einer <a href="GUICtrlCreate Management.htm">GUICtrlCreate...</a> Funktion zur&uuml;ckgegeben, oder -1 f&uuml;r das zuletzt erzeugte Control.
+cursorID
+	Cursor-ID wie von der Windows SetCursor API verwendet (verwende -1 f&uuml;r den Standardcursor des Controls)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	1.
+Fehler:	0.
+@@End@@
+
+
+###Remarks###
+Anders als <a href="GUISetCursor.htm">GUISetCursor()</a>, das den Mauszeiger (Cursor) f&uuml;r ein ganzes Fenster ver&auml;ndert, setzt diese Funktion das Cursor-Symbol, das verwendet wird, wenn die Maus &uuml;ber dem entsprechenden Control steht.
+
+Wenn die Cursor-ID ung&uuml;ltig ist wird der Standard-Pfeil angezeigt.
+
+Eine Liste mit g&uuml;ltigen Cursor-IDs befindet sich in <a href="MouseGetCursor.htm">MouseGetCursor()</a>.
+CursorId = 16 wird den Mauszeiger verstecken.
+
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+
+###Related###
+GUISetCursor
+
+
+###Example###
+@@IncludeExample@@

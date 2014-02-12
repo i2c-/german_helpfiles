@@ -1,0 +1,43 @@
+###Function###
+StringRegExpReplace
+
+###Description###
+Ersetzt Text in einem String basierend auf einem regul&auml;ren Ausdruck (regular expression).
+
+###Syntax###
+StringRegExpReplace ( "test", "pattern", "replace", [count] )
+
+
+###Parameters###
+@@ParamTable@@
+test
+	Der zu pr&uuml;fende String.
+pattern
+	Der zu vergleichende regul&auml;re Ausdruck.  Siehe <A href="StringRegExp.htm">StringRegExp</a> f&uuml;r die Definition vom Suchmuster.
+replace
+	Der Text, der den gefundenen Text des regul&auml;ren Ausdrucks ersetzen soll. Es k&ouml;nnen auch Gruppentext wie z. B. \0 - \9 (oder $0 - $9) als R&uuml;ckverweise verwendet werden
+count
+	[optional] Die Anzahl der Wiederholungen des Ersetzens in dem String. Der Standard ist 0. 0 ist f&uuml;r globales Ersetzen zu benutzen.
+@@End@@
+
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt den ver&auml;nderten String basierend auf den regul&auml;ren Ausdr&uuml;cken zur&uuml;ck.
+Fehler:	Setzt @error
+@Error:	Bedeutung
+0	Korrekt ausgef&uuml;hrt. @Extended kann f&uuml;r die &Uuml;berpr&uuml;fung der Anzahl ausgef&uuml;hrter Ersetzungen genutzt werden. 
+2	"Pattern" ung&uuml;ltig. @Extended = Offset des im Muster aufgetretenen Fehlers.
+@@End@@
+
+
+###Remarks###
+Um R&uuml;ckverweise von aktuellen (ersetzten) Zahlen zu unterscheiden, sind sie mit geschweiften Klammern zu umgeben, z. B. ${1}5".
+Falls "\" in dem ersetzen String vorkommt, so muss dieser gedoppelt werden.
+Dies ist die Folge aus dem R&uuml;ckverweis-Mechanismus.
+
+###Related###
+StringRegExp
+
+###Example###
+@@IncludeExample@@

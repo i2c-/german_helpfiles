@@ -1,0 +1,36 @@
+###Function###
+ProcessSetPriority
+
+###Description###
+&Auml;ndert die Priorit&auml;t eines Prozesses.
+
+###Syntax###
+ProcessSetPriority ( "process", priority )
+
+###Parameters###
+@@ParamTable@@
+process
+	Der Name oder die PID des zu bearbeitenden Prozesses.
+priority
+	Ein Flag, das die neue Priorit&auml;t festlegt:
+	0 - Niedrig
+	1 - Niedriger als normal
+	2 - Normal
+	3 - H&ouml;her als normal
+	4 - Hoch
+	5 - Echtzeit (Mit Vorsicht verwenden, dies kann das System instabil machen!)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck.
+Fehler:	Gibt 0 zur&uuml;ck und setzt @error auf 1.  Kann @error auf 2 setzen, wenn man versucht,eine nicht unterst&uuml;tzte Priorit&auml;t zu verwenden.
+@@End@@
+
+###Remarks###
+Keine.
+
+###Related###
+ProcessList, _ProcessGetPriority
+###Example###
+@@IncludeExample@@

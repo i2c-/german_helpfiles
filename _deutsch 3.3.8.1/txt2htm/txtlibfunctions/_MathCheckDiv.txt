@@ -1,0 +1,37 @@
+###User Defined Function###
+_MathCheckDiv
+
+###Description###
+Pr&uuml;ft, ob NumA durch NumB teilbar ist
+
+###Syntax###
+#include <Math.au3>
+_MathCheckDiv($i_NumA, $i_NumB)
+
+
+###Parameters###
+@@ParamTable@@
+$i_NumA
+	zu pr&uuml;fende Zahl
+$i_NumB
+	Zahl durch die geteilt werden soll
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Erfolg:	Gibt 1 zur&uuml;ck, falls es nicht teilbar ist,
+	2 f&uuml;r teilbar.
+Fehler:	Gibt -1 zur&uuml;ck und @error = 1 falls es sich um keine g&uuml;ltigen Zahlen handelt.
+@@End@@
+
+
+###Remarks###
+Wenn der zweite Parameter 2 ist, pr&uuml;ft diese Funktion, ob die Zahl gerade oder ungerade ist
+
+
+###Related###
+Keine.
+
+
+###Example###
+@@IncludeExample@@

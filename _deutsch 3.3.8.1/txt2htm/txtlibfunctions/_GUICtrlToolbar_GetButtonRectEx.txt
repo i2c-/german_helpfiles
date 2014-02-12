@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_GetButtonRectEx
+
+###Description###
+Ermittelt das begrenzende Rechteck f&uuml;r einen festgelegten Toolbar Button
+
+###Syntax###
+#include <GuiToolBar.au3>
+_GUICtrlToolbar_GetButtonRectEx($hWnd, $iCommandID)
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle des Controls
+$iCommandID
+	Button Command ID
+@@End@@
+
+###ReturnValue###
+Erfolg:	$tagRECT Struktur
+
+###Remarks###
+<a href="../guiref/GUIRef.htm">- - - - - - - - Erkl&auml;rung der Controls - - - - - - - -</a>
+
+###Related###
+_GUICtrlToolbar_GetButtonRect, $tagRECT
+
+###Example###
+@@IncludeExample@@
